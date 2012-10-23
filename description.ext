@@ -1,0 +1,182 @@
+// ============================================================================================
+
+// F2 - Mission Header
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 540;
+};
+
+// ============================================================================================
+
+// F2 - Respawn Settings
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+respawn = 1;
+respawndelay = 3;
+
+// ============================================================================================
+
+// F2 - JIP Reinforcement Options
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+#include "f\common\f_JIP_kitpicker.h"
+#include "f\common\f_JIP_grppicker.h"
+
+// ============================================================================================
+// F2 - Whether AssignGear should allow Backpacks for OA/BAF/PMC units
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// WARNING: DO NOT DISABLE THIS COMPONENT OR CHANGE POSITION IN PARAMS; IT MUST BE REFERENCABLE
+// AS "paramsarray select 0" FOR GEAR SCRIPTS TO WORK CORRECTLY
+
+class Params
+{
+	class f_param_useBackpacks
+        {
+                title = "OA Backpacks (Asst. Gunners & Engineers)";
+                values[] = {0,1};
+                texts[] = {"Off","On"};
+                default = 0;
+                code = "f_param_useBackpacks = %1";
+        }; 
+		
+// ============================================================================================
+
+// F2 - Debug Mode
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// WARNING: DO NOT DISABLE THIS COMPONENT
+
+        class f_param_debugMode
+        {
+                title = "$STR_f_param_debugMode";
+                values[] = {0,1};
+                texts[] = {"Off","On"};
+                default = 0;
+                code = "f_var_debugMode = %1";
+        }; 
+
+// ============================================================================================
+
+// F2 - Mission Conditions Selector
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+        class f_param_timeOfDay
+        {
+                title = "$STR_f_param_timeOfDay";
+                values[] = {0,1,2,3,4,5,6,7};
+                texts[] = {$STR_f_param_timeOfDay_Option0,$STR_f_param_timeOfDay_Option1,$STR_f_param_timeOfDay_Option2,$STR_f_param_timeOfDay_Option3,$STR_f_param_timeOfDay_Option4,$STR_f_param_timeOfDay_Option5,$STR_f_param_timeOfDay_Option6,$STR_f_param_timeOfDay_Option7};
+                default = 3;
+                code = "f_param_timeOfDay = %1";
+        };   
+        class f_param_weather
+	{
+		title = "$STR_f_param_weather";
+		values[] = {0,1,2,3,4};
+		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4};
+		default = 0;
+		code = "f_param_weather = %1";
+        };
+
+// ============================================================================================
+
+// F2 - AI Skill Selector (coop)
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//	class f_param_AISkill_Friendly
+//	{
+//		title = "$STR_f_param_AISkill_Friendly";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_Friendly = %1";
+//	};
+//	class f_param_AISkill_Enemy
+//	{
+//		title = "$STR_f_param_AISkill_Enemy";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_Enemy = %1";
+//	};
+
+// ============================================================================================
+
+// F2 - AI Skill Selector (A&D)
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//	class f_param_AISkill_BLUFOR
+//	{
+//		title = "$STR_f_param_AISkill_BLUFOR";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_BLUFOR = %1";
+//	};
+//	class f_param_AISkill_OPFOR
+//	{
+//		title = "$STR_f_param_AISkill_OPFOR";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_OPFOR = %1";
+//	};
+
+// ============================================================================================
+
+// F2 - Norrin's Revive Respawn (Part 1)
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//	class f_param_lives
+//	{
+//		title = "Number of Lives:";
+//		values[] = {2000,1000,20,10,7,5};
+//		texts[] = {"No Revive","Infinite - Cadet","20 - Easy ","10 - Normal","7  - Hard","5  - Extreme"};
+//		default = 10;
+//		code = "f_param_lives = %1";
+//	};
+        
+// ============================================================================================
+
+};
+
+// ============================================================================================
+
+// F2 - Kegetys Spectator Script
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+#include "f\common\f_spect\spectating.hpp"
+
+// ============================================================================================
+
+// F2 - Norrin's Revive Respawn (Part 2)
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// disabledAI = 0;
+// #include "f\revive\dialogs\revive.cpp"
+
+// ============================================================================================
+
+// F2 - Gear Snippets
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// #include "f\common\f_gearSnippets.hpp"
+
+// ============================================================================================
+
+class RscTitles {
+
+// ============================================================================================
+
+// F2 - Name Tags
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// #include "f\common\f_recog\recogOverlay.hpp"
+
+// ============================================================================================
+
+};
+
+// ============================================================================================

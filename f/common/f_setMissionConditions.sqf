@@ -1,0 +1,142 @@
+// F2 - Mission Conditions Selector
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// ====================================================================================
+
+// DECLARE VARIABLES AND FUNCTIONS
+
+private ["_timeOfDay","_weather","_MissionOvercast","_MissionFog"];
+
+// ====================================================================================
+
+// WAIT FOR PARAMSARRAY TO BE PROCESSED
+
+waitUntil {scriptDone f_processParamsArray};
+
+// ====================================================================================
+
+// SET KEY VARIABLES
+// Conditions are set in the parameters screen (during mission set-up).
+
+_timeOfDay = f_param_timeOfDay;
+_weather = f_param_weather;
+
+// ====================================================================================
+
+// SELECT MISSION TIME OF DAY
+// Using the value of _timeOfDay, a new date is set.
+
+switch (_timeOfDay) do
+{
+// Dawn
+	case 0:
+	{
+		setDate [2007, 5, 11, 4, 50];
+	};
+// Early Morning
+	case 1:
+	{
+		setDate [2007, 5, 11, 5, 50];
+	};
+// Morning
+	case 2:
+	{
+		setDate [2007, 5, 11, 9, 00];
+	};
+// Noon
+	case 3:
+	{
+		setDate [2007, 5, 11, 12, 0];
+	};
+// Afternoon
+	case 4:
+	{
+		setDate [2007, 5, 11, 15, 00];
+	};
+// Evening
+	case 5:
+	{
+		setDate [2007, 5, 11, 17, 50];
+	};
+// Dusk
+	case 6:
+	{
+		setDate [2007, 5, 11, 18, 50];
+	};
+// Night
+	case 7:
+	{
+		setDate [2007, 5, 11, 0, 0];
+	};
+};
+
+// ====================================================================================
+
+// SELECT MISSION WEATHER
+// Using the value of _weather, values for _MissionOvercast and _MissionFog are set.
+
+switch (_weather) do
+{
+// Clear
+	case 0:
+	{
+		_MissionOvercast = 00.00;
+		_MissionFog = 00.00;
+	};
+// Overcast
+	case 1:
+	{
+		_MissionOvercast = 00.60;
+		_MissionFog = 00.10;
+	};
+// Light Fog
+	case 2:
+	{
+		_MissionOvercast = 00.60;
+		_MissionFog = 00.8125;
+	};
+// Heavy Fog
+	case 3:
+	{
+		_MissionOvercast = 00.60;
+		_MissionFog = 00.96;
+	};
+// Storm
+	case 4:
+	{
+		_MissionOvercast = 01.00;
+		_MissionFog = 00.50;
+	};
+};
+
+// ====================================================================================
+
+// ENABLE DEBUG MODE
+// If either _timeOfDay or _weather is set to 99, debug mode is enabled; in this case
+// conditions are set to Noon, Clear.
+
+if ((_timeOfDay == 99) || (_weather == 99)) then 
+{
+	setDate [2007, 5, 11, 12, 0];
+	_MissionOvercast = 00.00;
+	_MissionFog = 00.00;
+};
+
+// ====================================================================================
+
+// SET MISSION CONDITIONS
+// Use new values for _MissionTime, _MissionOvercast and _MissionFog to set
+// mission conditions on server and all clients (including JIP clients).
+
+0 setOvercast _MissionOvercast;
+0 setFog _MissionFog;
+
+// DEBUG
+if (f_var_debugMode == 1) then
+{
+	player sideChat format ["DEBUG (f\common\f_setMissionConditions.sqf): _MissionOvercast: %1",_MissionOvercast];
+	player sideChat format ["DEBUG (f\common\f_setMissionConditions.sqf): _MissionFog: %1",_MissionFog];
+};
+
+// ====================================================================================
+
+if (true) exitWith {};
