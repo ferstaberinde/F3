@@ -191,7 +191,7 @@ switch (_typeofUnit) do
 			// Put ammo in backpack. If not OA unit, then should add directly to inv of unit instead.
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
-			clearMagazineCargo (unitBackpack _unit);
+			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addMagazineCargoGlobal [_ARmag, 2];
 		} else {
 			{_unit addmagazine _ARmag} foreach [1,2];
@@ -224,7 +224,7 @@ switch (_typeofUnit) do
 			// Put ammo in backpack. If not OA unit, then should add directly to inv of unit instead.
 		if (_useBackpacks==1) then {
 			_unit addBackpack _baglarge;
-			clearMagazineCargo (unitBackpack _unit);
+			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addMagazineCargoGlobal [_RAAmag, 2];
 		} else {
 			{_unit addmagazine _RAAmag} foreach [1,2];
@@ -249,7 +249,7 @@ switch (_typeofUnit) do
 			// Put ammo in backpack. If not OA unit, then should add directly to inv of unit instead.
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
-			clearMagazineCargo (unitBackpack _unit);
+			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addMagazineCargoGlobal [_MMGmag, 2];
 		} else {
 			{_unit addmagazine _MMGmag} foreach [1,2];
@@ -294,7 +294,7 @@ switch (_typeofUnit) do
 			// Put ammo in backpack. If not OA unit, then should add directly to inv of unit instead.
 		if (_useBackpacks==1) then {
 			_unit addBackpack _baglarge;
-			clearMagazineCargo (unitBackpack _unit);
+			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 1];
 			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag2, 1];
 		} else {
@@ -322,7 +322,7 @@ switch (_typeofUnit) do
 			// Put ammo in backpack. If not OA unit, then should add directly to inv of unit instead.
 		if (_useBackpacks==1) then {
 			_unit addBackpack _baglarge;
-			clearMagazineCargo (unitBackpack _unit);
+			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addMagazineCargoGlobal [_HATmag1, 1];
 			(unitBackpack _unit) addMagazineCargoGlobal [_HATmag2, 2];
 		} else {
@@ -395,7 +395,7 @@ switch (_typeofUnit) do
 			// Put ammo in backpack. If not OA unit, then should add directly to inv of unit instead.
 		if (_useBackpacks==1) then {
 			_unit addBackpack _baglarge;
-			clearMagazineCargo (unitBackpack _unit);
+			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addMagazineCargoGlobal [_satchel, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_mine, 1];	
 			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];	
