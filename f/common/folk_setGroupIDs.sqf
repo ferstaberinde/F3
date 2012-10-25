@@ -286,35 +286,35 @@ GrpUN_AH1 setGroupId ["UN AH1 -","GroupColor0"];
 // GROUP IDs: TAKISTANI MILITIA (OPFOR)
 // Automatically assigns intelligible names to groups
 
-GrpINS_CO setGroupId ["TK INSurgent CO -","GroupColor0"];
-GrpINS_DC setGroupId ["TK INSurgent DC -","GroupColor0"];
-GrpINS_ASL setGroupId ["TK INSurgent ASL -","GroupColor0"];
-GrpINS_A1 setGroupId ["TK INSurgent A1 -","GroupColor0"];
-GrpINS_A2 setGroupId ["TK INSurgent A2 -","GroupColor0"];
-GrpINS_A3 setGroupId ["TK INSurgent A3 -","GroupColor0"];
-GrpINS_BSL setGroupId ["TK INSurgent BSL -","GroupColor0"];
-GrpINS_B1 setGroupId ["TK INSurgent B1 -","GroupColor0"];
-GrpINS_B2 setGroupId ["TK INSurgent B2 -","GroupColor0"];
-GrpINS_B3 setGroupId ["TK INSurgent B3 -","GroupColor0"];
-GrpINS_CSL setGroupId ["TK INSurgent CSL -","GroupColor0"];
-GrpINS_C1 setGroupId ["TK INSurgent C1 -","GroupColor0"];
-GrpINS_C2 setGroupId ["TK INSurgent C2 -","GroupColor0"];
-GrpINS_C3 setGroupId ["TK INSurgent C3 -","GroupColor0"];
-GrpINS_MMG1 setGroupId ["TK INSurgent MMG1 -","GroupColor0"];
-GrpINS_MAT1 setGroupId ["TK INSurgent MAT1 -","GroupColor0"];
-GrpINS_ST1 setGroupId ["TK INSurgent ST1 -","GroupColor0"];
-GrpINS_HMG1 setGroupId ["TK INSurgent HMG1 -","GroupColor0"];
-GrpINS_MTR1 setGroupId ["TK INSurgent MTR1 -","GroupColor0"];
-GrpINS_HAT1 setGroupId ["TK INSurgent HAT1 -","GroupColor0"];
-GrpINS_SAM1 setGroupId ["TK INSurgent SAM1 -","GroupColor0"];
-GrpINS_ENG1 setGroupId ["TK INSurgent ENG1 -","GroupColor0"];
-GrpINS_IFV1 setGroupId ["TK INSurgent IFV1 -","GroupColor0"];
-GrpINS_IFV2 setGroupId ["TK INSurgent IFV2 -","GroupColor0"];
-GrpINS_IFV3 setGroupId ["TK INSurgent IFV3 -","GroupColor0"];
-GrpINS_TNK1 setGroupId ["TK INSurgent TNK1 -","GroupColor0"];
-GrpINS_TH1 setGroupId ["TK INSurgent TH1 -","GroupColor0"];
-GrpINS_TH2 setGroupId ["TK INSurgent TH2 -","GroupColor0"];
-GrpINS_AH1 setGroupId ["TK INSurgent AH1 -","GroupColor0"];
+GrpINS_CO setGroupId ["TK Insurgent CO -","GroupColor0"];
+GrpINS_DC setGroupId ["TK Insurgent DC -","GroupColor0"];
+GrpINS_ASL setGroupId ["TK Insurgent ASL -","GroupColor0"];
+GrpINS_A1 setGroupId ["TK Insurgent A1 -","GroupColor0"];
+GrpINS_A2 setGroupId ["TK Insurgent A2 -","GroupColor0"];
+GrpINS_A3 setGroupId ["TK Insurgent A3 -","GroupColor0"];
+GrpINS_BSL setGroupId ["TK Insurgent BSL -","GroupColor0"];
+GrpINS_B1 setGroupId ["TK Insurgent B1 -","GroupColor0"];
+GrpINS_B2 setGroupId ["TK Insurgent B2 -","GroupColor0"];
+GrpINS_B3 setGroupId ["TK Insurgent B3 -","GroupColor0"];
+GrpINS_CSL setGroupId ["TK Insurgent CSL -","GroupColor0"];
+GrpINS_C1 setGroupId ["TK Insurgent C1 -","GroupColor0"];
+GrpINS_C2 setGroupId ["TK Insurgent C2 -","GroupColor0"];
+GrpINS_C3 setGroupId ["TK Insurgent C3 -","GroupColor0"];
+GrpINS_MMG1 setGroupId ["TK Insurgent MMG1 -","GroupColor0"];
+GrpINS_MAT1 setGroupId ["TK Insurgent MAT1 -","GroupColor0"];
+GrpINS_ST1 setGroupId ["TK Insurgent ST1 -","GroupColor0"];
+GrpINS_HMG1 setGroupId ["TK Insurgent HMG1 -","GroupColor0"];
+GrpINS_MTR1 setGroupId ["TK Insurgent MTR1 -","GroupColor0"];
+GrpINS_HAT1 setGroupId ["TK Insurgent HAT1 -","GroupColor0"];
+GrpINS_SAM1 setGroupId ["TK Insurgent SAM1 -","GroupColor0"];
+GrpINS_ENG1 setGroupId ["TK Insurgent ENG1 -","GroupColor0"];
+GrpINS_IFV1 setGroupId ["TK Insurgent IFV1 -","GroupColor0"];
+GrpINS_IFV2 setGroupId ["TK Insurgent IFV2 -","GroupColor0"];
+GrpINS_IFV3 setGroupId ["TK Insurgent IFV3 -","GroupColor0"];
+GrpINS_TNK1 setGroupId ["TK Insurgent TNK1 -","GroupColor0"];
+GrpINS_TH1 setGroupId ["TK Insurgent TH1 -","GroupColor0"];
+GrpINS_TH2 setGroupId ["TK Insurgent TH2 -","GroupColor0"];
+GrpINS_AH1 setGroupId ["TK Insurgent AH1 -","GroupColor0"];
 
 //===================================================================================== 
 
