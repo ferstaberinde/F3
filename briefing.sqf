@@ -199,6 +199,85 @@ if (_unitfaction == "bis_civ_special") exitwith {
 
 // ====================================================================================
 
+// ARMA 2 FACTIONS
+// Briefings for the ArmA 2 Vanilla factions
+
+// ====================================================================================
+
+// RUSSIA
+
+if (_unitfaction == "ru") exitwith {
+
+#include "f\common\f_briefing_ru.sqf"
+
+// DEBUG
+	if (f_var_debugMode == 1) then
+	{
+	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
+	};
+};
+
+// ====================================================================================
+
+// OPFOR INSURGENTS
+
+if (_unitfaction == "ins") exitwith {
+
+#include "f\common\f_briefing_ins.sqf"
+
+// DEBUG
+	if (f_var_debugMode == 1) then
+	{
+	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
+	};
+};
+
+// ====================================================================================
+
+// USMC
+
+if (_unitfaction == "usmc") exitwith {
+
+#include "f\common\f_briefing_usmc.sqf"
+
+// DEBUG
+	if (f_var_debugMode == 1) then
+	{
+	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
+	};
+};
+
+// ====================================================================================
+
+// CDF
+
+if (_unitfaction == "cdf") exitwith {
+
+#include "f\common\f_briefing_cdf.sqf"
+
+// DEBUG
+	if (f_var_debugMode == 1) then
+	{
+	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
+	};
+};
+
+// ====================================================================================
+
+// NAPA
+
+if (_unitfaction == "gue") exitwith {
+
+#include "f\common\f_briefing_gue.sqf"
+
+// DEBUG
+	if (f_var_debugMode == 1) then
+	{
+	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
+	};
+};
+// ====================================================================================
+
 // ERROR CHECKING
 // If the faction of the unit cannot be defined, the script exits with an error.
 
