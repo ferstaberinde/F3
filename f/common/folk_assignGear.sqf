@@ -42,13 +42,13 @@ _useBackpacks = paramsArray select 0;
 switch(_faction) do
 {
 case "pmc_baf":{_faction="bis_un";};					// Treat PMC troops as UN for gear (used mostly for Exchange Medics and Engineers for factions that do not have those roles, such as bis_un)
-//case "usmc":{_faction="bis_us";_useBackpacks=0;};			// USMC as US (note: no backpacks for A2 original units)
-//case "cdf":{_faction="bis_us";_useBackpacks=0;};			// CDF as US (note: no backpacks for A2 original units)
-//case "ru":{_faction="bis_tk";_useBackpacks=0;};			// RUS as TK (note: no backpacks for A2 original units)
-//case "ins":{_faction="bis_tk_ins";_useBackpacks=0;};			// INS as TK_INS (note: no backpacks for A2 original units)
-//case "gue":{_faction="bis_tk_gue";_useBackpacks=0;};			// GUE as TK_GUE (note: no backpacks for A2 original units)
-//case "civ":{_faction="bis_tk_civ";_useBackpacks=0;};			// CIV as TIK_CIV (note: no backpacks for A2 original units)
-//case "civ_ru":{_faction="bis_tk_civ";_useBackpacks=0;};		// CIV_RU as TK_CIV (note: no backpacks for A2 original units)
+case "usmc":{_useBackpacks=0;};			// USMC: disable backpacks
+case "cdf":{_useBackpacks=0;};			// CDF: disable backpacks
+case "ru":{_useBackpacks=0;};			// RUS: disable backpacks
+case "ins":{_useBackpacks=0;};			// INS: disable backpacks
+case "gue":{_useBackpacks=0;};			// GUE: disable backpacks
+case "civ":{_faction="bis_tk_civ";_useBackpacks=0;};			// CIV as TIK_CIV (note: no backpacks for A2 original units)
+case "civ_ru":{_faction="bis_tk_civ";_useBackpacks=0;};		// CIV_RU as TK_CIV (note: no backpacks for A2 original units)
 };
 
 // DEBUG
@@ -65,6 +65,26 @@ case "pmc_baf":{_faction="bis_un";};					// Treat PMC troops as UN for gear (use
 
 if (_faction == "bis_us") then {
 #include "folk_assignGear_us.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: USMC
+// The following block of code executes only if the player is in a USMC slot; it 
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction == "usmc") then {
+#include "folk_assignGear_usmc.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: CDF
+// The following block of code executes only if the player is in a CDF slot; it 
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction == "usmc") then {
+#include "folk_assignGear_usmc.sqf"
 };
 
 // ====================================================================================
@@ -89,6 +109,16 @@ if (_faction == "bis_tk") then {
 
 // ====================================================================================
 
+// GEAR: RUSSIA
+// The following block of code executes only if the player is in a RUSSIA slot; it 
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction == "ru") then {
+#include "folk_assignGear_ru.sqf"
+};
+
+// ====================================================================================
+
 // GEAR: TAKISTANI MILITIA
 // The following block of code executes only if the player is in a TAKISTANI MILITIA slot; it 
 // automatically includes a file which contains the appropriate equipment data.
@@ -99,12 +129,32 @@ if (_faction == "bis_tk_ins") then {
 
 // ====================================================================================
 
+// GEAR: INSURGENT
+// The following block of code executes only if the player is in a INSURGENT slot; it 
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction == "ins") then {
+#include "folk_assignGear_ins.sqf"
+};
+
+// ====================================================================================
+
 // GEAR: TAKISTANI LOCALS (INDEPENDENT)
 // The following block of code executes only if the player is in a TAKISTANI LOCALS (INDEPENDENT) slot; it 
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "bis_tk_gue") then {
 #include "folk_assignGear_tk_gue.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: GUERILLAS
+// The following block of code executes only if the player is in a GUERILLA slot; it 
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction == "gue") then {
+#include "folk_assignGear_gue.sqf"
 };
 
 // ====================================================================================
