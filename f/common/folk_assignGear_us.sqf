@@ -34,7 +34,10 @@
 //		r 		- rifleman
 //		car		- carabineer
 //		smg		- submachinegunner
-
+//
+//		v_tr	- truck
+//		v_ifv	- ifv
+//
 // ====================================================================================
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
@@ -453,7 +456,31 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _smgmag} foreach [1,2,3,4];
 		_unit addweapon _smg;
-	};		
+	};
+
+// CARGO: TRUCK
+	case "v_tr":
+	{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		_unit addMagazineCargoGlobal [_riflemag, 15];
+		_unit addMagazineCargoGlobal [_glriflemag, 15];
+		_unit addMagazineCargoGlobal [_carbinemag, 15];
+		_unit addMagazineCargoGlobal [_grenade, 5];
+		_unit addMagazineCargoGlobal [_smokegrenade, 5];
+	};
+	
+// CARGO: IFV
+	case "v_ifv":
+	{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		_unit addMagazineCargoGlobal [_riflemag, 15];
+		_unit addMagazineCargoGlobal [_glriflemag, 15];
+		_unit addMagazineCargoGlobal [_carbinemag, 15];
+		_unit addMagazineCargoGlobal [_grenade, 5];
+		_unit addMagazineCargoGlobal [_smokegrenade, 5];
+	};			
 	
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)
    default
