@@ -109,7 +109,7 @@ _unit addweapon "NVGoggles"; 					// add universal NVG for this faction
 //_unit addweapon "ItemMap";				// etc
 //_unit addweapon "ItemCompass";
 //_unit addweapon "ItemRadio";
-//_unit addweapon ItemWatch;
+//_unit addweapon "ItemWatch";
 
 // ====================================================================================
 
