@@ -48,8 +48,8 @@ _smg = "MP5A5"; _smgmag = "30Rnd_9x19_MP5";																									// Standard 
 _glrifle = "m8_carbineGL"; _glriflemag = "30Rnd_556x45_G36"; _glmag = "1Rnd_HE_M203";														// Rifle with GL and HE grenades (CO, DC, FTLs)
 _glsmokewhite = "1Rnd_Smoke_M203"; _glsmokegreen = "1Rnd_SmokeGreen_M203"; _glsmokered = "1Rnd_SmokeRed_M203";    							// Smoke for FTLs, Squad Leaders, etc 
 _glflarewhite = "FlareWhite_M203"; _glflarered = "FlareRed_M203"; _glflareyellow = "FlareYellow_M203"; _glflaregreen = "FlareGreen_M203";	// Flares for FTLs, Squad Leaders, etc
+_pistol = "glock17_EP1"; _pistolmag = "17Rnd_9x19_glock17";																				// Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
 
-_pistol = "glock17_EP1"; _pistolmag = "17Rnd_9x19_glock17 ";																				// Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
 
 _grenade = "HandGrenade_West"; _smokegrenade = "SmokeShell";																				// Grenades
 
@@ -109,7 +109,7 @@ _unit addweapon "NVGoggles"; 					// add universal NVG for this faction
 //_unit addweapon "ItemMap";				// etc
 //_unit addweapon "ItemCompass";
 //_unit addweapon "ItemRadio";
-//_unit addweapon ItemWatch;
+//_unit addweapon "ItemWatch";
 
 // ====================================================================================
 

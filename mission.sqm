@@ -29,7 +29,8 @@ class Mission
 		"caair",
 		"CAAir2",
 		"CAWheeled2_LAV25",
-		"CA_AH64D"
+		"CA_AH64D",
+		"cawheeled_e_brdm2"
 	};
 	addOnsAuto[]=
 	{
@@ -44,6 +45,7 @@ class Mission
 		"CATracked",
 		"caair_e_mi8",
 		"caair_pmc_ka60",
+		"cawheeled_e_brdm2",
 		"catracked_e_t55",
 		"CAAir_E_UH1H_EP1",
 		"CATracked_E_M2A2_Bradley",
@@ -2022,8 +2024,8 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.5;
-					text="UnitTKGUE_CO";
-					init="GrpTKGUE_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
+					text="UnitGUE_CO";
+					init="GrpGUE_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
 					description="TK Local Commander";
 					synchronizations[]={213,214};
 				};
@@ -2036,8 +2038,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_CO_M";
-					init="GrpTKGUE_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitGUE_CO_M";
+					init="GrpGUE_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="TK Local Medic";
 					synchronizations[]={213,214};
 				};
@@ -2059,8 +2061,8 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
-					text="UnitTKGUE_DC";
-					init="GrpTKGUE_DC = group this; nul = [""dc"",this] call f_fnc_assignGear;";
+					text="UnitGUE_DC";
+					init="GrpGUE_DC = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="TK Local Deputy Commander";
 					synchronizations[]={213,214};
 				};
@@ -2073,8 +2075,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_DC_M";
-					init="GrpTKGUE_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitGUE_DC_M";
+					init="GrpGUE_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="TK Local Medic";
 					synchronizations[]={213,214};
 				};
@@ -2096,8 +2098,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_ASL_SL";
-					init="GrpTKGUE_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_ASL_SL";
+					init="GrpGUE_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha Squad Leader";
 					synchronizations[]={213,214};
 				};
@@ -2110,8 +2112,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_ASL_M";
-					init="GrpTKGUE_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitGUE_ASL_M";
+					init="GrpGUE_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha Medic";
 					synchronizations[]={213,214};
 				};
@@ -2133,8 +2135,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_A1_FTL";
-					init="GrpTKGUE_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A1_FTL";
+					init="GrpGUE_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 1 Fireteam Leader";
 					synchronizations[]={213,214};
 				};
@@ -2147,8 +2149,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_A1_AR";
-					init="GrpTKGUE_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A1_AR";
+					init="GrpGUE_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 1 Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2160,8 +2162,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_2_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_A1_AAR";
-					init="GrpTKGUE_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A1_AAR";
+					init="GrpGUE_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 1 Assistant Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2173,8 +2175,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_AT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_A1_RRPG";
-					init="GrpTKGUE_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A1_RRPG";
+					init="GrpGUE_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 1 Rifleman (AT)";
 					synchronizations[]={213,214};
 				};
@@ -2196,8 +2198,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_A2_FTL";
-					init="GrpTKGUE_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A2_FTL";
+					init="GrpGUE_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 2 Fireteam Leader";
 					synchronizations[]={213,214};
 				};
@@ -2210,8 +2212,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_A2_AR";
-					init="GrpTKGUE_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A2_AR";
+					init="GrpGUE_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 2 Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2223,8 +2225,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_2_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_A2_AAR";
-					init="GrpTKGUE_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A2_AAR";
+					init="GrpGUE_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 2 Assistant Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2236,8 +2238,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_AT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_A2_RRPG";
-					init="GrpTKGUE_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A2_RRPG";
+					init="GrpGUE_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 2 Rifleman (AT)";
 					synchronizations[]={213,214};
 				};
@@ -2259,8 +2261,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_A3_FTL";
-					init="GrpTKGUE_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A3_FTL";
+					init="GrpGUE_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 3 Fireteam Leader";
 					synchronizations[]={213,214};
 				};
@@ -2273,8 +2275,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_A3_AR";
-					init="GrpTKGUE_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A3_AR";
+					init="GrpGUE_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 3 Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2286,8 +2288,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_2_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_A3_AAR";
-					init="GrpTKGUE_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A3_AAR";
+					init="GrpGUE_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 3 Assistant Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2299,8 +2301,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_AT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_A3_RRPG";
-					init="GrpTKGUE_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitGUE_A3_RRPG";
+					init="GrpGUE_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha 3 Rifleman (AT)";
 					synchronizations[]={213,214};
 				};
@@ -2322,8 +2324,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_BSL_SL";
-					init="GrpTKGUE_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_BSL_SL";
+					init="GrpGUE_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo Squad Leader";
 					synchronizations[]={213,214};
 				};
@@ -2336,8 +2338,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_BSL_M";
-					init="GrpTKGUE_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitGUE_BSL_M";
+					init="GrpGUE_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo Medic";
 					synchronizations[]={213,214};
 				};
@@ -2359,8 +2361,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_B1_FTL";
-					init="GrpTKGUE_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B1_FTL";
+					init="GrpGUE_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 1 Fireteam Leader";
 					synchronizations[]={213,214};
 				};
@@ -2373,8 +2375,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_B1_AR";
-					init="GrpTKGUE_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B1_AR";
+					init="GrpGUE_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 1 Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2386,8 +2388,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_2_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_B1_AAR";
-					init="GrpTKGUE_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B1_AAR";
+					init="GrpGUE_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 1 Assistant Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2399,8 +2401,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_AT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_B1_RRPG";
-					init="GrpTKGUE_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B1_RRPG";
+					init="GrpGUE_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 1 Rifleman (AT)";
 					synchronizations[]={213,214};
 				};
@@ -2422,8 +2424,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_B2_FTL";
-					init="GrpTKGUE_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B2_FTL";
+					init="GrpGUE_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 2 Fireteam Leader";
 					synchronizations[]={213,214};
 				};
@@ -2436,8 +2438,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_B2_AR";
-					init="GrpTKGUE_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B2_AR";
+					init="GrpGUE_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 2 Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2449,8 +2451,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_2_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_B2_AAR";
-					init="GrpTKGUE_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B2_AAR";
+					init="GrpGUE_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 2 Assistant Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2462,8 +2464,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_AT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_B2_RRPG";
-					init="GrpTKGUE_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B2_RRPG";
+					init="GrpGUE_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 2 Rifleman (AT)";
 					synchronizations[]={213,214};
 				};
@@ -2485,8 +2487,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_B3_FTL";
-					init="GrpTKGUE_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B3_FTL";
+					init="GrpGUE_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 3 Fireteam Leader";
 					synchronizations[]={213,214};
 				};
@@ -2499,8 +2501,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_B3_AR";
-					init="GrpTKGUE_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B3_AR";
+					init="GrpGUE_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 3 Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2512,8 +2514,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_2_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_B3_AAR";
-					init="GrpTKGUE_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B3_AAR";
+					init="GrpGUE_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 3 Assistant Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2525,8 +2527,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_AT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_B3_RRPG";
-					init="GrpTKGUE_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitGUE_B3_RRPG";
+					init="GrpGUE_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo 3 Rifleman (AT)";
 					synchronizations[]={213,214};
 				};
@@ -2548,8 +2550,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_CSL_SL";
-					init="GrpTKGUE_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_CSL_SL";
+					init="GrpGUE_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie Squad Leader";
 					synchronizations[]={213,214};
 				};
@@ -2562,8 +2564,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_CSL_M";
-					init="GrpTKGUE_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitGUE_CSL_M";
+					init="GrpGUE_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie Medic";
 					synchronizations[]={213,214};
 				};
@@ -2585,8 +2587,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_C1_FTL";
-					init="GrpTKGUE_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C1_FTL";
+					init="GrpGUE_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 1 Fireteam Leader";
 					synchronizations[]={213,214};
 				};
@@ -2599,8 +2601,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_C1_AR";
-					init="GrpTKGUE_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C1_AR";
+					init="GrpGUE_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 1 Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2612,8 +2614,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_2_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_C1_AAR";
-					init="GrpTKGUE_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C1_AAR";
+					init="GrpGUE_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 1 Assistant Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2625,8 +2627,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_AT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_C1_RRPG";
-					init="GrpTKGUE_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C1_RRPG";
+					init="GrpGUE_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 1 Rifleman (AT)";
 					synchronizations[]={213,214};
 				};
@@ -2648,8 +2650,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_C2_FTL";
-					init="GrpTKGUE_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C2_FTL";
+					init="GrpGUE_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 2 Fireteam Leader";
 					synchronizations[]={213,214};
 				};
@@ -2662,8 +2664,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_C2_AR";
-					init="GrpTKGUE_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C2_AR";
+					init="GrpGUE_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 2 Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2675,8 +2677,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_2_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_C2_AAR";
-					init="GrpTKGUE_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C2_AAR";
+					init="GrpGUE_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 2 Assistant Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2688,8 +2690,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_AT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_C2_RRPG";
-					init="GrpTKGUE_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C2_RRPG";
+					init="GrpGUE_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 2 Rifleman (AT)";
 					synchronizations[]={213,214};
 				};
@@ -2711,8 +2713,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_C3_FTL";
-					init="GrpTKGUE_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C3_FTL";
+					init="GrpGUE_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 3 Fireteam Leader";
 					synchronizations[]={213,214};
 				};
@@ -2725,8 +2727,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_C3_AR";
-					init="GrpTKGUE_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C3_AR";
+					init="GrpGUE_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 3 Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2738,8 +2740,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_2_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_C3_AAR";
-					init="GrpTKGUE_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C3_AAR";
+					init="GrpGUE_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 3 Assistant Automatic Rifleman";
 					synchronizations[]={213,214};
 				};
@@ -2751,8 +2753,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_AT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_C3_RRPG";
-					init="GrpTKGUE_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitGUE_C3_RRPG";
+					init="GrpGUE_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie 3 Rifleman (AT)";
 					synchronizations[]={213,214};
 				};
@@ -2774,8 +2776,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_MMG1_G";
-					init="GrpTKGUE_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;";
+					text="UnitGUE_MMG1_G";
+					init="GrpGUE_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;";
 					description="TK Local Medium MG Team 1 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -2787,8 +2789,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_4_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_MMG1_AG";
-					init="GrpTKGUE_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear;";
+					text="UnitGUE_MMG1_AG";
+					init="GrpGUE_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear;";
 					description="TK Local Medium MG Team 1 Assistant Gunner";
 					synchronizations[]={213,214};
 				};
@@ -2810,8 +2812,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_HMG1_G";
-					init="GrpTKGUE_HMG1 = group this; nul = [""hmgg"",this] call f_fnc_assignGear;";
+					text="UnitGUE_HMG1_G";
+					init="GrpGUE_HMG1 = group this; nul = [""hmgg"",this] call f_fnc_assignGear;";
 					description="TK Local Heavy MG Team 1 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -2823,8 +2825,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_4_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_HMG1_AG";
-					init="GrpTKGUE_HMG1 = group this; nul = [""hmgag"",this] call f_fnc_assignGear;";
+					text="UnitGUE_HMG1_AG";
+					init="GrpGUE_HMG1 = group this; nul = [""hmgag"",this] call f_fnc_assignGear;";
 					description="TK Local Heavy MG Team 1 Assistant Gunner";
 					synchronizations[]={213,214};
 				};
@@ -2846,8 +2848,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_MAT1_G";
-					init="GrpTKGUE_MAT1 = group this; nul = [""matg"",this] call f_fnc_assignGear;";
+					text="UnitGUE_MAT1_G";
+					init="GrpGUE_MAT1 = group this; nul = [""matg"",this] call f_fnc_assignGear;";
 					description="TK Local Medium AT Team 1 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -2859,8 +2861,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_4_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_MAT1_AG";
-					init="GrpTKGUE_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear;";
+					text="UnitGUE_MAT1_AG";
+					init="GrpGUE_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear;";
 					description="TK Local Medium AT Team 1 Assistant Gunner";
 					synchronizations[]={213,214};
 				};
@@ -2882,8 +2884,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_HAT1_G";
-					init="GrpTKGUE_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
+					text="UnitGUE_HAT1_G";
+					init="GrpGUE_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
 					description="TK Local Heavy AT Team 1 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -2895,8 +2897,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_4_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_HAT1_AG_1";
-					init="GrpTKGUE_HAT1 = group this; nul = [""hatag"",this] call f_fnc_assignGear;";
+					text="UnitGUE_HAT1_AG_1";
+					init="GrpGUE_HAT1 = group this; nul = [""hatag"",this] call f_fnc_assignGear;";
 					description="TK Local Heavy AT Team 1 Assistant Gunner";
 					synchronizations[]={213,214};
 				};
@@ -2918,8 +2920,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_SAM1_G";
-					init="GrpTKGUE_SAM1 = group this; nul = [""samg"",this] call f_fnc_assignGear;";
+					text="UnitGUE_SAM1_G";
+					init="GrpGUE_SAM1 = group this; nul = [""samg"",this] call f_fnc_assignGear;";
 					description="TK Local SAM Team 1 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -2931,8 +2933,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_4_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_SAM1_AG";
-					init="GrpTKGUE_SAM1 = group this; nul = [""samag"",this] call f_fnc_assignGear;";
+					text="UnitGUE_SAM1_AG";
+					init="GrpGUE_SAM1 = group this; nul = [""samag"",this] call f_fnc_assignGear;";
 					description="UN SAM Team 1 Assistant Gunner";
 					synchronizations[]={213,214};
 				};
@@ -2954,8 +2956,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_ST1_SN";
-					init="GrpTKGUE_ST1 = group this; nul = [""sn"",this] call f_fnc_assignGear;";
+					text="UnitGUE_ST1_SN";
+					init="GrpGUE_ST1 = group this; nul = [""sn"",this] call f_fnc_assignGear;";
 					description="TK Local Sniper Team 1 Sniper";
 					synchronizations[]={213,214};
 				};
@@ -2967,8 +2969,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_4_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_ST1_SP";
-					init="GrpTKGUE_ST1 = group this; nul = [""sp"",this] call f_fnc_assignGear;";
+					text="UnitGUE_ST1_SP";
+					init="GrpGUE_ST1 = group this; nul = [""sp"",this] call f_fnc_assignGear;";
 					description="TK Local Sniper Team 1 Spotter";
 					synchronizations[]={213,214};
 				};
@@ -2990,8 +2992,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_MTR1_G";
-					init="GrpTKGUE_MTR1 = group this; nul = [""mtrg"",this] call f_fnc_assignGear;";
+					text="UnitGUE_MTR1_G";
+					init="GrpGUE_MTR1 = group this; nul = [""mtrg"",this] call f_fnc_assignGear;";
 					description="TK Local Mortar Team 1 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -3003,8 +3005,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_2_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_MTR1_AG";
-					init="GrpTKGUE_MTR1 = group this; nul = [""mtrag"",this] call f_fnc_assignGear;";
+					text="UnitGUE_MTR1_AG";
+					init="GrpGUE_MTR1 = group this; nul = [""mtrag"",this] call f_fnc_assignGear;";
 					description="TK Local Mortar Team 1 Assistant Gunner";
 					synchronizations[]={213,214};
 				};
@@ -3026,8 +3028,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_ENG1_FTL";
-					init="GrpTKGUE_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
+					text="UnitGUE_ENG1_FTL";
+					init="GrpGUE_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
 					description="TK Local Exchange Engineer Team 1 Leader (PMC, No Markers)";
 					synchronizations[]={213,214};
 				};
@@ -3039,8 +3041,8 @@ class Mission
 					vehicle="Soldier_Engineer_PMC";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_ENG1_A";
-					init="GrpTKGUE_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
+					text="UnitGUE_ENG1_A";
+					init="GrpGUE_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
 					description="TK Local Exchange Engineer Team 1 Assistant (PMC, No Markers)";
 					synchronizations[]={213,214};
 				};
@@ -3062,8 +3064,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_IFV1_C";
-					init="GrpTKGUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander TKGUE_IFV1;";
+					text="UnitGUE_IFV1_C";
+					init="GrpGUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander GUE_IFV1;";
 					description="TK Local IFV 1 Commander";
 					synchronizations[]={213,214};
 				};
@@ -3075,8 +3077,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_IFV1_D";
-					init="GrpTKGUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver TKGUE_IFV1;";
+					text="UnitGUE_IFV1_D";
+					init="GrpGUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver GUE_IFV1;";
 					description="TK Local IFV 1 Driver";
 					synchronizations[]={213,214};
 				};
@@ -3088,8 +3090,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_IFV1_G";
-					init="GrpTKGUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner TKGUE_IFV1;";
+					text="UnitGUE_IFV1_G";
+					init="GrpGUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner GUE_IFV1;";
 					description="TK Local IFV 1 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -3111,8 +3113,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_IFV2_C";
-					init="GrpTKGUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander TKGUE_IFV2;";
+					text="UnitGUE_IFV2_C";
+					init="GrpGUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander GUE_IFV2;";
 					description="TK Local IFV 2 Commander";
 					synchronizations[]={213,214};
 				};
@@ -3124,8 +3126,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_IFV2_D";
-					init="GrpTKGUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver TKGUE_IFV2;";
+					text="UnitGUE_IFV2_D";
+					init="GrpGUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver GUE_IFV2;";
 					description="TK Local IFV 2 Driver";
 					synchronizations[]={213,214};
 				};
@@ -3137,8 +3139,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_IFV2_G";
-					init="GrpTKGUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner TKGUE_IFV2;";
+					text="UnitGUE_IFV2_G";
+					init="GrpGUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner GUE_IFV2;";
 					description="TK Local IFV 2 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -3160,8 +3162,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_IFV3_C";
-					init="GrpTKGUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander TKGUE_IFV3;";
+					text="UnitGUE_IFV3_C";
+					init="GrpGUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander GUE_IFV3;";
 					description="TK Local IFV 3 Commander";
 					synchronizations[]={213,214};
 				};
@@ -3173,8 +3175,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_IFV3_D";
-					init="GrpTKGUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver TKGUE_IFV3;";
+					text="UnitGUE_IFV3_D";
+					init="GrpGUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver GUE_IFV3;";
 					description="TK Local IFV 3 Driver";
 					synchronizations[]={213,214};
 				};
@@ -3186,8 +3188,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_IFV3_G";
-					init="GrpTKGUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner TKGUE_IFV3;";
+					text="UnitGUE_IFV3_G";
+					init="GrpGUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner GUE_IFV3;";
 					description="TK Local IFV 3 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -3209,8 +3211,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_TNK1_C";
-					init="GrpTKGUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander TKGUE_TNK1;";
+					text="UnitGUE_TNK1_C";
+					init="GrpGUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander GUE_TNK1;";
 					description="TK Local Tank 1 Commander";
 					synchronizations[]={213,214};
 				};
@@ -3222,8 +3224,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_TNK1_D";
-					init="GrpTKGUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver TKGUE_TNK1;";
+					text="UnitGUE_TNK1_D";
+					init="GrpGUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver GUE_TNK1;";
 					description="TK Local Tank 1 Driver";
 					synchronizations[]={213,214};
 				};
@@ -3235,8 +3237,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_TNK1_G";
-					init="GrpTKGUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner TKGUE_TNK1;";
+					text="UnitGUE_TNK1_G";
+					init="GrpGUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner GUE_TNK1;";
 					description="TK Local Tank 1 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -3258,8 +3260,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_TH1_P";
-					init="GrpTKGUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver TKGUE_TH1;";
+					text="UnitGUE_TH1_P";
+					init="GrpGUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver GUE_TH1;";
 					description="TK Local Transport Helo 1 Pilot";
 					synchronizations[]={213,214};
 				};
@@ -3271,8 +3273,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_TH1_CM";
-					init="GrpTKGUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [TKGUE_TH1, [0]];";
+					text="UnitGUE_TH1_CM";
+					init="GrpGUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [GUE_TH1, [0]];";
 					description="TK Local Transport Helo 1 Crewman";
 					synchronizations[]={213,214};
 				};
@@ -3294,8 +3296,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_TH2_P";
-					init="GrpTKGUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver TKGUE_TH2;";
+					text="UnitGUE_TH2_P";
+					init="GrpGUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver GUE_TH2;";
 					description="TK Local Transport Helo 2 Pilot";
 					synchronizations[]={213,214};
 				};
@@ -3307,8 +3309,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_TH2_CM";
-					init="GrpTKGUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [TKGUE_TH2, [0]];";
+					text="UnitGUE_TH2_CM";
+					init="GrpGUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [GUE_TH2, [0]];";
 					description="TK Local Transport Helo 2 Crewman";
 					synchronizations[]={213,214};
 				};
@@ -3330,8 +3332,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKGUE_AH1_P";
-					init="GrpTKGUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver TKGUE_AH1;";
+					text="UnitGUE_AH1_P";
+					init="GrpGUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver GUE_AH1;";
 					description="TK Local Attack Helo 1 Pilot";
 					synchronizations[]={213,214};
 				};
@@ -3343,8 +3345,8 @@ class Mission
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKGUE_AH1_G";
-					init="GrpTKGUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInGunner TKGUE_AH1;";
+					text="UnitGUE_AH1_G";
+					init="GrpGUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInGunner GUE_AH1;";
 					description="TK Local Attack Helo 1 Gunner";
 					synchronizations[]={213,214};
 				};
@@ -3365,7 +3367,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpTKGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="TK Local RESERVED FOR JIP";
 					synchronizations[]={213,214};
 				};
@@ -3377,7 +3379,7 @@ class Mission
 					vehicle="TK_GUE_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpTKGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="TK Local RESERVED FOR JIP";
 					synchronizations[]={213,214};
 				};
@@ -3389,7 +3391,7 @@ class Mission
 					vehicle="TK_GUE_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpTKGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="TK Local RESERVED FOR JIP";
 					synchronizations[]={213,214};
 				};
@@ -3401,7 +3403,7 @@ class Mission
 					vehicle="TK_GUE_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpTKGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="TK Local RESERVED FOR JIP";
 					synchronizations[]={213,214};
 				};
@@ -3413,7 +3415,7 @@ class Mission
 					vehicle="TK_GUE_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpTKGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="TK Local RESERVED FOR JIP";
 					synchronizations[]={213,214};
 				};
@@ -3425,7 +3427,7 @@ class Mission
 					vehicle="TK_GUE_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpTKGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="TK Local RESERVED FOR JIP";
 					synchronizations[]={213,214};
 				};
@@ -3437,7 +3439,7 @@ class Mission
 					vehicle="TK_GUE_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpTKGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="TK Local RESERVED FOR JIP";
 					synchronizations[]={213,214};
 				};
@@ -3449,7 +3451,7 @@ class Mission
 					vehicle="TK_GUE_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpTKGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="TK Local RESERVED FOR JIP";
 					synchronizations[]={213,214};
 				};
@@ -3461,7 +3463,7 @@ class Mission
 					vehicle="TK_GUE_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpTKGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="TK Local RESERVED FOR JIP";
 					synchronizations[]={213,214};
 				};
@@ -3473,7 +3475,7 @@ class Mission
 					vehicle="TK_GUE_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpTKGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpGUE_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="TK Local RESERVED FOR JIP";
 					synchronizations[]={213,214};
 				};
@@ -7792,8 +7794,8 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.5;
-					text="UnitTKINS_CO";
-					init="GrpTKINS_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
+					text="UnitINS_CO";
+					init="GrpINS_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
 					description="TK Militia Commander";
 					synchronizations[]={589,590};
 				};
@@ -7806,8 +7808,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_CO_M";
-					init="GrpTKINS_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitINS_CO_M";
+					init="GrpINS_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="TK Militia Medic";
 					synchronizations[]={589,590};
 				};
@@ -7829,8 +7831,8 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.5;
-					text="UnitTKINS_DC";
-					init="GrpTKINS_DC = group this; nul = [""co"",this] call f_fnc_assignGear;";
+					text="UnitINS_DC";
+					init="GrpINS_DC = group this; nul = [""co"",this] call f_fnc_assignGear;";
 					description="TK Militia Deputy Commander";
 					synchronizations[]={589,590};
 				};
@@ -7843,8 +7845,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_DC_M";
-					init="GrpTKINS_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitINS_DC_M";
+					init="GrpINS_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="TK Militia Medic";
 					synchronizations[]={589,590};
 				};
@@ -7866,8 +7868,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_ASL_SL";
-					init="GrpTKINS_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_ASL_SL";
+					init="GrpINS_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha Squad Leader";
 					synchronizations[]={589,590};
 				};
@@ -7880,8 +7882,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_ASL_M";
-					init="GrpTKINS_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitINS_ASL_M";
+					init="GrpINS_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha Medic";
 					synchronizations[]={589,590};
 				};
@@ -7903,8 +7905,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_A1_FTL";
-					init="GrpTKINS_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_A1_FTL";
+					init="GrpINS_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 1 Fireteam Leader";
 					synchronizations[]={589,590};
 				};
@@ -7917,8 +7919,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_A1_AR";
-					init="GrpTKINS_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitINS_A1_AR";
+					init="GrpINS_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 1 Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -7930,8 +7932,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_A1_AAR";
-					init="GrpTKINS_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitINS_A1_AAR";
+					init="GrpINS_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 1 Assistant Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -7943,8 +7945,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_A1_RRPG";
-					init="GrpTKINS_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitINS_A1_RRPG";
+					init="GrpINS_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 1 Rifleman (AT)";
 					synchronizations[]={589,590};
 				};
@@ -7966,8 +7968,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_A2_FTL";
-					init="GrpTKINS_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_A2_FTL";
+					init="GrpINS_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 2 Fireteam Leader";
 					synchronizations[]={589,590};
 				};
@@ -7980,8 +7982,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_A2_AR";
-					init="GrpTKINS_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitINS_A2_AR";
+					init="GrpINS_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 2 Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -7993,8 +7995,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_A2_AAR";
-					init="GrpTKINS_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitINS_A2_AAR";
+					init="GrpINS_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 2 Assistant Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8006,8 +8008,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_A2_RRPG";
-					init="GrpTKINS_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitINS_A2_RRPG";
+					init="GrpINS_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 2 Rifleman (AT)";
 					synchronizations[]={589,590};
 				};
@@ -8029,8 +8031,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_A3_FTL";
-					init="GrpTKINS_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_A3_FTL";
+					init="GrpINS_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 3 Fireteam Leader";
 					synchronizations[]={589,590};
 				};
@@ -8043,8 +8045,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_A3_AR";
-					init="GrpTKINS_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitINS_A3_AR";
+					init="GrpINS_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 3 Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8056,8 +8058,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_A3_AAR";
-					init="GrpTKINS_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitINS_A3_AAR";
+					init="GrpINS_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 3 Assistant Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8069,8 +8071,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_A3_RRPG";
-					init="GrpTKINS_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitINS_A3_RRPG";
+					init="GrpINS_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha 3 Rifleman (AT)";
 					synchronizations[]={589,590};
 				};
@@ -8092,8 +8094,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_BSL_SL";
-					init="GrpTKINS_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_BSL_SL";
+					init="GrpINS_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo Squad Leader";
 					synchronizations[]={589,590};
 				};
@@ -8106,8 +8108,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_BSL_M";
-					init="GrpTKINS_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitINS_BSL_M";
+					init="GrpINS_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo Medic";
 					synchronizations[]={589,590};
 				};
@@ -8129,8 +8131,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_B1_FTL";
-					init="GrpTKINS_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_B1_FTL";
+					init="GrpINS_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 1 Fireteam Leader";
 					synchronizations[]={589,590};
 				};
@@ -8143,8 +8145,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_B1_AR";
-					init="GrpTKINS_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitINS_B1_AR";
+					init="GrpINS_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 1 Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8156,8 +8158,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_B1_AAR";
-					init="GrpTKINS_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitINS_B1_AAR";
+					init="GrpINS_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 1 Assistant Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8169,8 +8171,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_B1_RRPG";
-					init="GrpTKINS_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitINS_B1_RRPG";
+					init="GrpINS_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 1 Rifleman (AT)";
 					synchronizations[]={589,590};
 				};
@@ -8192,8 +8194,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_B2_FTL";
-					init="GrpTKINS_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_B2_FTL";
+					init="GrpINS_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 2 Fireteam Leader";
 					synchronizations[]={589,590};
 				};
@@ -8206,8 +8208,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_B2_AR";
-					init="GrpTKINS_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitINS_B2_AR";
+					init="GrpINS_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 2 Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8219,8 +8221,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_B2_AAR";
-					init="GrpTKINS_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitINS_B2_AAR";
+					init="GrpINS_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 2 Assistant Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8232,8 +8234,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_B2_RRPG";
-					init="GrpTKINS_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitINS_B2_RRPG";
+					init="GrpINS_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 2 Rifleman (AT)";
 					synchronizations[]={589,590};
 				};
@@ -8255,8 +8257,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_B3_FTL";
-					init="GrpTKINS_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_B3_FTL";
+					init="GrpINS_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 3 Fireteam Leader";
 					synchronizations[]={589,590};
 				};
@@ -8269,8 +8271,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_B3_AR";
-					init="GrpTKINS_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitINS_B3_AR";
+					init="GrpINS_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 3 Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8282,8 +8284,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_B3_AAR";
-					init="GrpTKINS_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitINS_B3_AAR";
+					init="GrpINS_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 3 Assistant Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8295,8 +8297,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_B3_RRPG";
-					init="GrpTKINS_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitINS_B3_RRPG";
+					init="GrpINS_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo 3 Rifleman (AT)";
 					synchronizations[]={589,590};
 				};
@@ -8318,8 +8320,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_CSL_SL";
-					init="GrpTKINS_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_CSL_SL";
+					init="GrpINS_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie Squad Leader";
 					synchronizations[]={589,590};
 				};
@@ -8332,8 +8334,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_CSL_M";
-					init="GrpTKINS_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitINS_CSL_M";
+					init="GrpINS_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie Medic";
 					synchronizations[]={589,590};
 				};
@@ -8355,8 +8357,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_C1_FTL";
-					init="GrpTKINS_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_C1_FTL";
+					init="GrpINS_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 1 Fireteam Leader";
 					synchronizations[]={589,590};
 				};
@@ -8369,8 +8371,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_C1_AR";
-					init="GrpTKINS_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitINS_C1_AR";
+					init="GrpINS_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 1 Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8382,8 +8384,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_C1_AAR";
-					init="GrpTKINS_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitINS_C1_AAR";
+					init="GrpINS_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 1 Assistant Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8395,8 +8397,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_C1_RRPG";
-					init="GrpTKINS_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitINS_C1_RRPG";
+					init="GrpINS_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 1 Rifleman (AT)";
 					synchronizations[]={589,590};
 				};
@@ -8418,8 +8420,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_C2_FTL";
-					init="GrpTKINS_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_C2_FTL";
+					init="GrpINS_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 2 Fireteam Leader";
 					synchronizations[]={589,590};
 				};
@@ -8432,8 +8434,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_C2_AR";
-					init="GrpTKINS_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitINS_C2_AR";
+					init="GrpINS_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 2 Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8445,8 +8447,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_C2_AAR";
-					init="GrpTKINS_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitINS_C2_AAR";
+					init="GrpINS_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 2 Assistant Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8458,8 +8460,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_C2_RRPG";
-					init="GrpTKINS_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitINS_C2_RRPG";
+					init="GrpINS_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 2 Rifleman (AT)";
 					synchronizations[]={589,590};
 				};
@@ -8481,8 +8483,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_C3_FTL";
-					init="GrpTKINS_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitINS_C3_FTL";
+					init="GrpINS_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 3 Fireteam Leader";
 					synchronizations[]={589,590};
 				};
@@ -8495,8 +8497,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_C3_AR";
-					init="GrpTKINS_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitINS_C3_AR";
+					init="GrpINS_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 3 Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8508,8 +8510,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_C3_AAR";
-					init="GrpTKINS_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitINS_C3_AAR";
+					init="GrpINS_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 3 Assistant Automatic Rifleman";
 					synchronizations[]={589,590};
 				};
@@ -8521,8 +8523,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_C3_RRPG";
-					init="GrpTKINS_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitINS_C3_RRPG";
+					init="GrpINS_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie 3 Rifleman (AT)";
 					synchronizations[]={589,590};
 				};
@@ -8544,8 +8546,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_MMG1_G";
-					init="GrpTKINS_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;";
+					text="UnitINS_MMG1_G";
+					init="GrpINS_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;";
 					description="TK Militia Medium MG Team 1 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8557,8 +8559,8 @@ class Mission
 					vehicle="TK_INS_Soldier_MG_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_MMG1_AG";
-					init="GrpTKINS_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear;";
+					text="UnitINS_MMG1_AG";
+					init="GrpINS_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear;";
 					description="TK Militia Medium MG Team 1 Assistant Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8580,8 +8582,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_HMG1_G";
-					init="GrpTKINS_HMG1 = group this; nul = [""hmgg"",this] call f_fnc_assignGear;";
+					text="UnitINS_HMG1_G";
+					init="GrpINS_HMG1 = group this; nul = [""hmgg"",this] call f_fnc_assignGear;";
 					description="TK Militia Heavy MG Team 1 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8593,8 +8595,8 @@ class Mission
 					vehicle="TK_INS_Soldier_MG_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_HMG1_AG";
-					init="GrpTKINS_HMG1 = group this; nul = [""hmgag"",this] call f_fnc_assignGear;";
+					text="UnitINS_HMG1_AG";
+					init="GrpINS_HMG1 = group this; nul = [""hmgag"",this] call f_fnc_assignGear;";
 					description="TK Militia Heavy MG Team 1 Assistant Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8616,8 +8618,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_MAT1_G";
-					init="GrpTKINS_MAT1 = group this; nul = [""matg"",this] call f_fnc_assignGear;";
+					text="UnitINS_MAT1_G";
+					init="GrpINS_MAT1 = group this; nul = [""matg"",this] call f_fnc_assignGear;";
 					description="TK Militia Medium AT Team 1 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8629,8 +8631,8 @@ class Mission
 					vehicle="TK_INS_Soldier_AAT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_MAT1_AG";
-					init="GrpTKINS_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear;";
+					text="UnitINS_MAT1_AG";
+					init="GrpINS_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear;";
 					description="TK Militia Medium AT Team 1 Assistant Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8652,8 +8654,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_HAT1_G";
-					init="GrpTKINS_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
+					text="UnitINS_HAT1_G";
+					init="GrpINS_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
 					description="TK Militia Heavy AT Team 1 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8665,8 +8667,8 @@ class Mission
 					vehicle="TK_INS_Soldier_AAT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_HAT1_AG";
-					init="GrpTKINS_HAT1 = group this; nul = [""hatag"",this] call f_fnc_assignGear;";
+					text="UnitINS_HAT1_AG";
+					init="GrpINS_HAT1 = group this; nul = [""hatag"",this] call f_fnc_assignGear;";
 					description="TK Militia Heavy AT Team 1 Assistant Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8688,8 +8690,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_SAM1_G";
-					init="GrpTKINS_SAM1 = group this; nul = [""samg"",this] call f_fnc_assignGear;";
+					text="UnitINS_SAM1_G";
+					init="GrpINS_SAM1 = group this; nul = [""samg"",this] call f_fnc_assignGear;";
 					description="TK Militia SAM Team 1 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8701,8 +8703,8 @@ class Mission
 					vehicle="TK_INS_Soldier_AAT_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_SAM1_AG";
-					init="GrpTKINS_SAM1 = group this; nul = [""samag"",this] call f_fnc_assignGear;";
+					text="UnitINS_SAM1_AG";
+					init="GrpINS_SAM1 = group this; nul = [""samag"",this] call f_fnc_assignGear;";
 					description="TK Militia SAM Team 1 Assistant Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8724,8 +8726,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_ST1_SN";
-					init="GrpTKINS_ST1 = group this; nul = [""sn"",this] call f_fnc_assignGear;";
+					text="UnitINS_ST1_SN";
+					init="GrpINS_ST1 = group this; nul = [""sn"",this] call f_fnc_assignGear;";
 					description="TK Militia Sniper Team 1 Sniper";
 					synchronizations[]={590,589};
 				};
@@ -8737,8 +8739,8 @@ class Mission
 					vehicle="TK_INS_Soldier_Sniper_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_ST1_SP";
-					init="GrpTKINS_ST1 = group this; nul = [""sp"",this] call f_fnc_assignGear;";
+					text="UnitINS_ST1_SP";
+					init="GrpINS_ST1 = group this; nul = [""sp"",this] call f_fnc_assignGear;";
 					description="TK Militia Sniper Team 1 Spotter";
 					synchronizations[]={589,590};
 				};
@@ -8760,8 +8762,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_MTR1_G";
-					init="GrpTKINS_MTR1 = group this; nul = [""mtrg"",this] call f_fnc_assignGear;";
+					text="UnitINS_MTR1_G";
+					init="GrpINS_MTR1 = group this; nul = [""mtrg"",this] call f_fnc_assignGear;";
 					description="TK Militia Mortar Team 1 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8773,8 +8775,8 @@ class Mission
 					vehicle="TK_INS_Soldier_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_MTR1_AG";
-					init="GrpTKINS_MTR1 = group this; nul = [""mtrag"",this] call f_fnc_assignGear;";
+					text="UnitINS_MTR1_AG";
+					init="GrpINS_MTR1 = group this; nul = [""mtrag"",this] call f_fnc_assignGear;";
 					description="TK Militia Mortar Team 1 Assistant Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8796,8 +8798,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_ENG1_FTL";
-					init="GrpTKINS_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
+					text="UnitINS_ENG1_FTL";
+					init="GrpINS_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
 					description="TK Militia Exchange Engineer Team 1 Leader (TK Army, No Markers)";
 					synchronizations[]={589,590};
 				};
@@ -8809,8 +8811,8 @@ class Mission
 					vehicle="TK_Soldier_Engineer_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_ENG1_A";
-					init="GrpTKINS_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
+					text="UnitINS_ENG1_A";
+					init="GrpINS_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
 					description="TK Militia Exchange Engineer Team 1 Assistant (TK Army, No Markers)";
 					synchronizations[]={589,590};
 				};
@@ -8832,8 +8834,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_IFV1_C";
-					init="GrpTKINS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander TKINS_IFV1;";
+					text="UnitINS_IFV1_C";
+					init="GrpINS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander INS_IFV1;";
 					description="TK Militia IFV 1 Commander";
 					synchronizations[]={589,590};
 				};
@@ -8845,8 +8847,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_IFV1_D";
-					init="GrpTKINS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver TKINS_IFV1;";
+					text="UnitINS_IFV1_D";
+					init="GrpINS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver INS_IFV1;";
 					description="TK Militia IFV 1 Driver";
 					synchronizations[]={589,590};
 				};
@@ -8858,8 +8860,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_IFV1_G";
-					init="GrpTKINS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner TKINS_IFV1;";
+					text="UnitINS_IFV1_G";
+					init="GrpINS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner INS_IFV1;";
 					description="TK Militia IFV 1 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8881,8 +8883,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_IFV2_C";
-					init="GrpTKINS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander TKINS_IFV2;";
+					text="UnitINS_IFV2_C";
+					init="GrpINS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander INS_IFV2;";
 					description="TK Militia IFV 2 Commander";
 					synchronizations[]={589,590};
 				};
@@ -8894,8 +8896,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_IFV2_D";
-					init="GrpTKINS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver TKINS_IFV2;";
+					text="UnitINS_IFV2_D";
+					init="GrpINS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver INS_IFV2;";
 					description="TK Militia IFV 2 Driver";
 					synchronizations[]={589,590};
 				};
@@ -8907,8 +8909,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_IFV2_G";
-					init="GrpTKINS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner TKINS_IFV2;";
+					text="UnitINS_IFV2_G";
+					init="GrpINS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner INS_IFV2;";
 					description="TK Militia IFV 2 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8930,8 +8932,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_IFV3_C";
-					init="GrpTKINS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander TKINS_IFV3;";
+					text="UnitINS_IFV3_C";
+					init="GrpINS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander INS_IFV3;";
 					description="TK Militia IFV 3 Commander";
 					synchronizations[]={589,590};
 				};
@@ -8943,8 +8945,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_IFV3_D";
-					init="GrpTKINS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver TKINS_IFV3;";
+					text="UnitINS_IFV3_D";
+					init="GrpINS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver INS_IFV3;";
 					description="TK Militia IFV 3 Driver";
 					synchronizations[]={589,590};
 				};
@@ -8956,8 +8958,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_IFV3_G";
-					init="GrpTKINS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner TKINS_IFV3;";
+					text="UnitINS_IFV3_G";
+					init="GrpINS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner INS_IFV3;";
 					description="TK Militia IFV 3 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -8979,8 +8981,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_TNK1_C";
-					init="GrpTKINS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander TKINS_TNK1;";
+					text="UnitINS_TNK1_C";
+					init="GrpINS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander INS_TNK1;";
 					description="TK Militia Tank 1 Commander";
 					synchronizations[]={589,590};
 				};
@@ -8992,8 +8994,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_TNK1_D";
-					init="GrpTKINS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver TKINS_TNK1;";
+					text="UnitINS_TNK1_D";
+					init="GrpINS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver INS_TNK1;";
 					description="TK Militia Tank 1 Driver";
 					synchronizations[]={589,590};
 				};
@@ -9005,8 +9007,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_TNK1_G";
-					init="GrpTKINS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner TKINS_TNK1;";
+					text="UnitINS_TNK1_G";
+					init="GrpINS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner INS_TNK1;";
 					description="TK Militia Tank 1 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -9028,8 +9030,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_TH1_P";
-					init="GrpTKINS_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver TKINS_TH1;";
+					text="UnitINS_TH1_P";
+					init="GrpINS_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver INS_TH1;";
 					description="TK Militia Transport Helo 1 Pilot";
 					synchronizations[]={589,590};
 				};
@@ -9041,8 +9043,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_TH1_CM";
-					init="GrpTKINS_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [TKINS_TH1, [0]];";
+					text="UnitINS_TH1_CM";
+					init="GrpINS_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [INS_TH1, [0]];";
 					description="TK Militia Transport Helo 1 Crewman";
 					synchronizations[]={589,590};
 				};
@@ -9064,8 +9066,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_TH2_P";
-					init="GrpTKINS_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver TKINS_TH2;";
+					text="UnitINS_TH2_P";
+					init="GrpINS_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver INS_TH2;";
 					description="TK Militia Transport Helo 2 Pilot";
 					synchronizations[]={589,590};
 				};
@@ -9077,8 +9079,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_TH2_CM";
-					init="GrpTKINS_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [TKINS_TH2, [0]];";
+					text="UnitINS_TH2_CM";
+					init="GrpINS_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [INS_TH2, [0]];";
 					description="TK Militia Transport Helo 2 Crewman";
 					synchronizations[]={589,590};
 				};
@@ -9100,8 +9102,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitTKINS_AH1_P";
-					init="GrpTKINS_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver TKINS_AH1;";
+					text="UnitINS_AH1_P";
+					init="GrpINS_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver INS_AH1;";
 					description="TK Militia Attack Helo 1 Pilot";
 					synchronizations[]={589,590};
 				};
@@ -9113,8 +9115,8 @@ class Mission
 					vehicle="TK_INS_Soldier_3_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitTKINS_AH1_G";
-					init="GrpTKINS_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInGunner TKINS_AH1;";
+					text="UnitINS_AH1_G";
+					init="GrpINS_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInGunner INS_AH1;";
 					description="TK Militia Attack Helo 1 Gunner";
 					synchronizations[]={589,590};
 				};
@@ -13814,8 +13816,8 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.5;
-					text="UnitINS_CO";
-					init="GrpINS_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_CO";
+					init="GrpA2INS_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Commander";
 					synchronizations[]={967,968};
 				};
@@ -13828,8 +13830,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_CO_M";
-					init="GrpINS_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_CO_M";
+					init="GrpA2INS_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Medic";
 					synchronizations[]={967,968};
 				};
@@ -13851,8 +13853,8 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.5;
-					text="UnitINS_DC";
-					init="GrpINS_DC = group this; nul = [""co"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_DC";
+					init="GrpA2INS_DC = group this; nul = [""co"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Deputy Commander";
 					synchronizations[]={967,968};
 				};
@@ -13865,8 +13867,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_DC_M";
-					init="GrpINS_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_DC_M";
+					init="GrpA2INS_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Medic";
 					synchronizations[]={967,968};
 				};
@@ -13888,8 +13890,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_ASL_SL";
-					init="GrpINS_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_ASL_SL";
+					init="GrpA2INS_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha Squad Leader";
 					synchronizations[]={967,968};
 				};
@@ -13902,8 +13904,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_ASL_M";
-					init="GrpINS_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_ASL_M";
+					init="GrpA2INS_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha Medic";
 					synchronizations[]={967,968};
 				};
@@ -13925,8 +13927,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_A1_FTL";
-					init="GrpINS_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A1_FTL";
+					init="GrpA2INS_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 1 Fireteam Leader";
 					synchronizations[]={967,968};
 				};
@@ -13939,8 +13941,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_A1_AR";
-					init="GrpINS_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A1_AR";
+					init="GrpA2INS_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 1 Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -13952,8 +13954,8 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_A1_AAR";
-					init="GrpINS_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A1_AAR";
+					init="GrpA2INS_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 1 Assistant Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -13965,8 +13967,8 @@ class Mission
 					vehicle="Ins_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_A1_RRPG";
-					init="GrpINS_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A1_RRPG";
+					init="GrpA2INS_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 1 Rifleman (AT)";
 					synchronizations[]={967,968};
 				};
@@ -13988,8 +13990,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_A2_FTL";
-					init="GrpINS_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A2_FTL";
+					init="GrpA2INS_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 2 Fireteam Leader";
 					synchronizations[]={967,968};
 				};
@@ -14002,8 +14004,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_A2_AR";
-					init="GrpINS_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A2_AR";
+					init="GrpA2INS_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 2 Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14015,8 +14017,8 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_A2_AAR";
-					init="GrpINS_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A2_AAR";
+					init="GrpA2INS_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 2 Assistant Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14028,8 +14030,8 @@ class Mission
 					vehicle="Ins_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_A2_RRPG";
-					init="GrpINS_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A2_RRPG";
+					init="GrpA2INS_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 2 Rifleman (AT)";
 					synchronizations[]={967,968};
 				};
@@ -14051,8 +14053,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_A3_FTL";
-					init="GrpINS_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A3_FTL";
+					init="GrpA2INS_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 3 Fireteam Leader";
 					synchronizations[]={967,968};
 				};
@@ -14065,8 +14067,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_A3_AR";
-					init="GrpINS_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A3_AR";
+					init="GrpA2INS_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 3 Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14078,8 +14080,8 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_A3_AAR";
-					init="GrpINS_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A3_AAR";
+					init="GrpA2INS_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 3 Assistant Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14091,8 +14093,8 @@ class Mission
 					vehicle="Ins_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_A3_RRPG";
-					init="GrpINS_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_A3_RRPG";
+					init="GrpA2INS_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha 3 Rifleman (AT)";
 					synchronizations[]={967,968};
 				};
@@ -14114,8 +14116,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_BSL_SL";
-					init="GrpINS_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_BSL_SL";
+					init="GrpA2INS_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo Squad Leader";
 					synchronizations[]={967,968};
 				};
@@ -14128,8 +14130,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_BSL_M";
-					init="GrpINS_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_BSL_M";
+					init="GrpA2INS_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo Medic";
 					synchronizations[]={967,968};
 				};
@@ -14151,8 +14153,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_B1_FTL";
-					init="GrpINS_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B1_FTL";
+					init="GrpA2INS_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 1 Fireteam Leader";
 					synchronizations[]={967,968};
 				};
@@ -14165,8 +14167,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_B1_AR";
-					init="GrpINS_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B1_AR";
+					init="GrpA2INS_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 1 Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14178,8 +14180,8 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_B1_AAR";
-					init="GrpINS_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B1_AAR";
+					init="GrpA2INS_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 1 Assistant Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14191,8 +14193,8 @@ class Mission
 					vehicle="Ins_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_B1_RRPG";
-					init="GrpINS_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B1_RRPG";
+					init="GrpA2INS_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 1 Rifleman (AT)";
 					synchronizations[]={967,968};
 				};
@@ -14214,8 +14216,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_B2_FTL";
-					init="GrpINS_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B2_FTL";
+					init="GrpA2INS_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 2 Fireteam Leader";
 					synchronizations[]={967,968};
 				};
@@ -14228,8 +14230,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_B2_AR";
-					init="GrpINS_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B2_AR";
+					init="GrpA2INS_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 2 Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14241,8 +14243,8 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_B2_AAR";
-					init="GrpINS_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B2_AAR";
+					init="GrpA2INS_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 2 Assistant Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14254,8 +14256,8 @@ class Mission
 					vehicle="Ins_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_B2_RRPG";
-					init="GrpINS_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B2_RRPG";
+					init="GrpA2INS_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 2 Rifleman (AT)";
 					synchronizations[]={967,968};
 				};
@@ -14277,8 +14279,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_B3_FTL";
-					init="GrpINS_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B3_FTL";
+					init="GrpA2INS_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 3 Fireteam Leader";
 					synchronizations[]={967,968};
 				};
@@ -14291,8 +14293,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_B3_AR";
-					init="GrpINS_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B3_AR";
+					init="GrpA2INS_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 3 Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14304,8 +14306,8 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_B3_AAR";
-					init="GrpINS_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B3_AAR";
+					init="GrpA2INS_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 3 Assistant Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14317,8 +14319,8 @@ class Mission
 					vehicle="Ins_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_B3_RRPG";
-					init="GrpINS_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_B3_RRPG";
+					init="GrpA2INS_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo 3 Rifleman (AT)";
 					synchronizations[]={967,968};
 				};
@@ -14340,8 +14342,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_CSL_SL";
-					init="GrpINS_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_CSL_SL";
+					init="GrpA2INS_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie Squad Leader";
 					synchronizations[]={967,968};
 				};
@@ -14354,8 +14356,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_CSL_M";
-					init="GrpINS_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_CSL_M";
+					init="GrpA2INS_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie Medic";
 					synchronizations[]={967,968};
 				};
@@ -14377,8 +14379,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_C1_FTL";
-					init="GrpINS_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C1_FTL";
+					init="GrpA2INS_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 1 Fireteam Leader";
 					synchronizations[]={967,968};
 				};
@@ -14391,8 +14393,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_C1_AR";
-					init="GrpINS_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C1_AR";
+					init="GrpA2INS_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 1 Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14404,8 +14406,8 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_C1_AAR";
-					init="GrpINS_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C1_AAR";
+					init="GrpA2INS_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 1 Assistant Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14417,8 +14419,8 @@ class Mission
 					vehicle="Ins_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_C1_RRPG";
-					init="GrpINS_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C1_RRPG";
+					init="GrpA2INS_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 1 Rifleman (AT)";
 					synchronizations[]={967,968};
 				};
@@ -14440,8 +14442,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_C2_FTL";
-					init="GrpINS_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C2_FTL";
+					init="GrpA2INS_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 2 Fireteam Leader";
 					synchronizations[]={967,968};
 				};
@@ -14454,8 +14456,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_C2_AR";
-					init="GrpINS_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C2_AR";
+					init="GrpA2INS_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 2 Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14467,8 +14469,8 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_C2_AAR";
-					init="GrpINS_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C2_AAR";
+					init="GrpA2INS_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 2 Assistant Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14480,8 +14482,8 @@ class Mission
 					vehicle="Ins_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_C2_RRPG";
-					init="GrpINS_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C2_RRPG";
+					init="GrpA2INS_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 2 Rifleman (AT)";
 					synchronizations[]={967,968};
 				};
@@ -14503,8 +14505,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_C3_FTL";
-					init="GrpINS_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C3_FTL";
+					init="GrpA2INS_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 3 Fireteam Leader";
 					synchronizations[]={967,968};
 				};
@@ -14517,8 +14519,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_C3_AR";
-					init="GrpINS_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C3_AR";
+					init="GrpA2INS_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 3 Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14530,8 +14532,8 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_C3_AAR";
-					init="GrpINS_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C3_AAR";
+					init="GrpA2INS_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 3 Assistant Automatic Rifleman";
 					synchronizations[]={967,968};
 				};
@@ -14543,8 +14545,8 @@ class Mission
 					vehicle="Ins_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_C3_RRPG";
-					init="GrpINS_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_C3_RRPG";
+					init="GrpA2INS_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie 3 Rifleman (AT)";
 					synchronizations[]={967,968};
 				};
@@ -14566,8 +14568,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_MMG1_G";
-					init="GrpINS_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_MMG1_G";
+					init="GrpA2INS_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Medium MG Team 1 Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14579,8 +14581,8 @@ class Mission
 					vehicle="Ins_Soldier_2";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_MMG1_AG";
-					init="GrpINS_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_MMG1_AG";
+					init="GrpA2INS_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Medium MG Team 1 Assistant Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14602,8 +14604,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_MAT1_G";
-					init="GrpINS_MAT1 = group this; nul = [""matg"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_MAT1_G";
+					init="GrpA2INS_MAT1 = group this; nul = [""matg"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Medium AT Team 1 Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14615,8 +14617,8 @@ class Mission
 					vehicle="Ins_Soldier_2";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_MAT1_AG";
-					init="GrpINS_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_MAT1_AG";
+					init="GrpA2INS_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Medium AT Team 1 Assistant Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14638,8 +14640,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_HAT1_G";
-					init="GrpINS_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_HAT1_G";
+					init="GrpA2INS_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Heavy AT Team 1 Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14651,8 +14653,8 @@ class Mission
 					vehicle="Ins_Soldier_2";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_HAT1_AG";
-					init="GrpINS_HAT1 = group this; nul = [""hatag"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_HAT1_AG";
+					init="GrpA2INS_HAT1 = group this; nul = [""hatag"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Heavy AT Team 1 Assistant Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14674,8 +14676,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_SAM1_G";
-					init="GrpINS_SAM1 = group this; nul = [""samg"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_SAM1_G";
+					init="GrpA2INS_SAM1 = group this; nul = [""samg"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents SAM Team 1 Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14687,8 +14689,8 @@ class Mission
 					vehicle="Ins_Soldier_2";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_SAM1_AG";
-					init="GrpINS_SAM1 = group this; nul = [""samag"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_SAM1_AG";
+					init="GrpA2INS_SAM1 = group this; nul = [""samag"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents SAM Team 1 Assistant Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14710,8 +14712,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_ST1_SN";
-					init="GrpINS_ST1 = group this; nul = [""sn"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_ST1_SN";
+					init="GrpA2INS_ST1 = group this; nul = [""sn"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Sniper Team 1 Sniper";
 					synchronizations[]={968,967};
 				};
@@ -14723,8 +14725,8 @@ class Mission
 					vehicle="Ins_Soldier_Sniper";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_ST1_SP";
-					init="GrpINS_ST1 = group this; nul = [""sp"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_ST1_SP";
+					init="GrpA2INS_ST1 = group this; nul = [""sp"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Sniper Team 1 Spotter";
 					synchronizations[]={967,968};
 				};
@@ -14746,8 +14748,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_ENG1_FTL";
-					init="GrpINS_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_ENG1_FTL";
+					init="GrpA2INS_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Engineer Team 1 Leader";
 					synchronizations[]={967,968};
 				};
@@ -14759,8 +14761,8 @@ class Mission
 					vehicle="Ins_Soldier_Sab";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_ENG1_A";
-					init="GrpINS_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
+					text="UnitA2INS_ENG1_A";
+					init="GrpA2INS_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Engineer Team 1 Assistant";
 					synchronizations[]={967,968};
 				};
@@ -14782,8 +14784,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_IFV1_C";
-					init="GrpINS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander INS_IFV1;";
+					text="UnitA2INS_IFV1_C";
+					init="GrpA2INS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2INS_IFV1;";
 					description="ChDKZ Insurgents IFV 1 Commander";
 					synchronizations[]={967,968};
 				};
@@ -14795,8 +14797,8 @@ class Mission
 					vehicle="Ins_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_IFV1_D";
-					init="GrpINS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver INS_IFV1;";
+					text="UnitA2INS_IFV1_D";
+					init="GrpA2INS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2INS_IFV1;";
 					description="ChDKZ Insurgents IFV 1 Driver";
 					synchronizations[]={967,968};
 				};
@@ -14808,8 +14810,8 @@ class Mission
 					vehicle="Ins_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_IFV1_G";
-					init="GrpINS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner INS_IFV1;";
+					text="UnitA2INS_IFV1_G";
+					init="GrpA2INS_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2INS_IFV1;";
 					description="ChDKZ Insurgents IFV 1 Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14831,8 +14833,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_IFV2_C";
-					init="GrpINS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander INS_IFV2;";
+					text="UnitA2INS_IFV2_C";
+					init="GrpA2INS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2INS_IFV2;";
 					description="ChDKZ Insurgents IFV 2 Commander";
 					synchronizations[]={967,968};
 				};
@@ -14844,8 +14846,8 @@ class Mission
 					vehicle="Ins_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_IFV2_D";
-					init="GrpINS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver INS_IFV2;";
+					text="UnitA2INS_IFV2_D";
+					init="GrpA2INS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2INS_IFV2;";
 					description="ChDKZ Insurgents IFV 2 Driver";
 					synchronizations[]={967,968};
 				};
@@ -14857,8 +14859,8 @@ class Mission
 					vehicle="Ins_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_IFV2_G";
-					init="GrpINS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner INS_IFV2;";
+					text="UnitA2INS_IFV2_G";
+					init="GrpA2INS_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2INS_IFV2;";
 					description="ChDKZ Insurgents IFV 2 Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14880,8 +14882,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_IFV3_C";
-					init="GrpINS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander INS_IFV3;";
+					text="UnitA2INS_IFV3_C";
+					init="GrpA2INS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2INS_IFV3;";
 					description="ChDKZ Insurgents IFV 3 Commander";
 					synchronizations[]={967,968};
 				};
@@ -14893,8 +14895,8 @@ class Mission
 					vehicle="Ins_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_IFV3_D";
-					init="GrpINS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver INS_IFV3;";
+					text="UnitA2INS_IFV3_D";
+					init="GrpA2INS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2INS_IFV3;";
 					description="ChDKZ Insurgents IFV 3 Driver";
 					synchronizations[]={967,968};
 				};
@@ -14906,8 +14908,8 @@ class Mission
 					vehicle="Ins_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_IFV3_G";
-					init="GrpINS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner INS_IFV3;";
+					text="UnitA2INS_IFV3_G";
+					init="GrpA2INS_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2INS_IFV3;";
 					description="ChDKZ Insurgents IFV 3 Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14929,8 +14931,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_TNK1_C";
-					init="GrpINS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander INS_TNK1;";
+					text="UnitA2INS_TNK1_C";
+					init="GrpA2INS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2INS_TNK1;";
 					description="ChDKZ Insurgents Tank 1 Commander";
 					synchronizations[]={967,968};
 				};
@@ -14942,8 +14944,8 @@ class Mission
 					vehicle="Ins_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_TNK1_D";
-					init="GrpINS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver INS_TNK1;";
+					text="UnitA2INS_TNK1_D";
+					init="GrpA2INS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2INS_TNK1;";
 					description="ChDKZ Insurgents Tank 1 Driver";
 					synchronizations[]={967,968};
 				};
@@ -14955,8 +14957,8 @@ class Mission
 					vehicle="Ins_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_TNK1_G";
-					init="GrpINS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner INS_TNK1;";
+					text="UnitA2INS_TNK1_G";
+					init="GrpA2INS_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2INS_TNK1;";
 					description="ChDKZ Insurgents Tank 1 Gunner";
 					synchronizations[]={967,968};
 				};
@@ -14978,8 +14980,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_TH1_P";
-					init="GrpINS_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver INS_TH1;";
+					text="UnitA2INS_TH1_P";
+					init="GrpA2INS_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver A2INS_TH1;";
 					description="ChDKZ Insurgents Transport Helo 1 Pilot";
 					synchronizations[]={967,968};
 				};
@@ -14991,8 +14993,8 @@ class Mission
 					vehicle="Ins_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_TH1_CM";
-					init="GrpINS_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [INS_TH1, [0]];";
+					text="UnitA2INS_TH1_CM";
+					init="GrpA2INS_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [A2INS_TH1, [0]];";
 					description="ChDKZ Insurgents Transport Helo 1 Crewman";
 					synchronizations[]={967,968};
 				};
@@ -15014,8 +15016,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_TH2_P";
-					init="GrpINS_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver INS_TH2;";
+					text="UnitA2INS_TH2_P";
+					init="GrpA2INS_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver A2INS_TH2;";
 					description="ChDKZ Insurgents Transport Helo 2 Pilot";
 					synchronizations[]={967,968};
 				};
@@ -15027,8 +15029,8 @@ class Mission
 					vehicle="Ins_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_TH2_CM";
-					init="GrpINS_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [INS_TH2, [0]];";
+					text="UnitA2INS_TH2_CM";
+					init="GrpA2INS_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [A2INS_TH2, [0]];";
 					description="ChDKZ Insurgents Transport Helo 2 Crewman";
 					synchronizations[]={967,968};
 				};
@@ -15050,8 +15052,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitINS_AH1_P";
-					init="GrpINS_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver INS_AH1;";
+					text="UnitA2INS_AH1_P";
+					init="GrpA2INS_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver A2INS_AH1;";
 					description="ChDKZ Insurgents Attack Helo 1 Pilot";
 					synchronizations[]={967,968};
 				};
@@ -15063,8 +15065,8 @@ class Mission
 					vehicle="Ins_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitINS_AH1_G";
-					init="GrpINS_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInGunner INS_AH1;";
+					text="UnitA2INS_AH1_G";
+					init="GrpA2INS_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInGunner A2INS_AH1;";
 					description="ChDKZ Insurgents Attack Helo 1 Gunner";
 					synchronizations[]={967,968};
 				};
@@ -15085,7 +15087,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpINS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpA2INS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="ChDKZ Insurgents RESERVED FOR JIP";
 					synchronizations[]={967,968};
 				};
@@ -15097,7 +15099,7 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpINS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpA2INS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="ChDKZ Insurgents RESERVED FOR JIP";
 					synchronizations[]={967,968};
 				};
@@ -15109,7 +15111,7 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpINS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpA2INS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="ChDKZ Insurgents RESERVED FOR JIP";
 					synchronizations[]={967,968};
 				};
@@ -15121,7 +15123,7 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpINS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpA2INS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="ChDKZ Insurgents RESERVED FOR JIP";
 					synchronizations[]={967,968};
 				};
@@ -15133,7 +15135,7 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpINS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpA2INS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="ChDKZ Insurgents RESERVED FOR JIP";
 					synchronizations[]={967,968};
 				};
@@ -15145,7 +15147,7 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpINS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpA2INS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="ChDKZ Insurgents RESERVED FOR JIP";
 					synchronizations[]={967,968};
 				};
@@ -15157,7 +15159,7 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpINS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpA2INS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="ChDKZ Insurgents RESERVED FOR JIP";
 					synchronizations[]={967,968};
 				};
@@ -15169,7 +15171,7 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpINS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpA2INS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="ChDKZ Insurgents RESERVED FOR JIP";
 					synchronizations[]={967,968};
 				};
@@ -15181,7 +15183,7 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpINS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpA2INS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="ChDKZ Insurgents RESERVED FOR JIP";
 					synchronizations[]={967,968};
 				};
@@ -15193,7 +15195,7 @@ class Mission
 					vehicle="Ins_Soldier_1";
 					player="PLAY CDG";
 					skill=0.5;
-					init="nul = [""r"",this] call f_fnc_assignGear;GrpINS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
+					init="nul = [""r"",this] call f_fnc_assignGear;GrpA2INS_JIP = group this; nul = [this] execVM ""f\common\f_JIP_addReinforcementOptionsAction.sqf"";";
 					description="ChDKZ Insurgents RESERVED FOR JIP";
 					synchronizations[]={967,968};
 				};
@@ -15251,8 +15253,8 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.5;
-					text="UnitGUE_CO";
-					init="GrpGUE_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_CO";
+					init="GrpA2GUE_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
 					description="NAPA Commander";
 					synchronizations[]={1062,1063};
 				};
@@ -15265,8 +15267,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_CO_M";
-					init="GrpGUE_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_CO_M";
+					init="GrpA2GUE_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="NAPA Medic";
 					synchronizations[]={1062,1063};
 				};
@@ -15288,8 +15290,8 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
-					text="UnitGUE_DC";
-					init="GrpGUE_DC = group this; nul = [""dc"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_DC";
+					init="GrpA2GUE_DC = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="NAPA Deputy Commander";
 					synchronizations[]={1062,1063};
 				};
@@ -15302,8 +15304,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_DC_M";
-					init="GrpGUE_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_DC_M";
+					init="GrpA2GUE_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="NAPA Medic";
 					synchronizations[]={1062,1063};
 				};
@@ -15325,8 +15327,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_ASL_SL";
-					init="GrpGUE_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_ASL_SL";
+					init="GrpA2GUE_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha Squad Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15339,8 +15341,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_ASL_M";
-					init="GrpGUE_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_ASL_M";
+					init="GrpA2GUE_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha Medic";
 					synchronizations[]={1062,1063};
 				};
@@ -15362,8 +15364,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_A1_FTL";
-					init="GrpGUE_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A1_FTL";
+					init="GrpA2GUE_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 1 Fireteam Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15376,8 +15378,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_A1_AR";
-					init="GrpGUE_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A1_AR";
+					init="GrpA2GUE_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 1 Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15389,8 +15391,8 @@ class Mission
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_A1_AAR";
-					init="GrpGUE_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A1_AAR";
+					init="GrpA2GUE_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 1 Assistant Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15402,8 +15404,8 @@ class Mission
 					vehicle="GUE_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_A1_RRPG";
-					init="GrpGUE_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A1_RRPG";
+					init="GrpA2GUE_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 1 Rifleman (AT)";
 					synchronizations[]={1062,1063};
 				};
@@ -15425,8 +15427,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_A2_FTL";
-					init="GrpGUE_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A2_FTL";
+					init="GrpA2GUE_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 2 Fireteam Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15439,8 +15441,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_A2_AR";
-					init="GrpGUE_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A2_AR";
+					init="GrpA2GUE_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 2 Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15452,8 +15454,8 @@ class Mission
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_A2_AAR";
-					init="GrpGUE_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A2_AAR";
+					init="GrpA2GUE_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 2 Assistant Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15465,8 +15467,8 @@ class Mission
 					vehicle="GUE_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_A2_RRPG";
-					init="GrpGUE_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A2_RRPG";
+					init="GrpA2GUE_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 2 Rifleman (AT)";
 					synchronizations[]={1062,1063};
 				};
@@ -15488,8 +15490,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_A3_FTL";
-					init="GrpGUE_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A3_FTL";
+					init="GrpA2GUE_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 3 Fireteam Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15502,8 +15504,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_A3_AR";
-					init="GrpGUE_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A3_AR";
+					init="GrpA2GUE_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 3 Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15515,8 +15517,8 @@ class Mission
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_A3_AAR";
-					init="GrpGUE_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A3_AAR";
+					init="GrpA2GUE_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 3 Assistant Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15528,8 +15530,8 @@ class Mission
 					vehicle="GUE_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_A3_RRPG";
-					init="GrpGUE_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_A3_RRPG";
+					init="GrpA2GUE_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha 3 Rifleman (AT)";
 					synchronizations[]={1062,1063};
 				};
@@ -15551,8 +15553,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_BSL_SL";
-					init="GrpGUE_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_BSL_SL";
+					init="GrpA2GUE_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo Squad Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15565,8 +15567,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_BSL_M";
-					init="GrpGUE_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_BSL_M";
+					init="GrpA2GUE_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo Medic";
 					synchronizations[]={1062,1063};
 				};
@@ -15588,8 +15590,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_B1_FTL";
-					init="GrpGUE_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B1_FTL";
+					init="GrpA2GUE_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 1 Fireteam Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15602,8 +15604,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_B1_AR";
-					init="GrpGUE_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B1_AR";
+					init="GrpA2GUE_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 1 Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15615,8 +15617,8 @@ class Mission
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_B1_AAR";
-					init="GrpGUE_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B1_AAR";
+					init="GrpA2GUE_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 1 Assistant Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15628,8 +15630,8 @@ class Mission
 					vehicle="GUE_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_B1_RRPG";
-					init="GrpGUE_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B1_RRPG";
+					init="GrpA2GUE_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 1 Rifleman (AT)";
 					synchronizations[]={1062,1063};
 				};
@@ -15651,8 +15653,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_B2_FTL";
-					init="GrpGUE_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B2_FTL";
+					init="GrpA2GUE_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 2 Fireteam Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15665,8 +15667,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_B2_AR";
-					init="GrpGUE_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B2_AR";
+					init="GrpA2GUE_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 2 Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15678,8 +15680,8 @@ class Mission
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_B2_AAR";
-					init="GrpGUE_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B2_AAR";
+					init="GrpA2GUE_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 2 Assistant Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15691,8 +15693,8 @@ class Mission
 					vehicle="GUE_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_B2_RRPG";
-					init="GrpGUE_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B2_RRPG";
+					init="GrpA2GUE_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 2 Rifleman (AT)";
 					synchronizations[]={1062,1063};
 				};
@@ -15714,8 +15716,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_B3_FTL";
-					init="GrpGUE_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B3_FTL";
+					init="GrpA2GUE_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 3 Fireteam Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15728,8 +15730,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_B3_AR";
-					init="GrpGUE_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B3_AR";
+					init="GrpA2GUE_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 3 Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15741,8 +15743,8 @@ class Mission
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_B3_AAR";
-					init="GrpGUE_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B3_AAR";
+					init="GrpA2GUE_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 3 Assistant Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15754,8 +15756,8 @@ class Mission
 					vehicle="GUE_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_B3_RRPG";
-					init="GrpGUE_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_B3_RRPG";
+					init="GrpA2GUE_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo 3 Rifleman (AT)";
 					synchronizations[]={1062,1063};
 				};
@@ -15777,8 +15779,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_CSL_SL";
-					init="GrpGUE_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_CSL_SL";
+					init="GrpA2GUE_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie Squad Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15791,8 +15793,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_CSL_M";
-					init="GrpGUE_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_CSL_M";
+					init="GrpA2GUE_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie Medic";
 					synchronizations[]={1062,1063};
 				};
@@ -15814,8 +15816,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_C1_FTL";
-					init="GrpGUE_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C1_FTL";
+					init="GrpA2GUE_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 1 Fireteam Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15828,8 +15830,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_C1_AR";
-					init="GrpGUE_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C1_AR";
+					init="GrpA2GUE_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 1 Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15841,8 +15843,8 @@ class Mission
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_C1_AAR";
-					init="GrpGUE_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C1_AAR";
+					init="GrpA2GUE_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 1 Assistant Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15854,8 +15856,8 @@ class Mission
 					vehicle="GUE_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_C1_RRPG";
-					init="GrpGUE_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C1_RRPG";
+					init="GrpA2GUE_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 1 Rifleman (AT)";
 					synchronizations[]={1062,1063};
 				};
@@ -15877,8 +15879,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_C2_FTL";
-					init="GrpGUE_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C2_FTL";
+					init="GrpA2GUE_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 2 Fireteam Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15891,8 +15893,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_C2_AR";
-					init="GrpGUE_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C2_AR";
+					init="GrpA2GUE_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 2 Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15904,8 +15906,8 @@ class Mission
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_C2_AAR";
-					init="GrpGUE_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C2_AAR";
+					init="GrpA2GUE_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 2 Assistant Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15917,8 +15919,8 @@ class Mission
 					vehicle="GUE_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_C2_RRPG";
-					init="GrpGUE_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C2_RRPG";
+					init="GrpA2GUE_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 2 Rifleman (AT)";
 					synchronizations[]={1062,1063};
 				};
@@ -15940,8 +15942,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_C3_FTL";
-					init="GrpGUE_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C3_FTL";
+					init="GrpA2GUE_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 3 Fireteam Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15954,8 +15956,8 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_C3_AR";
-					init="GrpGUE_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C3_AR";
+					init="GrpA2GUE_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 3 Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15967,8 +15969,8 @@ class Mission
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_C3_AAR";
-					init="GrpGUE_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C3_AAR";
+					init="GrpA2GUE_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 3 Assistant Automatic Rifleman";
 					synchronizations[]={1062,1063};
 				};
@@ -15980,8 +15982,8 @@ class Mission
 					vehicle="GUE_Soldier_AT";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_C3_RRPG";
-					init="GrpGUE_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_C3_RRPG";
+					init="GrpA2GUE_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie 3 Rifleman (AT)";
 					synchronizations[]={1062,1063};
 				};
@@ -16003,8 +16005,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_MMG1_G";
-					init="GrpGUE_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_MMG1_G";
+					init="GrpA2GUE_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;";
 					description="NAPA Medium MG Team 1 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16016,8 +16018,8 @@ class Mission
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_MMG1_AG";
-					init="GrpGUE_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_MMG1_AG";
+					init="GrpA2GUE_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear;";
 					description="NAPA Medium MG Team 1 Assistant Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16039,8 +16041,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_MAT1_G";
-					init="GrpGUE_MAT1 = group this; nul = [""matg"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_MAT1_G";
+					init="GrpA2GUE_MAT1 = group this; nul = [""matg"",this] call f_fnc_assignGear;";
 					description="NAPA Medium AT Team 1 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16052,8 +16054,8 @@ class Mission
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_MAT1_AG";
-					init="GrpGUE_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_MAT1_AG";
+					init="GrpA2GUE_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear;";
 					description="NAPA Medium AT Team 1 Assistant Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16075,8 +16077,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_HAT1_G";
-					init="GrpGUE_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_HAT1_G";
+					init="GrpA2GUE_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
 					description="NAPA Heavy AT Team 1 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16088,8 +16090,8 @@ class Mission
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_HAT1_AG_1";
-					init="GrpGUE_HAT1 = group this; nul = [""hatag"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_HAT1_AG_1";
+					init="GrpA2GUE_HAT1 = group this; nul = [""hatag"",this] call f_fnc_assignGear;";
 					description="NAPA Heavy AT Team 1 Assistant Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16111,8 +16113,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_SAM1_G";
-					init="GrpGUE_SAM1 = group this; nul = [""samg"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_SAM1_G";
+					init="GrpA2GUE_SAM1 = group this; nul = [""samg"",this] call f_fnc_assignGear;";
 					description="NAPA SAM Team 1 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16124,8 +16126,8 @@ class Mission
 					vehicle="GUE_Soldier_AA";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_SAM1_AG";
-					init="GrpGUE_SAM1 = group this; nul = [""samag"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_SAM1_AG";
+					init="GrpA2GUE_SAM1 = group this; nul = [""samag"",this] call f_fnc_assignGear;";
 					description="UN SAM Team 1 Assistant Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16147,8 +16149,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_ST1_SN";
-					init="GrpGUE_ST1 = group this; nul = [""sn"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_ST1_SN";
+					init="GrpA2GUE_ST1 = group this; nul = [""sn"",this] call f_fnc_assignGear;";
 					description="NAPA Sniper Team 1 Sniper";
 					synchronizations[]={1062,1063};
 				};
@@ -16160,8 +16162,8 @@ class Mission
 					vehicle="GUE_Soldier_Scout";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_ST1_SP";
-					init="GrpGUE_ST1 = group this; nul = [""sp"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_ST1_SP";
+					init="GrpA2GUE_ST1 = group this; nul = [""sp"",this] call f_fnc_assignGear;";
 					description="NAPA Sniper Team 1 Spotter";
 					synchronizations[]={1062,1063};
 				};
@@ -16183,8 +16185,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_ENG1_FTL";
-					init="GrpGUE_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_ENG1_FTL";
+					init="GrpA2GUE_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
 					description="NAPA Exchange Engineer Team 1 Leader (PMC, No Markers)";
 					synchronizations[]={1062,1063};
 				};
@@ -16196,8 +16198,8 @@ class Mission
 					vehicle="GUE_Soldier_Sab";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_ENG1_A";
-					init="GrpGUE_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
+					text="UnitA2GUE_ENG1_A";
+					init="GrpA2GUE_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
 					description="NAPA Exchange Engineer Team 1 Assistant (PMC, No Markers)";
 					synchronizations[]={1062,1063};
 				};
@@ -16219,8 +16221,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_IFV1_C";
-					init="GrpGUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander GUE_IFV1;";
+					text="UnitA2A2GUE_IFV1_C";
+					init="GrpA2A2GUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_IFV1;";
 					description="NAPA IFV 1 Commander";
 					synchronizations[]={1062,1063};
 				};
@@ -16232,8 +16234,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_IFV1_D";
-					init="GrpGUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver GUE_IFV1;";
+					text="UnitA2A2GUE_IFV1_D";
+					init="GrpA2A2GUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_IFV1;";
 					description="NAPA IFV 1 Driver";
 					synchronizations[]={1062,1063};
 				};
@@ -16245,8 +16247,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_IFV1_G";
-					init="GrpGUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner GUE_IFV1;";
+					text="UnitA2A2GUE_IFV1_G";
+					init="GrpA2A2GUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_IFV1;";
 					description="NAPA IFV 1 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16268,8 +16270,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_IFV2_C";
-					init="GrpGUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander GUE_IFV2;";
+					text="UnitA2A2GUE_IFV2_C";
+					init="GrpA2A2GUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_IFV2;";
 					description="NAPA IFV 2 Commander";
 					synchronizations[]={1062,1063};
 				};
@@ -16281,8 +16283,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_IFV2_D";
-					init="GrpGUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver GUE_IFV2;";
+					text="UnitA2A2GUE_IFV2_D";
+					init="GrpA2A2GUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_IFV2;";
 					description="NAPA IFV 2 Driver";
 					synchronizations[]={1062,1063};
 				};
@@ -16294,8 +16296,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_IFV2_G";
-					init="GrpGUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner GUE_IFV2;";
+					text="UnitA2A2GUE_IFV2_G";
+					init="GrpA2A2GUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_IFV2;";
 					description="NAPA IFV 2 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16317,8 +16319,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_IFV3_C";
-					init="GrpGUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander GUE_IFV3;";
+					text="UnitA2A2GUE_IFV3_C";
+					init="GrpA2A2GUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_IFV3;";
 					description="NAPA IFV 3 Commander";
 					synchronizations[]={1062,1063};
 				};
@@ -16330,8 +16332,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_IFV3_D";
-					init="GrpGUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver GUE_IFV3;";
+					text="UnitA2A2GUE_IFV3_D";
+					init="GrpA2A2GUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_IFV3;";
 					description="NAPA IFV 3 Driver";
 					synchronizations[]={1062,1063};
 				};
@@ -16343,8 +16345,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_IFV3_G";
-					init="GrpGUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner GUE_IFV3;";
+					text="UnitA2A2GUE_IFV3_G";
+					init="GrpA2A2GUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_IFV3;";
 					description="NAPA IFV 3 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16366,8 +16368,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_TNK1_C";
-					init="GrpGUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander GUE_TNK1;";
+					text="UnitA2A2GUE_TNK1_C";
+					init="GrpA2A2GUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_TNK1;";
 					description="NAPA Tank 1 Commander";
 					synchronizations[]={1062,1063};
 				};
@@ -16379,8 +16381,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_TNK1_D";
-					init="GrpGUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver GUE_TNK1;";
+					text="UnitA2A2GUE_TNK1_D";
+					init="GrpA2A2GUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_TNK1;";
 					description="NAPA Tank 1 Driver";
 					synchronizations[]={1062,1063};
 				};
@@ -16392,8 +16394,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_TNK1_G";
-					init="GrpGUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner GUE_TNK1;";
+					text="UnitA2A2GUE_TNK1_G";
+					init="GrpA2A2GUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_TNK1;";
 					description="NAPA Tank 1 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16415,8 +16417,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_TH1_P";
-					init="GrpGUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver GUE_TH1;";
+					text="UnitA2A2GUE_TH1_P";
+					init="GrpA2A2GUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver A2GUE_TH1;";
 					description="NAPA Transport Helo 1 Pilot";
 					synchronizations[]={1062,1063};
 				};
@@ -16428,8 +16430,8 @@ class Mission
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_TH1_CM";
-					init="GrpGUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [GUE_TH1, [0]];";
+					text="UnitA2A2GUE_TH1_CM";
+					init="GrpA2A2GUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [A2GUE_TH1, [0]];";
 					description="NAPA Transport Helo 1 Crewman";
 					synchronizations[]={1062,1063};
 				};
@@ -16451,8 +16453,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_TH2_P";
-					init="GrpGUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver GUE_TH2;";
+					text="UnitA2A2GUE_TH2_P";
+					init="GrpA2A2GUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver A2GUE_TH2;";
 					description="NAPA Transport Helo 2 Pilot";
 					synchronizations[]={1062,1063};
 				};
@@ -16464,8 +16466,8 @@ class Mission
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_TH2_CM";
-					init="GrpGUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [GUE_TH2, [0]];";
+					text="UnitA2A2GUE_TH2_CM";
+					init="GrpA2A2GUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [A2GUE_TH2, [0]];";
 					description="NAPA Transport Helo 2 Crewman";
 					synchronizations[]={1062,1063};
 				};
@@ -16487,8 +16489,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitGUE_AH1_P";
-					init="GrpGUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver GUE_AH1;";
+					text="UnitA2GUE_AH1_P";
+					init="GrpA2GUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver GUE_AH1;";
 					description="NAPA Attack Helo 1 Pilot";
 					synchronizations[]={1062,1063};
 				};
@@ -16500,8 +16502,8 @@ class Mission
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_AH1_G";
-					init="GrpGUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInGunner GUE_AH1;";
+					text="UnitA2GUE_AH1_G";
+					init="GrpA2GUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInGunner GUE_AH1;";
 					description="NAPA Attack Helo 1 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16780,27 +16782,27 @@ class Mission
 			position[]={539.56586,573.41583,306.25079};
 			id=215;
 			side="EMPTY";
-			vehicle="BMP2_Gue";
+			vehicle="BRDM2_TK_GUE_EP1";
 			skill=0.5;
-			text="TKGUE_IFV1";
+			text="GUE_IFV1";
 		};
 		class Item8
 		{
 			position[]={555.8139,568.27612,306.44684};
 			id=216;
 			side="EMPTY";
-			vehicle="BMP2_Gue";
+			vehicle="BRDM2_TK_GUE_EP1";
 			skill=0.5;
-			text="TKGUE_IFV2";
+			text="GUE_IFV2";
 		};
 		class Item9
 		{
 			position[]={574.64545,561.83417,306.85345};
 			id=217;
 			side="EMPTY";
-			vehicle="BMP2_Gue";
+			vehicle="BRDM2_TK_GUE_EP1";
 			skill=0.5;
-			text="TKGUE_IFV3";
+			text="GUE_IFV3";
 		};
 		class Item10
 		{
@@ -16809,7 +16811,7 @@ class Mission
 			side="EMPTY";
 			vehicle="T55_TK_GUE_EP1";
 			skill=0.5;
-			text="TKGUE_TNK1";
+			text="GUE_TNK1";
 		};
 		class Item11
 		{
@@ -16818,7 +16820,7 @@ class Mission
 			side="EMPTY";
 			vehicle="UH1H_TK_GUE_EP1";
 			skill=0.5;
-			text="TKGUE_TH1";
+			text="GUE_TH1";
 		};
 		class Item12
 		{
@@ -16827,7 +16829,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Ka60_GL_PMC";
 			skill=0.5;
-			text="TKGUE_AH1";
+			text="GUE_AH1";
 		};
 		class Item13
 		{
@@ -16836,17 +16838,18 @@ class Mission
 			side="EMPTY";
 			vehicle="UH1H_TK_GUE_EP1";
 			skill=0.5;
-			text="TKGUE_TH2";
+			text="GUE_TH2";
 		};
 		class Item14
 		{
 			position[]={1025.6125,497.85715,280.71103};
-			azimut=1.1368302;
+			azimut=1.13683;
 			id=304;
 			side="EMPTY";
 			vehicle="M2A2_EP1";
 			skill=0.5;
 			text="US_IFV1";
+			init="nul = [""v_ifv"",this] call f_fnc_assignGear;";
 		};
 		class Item15
 		{
@@ -17041,7 +17044,7 @@ class Mission
 			side="EMPTY";
 			vehicle="BMP2_TK_EP1";
 			skill=0.5;
-			text="TKINS_IFV1";
+			text="INS_IFV1";
 		};
 		class Item36
 		{
@@ -17050,7 +17053,7 @@ class Mission
 			side="EMPTY";
 			vehicle="BMP2_TK_EP1";
 			skill=0.5;
-			text="TKINS_IFV2";
+			text="INS_IFV2";
 		};
 		class Item37
 		{
@@ -17059,7 +17062,7 @@ class Mission
 			side="EMPTY";
 			vehicle="BMP2_TK_EP1";
 			skill=0.5;
-			text="TKINS_IFV3";
+			text="INS_IFV3";
 		};
 		class Item38
 		{
@@ -17068,7 +17071,7 @@ class Mission
 			side="EMPTY";
 			vehicle="T55_TK_EP1";
 			skill=0.5;
-			text="TKINS_TNK1";
+			text="INS_TNK1";
 		};
 		class Item39
 		{
@@ -17077,7 +17080,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Mi17_TK_EP1";
 			skill=0.5;
-			text="TKINS_TH1";
+			text="INS_TH1";
 		};
 		class Item40
 		{
@@ -17086,7 +17089,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Mi24_D_TK_EP1";
 			skill=0.5;
-			text="TKINS_AH1";
+			text="INS_AH1";
 		};
 		class Item41
 		{
@@ -17095,7 +17098,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Mi17_TK_EP1";
 			skill=0.5;
-			text="TKINS_TH2";
+			text="INS_TH2";
 		};
 		class Item42
 		{
@@ -17312,45 +17315,45 @@ class Mission
 			position[]={1307.6342,533.52155,1038.2313};
 			id=969;
 			side="EMPTY";
-			vehicle="BMP2_INS";
+			vehicle="BMP2_A2INS";
 			skill=0.5;
-			text="INS_IFV1";
+			text="A2INS_IFV1";
 		};
 		class Item64
 		{
 			position[]={1320.767,529.22266,1038.5311};
 			id=970;
 			side="EMPTY";
-			vehicle="BMP2_INS";
+			vehicle="BMP2_A2INS";
 			skill=0.5;
-			text="INS_IFV2";
+			text="A2INS_IFV2";
 		};
 		class Item65
 		{
 			position[]={1335.0267,524.69513,1038.64};
 			id=971;
 			side="EMPTY";
-			vehicle="BMP2_INS";
+			vehicle="BMP2_A2INS";
 			skill=0.5;
-			text="INS_IFV3";
+			text="A2INS_IFV3";
 		};
 		class Item66
 		{
 			position[]={1346.4105,524.18085,1020.9047};
 			id=972;
 			side="EMPTY";
-			vehicle="T72_INS";
+			vehicle="T72_A2INS";
 			skill=0.5;
-			text="INS_TNK1";
+			text="A2INS_TNK1";
 		};
 		class Item67
 		{
 			position[]={1372.0951,514.44501,1014.8632};
 			id=973;
 			side="EMPTY";
-			vehicle="Mi17_Ins";
+			vehicle="Mi17_A2INS";
 			skill=0.5;
-			text="INS_TH1";
+			text="A2INS_TH1";
 		};
 		class Item68
 		{
@@ -17359,61 +17362,61 @@ class Mission
 			side="EMPTY";
 			vehicle="Mi24_D";
 			skill=0.5;
-			text="INS_AH1";
+			text="A2INS_AH1";
 		};
 		class Item69
 		{
 			position[]={1398.2504,504.41687,1013.6923};
 			id=975;
 			side="EMPTY";
-			vehicle="Mi17_Ins";
+			vehicle="Mi17_A2INS";
 			skill=0.5;
-			text="INS_TH2";
+			text="A2INS_TH2";
 		};
 		class Item70
 		{
 			position[]={525.12793,479.91132,859.87366};
 			id=1064;
 			side="EMPTY";
-			vehicle="BMP2_Gue";
+			vehicle="BMP2_A2GUE";
 			skill=0.5;
-			text="GUE_IFV1_1";
+			text="A2GUE_IFV1_1";
 		};
 		class Item71
 		{
 			position[]={541.37598,483.86685,860.0697};
 			id=1065;
 			side="EMPTY";
-			vehicle="BMP2_Gue";
+			vehicle="BMP2_A2GUE";
 			skill=0.5;
-			text="GUE_IFV2_1";
+			text="A2GUE_IFV2_1";
 		};
 		class Item72
 		{
 			position[]={560.20752,487.13361,860.47644};
 			id=1066;
 			side="EMPTY";
-			vehicle="BMP2_Gue";
+			vehicle="BMP2_A2GUE";
 			skill=0.5;
-			text="GUE_IFV3_1";
+			text="A2GUE_IFV3_1";
 		};
 		class Item73
 		{
 			position[]={572.40039,493.79572,846.39636};
 			id=1067;
 			side="EMPTY";
-			vehicle="T55_TK_GUE_EP1";
+			vehicle="T55_TK_A2GUE_EP1";
 			skill=0.5;
-			text="GUE_TNK1_1";
+			text="A2GUE_TNK1_1";
 		};
 		class Item74
 		{
 			position[]={598.55859,501.59607,836.57068};
 			id=1068;
 			side="EMPTY";
-			vehicle="UH1H_TK_GUE_EP1";
+			vehicle="UH1H_TK_A2GUE_EP1";
 			skill=0.5;
-			text="GUE_TH1_1";
+			text="A2GUE_TH1_1";
 		};
 		class Item75
 		{
@@ -17422,16 +17425,16 @@ class Mission
 			side="EMPTY";
 			vehicle="Ka60_GL_PMC";
 			skill=0.5;
-			text="GUE_AH1_1";
+			text="A2GUE_AH1_1";
 		};
 		class Item76
 		{
 			position[]={624.98193,503.54889,835.93298};
 			id=1070;
 			side="EMPTY";
-			vehicle="UH1H_TK_GUE_EP1";
+			vehicle="UH1H_TK_A2GUE_EP1";
 			skill=0.5;
-			text="GUE_TH2_1";
+			text="A2GUE_TH2_1";
 		};
 	};
 	class Markers

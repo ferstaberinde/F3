@@ -39,7 +39,7 @@ class Params
                 title = "OA Backpacks (Asst. Gunners & Engineers)";
                 values[] = {0,1};
                 texts[] = {"Off","On"};
-                default = 0;
+                default = 1;
                 code = "f_param_useBackpacks = %1";
         }; 
 		
