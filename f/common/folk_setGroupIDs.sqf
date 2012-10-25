@@ -72,6 +72,42 @@ GrpUSMC_AH1 setGroupId ["USMC AH1 -","GroupColor0"];
 
 // ====================================================================================
 
+// GROUP IDs: CDF
+// Automatically assigns intelligible names to groups
+
+GrpCDF_CO setGroupId ["CDF CO -","GroupColor0"];
+GrpCDF_DC setGroupId ["CDF DC -","GroupColor0"];
+GrpCDF_ASL setGroupId ["CDF ASL -","GroupColor0"];
+GrpCDF_A1 setGroupId ["CDF A1 -","GroupColor0"];
+GrpCDF_A2 setGroupId ["CDF A2 -","GroupColor0"];
+GrpCDF_A3 setGroupId ["CDF A3 -","GroupColor0"];
+GrpCDF_BSL setGroupId ["CDF BSL -","GroupColor0"];
+GrpCDF_B1 setGroupId ["CDF B1 -","GroupColor0"];
+GrpCDF_B2 setGroupId ["CDF B2 -","GroupColor0"];
+GrpCDF_B3 setGroupId ["CDF B3 -","GroupColor0"];
+GrpCDF_CSL setGroupId ["CDF CSL -","GroupColor0"];
+GrpCDF_C1 setGroupId ["CDF C1 -","GroupColor0"];
+GrpCDF_C2 setGroupId ["CDF C2 -","GroupColor0"];
+GrpCDF_C3 setGroupId ["CDF C3 -","GroupColor0"];
+GrpCDF_MMG1 setGroupId ["CDF MMG1 -","GroupColor0"];
+GrpCDF_MAT1 setGroupId ["CDF MAT1 -","GroupColor0"];
+GrpCDF_ST1 setGroupId ["CDF ST1 -","GroupColor0"];
+GrpCDF_HMG1 setGroupId ["CDF HMG1 -","GroupColor0"];
+GrpCDF_MTR1 setGroupId ["CDF MTR1 -","GroupColor0"];
+GrpCDF_HAT1 setGroupId ["CDF HAT1 -","GroupColor0"];
+GrpCDF_SAM1 setGroupId ["CDF SAM1 -","GroupColor0"];
+GrpCDF_ENG1 setGroupId ["CDF ENG1 -","GroupColor0"];
+GrpCDF_IFV1 setGroupId ["CDF IFV1 -","GroupColor0"];
+GrpCDF_IFV2 setGroupId ["CDF IFV2 -","GroupColor0"];
+GrpCDF_IFV3 setGroupId ["CDF IFV3 -","GroupColor0"];
+GrpCDF_TNK1 setGroupId ["CDF TNK1 -","GroupColor0"];
+GrpCDF_TH1 setGroupId ["CDF TH1 -","GroupColor0"];
+GrpCDF_TH2 setGroupId ["CDF TH2 -","GroupColor0"];
+GrpCDF_AH1 setGroupId ["CDF AH1 -","GroupColor0"];
+
+
+// ====================================================================================
+
 // GROUP IDs: TAKISTANI ARMY
 // Automatically assigns intelligible names to groups
 

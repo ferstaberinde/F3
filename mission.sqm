@@ -30,7 +30,8 @@ class Mission
 		"CAAir2",
 		"CAWheeled2_LAV25",
 		"CA_AH64D",
-		"cawheeled_e_brdm2"
+		"cawheeled_e_brdm2",
+		"CAWheeled"
 	};
 	addOnsAuto[]=
 	{
@@ -59,6 +60,7 @@ class Mission
 		"CAAir2",
 		"CAWheeled2_LAV25",
 		"CA_AH64D",
+		"CAWheeled",
 		"takistan"
 	};
 	randomSeed=3165154;
@@ -16221,8 +16223,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitA2A2GUE_IFV1_C";
-					init="GrpA2A2GUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_IFV1;";
+					text="UnitA2GUE_IFV1_C";
+					init="GrpA2GUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_IFV1;";
 					description="NAPA IFV 1 Commander";
 					synchronizations[]={1062,1063};
 				};
@@ -16234,8 +16236,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2A2GUE_IFV1_D";
-					init="GrpA2A2GUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_IFV1;";
+					text="UnitA2GUE_IFV1_D";
+					init="GrpA2GUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_IFV1;";
 					description="NAPA IFV 1 Driver";
 					synchronizations[]={1062,1063};
 				};
@@ -16247,8 +16249,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2A2GUE_IFV1_G";
-					init="GrpA2A2GUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_IFV1;";
+					text="UnitA2GUE_IFV1_G";
+					init="GrpA2GUE_IFV1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_IFV1;";
 					description="NAPA IFV 1 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16270,8 +16272,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitA2A2GUE_IFV2_C";
-					init="GrpA2A2GUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_IFV2;";
+					text="UnitA2GUE_IFV2_C";
+					init="GrpA2GUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_IFV2;";
 					description="NAPA IFV 2 Commander";
 					synchronizations[]={1062,1063};
 				};
@@ -16283,8 +16285,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2A2GUE_IFV2_D";
-					init="GrpA2A2GUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_IFV2;";
+					text="UnitA2GUE_IFV2_D";
+					init="GrpA2GUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_IFV2;";
 					description="NAPA IFV 2 Driver";
 					synchronizations[]={1062,1063};
 				};
@@ -16296,8 +16298,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2A2GUE_IFV2_G";
-					init="GrpA2A2GUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_IFV2;";
+					text="UnitA2GUE_IFV2_G";
+					init="GrpA2GUE_IFV2 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_IFV2;";
 					description="NAPA IFV 2 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16319,8 +16321,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitA2A2GUE_IFV3_C";
-					init="GrpA2A2GUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_IFV3;";
+					text="UnitA2GUE_IFV3_C";
+					init="GrpA2GUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_IFV3;";
 					description="NAPA IFV 3 Commander";
 					synchronizations[]={1062,1063};
 				};
@@ -16332,8 +16334,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2A2GUE_IFV3_D";
-					init="GrpA2A2GUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_IFV3;";
+					text="UnitA2GUE_IFV3_D";
+					init="GrpA2GUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_IFV3;";
 					description="NAPA IFV 3 Driver";
 					synchronizations[]={1062,1063};
 				};
@@ -16345,8 +16347,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2A2GUE_IFV3_G";
-					init="GrpA2A2GUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_IFV3;";
+					text="UnitA2GUE_IFV3_G";
+					init="GrpA2GUE_IFV3 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_IFV3;";
 					description="NAPA IFV 3 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16368,8 +16370,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitA2A2GUE_TNK1_C";
-					init="GrpA2A2GUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_TNK1;";
+					text="UnitA2GUE_TNK1_C";
+					init="GrpA2GUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInCommander A2GUE_TNK1;";
 					description="NAPA Tank 1 Commander";
 					synchronizations[]={1062,1063};
 				};
@@ -16381,8 +16383,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2A2GUE_TNK1_D";
-					init="GrpA2A2GUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_TNK1;";
+					text="UnitA2GUE_TNK1_D";
+					init="GrpA2GUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInDriver A2GUE_TNK1;";
 					description="NAPA Tank 1 Driver";
 					synchronizations[]={1062,1063};
 				};
@@ -16394,8 +16396,8 @@ class Mission
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2A2GUE_TNK1_G";
-					init="GrpA2A2GUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_TNK1;";
+					text="UnitA2GUE_TNK1_G";
+					init="GrpA2GUE_TNK1 = group this; nul = [""c"",this] call f_fnc_assignGear; this moveInGunner A2GUE_TNK1;";
 					description="NAPA Tank 1 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -16417,8 +16419,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitA2A2GUE_TH1_P";
-					init="GrpA2A2GUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver A2GUE_TH1;";
+					text="UnitA2GUE_TH1_P";
+					init="GrpA2GUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver A2GUE_TH1;";
 					description="NAPA Transport Helo 1 Pilot";
 					synchronizations[]={1062,1063};
 				};
@@ -16430,8 +16432,8 @@ class Mission
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2A2GUE_TH1_CM";
-					init="GrpA2A2GUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [A2GUE_TH1, [0]];";
+					text="UnitA2GUE_TH1_CM";
+					init="GrpA2GUE_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [A2GUE_TH1, [0]];";
 					description="NAPA Transport Helo 1 Crewman";
 					synchronizations[]={1062,1063};
 				};
@@ -16453,8 +16455,8 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitA2A2GUE_TH2_P";
-					init="GrpA2A2GUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver A2GUE_TH2;";
+					text="UnitA2GUE_TH2_P";
+					init="GrpA2GUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver A2GUE_TH2;";
 					description="NAPA Transport Helo 2 Pilot";
 					synchronizations[]={1062,1063};
 				};
@@ -16466,8 +16468,8 @@ class Mission
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2A2GUE_TH2_CM";
-					init="GrpA2A2GUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [A2GUE_TH2, [0]];";
+					text="UnitA2GUE_TH2_CM";
+					init="GrpA2GUE_TH2 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [A2GUE_TH2, [0]];";
 					description="NAPA Transport Helo 2 Crewman";
 					synchronizations[]={1062,1063};
 				};
@@ -16490,7 +16492,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitA2GUE_AH1_P";
-					init="GrpA2GUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver GUE_AH1;";
+					init="GrpA2GUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver A2GUE_AH1;";
 					description="NAPA Attack Helo 1 Pilot";
 					synchronizations[]={1062,1063};
 				};
@@ -16503,7 +16505,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitA2GUE_AH1_G";
-					init="GrpA2GUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInGunner GUE_AH1;";
+					init="GrpA2GUE_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInGunner A2GUE_AH1;";
 					description="NAPA Attack Helo 1 Gunner";
 					synchronizations[]={1062,1063};
 				};
@@ -17315,7 +17317,7 @@ class Mission
 			position[]={1307.6342,533.52155,1038.2313};
 			id=969;
 			side="EMPTY";
-			vehicle="BMP2_A2INS";
+			vehicle="BMP2_INS";
 			skill=0.5;
 			text="A2INS_IFV1";
 		};
@@ -17324,7 +17326,7 @@ class Mission
 			position[]={1320.767,529.22266,1038.5311};
 			id=970;
 			side="EMPTY";
-			vehicle="BMP2_A2INS";
+			vehicle="BMP2_INS";
 			skill=0.5;
 			text="A2INS_IFV2";
 		};
@@ -17333,7 +17335,7 @@ class Mission
 			position[]={1335.0267,524.69513,1038.64};
 			id=971;
 			side="EMPTY";
-			vehicle="BMP2_A2INS";
+			vehicle="BRDM2_INS";
 			skill=0.5;
 			text="A2INS_IFV3";
 		};
@@ -17342,7 +17344,7 @@ class Mission
 			position[]={1346.4105,524.18085,1020.9047};
 			id=972;
 			side="EMPTY";
-			vehicle="T72_A2INS";
+			vehicle="T72_INS";
 			skill=0.5;
 			text="A2INS_TNK1";
 		};
@@ -17351,7 +17353,7 @@ class Mission
 			position[]={1372.0951,514.44501,1014.8632};
 			id=973;
 			side="EMPTY";
-			vehicle="Mi17_A2INS";
+			vehicle="Mi17_Ins";
 			skill=0.5;
 			text="A2INS_TH1";
 		};
@@ -17369,7 +17371,7 @@ class Mission
 			position[]={1398.2504,504.41687,1013.6923};
 			id=975;
 			side="EMPTY";
-			vehicle="Mi17_A2INS";
+			vehicle="Mi17_Ins";
 			skill=0.5;
 			text="A2INS_TH2";
 		};
@@ -17378,45 +17380,45 @@ class Mission
 			position[]={525.12793,479.91132,859.87366};
 			id=1064;
 			side="EMPTY";
-			vehicle="BMP2_A2GUE";
+			vehicle="BMP2_Gue";
 			skill=0.5;
-			text="A2GUE_IFV1_1";
+			text="A2GUE_IFV1";
 		};
 		class Item71
 		{
 			position[]={541.37598,483.86685,860.0697};
 			id=1065;
 			side="EMPTY";
-			vehicle="BMP2_A2GUE";
+			vehicle="BMP2_Gue";
 			skill=0.5;
-			text="A2GUE_IFV2_1";
+			text="A2GUE_IFV2";
 		};
 		class Item72
 		{
 			position[]={560.20752,487.13361,860.47644};
 			id=1066;
 			side="EMPTY";
-			vehicle="BMP2_A2GUE";
+			vehicle="BMP2_Gue";
 			skill=0.5;
-			text="A2GUE_IFV3_1";
+			text="A2GUE_IFV3";
 		};
 		class Item73
 		{
 			position[]={572.40039,493.79572,846.39636};
 			id=1067;
 			side="EMPTY";
-			vehicle="T55_TK_A2GUE_EP1";
+			vehicle="T72_Gue";
 			skill=0.5;
-			text="A2GUE_TNK1_1";
+			text="A2GUE_TNK1";
 		};
 		class Item74
 		{
 			position[]={598.55859,501.59607,836.57068};
 			id=1068;
 			side="EMPTY";
-			vehicle="UH1H_TK_A2GUE_EP1";
+			vehicle="Mi17_CDF";
 			skill=0.5;
-			text="A2GUE_TH1_1";
+			text="A2GUE_TH1";
 		};
 		class Item75
 		{
@@ -17425,16 +17427,16 @@ class Mission
 			side="EMPTY";
 			vehicle="Ka60_GL_PMC";
 			skill=0.5;
-			text="A2GUE_AH1_1";
+			text="A2GUE_AH1";
 		};
 		class Item76
 		{
 			position[]={624.98193,503.54889,835.93298};
 			id=1070;
 			side="EMPTY";
-			vehicle="UH1H_TK_A2GUE_EP1";
+			vehicle="Mi17_CDF";
 			skill=0.5;
-			text="A2GUE_TH2_1";
+			text="A2GUE_TH2";
 		};
 	};
 	class Markers
