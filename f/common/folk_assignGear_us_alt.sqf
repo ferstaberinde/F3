@@ -1,4 +1,4 @@
-// F2 - Folk Assign Gear Script - USMC Equipment
+// F2 - Folk Assign Gear Script - US Army Equipment
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // ====================================================================================
 
@@ -39,13 +39,13 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-_rifle = "M16A2"; _riflemag = "30Rnd_556x45_Stanag";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
+_rifle = "SCAR_L_STD_Mk4CQT"; _riflemag = "30Rnd_556x45_Stanag";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
 
-_carbine = "M4A1"; _carbinemag = "30Rnd_556x45_Stanag"; 																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
+_carbine = "SCAR_L_CQC"; _carbinemag = "30Rnd_556x45_Stanag"; 																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
 
 _smg = "MP5A5"; _smgmag = "30Rnd_9x19_MP5";																									// Standard Submachine Gun/Personal Defence Weapon (Vehicle Crew, Aircraft Pilot, Submachinegunner)
 
-_glrifle = "M4A1_HWS_GL"; _glriflemag = "30Rnd_556x45_Stanag"; _glmag = "1Rnd_HE_M203";														// Rifle with GL and HE grenades (CO, DC, FTLs)
+_glrifle = "SCAR_L_CQC_EGLM_Holo"; _glriflemag = "30Rnd_556x45_Stanag"; _glmag = "1Rnd_HE_M203";														// Rifle with GL and HE grenades (CO, DC, FTLs)
 _glsmokewhite = "1Rnd_Smoke_M203"; _glsmokegreen = "1Rnd_SmokeGreen_M203"; _glsmokered = "1Rnd_SmokeRed_M203";    							// Smoke for FTLs, Squad Leaders, etc 
 _glflarewhite = "FlareWhite_M203"; _glflarered = "FlareRed_M203"; _glflareyellow = "FlareYellow_M203"; _glflaregreen = "FlareGreen_M203";	// Flares for FTLs, Squad Leaders, etc
 
@@ -196,12 +196,12 @@ switch (_typeofUnit) do
 			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
 		};
 	};	
-
+	
 
 // LOADOUT: AUTOMATIC RIFLEMAN
 	case "ar":
 	{
-		{_unit addmagazine _ARmag} foreach [1,2,3,4,5];
+		{_unit addmagazine _ARmag} foreach [1,2,3,4];
 		_unit addweapon _AR;		
 		{_unit addmagazine _pistolmag} foreach [1,2];
 		_unit addweapon _pistol;
@@ -227,7 +227,7 @@ switch (_typeofUnit) do
 		} else {
 			{_unit addmagazine _ARmag} foreach [1,2];
 		};
-	};						
+	};		
 	
 // LOADOUT: RIFLEMAN (AT)	
 	case "rat":
@@ -267,7 +267,7 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _MMGmag} foreach [1,2,3,4];
 		_unit addweapon _MMG;		
-		{_unit addmagazine _pistolmag} foreach [1,2];
+		{_unit addmagazine _pistolmag} foreach [1,2,3,4];
 		_unit addweapon _pistol;
 	};			
 
@@ -276,7 +276,7 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _riflemag} foreach [1,2,3,4,5];
 		_unit addweapon _rifle;
-		_unit addWeapon "Binocular_Vector";		
+		_unit addweapon "Binocular";	
 			// Put ammo in backpack. If not OA unit, then should add directly to inv of unit instead.
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
@@ -301,7 +301,8 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _riflemag} foreach [1,2,3,4,5];
 		_unit addweapon _rifle;
-		_unit addWeapon "Binocular_Vector";			
+		{_unit addmagazine "Laserbatteries"} foreach [1];
+		_unit addweapon "Laserdesignator";			
 			// If not an OA unit, this attachment cannot carry an HMG 
 			_unit addBackpack _HMGmount;
 	};		
@@ -309,7 +310,7 @@ switch (_typeofUnit) do
 // LOADOUT: MEDIUM AT GUNNER
 	case "matg":
 	{
-		{_unit addmagazine _carbinemag} foreach [1,2,3];
+		{_unit addmagazine _carbinemag} foreach [1,2,3,4];
 		_unit addweapon _carbine;
 		{_unit addmagazine _MATmag1} foreach [1];
 		{_unit addmagazine _MATmag2} foreach [1];
@@ -321,12 +322,13 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _riflemag} foreach [1,2,3,4,5];
 		_unit addweapon _rifle;
-		_unit addWeapon "Binocular_Vector";		
+		{_unit addmagazine "Laserbatteries"} foreach [1];
+		_unit addweapon "Laserdesignator";		
 			// Put ammo in backpack. If not OA unit, then should add directly to inv of unit instead.
 		if (_useBackpacks==1) then {
 			_unit addBackpack _baglarge;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag2, 1];
 		} else {
 			{_unit addmagazine _MATmag1} foreach [1];
@@ -349,7 +351,8 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _riflemag} foreach [1,2,3,4,5];
 		_unit addweapon _rifle;
-		_unit addWeapon "Binocular_Vector";		
+		{_unit addmagazine "Laserbatteries"} foreach [1];
+		_unit addweapon "Laserdesignator";		
 			// Put ammo in backpack. If not OA unit, then should add directly to inv of unit instead.
 		if (_useBackpacks==1) then {
 			_unit addBackpack _baglarge;
@@ -376,7 +379,8 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _carbinemag} foreach [1,2,3,4,5];
 		_unit addweapon _carbine;
-		_unit addWeapon "Binocular_Vector";			
+		{_unit addmagazine "Laserbatteries"} foreach [1];
+		_unit addweapon "Laserdesignator";			
 			// If not an OA unit, this attachment cannot carry a mortar 
 			_unit addBackpack _MTRmount;
 	};		
@@ -394,7 +398,7 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _riflemag} foreach [1,2,3,4];
 		_unit addweapon _rifle;
-		_unit addWeapon "Binocular_Vector";		
+		_unit addweapon "Binocular";	
 			// There are no camoflaged backpacks so all spotters carry spare sniper ammo on themselves
 			{_unit addmagazine _SNriflemag} foreach [1,2];
 	};			
@@ -404,6 +408,7 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _smgmag} foreach [1,2,3,4];
 		_unit addweapon _smg;
+		{_unit addmagazine _smokegrenade} foreach [1,2];
 	};			
 	
 // LOADOUT: AIR VEHICLE PILOTS
