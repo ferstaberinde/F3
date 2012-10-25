@@ -1,4 +1,4 @@
-// F2 - Folk Assign Gear Script - Takistani Locals (TK_GUE) Equipment
+// F2 - Folk Assign Gear Script - NAPA (GUE) Equipment
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // ====================================================================================
 

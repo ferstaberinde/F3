@@ -1,4 +1,4 @@
-// F2 - Folk Assign Gear Script - TK Army Equipment
+// F2 - Folk Assign Gear Script - RU Equipment
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // ====================================================================================
 

@@ -1,4 +1,4 @@
-// F2 - Folk Assign Gear Script - US Army Equipment
+// F2 - Folk Assign Gear Script - USMC Equipment
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // ====================================================================================
 
