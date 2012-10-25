@@ -1,4 +1,4 @@
-// F2 - Folk Assign Gear Script - German Equipment
+// F2 - Folk Assign Gear Script - CHDZK (INS) Equipment
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // ====================================================================================
 
@@ -39,22 +39,22 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-_rifle = "G36a"; _riflemag = "30Rnd_556x45_G36";																							// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
+_rifle = "AK_47_M"; _riflemag = "30Rnd_762x39_AK47";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
 
-_carbine = "G36C"; _carbinemag = "30Rnd_556x45_G36"; 																						// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
+_carbine = "AK_47_S"; _carbinemag = "30Rnd_762x39_AK47"; 																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
 
-_smg = "MP5A5"; _smgmag = "30Rnd_9x19_MP5";																									// Standard Submachine Gun/Personal Defence Weapon (Vehicle Crew, Aircraft Pilot, Submachinegunner)
+_smg = "bizon"; _smgmag = "64Rnd_9x19_Bizon";																								// Standard Submachine Gun/Personal Defence Weapon (Vehicle Crew, Aircraft Pilot, Submachinegunner)
 
-_glrifle = "m8_carbineGL"; _glriflemag = "30Rnd_556x45_G36"; _glmag = "1Rnd_HE_M203";														// Rifle with GL and HE grenades (CO, DC, FTLs)
-_glsmokewhite = "1Rnd_Smoke_M203"; _glsmokegreen = "1Rnd_SmokeGreen_M203"; _glsmokered = "1Rnd_SmokeRed_M203";    							// Smoke for FTLs, Squad Leaders, etc 
-_glflarewhite = "FlareWhite_M203"; _glflarered = "FlareRed_M203"; _glflareyellow = "FlareYellow_M203"; _glflaregreen = "FlareGreen_M203";	// Flares for FTLs, Squad Leaders, etc
-_pistol = "glock17_EP1"; _pistolmag = "17Rnd_9x19_glock17";																				// Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
+_glrifle = "AK_74_GL"; _glriflemag = "30Rnd_545x39_AK"; _glmag = "1Rnd_HE_GP25";															// Rifle with GL and HE grenades (CO, DC, FTLs)
+_glsmokewhite = "1Rnd_Smoke_GP25"; _glsmokegreen = "1Rnd_SmokeGreen_GP25"; _glsmokered = "1Rnd_SmokeRed_GP25";    							// Smoke for FTLs, Squad Leaders, etc 
+_glflarewhite = "FlareWhite_GP25"; _glflarered = "FlareRed_GP25"; _glflareyellow = "FlareYellow_GP25"; _glflaregreen = "FlareGreen_GP25";	// Flares for FTLs, Squad Leaders, etc
 
+_pistol = "Makarov"; _pistolmag = "8Rnd_9x18_Makarov";																						// Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
 
-_grenade = "HandGrenade_West"; _smokegrenade = "SmokeShell";																				// Grenades
+_grenade = "HandGrenade_East"; _smokegrenade = "SmokeShell";																				// Grenades
 
-_bagmedium = "DE_Backpack_Specops_EP1";		// 8+ slots																						// Backpack for assistant gunners (AAR, AMMG, AMAT, AHAT), so that they don't have to drop ammo themselves
-_baglarge =  "DE_Backpack_Specops_EP1"; 	// 12+ slots
+_bagmedium = "TK_Assault_Pack_EP1";		// 8+ slots																							// Backpack for assistant gunners (AAR, AMMG, AMAT, AHAT), so that they don't have to drop ammo themselves
+_baglarge =  "TK_ALICE_Pack_EP1"; 		// 12+ slots
 		//  6 Slots: "CZ_Vestpouch_EP1"
 		//  8 Slots: "US_Assault_Pack_EP1", "US_Patrol_Pack_EP1", "TK_Assault_Pack_EP1", "TK_RPG_Backpack_EP1"
 		// 12 Slots: "US_Backpack_EP1", "TK_ALICE_Pack_EP1",
@@ -65,25 +65,25 @@ _baglarge =  "DE_Backpack_Specops_EP1"; 	// 12+ slots
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
-_AR = "MG36"; _ARmag = "100Rnd_556x45_BetaCMag";																							// Automatic Rifleman
+_AR = "RPK_74"; _ARmag = "75Rnd_545x39_RPK";																								// Automatic Rifleman
 
-_MMG = "m240_scoped_EP1"; _MMGmag = "100Rnd_762x51_M240";																					// Medium MG
+_MMG = "PK"; _MMGmag = "100Rnd_762x54_PK";																									// Medium MG
 
-_HMG = "M2HD_mini_TriPod_US_Bag_EP1";																										// Heavy MG (note: HMG is an assembled weapon, gunner carries weapon)
+_HMG = "DSHkM_Mini_TriPod_TK_INS_Bag_EP1";																									// Heavy MG (note: HMG is an assembled weapon, gunner carries weapon)
 _HMGmount = "Tripod_Bag";																													// Assistant Heavy MG (note: HMG is an assembled weapon, assistant carries bipod/tripd)
 
-_RAT = "M136"; _RATmag = "M136";																											// Rifleman AT
+_RAT = "RPG7V"; _RATmag = "PG7V";																											// Rifleman AT
 
-_MAT = "MAAWS"; _MATmag1 = "MAAWS_HEAT"; _MATmag2 = "MAAWS_HEDP";																			// Medium AT
+_MAT = "RPG7V"; _MATmag1 = "PG7V"; _MATmag2 = "PG7VR";																						// Medium AT
 
-_HAT = "Javelin"; _HATmag1 = "Javelin"; _HATmag2 = "Javelin";																				// Heavy AT Gunner
+_HAT = "MetisLauncher"; _HATmag1 = "AT13"; _HATmag2 = "AT13";																				// Heavy AT Gunner
 
-_MTR = "M252_US_Bag_EP1";																													// Mortar Gunner (note: Mortar is an assembled weapon, gunner carries weapon)
+_MTR = "2b14_82mm_TK_INS_Bag_EP1";																											// Mortar Gunner (note: Mortar is an assembled weapon, gunner carries weapon)
 _MTRmount = "Tripod_Bag";																													// Mortar Assistant Gunner (note: Mortar is an assembled weapon, assistant carries bipod/tripd)
 
-_RAA = "Stinger"; _RAAmag = "Stinger";																										// Rifleman AA (anti-air)
+_RAA = "Strela"; _RAAmag = "Strela";																										// Rifleman AA (anti-air)
 
-_SNrifle = "m8_sharpshooter"; _SNriflemag = "30Rnd_556x45_G36";																				// Sniper
+_SNrifle = "SVD"; _SNriflemag = "10Rnd_762x54_SVD";																							// Sniper
 
 _mine = "Mine"; _satchel = "pipebomb";																										// Engineer
 
@@ -109,7 +109,7 @@ _unit addweapon "NVGoggles"; 					// add universal NVG for this faction
 //_unit addweapon "ItemMap";				// etc
 //_unit addweapon "ItemCompass";
 //_unit addweapon "ItemRadio";
-//_unit addweapon "ItemWatch";
+//_unit addweapon ItemWatch;
 
 // ====================================================================================
 
@@ -176,7 +176,7 @@ switch (_typeofUnit) do
 // LOADOUT: AUTOMATIC RIFLEMAN
 	case "ar":
 	{
-		{_unit addmagazine _ARmag} foreach [1,2,3,4];
+		{_unit addmagazine _ARmag} foreach [1,2,3,4,5];
 		_unit addweapon _AR;		
 		{_unit addmagazine _pistolmag} foreach [1,2];
 		_unit addweapon _pistol;
@@ -190,11 +190,12 @@ switch (_typeofUnit) do
 		{_unit addmagazine _grenade} foreach [1,2];
 			// Put ammo in backpack. If not OA unit, then should add directly to inv of unit instead.
 		if (_useBackpacks==1) then {
-			_unit addBackpack _bagmedium;
+			_unit addBackpack _baglarge;
 			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addMagazineCargoGlobal [_ARmag, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_RATmag, 2];
 		} else {
-			{_unit addmagazine _ARmag} foreach [1,2];
+			{_unit addmagazine _ARmag} foreach [1];
 		};
 	};		
 	
@@ -203,7 +204,7 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _carbinemag} foreach [1,2,3,4,5,6];
 		_unit addweapon _carbine;
-		{_unit addmagazine _RATmag} foreach [1];				
+		{_unit addmagazine _RATmag} foreach [1,2];				
 		_unit addweapon _RAT;
 	};		
 	
@@ -280,7 +281,7 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _carbinemag} foreach [1,2,3];
 		_unit addweapon _carbine;
-		{_unit addmagazine _MATmag1} foreach [1];
+		{_unit addmagazine _MATmag1} foreach [1,2,3];
 		{_unit addmagazine _MATmag2} foreach [1];
 		_unit addweapon _MAT;			
 	};	
@@ -296,10 +297,10 @@ switch (_typeofUnit) do
 			_unit addBackpack _baglarge;
 			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 1];
-			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag2, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag2, 2];
 		} else {
 			{_unit addmagazine _MATmag1} foreach [1];
-			{_unit addmagazine _MATmag2} foreach [1];
+			{_unit addmagazine _MATmag2} foreach [1,2];
 		};				
 			
 	};	
@@ -353,7 +354,7 @@ switch (_typeofUnit) do
 // LOADOUT: SNIPER
 	case "sn":
 	{
-		{_unit addmagazine _SNriflemag} foreach [1,2,3];
+		{_unit addmagazine _SNriflemag} foreach [1,2];
 		_unit addweapon _SNrifle;
 		_unit addweapon "Binocular";
 	};		
@@ -365,7 +366,7 @@ switch (_typeofUnit) do
 		_unit addweapon _rifle;
 		_unit addWeapon "Binocular_Vector";		
 			// There are no camoflaged backpacks so all spotters carry spare sniper ammo on themselves
-			{_unit addmagazine _SNriflemag} foreach [1,2];
+			{_unit addmagazine _SNriflemag} foreach [1];
 	};			
 	
 // LOADOUT: GROUND VEHICLE CREW
