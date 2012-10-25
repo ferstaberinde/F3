@@ -192,7 +192,7 @@ switch (faction player) do
 
 	case "BIS_TK_INS":
 	{
-		["GrptTKTKINS_CO", 0, "CO", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrptTKINS_CO", 0, "CO", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
 		["GrpTKINS_DC", 0, "DC", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
 		["GrpTKINS_ASL", 0, "ASL", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
 		["GrpTKINS_A1", 1, "A1", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
