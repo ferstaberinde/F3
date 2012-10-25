@@ -136,7 +136,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;		
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
-		{_unit addmagazine _smokegrenadegreen;} foreach [1]
+		{_unit addmagazine _smokegrenadegreen;} foreach [1];
 		_unit addweapon "Binocular";
 		_unit addweapon "ItemGPS";
 		if (_useBackpacks==1) then {
@@ -159,7 +159,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;		
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
-		{_unit addmagazine _smokegrenadegreen;} foreach [1]
+		{_unit addmagazine _smokegrenadegreen;} foreach [1];
 		_unit addweapon "Binocular";
 		_unit addweapon "ItemGPS";
 		if (_useBackpacks==1) then {
@@ -188,7 +188,7 @@ switch (_typeofUnit) do
 		_unit addweapon _glrifle;									//_FTLrifle		
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
-		{_unit addmagazine _smokegrenadegreen;} foreach [1]
+		{_unit addmagazine _smokegrenadegreen;} foreach [1];
 		_unit addweapon "Binocular";
 		_unit addweapon "ItemGPS";
 		if (_useBackpacks==1) then {
