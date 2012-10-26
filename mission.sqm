@@ -78,7 +78,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=347;
+		items=346;
 		class Item0
 		{
 			side="WEST";
@@ -12299,7 +12299,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={927.25287,427.79251,1141.0024};
+					position[]={927.06451,426.97354,1143.7345};
 					azimut=1.1368302;
 					id=787;
 					side="WEST";
@@ -12338,7 +12338,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={926.57416,431.45853,1126.1035};
+					position[]={927.1391,430.85019,1129.3063};
 					azimut=1.13683;
 					id=789;
 					side="WEST";
@@ -16709,29 +16709,6 @@ class Mission
 					init="GrpRU_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
 					description="Russian Army Engineer Team 1 Assistant (No Markers)";
 					synchronizations[]={683,682};
-				};
-			};
-		};
-		class Item346
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={908.98065,419.70087,1143.5029};
-					azimut=1.13683;
-					id=1073;
-					side="WEST";
-					vehicle="CZ_Soldier_SL_DES_EP1";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.5;
-					text="UnitUSMC_CO_1";
-					init="GrpACR_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
-					description="ACR Commander";
 				};
 			};
 		};
