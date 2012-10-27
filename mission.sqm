@@ -2899,7 +2899,7 @@ class Mission
 					vehicle="TK_GUE_Soldier_4_EP1";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitGUE_HAT1_AG_1";
+					text="UnitGUE_HAT1_AG";
 					init="GrpGUE_HAT1 = group this; nul = [""hatag"",this] call f_fnc_assignGear;";
 					description="TK Local Heavy AT Team 1 Assistant Gunner";
 					synchronizations[]={213,214};
@@ -4264,7 +4264,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitUS_HAT1_G_1";
+					text="UnitUS_HAT1_G";
 					init="GrpUS_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
 					description="US Army Heavy AT Team 1 Gunner";
 					synchronizations[]={302,303};
@@ -10793,7 +10793,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.5;
-					text="UnitCDF_CO_1";
+					text="UnitCDF_CO";
 					init="GrpCDF_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
 					description="CDF Commander";
 					synchronizations[]={737,738};
@@ -10832,7 +10832,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.5;
-					text="UnitCDF_DC_1";
+					text="UnitCDF_DC";
 					init="GrpCDF_DC = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="CDF Deputy Commander";
 					synchronizations[]={737,738};
@@ -10871,7 +10871,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_ASL_SL_1";
+					text="UnitCDF_ASL_SL";
 					init="GrpCDF_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Alpha Squad Leader";
 					synchronizations[]={737,738};
@@ -10910,7 +10910,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_A1_FTL_1";
+					text="UnitCDF_A1_FTL";
 					init="GrpCDF_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 1 Fireteam Leader";
 					synchronizations[]={737,738};
@@ -10925,7 +10925,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_A1_AR_1";
+					text="UnitCDF_A1_AR";
 					init="GrpCDF_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 1 Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -10939,7 +10939,7 @@ class Mission
 					vehicle="CDF_Soldier";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_A1_AAR_1";
+					text="UnitCDF_A1_AAR";
 					init="GrpCDF_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 1 Assistant Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -10953,7 +10953,7 @@ class Mission
 					vehicle="CDF_Soldier_RPG";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_A1_AT_1";
+					text="UnitCDF_A1_AT";
 					init="GrpCDF_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 1 Rifleman (AT)";
 					synchronizations[]={737,738};
@@ -10977,7 +10977,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_A2_FTL_1";
+					text="UnitCDF_A2_FTL";
 					init="GrpCDF_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 2 Fireteam Leader";
 					synchronizations[]={737,738};
@@ -10992,7 +10992,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_A2_AR_1";
+					text="UnitCDF_A2_AR";
 					init="GrpCDF_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 2 Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11006,7 +11006,7 @@ class Mission
 					vehicle="CDF_Soldier";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_A2_AAR_1";
+					text="UnitCDF_A2_AAR";
 					init="GrpCDF_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 2 Assistant Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11020,7 +11020,7 @@ class Mission
 					vehicle="CDF_Soldier_RPG";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_A2_AT_1";
+					text="UnitCDF_A2_AT";
 					init="GrpCDF_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 2 Rifleman (AT)";
 					synchronizations[]={737,738};
@@ -11044,7 +11044,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_A3_FTL_1";
+					text="UnitCDF_A3_FTL";
 					init="GrpCDF_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 3 Fireteam Leader";
 					synchronizations[]={737,738};
@@ -11059,7 +11059,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_A3_AR_1";
+					text="UnitCDF_A3_AR";
 					init="GrpCDF_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 3 Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11073,7 +11073,7 @@ class Mission
 					vehicle="CDF_Soldier";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_A3_AAR_1";
+					text="UnitCDF_A3_AAR";
 					init="GrpCDF_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 3 Assistant Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11087,7 +11087,7 @@ class Mission
 					vehicle="CDF_Soldier_RPG";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_A3_AT_1";
+					text="UnitCDF_A3_AT";
 					init="GrpCDF_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="CDF Alpha 3 Rifleman (AT)";
 					synchronizations[]={737,738};
@@ -11111,7 +11111,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_BSL_SL_1";
+					text="UnitCDF_BSL_SL";
 					init="GrpCDF_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Bravo Squad Leader";
 					synchronizations[]={737,738};
@@ -11150,7 +11150,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_B1_FTL_1";
+					text="UnitCDF_B1_FTL";
 					init="GrpCDF_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 1 Fireteam Leader";
 					synchronizations[]={737,738};
@@ -11165,7 +11165,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_B1_AR_1";
+					text="UnitCDF_B1_AR";
 					init="GrpCDF_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 1 Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11179,7 +11179,7 @@ class Mission
 					vehicle="CDF_Soldier";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_B1_AAR_1";
+					text="UnitCDF_B1_AAR";
 					init="GrpCDF_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 1 Assistant Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11193,7 +11193,7 @@ class Mission
 					vehicle="CDF_Soldier_RPG";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_B1_AT_1";
+					text="UnitCDF_B1_AT";
 					init="GrpCDF_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 1 Rifleman (AT)";
 					synchronizations[]={737,738};
@@ -11217,7 +11217,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_B2_FTL_1";
+					text="UnitCDF_B2_FTL";
 					init="GrpCDF_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 2 Fireteam Leader";
 					synchronizations[]={737,738};
@@ -11232,7 +11232,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_B2_AR_1";
+					text="UnitCDF_B2_AR";
 					init="GrpCDF_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 2 Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11246,7 +11246,7 @@ class Mission
 					vehicle="CDF_Soldier";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_B2_AAR_1";
+					text="UnitCDF_B2_AAR";
 					init="GrpCDF_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 2 Assistant Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11260,7 +11260,7 @@ class Mission
 					vehicle="CDF_Soldier_RPG";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_B2_AT_1";
+					text="UnitCDF_B2_AT";
 					init="GrpCDF_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 2 Rifleman (AT)";
 					synchronizations[]={737,738};
@@ -11284,7 +11284,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_B3_FTL_1";
+					text="UnitCDF_B3_FTL";
 					init="GrpCDF_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 3 Fireteam Leader";
 					synchronizations[]={737,738};
@@ -11299,7 +11299,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_B3_AR_1";
+					text="UnitCDF_B3_AR";
 					init="GrpCDF_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 3 Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11313,7 +11313,7 @@ class Mission
 					vehicle="CDF_Soldier";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_B3_AAR_1";
+					text="UnitCDF_B3_AAR";
 					init="GrpCDF_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 3 Assistant Automatic Rifleman";
 					synchronizations[]={738,737};
@@ -11327,7 +11327,7 @@ class Mission
 					vehicle="CDF_Soldier_RPG";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_B3_AT_1";
+					text="UnitCDF_B3_AT";
 					init="GrpCDF_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="CDF Bravo 3 Rifleman (AT)";
 					synchronizations[]={737,738};
@@ -11351,7 +11351,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_CSL_SL_1";
+					text="UnitCDF_CSL_SL";
 					init="GrpCDF_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Charlie Squad Leader";
 					synchronizations[]={737,738};
@@ -11390,7 +11390,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_C1_FTL_1";
+					text="UnitCDF_C1_FTL";
 					init="GrpCDF_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 1 Fireteam Leader";
 					synchronizations[]={737,738};
@@ -11405,7 +11405,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_C1_AR_1";
+					text="UnitCDF_C1_AR";
 					init="GrpCDF_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 1 Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11419,7 +11419,7 @@ class Mission
 					vehicle="CDF_Soldier";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_C1_AAR_1";
+					text="UnitCDF_C1_AAR";
 					init="GrpCDF_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 1 Assistant Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11433,7 +11433,7 @@ class Mission
 					vehicle="CDF_Soldier_RPG";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_C1_AT_1";
+					text="UnitCDF_C1_AT";
 					init="GrpCDF_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 1 Rifleman (AT)";
 					synchronizations[]={737,738};
@@ -11457,7 +11457,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_C2_FTL_1";
+					text="UnitCDF_C2_FTL";
 					init="GrpCDF_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 2 Fireteam Leader";
 					synchronizations[]={737,738};
@@ -11472,7 +11472,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_C2_AR_1";
+					text="UnitCDF_C2_AR";
 					init="GrpCDF_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 2 Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11486,7 +11486,7 @@ class Mission
 					vehicle="CDF_Soldier";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_C2_AAR_1";
+					text="UnitCDF_C2_AAR";
 					init="GrpCDF_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 2 Assistant Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11500,7 +11500,7 @@ class Mission
 					vehicle="CDF_Soldier_RPG";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_C2_AT_1";
+					text="UnitCDF_C2_AT";
 					init="GrpCDF_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 2 Rifleman (AT)";
 					synchronizations[]={737,738};
@@ -11524,7 +11524,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_C3_FTL_1";
+					text="UnitCDF_C3_FTL";
 					init="GrpCDF_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 3 Fireteam Leader";
 					synchronizations[]={737,738};
@@ -11539,7 +11539,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_C3_AR_1";
+					text="UnitCDF_C3_AR";
 					init="GrpCDF_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 3 Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11553,7 +11553,7 @@ class Mission
 					vehicle="CDF_Soldier";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_C3_AAR_1";
+					text="UnitCDF_C3_AAR";
 					init="GrpCDF_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 3 Assistant Automatic Rifleman";
 					synchronizations[]={737,738};
@@ -11567,7 +11567,7 @@ class Mission
 					vehicle="CDF_Soldier_RPG";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitCDF_C3_AT_1";
+					text="UnitCDF_C3_AT";
 					init="GrpCDF_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
 					description="CDF Charlie 3 Rifleman (AT)";
 					synchronizations[]={737,738};
@@ -11707,7 +11707,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitCDF_HAT1_G_1";
+					text="UnitCDF_HAT1_G";
 					init="GrpCDF_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
 					description="CDF Heavy AT Team 1 Gunner";
 					synchronizations[]={737,738};
@@ -12299,7 +12299,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={927.25287,427.79251,1141.0024};
+					position[]={927.06451,426.97354,1143.7345};
 					azimut=1.1368302;
 					id=787;
 					side="WEST";
@@ -12338,7 +12338,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={926.57416,431.45853,1126.1035};
+					position[]={927.1391,430.85019,1129.3063};
 					azimut=1.13683;
 					id=789;
 					side="WEST";
@@ -13166,7 +13166,7 @@ class Mission
 					leader=1;
 					rank="CORPORAL";
 					skill=0.5;
-					text="UnitUSMC_HAT1_G_1";
+					text="UnitUSMC_HAT1_G";
 					init="GrpUSMC_HAT1 = group this; nul = [""hatg"",this] call f_fnc_assignGear;";
 					description="USMC Heavy AT Team 1 Gunner";
 					synchronizations[]={872,873};
@@ -16092,7 +16092,7 @@ class Mission
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
 					skill=0.5;
-					text="UnitA2GUE_HAT1_AG_1";
+					text="UnitA2GUE_HAT1_AG";
 					init="GrpA2GUE_HAT1 = group this; nul = [""hatag"",this] call f_fnc_assignGear;";
 					description="NAPA Heavy AT Team 1 Assistant Gunner";
 					synchronizations[]={1062,1063};
@@ -16851,6 +16851,7 @@ class Mission
 			vehicle="M2A2_EP1";
 			skill=0.5;
 			text="US_IFV1";
+			init="nul = [""v_ifv"",this] call f_fnc_assignGear;";
 		};
 		class Item15
 		{
