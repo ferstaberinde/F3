@@ -4,6 +4,7 @@ F2 README
 Version: 2-6-1
 Developer: Please see credits section below.
 Publishers: Fer  (http://www.ferstaberinde.com/f2/EN/)
+Codebase: https://github.com/ferstaberinde/F2
 Description: MP mission framework for Armed Assault 2 and Armed Assault 2: Operation Arrowhead.
 
 -
