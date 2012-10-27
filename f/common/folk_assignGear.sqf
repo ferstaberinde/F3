@@ -20,7 +20,7 @@ private [
 "_RAA","_RAAmag",			
 "_SNrifle","_SNriflemag",			
 "_pistol","_pistolmag",									
-"_grenade","_smokegrenade",								
+"_grenade","_smokegrenade","_smokegreen",									
 "_rifle","_riflemag",									
 "_carbine","_carbinemag",								
 "_smg","_smgmag",										

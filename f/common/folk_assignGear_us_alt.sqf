@@ -1,4 +1,4 @@
-// F2 - Folk Assign Gear Script - British Armed Forces (BAF) Equipment
+// F2 - Folk Assign Gear Script - US Army Equipment
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // ====================================================================================
 
@@ -34,24 +34,28 @@
 //		r 		- rifleman
 //		car		- carabineer
 //		smg		- submachinegunner
-
+//		gren	- grenadier
+//
+//		v_tr	- truck
+//		v_ifv	- ifv
+//
 // ====================================================================================
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-_rifle = "BAF_L85A2_RIS_Holo"; _riflemag = "30Rnd_556x45_Stanag";																			// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
+_rifle = "SCAR_L_STD_HOLO"; _riflemag = "30Rnd_556x45_Stanag";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
 
-_carbine = "BAF_L85A2_RIS_Holo"; _carbinemag = "30Rnd_556x45_Stanag"; 																		// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
+_carbine = "SCAR_L_CQC"; _carbinemag = "30Rnd_556x45_Stanag"; 																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
 
 _smg = "MP5A5"; _smgmag = "30Rnd_9x19_MP5";																									// Standard Submachine Gun/Personal Defence Weapon (Vehicle Crew, Aircraft Pilot, Submachinegunner)
 
-_glrifle = "BAF_L85A2_UGL_Holo"; _glriflemag = "30Rnd_556x45_Stanag"; _glmag = "1Rnd_HE_M203";												// Rifle with GL and HE grenades (CO, DC, FTLs)
+_glrifle = "SCAR_L_CQC_EGLM_Holo"; _glriflemag = "30Rnd_556x45_Stanag"; _glmag = "1Rnd_HE_M203";														// Rifle with GL and HE grenades (CO, DC, FTLs)
 _glsmokewhite = "1Rnd_Smoke_M203"; _glsmokegreen = "1Rnd_SmokeGreen_M203"; _glsmokered = "1Rnd_SmokeRed_M203";    							// Smoke for FTLs, Squad Leaders, etc 
 _glflarewhite = "FlareWhite_M203"; _glflarered = "FlareRed_M203"; _glflareyellow = "FlareYellow_M203"; _glflaregreen = "FlareGreen_M203";	// Flares for FTLs, Squad Leaders, etc
 
 _pistol = "M9"; _pistolmag = "15Rnd_9x19_M9";																								// Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
 
-_grenade = "BAF_L109A1_HE"; _smokegrenade = "SmokeShell";_smokegrenadegreen = "SmokeShellGreen";																				// Grenades
+_grenade = "HandGrenade_West"; _smokegrenade = "SmokeShell";_smokegrenadegreen = "SmokeShellGreen";																				// Grenades
 
 _bagmedium = "US_Assault_Pack_EP1";		// 8+ slots																							// Backpack for assistant gunners (AAR, AMMG, AMAT, AHAT), so that they don't have to drop ammo themselves
 _baglarge =  "US_Backpack_EP1"; 		// 12+ slots
@@ -65,16 +69,16 @@ _baglarge =  "US_Backpack_EP1"; 		// 12+ slots
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
-_AR = "BAF_L110A1_Aim"; _ARmag = "100Rnd_556x45_M249";																						// Automatic Rifleman
+_AR = "M249_EP1"; _ARmag = "100Rnd_556x45_M249";																							// Automatic Rifleman
 
-_MMG = "BAF_L7A2_GPMG"; _MMGmag = "100Rnd_762x51_M240";																						// Medium MG
+_MMG = "m240_scoped_EP1"; _MMGmag = "100Rnd_762x51_M240";																					// Medium MG
 
 _HMG = "M2HD_mini_TriPod_US_Bag_EP1";																										// Heavy MG (note: HMG is an assembled weapon, gunner carries weapon)
 _HMGmount = "Tripod_Bag";																													// Assistant Heavy MG (note: HMG is an assembled weapon, assistant carries bipod/tripd)
 
 _RAT = "M136"; _RATmag = "M136";																											// Rifleman AT
 
-_MAT = "BAF_NLAW_Launcher"; _MATmag1 = "NLAW"; _MATmag2 = "NLAW";																			// Medium AT
+_MAT = "MAAWS"; _MATmag1 = "MAAWS_HEAT"; _MATmag2 = "MAAWS_HEDP";																			// Medium AT
 
 _HAT = "Javelin"; _HATmag1 = "Javelin"; _HATmag2 = "Javelin";																				// Heavy AT Gunner
 
@@ -83,7 +87,7 @@ _MTRmount = "Tripod_Bag";																													// Mortar Assistant Gunner
 
 _RAA = "Stinger"; _RAAmag = "Stinger";																										// Rifleman AA (anti-air)
 
-_SNrifle = "BAF_LRR_scoped"; _SNriflemag = "5Rnd_86x70_L115A1";																				// Sniper
+_SNrifle = "M24_des_EP1"; _SNriflemag = "5Rnd_762x51_M24";																					// Sniper
 
 _mine = "Mine"; _satchel = "pipebomb";																										// Engineer
 
