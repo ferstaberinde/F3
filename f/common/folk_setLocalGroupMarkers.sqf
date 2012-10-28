@@ -273,7 +273,7 @@ switch (faction player) do
 // ====================================================================================
 
 // MARKERS: INSURGENT
-// Markers seen by players in INSURGENT (ChdZK) slots.
+// Markers seen by players in INSURGENT (CHDKZ) slots.
 
 	case "INS":
 	{
