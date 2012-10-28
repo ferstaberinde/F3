@@ -16851,6 +16851,7 @@ class Mission
 			vehicle="M2A2_EP1";
 			skill=0.5;
 			text="US_IFV1";
+			init="nul = [""v_ifv"",this] call f_fnc_assignGear;";
 		};
 		class Item15
 		{
