@@ -1,6 +1,7 @@
 # F2 README #
 
-* Version: 2-6-1
+* Version: 2-7-0
+* Codebase: https://github.com/ferstaberinde/F2
 * Developer: Please see credits section below.
 * Publishers: Fer  (alanr@ferstaberinde.com)
 * Description: MP mission framework for Armed Assault 2 and Armed Assault 2: Operation Arrowhead.
@@ -28,6 +29,7 @@
 
 Version | Date | Notes
 
+* 2-7-0     | XX XXX 2012 | Patch release - Various improvements (see change history).
 * 2-6-1     | 02 JUL 2012 | Patch release - Various improvements (see change history).
 * 2-6-0     | 07 JUN 2012 | Patch release - Various improvements (see change history).
 * 2-5-0     | 24 JAN 2012 | Patch release - Various improvements (see change history).
@@ -192,6 +194,20 @@ Fer :) (alanr@ferstaberinde.com)
 ### F2 Change History ###
 
 Version | Date
+
+2-7-0 | XX XXX 2012
+
+* Moved development to GitHub (see: https://github.com/ferstaberinde/F2)
+* Moved F2 readme into the mission folder (see: README.md)
+* Removed Norrin's Revive Respawn component.
+* Added ArmA2 platoons (USMC, CDF, NAPA, Russian Army, ChDKZ)
+* Updated OA Folk Group IDs component.
+* Updated OA Folk Group Markers component.
+* Updated OA Folk Assign Gear Script component (supports new factions, backpacks default to ON, vehicle cargo presets for trucks and IFVs).
+* Added OA Folk Assign Gear Script component alternative files for: US Army, ACR.
+* Updated OA Briefing Template component (supports new factions).
+* Updated Casualties Cap component (commented-out lines for all platoons added).
+* Added OA Folk ORBAT Generator component.
 
 2-6-1 | 02 JUL 2012
 
