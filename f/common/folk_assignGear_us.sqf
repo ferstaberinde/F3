@@ -69,7 +69,7 @@ _baglarge =  "US_Backpack_EP1"; 		// 12+ slots
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
-_AR = "M60A4_EP1"; _ARmag = "100Rnd_762x51_M240";																							// Automatic Rifleman
+_AR = "M249_EP1"; _ARmag = "100Rnd_556x45_M249";																								// Automatic Rifleman
 
 _MMG = "m240_scoped_EP1"; _MMGmag = "100Rnd_762x51_M240";																					// Medium MG
 
