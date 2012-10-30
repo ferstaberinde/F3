@@ -183,9 +183,9 @@ Access the online manual (see SUPPORT INFORMATION above) and follow the instruct
 
 ## 09. NOTES ##
 
-I hope you will enjoy making and updating missions for ArmA2 and ArmA2:OA with F2!
+We hope you will enjoy making and updating missions for ArmA2 and ArmA2:OA with F2!
 
-Fer :) (alanr@ferstaberinde.com)
+Fer :) (alanr@ferstaberinde.com) (on behalf of all F2 / BAS f contributors)
 
 
 
