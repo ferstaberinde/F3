@@ -7,7 +7,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 970;
+	maxPlayers = 540;
 };
 
 // ============================================================================================
@@ -36,7 +36,7 @@ class Params
 {
 	class f_param_useBackpacks
         {
-                title = "OA Backpacks";
+                title = "OA Backpacks (Asst. Gunners & Engineers)";
                 values[] = {0,1};
                 texts[] = {"Off","On"};
                 default = 1;

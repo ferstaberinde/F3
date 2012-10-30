@@ -234,49 +234,6 @@ switch (faction player) do
 
 	case "BIS_TK_INS":
 	{
-		["GrpTKINS_CO", 0, "CO", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_DC", 0, "DC", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_ASL", 0, "ASL", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_A1", 1, "A1", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_A2", 1, "A2", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";		
-		["GrpTKINS_A3", 1, "A3", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";		
-		["GrpTKINS_BSL", 0, "BSL", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_B1", 1, "B1", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_B2", 1, "B2", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_B3", 1, "B3", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_CSL", 0, "CSL", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_C1", 1, "C1", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_C2", 1, "C2", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_C3", 1, "C3", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_MMG1", 2, "MMG1", "ColorOrange"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_MAT1", 3, "MAT1", "ColorOrange"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_ST1",  4, "ST1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_HMG1",  2, "HMG1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_MTR1",  5, "MTR1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_HAT1",  3, "HAT1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_SAM1",  3, "SAM1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_ENG1",  6, "ENG1", "ColorYellow"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_IFV1",  7, "IFV1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_IFV2",  7, "IFV2", "ColorBlue"] execVM  "f\common\folk_localGroupMarker.sqf";	
-		["GrpTKINS_IFV3",  7, "IFV3", "ColorGreen"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_TNK1",  7, "TNK1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";	
-		["GrpTKINS_TH1",  8, "TH1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_TH2",  8, "TH2", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKINS_AH1",  8, "AH1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["UnitTKINS_CO_M", 0, "COM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
-		["UnitTKINS_DC_M", 0, "DCM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";				
-		["UnitTKINS_ASL_M", 0, "AM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";		
-		["UnitTKINS_BSL_M", 0, "BM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
-		["UnitTKINS_CSL_M", 0, "CM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
-	};
-	
-// ====================================================================================
-
-// MARKERS: INSURGENT
-// Markers seen by players in INSURGENT (CHDKZ) slots.
-
-	case "INS":
-	{
 		["GrpINS_CO", 0, "CO", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
 		["GrpINS_DC", 0, "DC", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
 		["GrpINS_ASL", 0, "ASL", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
@@ -312,6 +269,49 @@ switch (faction player) do
 		["UnitINS_BSL_M", 0, "BM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
 		["UnitINS_CSL_M", 0, "CM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
 	};
+	
+// ====================================================================================
+
+// MARKERS: INSURGENT
+// Markers seen by players in INSURGENT (CHDKZ) slots.
+
+	case "INS":
+	{
+		["GrpA2INS_CO", 0, "CO", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_DC", 0, "DC", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_ASL", 0, "ASL", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_A1", 1, "A1", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_A2", 1, "A2", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";		
+		["GrpA2INS_A3", 1, "A3", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";		
+		["GrpA2INS_BSL", 0, "BSL", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_B1", 1, "B1", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_B2", 1, "B2", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_B3", 1, "B3", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_CSL", 0, "CSL", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_C1", 1, "C1", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_C2", 1, "C2", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_C3", 1, "C3", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_MMG1", 2, "MMG1", "ColorOrange"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_MAT1", 3, "MAT1", "ColorOrange"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_ST1",  4, "ST1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_HMG1",  2, "HMG1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_MTR1",  5, "MTR1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_HAT1",  3, "HAT1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_SAM1",  3, "SAM1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_ENG1",  6, "ENG1", "ColorYellow"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_IFV1",  7, "IFV1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_IFV2",  7, "IFV2", "ColorBlue"] execVM  "f\common\folk_localGroupMarker.sqf";	
+		["GrpA2INS_IFV3",  7, "IFV3", "ColorGreen"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_TNK1",  7, "TNK1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";	
+		["GrpA2INS_TH1",  8, "TH1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_TH2",  8, "TH2", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2INS_AH1",  8, "AH1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["UnitA2INS_CO_M", 0, "COM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
+		["UnitA2INS_DC_M", 0, "DCM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";				
+		["UnitA2INS_ASL_M", 0, "AM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";		
+		["UnitA2INS_BSL_M", 0, "BM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
+		["UnitA2INS_CSL_M", 0, "CM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
+	};
        
 // ====================================================================================
 
@@ -319,49 +319,6 @@ switch (faction player) do
 // Markers seen by players in TAKISTANI LOCALS (INDEPENDENT) slots.
 
 	case "BIS_TK_GUE":
-	{
-		["GrpTKGUE_CO", 0, "CO", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_DC", 0, "DC", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_ASL", 0, "ASL", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_A1", 1, "A1", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_A2", 1, "A2", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";		
-		["GrpTKGUE_A3", 1, "A3", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";		
-		["GrpTKGUE_BSL", 0, "BSL", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_B1", 1, "B1", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_B2", 1, "B2", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_B3", 1, "B3", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_CSL", 0, "CSL", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_C1", 1, "C1", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_C2", 1, "C2", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_C3", 1, "C3", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_MMG1", 2, "MMG1", "ColorOrange"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_MAT1", 3, "MAT1", "ColorOrange"] execVM "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_ST1",  4, "ST1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_HMG1",  2, "HMG1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_MTR1",  5, "MTR1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_HAT1",  3, "HAT1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_SAM1",  3, "SAM1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_ENG1",  6, "ENG1", "ColorYellow"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_IFV1",  7, "IFV1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_IFV2",  7, "IFV2", "ColorBlue"] execVM  "f\common\folk_localGroupMarker.sqf";	
-		["GrpTKGUE_IFV3",  7, "IFV3", "ColorGreen"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_TNK1",  7, "TNK1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";	
-		["GrpTKGUE_TH1",  8, "TH1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_TH2",  8, "TH2", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["GrpTKGUE_AH1",  8, "AH1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";
-		["UnitTKGUE_CO_M", 0, "COM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
-		["UnitTKGUE_DC_M", 0, "DCM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
-		["UnitTKGUE_ASL_M", 0, "AM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";		
-		["UnitTKGUE_BSL_M", 0, "BM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
-		["UnitTKGUE_CSL_M", 0, "CM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
-	};
-
-// ====================================================================================
-	
-// MARKERS: GUERILLA (NAPA)
-// Markers seen by players in GUERILLA (NAPA) slots.
-
-	case "GUE":
 	{
 		["GrpGUE_CO", 0, "CO", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
 		["GrpGUE_DC", 0, "DC", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
@@ -397,6 +354,49 @@ switch (faction player) do
 		["UnitGUE_ASL_M", 0, "AM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";		
 		["UnitGUE_BSL_M", 0, "BM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
 		["UnitGUE_CSL_M", 0, "CM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
+	};
+
+// ====================================================================================
+	
+// MARKERS: GUERILLA (NAPA)
+// Markers seen by players in GUERILLA (NAPA) slots.
+
+	case "GUE":
+	{
+		["GrpA2GUE_CO", 0, "CO", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_DC", 0, "DC", "ColorYellow"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_ASL", 0, "ASL", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_A1", 1, "A1", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_A2", 1, "A2", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";		
+		["GrpA2GUE_A3", 1, "A3", "ColorRed"] execVM "f\common\folk_localGroupMarker.sqf";		
+		["GrpA2GUE_BSL", 0, "BSL", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_B1", 1, "B1", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_B2", 1, "B2", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_B3", 1, "B3", "ColorBlue"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_CSL", 0, "CSL", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_C1", 1, "C1", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_C2", 1, "C2", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_C3", 1, "C3", "ColorGreen"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_MMG1", 2, "MMG1", "ColorOrange"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_MAT1", 3, "MAT1", "ColorOrange"] execVM "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_ST1",  4, "ST1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_HMG1",  2, "HMG1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_MTR1",  5, "MTR1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_HAT1",  3, "HAT1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_SAM1",  3, "SAM1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_ENG1",  6, "ENG1", "ColorYellow"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_IFV1",  7, "IFV1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_IFV2",  7, "IFV2", "ColorBlue"] execVM  "f\common\folk_localGroupMarker.sqf";	
+		["GrpA2GUE_IFV3",  7, "IFV3", "ColorGreen"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_TNK1",  7, "TNK1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";	
+		["GrpA2GUE_TH1",  8, "TH1", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_TH2",  8, "TH2", "ColorOrange"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["GrpA2GUE_AH1",  8, "AH1", "ColorRed"] execVM  "f\common\folk_localGroupMarker.sqf";
+		["UnitA2GUE_CO_M", 0, "COM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
+		["UnitA2GUE_DC_M", 0, "DCM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
+		["UnitA2GUE_ASL_M", 0, "AM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";		
+		["UnitA2GUE_BSL_M", 0, "BM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
+		["UnitA2GUE_CSL_M", 0, "CM", "ColorBlack"] execVM "f\common\folk_localSpecialistMarker.sqf";
 	};
 
 
