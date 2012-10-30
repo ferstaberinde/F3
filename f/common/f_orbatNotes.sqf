@@ -7,7 +7,7 @@ waitUntil {scriptDone f_script_setGroupIDs};
 
 // Define needed variables
 private ["_orbatText", "_groups", "_precompileGroups"];
-_orbatText = "NOTE<br />
+_orbatText = "<br />NOTE<br />
 The ORBAT below is only accurate at mission start.<br />
 <br />
 ORBAT<br />";
