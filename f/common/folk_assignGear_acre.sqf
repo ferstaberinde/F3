@@ -54,18 +54,6 @@ _unit = _this select 1;							// expecting name of unit; originally passed by us
 
 // ====================================================================================
 
-// PREPARE UNIT FOR GEAR ADDITION
-// The following code removes all existing weapons and backpacks
-
-//removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
-////_unit addweapon "ItemGPS";					// add universal GPS for this faction (nb: misc items not cleared
-//_unit addweapon "ItemMap";				// etc
-//_unit addweapon "ItemCompass";
-//_unit addweapon "ItemRadio";
-//_unit addweapon "ItemWatch";
-
-// ====================================================================================
-
 // DEFINE UNIT TYPE LOADOUTS
 // The following blocks of code define loadouts for each type of unit (the unit type
 // is passed to the script in the first variable)
@@ -208,48 +196,48 @@ switch (_typeofUnit) do
 	case "c":
 	{
 		if(leader group _unit == _unit) then {
-				_unit addWeapon "ACRE_PRC117F";
+				_unit addWeapon _radio1;
 			};
-			_unit addWeapon "ACRE_PRC148";
+			_unit addWeapon _radio2;
 	};			
 	
 // LOADOUT: AIR VEHICLE PILOTS
 	case "p":
 	{
 		if(leader group _unit == _unit) then {
-				_unit addWeapon "ACRE_PRC117F";
+				_unit addWeapon _radio1;
 			};
-			_unit addWeapon "ACRE_PRC148";				
+			_unit addWeapon _radio2;				
 	};		
 	
 // LOADOUT: ENGINEER
 	case "eng":
 	{
-			_unit addWeapon "ACRE_PRC148";
+			_unit addWeapon _radio2;	
 	};	
 		
 // LOADOUT: RIFLEMAN
 	case "r":
 	{
-		_unit addWeapon "ACRE_PRC148";
+		_unit addWeapon _radio2;	
 	};
 
 // LOADOUT: CARABINEER
 	case "car":
 	{
-		_unit addWeapon "ACRE_PRC148";
+		_unit addWeapon _radio2;	
 	};
 
 // LOADOUT: SUBMACHINEGUNNER
 	case "smg":
 	{
-		_unit addWeapon "ACRE_PRC148";
+		_unit addWeapon _radio2;	
 	};
 
 // LOADOUT: GRENADIER
 	case "gren":
 	{
-		_unit addWeapon "ACRE_PRC148";
+		_unit addWeapon _radio2;	
 	};
 
 
@@ -257,7 +245,7 @@ switch (_typeofUnit) do
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)
    default
    {
-				
+		_unit addWeapon _radio2;		
 		if (true) exitwith {player globalchat format ["DEBUG (f\common\folk_assignGear.sqf): Unit = %1. Gear template %2 does not exist, used Rifleman instead.",_unit,_typeofunit]};
    };
 

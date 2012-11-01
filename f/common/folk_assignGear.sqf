@@ -25,7 +25,8 @@ private [
 "_carbine","_carbinemag",								
 "_smg","_smgmag",										
 "_bagmedium","_baglarge",
-"_mine","_satchel"
+"_mine","_satchel",
+"_radio1","_radio2","_radio3"
 ];
 
 // ====================================================================================
@@ -38,6 +39,7 @@ _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
 _faction = toLower (faction _unit);
 _useBackpacks = paramsArray select 0;
+_useACRE = paramsArray select 1;
 
 switch(_faction) do
 {
@@ -213,7 +215,7 @@ if (_faction == "bis_civ_special") then {
 // The following block of code executes only if the player if the ACRE parameter is set to true; it 
 // automatically includes a file which contains the appropriate equipment data.
 
-if (f_var_acre == 1) then {
+if (_useACRE == 1) then {
 #include "folk_assignGear_acre.sqf"
 };
 
