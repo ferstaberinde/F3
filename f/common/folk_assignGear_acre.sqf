@@ -40,8 +40,8 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-_radio1 = "";
-_radio2 = "";
+_radio1 = "ACRE_PRC117F"; //longrange
+_radio2 = "ACRE_PRC148";  //midrange
 _radio3 = "";
 
 // ====================================================================================
@@ -78,170 +78,178 @@ switch (_typeofUnit) do
 // LOADOUT: COMMANDER
 	case "co":
 	{
-	
+		_unit addWeapon _radio1;
+		_unit addWeapon _radio2;
 	};
   
 // LOADOUT: DEPUTY COMMANDER
 	case "dc":
 	{
-	
+		_unit addWeapon _radio1;
+		_unit addWeapon _radio2;
 	}; 
 
 // LOADOUT: MEDIC
 	case "m":
 	{
-			
+		_unit addWeapon _radio2;
 	};
 
 // LOADOUT: FIRE TEAM LEADER
 	case "ftl":
 	{
-	
+		_unit addWeapon _radio2;
 	};	
 
 
 // LOADOUT: AUTOMATIC RIFLEMAN
 	case "ar":
 	{
-		
+		_unit addWeapon _radio2;
 	};	
 	
 // LOADOUT: ASSISTANT AUTOMATIC RIFLEMAN
 	case "aar":
 	{
-	
+		_unit addWeapon _radio2;
 	};			
 	
 // LOADOUT: RIFLEMAN (AT)	
 	case "rat":
 	{
-		
+		_unit addWeapon _radio2;
 	};		
 	
 // LOADOUT: SURFACE TO AIR MISSILE GUNNER 
 	case "samg":
 	{
-		
+		_unit addWeapon _radio2;
 	};			
 	
 // LOADOUT: ASSISTANT SURFACE TO AIR MISSILE GUNNER
 	case "samag":
 	{
-			
+		_unit addWeapon _radio2;
 	};			
 	
 // LOADOUT: MEDIUM MG GUNNER	
 	case "mmgg":
 	{
-		
+		_unit addWeapon _radio2;
 	};			
 
 // LOADOUT: MEDIUM MG ASSISTANT GUNNER	
 	case "mmgag":
 	{
-				
+		_unit addWeapon _radio2;		
 	};
 	
 // LOADOUT: HEAVY MG GUNNER
 	case "hmgg":
 	{
-		
+		_unit addWeapon _radio2;
 	};	
 	
 // LOADOUT: HEAVY MG ASSISTANT GUNNER
 	case "hmgag":
 	{
-		
+		_unit addWeapon _radio2;
 	};		
 
 // LOADOUT: MEDIUM AT GUNNER
 	case "matg":
 	{
-			
+		_unit addWeapon _radio2;	
 	};	
 	
 // LOADOUT: MEDIUM AT ASSISTANT GUNNER	
 	case "matag":
 	{
-		
+		_unit addWeapon _radio2;
 	};	
 	
 // LOADOUT: HEAVY AT GUNNER
 	case "hatg":
 	{
-			
+		_unit addWeapon _radio2;	
 	};	
 	
 // LOADOUT: HEAVY AT ASSISTANT GUNNER	
 	case "hatag":
 	{
-					
+		_unit addWeapon _radio2;			
 	};		
 	
 // LOADOUT: MORTAR GUNNER
 	case "mtrg":
 	{
-		
+		_unit addWeapon _radio2;
 	};	
 	
 // LOADOUT: MORTAR ASSISTANT GUNNER
 	case "mtrag":
 	{
-		
+		_unit addWeapon _radio2;
 	};		
 	
 // LOADOUT: SNIPER
 	case "sn":
 	{
-	
+		_unit addWeapon _radio2;
 	};		
 	
 // LOADOUT: SPOTTER
 	case "sp":
 	{
-		
+		_unit addWeapon _radio2;
 	};			
 	
 // LOADOUT: GROUND VEHICLE CREW
 	case "c":
 	{
-	
+		if(leader group _unit == _unit) then {
+				_unit addWeapon "ACRE_PRC117F";
+			};
+			_unit addWeapon "ACRE_PRC148";
 	};			
 	
 // LOADOUT: AIR VEHICLE PILOTS
 	case "p":
 	{
-						
+		if(leader group _unit == _unit) then {
+				_unit addWeapon "ACRE_PRC117F";
+			};
+			_unit addWeapon "ACRE_PRC148";				
 	};		
 	
 // LOADOUT: ENGINEER
 	case "eng":
 	{
-			
+			_unit addWeapon "ACRE_PRC148";
 	};	
 		
 // LOADOUT: RIFLEMAN
 	case "r":
 	{
-		
+		_unit addWeapon "ACRE_PRC148";
 	};
 
 // LOADOUT: CARABINEER
 	case "car":
 	{
-		
+		_unit addWeapon "ACRE_PRC148";
 	};
 
 // LOADOUT: SUBMACHINEGUNNER
 	case "smg":
 	{
-		
+		_unit addWeapon "ACRE_PRC148";
 	};
 
 // LOADOUT: GRENADIER
 	case "gren":
 	{
-		
+		_unit addWeapon "ACRE_PRC148";
 	};
 
 
