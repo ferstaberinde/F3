@@ -209,6 +209,16 @@ if (_faction == "bis_civ_special") then {
 
 // ====================================================================================
 
+// GEAR: ACRE
+// The following block of code executes only if the player if the ACRE parameter is set to true; it 
+// automatically includes a file which contains the appropriate equipment data.
+
+if (f_var_acre == 1) then {
+#include "folk_assignGear_acre.sqf"
+};
+
+// ====================================================================================
+
 // DEBUG
 
 // ====================================================================================
