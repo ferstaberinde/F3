@@ -141,6 +141,13 @@ player setVariable ["BIS_noCoreConversations", true];
 
 // ====================================================================================
 
+// F2 - Authorised Crew Kind Check
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// VehicleName addEventhandler ["GetIn", {[_this,"UnitClass"] execVM "f\common\f_isAuthorisedCrewKind.sqf"}];
+
+// ====================================================================================
+
 // F2 - Casualties Cap
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
