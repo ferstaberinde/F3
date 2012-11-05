@@ -85,8 +85,8 @@ if (_faction == "usmc") then {
 // The following block of code executes only if the player is in a CDF slot; it 
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "usmc") then {
-#include "folk_assignGear_usmc.sqf"
+if (_faction == "cdf") then {
+#include "folk_assignGear_cdf.sqf"
 };
 
 // ====================================================================================
