@@ -149,7 +149,7 @@ switch (_typeofUnit) do
 		};
 	};
   
-// LOADOUT: DEPUTY COMMANDER
+// LOADOUT: DEPUTY COMMANDER AND SQUAD LEADER
 	case "dc":
 	{
 		{_unit addmagazine _glriflemag} foreach [1,2,3,4,5,6,7];	//_DCriflemag

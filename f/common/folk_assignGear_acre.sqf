@@ -70,7 +70,7 @@ switch (_typeofUnit) do
 		_unit addWeapon _radio2;
 	};
   
-// LOADOUT: DEPUTY COMMANDER
+// LOADOUT: DEPUTY COMMANDER AND SQUAD LEADER
 	case "dc":
 	{
 		_unit addWeapon _radio1;
