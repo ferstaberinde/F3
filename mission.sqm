@@ -245,7 +245,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUN_ASL_SL";
-					init="GrpUN_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpUN_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="UN Alpha Squad Leader";
 					synchronizations[]={13,14};
 				};
@@ -458,7 +458,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUS_ASL_SL";
-					init="GrpUS_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpUS_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="US Army Alpha Squad Leader";
 					synchronizations[]={302,303};
 				};
@@ -637,7 +637,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitTK_ASL_SL";
-					init="GrpTK_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpTK_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="TK Army Alpha Squad Leader";
 					synchronizations[]={490,491};
 				};
@@ -861,7 +861,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUN_BSL_SL";
-					init="GrpUN_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpUN_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="UN Bravo Squad Leader";
 					synchronizations[]={13,14};
 				};
@@ -1083,7 +1083,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUN_CSL_SL";
-					init="GrpUN_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpUN_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="UN Charlie Squad Leader";
 					synchronizations[]={13,14};
 				};
@@ -2100,7 +2100,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="GrpGue_ASL_SL";
-					init="GrpGue_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpGue_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="TK Local Alpha Squad Leader";
 					synchronizations[]={213,214};
 				};
@@ -2326,7 +2326,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="GrpGue_BSL_SL";
-					init="GrpGue_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpGue_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="TK Local Bravo Squad Leader";
 					synchronizations[]={213,214};
 				};
@@ -2552,7 +2552,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="GrpGue_CSL_SL";
-					init="GrpGue_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpGue_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="TK Local Charlie Squad Leader";
 					synchronizations[]={213,214};
 				};
@@ -3670,7 +3670,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUS_BSL_SL";
-					init="GrpUS_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpUS_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="US Army Bravo Squad Leader";
 					synchronizations[]={302,303};
 				};
@@ -3910,7 +3910,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUS_CSL_SL";
-					init="GrpUS_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpUS_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="US Army Charlie Squad Leader";
 					synchronizations[]={302,303};
 				};
@@ -5026,7 +5026,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitBAF_ASL_SL";
-					init="GrpBAF_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpBAF_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="British Army Alpha Squad Leader";
 					synchronizations[]={401,402};
 				};
@@ -5252,7 +5252,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitBAF_BSL_SL";
-					init="GrpBAF_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpBAF_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="British Army Bravo Squad Leader";
 					synchronizations[]={401,402};
 				};
@@ -5478,7 +5478,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitBAF_CSL_SL";
-					init="GrpBAF_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpBAF_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="British Army Charlie Squad Leader";
 					synchronizations[]={401,402};
 				};
@@ -6587,7 +6587,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitTK_BSL_SL";
-					init="GrpTK_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpTK_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="TK Army Bravo Squad Leader";
 					synchronizations[]={490,491};
 				};
@@ -6813,7 +6813,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitTK_CSL_SL";
-					init="GrpTK_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpTK_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="TK Army Charlie Squad Leader";
 					synchronizations[]={490,491};
 				};
@@ -7870,7 +7870,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitIns_ASL_SL";
-					init="GrpIns_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpIns_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="TK Militia Alpha Squad Leader";
 					synchronizations[]={589,590};
 				};
@@ -8096,7 +8096,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitIns_BSL_SL";
-					init="GrpIns_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpIns_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="TK Militia Bravo Squad Leader";
 					synchronizations[]={589,590};
 				};
@@ -8322,7 +8322,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitIns_CSL_SL";
-					init="GrpIns_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpIns_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="TK Militia Charlie Squad Leader";
 					synchronizations[]={589,590};
 				};
@@ -9384,7 +9384,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitRU_ASL_SL";
-					init="GrpRU_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpRU_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="Russian Army Alpha Squad Leader";
 					synchronizations[]={682,683};
 				};
@@ -9624,7 +9624,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitRU_BSL_SL";
-					init="GrpRU_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpRU_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="Russian Army Bravo Squad Leader";
 					synchronizations[]={682,683};
 				};
@@ -9864,7 +9864,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitRU_CSL_SL";
-					init="GrpRU_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpRU_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="Russian Army Charlie Squad Leader";
 					synchronizations[]={682,683};
 				};
@@ -10871,7 +10871,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitCDF_ASL_SL";
-					init="GrpCDF_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpCDF_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="CDF Alpha Squad Leader";
 					synchronizations[]={737,738};
 				};
@@ -11111,7 +11111,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitCDF_BSL_SL";
-					init="GrpCDF_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpCDF_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="CDF Bravo Squad Leader";
 					synchronizations[]={737,738};
 				};
@@ -11351,7 +11351,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitCDF_CSL_SL";
-					init="GrpCDF_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpCDF_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="CDF Charlie Squad Leader";
 					synchronizations[]={737,738};
 				};
@@ -12398,7 +12398,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUSMC_ASL_SL";
-					init="GrpUSMC_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpUSMC_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="USMC Alpha Squad Leader";
 					synchronizations[]={872,873};
 				};
@@ -12638,7 +12638,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUSMC_BSL_SL";
-					init="GrpUSMC_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpUSMC_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="USMC Bravo Squad Leader";
 					synchronizations[]={872,873};
 				};
@@ -12878,7 +12878,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUSMC_CSL_SL";
-					init="GrpUSMC_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpUSMC_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="USMC Charlie Squad Leader";
 					synchronizations[]={872,873};
 				};
@@ -13920,7 +13920,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitA2Ins_ASL_SL";
-					init="GrpA2Ins_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpA2Ins_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Alpha Squad Leader";
 					synchronizations[]={967,968};
 				};
@@ -14146,7 +14146,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitA2Ins_BSL_SL";
-					init="GrpA2Ins_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpA2Ins_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Bravo Squad Leader";
 					synchronizations[]={967,968};
 				};
@@ -14372,7 +14372,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitA2Ins_CSL_SL";
-					init="GrpA2Ins_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpA2Ins_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="ChDKZ Insurgents Charlie Squad Leader";
 					synchronizations[]={967,968};
 				};
@@ -15360,7 +15360,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitA2Gue_ASL_SL";
-					init="GrpA2Gue_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpA2Gue_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="NAPA Alpha Squad Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15586,7 +15586,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitA2Gue_BSL_SL";
-					init="GrpA2Gue_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpA2Gue_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="NAPA Bravo Squad Leader";
 					synchronizations[]={1062,1063};
 				};
@@ -15812,7 +15812,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitA2Gue_CSL_SL";
-					init="GrpA2Gue_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpA2Gue_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
 					description="NAPA Charlie Squad Leader";
 					synchronizations[]={1062,1063};
 				};

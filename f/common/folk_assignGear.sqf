@@ -25,7 +25,8 @@ private [
 "_carbine","_carbinemag",								
 "_smg","_smgmag",										
 "_bagmedium","_baglarge",
-"_mine","_satchel"
+"_mine","_satchel",
+"_radio1","_radio2","_radio3"
 ];
 
 // ====================================================================================
@@ -38,6 +39,7 @@ _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
 _faction = toLower (faction _unit);
 _useBackpacks = paramsArray select 0;
+_useACRE = paramsArray select 1;
 
 switch(_faction) do
 {
@@ -83,8 +85,8 @@ if (_faction == "usmc") then {
 // The following block of code executes only if the player is in a CDF slot; it 
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "usmc") then {
-#include "folk_assignGear_usmc.sqf"
+if (_faction == "cdf") then {
+#include "folk_assignGear_cdf.sqf"
 };
 
 // ====================================================================================
@@ -205,6 +207,16 @@ if (_faction == "bis_tk_civ") then {
 
 if (_faction == "bis_civ_special") then {
 #include "folk_assignGear_civ_special.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: ACRE
+// The following block of code executes only if the player if the ACRE parameter is set to true; it 
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_useACRE == 1) then {
+#include "folk_assignGear_acre.sqf"
 };
 
 // ====================================================================================
