@@ -36,6 +36,10 @@
 //		smg		- submachinegunner
 //		gren	- grenadier
 //
+//		v_car	- car/4x4
+//		v_tr	- truck
+//		v_ifv	- ifv
+//
 // ====================================================================================
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
@@ -240,6 +244,34 @@ switch (_typeofUnit) do
 		_unit addWeapon _radio2;	
 	};
 
+// CARGO: CAR - room for 10 weapons and 50 cargo items
+	case "v_car":
+	{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		_unit addWeaponCargoGlobal [_radio2, 1];
+		_unit addWeaponCargoGlobal [_radio1, 1];
+	};	
+	
+// CARGO: TRUCK - room for 50 weapons and 200 cargo items
+	case "v_tr":
+	{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		_unit addWeaponCargoGlobal [_radio2, 4];
+		_unit addWeaponCargoGlobal [_radio1, 4];
+
+	};
+	
+// CARGO: IFV - room for 10 weapons and 100 cargo items
+	case "v_ifv":
+	{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		_unit addWeaponCargoGlobal [_radio2, 2];
+		_unit addWeaponCargoGlobal [_radio1, 2];
+
+	};
 
 	
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)

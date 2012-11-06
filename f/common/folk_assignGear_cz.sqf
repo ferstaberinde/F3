@@ -36,6 +36,7 @@
 //		smg		- submachinegunner
 //		gren	- grenadier
 //
+//		v_car	- car/4x4
 //		v_tr	- truck
 //		v_ifv	- ifv
 //
@@ -43,9 +44,9 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-_rifle = "Sa58V_CCO_EP1"; _riflemag = "30Rnd_762x39_SA58";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
+_rifle = "AK_107_Kobra"; _riflemag = "30Rnd_545x39_AK";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
 
-_carbine = "Sa58V_EP1"; _carbinemag = "30Rnd_762x39_SA58"; 																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
+_carbine = "Sa58V_CCO_EP1"; _carbinemag = "30Rnd_762x39_SA58"; 																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
 
 _smg = "bizon"; _smgmag = "64Rnd_9x19_Bizon";																								// Standard Submachine Gun/Personal Defence Weapon (Vehicle Crew, Aircraft Pilot, Submachinegunner)
 
@@ -57,7 +58,7 @@ _pistol = "Makarov"; _pistolmag = "8Rnd_9x18_Makarov";																						// P
 
 _grenade = "HandGrenade_West"; _smokegrenade = "SmokeShell";_smokegrenadegreen = "SmokeShellGreen";																				// Grenades
 
-_bagmedium = "CZ_Vestpouch_EP1";		// 8+ slots																							// Backpack for assistant gunners (AAR, AMMG, AMAT, AHAT), so that they don't have to drop ammo themselves
+_bagmedium = "US_Assault_Pack_EP1";		// 8+ slots																							// Backpack for assistant gunners (AAR, AMMG, AMAT, AHAT), so that they don't have to drop ammo themselves
 _baglarge =  "CZ_Backpack_EP1"; 		// 12+ slots
 		//  6 Slots: "CZ_Vestpouch_EP1"
 		//  8 Slots: "US_Assault_Pack_EP1", "US_Patrol_Pack_EP1", "TK_Assault_Pack_EP1", "TK_RPG_Backpack_EP1"
@@ -69,7 +70,7 @@ _baglarge =  "CZ_Backpack_EP1"; 		// 12+ slots
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
-_AR = "M60A4_EP1"; _ARmag = "100Rnd_762x51_M240";																								// Automatic Rifleman
+_AR = "M249"; _ARmag = "100Rnd_556x45_M249";																							// Automatic Rifleman
 
 _MMG = "Pecheneg"; _MMGmag = "100Rnd_762x54_PK";																									// Medium MG
 
@@ -528,31 +529,59 @@ switch (_typeofUnit) do
 			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
 		};
 	};
-
-// CARGO: TRUCK
+// CARGO: CAR - room for 10 weapons and 50 cargo items
+	case "v_car":
+	{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		_unit addWeaponCargoGlobal [_carbine, 2];
+		_unit addMagazineCargoGlobal [_riflemag, 8];
+		_unit addMagazineCargoGlobal [_glriflemag, 8];
+		_unit addMagazineCargoGlobal [_carbinemag, 10];
+		_unit addMagazineCargoGlobal [_armag, 5];
+		_unit addMagazineCargoGlobal [_ratmag, 1];
+		_unit addMagazineCargoGlobal [_grenade, 4];
+		_unit addMagazineCargoGlobal [_smokegrenade, 4];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
+		_unit addMagazineCargoGlobal [_glmag, 4];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
+	};	
+	
+// CARGO: TRUCK - room for 50 weapons and 200 cargo items
 	case "v_tr":
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
-		_unit addMagazineCargoGlobal [_riflemag, 15];
-		_unit addMagazineCargoGlobal [_glriflemag, 15];
-		_unit addMagazineCargoGlobal [_carbinemag, 15];
-		_unit addMagazineCargoGlobal [_grenade, 5];
-		_unit addMagazineCargoGlobal [_smokegrenade, 5];
+		_unit addWeaponCargoGlobal [_carbine, 10];
+		_unit addMagazineCargoGlobal [_riflemag, 40];
+		_unit addMagazineCargoGlobal [_glriflemag, 40];
+		_unit addMagazineCargoGlobal [_carbinemag, 40];
+		_unit addMagazineCargoGlobal [_armag, 22];
+		_unit addMagazineCargoGlobal [_ratmag, 6];
+		_unit addMagazineCargoGlobal [_grenade, 12];
+		_unit addMagazineCargoGlobal [_smokegrenade, 12];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 4];
+		_unit addMagazineCargoGlobal [_glmag, 12];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 12];
 	};
 	
-// CARGO: IFV
+// CARGO: IFV - room for 10 weapons and 100 cargo items
 	case "v_ifv":
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
-		_unit addMagazineCargoGlobal [_riflemag, 15];
-		_unit addMagazineCargoGlobal [_glriflemag, 15];
-		_unit addMagazineCargoGlobal [_carbinemag, 15];
-		_unit addMagazineCargoGlobal [_grenade, 5];
-		_unit addMagazineCargoGlobal [_smokegrenade, 5];
+		_unit addWeaponCargoGlobal [_carbine, 4];
+		_unit addMagazineCargoGlobal [_riflemag, 20];
+		_unit addMagazineCargoGlobal [_glriflemag, 20];
+		_unit addMagazineCargoGlobal [_carbinemag, 20];
+		_unit addMagazineCargoGlobal [_armag, 8];
+		_unit addMagazineCargoGlobal [_ratmag, 2];
+		_unit addMagazineCargoGlobal [_grenade, 8];
+		_unit addMagazineCargoGlobal [_smokegrenade, 8];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
+		_unit addMagazineCargoGlobal [_glmag, 8];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
 	};
-	
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)
    default
    {

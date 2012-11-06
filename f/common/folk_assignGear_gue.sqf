@@ -1,4 +1,4 @@
-// F2 - Folk Assign Gear Script - NAPA (GUE) Equipment
+// F2 - Folk Assign Gear Script - NAPA (A2GUE) Equipment
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // ====================================================================================
 
@@ -36,6 +36,7 @@
 //		smg		- submachinegunner
 //		gren	- grenadier
 //
+//		v_car	- car/4x4
 //		v_tr	- truck
 //		v_ifv	- ifv
 //
@@ -45,7 +46,7 @@
 
 _rifle = "AK_74"; _riflemag = "30Rnd_545x39_AK";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
 
-_carbine = "AK_47_M"; _carbinemag = "30Rnd_762x39_AK47"; 																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
+_carbine = "AK_47_S"; _carbinemag = "30Rnd_762x39_AK47"; 																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
 
 _smg = "bizon"; _smgmag = "64Rnd_9x19_Bizon";																								// Standard Submachine Gun/Personal Defence Weapon (Vehicle Crew, Aircraft Pilot, Submachinegunner)
 
@@ -71,7 +72,7 @@ _baglarge =  "TK_ALICE_Pack_EP1"; 		// 12+ slots
 
 _AR = "RPK_74"; _ARmag = "75Rnd_545x39_RPK";																								// Automatic Rifleman
 
-_MMG = "PK"; _MMGmag = "100Rnd_762x54_PK";																									// Medium MG
+_MMG = "PK"; _MMGmag = "100Rnd_762x54_PK";																										// Medium MG
 
 _HMG = "DSHkM_Mini_TriPod_TK_INS_Bag_EP1";																									// Heavy MG (note: HMG is an assembled weapon, gunner carries weapon)
 _HMGmount = "Tripod_Bag";																													// Assistant Heavy MG (note: HMG is an assembled weapon, assistant carries bipod/tripd)
@@ -529,31 +530,59 @@ switch (_typeofUnit) do
 			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
 		};
 	};
-
-// CARGO: TRUCK
+// CARGO: CAR - room for 10 weapons and 50 cargo items
+	case "v_car":
+	{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		_unit addWeaponCargoGlobal [_carbine, 2];
+		_unit addMagazineCargoGlobal [_riflemag, 8];
+		_unit addMagazineCargoGlobal [_glriflemag, 8];
+		_unit addMagazineCargoGlobal [_carbinemag, 10];
+		_unit addMagazineCargoGlobal [_armag, 5];
+		_unit addMagazineCargoGlobal [_ratmag, 1];
+		_unit addMagazineCargoGlobal [_grenade, 4];
+		_unit addMagazineCargoGlobal [_smokegrenade, 4];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
+		_unit addMagazineCargoGlobal [_glmag, 4];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
+	};	
+	
+// CARGO: TRUCK - room for 50 weapons and 200 cargo items
 	case "v_tr":
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
-		_unit addMagazineCargoGlobal [_riflemag, 15];
-		_unit addMagazineCargoGlobal [_glriflemag, 15];
-		_unit addMagazineCargoGlobal [_carbinemag, 15];
-		_unit addMagazineCargoGlobal [_grenade, 5];
-		_unit addMagazineCargoGlobal [_smokegrenade, 5];
+		_unit addWeaponCargoGlobal [_carbine, 10];
+		_unit addMagazineCargoGlobal [_riflemag, 40];
+		_unit addMagazineCargoGlobal [_glriflemag, 40];
+		_unit addMagazineCargoGlobal [_carbinemag, 40];
+		_unit addMagazineCargoGlobal [_armag, 22];
+		_unit addMagazineCargoGlobal [_ratmag, 6];
+		_unit addMagazineCargoGlobal [_grenade, 12];
+		_unit addMagazineCargoGlobal [_smokegrenade, 12];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 4];
+		_unit addMagazineCargoGlobal [_glmag, 12];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 12];
 	};
 	
-// CARGO: IFV
+// CARGO: IFV - room for 10 weapons and 100 cargo items
 	case "v_ifv":
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
-		_unit addMagazineCargoGlobal [_riflemag, 15];
-		_unit addMagazineCargoGlobal [_glriflemag, 15];
-		_unit addMagazineCargoGlobal [_carbinemag, 15];
-		_unit addMagazineCargoGlobal [_grenade, 5];
-		_unit addMagazineCargoGlobal [_smokegrenade, 5];
+		_unit addWeaponCargoGlobal [_carbine, 4];
+		_unit addMagazineCargoGlobal [_riflemag, 20];
+		_unit addMagazineCargoGlobal [_glriflemag, 20];
+		_unit addMagazineCargoGlobal [_carbinemag, 20];
+		_unit addMagazineCargoGlobal [_armag, 8];
+		_unit addMagazineCargoGlobal [_ratmag, 2];
+		_unit addMagazineCargoGlobal [_grenade, 8];
+		_unit addMagazineCargoGlobal [_smokegrenade, 8];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
+		_unit addMagazineCargoGlobal [_glmag, 8];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
 	};
-	
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)
    default
    {
