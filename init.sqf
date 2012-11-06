@@ -234,3 +234,11 @@ player setVariable ["BIS_noCoreConversations", true];
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
 [] execVM "f\common\f_orbatNotes.sqf";
+
+
+// ====================================================================================
+
+// F2 - Tripwire action
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// [[UnitName1,UnitName2],25,2,east] execVM "f\common\fa_tripwire_init.sqf";
