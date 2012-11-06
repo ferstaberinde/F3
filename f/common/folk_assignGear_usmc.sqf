@@ -69,9 +69,9 @@ _baglarge =  "US_Backpack_EP1"; 		// 12+ slots
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
-_AR = "M249"; _ARmag = "100Rnd_556x45_M249";																								// Automatic Rifleman
+_AR = "M249_EP1"; _ARmag = "100Rnd_556x45_M249";																				// Automatic Rifleman
 
-_MMG = "m240_scoped_EP1"; _MMGmag = "100Rnd_762x51_M240";																					// Medium MG
+_MMG = "M60A4_EP1"; _MMGmag = "100Rnd_762x51_M240";																					// Medium MG
 
 _HMG = "M2HD_mini_TriPod_US_Bag_EP1";																										// Heavy MG (note: HMG is an assembled weapon, gunner carries weapon)
 _HMGmount = "Tripod_Bag";																													// Assistant Heavy MG (note: HMG is an assembled weapon, assistant carries bipod/tripd)
@@ -138,7 +138,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
 		{_unit addmagazine _smokegrenadegreen;} foreach [1];
-		_unit addWeapon "Binocular_Vector";
+		_unit addweapon "Binocular";
 		_unit addweapon "ItemGPS";
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
@@ -149,7 +149,7 @@ switch (_typeofUnit) do
 		};
 	};
   
-// LOADOUT: DEPUTY COMMANDER AND SQUAD LEADER
+// LOADOUT: DEPUTY COMMANDER
 	case "dc":
 	{
 		{_unit addmagazine _glriflemag} foreach [1,2,3,4,5,6,7];	//_DCriflemag
@@ -161,7 +161,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
 		{_unit addmagazine _smokegrenadegreen;} foreach [1];
-		_unit addWeapon "Binocular_Vector";
+		_unit addweapon "Binocular";
 		_unit addweapon "ItemGPS";
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
@@ -170,7 +170,7 @@ switch (_typeofUnit) do
 			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 1];	
 			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
 		};
-	};  
+	}; 
 
 // LOADOUT: MEDIC
 	case "m":
@@ -514,7 +514,7 @@ switch (_typeofUnit) do
 // LOADOUT: GRENADIER
 	case "gren":
 	{
-		{_unit addmagazine _glriflemag} foreach [1,2,3,4,5,6,7,8];
+		{_unit addmagazine _glriflemag} foreach [1,2,3,4];
 		_unit addweapon _glrifle;
 		{_unit addmagazine _glmag} foreach [1,2,3,4];
 		{_unit addmagazine _glsmokewhite} foreach [1,2,3,4];
