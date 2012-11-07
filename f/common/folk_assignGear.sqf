@@ -213,7 +213,7 @@ if (_faction == "bis_civ_special") then {
 // ====================================================================================
 
 // GEAR: ACRE
-// The following block of code executes only if the player if the ACRE parameter is set to true; it 
+// The following block of code executes only if the ACRE parameter is set to true; it 
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_useACRE == 1) then {
