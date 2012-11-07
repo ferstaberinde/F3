@@ -72,7 +72,7 @@ _baglarge =  "DE_Backpack_Specops_EP1"; 	// 12+ slots
 
 _AR = "MG36"; _ARmag = "100Rnd_556x45_BetaCMag";																							// Automatic Rifleman
 
-_MMG = "M240"; _MMGmag = "100Rnd_762x51_M240";																					// Medium MG
+_MMG = "M240"; _MMGmag = "100Rnd_762x51_M240";																								// Medium MG
 
 _HMG = "M2HD_mini_TriPod_US_Bag_EP1";																										// Heavy MG (note: HMG is an assembled weapon, gunner carries weapon)
 _HMGmount = "Tripod_Bag";																													// Assistant Heavy MG (note: HMG is an assembled weapon, assistant carries bipod/tripd)
