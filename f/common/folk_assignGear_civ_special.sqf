@@ -298,11 +298,10 @@ switch (_typeofUnit) do
 			{_unit addmagazine _riflemag} foreach [1,2];
 			{_unit addmagazine _grenade} foreach [1];
 			{_unit addmagazine _smokegrenade;} foreach [1];
-			_unit addBackpack _bagmedium;
+			_unit addBackpack _baglarge;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_MMGmag, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_MMGmag, 4];
 			(unitBackpack _unit) addMagazineCargoGlobal [_riflemag, 2];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 		} else {
 			{_unit addmagazine _MMGmag} foreach [1,2];
 		};				
@@ -353,7 +352,7 @@ switch (_typeofUnit) do
 			{_unit addmagazine _smokegrenade;} foreach [1];
 			_unit addBackpack _baglarge;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 3];
 			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag2, 2];
 		} else {
 			{_unit addmagazine _MATmag1} foreach [1];

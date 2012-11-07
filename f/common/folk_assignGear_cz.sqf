@@ -144,79 +144,6 @@ switch (_typeofUnit) do
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 6];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 1];	
-			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
-		};
-	};
-  
-// LOADOUT: DEPUTY COMMANDER AND SQUAD LEADER
-	case "dc":
-	{
-		{_unit addmagazine _glriflemag} foreach [1,2,3,4,5,6,7];	//_DCriflemag
-		{_unit addmagazine _glmag} foreach [1,2,3];
-		{_unit addmagazine _glsmokewhite} foreach [1,2,3];
-		_unit addweapon _glrifle;									//_DCrifle
-		{_unit addmagazine _pistolmag} foreach [1,2];
-		_unit addweapon _pistol;		
-		{_unit addmagazine _grenade} foreach [1,2];
-		{_unit addmagazine _smokegrenade;} foreach [1,2];
-		{_unit addmagazine _smokegrenadegreen;} foreach [1];
-		_unit addWeapon "Binocular_Vector";
-		_unit addweapon "ItemGPS";
-		if (_useBackpacks==1) then {
-			_unit addBackpack _bagmedium;
-			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 6];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 1];	
-			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
-		};
-	};  
-
-// LOADOUT: MEDIC
-	case "m":
-	{
-		{_unit addmagazine _carbinemag} foreach [1,2,3,4,5];	
-		_unit addweapon _carbine;
-		{_unit addmagazine _smokegrenade;} foreach [1,2,3];		
-	};
-
-// LOADOUT: FIRE TEAM LEADER
-	case "ftl":
-	{
-		{_unit addmagazine _glriflemag} foreach [1,2,3,4,5,6,7];	//_FTLriflemag
-		{_unit addmagazine _glmag} foreach [1,2,3,4];
-		{_unit addmagazine _glsmokewhite} foreach [1,2,3,4];
-		_unit addweapon _glrifle;									//_FTLrifle		
-		{_unit addmagazine _grenade} foreach [1,2];
-		{_unit addmagazine _smokegrenade;} foreach [1,2];
-		{_unit addmagazine _smokegrenadegreen;} foreach [1];
-		_unit addweapon "Binocular";
-		_unit addweapon "ItemGPS";
-		if (_useBackpacks==1) then {
-			_unit addBackpack _bagmedium;
-			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 1];	
-			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
-		};
-	};// LOADOUT: COMMANDER
-	case "co":
-	{
-		{_unit addmagazine _glriflemag} foreach [1,2,3,4,5,6,7];	//_COriflemag
-		{_unit addmagazine _glmag} foreach [1,2,3];
-		{_unit addmagazine _glsmokewhite} foreach [1,2,3];
-		_unit addweapon _glrifle;									//_COrifle
-		{_unit addmagazine _pistolmag} foreach [1,2];
-		_unit addweapon _pistol;		
-		{_unit addmagazine _grenade} foreach [1,2];
-		{_unit addmagazine _smokegrenade;} foreach [1,2];
-		{_unit addmagazine _smokegrenadegreen;} foreach [1];
-		_unit addWeapon "Binocular_Vector";
-		_unit addweapon "ItemGPS";
-		if (_useBackpacks==1) then {
-			_unit addBackpack _bagmedium;
-			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
 			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
 			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenadegreen, 1];			
@@ -372,10 +299,10 @@ switch (_typeofUnit) do
 			{_unit addmagazine _riflemag} foreach [1,2];
 			{_unit addmagazine _grenade} foreach [1];
 			{_unit addmagazine _smokegrenade;} foreach [1];
-			_unit addBackpack _bagmedium;
+			_unit addBackpack _baglarge;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_MMGmag, 2];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_MMGmag, 4];
+			(unitBackpack _unit) addMagazineCargoGlobal [_riflemag, 2];
 		} else {
 			{_unit addmagazine _MMGmag} foreach [1,2];
 		};				
@@ -426,7 +353,7 @@ switch (_typeofUnit) do
 			{_unit addmagazine _smokegrenade;} foreach [1];
 			_unit addBackpack _baglarge;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 3];
 			(unitBackpack _unit) addMagazineCargoGlobal [_MATmag2, 2];
 		} else {
 			{_unit addmagazine _MATmag1} foreach [1];
