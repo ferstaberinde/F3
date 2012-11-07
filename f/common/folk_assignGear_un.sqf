@@ -44,7 +44,7 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-_rifle = "FN_FAL"; _riflemag = "20Rnd_762x51_FNFAL";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
+_rifle = "M16A2"; _riflemag = "30Rnd_556x45_Stanag";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
 
 _carbine = "M4A1"; _carbinemag = "30Rnd_556x45_Stanag";  																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
 
@@ -70,11 +70,11 @@ _baglarge =  "CZ_Backpack_EP1"; 		// 12+ slots
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
-_AR = "M249_EP1"; _ARmag = "100Rnd_556x45_M249";																								// Automatic Rifleman
+_AR = "M249_EP1"; _ARmag = "100Rnd_556x45_M249";																							// Automatic Rifleman
 
-_MMG = "M60A4_EP1"; _MMGmag = "100Rnd_762x51_M240";																									// Medium MG
+_MMG = "M60A4_EP1"; _MMGmag = "100Rnd_762x51_M240";																							// Medium MG
 
-_HMG = "DSHkM_Mini_TriPod_TK_INS_Bag_EP1";																									// Heavy MG (note: HMG is an assembled weapon, gunner carries weapon)
+_HMG = "M2HD_mini_TriPod_US_Bag_EP1";																										// Heavy MG (note: HMG is an assembled weapon, gunner carries weapon)
 _HMGmount = "Tripod_Bag";																													// Assistant Heavy MG (note: HMG is an assembled weapon, assistant carries bipod/tripd)
 
 _RAT = "RPG7V"; _RATmag = "PG7V";																											// Rifleman AT
@@ -83,7 +83,7 @@ _MAT = "RPG7V"; _MATmag1 = "PG7V"; _MATmag2 = "PG7VR";																						// M
 
 _HAT = "MetisLauncher"; _HATmag1 = "AT13"; _HATmag2 = "AT13";																				// Heavy AT Gunner
 
-_MTR = "2b14_82mm_TK_Bag_EP1";																												// Mortar Gunner (note: Mortar is an assembled weapon, gunner carries weapon)
+_MTR = "M252_US_Bag_EP1";																													// Mortar Gunner (note: Mortar is an assembled weapon, gunner carries weapon)
 _MTRmount = "Tripod_Bag";																													// Mortar Assistant Gunner (note: Mortar is an assembled weapon, assistant carries bipod/tripd)
 
 _RAA = "Strela"; _RAAmag = "Strela";																										// Rifleman AA (anti-air)
