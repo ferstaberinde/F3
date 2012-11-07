@@ -231,7 +231,8 @@ switch (_typeofUnit) do
 			(unitBackpack _unit) addMagazineCargoGlobal [_ARmag, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_RATmag, 1];
 			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_riflemag, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 2];
 		} else {
 			{_unit addmagazine _ARmag} foreach [1,2];
 		};

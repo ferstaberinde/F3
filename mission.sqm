@@ -255,7 +255,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={344.59198,652.12305,380.21848};
+					position[]={346.49469,651.96606,378.01358};
 					azimut=0.32468101;
 					id=8;
 					side="GUER";
@@ -271,7 +271,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={348.13864,651.72528,377.92551};
+					position[]={348.36984,651.67755,378.09641};
 					azimut=0.32468101;
 					id=35;
 					side="GUER";
@@ -492,7 +492,7 @@ class Mission
 				class Item1
 				{
 					position[]={604.72131,580.04486,104.7164};
-					azimut=1.4615065;
+					azimut=1.4615099;
 					id=20;
 					side="WEST";
 					vehicle="US_Soldier_Medic_EP1";
@@ -500,7 +500,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUS_ASL_M";
-					init="GrpUS_ASL = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					init="GrpUS_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="US Army Alpha Medic";
 					synchronizations[]={302,303};
 				};
@@ -1635,7 +1635,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={462.19171,621.83417,314.56744};
+					position[]={462.26581,621.76117,310.56583};
 					azimut=0.32468101;
 					id=86;
 					side="GUER";
@@ -1651,7 +1651,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={465.28888,619.90369,311.77631};
+					position[]={465.73331,619.60675,310.5907};
 					azimut=0.32468101;
 					id=87;
 					side="GUER";
@@ -3886,7 +3886,7 @@ class Mission
 				class Item1
 				{
 					position[]={638.35736,578.35889,104.55539};
-					azimut=1.4615065;
+					azimut=1.4615099;
 					id=231;
 					side="WEST";
 					vehicle="US_Soldier_Medic_EP1";
@@ -3894,7 +3894,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUS_BSL_M";
-					init="GrpUS_BSL = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					init="GrpUS_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="US Army Bravo Medic";
 					synchronizations[]={302,303};
 				};
@@ -4126,7 +4126,7 @@ class Mission
 				class Item1
 				{
 					position[]={668.94916,576.80444,103.24985};
-					azimut=1.4615065;
+					azimut=1.4615099;
 					id=245;
 					side="WEST";
 					vehicle="US_Soldier_Medic_EP1";
@@ -4134,7 +4134,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitUS_CSL_M";
-					init="GrpUS_CSL = group this; nul = [""ar"",this] call f_fnc_assignGear;";
+					init="GrpUS_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
 					description="US Army Charlie Medic";
 					synchronizations[]={302,303};
 				};
