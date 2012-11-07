@@ -38,12 +38,13 @@ private [
 _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
 _faction = toLower (faction _unit);
+if (_faction != toLower (faction (leader group _unit))) then {_faction = toLower (faction (leader group _unit))};
+
 _useBackpacks = paramsArray select 0;
 _useACRE = paramsArray select 1;
 
 switch(_faction) do
 {
-case "pmc_baf":{_faction="bis_un";};					// Treat PMC troops as UN for gear (used mostly for Exchange Medics and Engineers for factions that do not have those roles, such as bis_un)
 case "usmc":{_useBackpacks=0;};			// USMC: disable backpacks
 case "cdf":{_useBackpacks=0;};			// CDF: disable backpacks
 case "ru":{_useBackpacks=0;};			// RUS: disable backpacks

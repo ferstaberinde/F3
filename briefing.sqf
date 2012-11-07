@@ -20,6 +20,7 @@ private ["_unitfaction"];
 // it in the private variable _unitfaction
 
 _unitfaction = toLower (faction player);
+if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction = toLower (faction (leader group player))};
 
 // DEBUG
 	if (f_var_debugMode == 1) then
