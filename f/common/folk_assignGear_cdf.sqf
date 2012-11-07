@@ -144,9 +144,10 @@ switch (_typeofUnit) do
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 6];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 1];	
-			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
+			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenadegreen, 1];			
+			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
 		};
 	};
   
@@ -167,11 +168,12 @@ switch (_typeofUnit) do
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 6];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 1];	
-			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
+			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenadegreen, 1];			
+			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
 		};
-	}; 
+	};  
 
 // LOADOUT: MEDIC
 	case "m":
@@ -196,11 +198,11 @@ switch (_typeofUnit) do
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 6];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 1];	
-			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
+			(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite, 1];			
+			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 3];
 		};
-	};	
+	};		
 
 
 // LOADOUT: AUTOMATIC RIFLEMAN

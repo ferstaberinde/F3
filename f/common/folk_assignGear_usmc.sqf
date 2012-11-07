@@ -138,18 +138,19 @@ switch (_typeofUnit) do
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
 		{_unit addmagazine _smokegrenadegreen;} foreach [1];
-		_unit addweapon "Binocular";
+		_unit addWeapon "Binocular_Vector";
 		_unit addweapon "ItemGPS";
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 6];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 1];	
-			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
+			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenadegreen, 1];			
+			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
 		};
 	};
   
-// LOADOUT: DEPUTY COMMANDER
+// LOADOUT: DEPUTY COMMANDER AND SQUAD LEADER
 	case "dc":
 	{
 		{_unit addmagazine _glriflemag} foreach [1,2,3,4,5,6,7];	//_DCriflemag
@@ -161,16 +162,17 @@ switch (_typeofUnit) do
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
 		{_unit addmagazine _smokegrenadegreen;} foreach [1];
-		_unit addweapon "Binocular";
+		_unit addWeapon "Binocular_Vector";
 		_unit addweapon "ItemGPS";
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 6];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 1];	
-			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
+			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenadegreen, 1];			
+			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
 		};
-	}; 
+	};  
 
 // LOADOUT: MEDIC
 	case "m":
@@ -195,11 +197,11 @@ switch (_typeofUnit) do
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 6];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 1];	
-			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 1];
+			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
+			(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite, 1];			
+			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 3];
 		};
-	};	
+	};		
 
 
 // LOADOUT: AUTOMATIC RIFLEMAN
@@ -229,7 +231,7 @@ switch (_typeofUnit) do
 			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addMagazineCargoGlobal [_ARmag, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_RATmag, 1];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_riflemag, 2];
 		} else {
 			{_unit addmagazine _ARmag} foreach [1,2];
 		};
