@@ -9,6 +9,21 @@
 
 // ====================================================================================
 
+// DECLARE VARIABLES AND FUNCTIONS
+
+private ["_unitfaction"];
+
+// ====================================================================================
+
+// DETECT PLAYER FACTION
+// The following code detects what faction the player's slot belongs to, and stores
+// it in the private variable _unitfaction
+
+_unitfaction = toLower (faction player);
+if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction = toLower (faction (leader group player))};
+
+// ====================================================================================
+
 // PRECOMPILE
 // Prevents the next script to be read by the engine everytime it's used:
 
@@ -16,7 +31,7 @@ fnc_folk_localGroupMarker = compile preprocessFile "f\common\folk_localGroupMark
 fnc_folk_localSpecialistMarker = compile preprocessFile "f\common\folk_localSpecialistMarker.sqf";
 
 // ====================================================================================
-switch (faction player) do
+switch (_unitfaction) do
 {
 
 // ====================================================================================
@@ -24,7 +39,7 @@ switch (faction player) do
 // MARKERS: US
 // Markers seen by players in US slots.
 
-	case "BIS_US":
+	case "bis_us":
 	{
 		["GrpUS_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpUS_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -67,7 +82,7 @@ switch (faction player) do
 // USMC
 // Markers seen by players in USMC slots.
 	
-	case "USMC":
+	case "usmc":
 	{
 		["GrpUSMC_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpUSMC_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -110,7 +125,7 @@ switch (faction player) do
 // CDF
 // Markers seen by players in CDF slots.
 	
-	case "CDF":
+	case "cdf":
 	{
 		["GrpCDF_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpCDF_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -153,7 +168,7 @@ switch (faction player) do
 // MARKERS: TAKISTANI ARMY
 // Markers seen by players in TAKISTANI ARMY slots.
 
-	case "BIS_TK":
+	case "bis_tk":
 	{
 		["GrpTK_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpTK_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -196,7 +211,7 @@ switch (faction player) do
 // MARKERS: RUSSIA
 // Markers seen by players in RUSSIA slots.
 	
-	case "RU":
+	case "ru":
 	{
 		["GrpRU_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpRU_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -239,7 +254,7 @@ switch (faction player) do
 // MARKERS: TAKISTANI MILITIA
 // Markers seen by players in TAKISTANI MILITIA slots.
 
-	case "BIS_TK_INS":
+	case "bis_tk_ins":
 	{
 		["GrpINS_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpINS_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -282,7 +297,7 @@ switch (faction player) do
 // MARKERS: INSURGENT
 // Markers seen by players in INSURGENT (CHDKZ) slots.
 
-	case "INS":
+	case "ins":
 	{
 		["GrpA2INS_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpA2INS_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -325,7 +340,7 @@ switch (faction player) do
 // MARKERS: TAKISTANI LOCALS (INDEPENDENT)
 // Markers seen by players in TAKISTANI LOCALS (INDEPENDENT) slots.
 
-	case "BIS_TK_GUE":
+	case "bis_tk_gue":
 	{
 		["GrpGUE_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpGUE_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -368,7 +383,7 @@ switch (faction player) do
 // MARKERS: GUERILLA (NAPA)
 // Markers seen by players in GUERILLA (NAPA) slots.
 
-	case "GUE":
+	case "gue":
 	{
 		["GrpA2GUE_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpA2GUE_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -412,7 +427,7 @@ switch (faction player) do
 // MARKERS: UN
 // Markers seen by players in UN slots.
 
-	case "BIS_UN":
+	case "bis_un":
 	{
 		["GrpUN_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpUN_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -455,7 +470,7 @@ switch (faction player) do
 // MARKERS: BRITISH ARMED FORCES
 // Markers seen by players in BRITISH ARMED FORCES slots.
 
-	case "BIS_BAF":
+	case "bis_baf":
 	{
 		["GrpBAF_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpBAF_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
@@ -495,88 +510,10 @@ switch (faction player) do
 	
 // ====================================================================================
 
-// MARKERS: PMC (Engineers for UN & TK GUE)
-// Markers seen by players in PMC slots.
-
-	case "PMC_BAF":
-	{
-		["GrpTKGUE_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_ASL", 0, "ASL", "ColorRed"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_A1", 1, "A1", "ColorRed"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_A2", 1, "A2", "ColorRed"] spawn fnc_folk_localGroupMarker;		
-		["GrpTKGUE_A3", 1, "A3", "ColorRed"] spawn fnc_folk_localGroupMarker;		
-		["GrpTKGUE_BSL", 0, "BSL", "ColorBlue"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_B1", 1, "B1", "ColorBlue"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_B2", 1, "B2", "ColorBlue"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_B3", 1, "B3", "ColorBlue"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_CSL", 0, "CSL", "ColorGreen"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_C1", 1, "C1", "ColorGreen"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_C2", 1, "C2", "ColorGreen"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_C3", 1, "C3", "ColorGreen"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_MMG1", 2, "MMG1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_MAT1", 3, "MAT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_ST1",  4, "ST1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_HMG1",  2, "HMG1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_MTR1",  5, "MTR1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_HAT1",  3, "HAT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_SAM1",  3, "SAM1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_ENG1",  6, "ENG1", "ColorYellow"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_IFV1",  7, "IFV1", "ColorRed"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_IFV2",  7, "IFV2", "ColorBlue"] spawn fnc_folk_localGroupMarker;	
-		["GrpTKGUE_IFV3",  7, "IFV3", "ColorGreen"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_TNK1",  7, "TNK1", "ColorRed"] spawn fnc_folk_localGroupMarker;	
-		["GrpTKGUE_TH1",  8, "TH1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_TH2",  8, "TH2", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpTKGUE_AH1",  8, "AH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
-		["UnitTKGUE_CO_M", 0, "COM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitTKGUE_DC_M", 0, "DCM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitTKGUE_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;		
-		["UnitTKGUE_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitTKGUE_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		
-		["GrpUN_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_ASL", 0, "ASL", "ColorRed"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_A1", 1, "A1", "ColorRed"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_A2", 1, "A2", "ColorRed"] spawn fnc_folk_localGroupMarker;		
-		["GrpUN_A3", 1, "A3", "ColorRed"] spawn fnc_folk_localGroupMarker;		
-		["GrpUN_BSL", 0, "BSL", "ColorBlue"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_B1", 1, "B1", "ColorBlue"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_B2", 1, "B2", "ColorBlue"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_B3", 1, "B3", "ColorBlue"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_CSL", 0, "CSL", "ColorGreen"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_C1", 1, "C1", "ColorGreen"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_C2", 1, "C2", "ColorGreen"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_C3", 1, "C3", "ColorGreen"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_MMG1", 2, "MMG1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_MAT1", 3, "MAT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_ST1",  4, "ST1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_HMG1",  2, "HMG1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_MTR1",  5, "MTR1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_HAT1",  3, "HAT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_SAM1",  3, "SAM1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_ENG1",  6, "ENG1", "ColorYellow"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_IFV1",  7, "IFV1", "ColorRed"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_IFV2",  7, "IFV2", "ColorBlue"] spawn fnc_folk_localGroupMarker;	
-		["GrpUN_IFV3",  7, "IFV3", "ColorGreen"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_TNK1",  7, "TNK1", "ColorRed"] spawn fnc_folk_localGroupMarker;	
-		["GrpUN_TH1",  8, "TH1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_TH2",  8, "TH2", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpUN_AH1",  8, "AH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
-		["UnitUN_CO_M", 0, "COM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitUN_DC_M", 0, "DCM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitUN_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;		
-		["UnitUN_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitUN_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-	};
-	
-// ====================================================================================
-
 // MARKERS: CZECH REPUBPLIC
 // Markers seen by players in CZECH REPUBPLIC slots.
 
-	case "BIS_CZ":
+	case "bis_cz":
 	{
 
 	};
@@ -586,7 +523,7 @@ switch (faction player) do
 // MARKERS: GERMAN
 // Markers seen by players in GERMAN slots.
 
-	case "BIS_GER":
+	case "bis_ger":
 	{
 
 	};
@@ -596,7 +533,7 @@ switch (faction player) do
 // MARKERS: CIVILIAN (TAKISTANI)
 // Markers seen by players in CIVILIAN (TAKISTANI) slots.
 
-	case "BIS_TK_CIV":
+	case "bis_tk_civ":
 	{
 
 	};
@@ -606,7 +543,7 @@ switch (faction player) do
 // MARKERS: CIVILIAN (SPECIAL)
 // Markers seen by players in CIVILIAN (SPECIAL) slots.
 
-	case "BIS_CIV_special":
+	case "bis_civ_special":
 	{
 
 	};
