@@ -208,6 +208,7 @@ Version | Date
 * Updated OA Briefing Template component (supports new factions).
 * Updated Casualties Cap component (commented-out lines for all platoons added).
 * Added OA Folk ORBAT Generator component.
+* Added ACRE support component.
 
 2-6-1 | 02 JUL 2012
 
