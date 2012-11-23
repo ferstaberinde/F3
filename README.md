@@ -209,6 +209,7 @@ Version | Date
 * Updated Casualties Cap component (commented-out lines for all platoons added).
 * Added OA Folk ORBAT Generator component.
 * Added ACRE support component.
+* Added Join Group component.
 
 2-6-1 | 02 JUL 2012
 
