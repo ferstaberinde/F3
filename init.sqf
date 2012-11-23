@@ -242,3 +242,10 @@ player setVariable ["BIS_noCoreConversations", true];
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
 // [[UnitName1,UnitName2],25,2,east] execVM "f\common\fa_tripwire_init.sqf";
+
+// ====================================================================================
+
+// F2 - Join group action
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+[false] execVM "f\common\f_groupJoinAddOption.sqf";
