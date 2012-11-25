@@ -36,6 +36,7 @@
 //		smg		- submachinegunner
 //		gren	- grenadier
 //
+//		v_car	- car/4x4
 //		v_tr	- truck
 //		v_ifv	- ifv
 //
@@ -235,7 +236,7 @@ switch (_typeofUnit) do
 		} else {
 			{_unit addmagazine _ARmag} foreach [1,2];
 		};
-	};			
+	};				
 	
 // LOADOUT: RIFLEMAN (AT)	
 	case "rat":
@@ -515,7 +516,7 @@ switch (_typeofUnit) do
 // LOADOUT: GRENADIER
 	case "gren":
 	{
-		{_unit addmagazine _glriflemag} foreach [1,2,3,4];
+		{_unit addmagazine _glriflemag} foreach [1,2,3,4,5,6,7,8];
 		_unit addweapon _glrifle;
 		{_unit addmagazine _glmag} foreach [1,2,3,4];
 		{_unit addmagazine _glsmokewhite} foreach [1,2,3,4];
@@ -530,28 +531,58 @@ switch (_typeofUnit) do
 		};
 	};
 
-// CARGO: TRUCK
+// CARGO: CAR - room for 10 weapons and 50 cargo items
+	case "v_car":
+	{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		_unit addWeaponCargoGlobal [_carbine, 2];
+		_unit addMagazineCargoGlobal [_riflemag, 8];
+		_unit addMagazineCargoGlobal [_glriflemag, 8];
+		_unit addMagazineCargoGlobal [_carbinemag, 10];
+		_unit addMagazineCargoGlobal [_armag, 5];
+		_unit addMagazineCargoGlobal [_ratmag, 1];
+		_unit addMagazineCargoGlobal [_grenade, 4];
+		_unit addMagazineCargoGlobal [_smokegrenade, 4];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
+		_unit addMagazineCargoGlobal [_glmag, 4];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
+	};	
+	
+// CARGO: TRUCK - room for 50 weapons and 200 cargo items
 	case "v_tr":
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
-		_unit addMagazineCargoGlobal [_riflemag, 15];
-		_unit addMagazineCargoGlobal [_glriflemag, 15];
-		_unit addMagazineCargoGlobal [_carbinemag, 15];
-		_unit addMagazineCargoGlobal [_grenade, 5];
-		_unit addMagazineCargoGlobal [_smokegrenade, 5];
+		_unit addWeaponCargoGlobal [_carbine, 10];
+		_unit addMagazineCargoGlobal [_riflemag, 40];
+		_unit addMagazineCargoGlobal [_glriflemag, 40];
+		_unit addMagazineCargoGlobal [_carbinemag, 40];
+		_unit addMagazineCargoGlobal [_armag, 22];
+		_unit addMagazineCargoGlobal [_ratmag, 6];
+		_unit addMagazineCargoGlobal [_grenade, 12];
+		_unit addMagazineCargoGlobal [_smokegrenade, 12];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 4];
+		_unit addMagazineCargoGlobal [_glmag, 12];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 12];
 	};
 	
-// CARGO: IFV
+// CARGO: IFV - room for 10 weapons and 100 cargo items
 	case "v_ifv":
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
-		_unit addMagazineCargoGlobal [_riflemag, 15];
-		_unit addMagazineCargoGlobal [_glriflemag, 15];
-		_unit addMagazineCargoGlobal [_carbinemag, 15];
-		_unit addMagazineCargoGlobal [_grenade, 5];
-		_unit addMagazineCargoGlobal [_smokegrenade, 5];
+		_unit addWeaponCargoGlobal [_carbine, 4];
+		_unit addMagazineCargoGlobal [_riflemag, 20];
+		_unit addMagazineCargoGlobal [_glriflemag, 20];
+		_unit addMagazineCargoGlobal [_carbinemag, 20];
+		_unit addMagazineCargoGlobal [_armag, 8];
+		_unit addMagazineCargoGlobal [_ratmag, 2];
+		_unit addMagazineCargoGlobal [_grenade, 8];
+		_unit addMagazineCargoGlobal [_smokegrenade, 8];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
+		_unit addMagazineCargoGlobal [_glmag, 8];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
 	};
 	
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)
