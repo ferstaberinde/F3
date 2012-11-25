@@ -137,6 +137,33 @@ if (f_var_debugMode == 1) then
 	player sideChat format ["DEBUG (f\common\f_setMissionConditions.sqf): _MissionFog: %1",_MissionFog];
 };
 
+sleep 10;
+
+// WEATHER SYNCHRONIZATION
+// Every 10 seconds the weather on the server client is broadcasted to all player clients to keep weather in sync.
+
+"f2_weather" addPublicVariableEventHandler 
+{ 
+	_overcast 	= (_this select 1) select 0;
+	_rain 		= (_this select 1) select 1;
+	_fog 		= (_this select 1) select 2;
+	
+	10 setOvercast _overcast;
+	10 setRain _rain;
+	10 setFog _fog;
+}; 
+
+if (isServer) then 
+{
+	while {true} do
+	{
+		f2_weather = [overcast, rain, fog];
+		publicVariable "f2_weather";
+	
+		sleep 10;
+	};
+};
+
 // ====================================================================================
 
 if (true) exitWith {};

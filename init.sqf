@@ -235,7 +235,6 @@ player setVariable ["BIS_noCoreConversations", true];
 
 [] execVM "f\common\f_orbatNotes.sqf";
 
-
 // ====================================================================================
 
 // F2 - Tripwire action
