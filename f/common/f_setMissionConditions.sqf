@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_timeOfDay","_weather","_MissionOvercast","_MissionFog"];
+private ["_timeOfDay","_weather","_MissionOvercast","_MissionFog","_MissionRain"];
 
 // ====================================================================================
 
@@ -81,30 +81,35 @@ switch (_weather) do
 	{
 		_MissionOvercast = 00.00;
 		_MissionFog = 00.00;
+		_MissionRain = 00.00;
 	};
 // Overcast
 	case 1:
 	{
 		_MissionOvercast = 00.60;
 		_MissionFog = 00.10;
+		_MissionRain = 00.00;
 	};
 // Light Fog
 	case 2:
 	{
 		_MissionOvercast = 00.60;
 		_MissionFog = 00.8125;
+		_MissionRain = 00.00;
 	};
 // Heavy Fog
 	case 3:
 	{
 		_MissionOvercast = 00.60;
 		_MissionFog = 00.96;
+		_MissionRain = 00.00;
 	};
 // Storm
 	case 4:
 	{
 		_MissionOvercast = 01.00;
 		_MissionFog = 00.50;
+		_MissionRain = 01.00;
 	};
 };
 
@@ -129,6 +134,7 @@ if ((_timeOfDay == 99) || (_weather == 99)) then
 
 0 setOvercast _MissionOvercast;
 0 setFog _MissionFog;
+0 setRain _MissionRain;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -141,6 +147,8 @@ sleep 10;
 
 // WEATHER SYNCHRONIZATION
 // Every 10 seconds the weather on the server client is broadcasted to all player clients to keep weather in sync.
+
+f2_weather = [_MissionOvercast, _MissionRain, _MissionFog];
 
 "f2_weather" addPublicVariableEventHandler 
 { 
