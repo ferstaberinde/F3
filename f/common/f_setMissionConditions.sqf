@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_timeOfDay","_weather","_MissionOvercast","_MissionFog"];
+private ["_timeOfDay","_weather","_MissionOvercast","_MissionFog","_MissionRain"];
 
 // ====================================================================================
 
@@ -81,30 +81,35 @@ switch (_weather) do
 	{
 		_MissionOvercast = 00.00;
 		_MissionFog = 00.00;
+		_MissionRain = 00.00;
 	};
 // Overcast
 	case 1:
 	{
 		_MissionOvercast = 00.60;
 		_MissionFog = 00.10;
+		_MissionRain = 00.00;
 	};
 // Light Fog
 	case 2:
 	{
 		_MissionOvercast = 00.60;
 		_MissionFog = 00.8125;
+		_MissionRain = 00.00;
 	};
 // Heavy Fog
 	case 3:
 	{
 		_MissionOvercast = 00.60;
 		_MissionFog = 00.96;
+		_MissionRain = 00.00;
 	};
 // Storm
 	case 4:
 	{
 		_MissionOvercast = 01.00;
 		_MissionFog = 00.50;
+		_MissionRain = 01.00;
 	};
 };
 
@@ -129,12 +134,42 @@ if ((_timeOfDay == 99) || (_weather == 99)) then
 
 0 setOvercast _MissionOvercast;
 0 setFog _MissionFog;
+0 setRain _MissionRain;
 
 // DEBUG
 if (f_var_debugMode == 1) then
 {
 	player sideChat format ["DEBUG (f\common\f_setMissionConditions.sqf): _MissionOvercast: %1",_MissionOvercast];
 	player sideChat format ["DEBUG (f\common\f_setMissionConditions.sqf): _MissionFog: %1",_MissionFog];
+};
+
+sleep 10;
+
+// WEATHER SYNCHRONIZATION
+// Every 10 seconds the weather on the server client is broadcasted to all player clients to keep weather in sync.
+
+f2_weather = [_MissionOvercast, _MissionRain, _MissionFog];
+
+"f2_weather" addPublicVariableEventHandler 
+{ 
+	_overcast 	= (_this select 1) select 0;
+	_rain 		= (_this select 1) select 1;
+	_fog 		= (_this select 1) select 2;
+	
+	10 setOvercast _overcast;
+	10 setRain _rain;
+	10 setFog _fog;
+}; 
+
+if (isServer) then 
+{
+	while {true} do
+	{
+		f2_weather = [overcast, rain, fog];
+		publicVariable "f2_weather";
+	
+		sleep 10;
+	};
 };
 
 // ====================================================================================
