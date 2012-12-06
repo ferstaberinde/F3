@@ -518,8 +518,8 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _glriflemag} foreach [1,2,3,4,5,6,7,8];
 		_unit addweapon _glrifle;
-		{_unit addmagazine _glmag} foreach [1,2,3,4];
-		{_unit addmagazine _glsmokewhite} foreach [1,2,3,4];
+		{_unit addmagazine _glmag} foreach [1,2,3,4,5,6];
+		{_unit addmagazine _glsmokewhite} foreach [1,2];
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
 		if (_useBackpacks==1) then {

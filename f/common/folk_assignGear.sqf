@@ -38,6 +38,8 @@ private [
 _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
 _faction = toLower (faction _unit);
+
+// If the unitfaction is different from the group leader's faction and the unit is not a vehicle, the latters faction is used
 if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _unit)))) then {_faction = toLower (faction (leader group _unit))};
 
 _useBackpacks = paramsArray select 0;
@@ -45,6 +47,7 @@ _useACRE = paramsArray select 1;
 
 switch(_faction) do
 {
+case "pmc_baf":{_faction = "bis_un";};	// PMC get the UN gear
 case "usmc":{_useBackpacks=0;};			// USMC: disable backpacks
 case "cdf":{_useBackpacks=0;};			// CDF: disable backpacks
 case "ru":{_useBackpacks=0;};			// RUS: disable backpacks
