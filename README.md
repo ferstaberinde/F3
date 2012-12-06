@@ -111,11 +111,11 @@ Version | Date | Notes
 
 ### F2 Credits ###
 
-* Contributors: Headspace | kevb0 | Lor | Ricardo | Wolf | ViperMaul | Xiathorn | zx64 | Norrin | white angel | Fer | Strango | beta | Mike84 | b3rt | Henk | Redkid | Macolik | kungtotte | Tigershark | LoneStar | Nullkigan | Harakka | Wolfenswan
+* Contributors: Headspace | kevb0 | Lor | Ricardo | Wolf | ViperMaul | Xiathorn | zx64 | Norrin | white angel | Fer | Strango | beta | Mike84 | b3rt | Henk | Redkid | Macolik | kungtotte | Tigershark | LoneStar | Nullkigan | Harakka | Wolfenswan | DarkTatka | Black Mamba
 * Documentation: Fer | Messiah2 | Xiathorn
 * Producers: Fer
-* Special Thanks: Dancingcuban | Firebird
-* Special Thanks: Everyone at ShackTactical | Everyone at Folk | Everyone at ARPS
+* Special Thanks: Dancingcuban | Firebird | Stranglove | Ferrard Carson | Bodge
+* Special Thanks: Everyone at ShackTactical | Everyone at Folk | Everyone at ARPS | Everyone at Folk ARPS
 
 ### BAS f Credits ###
 
@@ -209,6 +209,8 @@ Version | Date
 * Updated Casualties Cap component (commented-out lines for all platoons added).
 * Added OA Folk ORBAT Generator component.
 * Added ACRE support component.
+* Added Join Group component.
+* Added Tripwire component.
 
 2-6-1 | 02 JUL 2012
 
