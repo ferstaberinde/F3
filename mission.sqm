@@ -204,7 +204,7 @@ class Mission
 					skill=0.5;
 					text="UnitUN_CO_M";
 					init="GrpUN_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
-					description="UN Exchange Medic (PMC, No Markers)";
+					description="UN Exchange Medic (PMC)";
 					synchronizations[]={13,14};
 				};
 			};
@@ -242,7 +242,7 @@ class Mission
 					skill=0.5;
 					text="UnitUN_DC_M";
 					init="GrpUN_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
-					description="UN Exchange Medic (PMC, No Markers)";
+					description="UN Exchange Medic (PMC)";
 					synchronizations[]={13,14};
 				};
 			};
@@ -271,7 +271,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={348.36984,651.67755,378.09641};
+					position[]={348.77774,651.68414,377.0466};
 					azimut=0.32468101;
 					id=35;
 					side="GUER";
@@ -6548,7 +6548,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.5;
 					text="UnitBAF_AH1_P";
-					init="GrpBAF_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver BAF_TH3;";
+					init="GrpBAF_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver BAF_AH1;";
 					description="British Army Attack Helo 1 Pilot";
 					synchronizations[]={401,402};
 				};

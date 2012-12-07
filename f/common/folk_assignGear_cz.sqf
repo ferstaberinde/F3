@@ -513,24 +513,25 @@ switch (_typeofUnit) do
 			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
 		};
 	};
-
+	
 // LOADOUT: GRENADIER
 	case "gren":
 	{
 		{_unit addmagazine _glriflemag} foreach [1,2,3,4,5,6,7,8];
 		_unit addweapon _glrifle;
-		{_unit addmagazine _glmag} foreach [1,2,3,4];
-		{_unit addmagazine _glsmokewhite} foreach [1,2,3,4];
+		{_unit addmagazine _glmag} foreach [1,2,3,4,5,6];
+		{_unit addmagazine _glsmokewhite} foreach [1,2];
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 4];
 			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 2];
 		};
 	};
+	
 // CARGO: CAR - room for 10 weapons and 50 cargo items
 	case "v_car":
 	{
