@@ -20,8 +20,8 @@ private ["_scriptName","_cs", "_cLBCameras","_cLBTargets"];
 _scriptName="specta";
 
 _debugPlayer=objNull;
-if ( mk4_debugMode > 0 ) then {
-	_debugPlayer = mk4;
+if ( f_var_debugMode == 1 ) then {
+	_debugPlayer = player;
 };
 
 // Unit sides shown - Show all if sides not set
