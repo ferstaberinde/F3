@@ -5,7 +5,7 @@
 
 //
 // Spectating Script for Armed Assault
-// by Kegetys <kegetys [�t] dnainternet.net>
+// by Kegetys <kegetys [at] dnainternet.net>
 //
 
 disableSerialization;
