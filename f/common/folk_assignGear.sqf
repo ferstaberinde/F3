@@ -47,13 +47,8 @@ _useACRE = paramsArray select 1;
 
 switch(_faction) do
 {
-case "pmc_baf":{_faction = "bis_un";};	// PMC get the UN gear
-case "usmc":{_useBackpacks=0;};			// USMC: disable backpacks
-case "cdf":{_useBackpacks=0;};			// CDF: disable backpacks
-case "ru":{_useBackpacks=0;};			// RUS: disable backpacks
-case "ins":{_useBackpacks=0;};			// INS: disable backpacks
-case "gue":{_useBackpacks=0;};			// GUE: disable backpacks
-case "civ":{_faction="bis_tk_civ";_useBackpacks=0;};			// CIV as TIK_CIV (note: no backpacks for A2 original units)
+case "pmc_baf":{_faction = "bis_un";};						// PMC get the UN gear
+case "civ":{_faction="bis_tk_civ";_useBackpacks=0;};		// CIV as TIK_CIV (note: no backpacks for A2 original units)
 case "civ_ru":{_faction="bis_tk_civ";_useBackpacks=0;};		// CIV_RU as TK_CIV (note: no backpacks for A2 original units)
 };
 
