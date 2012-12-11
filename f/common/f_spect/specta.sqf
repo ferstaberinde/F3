@@ -5,7 +5,7 @@
 
 //
 // Spectating Script for Armed Assault
-// by Kegetys <kegetys [ät] dnainternet.net>
+// by Kegetys <kegetys [ï¿½t] dnainternet.net>
 //
 
 disableSerialization;
@@ -20,9 +20,10 @@ private ["_scriptName","_cs", "_cLBCameras","_cLBTargets"];
 _scriptName="specta";
 
 _debugPlayer=objNull;
-if ( mk4_debugMode > 0 ) then {
-	_debugPlayer = mk4;
-};
+if ( f_var_debugMode == 1 ) then {
+	_debugPlayer = player;
+ };
+
 
 // Unit sides shown - Show all if sides not set
 if(isNil "KEGsShownSides") then {
