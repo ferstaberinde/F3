@@ -1,8 +1,3 @@
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
-
-#include "f_waitForJIP.sqf"
-
 //
 // Spectating Script for Armed Assault
 // by Kegetys <kegetys [at] dnainternet.net>
