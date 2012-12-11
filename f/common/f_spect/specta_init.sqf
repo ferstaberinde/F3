@@ -1,12 +1,3 @@
-// ====================================================================================
-
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
-
-#include "f_waitForJIP.sqf"
-
-// ====================================================================================
-
 // RESTRICT VIEWABLE UNITS
 // We use the array KEGsShownSides to restrict which sides will be visible to 
 // spectating players:
