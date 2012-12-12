@@ -23,7 +23,7 @@ Otherwise do the following:
 The spectating script should now launch whenever a player would normally go
 to seagull mode. To test the script in the editor you can execute the following
 in a radio trigger:
-foo = [player, player, "null"] execVM "spect\specta.sqf"
+foo = [player, player, "null"] execVM "f\common\f_spect\specta.sqf"
 
 Note! If you need to do any modifications into the spectating script files for
 your mission, please mark the modified files as modified by you to avoid 
