@@ -119,6 +119,8 @@ class rscSpectate {
 			colorSelectBackground[] = COL_GRAY;
 			colorSelectBackground2[] = COL_GRAY;
 			sizeEx = 0.025;
+			onMouseButtonUp  = "['*Dialog*'] spawn CameraMenuHandler;";
+			// onLBSelChanged   = "KEGs_cameraIdx = (_this select 1); VM_CurrentCameraView = ''; ['*Dialog*'] spawn CameraMenuHandler;";
 		};
 
 		// Targets menu
@@ -158,6 +160,8 @@ class rscSpectate {
 			colorText[] = {1, 1, 1, 1};
 			sizeEx = 0.025;
 			period = 0;
+			onMouseButtonUp  = "['*Dialog*'] spawn PlayerMenuHandler;";
+			// onLBSelChanged   = "KEGs_tgtIdx = (_this select 1);  ['*Dialog*'] spawn PlayerMenuHandler;";
 		};
 
 		// Top texts
@@ -182,7 +186,7 @@ class rscSpectate {
 		// Bottom texts
 		class tName : KEGsRscText {
 			idc = IDC_NAME;
-			x = SafeZoneX + BORDERXSIZE;y= SafeZoneH-BORDERSIZE; w = SafeZoneW-(BORDERXSIZE); h = BORDERSIZE;
+			x = SafeZoneX + BORDERXSIZE;y = SafeZoneY + SafeZoneH-BORDERSIZE; w = SafeZoneW-(BORDERXSIZE); h = BORDERSIZE;
 			text = "Unknown";
 			style = 0;
 			sizeEx = 0.015; //0.030
@@ -194,8 +198,8 @@ class rscSpectate {
 		class tHelp : KEGsRscText {
 			type = 13;
 			idc = IDC_HELP;
-			x = SafeZoneX + BORDERXSIZE*3;y=BORDERSIZE*3; w = SafeZoneW-(2*BORDERXSIZE*3); h = SafeZoneH-(2*BORDERSIZE*2);
-			text = "Spectating Script v1.03 by Kegetys<br/><br/>Click at the camera/target text at the top to open camera/target menus.<br/>Units on the map can be clicked to target them<br/><br/>Keyboard controls:<br/>A/D - Previous/Next target<br/>W/S - Previous/Next camera<br/>1-5 - Direct camera change<br/>N - 3D view: Toggle night vision on/off<br/>N - Full map: Toggle marker text off/names/types<br/>T - Toggle unit tags on/off<br/>F - Toggle AI filter on/off<br/>G - Toggle Group/Formation Leader filter on/off<br/>H - Toggle Map Markers Updates on/off<br/>Tab - Toggle UI on/off<br/>M - Toggle map on/full/off<br/>Numpad plus/minus - Increase/decrease full map marker size<br/>Space - Drop camera (W,S,A,D keys = movement)<br/>Space - Toggle gunsight (1st person view)<br/>Esc - Butterfly mode<br/><br/>Mouse controls:<br/>Right button - Rotate camera (free camera mode only)<br/>Left button - Move camera<br/>Left and right button - Zoom<br/><br/>Download the client-side addon from<br/>http://www.kegetys.net for enhanced functionality<br/> Improvement modifications by Dwarden </br>";
+			x = SafeZoneX + BORDERXSIZE*3;y=SafeZoneY + BORDERSIZE*3; w = SafeZoneW-(2*BORDERXSIZE*3); h = SafeZoneH-(2*BORDERSIZE*2);
+			text = "Spectating Script v1.05 by Kegetys<br/><br/>Click at the camera/target text at the top to open camera/target menus.<br/>Units on the map can be clicked to target them<br/><br/>Keyboard controls:<br/>A/D - Previous/Next target<br/>W/S - Previous/Next camera<br/>1-5 - Direct camera change<br/>N - 3D view: Toggle night vision on/off<br/>N - Full map: Toggle marker text off/names/types<br/>T - Toggle unit tags on/off<br/>F - Toggle AI filter on/off<br/>G - Toggle Group/Formation Leader filter on/off<br/>H - Toggle Map Markers Updates on/off<br/>Tab - Toggle UI on/off<br/>M - Toggle map on/full/off<br/>Numpad plus/minus - Increase/decrease full map marker size<br/>Space - Drop camera (W,S,A,D keys = movement)<br/>Space - Toggle gunsight (1st person view)<br/>Esc - Butterfly mode<br/><br/>Mouse controls:<br/>Right button - Rotate camera (free camera mode only)<br/>Left button - Move camera<br/>Left and right button - Zoom<br/><br/>Download the client-side addon from<br/>http://www.kegetys.net for enhanced functionality<br/> Improvement modifications by Dwarden </br>";
 			style = 2;
 			sizeEx = 0.025;
 			size = 0.025;

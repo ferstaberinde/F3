@@ -1,3 +1,5 @@
+// ====================================================================================
+
 // RESTRICT VIEWABLE UNITS
 // We use the array KEGsShownSides to restrict which sides will be visible to 
 // spectating players:
@@ -12,15 +14,8 @@
 // ====================================================================================
 
 // Connect handler for spectating script, check if camera on seagull for first 10 seconds and launch spectating script
-for "_i" from 0 to 20 do 
-{
+for "_i" from 0 to 20 do {
 	scopeName "SpectaLoop";
-	
-	if ( typeOf cameraOn == "SeaGull" ) then 
-	{
-		[cameraOn,cameraOn,cameraOn] execVM "f\common\f_spect\specta.sqf"; 
-		breakOut "SpectaLoop"
-	};
-	
+	if(typeof cameraOn == "SeaGull") then {[cameraOn,cameraOn,cameraOn] execVM "f\common\f_spect\specta.sqf";breakOut "SpectaLoop"};
 	sleep 0.5;
 };
