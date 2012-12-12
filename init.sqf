@@ -30,7 +30,7 @@ f_respawnINIT = player addEventHandler ["killed", {_this execVM "init_onPlayerRe
 
 // ====================================================================================
 
-// F2 - OA Briefing
+// F2 - CO Briefing
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
 [] execVM "briefing.sqf";

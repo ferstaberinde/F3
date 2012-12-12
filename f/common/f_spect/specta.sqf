@@ -1,11 +1,6 @@
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
-
-#include "f_waitForJIP.sqf"
-
 //
 // Spectating Script for Armed Assault
-// by Kegetys <kegetys [ät] dnainternet.net>
+// by Kegetys <kegetys [at] dnainternet.net>
 //
 
 disableSerialization;
@@ -22,7 +17,8 @@ _scriptName="specta";
 _debugPlayer=objNull;
 if ( f_var_debugMode == 1 ) then {
 	_debugPlayer = player;
-};
+ };
+
 
 // Unit sides shown - Show all if sides not set
 if(isNil "KEGsShownSides") then {

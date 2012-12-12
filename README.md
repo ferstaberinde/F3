@@ -210,7 +210,7 @@ Version | Date
 * Added OA Folk ORBAT Generator component.
 * Added ACRE support component.
 * Added Join Group component.
-* Added Tripwire component.
+* Extended Tripwire component (placeable in-game).
 
 2-6-1 | 02 JUL 2012
 
