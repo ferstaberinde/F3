@@ -18081,7 +18081,7 @@ class Mission
 			azimut=0.32468101;
 			id=971;
 			side="EMPTY";
-			vehicle="BRDM2_INS";
+			vehicle="BMP2_INS";
 			skill=0.5;
 			text="A2INS_IFV3";
 			init="nul = [""v_ifv"",this] call f_fnc_assignGear;";
