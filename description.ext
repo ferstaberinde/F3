@@ -45,7 +45,7 @@ class Params
 		
 // ============================================================================================
 
-// F2 - ACRE Mode
+// F2 - ACRE Support
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT OR CHANGE POSITION IN PARAMS; IT MUST BE REFERENCABLE
 // AS "paramsarray select 1" FOR GEAR SCRIPTS TO WORK CORRECTLY
