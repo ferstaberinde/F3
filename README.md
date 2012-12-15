@@ -3,7 +3,7 @@
 * Version: 2-7-0
 * Codebase: https://github.com/ferstaberinde/F2
 * Developer: Please see credits section below.
-* Publishers: Fer  (alanr@ferstaberinde.com)
+* Publishers: Fer (alanr@ferstaberinde.com)
 * Description: MP mission framework for Armed Assault 2 and Armed Assault 2: Operation Arrowhead.
 
 
@@ -197,19 +197,19 @@ Version | Date
 2-7-0 | 15 DEC 2012
 
 * Moved development to GitHub (see: https://github.com/ferstaberinde/F2).
-* Removed Norrin's Revive Respawn component.
 * Changed OA Folk build to CO Folk ARPS build.
 * Updated CO Folk ARPS Platoons (USMC, CDF, NAPA, Russian Army, ChDKZ).
 * Updated CO Folk ARPS Group IDs component.
 * Updated CO Folk ARPS Markers component.
 * Updated CO Folk ARPS Assign Gear Script component (supports new factions, backpacks default to ON, vehicle cargo presets for trucks and IFVs).
 * Added CO Folk ARPS Assign Gear Script component alternative files for: US Army, ACR.
-* Changed OA Briefing component to CO Briefing Template component (now supports ArmA2 factions).
-* Updated Casualties Cap component (commented-out lines for all platoons added).
+* Changed OA Briefing Template component to CO Briefing Template component (now supports ArmA2 factions).
+* Updated Casualties Cap component (commented-out lines for all Folk ARPS platoons added).
 * Added ORBAT Notes component.
 * Added ACRE support component.
 * Added Join Group Action component.
 * Extended Trip Flare component (now also placeable in-game).
+* Removed Norrin's Revive Respawn component.
 
 2-6-1 | 02 JUL 2012
 
