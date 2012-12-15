@@ -230,7 +230,7 @@ player setVariable ["BIS_noCoreConversations", true];
 
 // ====================================================================================
 
-// F2 - ORBAT notes
+// F2 - ORBAT Generator
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
 [] execVM "f\common\f_orbatNotes.sqf";
