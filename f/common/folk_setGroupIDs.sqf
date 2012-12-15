@@ -318,38 +318,38 @@ GrpINS_AH1 setGroupId ["TK Insurgent AH1 -","GroupColor0"];
 
 //===================================================================================== 
 
-// GROUP IDs: CHDZK (OPFOR)
+// GROUP IDs: CHDKZ (OPFOR)
 // Automatically assigns intelligible names to groups
 
-GrpA2INS_CO setGroupId ["CHDZK CO -","GroupColor0"];
-GrpA2INS_DC setGroupId ["CHDZK DC -","GroupColor0"];
-GrpA2INS_ASL setGroupId ["CHDZK ASL -","GroupColor0"];
-GrpA2INS_A1 setGroupId ["CHDZK A1 -","GroupColor0"];
-GrpA2INS_A2 setGroupId ["CHDZK A2 -","GroupColor0"];
-GrpA2INS_A3 setGroupId ["CHDZK A3 -","GroupColor0"];
-GrpA2INS_BSL setGroupId ["CHDZK BSL -","GroupColor0"];
-GrpA2INS_B1 setGroupId ["CHDZK B1 -","GroupColor0"];
-GrpA2INS_B2 setGroupId ["CHDZK B2 -","GroupColor0"];
-GrpA2INS_B3 setGroupId ["CHDZK B3 -","GroupColor0"];
-GrpA2INS_CSL setGroupId ["CHDZK CSL -","GroupColor0"];
-GrpA2INS_C1 setGroupId ["CHDZK C1 -","GroupColor0"];
-GrpA2INS_C2 setGroupId ["CHDZK C2 -","GroupColor0"];
-GrpA2INS_C3 setGroupId ["CHDZK C3 -","GroupColor0"];
-GrpA2INS_MMG1 setGroupId ["CHDZK MMG1 -","GroupColor0"];
-GrpA2INS_MAT1 setGroupId ["CHDZK MAT1 -","GroupColor0"];
-GrpA2INS_ST1 setGroupId ["CHDZK ST1 -","GroupColor0"];
-GrpA2INS_HMG1 setGroupId ["CHDZK HMG1 -","GroupColor0"];
-GrpA2INS_MTR1 setGroupId ["CHDZK MTR1 -","GroupColor0"];
-GrpA2INS_HAT1 setGroupId ["CHDZK HAT1 -","GroupColor0"];
-GrpA2INS_SAM1 setGroupId ["CHDZK SAM1 -","GroupColor0"];
-GrpA2INS_ENG1 setGroupId ["CHDZK ENG1 -","GroupColor0"];
-GrpA2INS_IFV1 setGroupId ["CHDZK IFV1 -","GroupColor0"];
-GrpA2INS_IFV2 setGroupId ["CHDZK IFV2 -","GroupColor0"];
-GrpA2INS_IFV3 setGroupId ["CHDZK IFV3 -","GroupColor0"];
-GrpA2INS_TNK1 setGroupId ["CHDZK TNK1 -","GroupColor0"];
-GrpA2INS_TH1 setGroupId ["CHDZK TH1 -","GroupColor0"];
-GrpA2INS_TH2 setGroupId ["CHDZK TH2 -","GroupColor0"];
-GrpA2INS_AH1 setGroupId ["CHDZK AH1 -","GroupColor0"];
+GrpA2INS_CO setGroupId ["CHDKZ CO -","GroupColor0"];
+GrpA2INS_DC setGroupId ["CHDKZ DC -","GroupColor0"];
+GrpA2INS_ASL setGroupId ["CHDKZ ASL -","GroupColor0"];
+GrpA2INS_A1 setGroupId ["CHDKZ A1 -","GroupColor0"];
+GrpA2INS_A2 setGroupId ["CHDKZ A2 -","GroupColor0"];
+GrpA2INS_A3 setGroupId ["CHDKZ A3 -","GroupColor0"];
+GrpA2INS_BSL setGroupId ["CHDKZ BSL -","GroupColor0"];
+GrpA2INS_B1 setGroupId ["CHDKZ B1 -","GroupColor0"];
+GrpA2INS_B2 setGroupId ["CHDKZ B2 -","GroupColor0"];
+GrpA2INS_B3 setGroupId ["CHDKZ B3 -","GroupColor0"];
+GrpA2INS_CSL setGroupId ["CHDKZ CSL -","GroupColor0"];
+GrpA2INS_C1 setGroupId ["CHDKZ C1 -","GroupColor0"];
+GrpA2INS_C2 setGroupId ["CHDKZ C2 -","GroupColor0"];
+GrpA2INS_C3 setGroupId ["CHDKZ C3 -","GroupColor0"];
+GrpA2INS_MMG1 setGroupId ["CHDKZ MMG1 -","GroupColor0"];
+GrpA2INS_MAT1 setGroupId ["CHDKZ MAT1 -","GroupColor0"];
+GrpA2INS_ST1 setGroupId ["CHDKZ ST1 -","GroupColor0"];
+GrpA2INS_HMG1 setGroupId ["CHDKZ HMG1 -","GroupColor0"];
+GrpA2INS_MTR1 setGroupId ["CHDKZ MTR1 -","GroupColor0"];
+GrpA2INS_HAT1 setGroupId ["CHDKZ HAT1 -","GroupColor0"];
+GrpA2INS_SAM1 setGroupId ["CHDKZ SAM1 -","GroupColor0"];
+GrpA2INS_ENG1 setGroupId ["CHDKZ ENG1 -","GroupColor0"];
+GrpA2INS_IFV1 setGroupId ["CHDKZ IFV1 -","GroupColor0"];
+GrpA2INS_IFV2 setGroupId ["CHDKZ IFV2 -","GroupColor0"];
+GrpA2INS_IFV3 setGroupId ["CHDKZ IFV3 -","GroupColor0"];
+GrpA2INS_TNK1 setGroupId ["CHDKZ TNK1 -","GroupColor0"];
+GrpA2INS_TH1 setGroupId ["CHDKZ TH1 -","GroupColor0"];
+GrpA2INS_TH2 setGroupId ["CHDKZ TH2 -","GroupColor0"];
+GrpA2INS_AH1 setGroupId ["CHDKZ AH1 -","GroupColor0"];
 
 //===================================================================================== 
 

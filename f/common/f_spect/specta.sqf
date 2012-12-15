@@ -710,7 +710,7 @@ while{ dialog } do {
 					_map ctrlMapAnimAdd[0.3, KEGsMinimapZoom, [KEGs_cxpos, KEGs_cypos,0]];
 				} else {
 					// Center on target
-					_map ctrlMapAnimAdd[0.3, KEGsMinimapZoom, getpos KEGs_target];
+					_map ctrlMapAnimAdd[0.3, KEGsMinimapZoom, visiblePosition KEGs_target];
 				};
 				ctrlMapAnimCommit _map;					
 			};
@@ -719,7 +719,7 @@ while{ dialog } do {
 			if(KEGs_tgtIdx != KEGs_lastTgt) then {
 				_map = _disp displayctrl _cMapFull;
 				ctrlMapAnimClear _map;
-				_map ctrlMapAnimAdd [0.2, 1.0, getpos (deathcam select KEGs_tgtIdx)];
+				_map ctrlMapAnimAdd [0.2, 1.0, visiblePosition (deathcam select KEGs_tgtIdx)];
 				ctrlMapAnimCommit _map;			
 			};
 			

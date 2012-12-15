@@ -7,7 +7,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 540;
+	maxPlayers = 970;
 };
 
 // ============================================================================================
@@ -26,23 +26,39 @@ respawndelay = 3;
 #include "f\common\f_JIP_kitpicker.h"
 #include "f\common\f_JIP_grppicker.h"
 
+class Params
+{
+
 // ============================================================================================
-// F2 - Whether AssignGear should allow Backpacks for OA/BAF/PMC units
+// F2 - Whether AssignGear should allow Backpacks for OA/BAF/PMC units. Works only on A2 units in CO 1.63 or later.
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT OR CHANGE POSITION IN PARAMS; IT MUST BE REFERENCABLE
 // AS "paramsarray select 0" FOR GEAR SCRIPTS TO WORK CORRECTLY
-
-class Params
-{
 	class f_param_useBackpacks
         {
-                title = "OA Backpacks (Asst. Gunners & Engineers)";
+                title = "OA Backpacks";
                 values[] = {0,1};
                 texts[] = {"Off","On"};
                 default = 1;
                 code = "f_param_useBackpacks = %1";
         }; 
 		
+// ============================================================================================
+
+// F2 - ACRE Support
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// WARNING: DO NOT DISABLE THIS COMPONENT OR CHANGE POSITION IN PARAMS; IT MUST BE REFERENCABLE
+// AS "paramsarray select 1" FOR GEAR SCRIPTS TO WORK CORRECTLY
+
+        class f_param_acre
+        {
+                title = "ACRE";
+                values[] = {0,1};
+                texts[] = {"Off","On"};
+                default = 0;
+                code = "f_var_acre = %1";
+        }; 
+
 // ============================================================================================
 
 // F2 - Debug Mode

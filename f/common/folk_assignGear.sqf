@@ -20,12 +20,13 @@ private [
 "_RAA","_RAAmag",			
 "_SNrifle","_SNriflemag",			
 "_pistol","_pistolmag",									
-"_grenade","_smokegrenade",								
+"_grenade","_smokegrenade","_smokegreen",									
 "_rifle","_riflemag",									
 "_carbine","_carbinemag",								
 "_smg","_smgmag",										
 "_bagmedium","_baglarge",
-"_mine","_satchel"
+"_mine","_satchel",
+"_radio1","_radio2","_radio3"
 ];
 
 // ====================================================================================
@@ -37,17 +38,17 @@ private [
 _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
 _faction = toLower (faction _unit);
+
+// If the unitfaction is different from the group leader's faction and the unit is not a vehicle, the latters faction is used
+if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _unit)))) then {_faction = toLower (faction (leader group _unit))};
+
 _useBackpacks = paramsArray select 0;
+_useACRE = paramsArray select 1;
 
 switch(_faction) do
 {
-case "pmc_baf":{_faction="bis_un";};					// Treat PMC troops as UN for gear (used mostly for Exchange Medics and Engineers for factions that do not have those roles, such as bis_un)
-case "usmc":{_useBackpacks=0;};			// USMC: disable backpacks
-case "cdf":{_useBackpacks=0;};			// CDF: disable backpacks
-case "ru":{_useBackpacks=0;};			// RUS: disable backpacks
-case "ins":{_useBackpacks=0;};			// INS: disable backpacks
-case "gue":{_useBackpacks=0;};			// GUE: disable backpacks
-case "civ":{_faction="bis_tk_civ";_useBackpacks=0;};			// CIV as TIK_CIV (note: no backpacks for A2 original units)
+case "pmc_baf":{_faction = "bis_un";};						// PMC get the UN gear
+case "civ":{_faction="bis_tk_civ";_useBackpacks=0;};		// CIV as TIK_CIV (note: no backpacks for A2 original units)
 case "civ_ru":{_faction="bis_tk_civ";_useBackpacks=0;};		// CIV_RU as TK_CIV (note: no backpacks for A2 original units)
 };
 
@@ -205,6 +206,16 @@ if (_faction == "bis_tk_civ") then {
 
 if (_faction == "bis_civ_special") then {
 #include "folk_assignGear_civ_special.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: ACRE
+// The following block of code executes only if the ACRE parameter is set to true; it 
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_useACRE == 1) then {
+#include "folk_assignGear_acre.sqf"
 };
 
 // ====================================================================================
