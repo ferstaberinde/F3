@@ -198,7 +198,6 @@ Version | Date
 2-7-0 | XX XXX 2012
 
 * Moved development to GitHub (see: https://github.com/ferstaberinde/F2)
-* Moved F2 readme into the mission folder (see: README.md)
 * Removed Norrin's Revive Respawn component.
 * Added ArmA2 platoons (USMC, CDF, NAPA, Russian Army, ChDKZ)
 * Updated CO Folk ARPS Group IDs component.
@@ -207,10 +206,10 @@ Version | Date
 * Added CO Folk ARPS Assign Gear Script component alternative files for: US Army, ACR.
 * Updated CO Briefing Template component (supports new factions).
 * Updated Casualties Cap component (commented-out lines for all platoons added).
-* Added ORBAT Generator component.
+* Added ORBAT Notes component.
 * Added ACRE support component.
-* Added Join Group component.
-* Extended Tripwire component (placeable in-game).
+* Added Join Group Action component.
+* Extended Tripwire component (now also placeable in-game).
 
 2-6-1 | 02 JUL 2012
 
