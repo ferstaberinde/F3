@@ -166,7 +166,6 @@ Please note that you do NOT require permission from The Contributors to distribu
 The online manual can be found at:
 
 * http://www.ferstaberinde.com/f2/EN/ (English language version)
-* http://www.ferstaberinde.com/f2/RU/ (Russian language version)
 
 
 
