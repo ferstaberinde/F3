@@ -111,7 +111,7 @@ Version | Date | Notes
 
 ### F2 Credits ###
 
-* Contributors: Headspace | kevb0 | Lor | Ricardo | Wolf | ViperMaul | Xiathorn | zx64 | Norrin | white angel | Fer | Strango | beta | Mike84 | b3rt | Henk | Redkid | Macolik | kungtotte | Tigershark | LoneStar | Nullkigan | Harakka | Wolfenswan | DarkTatka | Black Mamba | Head
+* Contributors: Headspace | kevb0 | Lor | Ricardo | Wolf | ViperMaul | Xiathorn | zx64 | Norrin | white angel | Fer | Strango | beta | Mike84 | b3rt | Henk | Redkid | Macolik | kungtotte | Tigershark | LoneStar | Nullkigan | Harakka | Wolfenswan | DarkTatka | Black Mamba | Head | Mike
 * Documentation: Fer | Messiah2 | Xiathorn
 * Producers: Fer
 * Special Thanks: Dancingcuban | Firebird | Stranglove | Ferrard Carson | Bodge
