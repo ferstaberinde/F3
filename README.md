@@ -201,13 +201,13 @@ Version | Date
 * Moved F2 readme into the mission folder (see: README.md)
 * Removed Norrin's Revive Respawn component.
 * Added ArmA2 platoons (USMC, CDF, NAPA, Russian Army, ChDKZ)
-* Updated OA Folk Group IDs component.
-* Updated OA Folk Group Markers component.
-* Updated OA Folk Assign Gear Script component (supports new factions, backpacks default to ON, vehicle cargo presets for trucks and IFVs).
-* Added OA Folk Assign Gear Script component alternative files for: US Army, ACR.
-* Updated OA Briefing Template component (supports new factions).
+* Updated CO Folk ARPS Group IDs component.
+* Updated CO Folk ARPS Markers component.
+* Updated CO Folk ARPS Assign Gear Script component (supports new factions, backpacks default to ON, vehicle cargo presets for trucks and IFVs).
+* Added CO Folk ARPS Assign Gear Script component alternative files for: US Army, ACR.
+* Updated CO Briefing Template component (supports new factions).
 * Updated Casualties Cap component (commented-out lines for all platoons added).
-* Added OA Folk ORBAT Generator component.
+* Added ORBAT Generator component.
 * Added ACRE support component.
 * Added Join Group component.
 * Extended Tripwire component (placeable in-game).
