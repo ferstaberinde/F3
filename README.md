@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 2-7-0     | XX XXX 2012 | Patch release - Various improvements (see change history).
+* 2-7-0     | 15 DEC 2012 | Patch release - Various improvements (see change history).
 * 2-6-1     | 02 JUL 2012 | Patch release - Various improvements (see change history).
 * 2-6-0     | 07 JUN 2012 | Patch release - Various improvements (see change history).
 * 2-5-0     | 24 JAN 2012 | Patch release - Various improvements (see change history).
@@ -195,16 +195,17 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F2 / BAS f contributors)
 
 Version | Date
 
-2-7-0 | XX XXX 2012
+2-7-0 | 15 DEC 2012
 
-* Moved development to GitHub (see: https://github.com/ferstaberinde/F2)
+* Moved development to GitHub (see: https://github.com/ferstaberinde/F2).
 * Removed Norrin's Revive Respawn component.
-* Added ArmA2 platoons (USMC, CDF, NAPA, Russian Army, ChDKZ)
+* Changed OA Folk build to CO Folk ARPS build.
+* Updated CO Folk ARPS Platoons (USMC, CDF, NAPA, Russian Army, ChDKZ).
 * Updated CO Folk ARPS Group IDs component.
 * Updated CO Folk ARPS Markers component.
 * Updated CO Folk ARPS Assign Gear Script component (supports new factions, backpacks default to ON, vehicle cargo presets for trucks and IFVs).
 * Added CO Folk ARPS Assign Gear Script component alternative files for: US Army, ACR.
-* Updated CO Briefing Template component (supports new factions).
+* Changed OA Briefing component to CO Briefing Template component (now supports ArmA2 factions).
 * Updated Casualties Cap component (commented-out lines for all platoons added).
 * Added ORBAT Notes component.
 * Added ACRE support component.
