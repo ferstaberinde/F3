@@ -209,7 +209,7 @@ Version | Date
 * Added ORBAT Notes component.
 * Added ACRE support component.
 * Added Join Group Action component.
-* Extended Tripwire component (now also placeable in-game).
+* Extended Trip Flare component (now also placeable in-game).
 
 2-6-1 | 02 JUL 2012
 
