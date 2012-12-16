@@ -1,4 +1,4 @@
-// F2 - Folk Assign Gear Script - Russian Army Equipment
+// F2 - Folk Assign Gear Script - Czech Republic Equipment
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // ====================================================================================
 
@@ -44,22 +44,22 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-_rifle = "AK_107_Kobra"; _riflemag = "30Rnd_545x39_AK";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
+_rifle = "CZ805_A1_ACR"; _riflemag = "30Rnd_556x45_G36";																						// Standard Riflemen (Spotter, HMG Assistant Gunner, MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, HAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
 
-_carbine = "AKS_74_kobra"; _carbinemag = "30Rnd_545x39_AK"; 																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
+_carbine = "CZ805_A2_ACR"; _carbinemag = "30Rnd_556x45_G36"; 																					// Standard Carabineer (Medic, HMG Gunner, Rifleman (AT), Rifleman (AA), MAT Gunner, HAT Gunner, MTR Gunner, Carabineer)
 
-_smg = "bizon"; _smgmag = "64Rnd_9x19_Bizon";																								// Standard Submachine Gun/Personal Defence Weapon (Vehicle Crew, Aircraft Pilot, Submachinegunner)
+_smg = "Evo_ACR"; _smgmag = "20Rnd_9x19_EVO";																								// Standard Submachine Gun/Personal Defence Weapon (Vehicle Crew, Aircraft Pilot, Submachinegunner)
 
-_glrifle = "AK_107_GL_Kobra"; _glriflemag = "30Rnd_545x39_AK"; _glmag = "1Rnd_HE_GP25";															// Rifle with GL and HE grenades (CO, DC, FTLs)
-_glsmokewhite = "1Rnd_Smoke_GP25"; _glsmokegreen = "1Rnd_SmokeGreen_GP25"; _glsmokered = "1Rnd_SmokeRed_GP25";    							// Smoke for FTLs, Squad Leaders, etc 
-_glflarewhite = "FlareWhite_GP25"; _glflarered = "FlareRed_GP25"; _glflareyellow = "FlareYellow_GP25"; _glflaregreen = "FlareGreen_GP25";	// Flares for FTLs, Squad Leaders, etc
+_glrifle = "CZ805_A1_GL_ACR"; _glriflemag = "30Rnd_556x45_G36"; _glmag = "1Rnd_HE_M203";														// Rifle with GL and HE grenades (CO, DC, FTLs)
+_glsmokewhite = "1Rnd_Smoke_M203"; _glsmokegreen = "1Rnd_SmokeGreen_M203"; _glsmokered = "1Rnd_SmokeRed_M203";    							// Smoke for FTLs, Squad Leaders, etc 
+_glflarewhite = "FlareWhite_M203"; _glflarered = "FlareRed_M203"; _glflareyellow = "FlareYellow_M203"; _glflaregreen = "FlareGreen_M203";	// Flares for FTLs, Squad Leaders, etc
 
-_pistol = "Makarov"; _pistolmag = "8Rnd_9x18_Makarov";																						// Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
+_pistol = "CZ_75_SP_01_PHANTOM"; _pistolmag = "18Rnd_9x19_Phantom";																						// Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
 
-_grenade = "HandGrenade_East"; _smokegrenade = "SmokeShell";_smokegreen = "SmokeShellGreen";																				// Grenades
+_grenade = "HandGrenade_West"; _smokegrenade = "SmokeShell";_smokegrenadegreen = "SmokeShellGreen";																				// Grenades
 
-_bagmedium = "TK_Assault_Pack_EP1";		// 8+ slots																							// Backpack for assistant gunners (AAR, AMMG, AMAT, AHAT), so that they don't have to drop ammo themselves
-_baglarge =  "TK_ALICE_Pack_EP1"; 		// 12+ slots
+_bagmedium = "US_Assault_Pack_EP1";		// 8+ slots																							// Backpack for assistant gunners (AAR, AMMG, AMAT, AHAT), so that they don't have to drop ammo themselves
+_baglarge =  "CZ_Backpack_EP1"; 		// 12+ slots
 		//  6 Slots: "CZ_Vestpouch_EP1"
 		//  8 Slots: "US_Assault_Pack_EP1", "US_Patrol_Pack_EP1", "TK_Assault_Pack_EP1", "TK_RPG_Backpack_EP1"
 		// 12 Slots: "US_Backpack_EP1", "TK_ALICE_Pack_EP1",
@@ -70,25 +70,27 @@ _baglarge =  "TK_ALICE_Pack_EP1"; 		// 12+ slots
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
-_AR = "RPK_74"; _ARmag = "75Rnd_545x39_RPK";																								// Automatic Rifleman
+_AR = "M249_EP1"; _ARmag = "100Rnd_556x45_M249";																							// Automatic Rifleman
 
-_MMG = "PK"; _MMGmag = "100Rnd_762x54_PK";																									// Medium MG
+_MMG = "UK59_ACR"; _MMGmag = "100Rnd_762x54_PK";																							// Medium MG
+//_MMG = "Pecheneg"; _MMGmag = "100Rnd_762x54_PK";
+//_MMG = "M60A4_EP1"; _MMGmag = "100Rnd_762x51_M240";																									
 
 _HMG = "DSHkM_Mini_TriPod_TK_INS_Bag_EP1";																									// Heavy MG (note: HMG is an assembled weapon, gunner carries weapon)
 _HMGmount = "Tripod_Bag";																													// Assistant Heavy MG (note: HMG is an assembled weapon, assistant carries bipod/tripd)
 
 _RAT = "RPG7V"; _RATmag = "PG7V";																											// Rifleman AT
 
-_MAT = "RPG7V"; _MATmag1 = "PG7V"; _MATmag2 = "PG7VR";																						// Medium AT
+_MAT = "MAAWS"; _MATmag1 = "MAAWS_HEAT"; _MATmag2 = "MAAWS_HEDP";																							// Medium AT
 
 _HAT = "MetisLauncher"; _HATmag1 = "AT13"; _HATmag2 = "AT13";																				// Heavy AT Gunner
 
-_MTR = "2b14_82mm_TK_Bag_EP1";																												// Mortar Gunner (note: Mortar is an assembled weapon, gunner carries weapon)
+_MTR = "M252_US_Bag_EP1";																													// Mortar Gunner (note: Mortar is an assembled weapon, gunner carries weapon)
 _MTRmount = "Tripod_Bag";																													// Mortar Assistant Gunner (note: Mortar is an assembled weapon, assistant carries bipod/tripd)
 
 _RAA = "Strela"; _RAAmag = "Strela";																										// Rifleman AA (anti-air)
 
-_SNrifle = "SVD"; _SNriflemag = "10Rnd_762x54_SVD";																							// Sniper
+_SNrifle = "CZ_750_S1_ACR"; _SNriflemag = "10Rnd_762x51_CZ750";																							// Sniper
 
 _mine = "Mine"; _satchel = "pipebomb";																										// Engineer
 
@@ -202,7 +204,7 @@ switch (_typeofUnit) do
 			(unitBackpack _unit) addMagazineCargoGlobal [_glsmokewhite, 1];			
 			(unitBackpack _unit) addMagazineCargoGlobal [_glmag, 3];
 		};
-	};		
+	};	
 
 
 // LOADOUT: AUTOMATIC RIFLEMAN
@@ -233,12 +235,11 @@ switch (_typeofUnit) do
 			(unitBackpack _unit) addMagazineCargoGlobal [_ARmag, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_RATmag, 1];
 			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
-			(unitBackpack _unit) addMagazineCargoGlobal [_riflemag, 2];
-			(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_glriflemag, 2];
 		} else {
 			{_unit addmagazine _ARmag} foreach [1,2];
 		};
-	};				
+	};			
 	
 // LOADOUT: RIFLEMAN (AT)	
 	case "rat":
@@ -334,7 +335,7 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _carbinemag} foreach [1,2,3];
 		_unit addweapon _carbine;
-		{_unit addmagazine _MATmag1} foreach [1,2,3];
+		{_unit addmagazine _MATmag1} foreach [1,2];
 		{_unit addmagazine _MATmag2} foreach [1];
 		_unit addweapon _MAT;			
 	};	
@@ -477,7 +478,7 @@ switch (_typeofUnit) do
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_riflemag, 4];
+			(unitBackpack _unit) addMagazineCargoGlobal [_riflemag, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
 		};
@@ -493,7 +494,7 @@ switch (_typeofUnit) do
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 4];
+			(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
 		};
@@ -509,7 +510,7 @@ switch (_typeofUnit) do
 		if (_useBackpacks==1) then {
 			_unit addBackpack _bagmedium;
 			clearMagazineCargoGlobal (unitBackpack _unit);
-			(unitBackpack _unit) addMagazineCargoGlobal [_smgmag, 4];
+			(unitBackpack _unit) addMagazineCargoGlobal [_smgmag, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
 		};
