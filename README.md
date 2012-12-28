@@ -3,7 +3,7 @@
 * Version: 2-7-0
 * Codebase: https://github.com/ferstaberinde/F2
 * Developer: Please see credits section below.
-* Publishers: Fer  (alanr@ferstaberinde.com)
+* Publishers: Fer (alanr@ferstaberinde.com)
 * Description: MP mission framework for Armed Assault 2 and Armed Assault 2: Operation Arrowhead.
 
 
@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 2-7-0     | XX XXX 2012 | Patch release - Various improvements (see change history).
+* 2-7-0     | 15 DEC 2012 | Patch release - Various improvements (see change history).
 * 2-6-1     | 02 JUL 2012 | Patch release - Various improvements (see change history).
 * 2-6-0     | 07 JUN 2012 | Patch release - Various improvements (see change history).
 * 2-5-0     | 24 JAN 2012 | Patch release - Various improvements (see change history).
@@ -111,7 +111,7 @@ Version | Date | Notes
 
 ### F2 Credits ###
 
-* Contributors: Headspace | kevb0 | Lor | Ricardo | Wolf | ViperMaul | Xiathorn | zx64 | Norrin | white angel | Fer | Strango | beta | Mike84 | b3rt | Henk | Redkid | Macolik | kungtotte | Tigershark | LoneStar | Nullkigan | Harakka | Wolfenswan | DarkTatka | Black Mamba
+* Contributors: Headspace | kevb0 | Lor | Ricardo | Wolf | ViperMaul | Xiathorn | zx64 | Norrin | white angel | Fer | Strango | beta | Mike84 | b3rt | Henk | Redkid | Macolik | kungtotte | Tigershark | LoneStar | Nullkigan | Harakka | Wolfenswan | DarkTatka | Black Mamba | Head | Mike
 * Documentation: Fer | Messiah2 | Xiathorn
 * Producers: Fer
 * Special Thanks: Dancingcuban | Firebird | Stranglove | Ferrard Carson | Bodge
@@ -166,7 +166,6 @@ Please note that you do NOT require permission from The Contributors to distribu
 The online manual can be found at:
 
 * http://www.ferstaberinde.com/f2/EN/ (English language version)
-* http://www.ferstaberinde.com/f2/RU/ (Russian language version)
 
 
 
@@ -195,22 +194,22 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F2 / BAS f contributors)
 
 Version | Date
 
-2-7-0 | XX XXX 2012
+2-7-0 | 15 DEC 2012
 
-* Moved development to GitHub (see: https://github.com/ferstaberinde/F2)
-* Moved F2 readme into the mission folder (see: README.md)
-* Removed Norrin's Revive Respawn component.
-* Added ArmA2 platoons (USMC, CDF, NAPA, Russian Army, ChDKZ)
-* Updated OA Folk Group IDs component.
-* Updated OA Folk Group Markers component.
-* Updated OA Folk Assign Gear Script component (supports new factions, backpacks default to ON, vehicle cargo presets for trucks and IFVs).
-* Added OA Folk Assign Gear Script component alternative files for: US Army, ACR.
-* Updated OA Briefing Template component (supports new factions).
-* Updated Casualties Cap component (commented-out lines for all platoons added).
-* Added OA Folk ORBAT Generator component.
+* Moved development to GitHub (see: https://github.com/ferstaberinde/F2).
+* Changed OA Folk build to CO Folk ARPS build.
+* Updated CO Folk ARPS Platoons (USMC, CDF, NAPA, Russian Army, ChDKZ).
+* Updated CO Folk ARPS Group IDs component.
+* Updated CO Folk ARPS Markers component.
+* Updated CO Folk ARPS Assign Gear Script component (supports new factions, backpacks default to ON, vehicle cargo presets for trucks and IFVs).
+* Added CO Folk ARPS Assign Gear Script component alternative files for: US Army, ACR.
+* Changed OA Briefing Template component to CO Briefing Template component (now supports ArmA2 factions).
+* Updated Casualties Cap component (commented-out lines for all Folk ARPS platoons added).
+* Added ORBAT Notes component.
 * Added ACRE support component.
-* Added Join Group component.
-* Extended Tripwire component (placeable in-game).
+* Added Join Group Action component.
+* Extended Trip Flare component (now also placeable in-game).
+* Removed Norrin's Revive Respawn component.
 
 2-6-1 | 02 JUL 2012
 
