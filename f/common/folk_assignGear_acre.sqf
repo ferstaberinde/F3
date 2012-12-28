@@ -169,7 +169,7 @@ switch (_typeofUnit) do
 // LOADOUT: HEAVY AT ASSISTANT GUNNER	
 	case "hatag":
 	{
-		_unit addWeapon _radio2;			
+		//_unit addWeapon _radio2;			
 	};		
 	
 // LOADOUT: MORTAR GUNNER
