@@ -23,6 +23,26 @@ _pc = _this select 1;
 _end = _this select 2;
 _started = 0;
 
+// ====================================================================================
+
+// Check if _grpstemp is a variable of type SIDE otherwise continue.
+_type = typeName _grpstemp; // Grab the type name
+_temp_grp = []; 
+if(_type == "SIDE") then // if the variable is any of the side variables use it to consturct a list of groups in that faction.
+{
+	{
+		if(side _x == _grpstemp) then
+		{
+			_temp_grp = _temp_grp + [_x]; // Add group to array
+		};
+	
+	} forEach allGroups;
+
+	_grpstemp = _temp_grp; // set it.
+	_temp_grp = nil; // destory it.
+};
+
+// ====================================================================================
 // DEBUG
 if (f_var_debugMode == 1) then
 {
