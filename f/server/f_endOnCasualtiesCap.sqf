@@ -11,35 +11,46 @@ if (isServer) then {
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_grps","_pc","_end","_started","_remaining","_counter","_grpsno","_grpsel","_grpstemp","_alive"];
+private ["_grps","_pc","_end","_started","_remaining","_counter","_grpsno","_grpsel","_grpstemp","_alive","_faction","_temp_grp","_temp_grp2","_type"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
-
 _grpstemp = _this select 0;
 _pc = _this select 1;
 _end = _this select 2;
+_faction = _this select 3;
 _started = 0;
 
 // ====================================================================================
 
 // Check if _grpstemp is a variable of type SIDE otherwise continue.
 _type = typeName _grpstemp; // Grab the type name
-_temp_grp = []; 
+
 if(_type == "SIDE") then // if the variable is any of the side variables use it to consturct a list of groups in that faction.
 {
+	_temp_grp = []; 
 	{
-		if(side _x == _grpstemp) then
+		if((side _x == _grpstemp) && (leader _x in playableUnits)) then 
 		{
 			_temp_grp = _temp_grp + [_x]; // Add group to array
+
 		};
 	
 	} forEach allGroups;
-
+	if(!isnil "_faction") then
+	{
+		_temp_grp2 = []; 
+		{
+			if(faction (leader _x) in _faction) then
+			{
+				_temp_grp2 = _temp_grp2 + [_x]; 
+			};
+		} forEach _temp_grp;
+		_temp_grp = _temp_grp2;
+	};
 	_grpstemp = _temp_grp; // set it.
-	_temp_grp = nil; // destory it.
 };
 
 // ====================================================================================
