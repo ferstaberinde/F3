@@ -1,6 +1,6 @@
 # F2 README #
 
-* Version: 2-7-0
+* Version: 2-7-1
 * Codebase: https://github.com/ferstaberinde/F2
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 2-7-1     | DD MMM 2013 | Patch release - Various improvements (see change history).
 * 2-7-0     | 15 DEC 2012 | Patch release - Various improvements (see change history).
 * 2-6-1     | 02 JUL 2012 | Patch release - Various improvements (see change history).
 * 2-6-0     | 07 JUN 2012 | Patch release - Various improvements (see change history).
@@ -193,6 +194,10 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F2 / BAS f contributors)
 ### F2 Change History ###
 
 Version | Date
+
+2-7-1 | DD MMM 2013
+
+* Fixed incorrect unit names in Takistani Locals platoon.
 
 2-7-0 | 15 DEC 2012
 
