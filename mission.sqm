@@ -12328,7 +12328,7 @@ class Mission
 					azimut=1.4615065;
 					id=751;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
@@ -12344,7 +12344,7 @@ class Mission
 					azimut=1.4615065;
 					id=752;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_IFV1_D";
@@ -12358,7 +12358,7 @@ class Mission
 					azimut=1.4615065;
 					id=753;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_IFV1_G";
@@ -12380,7 +12380,7 @@ class Mission
 					azimut=1.4615065;
 					id=754;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
@@ -12396,7 +12396,7 @@ class Mission
 					azimut=1.4615065;
 					id=755;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_IFV2_D";
@@ -12410,7 +12410,7 @@ class Mission
 					azimut=1.4615065;
 					id=756;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_IFV2_G";
@@ -12448,7 +12448,7 @@ class Mission
 					azimut=1.4615065;
 					id=758;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_IFV3_D";
@@ -12462,7 +12462,7 @@ class Mission
 					azimut=1.4615065;
 					id=759;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_IFV3_G";
@@ -12484,7 +12484,7 @@ class Mission
 					azimut=1.4615065;
 					id=760;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
@@ -12500,7 +12500,7 @@ class Mission
 					azimut=1.4615065;
 					id=761;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_TNK1_D";
@@ -12514,7 +12514,7 @@ class Mission
 					azimut=1.4615065;
 					id=762;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="CDF_Soldier_Crew";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_TNK1_G";
@@ -12536,7 +12536,7 @@ class Mission
 					azimut=1.4615065;
 					id=763;
 					side="WEST";
-					vehicle="USMC_Soldier_Pilot";
+					vehicle="CDF_Soldier_Pilot";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
@@ -12552,7 +12552,7 @@ class Mission
 					azimut=1.4615065;
 					id=764;
 					side="WEST";
-					vehicle="USMC_Soldier_Pilot";
+					vehicle="CDF_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_TH1_CM";
@@ -12574,7 +12574,7 @@ class Mission
 					azimut=1.4615065;
 					id=765;
 					side="WEST";
-					vehicle="USMC_Soldier_Pilot";
+					vehicle="CDF_Soldier_Pilot";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
@@ -12590,7 +12590,7 @@ class Mission
 					azimut=1.4615065;
 					id=766;
 					side="WEST";
-					vehicle="USMC_Soldier_Pilot";
+					vehicle="CDF_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_TH2_CM";
@@ -12612,7 +12612,7 @@ class Mission
 					azimut=1.4615065;
 					id=767;
 					side="WEST";
-					vehicle="USMC_Soldier_Pilot";
+					vehicle="CDF_Soldier_Pilot";
 					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
@@ -12628,7 +12628,7 @@ class Mission
 					azimut=1.4615065;
 					id=768;
 					side="WEST";
-					vehicle="USMC_Soldier_Pilot";
+					vehicle="CDF_Soldier_Pilot";
 					player="PLAY CDG";
 					skill=0.5;
 					text="UnitCDF_AH1_G";
