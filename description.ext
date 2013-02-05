@@ -26,10 +26,16 @@ respawndelay = 3;
 #include "f\common\f_JIP_kitpicker.h"
 #include "f\common\f_JIP_grppicker.h"
 
+// ============================================================================================
+
+// F2 - Start of Params code blocks.
+// WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
+
 class Params
 {
 
 // ============================================================================================
+
 // F2 - Whether AssignGear should allow Backpacks for OA/BAF/PMC units. Works only on A2 units in CO 1.63 or later.
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT OR CHANGE POSITION IN PARAMS; IT MUST BE REFERENCABLE
@@ -39,7 +45,7 @@ class Params
                 title = "OA Backpacks";
                 values[] = {0,1};
                 texts[] = {"Off","On"};
-                default = 1;
+                default = 0;
                 code = "f_param_useBackpacks = %1";
         }; 
 		
@@ -141,6 +147,9 @@ class Params
 //	};
 
 // ============================================================================================
+
+// F2 - End of Params code blocks.
+// WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
 };
 
