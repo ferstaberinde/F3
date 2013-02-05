@@ -37,7 +37,7 @@ if (f_var_debugMode == 1) then
 // Using f_var_units we will create an array containing all BLUFOR units.
 
 f_var_units_BLU = [];
-{if ((side _x) == west) then {f_var_units_BLU = f_var_units_BLU + [_x]}} forEach f_var_units;
+{if ((side _x) == west || _x != F2_Precompile_WEST ) then {f_var_units_BLU = f_var_units_BLU + [_x]}} forEach f_var_units;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -67,7 +67,7 @@ if (f_var_debugMode == 1) then
 // Using f_var_units we will create an array containing all OPFOR units.
 
 f_var_units_OPF = [];
-{if ((side _x) == east) then {f_var_units_OPF = f_var_units_OPF + [_x]}} forEach f_var_units;
+{if ((side _x) == east || _x != F2_Precompile_EAST) then {f_var_units_OPF = f_var_units_OPF + [_x]}} forEach f_var_units;
 
 // DEBUG
 if (f_var_debugMode == 1) then
