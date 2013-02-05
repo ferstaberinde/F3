@@ -198,6 +198,7 @@ Version | Date
 2-7-1 | DD MMM 2013
 
 * Fixed incorrect unit names in Takistani Locals platoon.
+* Fixed incorrect classnames for pilots and crew in CDF platoon.
 
 2-7-0 | 15 DEC 2012
 
