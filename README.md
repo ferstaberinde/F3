@@ -197,7 +197,8 @@ Version | Date
 
 2-7-1 | DD MMM 2013
 
-* Changed Preplaced Game Logics component: synchronizing medic modules with every single unit is no longer
+* Changed default setting for Backpacks mission parameter to "off".
+* Changed Preplaced Game Logics component: synchronizing medic modules with every single unit is no longer required.
 * Changed ACRE Support component: 148s restricted to element leaders
 * Fixed incorrect unit names in Takistani Locals platoon.
 * Fixed incorrect classnames for pilots and crew in CDF platoon.
