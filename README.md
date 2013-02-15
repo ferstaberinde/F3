@@ -199,9 +199,10 @@ Version | Date
 
 * Changed default setting for Backpacks mission parameter to "off".
 * Changed Preplaced Game Logics component: synchronizing medic modules with every single unit is no longer required.
-* Changed ACRE Support component: 148s restricted to element leaders
+* Changed ACRE Support component: 148s restricted to element leaders.
 * Fixed incorrect unit names in Takistani Locals platoon.
 * Fixed incorrect classnames for pilots and crew in CDF platoon.
+* Fixed F2 Common Local Variables so it no longer includes the F2_Precompile_East and F2_Precompile_West units used by the CO Folk ARPS Assign Gear Script component.
 
 2-7-0 | 15 DEC 2012
 
