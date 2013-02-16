@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 2-7-1     | DD MMM 2013 | Patch release - Various improvements (see change history).
+* 2-7-1     | 16 FEB 2013 | Patch release - Various improvements (see change history).
 * 2-7-0     | 15 DEC 2012 | Patch release - Various improvements (see change history).
 * 2-6-1     | 02 JUL 2012 | Patch release - Various improvements (see change history).
 * 2-6-0     | 07 JUN 2012 | Patch release - Various improvements (see change history).
@@ -195,8 +195,9 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F2 / BAS f contributors)
 
 Version | Date
 
-2-7-1 | DD MMM 2013
+2-7-1 | 16 FEB 2013
 
+* Added Mission Observers component. 
 * Changed default setting for Backpacks mission parameter to "off".
 * Changed Preplaced Game Logics component: synchronizing medic modules with every single unit is no longer required.
 * Changed ACRE Support component: 148s restricted to element leaders.
