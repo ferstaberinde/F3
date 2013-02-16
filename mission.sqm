@@ -92,7 +92,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=326;
+		items=328;
 		class Item0
 		{
 			side="WEST";
@@ -16035,6 +16035,52 @@ class Mission
 					leader=1;
 					skill=0.5;
 					init="this synchronizeObjectsAdd playableUnits";
+				};
+			};
+		};
+		class Item326
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={365.14804,475.41672,867.92078};
+					azimut=-1.0788;
+					id=1141;
+					side="CIV";
+					vehicle="Haris_Press_EP1";
+					player="PLAY CDG";
+					leader=1;
+					rank="COLONEL";
+					skill=0.60000002;
+					init="this addAction [""Start Camera"",""camera.sqs"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
+					description="Mission Observer (Journalist)";
+					synchronizations[]={1141};
+				};
+			};
+		};
+		class Item327
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={369.06528,474.08881,867.78546};
+					azimut=-1.0788;
+					id=1142;
+					side="CIV";
+					vehicle="Citizen3_EP1";
+					player="PLAY CDG";
+					leader=1;
+					rank="COLONEL";
+					skill=0.60000002;
+					init="this addAction [""Start Camera"",""camera.sqs"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
+					description="Mission Observer (Civilian)";
+					synchronizations[]={1142};
 				};
 			};
 		};
