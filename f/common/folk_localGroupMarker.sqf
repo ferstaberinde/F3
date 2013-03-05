@@ -55,7 +55,7 @@ if ((count (units _grp)) == 0) then
 	}
 	else
 	{
-
+hint "hello";
 // ====================================================================================
 
 // CREATE MARKER
@@ -69,7 +69,7 @@ if ((count (units _grp)) == 0) then
 			{
 				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 				_mkr setMarkerShapeLocal "ICON";
-				_mkrName setMarkerTypeLocal "B_HQ";
+				_mkrName setMarkerTypeLocal "b_hq";
 				_mkrName setMarkerColorLocal _mkrColor;
 				_mkrName setMarkerSizeLocal [0.8, 0.8];
 				_mkrName setMarkerTextLocal _mkrText;

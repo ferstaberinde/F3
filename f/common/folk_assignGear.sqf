@@ -45,12 +45,7 @@ if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _u
 _useBackpacks = paramsArray select 0;
 _useACRE = paramsArray select 1;
 
-switch(_faction) do
-{
-case "pmc_baf":{_faction = "bis_un";};						// PMC get the UN gear
-case "civ":{_faction="bis_tk_civ";_useBackpacks=0;};		// CIV as TIK_CIV (note: no backpacks for A2 original units)
-case "civ_ru":{_faction="bis_tk_civ";_useBackpacks=0;};		// CIV_RU as TK_CIV (note: no backpacks for A2 original units)
-};
+
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -60,163 +55,32 @@ case "civ_ru":{_faction="bis_tk_civ";_useBackpacks=0;};		// CIV_RU as TK_CIV (no
 
 // ====================================================================================
 
-// GEAR: US
+// GEAR: NATO
 // The following block of code executes only if the player is in a US slot; it 
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "bis_us") then {
-#include "folk_assignGear_us.sqf"
+if (_faction == "BLU_F") then {
+#include "folk_assignGear_nato.sqf"
 };
 
 // ====================================================================================
 
-// GEAR: USMC
+// GEAR: IRAN
 // The following block of code executes only if the player is in a USMC slot; it 
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "usmc") then {
-#include "folk_assignGear_usmc.sqf"
+if (_faction == "OPF_F") then {
+#include "folk_assignGear_iran.sqf"
 };
 
-// ====================================================================================
-
-// GEAR: CDF
-// The following block of code executes only if the player is in a CDF slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "cdf") then {
-#include "folk_assignGear_cdf.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: BRITISH ARMED FORCES
-// The following block of code executes only if the player is in a BRITISH ARMED FORCES
-// slot; it automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "bis_baf") then {
-#include "folk_assignGear_baf.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: TAKISTANI ARMY
-// The following block of code executes only if the player is in a TAKISTANI ARMY slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "bis_tk") then {
-#include "folk_assignGear_tk.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: RUSSIA
-// The following block of code executes only if the player is in a RUSSIA slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "ru") then {
-#include "folk_assignGear_ru.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: TAKISTANI MILITIA
-// The following block of code executes only if the player is in a TAKISTANI MILITIA slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "bis_tk_ins") then {
-#include "folk_assignGear_tk_ins.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: INSURGENT
-// The following block of code executes only if the player is in a INSURGENT slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "ins") then {
-#include "folk_assignGear_ins.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: TAKISTANI LOCALS (INDEPENDENT)
-// The following block of code executes only if the player is in a TAKISTANI LOCALS (INDEPENDENT) slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "bis_tk_gue") then {
-#include "folk_assignGear_tk_gue.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: GUERILLAS
-// The following block of code executes only if the player is in a GUERILLA slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "gue") then {
-#include "folk_assignGear_gue.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: UN
-// The following block of code executes only if the player is in a UN slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "bis_un") then {
-#include "folk_assignGear_un.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: CZECH REPUBPLIC
-// The following block of code executes only if the player is in a CZECH REPUBPLIC slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "bis_cz") then {
-#include "folk_assignGear_cz.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: GERMAN
-// The following block of code executes only if the player is in a GERMAN slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "bis_ger") then {
-#include "folk_assignGear_ger.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: CIVILIAN (TAKISTANI)
-// The following block of code executes only if the player is in a CIVILIAN (TAKISTANI) slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "bis_tk_civ") then {
-#include "folk_assignGear_tk_civ.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: CIVILIAN (SPECIAL)
-// The following block of code executes only if the player is in a CIVILIAN (SPECIAL) slot; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "bis_civ_special") then {
-#include "folk_assignGear_civ_special.sqf"
-};
-
-// ====================================================================================
 
 // GEAR: ACRE
 // The following block of code executes only if the ACRE parameter is set to true; it 
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_useACRE == 1) then {
-#include "folk_assignGear_acre.sqf"
-};
+//if (_useACRE == 1) then {
+//#include "folk_assignGear_acre.sqf"
+//};
 
 // ====================================================================================
 
