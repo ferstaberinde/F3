@@ -1,6 +1,1 @@
-; F2 - Kegetys Spectator Script
-; Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
-; ====================================================================================
-
-; Initialize spectating script when player dies:
-_this execVM "f\common\f_spect\specta.sqf";
+_this select 2 execVM "f\common\f_spect\gcam_start.sqf";

@@ -84,7 +84,7 @@ f_endSelected = -1;
 // F2 - Kegetys Spectator Script
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
-[] execVM "f\common\f_spect\specta_init.sqf";
+player addEventHandler ["killed", {_this exec "f\common\f_spect\gcam_start.sqf"}];
 
 // ====================================================================================
 
