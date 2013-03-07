@@ -13,6 +13,7 @@ f_processParamsArray = [] execVM "f\common\f_processParamsArray.sqf";
 
 enableSaving [false, false];
 
+
 // ====================================================================================
 
 // F2 - Respawn INIT
@@ -84,7 +85,7 @@ f_endSelected = -1;
 // F2 - Kegetys Spectator Script
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
-player addEventHandler ["killed", {_this exec "f\common\f_spect\gcam_start.sqf"}];
+[] execVM "f\common\f_spect\specta_init.sqf";
 
 // ====================================================================================
 
@@ -248,3 +249,4 @@ player setVariable ["BIS_noCoreConversations", true];
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
 [false] execVM "f\common\f_groupJoinAddOption.sqf";
+
