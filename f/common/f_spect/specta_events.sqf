@@ -270,7 +270,7 @@ switch (_type) do {
 			_size = 0.5;
 			_cam = _param select 1;
 			
-			_part = "\ca\data\cl_water.p3d";
+			_part = "a3\data\cl_water.p3d";
 			if(KEGsClientAddonPresent) then {_part = "\KEGspect\tag.p3d"};
 			
 			{

@@ -772,7 +772,7 @@ KEGsTagSources = [];
 
 _debugPlayer groupchat format ["ENTERING ButterFly Mode", VM_SpectatorCamerasEnabled];
 // Create a butterfly for player to fly with
-_bpos = [(((vehicle KEGs_target)modelToWorld [0,0,0])  select 0)-5+random 10, (((vehicle KEGs_target) modelToWorld [0,0,0])  select 1)-5+random 10, 1];
+/*_bpos = [(((vehicle KEGs_target)modelToWorld [0,0,0])  select 0)-5+random 10, (((vehicle KEGs_target) modelToWorld [0,0,0])  select 1)-5+random 10, 1];
 // _bird = "ButterFlySpectator"createVehicle _bpos; //custom ButterFly for improved flight.
 _bird = "ButterFly"createVehicle _bpos;
 _bird setvelocity[0,0,5];
@@ -783,14 +783,20 @@ _bird cameraEffect["terminate","FRONT"];
 _bird camCommand "manual on";
 
 camUseNVG false; setAperture -1; //  Reset NVGs
-EndLoadingScreen;	
+
 KEGsBird = _bird;
 onMapSingleClick "KEGsBird setpos [_pos select 0, _pos select 1, 2];KEGsBird setvelocity[0,0,5];";
 
 cutText["\n\n\n\n\nLand on ground to return to spectating\nClick at map to jump to location","PLAIN DOWN", 0.75];
-
+*/
+EndLoadingScreen;	
+_cam_script = player execVM "f\common\f_spect\camera.sqf";
 // Wait until landed, delete bird & restart script
-waitUntil{(_bird modelToWorld [0,0,0]) select 2 < 0.05 and speed _bird < 1};
+//waitUntil{(_bird modelToWorld [0,0,0]) select 2 < 0.05 and speed _bird < 1};
+waituntil {
+	if (!isnull BIS_DEBUG_CAM) then {_lastpos = position BIS_DEBUG_CAM};
+	isNull BIS_DEBUG_CAM
+};
 onMapSingleClick "";
 
 sleep(0.5);

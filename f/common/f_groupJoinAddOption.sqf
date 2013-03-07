@@ -29,7 +29,7 @@ while {true} do {
 		_nearGroup = group _nearUnit;
 
 		// Using curly braces makes the if statement cheaper to evaluate, but requires OA 1.62
-		if (alive _nearUnit && {group player != _nearGroup && {_nearUnit == leader _nearGroup && {_nearUnit in playableUnits}}}) then {
+		if (alive _nearUnit && group player != _nearGroup && _nearUnit == leader _nearGroup && _nearUnit in playableUnits) then {
 			if (_allowDifferentSide || {side player == side _nearGroup}) then {
 				_actionString = format["Join group: %1", _nearGroup];
 			

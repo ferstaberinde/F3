@@ -85,7 +85,7 @@ switch (_unitfaction) do
 // Iran
 // Markers seen by players in Iran slots.
 	
-	case "OPF_F":
+	case "opf_f":
 	{
 		["GrpIR_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpIR_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;

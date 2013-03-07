@@ -36,34 +36,6 @@ class Params
 
 // ============================================================================================
 
-// F2 - Whether AssignGear should allow Backpacks for OA/BAF/PMC units. Works only on A2 units in CO 1.63 or later.
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT OR CHANGE POSITION IN PARAMS; IT MUST BE REFERENCABLE
-// AS "paramsarray select 0" FOR GEAR SCRIPTS TO WORK CORRECTLY
-	class f_param_useBackpacks
-        {
-                title = "OA Backpacks";
-                values[] = {0,1};
-                texts[] = {"Off","On"};
-                default = 0;
-                code = "f_param_useBackpacks = %1";
-        }; 
-		
-// ============================================================================================
-
-// F2 - ACRE Support
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT OR CHANGE POSITION IN PARAMS; IT MUST BE REFERENCABLE
-// AS "paramsarray select 1" FOR GEAR SCRIPTS TO WORK CORRECTLY
-
-        class f_param_acre
-        {
-                title = "ACRE";
-                values[] = {0,1};
-                texts[] = {"Off","On"};
-                default = 0;
-                code = "f_var_acre = %1";
-        }; 
 
 // ============================================================================================
 
@@ -158,7 +130,7 @@ class Params
 // F2 - Kegetys Spectator Script
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
-#include "f\common\f_spect\gcam_component.hpp"
+#include "f\common\f_spect\spectating.hpp"
 
 // ============================================================================================
 

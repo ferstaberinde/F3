@@ -1,1 +1,12 @@
-_this select 2 execVM "f\common\f_spect\gcam_start.sqf";
+;MUF test------------------------------------------------------------
+;wait until health PPs are finished (death after unconscious, sudden death - see TEST_HealthPP.FSM)
+@(missionnamespace getvariable ["BIS_allowDeathScreen",true])
+BIS_allowHealthPP = false;
+(["HealthPP_black"] call bis_fnc_rscLayer) cutText ["","BLACK IN",8];
+
+; F2 - Kegetys Spectator Script
+; Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+; ====================================================================================
+
+; Initialize spectating script when player dies:
+_this execVM "f\common\f_spect\specta.sqf";

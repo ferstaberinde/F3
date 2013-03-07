@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_faction","_typeofUnit","_unit","_useBackpacks"];
+private ["_faction","_typeofUnit","_unit"];
 private [
 //"_faction",												
 "_glrifle","_glriflemag","_glmag",						
@@ -25,8 +25,7 @@ private [
 "_carbine","_carbinemag",								
 "_smg","_smgmag",										
 "_bagmedium","_baglarge",
-"_mine","_satchel",
-"_radio1","_radio2","_radio3"
+"_mine","_satchel"
 ];
 
 // ====================================================================================
@@ -42,8 +41,7 @@ _faction = toLower (faction _unit);
 // If the unitfaction is different from the group leader's faction and the unit is not a vehicle, the latters faction is used
 if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _unit)))) then {_faction = toLower (faction (leader group _unit))};
 
-_useBackpacks = paramsArray select 0;
-_useACRE = paramsArray select 1;
+
 
 
 
@@ -73,14 +71,6 @@ if (_faction == "OPF_F") then {
 #include "folk_assignGear_iran.sqf"
 };
 
-
-// GEAR: ACRE
-// The following block of code executes only if the ACRE parameter is set to true; it 
-// automatically includes a file which contains the appropriate equipment data.
-
-//if (_useACRE == 1) then {
-//#include "folk_assignGear_acre.sqf"
-//};
 
 // ====================================================================================
 
