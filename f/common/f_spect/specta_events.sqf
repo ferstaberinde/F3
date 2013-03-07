@@ -365,7 +365,7 @@ switch (_type) do {
 			comment "Marker for round itself, for bullet display line, everything else a named marker";
 			if(_type == "shotMissile" OR _type == "shotRocket" OR _type == "shotShell" OR _type == "shotTimeBomb" OR _type == "shotPipeBomb" OR _type == "shotMine" OR _type == "shotSmoke") then {
 				_m = createMarkerLocal[format["KEGsMarkerFired%1", random 10000], [(getpos _o select 0)+(sin KEGs_dir)*_len, (getpos _o select 1)+(cos KEGs_dir)*_len, 0]];
-				_m setMarkerTypeLocal "Dot";
+				_m setMarkerTypeLocal "mil_dot";
 				_m setMarkerColorLocal "ColorWhite";
 				_m setMarkerSizeLocal[0.25,0.5];
 				_m setMarkerTextLocal _name;
