@@ -1,5 +1,6 @@
 //--- Classic camera script, enhanced by Karel Moricky, 2010/03/19
-
+_kegpos = _this select 1;
+_this = _this select 0;
 if (!isNil "BIS_DEBUG_CAM") exitwith {};
 
 //--- Is FLIR available
@@ -28,11 +29,10 @@ if (isnil "BIS_DEBUG_CAM_PPEFFECTS") then {
 if (typename _this != typename objnull) then {_this = cameraon};
 
 private ["_ppos", "_pX", "_pY"];
-_ppos = getPosATL _this;
+_ppos = _kegpos;
 _pX = _ppos select 0;
 _pY = _ppos select 1;
 _pZ = _ppos select 2;
-
 private ["_local"];
 _local = "camera" camCreate [_pX, _pY, _pZ + 2];
 BIS_DEBUG_CAM = _local;

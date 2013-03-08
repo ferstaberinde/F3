@@ -172,6 +172,7 @@ KEGs_cLbSeparator = lbAdd[KEGs_cLBCameras, "---"];
 lbSetColor[KEGs_cLBCameras, KEGs_cLbSeparator, [0.5, 0.5, 0.5, 0.5]];
 KEGs_cLbMissileCam = lbAdd[KEGs_cLBCameras, "Missile camera"];
 KEGs_cLbToggleNVG = lbAdd[KEGs_cLBCameras, "Night vision"];
+KEGs_cLbToggleNVG = lbAdd[KEGs_cLBCameras, "Termal vision"];
 KEGs_cLbToggleTags = lbAdd[KEGs_cLBCameras, "Unit tags"];
 KEGs_cLbToggleAiFilter = lbAdd[KEGs_cLBCameras, "Filter AI"];
 KEGs_cLbToggleDeadFilter = lbAdd[KEGs_cLBCameras, "Filter Unknown (Dead)"];
@@ -692,10 +693,10 @@ KEGsTagSources = [];
 	//if(typeName _kh == "SCALAR") then {_x removeEventHandler["killed", _kh]};
 } foreach _ehVehicles;
 
-
+_bpos = [(((vehicle KEGs_target)modelToWorld [0,0,0])  select 0)-5+random 10, (((vehicle KEGs_target) modelToWorld [0,0,0])  select 1)-5+random 10, 1];
 _debugPlayer groupchat format ["ENTERING ButterFly Mode", VM_SpectatorCamerasEnabled];
 // Create a butterfly for player to fly with
-/*_bpos = [(((vehicle KEGs_target)modelToWorld [0,0,0])  select 0)-5+random 10, (((vehicle KEGs_target) modelToWorld [0,0,0])  select 1)-5+random 10, 1];
+/*
 // _bird = "ButterFlySpectator"createVehicle _bpos; //custom ButterFly for improved flight.
 _bird = "ButterFly"createVehicle _bpos;
 _bird setvelocity[0,0,5];
@@ -713,7 +714,7 @@ onMapSingleClick "KEGsBird setpos [_pos select 0, _pos select 1, 2];KEGsBird set
 cutText["\n\n\n\n\nLand on ground to return to spectating\nClick at map to jump to location","PLAIN DOWN", 0.75];
 */
 EndLoadingScreen;	
-_cam_script = player execVM "f\common\f_spect\camera.sqf";
+_cam_script = [player,_bpos] execVM "f\common\f_spect\camera.sqf";
 // Wait until landed, delete bird & restart script
 //waitUntil{(_bird modelToWorld [0,0,0]) select 2 < 0.05 and speed _bird < 1};
 waituntil {

@@ -55,7 +55,7 @@ _smg_attach = nil;
 // nil means it wont be touched
 
 _glrifle = "arifle_MX_GL_ACOg_point_F"; _glriflemag = "30Rnd_65x39_caseless_mag";_glriflemag_tr = "30Rnd_65x39_caseless_mag_Tracer" ; _glmag = "1Rnd_HE_Grenade_shell";														// Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle_attach = ["acc_flashlight","optic_ACO_grn"];
+_glrifle_attach = ["acc_flashlight","optic_Aco"];
 
 _glsmokewhite = "1Rnd_Smoke_Grenade_shell"; _glsmokegreen = "1Rnd_SmokeGreen_Grenade_shell"; _glsmokered = "1Rnd_SmokeRed_Grenade_shell";    							// Smoke for FTLs, Squad Leaders, etc 
 _glflarewhite = "3Rnd_UGL_FlareWhite_F"; _glflarered = "3Rnd_UGL_FlareRed_F"; _glflareyellow = "3Rnd_UGL_FlareYellow_F"; _glflaregreen = "3Rnd_UGL_FlareGreen_F";	// Flares for FTLs, Squad Leaders, etc
@@ -67,7 +67,7 @@ _firstaid = "FirstAidKit";
 _cocap  = "H_Cap_headphones";
 _medkit = "Medikit";
 _bagmedium = "B_AssaultPack_khk";		// 8+ slots																							// Backpack for assistant gunners (AAR, AMMG, AMAT, AHAT), so that they don't have to drop ammo themselves
-_baglarge =  "B_Bergen_sgg"; 		// 12+ slots
+_baglarge =  "B_Kitbag_mcamo"; 		// 12+ slots
 		//  6 Slots: "CZ_Vestpouch_EP1"
 		//  8 Slots: "US_Assault_Pack_EP1", "US_Patrol_Pack_EP1", "TK_Assault_Pack_EP1", "TK_RPG_Backpack_EP1"
 		// 12 Slots: "US_Backpack_EP1", "TK_ALICE_Pack_EP1",
@@ -158,12 +158,11 @@ switch (_typeofUnit) do
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
 		{_unit addmagazine _smokegrenadegreen;} foreach [1];
-		_unit addItem "Binocular";
-		_unit assignItem "Binocular";
+		_unit addWeapon "Binocular";
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";		
-		removeHeadgear _unit;
-		_unit addHeadgear _cocap;
+	//	removeHeadgear _unit;
+	//	_unit addHeadgear _cocap;
 		// Backpack
 		_unit addBackpack _bagmedium;
 		clearMagazineCargoGlobal (unitBackpack _unit);
@@ -187,8 +186,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
 		{_unit addmagazine _smokegrenadegreen;} foreach [1];
-		_unit addItem "Binocular";
-		_unit assignItem "Binocular";
+		_unit addWeapon "Binocular";
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";	
 		// Backpack
@@ -205,8 +203,13 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _carbinemag} foreach [1,2,3,4,5];	
 		_unit addweapon _carbine;
-		_unit addItem  _medkit;
-		{_unit addmagazine _smokegrenade;} foreach [1,2,3];		
+		{_unit addmagazine _smokegrenade;} foreach [1,2,3];	
+		_unit addBackpack _bagmedium;
+		clearMagazineCargoGlobal (unitBackpack _unit);
+		(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 4];
+		(unitBackpack _unit) addItemCargoGlobal [_medkit,1];
+		(unitBackpack _unit) addItemCargoGlobal [_firstaid,5];
+		
 	};
 
 // LOADOUT: FIRE TEAM LEADER
@@ -220,8 +223,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _grenade} foreach [1,2];
 		{_unit addmagazine _smokegrenade;} foreach [1,2];
 		{_unit addmagazine _smokegrenadegreen;} foreach [1];
-		_unit addItem "Binocular";
-		_unit assignItem "Binocular";
+		_unit addWeapon "Binocular";
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";	
 		// Backpack
@@ -316,8 +318,7 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _riflemag} foreach [1,2,3,4,5,6];
 		_unit addweapon _rifle;
-		_unit addItem "Binocular";
-		_unit assignItem "Binocular";
+		_unit addWeapon "Binocular";
 		{_unit addmagazine _grenade} foreach [1];
 		{_unit addmagazine _smokegrenade;} foreach [1];
 		{_unit addmagazine _riflemag} foreach [1,2];
@@ -347,8 +348,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _riflemag} foreach [1,2,3,4,5];
 		{_unit addmagazine _riflemag_tr} foreach [1,2];
 		_unit addweapon _rifle;
-		_unit addItem "Binocular";
-		_unit assignItem "Binocular";
+		_unit addWeapon "Binocular";
 		{_unit addmagazine _smokegrenade;} foreach [1];		
 		_unit addBackpack _HMGmount;
 	};		
@@ -370,8 +370,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _riflemag} foreach [1,2,3,4,5];
 		{_unit addmagazine _riflemag_tr} foreach [1,2];
 		_unit addweapon _rifle;
-		_unit addItem "Binocular";
-		_unit assignItem "Binocular";
+		_unit addWeapon "Binocular";
 		{_unit addmagazine _smokegrenade;} foreach [1];		
 		{_unit addmagazine _riflemag} foreach [1,2];
 		{_unit addmagazine _grenade} foreach [1];
@@ -400,8 +399,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _riflemag} foreach [1,2,3,4,5];
 		{_unit addmagazine _riflemag_tr} foreach [1,2];
 		_unit addweapon _rifle;
-		_unit addItem "Binocular";
-		_unit assignItem "Binocular";
+		_unit addWeapon "Binocular";
 		{_unit addmagazine _smokegrenade;} foreach [1];	
 		{_unit addmagazine _riflemag} foreach [1,2];
 		{_unit addmagazine _grenade} foreach [1];
@@ -429,8 +427,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _carbinemag_tr} foreach [1,2];
 		_unit addweapon _carbine;
 		{_unit addmagazine _smokegrenade;} foreach [1];	
-		_unit addItem "Binocular";
-		_unit assignItem "Binocular";
+		_unit addWeapon "Binocular";
 		_unit addBackpack _MTRmount;
 	};		
 	
@@ -439,8 +436,7 @@ switch (_typeofUnit) do
 	{
 		{_unit addmagazine _SNriflemag} foreach [1,2];
 		_unit addweapon _SNrifle;
-		_unit addItem "Binocular";
-		_unit assignItem "Binocular";
+		_unit addWeapon "Binocular";
 		{_unit addmagazine _smokegrenade;} foreach [1];
 	};		
 	
@@ -450,8 +446,7 @@ switch (_typeofUnit) do
 		{_unit addmagazine _riflemag} foreach [1,2,3,4];
 		{_unit addmagazine _riflemag_tr} foreach [1,2];
 		_unit addweapon _rifle;
-		_unit addItem "Binocular";
-		_unit assignItem "Binocular";
+		_unit addWeapon "Binocular";
 		{_unit addmagazine _smokegrenade;} foreach [1];
 	};			
 	
@@ -482,13 +477,13 @@ switch (_typeofUnit) do
 		{_unit addmagazine _satchel} foreach [1,2];
 		{_unit addmagazine _ATmine} foreach [1];
 		{_unit addmagazine _APmine} foreach [1,2];
-		_unit addItem  "ToolKit";
 		// Backpack
 		_unit addBackpack _baglarge;
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addMagazineCargoGlobal [_satchel, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_mine, 1];	
 		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];	
+		(unitBackpack _unit) addItemCargoGlobal [ToolKit,1];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
 	};	
 		

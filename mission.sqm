@@ -21,6 +21,8 @@ class Mission
 	randomSeed=11823142;
 	class Intel
 	{
+		briefingName="F3";
+		briefingDescription="F3";
 		startWeather=0.29999998;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -36,7 +38,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=34;
+		items=36;
 		class Item0
 		{
 			side="WEST";
@@ -366,7 +368,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitNO_BSL_SL";
 					init="GrpNO_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
-					description="US Army Bravo Squad Leader";
+					description="NATO Bravo Squad Leader";
 				};
 				class Item1
 				{
@@ -1648,6 +1650,72 @@ class Mission
 				};
 			};
 		};
+		class Item34
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={2704.0129,36.725578,2240.8887};
+					id=102;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="UnitNO_MMG1_G";
+					init="GrpNO_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;      ";
+					description="NATO Medium MG Team 1 Gunner";
+				};
+				class Item1
+				{
+					position[]={2705.4045,37.085453,2239.1489};
+					id=103;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitNO_MMG1_AG";
+					init="GrpNO_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear; ";
+					description="NATO Medium MG Team 1 Assistant Gunner";
+				};
+			};
+		};
+		class Item35
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={3739.5156,57.668858,2507.4834};
+					id=104;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="UnitIR_MMG1_G";
+					init="GrpIR_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;";
+					description="Iran Medium MG Team 1 Gunner";
+				};
+				class Item1
+				{
+					position[]={3741.0459,57.185135,2504.9087};
+					id=105;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitIR_MMG1_AG";
+					init="GrpIR_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear;";
+					description="Iran Medium MG Team 1 Assistant Gunner";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -1655,7 +1723,7 @@ class Mission
 		class Item0
 		{
 			position[]={2652.4382,35.617622,2247.4512};
-			id=102;
+			id=106;
 			side="EMPTY";
 			vehicle="B_MH9_F";
 			leader=1;
@@ -1665,7 +1733,7 @@ class Mission
 		class Item1
 		{
 			position[]={3766.6414,56.352562,2494.5459};
-			id=103;
+			id=107;
 			side="EMPTY";
 			vehicle="O_Ka60_F";
 			skill=0.60000002;
@@ -1688,22 +1756,6 @@ class Mission
 			name="f_extract";
 			text="extract";
 			type="mil_end";
-		};
-	};
-	class Sensors
-	{
-		items=1;
-		class Item0
-		{
-			position[]={2723.2854,73.955223,2361.3408};
-			activationBy="ALPHA";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expActiv="nul = [player, player, ""null""] execVM ""f\common\f_spect\specta.sqf"";";
-			class Effects
-			{
-			};
 		};
 	};
 };
