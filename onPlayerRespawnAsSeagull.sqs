@@ -4,8 +4,8 @@
 BIS_allowHealthPP = false;
 (["HealthPP_black"] call bis_fnc_rscLayer) cutText ["","BLACK IN",8];
 
-; F2 - Kegetys Spectator Script
-; Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+; F3 - Kegetys Spectator Script
+; Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 ; ====================================================================================
 
 ; Initialize spectating script when player dies:

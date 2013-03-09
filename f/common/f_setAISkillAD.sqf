@@ -1,5 +1,5 @@
-// F2 - AI Skill Selector (A&D)
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - AI Skill Selector (A&D)
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
 // JIP CHECK

@@ -1,5 +1,5 @@
 // F2A2 - f_AddMagToRuck
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
 // arguments: [_unit, _mag, _count] (_count is optional )
