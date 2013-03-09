@@ -34,7 +34,7 @@ GrpNO_TNK1 setGroupId ["NATO Army TNK1 -","GroupColor0"];
 GrpNO_TH1 setGroupId ["NATO Army TH1 -","GroupColor0"];
 GrpNO_TH2 setGroupId ["NATO Army TH2 -","GroupColor0"];
 GrpNO_AH1 setGroupId ["NATO Army AH1 -","GroupColor0"];
-
+GrpNO_FG1 setGroupId ["NATO Army FG1 -","GroupColor0"];
 // ====================================================================================
 
 // GROUP IDs: Iran
@@ -69,7 +69,7 @@ GrpIR_TNK1 setGroupId ["Iran TNK1 -","GroupColor0"];
 GrpIR_TH1 setGroupId ["Iran TH1 -","GroupColor0"];
 GrpIR_TH2 setGroupId ["Iran TH2 -","GroupColor0"];
 GrpIR_AH1 setGroupId ["Iran AH1 -","GroupColor0"];
-
+GrpIR_FG1 setGroupId ["Iran Army FG1 -","GroupColor0"];
 //===================================================================================== 
 
 if (true) exitWith {};
