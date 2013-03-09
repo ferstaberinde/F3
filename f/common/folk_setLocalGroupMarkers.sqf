@@ -78,6 +78,7 @@ switch (_unitfaction) do
 		["UnitNO_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;		
 		["UnitNO_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
 		["UnitNO_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["GrpNO_FG1",  4, "FG1", "ColorBlue"] spawn fnc_folk_localGroupMarker;
 	};
 
 // ====================================================================================
@@ -121,6 +122,7 @@ switch (_unitfaction) do
 		["UnitIR_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;		
 		["UnitIR_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
 		["UnitIR_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["GrpNO_FG1",  4, "FG1", "ColorBlue"] spawn fnc_folk_localGroupMarker;
 	};
 };
 if (true) exitWith {};

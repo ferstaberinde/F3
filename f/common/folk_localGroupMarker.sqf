@@ -98,7 +98,7 @@ if ((count (units _grp)) == 0) then
 			{
 				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 				_mkr setMarkerShapeLocal "ICON";
-				_mkrName setMarkerTypeLocal "B_EMPTY";
+				_mkrName setMarkerTypeLocal "B_MOTOR_INF";
 				_mkrName setMarkerColorLocal _mkrColor;
 				_mkrName setMarkerSizeLocal [0.8, 0.8];
 				_mkrName setMarkerTextLocal _mkrText;
@@ -161,7 +161,7 @@ if ((count (units _grp)) == 0) then
 // As long as certain conditions are met (the group leader is alive) the marker 
 // position is updated periodically. This only happens locally - so as not to burden 
 // the server.
-
+// head:task:rewrite
 		for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
 		{
 			if (alive leader _grp) then 
