@@ -13,7 +13,6 @@ f_processParamsArray = [] execVM "f\common\f_processParamsArray.sqf";
 
 enableSaving [false, false];
 
-
 // ====================================================================================
 
 // F3 - Respawn INIT
@@ -31,7 +30,7 @@ f_respawnINIT = player addEventHandler ["killed", {_this execVM "init_onPlayerRe
 
 // ====================================================================================
 
-// F3 - CO Briefing
+// F3 - Briefing
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "briefing.sqf";
@@ -66,7 +65,7 @@ f_script_setGroupIDs = [] execVM "f\common\folk_setGroupIDs.sqf";
 
 // ====================================================================================
 
-// F3 - F2 Common Local Variables
+// F3 - F3 Common Local Variables
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT
 
@@ -86,13 +85,6 @@ f_endSelected = -1;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\common\f_spect\specta_init.sqf";
-
-// ====================================================================================
-
-// F3 - Disable BIS Conversations
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-player setVariable ["BIS_noCoreConversations", true];
 
 // ====================================================================================
 

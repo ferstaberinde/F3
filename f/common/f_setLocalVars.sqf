@@ -1,4 +1,4 @@
-// F3 - F2 Common Local Variables
+// F3 - F3 Common Local Variables
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
