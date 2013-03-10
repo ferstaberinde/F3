@@ -97,18 +97,6 @@ f_endSelected = -1;
 
 // ====================================================================================
 
-// F3 - Automatic Body Removal (FIFO)
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// f_abrFIFOlength = 30;
-// f_abrDistance = 150;
-// f_abrFIFOmaxLength = 50;
-// f_doNotRemoveBodies = [];
-// ["fifo"] execVM "f\common\f_addRemoveBodyEH.sqf";
-// [] execVM "f\server\f_abrFIFO.sqf";
-
-// ====================================================================================
-
 // F3 - Dynamic View Distance 
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
