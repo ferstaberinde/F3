@@ -1,38 +1,43 @@
 // ============================================================================================
 
-// F2 - Mission Header
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
-dev = "head";
-author = "F3 Team";
-onLoadName = "MISSION_NAME";
-onLoadMission = "Made with F3 Framework";
-loadScreen = "logo.paa";
+// F3 - Mission Header
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
 class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 970;
+	maxPlayers = 162;
 };
 
 // ============================================================================================
 
-// F2 - Respawn Settings
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Loading Screen
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+onLoadName = "*** Insert mission name here. ***";
+onLoadMission = "Made with the F3 Mission Development Framework";
+loadScreen = "logo.paa";
+
+// ============================================================================================
+
+// F3 - Respawn Settings
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 respawn = 1;
 respawndelay = 3;
 
 // ============================================================================================
 
-// F2 - JIP Reinforcement Options
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - JIP Reinforcement Options
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 #include "f\common\f_JIP_kitpicker.h"
 #include "f\common\f_JIP_grppicker.h"
 
 // ============================================================================================
 
-// F2 - Start of Params code blocks.
+// F3 - Start of Params code blocks.
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
 class Params
@@ -40,11 +45,8 @@ class Params
 
 // ============================================================================================
 
-
-// ============================================================================================
-
-// F2 - Debug Mode
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Debug Mode
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT
 
         class f_param_debugMode
@@ -58,8 +60,8 @@ class Params
 
 // ============================================================================================
 
-// F2 - Mission Conditions Selector
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Mission Conditions Selector
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
         class f_param_timeOfDay
         {
@@ -69,19 +71,11 @@ class Params
                 default = 3;
                 code = "f_param_timeOfDay = %1";
         };   
-        class f_param_weather
-	{
-		title = "$STR_f_param_weather";
-		values[] = {0,1,2,3,4};
-		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4};
-		default = 0;
-		code = "f_param_weather = %1";
-        };
 
 // ============================================================================================
 
-// F2 - AI Skill Selector (coop)
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - AI Skill Selector (coop)
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 //	class f_param_AISkill_Friendly
 //	{
@@ -102,8 +96,8 @@ class Params
 
 // ============================================================================================
 
-// F2 - AI Skill Selector (A&D)
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - AI Skill Selector (A&D)
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 //	class f_param_AISkill_BLUFOR
 //	{
@@ -124,22 +118,22 @@ class Params
 
 // ============================================================================================
 
-// F2 - End of Params code blocks.
+// F3 - End of Params code blocks.
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
 };
 
 // ============================================================================================
 
-// F2 - Kegetys Spectator Script
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Kegetys Spectator Script
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 #include "f\common\f_spect\spectating.hpp"
 
 // ============================================================================================
 
-// F2 - Gear Snippets
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Gear Snippets
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // #include "f\common\f_gearSnippets.hpp"
 
@@ -149,8 +143,8 @@ class RscTitles {
 
 // ============================================================================================
 
-// F2 - Name Tags
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Name Tags
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // #include "f\common\f_recog\recogOverlay.hpp"
 

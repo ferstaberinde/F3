@@ -1,5 +1,5 @@
-// F2 - Mission Maker Teleport
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Mission Maker Teleport
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
@@ -13,7 +13,7 @@ private ["_textAction"];
 // not enabled, or if the global variable f_missionMakerTeleport has not been set to 
 // the value 1 in init.sqf.
 
-if (!local player || f_var_debugMode == 0 && f_missionMakerTeleport == 0) exitWith {};
+if (!local player || f_var_debugMode == 0 && f_missionMakerTeleport == 0 || f_var_debugMode == 0 && f_missionMakerTeleport == 1) exitWith {};
 
 // ====================================================================================
 

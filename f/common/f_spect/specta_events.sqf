@@ -144,7 +144,7 @@ switch (_type) do {
 				};
 			};
 			
-			case 50: {["ToggleMap",0] call spectate_events;};
+			case 50: {diag_log "mapplox";["ToggleMap",0] call spectate_events;};
 			case 15: {["ToggleUI",0] call spectate_events;};
 			case 59: {["ToggleHelp",0] call spectate_events;};			
 			

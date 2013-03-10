@@ -1,5 +1,5 @@
-// F2 - ORBAT Notes
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - ORBAT Notes
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
 // Group IDs need to be set before the ORBAT listing can be created

@@ -1,5 +1,5 @@
-// F2 - Process ParamsArray
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Process ParamsArray
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
 for [ { _i = 0 }, { _i < count(paramsArray) }, { _i = _i + 1 } ] do

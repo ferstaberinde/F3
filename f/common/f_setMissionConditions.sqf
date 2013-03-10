@@ -1,5 +1,5 @@
-// F2 - Mission Conditions Selector
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Mission Conditions Selector
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
@@ -30,7 +30,7 @@ switch (_timeOfDay) do
 // Dawn
 	case 0:
 	{
-		setDate [2007, 5, 11, 4, 50];
+		setDate [2007, 5, 11, 4, 20];
 	};
 // Early Morning
 	case 1:
@@ -60,7 +60,7 @@ switch (_timeOfDay) do
 // Dusk
 	case 6:
 	{
-		setDate [2007, 5, 11, 18, 50];
+		setDate [2007, 5, 11, 19, 30];
 	};
 // Night
 	case 7:

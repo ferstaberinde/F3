@@ -1,5 +1,5 @@
-// F2 - Add group join option to action menu
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Add group join option to action menu
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
 // This script can be called either without parameters, or with a single boolean parameter.

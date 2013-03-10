@@ -1,8 +1,8 @@
-// F2 - OA Briefing
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// F3 - Briefing
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// FACTION: BRITISH ARMED FORCES
+// FACTION: IRAN
 
 // ====================================================================================
 
@@ -23,7 +23,7 @@ _cre = player createDiaryRecord ["diary", ["Credits","
 <br/>
 *** Insert mission credits here. ***
 <br/><br/>
-Made with F2 (http://www.ferstaberinde.com/f2/en/)
+Made with F3 (http://www.ferstaberinde.com/f3/en/)
 "]];
 
 // ====================================================================================

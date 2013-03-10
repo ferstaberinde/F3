@@ -1,4 +1,4 @@
-// F2 - Folk Assign Gear Script -  Iran
+// F3 - Folk ARPS Attachment Gear Script
 // Credits: Head
 _wepClass = primaryweapon _unit;
 switch(_wepClass) do
@@ -90,6 +90,20 @@ switch(_wepClass) do
 	case _SNrifle: 
 	{
 		if(!isnil "_SNrifle_attach") then
+		{
+			_wepItems = primaryWeaponItems _unit;
+			{
+				_unit removeItemFromPrimaryWeapon _x;
+				_unit removeItem _x;
+			} foreach _wepItems;
+			{
+				_unit addPrimaryWeaponItem _x;
+			} foreach _SNrifle_attach;
+		};
+	};
+	case _diverWep:
+	{
+		if(!isnil "_diverWep_attach") then
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
