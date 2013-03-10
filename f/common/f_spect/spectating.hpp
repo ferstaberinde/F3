@@ -48,10 +48,11 @@ class rscSpectate {
 			{
 				color[] = {1,1,1,0.6};
 				colorActive[] = {1,1,1,1};
-				thumb = "\a3\ui_f\data\gui\cfg\Scrollbar\thumb_ca.paa";
-				arrowFull = "\a3\ui_f\data\gui\cfg\Scrollbar\arrowfull_ca.paa";
-				arrowEmpty = "\a3\ui_f\data\gui\cfg\Scrollbar\arrowempty_ca.paa";
-				border = "\a3\ui_f\data\gui\cfg\Scrollbar\border_ca.paa";
+				colorDisabled[] = {1,1,1,0.3};
+				thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
+				arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
+				arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
+				border = "\ca\ui\data\ui_border_scroll_ca.paa";
 			};
 			onMouseMoving = "[""MouseMoving"",_this] call spectate_events";
 			onMouseButtonDown = "[""MouseButtonDown"",_this] call spectate_events";
@@ -83,7 +84,7 @@ class rscSpectate {
 			shadow = true;
 			y = SafeZoneY;
 			h = BORDERSIZE;
-
+			font = "PuristaMedium";
 		};
 
 		// Camera menu
@@ -100,11 +101,11 @@ class rscSpectate {
 			{
 				color[] = {1,1,1,0.6};
 				colorActive[] = {1,1,1,1};
-				colorDisabled[] = {0,0,0,1};
-				thumb = "\a3\ui_f\data\gui\cfg\Scrollbar\thumb_ca.paa";
-				arrowFull = "\a3\ui_f\data\gui\cfg\Scrollbar\arrowfull_ca.paa";
-				arrowEmpty = "\a3\ui_f\data\gui\cfg\Scrollbar\arrowempty_ca.paa";
-				border = "\a3\ui_f\data\gui\cfg\Scrollbar\border_ca.paa";
+				colorDisabled[] = {1,1,1,0.3};
+				thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
+				arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
+				arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
+				border = "\ca\ui\data\ui_border_scroll_ca.paa";
 			};
 			autoScrollRewind=0;
 			autoScrollDelay=5;
@@ -117,7 +118,6 @@ class rscSpectate {
 			colorSelect2[] = COL_ORANGE;
 			colorSelectBackground[] = COL_GRAY;
 			colorSelectBackground2[] = COL_GRAY;
-			colorDisabled[] = {0,0,0,1};
 			sizeEx = 0.025;
 			onMouseButtonUp  = "['*Dialog*'] spawn CameraMenuHandler;";
 			// onLBSelChanged   = "KEGs_cameraIdx = (_this select 1); VM_CurrentCameraView = ''; ['*Dialog*'] spawn CameraMenuHandler;";
@@ -134,16 +134,15 @@ class rscSpectate {
 			colorBackground[] = {0, 0, 0, 0.7};
 		};
 		class menuTargetsLB : KEGsRscListBox {
-			colorDisabled[] = {0,0,0,1};
 			class ScrollBar
 			{
 				color[] = {1,1,1,0.6};
 				colorActive[] = {1,1,1,1};
-				colorDisabled[] = {0,0,0,1};
-				thumb = "\a3\ui_f\data\gui\cfg\Scrollbar\thumb_ca.paa";
-				arrowFull = "\a3\ui_f\data\gui\cfg\Scrollbar\arrowfull_ca.paa";
-				arrowEmpty = "\a3\ui_f\data\gui\cfg\Scrollbar\arrowempty_ca.paa";
-				border = "\a3\ui_f\data\gui\cfg\Scrollbar\border_ca.paa";
+				colorDisabled[] = {1,1,1,0.3};
+				thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
+				arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
+				arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
+				border = "\ca\ui\data\ui_border_scroll_ca.paa";
 			};
 			autoScrollRewind=0;
 			autoScrollDelay=5;
@@ -174,7 +173,7 @@ class rscSpectate {
 			sizeEx = 0.025;
 			color[] = {1.0, 1.0, 1.0, 0.9};
 			shadow = true;
-
+			font = "PuristaMedium";
 			onMouseButtonUp = "[""ToggleCameraMenu"",0] call spectate_events";
 		};
 		class tTarget : tCamera {
@@ -192,6 +191,7 @@ class rscSpectate {
 			style = 0;
 			sizeEx = 0.015; //0.030
 			colorText[] = {1.0, 1.0, 1.0, 0.9};
+			font = "PuristaMedium";
 		};
 
 		// Help text
@@ -223,7 +223,109 @@ class rscSpectate {
 			action ="";
 		};
 
+		// Map
+		class map : KEGsRscMapControl {
+			colorOutside[] = {0,0,0,1};
+			colorRailWay[] = {0,0,0,1};
+			maxSatelliteAlpha = 0;
+			alphaFadeStartScale = 1;
+			alphaFadeEndScale = 1.1;
+			class Task : Task
+			{
+				icon = "\A3\ui_f\data\map\mapcontrol\taskIcon_CA.paa";
+				size = 20;
+				color[] = {0,0.9,0,1};
+				importance = "1.2 * 16 * 0.05";
+				coefMin = 0.9;
+				coefMax = 4;
+			};
+			class CustomMark : CustomMark
+			{
+				icon = "\A3\ui_f\data\igui\cfg\cursors\customMark_ca.paa";
+				color[] = {0,0,1,1};
+				size = 18;
+				importance = 1;
+				coefMin = 1;
+				coefMax = 1;
+			};
+			idc = IDC_MAP;
+			x = SafeZoneX + SafeZoneW-MAPWIDTH; y = SafeZoneY + SafeZoneH-MAPHEIGHT;
+			w = MAPWIDTH; h = MAPHEIGHT;
+			colorBackground[] = {0.7, 0.7, 0.7, 0.75};
+			//sizeEx = 0.02;
+			sizeExLabel = MAPTXTSIZE;
+			sizeExGrid = MAPTXTSIZE;
+			sizeExUnits = MAPTXTSIZE;
+			sizeExNames = MAPTXTSIZE;
+			sizeExInfo = MAPTXTSIZE;
+			sizeExLevel = MAPTXTSIZE;
+			showCountourInterval = "false";
 
+			onMouseZChanged = "[""MouseZChangedminimap"",_this] call spectate_events";
+
+			class Command : Command {
+				icon = "#(argb,8,8,3)color(1,1,1,1)";
+				color[] = {0, 0, 0, 1};
+				size = 18;
+				importance = 1;
+				coefMin = 1;
+				coefMax = 1;
+			};
+
+			class ActiveMarker : ActiveMarker {
+				color[] = {0.3, 0.1, 0.9, 1};
+				size = 50;
+			};
+		};
+
+		// Fullscreen map
+		class mapFullBG : BackgroundTop {
+			idc = IDC_MAPFULLBG;
+			x = SafeZoneX;y=SafeZoneY;
+			w = SafeZoneW;h=SafeZoneH;
+			colorBackground[] = {0.0, 0.0, 0.0, 1.0};
+		};
+		class mapFull : map {
+			colorOutside[] = {0,0,0,1};
+			colorRailWay[] = {0,0,0,1};
+			maxSatelliteAlpha = 0;
+			alphaFadeStartScale = 1;
+			alphaFadeEndScale = 1.1;
+			showCountourInterval = "true";
+			idc = IDC_MAPFULL;
+			x = SafeZoneX;y=SafeZoneY + BORDERSIZE;
+			w = SafeZoneW;h=SafeZoneH-(BORDERSIZE*2);
+			colorBackground[] = {0.85, 0.85, 0.85, 1.0};
+		};
+
+		// Fullscreen event log
+		class mapFullEventLog : KEGsRscListBox {
+			class ScrollBar
+			{
+				color[] = {1,1,1,0.6};
+				colorActive[] = {1,1,1,1};
+				colorDisabled[] = {1,1,1,0.3};
+				thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
+				arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
+				arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
+				border = "\ca\ui\data\ui_border_scroll_ca.paa";
+			};
+			autoScrollRewind=0;
+			autoScrollDelay=5;
+			autoScrollSpeed=-1;
+			maxHistoryDelay=1;
+			idc = IDC_EVENTLOG;
+			x = SafeZoneX; y = SafeZoneY + SafeZoneH-ELOGHEIGHT;
+			w = ELOGWIDTH;		h = ELOGHEIGHT;
+			colorText[] = {1, 1, 1, 0};
+			colorSelect[] = {1, 1, 1, 0};
+			colorSelect2[] = {1, 1, 1, 0};
+			colorSelectBackground[] = {1, 1, 1, 0};
+			colorSelectBackground2[] = {1, 1, 1, 0};
+			colorBackground[] = {0, 0, 0, 0.5};
+			colorScrollbar[] = {1, 1, 1, 0};
+			sizeEx = 0.021;
+		};
 
 		// Dummy element for retrieving mouse events
 	};
