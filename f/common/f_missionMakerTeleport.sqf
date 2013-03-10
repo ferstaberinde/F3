@@ -13,7 +13,7 @@ private ["_textAction"];
 // not enabled, or if the global variable f_missionMakerTeleport has not been set to 
 // the value 1 in init.sqf.
 
-if (!local player || f_var_debugMode == 0 && f_missionMakerTeleport == 0) exitWith {};
+if (!local player || f_var_debugMode == 0 && f_missionMakerTeleport == 0 || f_var_debugMode == 0 && f_missionMakerTeleport == 1) exitWith {};
 
 // ====================================================================================
 
