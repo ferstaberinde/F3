@@ -68,7 +68,22 @@ if (_unitfaction == "OPF_F") exitwith {
 	};
 };
 
+// ====================================================================================
 
+// BRIEFING: CIVILIAN
+// The following block of code executes only if the player is in a BRITISH ARMED FORCES
+// slot; it automatically includes a file which contains the appropriate briefing data.
+
+if (_unitfaction == "CIV_F") exitwith {
+
+#include "f\common\f_briefing_civ.sqf"
+
+// DEBUG
+	if (f_var_debugMode == 1) then
+	{
+	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
+	};
+};
 
 // ====================================================================================
 

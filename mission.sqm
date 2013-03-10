@@ -8,12 +8,14 @@ class Mission
 		"a3_map_stratis",
 		"A3_Characters_F_OPFOR",
 		"A3_Air_F_Ka60",
-		"A3_Air_F_MH9"
+		"A3_Air_F_MH9",
+		"A3_Characters_F_Civil"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"A3_Characters_F_OPFOR",
+		"A3_Characters_F_Civil",
 		"A3_Air_F_MH9",
 		"a3_air_f_ka60",
 		"a3_map_stratis"
@@ -38,7 +40,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=42;
+		items=44;
 		class Item0
 		{
 			side="WEST";
@@ -1969,6 +1971,46 @@ class Mission
 				};
 			};
 		};
+		class Item42
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1844.459,5.5,5960.8486};
+					id=122;
+					side="CIV";
+					vehicle="C_man_polo_1_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					init="this addAction [""Start Camera"",""camera.sqs"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
+					description="Mission Observer";
+				};
+			};
+		};
+		class Item43
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1851.6503,5.5,5960.606};
+					id=123;
+					side="CIV";
+					vehicle="C_man_polo_2_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					init="this addAction [""Start Camera"",""camera.sqs"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
+					description="Mission Observer";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -1976,7 +2018,7 @@ class Mission
 		class Item0
 		{
 			position[]={1790.0547,5.5,5821.1226};
-			id=122;
+			id=124;
 			side="EMPTY";
 			vehicle="B_MH9_F";
 			leader=1;
@@ -1986,7 +2028,7 @@ class Mission
 		class Item1
 		{
 			position[]={2052.0532,3.4102659,5385.2705};
-			id=123;
+			id=125;
 			side="EMPTY";
 			vehicle="O_Ka60_Unarmed_F";
 			skill=0.60000002;
@@ -1995,7 +2037,7 @@ class Mission
 		class Item2
 		{
 			position[]={1814.1469,5.5,5820.3232};
-			id=124;
+			id=126;
 			side="EMPTY";
 			vehicle="B_AH9_F";
 			leader=1;
@@ -2005,7 +2047,7 @@ class Mission
 		class Item3
 		{
 			position[]={2079.6787,3.7983215,5386.5493};
-			id=125;
+			id=127;
 			side="EMPTY";
 			vehicle="O_Ka60_F";
 			skill=0.60000002;
