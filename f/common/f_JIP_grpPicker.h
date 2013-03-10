@@ -45,7 +45,7 @@ class GrpPicker
             w = 0.35;
             h = 0.035;
             wholeHeight = 0.45;
-
+		
             colorBackground[] = {0.43, 0.39 ,0.32, 1};
             colorBorder[] = {0.43, 0.39 ,0.32, 1};
             colorText[] = {0.97, 0.78, 0.13, 1};
@@ -62,13 +62,13 @@ class GrpPicker
                 color[] = {1, 1, 1, 0.6};
                 colorActive[] = {1, 1, 1, 1};
                 colorDisabled[] = {1, 1, 1, 0.3};
-                thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
-                arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
-                arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
-                border = "\ca\ui\data\ui_border_scroll_ca.paa";
+				thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+				arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+				arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+				border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
             };
-            arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
-            arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
+			arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+			 arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
 
             onLBSelChanged = "call GrpPicker_OnSelChanged";
         };

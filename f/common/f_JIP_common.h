@@ -8,7 +8,6 @@
 
 class CommonSettings
 {
-    font = "Zeppelin32";
     sizeEx = 0.03921;
     colorText[] = {0.97, 0.78,0.13, 1};
     colorFocused[] = {0.97, 0.78,0.13, 1};
@@ -20,6 +19,7 @@ class CommonSettings
     colorShadow[] = {0,0,0,1};
     colorBorder[] = {0,0,0,1};
     borderSize = 0;
+	font = "PuristaLight";
     style = 0;
     x = SafeZoneX;
     y = SafeZoneY;
