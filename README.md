@@ -248,6 +248,7 @@ Version | Date
 * Removed Construction Interface (COIN) Presets component.
 * Removed Trip Flare component.
 * Removed Gear Snippets component.
+* Added Loading Screen component.
 
 ### F2 Change History ###
 
