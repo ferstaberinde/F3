@@ -135,6 +135,7 @@ _disp displaySetEventHandler["KeyUp", "[""KeyUp"",_this] call spectate_events"];
 ["ToggleCameraMenu",0] call spectate_events;
 ["ToggleTargetMenu",0] call spectate_events;
 ["ToggleHelp",0] call spectate_events;
+["ToggleMap",1] call spectate_events;
 
 // IDC's from rsc
 _cCamera = 55002;
@@ -172,7 +173,6 @@ KEGs_cLbSeparator = lbAdd[KEGs_cLBCameras, "---"];
 lbSetColor[KEGs_cLBCameras, KEGs_cLbSeparator, [0.5, 0.5, 0.5, 0.5]];
 KEGs_cLbMissileCam = lbAdd[KEGs_cLBCameras, "Missile camera"];
 KEGs_cLbToggleNVG = lbAdd[KEGs_cLBCameras, "Night vision"];
-KEGs_cLbToggleNVG = lbAdd[KEGs_cLBCameras, "Termal vision"];
 KEGs_cLbToggleTags = lbAdd[KEGs_cLBCameras, "Unit tags"];
 KEGs_cLbToggleAiFilter = lbAdd[KEGs_cLBCameras, "Filter AI"];
 KEGs_cLbToggleDeadFilter = lbAdd[KEGs_cLBCameras, "Filter Unknown (Dead)"];
@@ -181,7 +181,7 @@ KEGs_tgtIdx = 0;
 KEGs_cameraIdx = 0;
 showcinemaborder false;
 lbClear KEGs_cLBTargets;
-
+onMapSingleClick "[""MapClick"",_pos] call spectate_events";
 
 ["EventLogAdd",["Initialize",[1,1,1,1]]] call spectate_events;
 
@@ -430,7 +430,9 @@ MovementCameraLoop = {
 				if (KEGsUseNVG) then { setAperture 0.07; } else { setAperture -1;}; // White Hot Night Vision
 			};
 			
-
+			if(ctrlVisible _cMapFull) then {
+				KEGscam_fullmap cameraEffect["internal", "BACK"];
+			};
 		// END OF NIGHT VISION HANDLING
 		
 
@@ -602,7 +604,15 @@ while{ dialog } do {
 						_doMarkerTypes = true; // Allow update marker types
 					};
 					
-
+					if(ctrlVisible _cMapFull) then {
+						// Position camera in the middle of full map, for sound and
+						// smoother marker motion (distant objects appear less smooth)
+						_mapFull = _disp displayctrl _cMapFull;
+						_mappos = _mapFull posScreenToWorld[0.5, 0.5];
+						KEGscam_fullmap camsettarget _mappos;
+						KEGscam_fullmap camsetrelpos [0, -1, 150];
+						KEGscam_fullmap camcommit 0;
+					};
 					
 					_markedVehicles = []; // Keep track of vehicles with markers to avoid multiple markers for one vehicle
 					for "_i" from 0 to ((count _markers)-1) do {
@@ -615,6 +625,59 @@ while{ dialog } do {
 							// We arent' supposed to show this side unit - hide marker
 							if(_doMarkerTypes) then {_m setMarkerTypeLocal "empty"};
 						} else { 				
+							if(KEGsMarkerNames or KEGsMinimapZoom < 0.15) then {
+								// Set full screen map marker types - Also zoomed minimap
+								if(ctrlVisible _cMapFull) then {
+									switch(KEGsMarkerType) do {
+										case 0: {	// No text
+											_m setMarkerTextLocal "";
+										};
+										case 1: {	// Names
+											if(alive (vehicle _u)) then {
+												if(name (vehicle _u) != "Error: no unit") then {_m setMarkerTextLocal name ( _u)};
+											};
+										};
+										case 2: {	// Types
+											_m setMarkerTextLocal getText (configFile >> "CfgVehicles" >> format["%1", typeOf (vehicle _u)] >> "DisplayName");
+										};
+									};
+								} else {
+									// Minimap with detailed icons but no text
+									_m setMarkerTextLocal "";
+								};
+								
+								if(KEGsClientAddonPresent) then {
+									// With client side addon use better icons
+									_type = getText(configFile >> "CfgVehicles" >> format["%1", typeOf (vehicle _u)] >> "simulation");
+									_icon = "mil_arrow";
+									switch(_type) do {
+										case "tank": {_icon = "KEGsTank"};
+										case "car": {_icon = "KEGsCar"};
+										case "soldier": {_icon = "KEGsMan"};
+										case "ship": {_icon = "KEGsShip"};
+										case "airplane": {_icon = "KEGsPlane"};
+										case "helicopter": {_icon = "KEGsHelicopter"};
+										case "motorcycle": {_icon = "KEGsMotorcycle"};
+										case "parachute": {_icon = "KEGsParachute"};
+									};
+									if(_doMarkerTypes) then {_m setMarkerTypeLocal _icon};
+									_m setMarkerSizeLocal[0.42*KEGsMarkerSize, 0.42*KEGsMarkerSize];
+								} else {
+									// No client side addon - basic markers
+									if(_doMarkerTypes) then {_m setMarkerTypeLocal "mil_arrow"};						
+									if(_u == vehicle _u) then {
+										_m setMarkerSizeLocal[0.33*KEGsMarkerSize, 0.27*KEGsMarkerSize];
+									} else {
+										_m setMarkerSizeLocal[0.42*KEGsMarkerSize, 0.42*KEGsMarkerSize];
+									};						
+								};
+								
+								_m setMarkerDirLocal (getdir (vehicle _u));
+							} else {
+								_m setMarkerTextLocal "";
+								if(_doMarkerTypes) then {_m setMarkerTypeLocal "mil_dot"};
+								_m setMarkerSizeLocal[0.4,0.4];
+							};		
 						};
 						
 						if(not alive _u) then {
@@ -640,12 +703,25 @@ while{ dialog } do {
 			// END OF added check to remove marker updates - norrin
 				
 				// Follow target with small map			
-			
-			
+				_map = _disp displayctrl _cMap;
+				ctrlMapAnimClear _map;
+				if(KEGsDroppedCamera) then {
+					// Center on dropped camera position
+					_map ctrlMapAnimAdd[0.3, KEGsMinimapZoom, [KEGs_cxpos, KEGs_cypos,0]];
+				} else {
+					// Center on target
+					_map ctrlMapAnimAdd[0.3, KEGsMinimapZoom, visiblePosition KEGs_target];
+				};
+				ctrlMapAnimCommit _map;					
 			};
 			
 			// Check if target changed and center main map
-
+			if(KEGs_tgtIdx != KEGs_lastTgt) then {
+				_map = _disp displayctrl _cMapFull;
+				ctrlMapAnimClear _map;
+				_map ctrlMapAnimAdd [0.2, 1.0, visiblePosition (deathcam select KEGs_tgtIdx)];
+				ctrlMapAnimCommit _map;			
+			};
 			
 
 			
@@ -693,10 +769,10 @@ KEGsTagSources = [];
 	//if(typeName _kh == "SCALAR") then {_x removeEventHandler["killed", _kh]};
 } foreach _ehVehicles;
 
-_bpos = [(((vehicle KEGs_target)modelToWorld [0,0,0])  select 0)-5+random 10, (((vehicle KEGs_target) modelToWorld [0,0,0])  select 1)-5+random 10, 1];
+
 _debugPlayer groupchat format ["ENTERING ButterFly Mode", VM_SpectatorCamerasEnabled];
 // Create a butterfly for player to fly with
-/*
+_bpos = [(((vehicle KEGs_target)modelToWorld [0,0,0])  select 0)-5+random 10, (((vehicle KEGs_target) modelToWorld [0,0,0])  select 1)-5+random 10, 1];
 // _bird = "ButterFlySpectator"createVehicle _bpos; //custom ButterFly for improved flight.
 _bird = "ButterFly"createVehicle _bpos;
 _bird setvelocity[0,0,5];
@@ -707,20 +783,14 @@ _bird cameraEffect["terminate","FRONT"];
 _bird camCommand "manual on";
 
 camUseNVG false; setAperture -1; //  Reset NVGs
-
+EndLoadingScreen;	
 KEGsBird = _bird;
 onMapSingleClick "KEGsBird setpos [_pos select 0, _pos select 1, 2];KEGsBird setvelocity[0,0,5];";
 
 cutText["\n\n\n\n\nLand on ground to return to spectating\nClick at map to jump to location","PLAIN DOWN", 0.75];
-*/
-EndLoadingScreen;	
-_cam_script = [player,_bpos] execVM "f\common\f_spect\camera.sqf";
+
 // Wait until landed, delete bird & restart script
-//waitUntil{(_bird modelToWorld [0,0,0]) select 2 < 0.05 and speed _bird < 1};
-waituntil {
-	if (!isnull BIS_DEBUG_CAM) then {_lastpos = position BIS_DEBUG_CAM};
-	isNull BIS_DEBUG_CAM
-};
+waitUntil{(_bird modelToWorld [0,0,0]) select 2 < 0.05 and speed _bird < 1};
 onMapSingleClick "";
 
 sleep(0.5);
