@@ -8,7 +8,7 @@ BIS_allowHealthPP = false;
 (["HealthPP_black"] call bis_fnc_rscLayer) cutText ["","BLACK IN",8];
 
 
-// A3 death has  tendency to remove sounds sometimes.
+; A3 death has  tendency to remove sounds sometimes.
 1 fadeMusic 1;
 1 fadeSound 1;
 ; Initialize spectating script when player dies:

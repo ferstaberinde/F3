@@ -399,11 +399,9 @@ switch (_typeofUnit) do
 		// Backpack
 		_unit addBackpack _baglarge;
 		clearMagazineCargoGlobal (unitBackpack _unit);
+		(unitBackpack _unit) addItemCargoGlobal ["ToolKit",1];
 		(unitBackpack _unit) addMagazineCargoGlobal [_satchel, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_mine, 1];	
-		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];	
-		(unitBackpack _unit) addItemCargoGlobal [ToolKit,1];
-		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
 	};	
 		
 // LOADOUT: RIFLEMAN
