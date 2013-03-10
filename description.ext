@@ -71,14 +71,6 @@ class Params
                 default = 3;
                 code = "f_param_timeOfDay = %1";
         };   
-        class f_param_weather
-	{
-		title = "$STR_f_param_weather";
-		values[] = {0,1,2,3,4};
-		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4};
-		default = 0;
-		code = "f_param_weather = %1";
-        };
 
 // ============================================================================================
 

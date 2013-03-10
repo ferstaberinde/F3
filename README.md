@@ -219,7 +219,6 @@ Version | Date
 * Migrated (and renamed) F3 Common Local Variables component.
 * Migrated Join Group Action component.
 * Migrated Kegetys Spectator Script component.
-* Migrated Mission Conditions Selector component.
 * Migrated Mission Observers component.
 * Migrated Multiplayer Ending Controller component.
 * Migrated ORBAT Notes component.
@@ -241,6 +240,7 @@ Version | Date
 * Migrated (and renamed) F3 Folk ARPS Group IDs component.
 * Migrated (and renamed) F3 Folk ARPS Group Markers component.
 * Migrated (and renamed) F3 Folk ARPS JIP Reinforcement Options component.
+* Part-migrated Mission Conditions Selector component.
 * Removed Disable BIS Conversations component.
 * Removed Preplaced Game Logics component.
 * Removed ACRE Support component.
