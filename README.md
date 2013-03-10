@@ -27,7 +27,7 @@
 
 ### F3 Version History ###
 
-* 3-0-0     | DD MAR 2013 | First alpha release to Folk ARPS (see change history).
+* 3-0-0     | DD MAR 2013 | First alpha release to community (see change history).
 
 ### F2 Version History ###
 
@@ -208,46 +208,46 @@ Version | Date
 
 3-0-0 | DD MAR 2013
 
-* [TODO] Naming Your Mission component.
-* [TODO] Mission Header component.
-* [TODO] Respawn Settings component.
-* [TODO] Respawn INIT component.
-* [TODO] CO Briefing Template component.
-* [TODO] ReadMe File Template component.
-* [TODO] Debug Mode component.
-* [TODO] Disable BIS Conversations component.
-* [TODO] Disable Saving and Auto Saving component.
-* [TODO] F2 Common Local Variables component.
-* [TODO] Join Group Action component.
-* [TODO] Kegetys Spectator Script component.
-* [TODO] Mission Conditions Selector component.
-* [TODO] Mission Observers component.
-* [TODO] Multiplayer Ending Controller component.
-* [TODO] ORBAT Notes component.
-* [TODO] Preplaced Game Logics component.
-* [TODO] Sample Markers component.
-* [TODO] ShackTactical Fireteam Member Markers component.
-* [TODO] ACRE Support component.
-* [TODO] AI Skill Selector (A&D) component.
-* [TODO] AI Skill Selector (coop) component.
-* [TODO] Authorised Crew Check component.
-* [TODO] Authorised Crew Type Check component.
-* [TODO] Automatic Body Removal component.
-* [TODO] Automatic Body Removal (FIFO) component.
-* [TODO] Casualties Cap component.
-* [TODO] Casualties Cap (Advanced) component.
-* [TODO] Construction Interface (COIN) Presets component.
-* [TODO] Dynamic View Distance component.
-* [TODO] Group E&E Check component.
-* [TODO] Mission Maker Teleport component.
-* [TODO] Name Tags component.
-* [TODO] Trip Flare component.
-* [TODO] CO Folk ARPS Platoons component.
-* [TODO] CO Folk ARPS Assign Gear Script component.
-* [TODO] CO Folk ARPS Group IDs component.
-* [TODO] CO Folk ARPS Group Markers component.
-* [TODO] CO Folk ARPS JIP Reinforcement Options component.
-* [TODO] Gear Snippets component.
+* Migrated Naming Your Mission component.
+* Migrated Mission Header component.
+* Migrated Respawn Settings component.
+* Migrated Respawn INIT component.
+* Migrated (and renamed) Briefing Template component.
+* Migrated ReadMe File Template component.
+* Migrated Debug Mode component.
+* Migrated Disable Saving and Auto Saving component.
+* Migrated (and renamed) F3 Common Local Variables component.
+* Migrated Join Group Action component.
+* Migrated Kegetys Spectator Script component.
+* Migrated Mission Conditions Selector component.
+* Migrated Mission Observers component.
+* Migrated Multiplayer Ending Controller component.
+* Migrated ORBAT Notes component.
+* Migrated Sample Markers component.
+* Migrated ShackTactical Fireteam Member Markers component.
+* Migrated AI Skill Selector (A&D) component.
+* Migrated AI Skill Selector (coop) component.
+* Migrated Authorised Crew Check component.
+* Migrated Authorised Crew Type Check component.
+* Migrated Automatic Body Removal component.
+* Migrated Casualties Cap component.
+* Migrated Casualties Cap (Advanced) component.
+* Migrated Dynamic View Distance component.
+* Migrated  Group E&E Check component.
+* Migrated Mission Maker Teleport component.
+* Migrated Name Tags component.
+* Migrated (and renamed) F3 Folk ARPS Platoons component.
+* Migrated (and renamed) F3 Folk ARPS Assign Gear Script component.
+* Migrated (and renamed) F3 Folk ARPS Group IDs component.
+* Migrated (and renamed) F3 Folk ARPS Group Markers component.
+* Migrated (and renamed) F3 Folk ARPS JIP Reinforcement Options component.
+* Removed Disable BIS Conversations component.
+* Removed Preplaced Game Logics component.
+* Removed ACRE Support component.
+* Removed Automatic Body Removal (FIFO) component.
+* Removed Construction Interface (COIN) Presets component.
+* Removed Trip Flare component.
+* Removed Gear Snippets component.
 
 ### F2 Change History ###
 
