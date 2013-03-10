@@ -42,50 +42,59 @@
 // ["acc_pointer_IR","optic_ACO_grn"] = remove all, add items.
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
-_rifle = "arifle_MX_ACO_point_grip_F"; _riflemag = "30Rnd_65x39_caseless_mag";			_riflemag_tr = "30Rnd_65x39_caseless_mag_Tracer";																					
+_rifle = "arifle_MX_ACO_point_grip_F"; 
+_riflemag = "30Rnd_65x39_caseless_mag";			
+_riflemag_tr = "30Rnd_65x39_caseless_mag_Tracer";																					
 _rifle_attach = ["acc_pointer_IR","optic_Aco"];
 
-
-
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
-_carbine = "arifle_MXC_ACO_point_grip_F"; _carbinemag = "30Rnd_65x39_caseless_mag"; _carbinemag_tr = "30Rnd_65x39_caseless_mag_Tracer";																				
+_carbine = "arifle_MXC_ACO_point_grip_F"; 
+_carbinemag = "30Rnd_65x39_caseless_mag"; 
+_carbinemag_tr = "30Rnd_65x39_caseless_mag_Tracer";																				
 _carbine_attach = ["acc_pointer_IR","optic_Aco"];
 
-
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
-_smg = "arifle_SDAR_F"; _smgmag = "30Rnd_556x45_Stanag"; _smgmag_tr = "30Rnd_556x45_Stanag";																									
+_smg = "arifle_SDAR_F"; 
+_smgmag = "30Rnd_556x45_Stanag"; 
+_smgmag_tr = "30Rnd_556x45_Stanag";																									
 _smg_attach = nil;
 
 // Diver
-_diverWep = "arifle_SDAR_F"; _diverMag1 = "30Rnd_556x45_Stanag"; _diverMag2 = "20Rnd_556x45_UW_mag";
+_diverWep = "arifle_SDAR_F"; 
+_diverMag1 = "30Rnd_556x45_Stanag"; 
+_diverMag2 = "20Rnd_556x45_UW_mag";
 _diverWep_attach = nil;
 
-
 // Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle = "arifle_MX_GL_ACOg_point_F"; _glriflemag = "30Rnd_65x39_caseless_mag";_glriflemag_tr = "30Rnd_65x39_caseless_mag_Tracer" ; _glmag = "1Rnd_HE_Grenade_shell";														
+_glrifle = "arifle_MX_GL_ACOg_point_F"; 
+_glriflemag = "30Rnd_65x39_caseless_mag";
+_glriflemag_tr = "30Rnd_65x39_caseless_mag_Tracer"; 
+_glmag = "1Rnd_HE_Grenade_shell";														
 _glrifle_attach = ["acc_pointer_IR","optic_Aco"];
 
-
 // Smoke for FTLs, Squad Leaders, etc 
-_glsmokewhite = "1Rnd_Smoke_Grenade_shell"; _glsmokegreen = "1Rnd_SmokeGreen_Grenade_shell"; _glsmokered = "1Rnd_SmokeRed_Grenade_shell";    							
-
+_glsmokewhite = "1Rnd_Smoke_Grenade_shell"; 
+_glsmokegreen = "1Rnd_SmokeGreen_Grenade_shell"; 
+_glsmokered = "1Rnd_SmokeRed_Grenade_shell";    							
 
 // Flares for FTLs, Squad Leaders, etc
-_glflarewhite = "3Rnd_UGL_FlareWhite_F"; _glflarered = "3Rnd_UGL_FlareRed_F"; _glflareyellow = "3Rnd_UGL_FlareYellow_F"; _glflaregreen = "3Rnd_UGL_FlareGreen_F";	
-
+_glflarewhite = "3Rnd_UGL_FlareWhite_F"; 
+_glflarered = "3Rnd_UGL_FlareRed_F"; 
+_glflareyellow = "3Rnd_UGL_FlareYellow_F"; 
+_glflaregreen = "3Rnd_UGL_FlareGreen_F";	
 
 // Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
-_pistol = "hgun_P07_F"; _pistolmag = "16Rnd_9x21_Mag";																								
-
+_pistol = "hgun_P07_F"; 
+_pistolmag = "16Rnd_9x21_Mag";																								
 
 // Grenades
-_grenade = "HandGrenade"; _smokegrenade = "SmokeShell";_smokegrenadegreen = "SmokeShellGreen";	
-
+_grenade = "HandGrenade"; 
+_smokegrenade = "SmokeShell";
+_smokegrenadegreen = "SmokeShellGreen";	
 
 // misc medical items.	
 _firstaid = "FirstAidKit";
 _medkit = "Medikit";
-
 
 // Backpacks
 _bagmedium = "B_AssaultPack_khk";  // used by none		
@@ -95,56 +104,56 @@ _baglarge =  "B_Kitbag_mcamo"; 	   // used by medic,engineers
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
-
 // Automatic Rifleman
-_AR = "arifle_MX_SW_F"; _ARmag = "100Rnd_65x39_caseless_mag";_ARmag_tr = "100Rnd_65x39_caseless_mag_Tracer";																							
+_AR = "arifle_MX_SW_F"; 
+_ARmag = "100Rnd_65x39_caseless_mag";
+_ARmag_tr = "100Rnd_65x39_caseless_mag_Tracer";																							
 _AR_attach = ["acc_pointer_IR","optic_ACO"];
 
-
 // Medium MG
-_MMG = "LMG_Mk200_ACO_grip_F"; _MMGmag = "200Rnd_65x39_cased_Box";	_MMGmag_tr = "200Rnd_65x39_cased_Box_Tracer";																								
+_MMG = "LMG_Mk200_ACO_grip_F"; 
+_MMGmag = "200Rnd_65x39_cased_Box";
+_MMGmag_tr = "200Rnd_65x39_cased_Box_Tracer";																								
 _MMG_attach = ["acc_pointer_IR","optic_ACO"];
 
-
 // Rifleman AT
-_RAT = "launch_NLAW_F"; _RATmag = "NLAW_F";																											
-
+_RAT = "launch_NLAW_F"; 
+_RATmag = "NLAW_F";																											
 
 // Mortar
 _MTR = "B_Mk6Mortar_Wpn";
 _MTRmount = "B_Mk6Mortar_Support";
 
-
 // Medium AT
-_MAT = "launch_NLAW_F"; _MATmag1 = "NLAW_F"; _MATmag2 = "NLAW_F";																			
-
-
+_MAT = "launch_NLAW_F"; 
+_MATmag1 = "NLAW_F"; 
+_MATmag2 = "NLAW_F";																			
 																					
 // Engineer items.
-_ATmine = "ATMine_Range_Mag"; _satchel = "DemoCharge_Remote_Mag";																										
-_APmine1 = "APERSTripMine_Wire_Mag"; _APmine2 = "ClaymoreDirectionalMine_Remote_Mag";
+_ATmine = "ATMine_Range_Mag"; 
+_satchel = "DemoCharge_Remote_Mag";																										
+_APmine1 = "APERSTripMine_Wire_Mag"; 
+_APmine2 = "ClaymoreDirectionalMine_Remote_Mag";
+
 // ====================================================================================
 
-// CLOTHES AND UNITFORMS
+// CLOTHES AND UNIFORMS
 
-//Base
+// Base
 _baseUniform = "U_B_CombatUniform_mcam";
 _baseHelmet = "H_HelmetB";
 _lightRig = "V_PlateCarrier1_rgr"; // co,dc,ftl,medic,rat,matag,mmgag
 _heavyRig = "V_PlateCarrierGL_rgr"; // ar,eng
-
 
 // Diver
 _diverUniform =  "U_B_Wetsuit";
 _diverHelmet = "";
 _diverRig = "V_RebreatherIR";
 
-
 // Pilot
 _pilotUniform = "U_B_HeliPilotCoveralls";
 _pilotHelmet = "H_PilotHelmetHeli_B";
 _pilotRig = "V_TacVest_khk";
-
 
 // ====================================================================================
 
@@ -524,11 +533,14 @@ switch (_typeofUnit) do
 // END SWITCH FOR DEFINE UNIT TYPE LOADOUTS
 };
 
-// Handle weapon attachments here..
 // ====================================================================================
+
+// Handle weapon attachments here.
+
 #include "f_assignGear_attach.sqf";
 
-
+// ====================================================================================
 
 // ENSURE UNIT HAS CORRECT WEAPON SELECTED ON SPAWNING
+
 _unit selectweapon primaryweapon _unit;
