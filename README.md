@@ -27,7 +27,7 @@
 
 ### F3 Version History ###
 
-* 3-0-0     | DD MAR 2013 | First alpha release to community (see change history).
+* 3-0-0     | 10 MAR 2013 | First alpha release to community (see change history).
 
 ### F2 Version History ###
 
@@ -206,7 +206,7 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-0-0 | DD MAR 2013
+3-0-0 | 10 MAR 2013
 
 * Migrated Naming Your Mission component.
 * Migrated Mission Header component.
