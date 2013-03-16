@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-0
+* Version: 3-0-1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -27,6 +27,7 @@
 
 ### F3 Version History ###
 
+* 3-0-1     | DD MAR 2013 | Patch release - Various improvements (see change history).
 * 3-0-0     | 10 MAR 2013 | First alpha release to community (see change history).
 
 ### F2 Version History ###
@@ -119,6 +120,7 @@ Version | Date | Notes
 * Contributors: Head | Harakka | Fer
 * Documentation: Fer
 * Producers: Fer
+* Special Thanks: Zerith
 * Special Thanks: Everyone at Folk ARPS
 
 ### F2 Credits ###
@@ -205,6 +207,10 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-0-1 | DD MAR 2013
+
+* Fixed diver attachment bug with F3 Folk ARPS Assign Gear Script component.
 
 3-0-0 | 10 MAR 2013
 
