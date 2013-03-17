@@ -212,6 +212,8 @@ Version | Date
 
 * Fixed diver attachment bug with F3 Folk ARPS Assign Gear Script component.
 * Fixed ranks and typos with F3 Folk ARPS Platoons component.
+* Missle cam no longer on by default in Kegetys Spectator Script component.
+* Updated F3 Folk ARPS Assign Gear Script component to include backpack options by parameter (off/light/heavy).
 
 3-0-0 | 10 MAR 2013
 
