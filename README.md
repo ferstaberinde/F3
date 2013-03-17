@@ -211,6 +211,7 @@ Version | Date
 3-0-1 | DD MAR 2013
 
 * Fixed diver attachment bug with F3 Folk ARPS Assign Gear Script component.
+* Fixed ranks and typos with F3 Folk ARPS Platoons component.
 
 3-0-0 | 10 MAR 2013
 
