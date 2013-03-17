@@ -43,7 +43,7 @@ KEGsMouseScroll = 0;
 KEGsMouseCoord = [0.5, 0.5];
 KEGsUseNVG = false;
 KEGsMissileCamActive = false;
-KEGsUseMissileCam = true;
+KEGsUseMissileCam = false;
 KEGsMarkerNames = false; // True = display marker names and arrows
 KEGsMarkerType = 1; // 0 = disabled, 1 = names, 2 = types
 KEGsTags = false; // Particlesource tags
