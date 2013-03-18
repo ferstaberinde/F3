@@ -47,7 +47,7 @@ class Params
 
 // F3 - Debug Mode
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT
+// WARNING: DO NOT DISABLE THIS COMPONENT OR PLACE ANY OTHER PARAMETERS BEFORE OR AFTER IT
 
         class f_param_debugMode
         {
@@ -56,6 +56,21 @@ class Params
                 texts[] = {"Off","On"};
                 default = 0;
                 code = "f_var_debugMode = %1";
+        }; 
+
+// ============================================================================================
+
+// F3 - Folk Assign Gear Script
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// WARNING: DO NOT DISABLE THIS COMPONENT OR PLACE ANY OTHER PARAMETERS BEFORE OR AFTER IT
+
+        class f_param_backpacks
+        {
+                title = "$STR_f_param_backpacks";
+                values[] = {0,1,2};
+                texts[] = {"Off","Light","Heavy"};
+                default = 2;
+                code = "f_param_backpacks = %1";
         }; 
 
 // ============================================================================================

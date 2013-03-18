@@ -7,15 +7,17 @@ removeUniform _unit;
 removeheadgear _unit;
 removevest _unit;
 
-// Lets make sure everyone gets what they need.
+// use the type of the unit to figure out who gear they need
 switch (_typeofUnit) do 
 {
 	case "p":
 	{
+		// if there is a pilotuniform defeined add it to the unit
 		if(!isnil "_pilotUniform" && _pilotUniform != "") then
 		{
 		_unit adduniform _pilotUniform;
 		};
+		// if there is ... etc.
 		if(!isnil "_pilotHelmet" && _pilotHelmet != "") then
 		{
 		_unit addheadgear _pilotHelmet;
