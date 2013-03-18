@@ -1,18 +1,25 @@
 // F3 - Folk ARPS Attachment Gear Script
 // Credits: Head
+
+// Get the weapon class of the _unit
 _wepClass = primaryweapon _unit;
 switch(_wepClass) do
 {
+	// if _wepClass corrosponds to the faction assingned _rifle then..
 	case _rifle: 
 	{
+		// Check if there is a attachment array for this weapon
 		if(!isnil "_rifle_attach") then
 		{
+			// If there is grab the primaryweapons already on the units gun by default
 			_wepItems = primaryWeaponItems _unit;
 			{
+				// loop trough them and remove them
 				_unit removeItemFromPrimaryWeapon _x;
 				_unit removeItem _x;
 			} foreach _wepItems;
 			{
+				// loop trough the attachments and add them to the weapon
 				_unit addPrimaryWeaponItem _x;
 			} foreach _rifle_attach;
 		};
@@ -102,17 +109,17 @@ switch(_wepClass) do
 		};
 	};
 	case _diverWep:
-	{
-		if(!isnil "_diverWep_attach") then
 		{
-			_wepItems = primaryWeaponItems _unit;
+			if(!isnil "_diverWep_attach") then
 			{
-				_unit removeItemFromPrimaryWeapon _x;
-				_unit removeItem _x;
-			} foreach _wepItems;
-			{
-				_unit addPrimaryWeaponItem _x;
-			} foreach _SNrifle_attach;
-		};
+				_wepItems = primaryWeaponItems _unit;
+				{
+					_unit removeItemFromPrimaryWeapon _x;
+					_unit removeItem _x;
+				} foreach _wepItems;
+				{
+					_unit addPrimaryWeaponItem _x;
+				} foreach _diverWep_attach;
+			};
 	};
 };
