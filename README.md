@@ -27,7 +27,7 @@
 
 ### F3 Version History ###
 
-* 3-0-1     | DD MAR 2013 | Patch release - Various improvements (see change history).
+* 3-0-1     | 17 MAR 2013 | Patch release - Various improvements (see change history).
 * 3-0-0     | 10 MAR 2013 | First alpha release to community (see change history).
 
 ### F2 Version History ###
@@ -208,12 +208,13 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-0-1 | DD MAR 2013
+3-0-1 | 17 MAR 2013
 
 * Fixed diver attachment bug with F3 Folk ARPS Assign Gear Script component.
 * Fixed ranks and typos with F3 Folk ARPS Platoons component.
 * Missle cam no longer on by default in Kegetys Spectator Script component.
 * Updated F3 Folk ARPS Assign Gear Script component to include backpack options by parameter (off/light/heavy).
+* Updated F3 Folk ARPS Assign Gear Script component so Rifelman (AT) role has a launcher.
 
 3-0-0 | 10 MAR 2013
 
