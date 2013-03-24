@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-1
+* Version: 3-0-2
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -27,6 +27,7 @@
 
 ### F3 Version History ###
 
+* 3-0-2     | DD MMM 2013 | Patch release - Various improvements (see change history).
 * 3-0-1     | 17 MAR 2013 | Patch release - Various improvements (see change history).
 * 3-0-0     | 10 MAR 2013 | First alpha release to community (see change history).
 
@@ -207,6 +208,10 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-0-2 | DD MMM 2013
+
+* Development of Mission Conditions Selector component.
 
 3-0-1 | 17 MAR 2013
 
