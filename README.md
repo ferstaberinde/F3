@@ -118,7 +118,7 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer
+* Contributors: Head | Harakka | Fer | Wolfenswan
 * Documentation: Fer
 * Producers: Fer
 * Special Thanks: Zerith
