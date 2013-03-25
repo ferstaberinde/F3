@@ -4,7 +4,6 @@ class Mission
 	addOns[]=
 	{
 		"A3_Characters_F_BLUFOR",
-		"A3_Soft_F_Galkin",
 		"a3_map_stratis",
 		"A3_Characters_F_OPFOR",
 		"A3_Air_F_Ka60",
@@ -25,13 +24,11 @@ class Mission
 	{
 		briefingName="F3";
 		briefingDescription="*** Insert mission description here. ***";
-		startWeather=0.29999998;
-		startWind=0.099999994;
-		startWaves=0.099999994;
-		forecastWeather=0.29999998;
-		forecastWind=0.099999994;
-		forecastWaves=0.099999994;
-		forecastLightnings=0.099999994;
+		startWeather=0;
+		startWind=0;
+		forecastWeather=1;
+		forecastWind=0;
+		forecastWaves=0;
 		year=2035;
 		month=7;
 		day=6;
@@ -1731,7 +1728,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={1788.6677,5.5,5828.688};
+					position[]={1788.7896,5.5,5826.6157};
 					id=106;
 					side="WEST";
 					vehicle="B_Helipilot_F";
@@ -1745,7 +1742,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1791.1965,5.5,5827.1528};
+					position[]={1791.3184,5.5,5825.0806};
 					id=107;
 					side="WEST";
 					vehicle="B_Helipilot_F";
@@ -1766,7 +1763,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={1813.8187,5.5,5829.1807};
+					position[]={1813.9406,5.5,5827.1084};
 					id=108;
 					side="WEST";
 					vehicle="B_Helipilot_F";
@@ -1780,7 +1777,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1816.288,5.5,5827.5264};
+					position[]={1816.4098,5.5,5825.4541};
 					id=109;
 					side="WEST";
 					vehicle="B_Helipilot_F";
@@ -2138,7 +2135,7 @@ class Mission
 		items=4;
 		class Item0
 		{
-			position[]={1790.0547,5.5,5821.1226};
+			position[]={1790.1765,5.5,5819.0503};
 			id=132;
 			side="EMPTY";
 			vehicle="B_MH9_F";
@@ -2157,7 +2154,7 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={1814.1469,5.5,5820.3232};
+			position[]={1814.2687,5.5,5818.251};
 			id=134;
 			side="EMPTY";
 			vehicle="B_AH9_F";
