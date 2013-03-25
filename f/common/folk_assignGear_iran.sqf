@@ -142,18 +142,18 @@ _APmine2 = "ClaymoreDirectionalMine_Remote_Mag";
 // CLOTHES AND UNIFORMS
 
 // Base
-_baseUniform = "U_OI_CombatUniform_ocamo";
+_baseUniform = "U_O_CombatUniform_ocamo";
 _baseHelmet = "H_HelmetO_ocamo";
 _lightRig = "V_HarnessO_brn"; // co,dc,ftl,medic,rat,matag,mmgag
 _heavyRig = "V_HarnessOGL_brn"; // ar,eng
 
 // Diver
-_diverUniform =  "U_OI_Wetsuit";
+_diverUniform =  "U_O_Wetsuit";
 _diverHelmet = "";
 _diverRig = "V_RebreatherIR";
 
 // Pilot
-_pilotUniform = "U_OI_PilotCoveralls";
+_pilotUniform = "U_O_PilotCoveralls";
 _pilotHelmet = "H_PilotHelmetHeli_O";
 _pilotRig = "V_TacVest_brn";
 
