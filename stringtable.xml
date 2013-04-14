@@ -12,9 +12,12 @@
         <Spanish> Modo Debug </Spanish>
         <French> Mode Debug </French>
       </Key>
+      <Key ID="STR_f_param_backpacks">
+        <English> Backpacks </English>
+      </Key>
       <Key ID="STR_f_param_timeOfDay">
         <English> Time of Day </English>
-		<French> Heure de la journée </French>
+	<French> Heure de la journée </French>
       </Key>
       <Key ID="STR_f_param_timeOfDay_Option0">
         <English> Dawn </English>
@@ -82,27 +85,42 @@
       </Key>
       <Key ID="STR_f_param_weather">
         <English> Weather </English>
-		<French> Météo </English>
+	<French> Météo </English>
       </Key>
       <Key ID="STR_f_param_weather_Option0">
-        <English> Clear </English>
-        <Czech> Jasno </Czech>
-        <German> Klar </German>
-        <Polish> Czysto </Polish>
-        <Russian> Безоблачно </Russian>
-        <Spanish> Despejado </Spanish>
-        <French> Dégagé </French>
+        <English> Clear (Calm)</English>
       </Key>
       <Key ID="STR_f_param_weather_Option1">
-        <English> Overcast </English>
-        <Czech> Zataženo </Czech>
-        <German> Bewölkt </German>
-        <Polish> Zachmurzenie </Polish>
-        <Russian> Облачно </Russian>
-        <Spanish> Nublado </Spanish>
-        <French> Couvert </French>
+        <English> Clear (Light Winds)</English>
       </Key>
       <Key ID="STR_f_param_weather_Option2">
+        <English> Clear (Strong Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option3">
+        <English> Overcast (Calm)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option4">
+        <English> Overcast (Light Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option5">
+        <English> Overcast (Strong Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option6">
+        <English> Rain (Light Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option7">
+        <English> Rain (Strong Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option8">
+        <English> Storm </English>
+        <Czech> Boure </Czech>
+        <German> Gewitter </German>
+        <Polish> Burza </Polish>
+        <Russian> Гроза </Russian>
+        <Spanish> Tormenta </Spanish>
+        <French> Averse </French>
+      </Key>
+      <Key ID="STR_f_param_weather_Option9">
         <English> Light Fog </English>
         <Czech> Slabá mlha </Czech>
         <German> Leichter Nebel </German>
@@ -111,7 +129,7 @@
         <Spanish> Bruma </Spanish>
         <French> Brume </French>
       </Key>
-      <Key ID="STR_f_param_weather_Option3">
+      <Key ID="STR_f_param_weather_Option10">
         <English> Heavy Fog </English>
         <Czech> Hustá mlha </Czech>
         <German> Dichter Nebel </German>
@@ -119,15 +137,6 @@
         <Russian> Густой туман </Russian>
         <Spanish> Niebla </Spanish>
         <French> Brouillard </French>
-      </Key>
-      <Key ID="STR_f_param_weather_Option4">
-        <English> Storm </English>
-        <Czech> Boure </Czech>
-        <German> Gewitter </German>
-        <Polish> Burza </Polish>
-        <Russian> Гроза </Russian>
-        <Spanish> Tormenta </Spanish>
-        <French> Averse </French>
       </Key>
       <Key ID="STR_f_param_AISkill_Friendly">
         <English> AI Skill (Friendly) </English>
