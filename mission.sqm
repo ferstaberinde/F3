@@ -4,7 +4,7 @@ class Mission
 	addOns[]=
 	{
 		"A3_Characters_F_BLUFOR",
-		"A3_Soft_F_Galkin",
+		"A3_Soft_F_Ifrit",
 		"a3_map_stratis",
 		"A3_Characters_F_OPFOR",
 		"A3_Air_F_Ka60",
