@@ -4,7 +4,6 @@ class Mission
 	addOns[]=
 	{
 		"A3_Characters_F_BLUFOR",
-		"A3_Soft_F_Galkin",
 		"a3_map_stratis",
 		"A3_Characters_F_OPFOR",
 		"A3_Air_F_Ka60",
@@ -25,13 +24,11 @@ class Mission
 	{
 		briefingName="F3";
 		briefingDescription="*** Insert mission description here. ***";
-		startWeather=0.29999998;
-		startWind=0.099999994;
-		startWaves=0.099999994;
-		forecastWeather=0.29999998;
-		forecastWind=0.099999994;
-		forecastWaves=0.099999994;
-		forecastLightnings=0.099999994;
+		startWeather=0;
+		startWind=0;
+		forecastWeather=1;
+		forecastWind=0;
+		forecastWaves=0;
 		year=2035;
 		month=7;
 		day=6;
@@ -94,6 +91,7 @@ class Mission
 					vehicle="B_Soldier_SL_F";
 					player="PLAYER COMMANDER";
 					leader=1;
+					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitNO_CO";
 					init="GrpNO_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
@@ -106,6 +104,7 @@ class Mission
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNO_CO_M";
 					init="GrpNO_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
@@ -127,6 +126,7 @@ class Mission
 					vehicle="B_Soldier_TL_F";
 					player="PLAY CDG";
 					leader=1;
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitNO_DC";
 					init="GrpNO_DC = group this; nul = [""dc"",this] call f_fnc_assignGear;";
@@ -139,6 +139,7 @@ class Mission
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNO_DC_M";
 					init="GrpNO_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
@@ -160,6 +161,7 @@ class Mission
 					vehicle="B_Soldier_TL_F";
 					player="PLAY CDG";
 					leader=1;
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitNO_ASL_SL";
 					init="GrpNO_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
@@ -172,6 +174,7 @@ class Mission
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNO_ASL_M";
 					init="GrpNO_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
@@ -367,6 +370,7 @@ class Mission
 					vehicle="B_Soldier_TL_F";
 					player="PLAY CDG";
 					leader=1;
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitNO_BSL_SL";
 					init="GrpNO_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
@@ -379,6 +383,7 @@ class Mission
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNO_BSL_M";
 					init="GrpNO_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
@@ -490,7 +495,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={1822.334,5.5,5863.8384};
+					position[]={1822.442,5.5,5863.9468};
 					id=29;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -574,6 +579,7 @@ class Mission
 					vehicle="B_Soldier_TL_F";
 					player="PLAY CDG";
 					leader=1;
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitNO_CSL_SL";
 					init="GrpNO_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear;";
@@ -586,6 +592,7 @@ class Mission
 					side="WEST";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNO_CSL_M";
 					init="GrpNO_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
@@ -782,7 +789,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					lock="UNLOCKED";
-					rank="CORPORAL";
+					rank="LIEUTENANT";
 					skill=0.60000002;
 					text="UnitIR_CO";
 					init="GrpIR_CO = group this; nul = [""co"",this] call f_fnc_assignGear;";
@@ -795,6 +802,7 @@ class Mission
 					side="EAST";
 					vehicle="O_medic_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_CO_M";
 					init="GrpIR_CO = group this; nul = [""m"",this] call f_fnc_assignGear;";
@@ -817,7 +825,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					lock="UNLOCKED";
-					rank="CORPORAL";
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitIR_DC";
 					init="GrpIR_DC = group this; nul = [""dc"",this] call f_fnc_assignGear;";
@@ -831,6 +839,7 @@ class Mission
 					vehicle="O_medic_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_DC_M";
 					init="GrpIR_DC = group this; nul = [""m"",this] call f_fnc_assignGear;";
@@ -853,7 +862,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					lock="UNLOCKED";
-					rank="CORPORAL";
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitIR_ASL_SL";
 					init="GrpIR_ASL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
@@ -867,6 +876,7 @@ class Mission
 					vehicle="O_medic_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_ASL_M";
 					init="GrpIR_ASL = group this; nul = [""m"",this] call f_fnc_assignGear;";
@@ -903,7 +913,6 @@ class Mission
 					vehicle="O_Soldier_AR_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_A1_AR";
 					init="GrpIR_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
@@ -933,7 +942,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpIR_A1_AT";
 					init="GrpIR_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
-					description="Iran Alpha 1 Rifleman(AT)";
+					description="Iran Alpha 1 Rifleman (AT)";
 				};
 			};
 		};
@@ -966,7 +975,6 @@ class Mission
 					vehicle="O_Soldier_AR_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_A2_AR";
 					init="GrpIR_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
@@ -996,7 +1004,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpIR_A2_AT";
 					init="GrpIR_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
-					description="Iran Alpha 2 Rifleman(AT)";
+					description="Iran Alpha 2 Rifleman (AT)";
 				};
 			};
 		};
@@ -1029,7 +1037,6 @@ class Mission
 					vehicle="O_Soldier_AR_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_A3_AR";
 					init="GrpIR_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
@@ -1059,7 +1066,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpIR_A3_AT";
 					init="GrpIR_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
-					description="Iran Alpha 3 Rifleman(AT)";
+					description="Iran Alpha 3 Rifleman (AT)";
 				};
 			};
 		};
@@ -1078,7 +1085,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					lock="UNLOCKED";
-					rank="CORPORAL";
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitIR_BSL_SL";
 					init="GrpIR_BSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
@@ -1092,6 +1099,7 @@ class Mission
 					vehicle="O_medic_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_BSL_M";
 					init="GrpIR_BSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
@@ -1128,7 +1136,6 @@ class Mission
 					vehicle="O_Soldier_AR_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_B1_AR";
 					init="GrpIR_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
@@ -1158,7 +1165,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpIR_B1_AT";
 					init="GrpIR_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
-					description="Iran Bravo 1 Rifleman(AT)";
+					description="Iran Bravo 1 Rifleman (AT)";
 				};
 			};
 		};
@@ -1191,7 +1198,6 @@ class Mission
 					vehicle="O_Soldier_AR_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_B2_AR";
 					init="GrpIR_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
@@ -1221,7 +1227,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpIR_B2_AT";
 					init="GrpIR_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
-					description="Iran Bravo 2 Rifleman(AT)";
+					description="Iran Bravo 2 Rifleman (AT)";
 				};
 			};
 		};
@@ -1254,7 +1260,6 @@ class Mission
 					vehicle="O_Soldier_AR_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_B3_AR";
 					init="GrpIR_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
@@ -1284,7 +1289,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpIR_B3_AT";
 					init="GrpIR_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
-					description="Iran Bravo 3 Rifleman(AT)";
+					description="Iran Bravo 3 Rifleman (AT)";
 				};
 			};
 		};
@@ -1303,7 +1308,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					lock="UNLOCKED";
-					rank="CORPORAL";
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitIR_CSL_SL";
 					init="GrpIR_CSL = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
@@ -1317,6 +1322,7 @@ class Mission
 					vehicle="O_medic_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_CSL_M";
 					init="GrpIR_CSL = group this; nul = [""m"",this] call f_fnc_assignGear;";
@@ -1353,7 +1359,6 @@ class Mission
 					vehicle="O_Soldier_AR_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_C1_AR";
 					init="GrpIR_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
@@ -1383,7 +1388,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpIR_C1_AT";
 					init="GrpIR_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
-					description="Iran Charlie 1 Rifleman(AT)";
+					description="Iran Charlie 1 Rifleman (AT)";
 				};
 			};
 		};
@@ -1416,7 +1421,6 @@ class Mission
 					vehicle="O_Soldier_AR_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_C2_AR";
 					init="GrpIR_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
@@ -1446,7 +1450,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpIR_C2_AT";
 					init="GrpIR_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
-					description="Iran Charlie 2 Rifleman(AT)";
+					description="Iran Charlie 2 Rifleman (AT)";
 				};
 			};
 		};
@@ -1479,7 +1483,6 @@ class Mission
 					vehicle="O_Soldier_AR_F";
 					player="PLAY CDG";
 					lock="UNLOCKED";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_C3_AR";
 					init="GrpIR_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear;";
@@ -1509,7 +1512,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpIR_C3_AT";
 					init="GrpIR_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear;";
-					description="Iran Charlie 3 Rifleman(AT)";
+					description="Iran Charlie 3 Rifleman (AT)";
 				};
 			};
 		};
@@ -1567,6 +1570,7 @@ class Mission
 					vehicle="B_soldier_AR_F";
 					player="PLAY CDG";
 					leader=1;
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNO_MMG1_G";
 					init="GrpNO_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;      ";
@@ -1648,7 +1652,6 @@ class Mission
 					side="WEST";
 					vehicle="B_soldier_repair_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNO_ENG1_A";
 					init="GrpNO_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
@@ -1670,6 +1673,7 @@ class Mission
 					vehicle="B_diver_TL_F";
 					player="PLAY CDG";
 					leader=1;
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitNO_DT1_TL";
 					init="GrpNO_DT1 = group this; nul = [""div"",this] call f_fnc_assignGear";
@@ -1682,6 +1686,7 @@ class Mission
 					side="WEST";
 					vehicle="B_diver_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNO_DT1_D1";
 					init="GrpNO_DT1 = group this; nul = [""div"",this] call f_fnc_assignGear";
@@ -1694,6 +1699,7 @@ class Mission
 					side="WEST";
 					vehicle="B_diver_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNO_DT1_D2";
 					init="GrpNO_DT1 = group this; nul = [""div"",this] call f_fnc_assignGear";
@@ -1706,6 +1712,7 @@ class Mission
 					side="WEST";
 					vehicle="B_diver_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNO_DT1_D3";
 					init="GrpNO_DT1 = group this; nul = [""div"",this] call f_fnc_assignGear";
@@ -1721,13 +1728,13 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={1788.6677,5.5,5828.688};
+					position[]={1788.7896,5.5,5826.6157};
 					id=106;
 					side="WEST";
 					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					leader=1;
-					rank="CORPORAL";
+					rank="CAPTAIN";
 					skill=0.60000002;
 					text="UnitNO_TH1_P";
 					init="GrpNO_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver NO_TH1;";
@@ -1735,16 +1742,16 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1791.1965,5.5,5827.1528};
+					position[]={1791.3184,5.5,5825.0806};
 					id=107;
 					side="WEST";
 					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
+					rank="LIEUTENANT";
 					skill=0.60000002;
-					text="UnitNO_TH1_CM";
+					text="UnitNO_TH1_CP";
 					init="GrpNO_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [NO_TH1,[0]];";
-					description="NATO Transport Helo 1 Crewman";
+					description="NATO Transport Helo 1 Co-Pilot";
 				};
 			};
 		};
@@ -1756,13 +1763,13 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={1813.8187,5.5,5829.1807};
+					position[]={1813.9406,5.5,5827.1084};
 					id=108;
 					side="WEST";
 					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					leader=1;
-					rank="CORPORAL";
+					rank="CAPTAIN";
 					skill=0.60000002;
 					text="UnitNO_AH1_P";
 					init="GrpNO_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver NO_AH1;";
@@ -1770,16 +1777,16 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1816.288,5.5,5827.5264};
+					position[]={1816.4098,5.5,5825.4541};
 					id=109;
 					side="WEST";
 					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
+					rank="LIEUTENANT";
 					skill=0.60000002;
-					text="UnitNO_AH1_CM";
+					text="UnitNO_AH1_CP";
 					init="GrpNO_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [NO_AH1,[0]];";
-					description="NATO Attack Helo 1 Crewman";
+					description="NATO Attack Helo 1 Co-Pilot";
 				};
 			};
 		};
@@ -1850,6 +1857,7 @@ class Mission
 					vehicle="O_Soldier_AR_F";
 					player="PLAY CDG";
 					leader=1;
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_MMG1_G";
 					init="GrpIR_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear;";
@@ -1896,7 +1904,6 @@ class Mission
 					side="EAST";
 					vehicle="O_Soldier_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_MAT1_AG";
 					init="GrpIR_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear;";
@@ -1931,7 +1938,6 @@ class Mission
 					side="EAST";
 					vehicle="O_soldier_repair_F";
 					player="PLAY CDG";
-					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_ENG1_A";
 					init="GrpIR_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear;";
@@ -1953,6 +1959,7 @@ class Mission
 					vehicle="O_diver_TL_F";
 					player="PLAY CDG";
 					leader=1;
+					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitIR_DT1_TL";
 					init="GrpIR_DT1 = group this; nul = [""div"",this] call f_fnc_assignGear";
@@ -1965,6 +1972,7 @@ class Mission
 					side="EAST";
 					vehicle="O_diver_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_DT1_D1";
 					init="GrpIR_DT1 = group this; nul = [""div"",this] call f_fnc_assignGear";
@@ -1977,6 +1985,7 @@ class Mission
 					side="EAST";
 					vehicle="O_diver_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_DT1_D2";
 					init="GrpIR_DT1 = group this; nul = [""div"",this] call f_fnc_assignGear";
@@ -1989,6 +1998,7 @@ class Mission
 					side="EAST";
 					vehicle="O_diver_F";
 					player="PLAY CDG";
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIR_DT1_D3";
 					init="GrpIR_DT1 = group this; nul = [""div"",this] call f_fnc_assignGear";
@@ -2010,7 +2020,7 @@ class Mission
 					vehicle="O_helipilot_F";
 					player="PLAY CDG";
 					leader=1;
-					rank="CORPORAL";
+					rank="CAPTAIN";
 					skill=0.60000002;
 					text="UnitIR_TH1_P";
 					init="GrpIR_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver IR_TH1;";
@@ -2023,10 +2033,11 @@ class Mission
 					side="EAST";
 					vehicle="O_helipilot_F";
 					player="PLAY CDG";
+					rank="LIEUTENANT";
 					skill=0.60000002;
-					text="UnitIR_TH1_CM";
+					text="UnitIR_TH1_CP";
 					init="GrpIR_TH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [IR_TH1,[0]];";
-					description="Iran Transport Helo 1 Crewman";
+					description="Iran Transport Helo 1 Co-Pilot";
 				};
 			};
 		};
@@ -2044,7 +2055,7 @@ class Mission
 					vehicle="O_helipilot_F";
 					player="PLAY CDG";
 					leader=1;
-					rank="CORPORAL";
+					rank="CAPTAIN";
 					skill=0.60000002;
 					text="UnitIR_AH1_P";
 					init="GrpIR_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInDriver IR_AH1;";
@@ -2057,10 +2068,11 @@ class Mission
 					side="EAST";
 					vehicle="O_helipilot_F";
 					player="PLAY CDG";
+					rank="LIEUTENANT";
 					skill=0.60000002;
-					text="UnitIR_AH1_CM";
+					text="UnitIR_AH1_CP";
 					init="GrpIR_AH1 = group this; nul = [""p"",this] call f_fnc_assignGear; this moveInTurret [IR_AH1,[0]];";
-					description="Iran Attack Helo 1 Crewman";
+					description="Iran Attack Helo 1 Co-Pilot";
 				};
 			};
 		};
@@ -2123,7 +2135,7 @@ class Mission
 		items=4;
 		class Item0
 		{
-			position[]={1790.0547,5.5,5821.1226};
+			position[]={1790.1765,5.5,5819.0503};
 			id=132;
 			side="EMPTY";
 			vehicle="B_MH9_F";
@@ -2142,7 +2154,7 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={1814.1469,5.5,5820.3232};
+			position[]={1814.2687,5.5,5818.251};
 			id=134;
 			side="EMPTY";
 			vehicle="B_AH9_F";
