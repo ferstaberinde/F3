@@ -9,7 +9,7 @@
 // Minimal:
 // [position,side,vehicleclass] call ws_fnc_createVehicle;
 // Full:
-// [pos,side,"vehicleclass",["option1","option2"],[no of guards,["guardclasses"],loaded],["BEHAVIOUR","COMBATMODE"],{code}] call XYZ
+// [pos,side,"vehicleclass",["option1","option2"],[no of guards,["guardclasses"],loaded],["BEHAVIOUR","COMBATMODE"],{code}] call ws_fnc_createVehicle
 //
 // RETURNS
 // [created vehicle,arguments]

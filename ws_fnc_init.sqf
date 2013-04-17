@@ -1,5 +1,5 @@
 //Global vars used by all functions
-ws_debug = true;
+ws_debug = false; //Set this to true for debug markers and messages from all functions
 
 // Create the functions module if it isn't present
 if (isnil "bis_fnc_init") then {_fm = createGroup sideLogic;_fm createUnit ["FunctionsManager", [0,0,0], [],0,"NONE"];};

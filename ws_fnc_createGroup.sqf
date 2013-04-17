@@ -22,11 +22,6 @@
 // 4.2 Array of classes that fill up the group after all forced classes are used	| MANDATORY
 // 5. Array to define default behaviour and combatmode 								| OPTIONAL - default is ["AWARE","YELLOW"], can be empty
 // 6. code that is executed after the vehicle is spawned							| OPTIONAL - executed as [_grp,_this] spawn _code, code has to be string or code
-//
-// EXAMPLES
-// [getPos base,west,"HMMWV_M2"] call ws_fnc_createVehicle;
-// [getPos t2,east,"BMP3",["lockturret","clearcargo","improved"],[5,["RU_Soldier_2","RU_Soldier_1"],true],["COMBAT","RED"],{sleep 5;_this select 0 setDamage 1}] call ws_fnc_createVehicle;
-
 
 private ["_debug","_count",
 "_faction","_spawn","_waypoint","_classes_array","_commonclasses","_forcedclasses","_rareclasses","_rarechance","_respawns",
