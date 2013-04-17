@@ -40,13 +40,17 @@ _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};   //Debug mode.
 _count = count _this;
 _posloc = _this select 0;
 _pos = [0,0,0];
-_dir = random 360;
+_posradius = 0;
+_road = false;
+_water = false;
 
 //Optional variables parsed
-if (_count > 1) then {_posradius = _this select 1;} else {_posradius = 0;};
+if (_count > 1) then {_posradius = _this select 1;};
 //if (_count > 2) then {_dir = _this select 2;} else {};
-if (_count > 2) then {_road = _this select 2;} else {_road = false;	};
-if (_count > 3) then {_water = _this select 3;} else {_water = false;};
+if (_count > 2) then {_road = _this select 2;};
+if (_count > 3) then {_water = _this select 3;};
+
+_dir = random 360;
 
 //Interpreting variables   
 //Creating the array for the spawnpos
@@ -59,8 +63,9 @@ switch (typename _posloc) do {
 	default {[_posloc,["ARRAY","OBJECT","STRING"],"ws_fnc_getPos"] call ws_fnc_typecheck;};
 };
 
-_posX = _pos select 0;
-_posY = _pos select 1;
+_posX = (_pos select 0);
+_posY = (_pos select 1);
+_pos set [2,0];
 
 //Fault checks
 //Checking the variables we have against what we should have
@@ -69,9 +74,16 @@ _posY = _pos select 1;
 {[_x,["BOOL"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_road,_water];
 
 if (_posradius > 0) then {
-	_pos set [0,_posX + (round random _posradius * sin _dir)];
-	_pos set [1,_posY + (round random _posradius * cos _dir)];
+	/*
+	_posX = _orgX + (_dst * sin _dir);
+	_posY = _orgY + (_dst * cos _dir);
+	_newPos = [_posX,_posY,0]*/
+	_newX = _posX + ((random _posradius) * sin _dir);
+	_newY = _posY + ((random _posradius) * cos _dir);
+	_pos = [_newX,_newY,0];
 };
+
+player sidechat format ["%1",_pos select 1];
 
 //If the position has to be on dry land
 if (!_water && !_road && (surfaceIsWater _pos)) then {
@@ -107,7 +119,7 @@ if (_road) then {
 };
 
 if (_debug) then {
-player globalchat format ["DEBUG: ws_fnc_getPos done. Pos is %1",_pos];
+player globalchat format ["DEBUG: ws_fnc_getPos done. Pos is %1, direction is %2",_pos,_dir];
   _mkr = createMarker [format ["%1",_pos], _pos];
   _mkr setMarkerType "mil_dot";
   _mkr setMarkerColor "ColorGreen";

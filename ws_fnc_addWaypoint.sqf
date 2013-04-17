@@ -23,7 +23,8 @@
 //  	b. "patrol" - the group moves to the position and starts a randomized patrol
 //  	c. "defend" - the group moves to the position and mans all statics, guarding the area
 //  	d. "garrison" - the group moves to the position, mans statics and takes position inside buildings, prioritizing bunkers and other military structures over civilian buildings
-// 	3.2. modifier - the waypoint radius or radius to patrol/defend			
+// 	3.2. modifier - the waypoint radius or radius to patrol/defend	
+//  3.3  completition radius		
 // 5. array defining waypoint behaviour, combatmode and speed				| OPTIONAL - default is ["AWARE","YELLOW","NORMAL], can be empty
 // 6. code that is executed on waypoint completition						| OPTIONAL - must be string! (e.g. "hint 'waypoint completed'")
 //
@@ -33,7 +34,7 @@
 // [GrpUS_CO,[5,8,0],["sad",250],["COMBAT","RED","FULL"],"hint 'reinforcements have arrived'"] call ws_fnc_addWaypoint	|  move the group named "GrpUS_CO" to [5,8,0] with full speed and have them start a sweep in a radius of 250. When they reach the waypoint the hint "reinforcements have arrived!" will be displayed
 
 private ["_debug",
-"_grp","_count","_pos","_modes","_mode","_marray","_behaviour","_speed","_modifier","_code",
+"_grp","_count","_pos","_modes","_mode","_marray","_behaviour","_speed","_modifier","_compl","_code",
 "_wp","_mkr"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};  //Debug mode. If ws_debug is globally defined it overrides _debug
@@ -47,6 +48,7 @@ _pos= [(_this select 1)] call ws_fnc_getPos;
 //Array of all legal possible modes. See http://community.bistudio.com/wiki/setWaypointType
 _modes = ["move","destroy","getin","sad","join","leader","getout","cycle","load","unload","tr unload","hold","sentry","guard","talk","scripted","support","getin nearest","dismiss","defend","garrison","patrol"];
 _modifier = 0;
+_compl = 0;
 _mode = "move";
 _marray = [];
 _behaviour = ["AWARE","YELLOW","NORMAL"];					
@@ -56,6 +58,7 @@ _code = "";
 //Setting up the array for the movepos
 if (_count > 2) then {_marray = _this select 2;};
 if (count _marray > 0) then {_mode = _marray select 0;};if (count _marray > 1) then {_modifier = _marray select 1;};
+if (count _marray > 2) then {_compl = _marray select 2;};
 if (_count > 3) then {_behaviour = _this select 3;if (count _behaviour < 3) then {_behaviour = ["AWARE","YELLOW","NORMAL"];};};
 if (_count > 4) then {_code = _this select 4};
    
@@ -76,6 +79,7 @@ _wp = _grp addWaypoint [_pos,0];
 _wp setWaypointBehaviour (_behaviour select 0);
 _wp setWaypointCombatMode (_behaviour select 1);
 _wp setWaypointSpeed (_behaviour select 2);
+_wp setWaypointCompletionRadius _compl;
 
 _wp = _grp addWaypoint [_pos,0];
 switch (_mode) do {   
@@ -108,7 +112,7 @@ switch (_mode) do {
 	};
 };
 
-_grp setCurrentWaypoint _wp;
+//_grp setCurrentWaypoint _wp;
 
 if (_debug) then {
 player globalchat format ["DEBUG: ws_fnc_createWaypoint. Waypoint %1 for _grp%2 created",_wp,_grp];
