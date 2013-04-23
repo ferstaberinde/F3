@@ -12,7 +12,7 @@
 // [pos,side,"vehicleclass",["option1","option2"],[no of guards,["guardclasses"],loaded],["BEHAVIOUR","COMBATMODE"],{code}] call ws_fnc_createVehicle
 //
 // RETURNS
-// [created vehicle,arguments]
+// [created vehicle,group of vehicle,arguments]
 //
 // PARAMETERS
 // 1. position as array [x,y,z]													| MANDATORY	
@@ -30,7 +30,7 @@
 //  2. array with classnames of possible guard units
 //  3. bool wether guards are loaded into the vehicle							| If more guards than cargo seats are spawned the units outside are put into their own group next to the vehicle
 // 6. Array to define default behaviour and combatmode 							| OPTIONAL - default is ["AWARE","YELLOW"], can be empty
-// 7. code that is executed after the vehicle is spawned						| OPTIONAL - executed as [_veh,_this] spawn _code; Code has to be string or code
+// 7. code that is executed after the vehicle is spawned						| OPTIONAL - executed as [_veh,_vehgrp,_this] spawn _code; Code has to be string or code
 //
 // EXAMPLES
 // [getPos base,west,"HMMWV_M2"] call ws_fnc_createVehicle;
@@ -39,7 +39,7 @@
 private ["_debug",
 "_count","_pos","_side","_type","_modarray","_behaviour",
 "_guardarray","_guards","_guardclasses","_load","_code",
-"_veh","_grp","_mod"];
+"_veh","_grp","_mod","_vehgrp"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};  //Debug mode. If ws_debug is globally defined it overrides _debug
 
@@ -91,18 +91,20 @@ _veh = createVehicle [_type,_pos,[],0,_mod];
 
 //Crew the vehicle
 //Get the default crew for the vehicle
-_crew = getArray (configFile >> "CfgVehicles" >> _type >> "typicalcargo");
+_crew = (getArray (configFile >> "CfgVehicles" >> _type >> "typicalcargo")) select 0;
 //Commander
-if ((_veh emptyPositions "Commander") > 0) then {_crewman =_grp createUnit [_crew select 1, _pos, [], 0, "NONE"]; _crewman assignAsCommander _veh; _crewman moveInCommander _veh;};
+if ((_veh emptyPositions "Commander") > 0) then {_crewman =_grp createUnit [_crew, _pos, [], 0, "NONE"]; _crewman assignAsCommander _veh; _crewman moveInCommander _veh;};
 //Gunner
-if ((_veh emptyPositions "Gunner") > 0) then {_crewman =_grp createUnit [_crew select 1, _pos, [], 0, "NONE"]; _crewman assignAsGunner _veh; _crewman moveInGunner _veh;};
+if ((_veh emptyPositions "Gunner") > 0) then {_crewman =_grp createUnit [_crew, _pos, [], 0, "NONE"]; _crewman assignAsGunner _veh; _crewman moveInGunner _veh;};
 //Driver
-_crewman =_grp createUnit [_crew select 0, _pos, [], 0, "NONE"]; _crewman assignAsDriver _veh; _crewman moveInDriver _veh;
+_crewman =_grp createUnit [_crew, _pos, [], 0, "NONE"]; _crewman assignAsDriver _veh; _crewman moveInDriver _veh;
 
 //Weird step necessary to get the correct side for the vehicle crew
 {
 [_x] joinSilent _grp;
 } forEach crew _veh;
+
+_vehgrp = _grp;
 
 _grp setBehaviour (_behaviour select 0);
 _grp setCombatMode (_behaviour select 1);
@@ -119,6 +121,7 @@ if (_guards > 0) then {
 	{
 		_cargospace = getNumber(configfile >> "CfgVehicles" >> _type >> "transportSoldier");
 		for "_x" from 1 to _cargospace do {
+		if (_x > _guards) exitWith {};
 		_unit = _grp createUnit [_guardclasses call ws_fnc_selectRandom, getPos _veh, [], 2, "NONE"];	
 		_unit assignAsCargo _veh; _unit moveInCargo _veh;
 		};
@@ -164,11 +167,10 @@ if (_debug) then {
 	_mkr setMarkerText format ["DBG:Veh %1",_veh];
 	_mkr setMarkerSize [0.5,0.5];
 	
-	[_grp,_mkr] spawn {
-		  while {_check > 0} do {
-		_check = {alive _x} count units _this select 0;
+	[_veh,_mkr] spawn {
+		  while {alive (_this select 0)} do {
 		 sleep 5;
-		 (_this select 1) setMarkerPos (getPos (leader (_this select 0)));
+		 (_this select 1) setMarkerPos (getPos (_this select 0));
 		 };
 		 
 	 (_this select 1) setMarkerColor "ColorRed";
@@ -177,4 +179,4 @@ if (_debug) then {
 };	
 
 //Script outputs the generated vehicle
-[_veh,_this]
+[_veh,_vehgrp,_this]
