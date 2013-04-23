@@ -74,10 +74,6 @@ _pos set [2,0];
 {[_x,["BOOL"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_road,_water];
 
 if (_posradius > 0) then {
-	/*
-	_posX = _orgX + (_dst * sin _dir);
-	_posY = _orgY + (_dst * cos _dir);
-	_newPos = [_posX,_posY,0]*/
 	_newX = _posX + ((random _posradius) * sin _dir);
 	_newY = _posY + ((random _posradius) * cos _dir);
 	_pos = [_newX,_newY,0];
