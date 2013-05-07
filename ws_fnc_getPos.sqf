@@ -11,7 +11,7 @@
 // Minimal:
 // [location] call ws_fnc_getPos;
 // Full:
-// [location,radius (int), road (bool), water (bool)] call ws_fnc_getPos;
+// [location,radius (int), road (bool), building allowed (bool), water allowed (bool)] call ws_fnc_getPos;
 //
 // OUTPUT
 // Array: [x,y,z]
@@ -20,7 +20,8 @@
 // 1. location can be String (Markername), Array [x,y,z] or Objectname		| MANDATORY	
 // 2. radius has to be int > 0 and defines the radius around the position 	| OPTIONAL - default is 0
 // 3. road (bool) forces unit to be placed on road 							| OPTIONAL - default is false
-// 4. water (bool) forces units to be placed on land 						| OPTIONAL - default is true
+// 4. building allowed (bool) enables the position to be in/on a building	| OPTIONAL - default is false
+// 5. water allowed (bool) enables the position to be on water as well		| OPTIONAL - default is false
 //
 // EXAMPLES
 // ["spawnmarker"] call ws_fnc_getPos; - turns the marker location into a position array
@@ -32,7 +33,7 @@
 // implement angle
 // check if marker is area, if yes place pos within
 
-private ["_debug","_count","_posloc","_pos","_posradius","_dir","_road","_water","_posX","_posY"];
+private ["_debug","_count","_posloc","_pos","_posradius","_dir","_road","_building","_water","_posX","_posY"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};   //Debug mode. If ws_debug is globally defined it overrides _debug
 
@@ -42,13 +43,15 @@ _posloc = _this select 0;
 _pos = [0,0,0];
 _posradius = 0;
 _road = false;
+_building = true;
 _water = false;
 
 //Optional variables parsed
 if (_count > 1) then {_posradius = _this select 1;};
 //if (_count > 2) then {_dir = _this select 2;} else {};
 if (_count > 2) then {_road = _this select 2;};
-if (_count > 3) then {_water = _this select 3;};
+if (_count > 3) then {_building = _this select 3;};
+if (_count > 4) then {_water = _this select 4;};
 
 _dir = random 360;
 
@@ -79,10 +82,8 @@ if (_posradius > 0) then {
 	_pos = [_newX,_newY,0];
 };
 
-player sidechat format ["%1",_pos select 1];
-
 //If the position has to be on dry land
-if (!_water && !_road && (surfaceIsWater _pos)) then {
+if (!_water && (surfaceIsWater _pos)) then {
 	_i = 0;
 	_distance = 0;
 	_done = false;
@@ -92,6 +93,22 @@ if (!_water && !_road && (surfaceIsWater _pos)) then {
 			_pos set [0,_posX + (_distance * sin _x)];
 			_pos set [1,_posY + (_distance * cos _x)];
 			if !(surfaceIsWater _pos) exitWith {_done = true};
+		};
+		_i = _i + 1;
+	};
+};
+
+//If building positions are disallowed
+if (!_building && (count (_pos nearObjects ["House",2]) >= 1)) then {
+	_i = 0;
+	_distance = 0;
+	_done = false;
+	while {!_done && _i <= 50} do {
+		for "_x" from 0 to 340 step 20 do {
+			_distance = _distance + 50;
+			_pos set [0,_posX + (_distance * sin _x)];
+			_pos set [1,_posY + (_distance * cos _x)];
+			if !(count (_pos nearObjects ["House",2]) >= 1) exitWith {_done = true};
 		};
 		_i = _i + 1;
 	};

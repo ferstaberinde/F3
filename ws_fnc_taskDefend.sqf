@@ -26,7 +26,7 @@
 
 private ["_debug","_count",
 "_group","_newGroup","_pos","_radius","_guns","_garrison","_civil",
-"_buildings","_vehicles","_milbuildings","_staticarray","_badarray","_milarray","_units","_static"];
+"_buildings","_vehicles","_milbuildings","_staticarray","_badarray","_milarray","_units","_units2","_static"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug}; //Debug mode. If ws_debug is globally defined it overrides _debug
 
@@ -55,6 +55,7 @@ _vehicles =  nearestObjects [_pos,["LandVehicle"],_radius];
 _milbuildings = [];
 _staticarray = [];
 _units = units _group;
+_units2 = _units - [leader _group];
 
 //Create an array containing all vehicles in the area that are uncrewed and have a free gunner seat
 {
@@ -73,16 +74,19 @@ _units = units _group;
 
 //Man the statics
 if (count _staticarray > 0 && _guns) then {
-_i = 0;
-while {(_i <= ((count _staticarray)-1)) || !(count _units <= 1)} do {
-		{
-			_static = _staticarray select _i;
+while {(count _staticarray > 0) && (count _units > 2)} do {
+			["ws_taskDefend1",[_static,_staticarray],""] call ws_fnc_debugText;
+			_static = _staticarray select 0;
 			_staticarray = _staticarray - [_static];
-			_x assignasgunner _static;
-			[_x] ordergetin true;
-			_i = _i + 1;
-			_units = _units - [_x];
-		} forEach _units - [leader _group];
+			["ws_taskDefend2",[_static,count _staticarray],""] call ws_fnc_debugText;
+			_unit = _units2 call ws_fnc_selectRandom;
+			_unit assignasgunner _static;
+			[_unit] ordergetin true;
+			waitUntil {isNil format ["%1",(gunner _static)]};
+			if (gunner _static == _unit) then {
+				_units = _units - [_unit];
+				_units2 = _units2 - [_unit];
+			};
 	};
 };
 
