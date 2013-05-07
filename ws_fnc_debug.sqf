@@ -72,6 +72,8 @@ if (_error) exitWith {["ws_fnc_clipboardcode DBG: ",_code," invalid. exiting."] 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
 if !(_debug) exitWith {};
 if !(isNil "ws_dbg_trg") exitWith {};
+onMapSingleClick "player setPos _pos";
+
 //Radio triggers to assist with debugging
 ws_dbg_trg=createTrigger["EmptyDetector",[0,0,0]];
 ws_dbg_trg setTriggerArea[0,0,0,false];
@@ -79,8 +81,8 @@ ws_dbg_trg setTriggerActivation["INDIA","PRESENT",true];
 ws_dbg_trg setTriggerStatements["this", "call ws_fnc_clipboardcode", ""]; 
 ws_dbg_trg setTriggerText "execute code from clipboard";
 
-ws_dbg_trg=createTrigger["EmptyDetector",[0,0,0]];
-ws_dbg_trg setTriggerArea[0,0,0,false];
-ws_dbg_trg setTriggerActivation["JULIET","PRESENT",true];
-ws_dbg_trg setTriggerStatements["this", "nul = [] execVM ""ws_fnc\ws_fnc_init.sqf"";", ""];
-ws_dbg_trg setTriggerText "recompile ws_fnc";
+ws_dbg_trg2=createTrigger["EmptyDetector",[0,0,0]];
+ws_dbg_trg2 setTriggerArea[0,0,0,false];
+ws_dbg_trg2 setTriggerActivation["JULIET","PRESENT",true];
+ws_dbg_trg2 setTriggerStatements["this", "nul = [] execVM ""ws_fnc\ws_fnc_init.sqf"";", ""];
+ws_dbg_trg2 setTriggerText "recompile ws_fnc";
