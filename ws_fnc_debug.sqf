@@ -69,12 +69,44 @@ if (_error) exitWith {["ws_fnc_clipboardcode DBG: ",_code," invalid. exiting."] 
 [] spawn (compile _code);
 };
 
+ws_fnc_copyPos= {
+_pos = [(getposASL player) select 0,(getposASL player) select 1,(getposATL player) select 2];
+copyToClipboard format ["%1",_pos];
+["ws_fnc_copyPos: ",_pos," copied!"] call ws_fnc_debugtext;
+};
+
+ws_fnc_countUnits = {
+_uw = 0; _ue =0; _ur=0; _up =0;
+{
+if (side _x == west && alive _x && !isPlayer _x) then {_uw = _uw + 1};
+if (side _x == east && alive _x && !isPlayer _x) then {_ue = _ue + 1};
+if (side _x == resistance && alive _x && !isPlayer _x) then {_ur = _ur + 1};
+if (isPlayer _x) then {_up = _up + 1};
+} forEach allUnits;
+
+player groupchat format ["Players: %1, Playable Units: %2, AI: BLU/%3, OPF/%4, RES/%5",_up,count playableUnits,_uw,_ue,_ur];
+diag_log format ["Players: %1, Playable Units: %2, AI: BLU/%3, OPF/%4, RES/%5",_up,count playableUnits,_uw,_ue,_ur];
+
+};
+
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
 if !(_debug) exitWith {};
 if !(isNil "ws_dbg_trg") exitWith {};
 onMapSingleClick "player setPos _pos";
 
 //Radio triggers to assist with debugging
+ws_dbg_trg=createTrigger["EmptyDetector",[0,0,0]];
+ws_dbg_trg setTriggerArea[0,0,0,false];
+ws_dbg_trg setTriggerActivation["GOLF","PRESENT",true];
+ws_dbg_trg setTriggerStatements["this", "call ws_fnc_countUnits", ""]; 
+ws_dbg_trg setTriggerText "Count units";
+
+ws_dbg_trg=createTrigger["EmptyDetector",[0,0,0]];
+ws_dbg_trg setTriggerArea[0,0,0,false];
+ws_dbg_trg setTriggerActivation["HOTEL","PRESENT",true];
+ws_dbg_trg setTriggerStatements["this", "call ws_fnc_copyPos", ""]; 
+ws_dbg_trg setTriggerText "Copy player position";
+
 ws_dbg_trg=createTrigger["EmptyDetector",[0,0,0]];
 ws_dbg_trg setTriggerArea[0,0,0,false];
 ws_dbg_trg setTriggerActivation["INDIA","PRESENT",true];

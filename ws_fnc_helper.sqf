@@ -1,5 +1,17 @@
 // Various functions used by other scripts or functions
 
+
+ws_fnc_attachLight = {	//http://forums.bistudio.com/showthread.php?93588-attach-flare-to-an-object&p=1541513&viewfull=1#post1541513
+_obj = _this select 0;
+_flare = _this select 1;
+
+_flare = "#lightpoint" createVehicle (position _obj);
+_flare setLightBrightness 0.3;
+_flare setLightAmbient[1.0, 1.0, 1.0];
+_flare setLightColor[1.0, 0.2, 0.2];
+_flare lightAttachObject [_obj, [-5,0,0]];
+};
+
 //Does not work
 /*
 //Credits to zorilya

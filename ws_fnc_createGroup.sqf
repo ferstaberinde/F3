@@ -62,9 +62,11 @@ _unit = _grp createUnit [_forcedclasses select 0,_pos,[],0,"NONE"];
 
 for "_x" from 2 to (_size) do {
   if (_x <= (count _forcedclasses)) then {
-  _unit = _grp createUnit [_forcedclasses select (_x - 1),getPos leader _grp,[],1,"NONE"];
+  _spos = [getPos leader _grp,5,false,false,false] call ws_fnc_getPos; 
+  _unit = _grp createUnit [_forcedclasses select (_x - 1),_spos,[],1,"NONE"];
   } else {
-	 _unit = _grp createUnit [_commonclasses call ws_fnc_selectrandom,getPos leader _grp,[],1,"NONE"];
+	 _spos = [getPos leader _grp,5,false,false,false] call ws_fnc_getPos; 
+	 _unit = _grp createUnit [_commonclasses call ws_fnc_selectrandom,_spos,[],1,"NONE"];
 	 };
 };
 

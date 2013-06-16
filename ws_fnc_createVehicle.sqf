@@ -154,6 +154,8 @@ switch (_modarray select _x) do {
 	};
 };
 
+_veh setDir (random 360);
+
 //After the spawn is done execute code
 [_veh,_this] spawn _code;
 

@@ -69,7 +69,7 @@ _units2 = _units - [leader _group];
 //Create a subarray containing all military type buildings
 {
 	if (typeof _x in _milarray) then {_milbuildings = _milbuildings + [_x];};
-	if ((str(_x buildingpos 4) == "[0,0,0]") || (typeof _x in _badarray) || (typeof _x in _milarray)) then {_buildings = _buildings - [_x]};
+	if ((str(_x buildingpos 5) == "[0,0,0]") || (typeof _x in _badarray) || (typeof _x in _milarray) || (damage _x >= 0.5)) then {_buildings = _buildings - [_x]};
 } foreach _buildings;
 
 //Man the statics
