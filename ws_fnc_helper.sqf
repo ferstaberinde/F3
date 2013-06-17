@@ -3,7 +3,6 @@
 
 ws_fnc_attachLight = {	//http://forums.bistudio.com/showthread.php?93588-attach-flare-to-an-object&p=1541513&viewfull=1#post1541513
 _obj = _this select 0;
-_flare = _this select 1;
 
 _flare = "#lightpoint" createVehicle (position _obj);
 _flare setLightBrightness 0.3;

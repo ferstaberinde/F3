@@ -24,4 +24,5 @@ ws_fnc_taskDefend = compile preprocessfile "ws_fnc\ws_fnc_taskDefend.sqf";
 ws_fnc_bettervehicle = compile preprocessfile "ws_fnc\ws_fnc_betterVehicle.sqf";
 ws_fnc_createGroup = compile preprocessfile "ws_fnc\ws_fnc_createGroup.sqf";
 ws_fnc_createVehicle = compile preprocessfile "ws_fnc\ws_fnc_createVehicle.sqf";
+ws_fnc_switchLights = compile preprocessfile "ws_fnc\ws_fnc_switchLights.sqf";
 
