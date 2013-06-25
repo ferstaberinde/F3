@@ -1,16 +1,15 @@
 ; F3 - Kegetys Spectator Script
 ; Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 ; ====================================================================================
-;MUF test------------------------------------------------------------
-;wait until health PPs are finished (death after unconscious, sudden death - see TEST_HealthPP.FSM)
-@(missionnamespace getvariable ["BIS_allowDeathScreen",true])
-BIS_allowHealthPP = false;
-(["HealthPP_black"] call bis_fnc_rscLayer) cutText ["","BLACK IN",8];
+BIS_fnc_feedback_allowPP = false;
+ppEffectDestroy [BIS_UncRadialBlur,BIS_DeathRadialBlur,BIS_DeathBlur,BIS_fnc_healthEffects_radialBlur,BIS_UncBlur];
+(["HealthPP_black"] call bis_fnc_rscLayer) cutText ["","BLACK IN",0];
+
 
 
 ; A3 death has  tendency to remove sounds sometimes.
-1 fadeMusic 1;
-1 fadeSound 1;
+0 fadeMusic 1;
+0 fadeSound 1;
 ; Initialize spectating script when player dies:
 
 _this execVM "f\common\f_spect\specta.sqf";

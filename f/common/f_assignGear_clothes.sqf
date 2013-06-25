@@ -1,6 +1,6 @@
-// F3 - Folk ARPS Clothes Gear Script
-// Credits: Head
-
+// F3 - F3 Folk ARPS Assign Gear
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// ====================================================================================
 
 // lets strip him down to the basic
 removeUniform _unit;
@@ -40,6 +40,10 @@ switch (_typeofUnit) do
 		if(!isnil "_diverRig" && _diverRig != "") then
 		{
 		_unit addvest _diverRig;
+		};
+		if(!isnil "_diverGlasses" && _diverGlasses != "") then
+		{
+		_unit addGoggles _diverGlasses;
 		};
 	};
 	case "eng":

@@ -1,4 +1,4 @@
-// F3 - Folk Assign Gear Script - Iran
+// F3 - Folk Assign Gear Script - Greek Army
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -43,21 +43,21 @@
 // ["acc_pointer_IR","optic_ACO_grn"] = remove all, add items.
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
-_rifle = "arifle_Khaybar_ACO_point_F"; 
-_riflemag = "30Rnd_65x39_caseless_green";			
-_riflemag_tr = "30Rnd_65x39_caseless_green_mag_Tracer";		
+_rifle = "arifle_Mk20_MRCO_F"; 
+_riflemag = "30Rnd_556x45_Stanag";			
+_riflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";		
 _rifle_attach = ["acc_pointer_IR","optic_ACO_grn"];
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
-_carbine = "arifle_Khaybar_C_ACO_point_F"; 
-_carbinemag = "30Rnd_65x39_caseless_green"; 
-_carbinemag_tr = "30Rnd_65x39_caseless_green_mag_Tracer";	
+_carbine = "arifle_Mk20C_F"; 
+_carbinemag = "30Rnd_556x45_Stanag"; 
+_carbinemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";	
 _carbine_attach = ["acc_pointer_IR","optic_ACO_grn"];
 
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
-_smg = "arifle_SDAR_F"; 
-_smgmag = "30Rnd_556x45_Stanag"; 
-_smgmag_tr = "30Rnd_556x45_Stanag";			
+_smg = "SMG_02_F"; 
+_smgmag = "30Rnd_9x21_Mag"; 
+_smgmag_tr = "30Rnd_9x21_Mag";			
 _smg_attach = nil;
 
 // Diver
@@ -67,9 +67,9 @@ _diverMag2 = "20Rnd_556x45_UW_mag";
 _diverWep_attach = nil;
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle = "arifle_Khaybar_GL_ACO_point_F"; 
-_glriflemag = "30Rnd_65x39_caseless_green";
-_glriflemag_tr = "30Rnd_65x39_caseless_green_mag_Tracer"; 
+_glrifle = "arifle_Mk20_GL_MRCO_pointer_F"; 
+_glriflemag = "30Rnd_556x45_Stanag";
+_glriflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow"; 
 _glmag = "1Rnd_HE_Grenade_shell";														
 _glrifle_attach = ["acc_pointer_IR","optic_ACO_grn"];
 
@@ -85,7 +85,7 @@ _glflareyellow = "3Rnd_UGL_FlareYellow_F";
 _glflaregreen = "3Rnd_UGL_FlareGreen_F";
 
 // Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
-_pistol = "hgun_Rook40_F";
+_pistol = "hgun_ACPC2_F";
 _pistolmag = "16Rnd_9x21_Mag";	
 
 // Grenades
@@ -98,25 +98,25 @@ _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
 // Backpacks
-_bagmedium = "B_FieldPack_ocamo";			// used by most roles
-_baglarge =  "B_Carryall_ocamo"; 			// used by medic and engineers
-_bagmediumdiver =  "B_AssaultPack_blk_DiverTL";		// used by divers
+_bagmedium = "B_AssaultPack_rgr";			// used by most roles
+_baglarge =  "B_TacticalPack_oli"; 			// used by medic and engineers
+_bagmediumdiver =  "B_AssaultPack_blk";		// used by divers
 
 // ====================================================================================
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = "arifle_MX_SW_F"; 
-_ARmag = "100Rnd_65x39_caseless_mag";
-_ARmag_tr = "100Rnd_65x39_caseless_mag_Tracer";																							
+_AR = "LMG_Mk200_F"; 
+_ARmag = "200Rnd_65x39_cased_Box";
+_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";																							
 _AR_attach = ["acc_pointer_IR","optic_ACO_grn"];
 
 // Medium MG
-_MMG = "LMG_Mk200_ACO_grip_F"; 
-_MMGmag = "200Rnd_65x39_cased_Box";	
-_MMGmag_tr = "200Rnd_65x39_cased_Box_Tracer";																								
-_MMG_attach = ["acc_pointer_IR","optic_ACO_grn"];
+_MMG = "LMG_Zafir_F"; 
+_MMGmag = "150Rnd_762x51_Box";
+_MMGmag_tr = "150Rnd_762x51_Box_Tracer";																								
+_MMG_attach = ["acc_pointer_IR","optic_ACO"];
 
 // Rifleman AT
 _RAT = "launch_RPG32_F"; 
@@ -127,10 +127,12 @@ _MTR = "B_Mk6Mortar_Wpn";
 _MTRmount = "B_Mk6Mortar_Support";
 
 // Medium AT
-_MAT = "launch_RPG32_F"; 
-_MATmag1 = "RPG32_F"; 
-_MATmag2 = "RPG32_F";		   
-
+_MAT = "launch_O_Titan_short_F"; 
+_MATmag1 = "Titan_AT"; 
+_MATmag2 = "Titan_AP";		
+// Surface Air
+_SAM = "launch_O_Titan_F";
+_SAMmag = "Titan_AA";
 // Engineer items.
 _ATmine = "ATMine_Range_Mag"; 
 _satchel = "DemoCharge_Remote_Mag";																										
@@ -142,20 +144,21 @@ _APmine2 = "ClaymoreDirectionalMine_Remote_Mag";
 // CLOTHES AND UNIFORMS
 
 // Base
-_baseUniform = "U_O_CombatUniform_ocamo";
-_baseHelmet = "H_HelmetO_ocamo";
-_lightRig = "V_HarnessO_brn"; // co,dc,ftl,medic,rat,matag,mmgag
-_heavyRig = "V_HarnessOGL_brn"; // ar,eng
+_baseUniform = "U_I_CombatUniform";
+_baseHelmet = "H_HelmetIA_net";
+_lightRig = "V_PlateCarrierIA1_dgtl"; // co,dc,ftl,medic,rat,matag,mmgag
+_heavyRig = "V_PlateCarrierIAGL_dgtl"; // ar,eng
 
 // Diver
-_diverUniform =  "U_O_Wetsuit";
+_diverUniform =  "U_I_Wetsuit";
 _diverHelmet = "";
-_diverRig = "V_RebreatherIR";
+_diverRig = "V_RebreatherIA";
+_diverGlasses = "G_Diving";
 
 // Pilot
-_pilotUniform = "U_O_PilotCoveralls";
-_pilotHelmet = "H_PilotHelmetHeli_O";
-_pilotRig = "V_TacVest_brn";
+_pilotUniform = "U_I_HeliPilotCoveralls";
+_pilotHelmet = "H_PilotHelmetHeli_I";
+_pilotRig = "V_TacVest_blk";
 
 // ====================================================================================
 
@@ -191,7 +194,7 @@ if("NVGoggles" in (assignedItems player)) then
 _unit unassignItem "NVGoggles";
 _unit removeItem "NVGoggles";
 };
-
+// uncomment to remove nvgoogles
 _unit addItem "NVGoggles";
 _unit assignItem "NVGoggles";					// add universal NVG for this faction
 
