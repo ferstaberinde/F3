@@ -1,90 +1,132 @@
-// F3 - Takistani Group IDs
+// F3 - Set Group IDs
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// GROUP IDs: NATO
+// GROUP IDs: BLUFOR > BLUE
 // Automatically assigns intelligible names to groups
 
-GrpNO_CO setGroupId ["NATO CO -","GroupColor0"];
-GrpNO_DC setGroupId ["NATO DC -","GroupColor0"];
-GrpNO_ASL setGroupId ["NATO ASL -","GroupColor0"];
-GrpNO_A1 setGroupId ["NATO A1 -","GroupColor0"];
-GrpNO_A2 setGroupId ["NATO A2 -","GroupColor0"];
-GrpNO_A3 setGroupId ["NATO A3 -","GroupColor0"];
-GrpNO_BSL setGroupId ["NATO BSL -","GroupColor0"];
-GrpNO_B1 setGroupId ["NATO B1 -","GroupColor0"];
-GrpNO_B2 setGroupId ["NATO B2 -","GroupColor0"];
-GrpNO_B3 setGroupId ["NATO B3 -","GroupColor0"];
-GrpNO_CSL setGroupId ["NATO CSL -","GroupColor0"];
-GrpNO_C1 setGroupId ["NATO C1 -","GroupColor0"];
-GrpNO_C2 setGroupId ["NATO C2 -","GroupColor0"];
-GrpNO_C3 setGroupId ["NATO C3 -","GroupColor0"];
-GrpNO_MMG1 setGroupId ["NATO MMG1 -","GroupColor0"];
-GrpNO_MAT1 setGroupId ["NATO MAT1 -","GroupColor0"];
+GrpBLU_CO setGroupId ["Blue CO -","GroupColor0"];
+GrpBLU_DC setGroupId ["Blue DC -","GroupColor0"];
+GrpBLU_ASL setGroupId ["Blue ASL -","GroupColor0"];
+GrpBLU_A1 setGroupId ["Blue A1 -","GroupColor0"];
+GrpBLU_A2 setGroupId ["Blue A2 -","GroupColor0"];
+GrpBLU_A3 setGroupId ["Blue A3 -","GroupColor0"];
+GrpBLU_BSL setGroupId ["Blue BSL -","GroupColor0"];
+GrpBLU_B1 setGroupId ["Blue B1 -","GroupColor0"];
+GrpBLU_B2 setGroupId ["Blue B2 -","GroupColor0"];
+GrpBLU_B3 setGroupId ["Blue B3 -","GroupColor0"];
+GrpBLU_CSL setGroupId ["Blue CSL -","GroupColor0"];
+GrpBLU_C1 setGroupId ["Blue C1 -","GroupColor0"];
+GrpBLU_C2 setGroupId ["Blue C2 -","GroupColor0"];
+GrpBLU_C3 setGroupId ["Blue C3 -","GroupColor0"];
+GrpBLU_MMG1 setGroupId ["Blue MMG1 -","GroupColor0"];
+GrpBLU_MAT1 setGroupId ["Blue MAT1 -","GroupColor0"];
 
-// GrpNO_ST1 setGroupId ["NATO ST1 -","GroupColor0"];
-// GrpNO_HMG1 setGroupId ["NATO HMG1 -","GroupColor0"];
-// GrpNO_MTR1 setGroupId ["NATO MTR1 -","GroupColor0"];
-// GrpNO_HAT1 setGroupId ["NATO HAT1 -","GroupColor0"];
-// GrpNO_SAM1 setGroupId ["NATO SAM1 -","GroupColor0"];
+// GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];
+// GrpBLU_HMG1 setGroupId ["Blue HMG1 -","GroupColor0"];
+// GrpBLU_MTR1 setGroupId ["Blue MTR1 -","GroupColor0"];
+// GrpBLU_HAT1 setGroupId ["Blue HAT1 -","GroupColor0"];
+// GrpBLU_SAM1 setGroupId ["Blue SAM1 -","GroupColor0"];
 
-GrpNO_ENG1 setGroupId ["NATO ENG1 -","GroupColor0"];
+GrpBLU_ENG1 setGroupId ["Blue ENG1 -","GroupColor0"];
+GrpBLU_IFV1 setGroupId ["Blue IFV1 -","GroupColor0"];
 
-// GrpNO_IFV1 setGroupId ["NATO IFV1 -","GroupColor0"];
-// GrpNO_IFV2 setGroupId ["NATO IFV2 -","GroupColor0"];
-// GrpNO_IFV3 setGroupId ["NATO IFV3 -","GroupColor0"];
-// GrpNO_TNK1 setGroupId ["NATO TNK1 -","GroupColor0"];
+// GrpBLU_IFV2 setGroupId ["Blue IFV2 -","GroupColor0"];
+// GrpBLU_IFV3 setGroupId ["Blue IFV3 -","GroupColor0"];
+// GrpBLU_TNK1 setGroupId ["Blue TNK1 -","GroupColor0"];
 
-GrpNO_TH1 setGroupId ["NATO TH1 -","GroupColor0"];
+GrpBLU_TH1 setGroupId ["Blue TH1 -","GroupColor0"];
 
-// GrpNO_TH2 setGroupId ["NATO TH2 -","GroupColor0"];
+// GrpBLU_TH2 setGroupId ["Blue TH2 -","GroupColor0"];
 
-GrpNO_AH1 setGroupId ["NATO AH1 -","GroupColor0"];
-GrpNO_DT1 setGroupId ["NATO DT1 -","GroupColor0"];
+GrpBLU_AH1 setGroupId ["Blue AH1 -","GroupColor0"];
+GrpBLU_DT1 setGroupId ["Blue DT1 -","GroupColor0"];
 
 // ====================================================================================
 
-// GROUP IDs: Iran
+// GROUP IDs: OPFOR > RED
 // Automatically assigns intelligible names to groups
 
-GrpIR_CO setGroupId ["Iran CO -","GroupColor0"];
-GrpIR_DC setGroupId ["Iran DC -","GroupColor0"];
-GrpIR_ASL setGroupId ["Iran ASL -","GroupColor0"];
-GrpIR_A1 setGroupId ["Iran A1 -","GroupColor0"];
-GrpIR_A2 setGroupId ["Iran A2 -","GroupColor0"];
-GrpIR_A3 setGroupId ["Iran A3 -","GroupColor0"];
-GrpIR_BSL setGroupId ["Iran BSL -","GroupColor0"];
-GrpIR_B1 setGroupId ["Iran B1 -","GroupColor0"];
-GrpIR_B2 setGroupId ["Iran B2 -","GroupColor0"];
-GrpIR_B3 setGroupId ["Iran B3 -","GroupColor0"];
-GrpIR_CSL setGroupId ["Iran CSL -","GroupColor0"];
-GrpIR_C1 setGroupId ["Iran C1 -","GroupColor0"];
-GrpIR_C2 setGroupId ["Iran C2 -","GroupColor0"];
-GrpIR_C3 setGroupId ["Iran C3 -","GroupColor0"];
-GrpIR_MMG1 setGroupId ["Iran MMG1 -","GroupColor0"];
-GrpIR_MAT1 setGroupId ["Iran MAT1 -","GroupColor0"];
+GrpRED_CO setGroupId ["Red CO -","GroupColor0"];
+GrpRED_DC setGroupId ["Red DC -","GroupColor0"];
+GrpRED_ASL setGroupId ["Red ASL -","GroupColor0"];
+GrpRED_A1 setGroupId ["Red A1 -","GroupColor0"];
+GrpRED_A2 setGroupId ["Red A2 -","GroupColor0"];
+GrpRED_A3 setGroupId ["Red A3 -","GroupColor0"];
+GrpRED_BSL setGroupId ["Red BSL -","GroupColor0"];
+GrpRED_B1 setGroupId ["Red B1 -","GroupColor0"];
+GrpRED_B2 setGroupId ["Red B2 -","GroupColor0"];
+GrpRED_B3 setGroupId ["Red B3 -","GroupColor0"];
+GrpRED_CSL setGroupId ["Red CSL -","GroupColor0"];
+GrpRED_C1 setGroupId ["Red C1 -","GroupColor0"];
+GrpRED_C2 setGroupId ["Red C2 -","GroupColor0"];
+GrpRED_C3 setGroupId ["Red C3 -","GroupColor0"];
+GrpRED_MMG1 setGroupId ["Red MMG1 -","GroupColor0"];
+GrpRED_MAT1 setGroupId ["Red MAT1 -","GroupColor0"];
 
-// GrpIR_ST1 setGroupId ["Iran ST1 -","GroupColor0"];
-// GrpIR_HMG1 setGroupId ["Iran HMG1 -","GroupColor0"];
-// GrpIR_MTR1 setGroupId ["Iran MTR1 -","GroupColor0"];
-// GrpIR_HAT1 setGroupId ["Iran HAT1 -","GroupColor0"];
-// GrpIR_SAM1 setGroupId ["Iran SAM1 -","GroupColor0"];
+// GrpRED_ST1 setGroupId ["Red ST1 -","GroupColor0"];
+// GrpRED_HMG1 setGroupId ["Red HMG1 -","GroupColor0"];
+// GrpRED_MTR1 setGroupId ["Red MTR1 -","GroupColor0"];
+// GrpRED_HAT1 setGroupId ["Red HAT1 -","GroupColor0"];
+// GrpRED_SAM1 setGroupId ["Red SAM1 -","GroupColor0"];
 
-GrpIR_ENG1 setGroupId ["Iran ENG1 -","GroupColor0"];
+GrpRED_ENG1 setGroupId ["Red ENG1 -","GroupColor0"];
+GrpRED_IFV1 setGroupId ["Red IFV1 -","GroupColor0"];
 
-// GrpIR_IFV1 setGroupId ["Iran IFV1 -","GroupColor0"];
-// GrpIR_IFV2 setGroupId ["Iran IFV2 -","GroupColor0"];
-// GrpIR_IFV3 setGroupId ["Iran IFV3 -","GroupColor0"];
-// GrpIR_TNK1 setGroupId ["Iran TNK1 -","GroupColor0"];
+// GrpRED_IFV2 setGroupId ["Red IFV2 -","GroupColor0"];
+// GrpRED_IFV3 setGroupId ["Red IFV3 -","GroupColor0"];
+// GrpRED_TNK1 setGroupId ["Red TNK1 -","GroupColor0"];
 
-GrpIR_TH1 setGroupId ["Iran TH1 -","GroupColor0"];
+GrpRED_TH1 setGroupId ["Red TH1 -","GroupColor0"];
 
-// GrpIR_TH2 setGroupId ["Iran TH2 -","GroupColor0"];
+// GrpRED_TH2 setGroupId ["Red TH2 -","GroupColor0"];
 
-GrpIR_AH1 setGroupId ["Iran AH1 -","GroupColor0"];
-GrpIR_DT1 setGroupId ["Iran DT1 -","GroupColor0"];
+GrpRED_AH1 setGroupId ["Red AH1 -","GroupColor0"];
+GrpRED_DT1 setGroupId ["Red DT1 -","GroupColor0"];
 
-//===================================================================================== 
+// ===================================================================================== 
+
+// GROUP IDs: INDEPEDENT > GREEN
+// Automatically assigns intelligible names to groups
+
+GrpGRN_CO setGroupId ["Green CO -","GroupColor0"];
+GrpGRN_DC setGroupId ["Green DC -","GroupColor0"];
+GrpGRN_ASL setGroupId ["Green ASL -","GroupColor0"];
+GrpGRN_A1 setGroupId ["Green A1 -","GroupColor0"];
+GrpGRN_A2 setGroupId ["Green A2 -","GroupColor0"];
+GrpGRN_A3 setGroupId ["Green A3 -","GroupColor0"];
+GrpGRN_BSL setGroupId ["Green BSL -","GroupColor0"];
+GrpGRN_B1 setGroupId ["Green B1 -","GroupColor0"];
+GrpGRN_B2 setGroupId ["Green B2 -","GroupColor0"];
+GrpGRN_B3 setGroupId ["Green B3 -","GroupColor0"];
+GrpGRN_CSL setGroupId ["Green CSL -","GroupColor0"];
+GrpGRN_C1 setGroupId ["Green C1 -","GroupColor0"];
+GrpGRN_C2 setGroupId ["Green C2 -","GroupColor0"];
+GrpGRN_C3 setGroupId ["Green C3 -","GroupColor0"];
+GrpGRN_MMG1 setGroupId ["Green MMG1 -","GroupColor0"];
+GrpGRN_MAT1 setGroupId ["Green MAT1 -","GroupColor0"];
+
+// GrpGRN_ST1 setGroupId ["Green ST1 -","GroupColor0"];
+// GrpGRN_HMG1 setGroupId ["Green HMG1 -","GroupColor0"];
+// GrpGRN_MTR1 setGroupId ["Green MTR1 -","GroupColor0"];
+// GrpGRN_HAT1 setGroupId ["Green HAT1 -","GroupColor0"];
+// GrpGRN_SAM1 setGroupId ["Green SAM1 -","GroupColor0"];
+
+GrpGRN_ENG1 setGroupId ["Green ENG1 -","GroupColor0"];
+
+// GrpGRN_IFV1 setGroupId ["Green IFV1 -","GroupColor0"];
+// GrpGRN_IFV2 setGroupId ["Green IFV2 -","GroupColor0"];
+// GrpGRN_IFV3 setGroupId ["Green IFV3 -","GroupColor0"];
+// GrpGRN_TNK1 setGroupId ["Green TNK1 -","GroupColor0"];
+
+GrpGRN_TH1 setGroupId ["Green TH1 -","GroupColor0"];
+
+// GrpGRN_TH2 setGroupId ["Green TH2 -","GroupColor0"];
+// GrpGRN_AH1 setGroupId ["Green AH1 -","GroupColor0"];
+
+GrpGRN_DT1 setGroupId ["Green DT1 -","GroupColor0"];
+
+// ===================================================================================== 
 
 if (true) exitWith {};
 

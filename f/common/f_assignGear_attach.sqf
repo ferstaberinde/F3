@@ -1,5 +1,6 @@
-// F3 - Folk ARPS Attachment Gear Script
-// Credits: Head
+// F3 - F3 Folk ARPS Assign Gear
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// ====================================================================================
 
 // Get the weapon class of the _unit
 _wepClass = primaryweapon _unit;
@@ -15,7 +16,7 @@ switch(_wepClass) do
 			_wepItems = primaryWeaponItems _unit;
 			{
 				// loop trough them and remove them
-				_unit removeItemFromPrimaryWeapon _x;
+				_unit removePrimaryWeaponItem  _x;
 				_unit removeItem _x;
 			} foreach _wepItems;
 			{
@@ -30,7 +31,7 @@ switch(_wepClass) do
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
-				_unit removeItemFromPrimaryWeapon _x;
+				_unit removePrimaryWeaponItem  _x;
 				_unit removeItem _x;
 			} foreach _wepItems;
 			{
@@ -44,7 +45,7 @@ switch(_wepClass) do
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
-				_unit removeItemFromPrimaryWeapon _x;
+				_unit removePrimaryWeaponItem  _x;
 				_unit removeItem _x;
 			} foreach _wepItems;
 			{
@@ -58,7 +59,7 @@ switch(_wepClass) do
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
-				_unit removeItemFromPrimaryWeapon _x;
+				_unit removePrimaryWeaponItem  _x;
 				_unit removeItem _x;
 			} foreach _wepItems;
 			{
@@ -72,7 +73,7 @@ switch(_wepClass) do
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
-				_unit removeItemFromPrimaryWeapon _x;
+				_unit removePrimaryWeaponItem  _x;
 				_unit removeItem _x;
 			} foreach _wepItems;
 			{
@@ -86,7 +87,7 @@ switch(_wepClass) do
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
-				_unit removeItemFromPrimaryWeapon _x;
+				_unit removePrimaryWeaponItem  _x;
 				_unit removeItem _x;
 			} foreach _wepItems;
 			{
@@ -100,7 +101,7 @@ switch(_wepClass) do
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
-				_unit removeItemFromPrimaryWeapon _x;
+				_unit removePrimaryWeaponItem  _x;
 				_unit removeItem _x;
 			} foreach _wepItems;
 			{
@@ -114,7 +115,7 @@ switch(_wepClass) do
 			{
 				_wepItems = primaryWeaponItems _unit;
 				{
-					_unit removeItemFromPrimaryWeapon _x;
+					_unit removePrimaryWeaponItem  _x;
 					_unit removeItem _x;
 				} foreach _wepItems;
 				{
