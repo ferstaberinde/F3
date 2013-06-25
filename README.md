@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-2
+* Version: 3-0-3
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -27,6 +27,7 @@
 
 ### F3 Version History ###
 
+* 3-0-3     | 25 JUN 2013 | Patch release - Various improvements (see change history).
 * 3-0-2     | 25 MAR 2013 | Patch release - Various improvements (see change history).
 * 3-0-1     | 17 MAR 2013 | Patch release - Various improvements (see change history).
 * 3-0-0     | 10 MAR 2013 | First alpha release to community (see change history).
@@ -208,6 +209,13 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-0-3 | 25 JUN 2013
+
+* Quick updates to reflect key ArmA 3 Beta content and changes.
+* Updated all F3 Folk ARPS components to include Green faction.
+* Updated all F3 Folk ARPS components to reflect Blue/Red/Green faction names.
+* Updated F3 Folk ARPS Platoons component to include new/upgraded vehicles. 
 
 3-0-2 | 25 MAR 2013
 
