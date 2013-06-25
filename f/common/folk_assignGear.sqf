@@ -1,4 +1,4 @@
-// F3 - OA Assign Gear v2
+// F3 - F3 Folk ARPS Assign Gear
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -58,24 +58,33 @@ if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _u
 
 // ====================================================================================
 
-// GEAR: NATO
-// The following block of code executes only if the player is in a US slot; it 
+// GEAR: BLUFOR > BLUE
+// The following block of code executes only if the player is in a BLUE slot; it 
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "BLU_F") then {
-#include "folk_assignGear_nato.sqf"
+#include "folk_assignGear_blue.sqf"
 };
 
 // ====================================================================================
 
-// GEAR: IRAN
-// The following block of code executes only if the player is in a USMC slot; it 
+// GEAR: OPFOR > RED
+// The following block of code executes only if the player is in a RED slot; it 
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "OPF_F") then {
-#include "folk_assignGear_iran.sqf"
+#include "folk_assignGear_red.sqf"
 };
 
+// ====================================================================================
+
+// GEAR: INDEPEDENT > GREEN
+// The following block of code executes only if the player is in a GREEN slot; it 
+// automatically includes a file which contains the appropriate equipment data.
+
+if(_faction == "IND_F") then {
+#include "folk_assignGear_green.sqf";
+};
 
 // ====================================================================================
 

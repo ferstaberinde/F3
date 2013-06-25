@@ -127,11 +127,14 @@ f_endSelected = -1;
 
 // [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// NATO
-//[[GrpNO_CO,GrpNO_DC,GrpNO_ASL,GrpNO_BSL,GrpNO_CSL,GrpNO_A1,GrpNO_A2,GrpNO_A3,GrpNO_B1,GrpNO_B2,GrpNO_B3,GrpNO_C1,GrpNO_C2,GrpNO_C3,GrpNO_MMG1,GrpNO_MAT1,GrpNO_ENG1,GrpNO_DT1,GrpNO_TH1,GrpNO_AH1],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// BLUFOR > BLUE
+//[[GrpBLU_CO,GrpBLU_DC,GrpBLU_ASL,GrpBLU_BSL,GrpBLU_CSL,GrpBLU_A1,GrpBLU_A2,GrpBLU_A3,GrpBLU_B1,GrpBLU_B2,GrpBLU_B3,GrpBLU_C1,GrpBLU_C2,GrpBLU_C3,GrpBLU_MMG1,GrpBLU_MAT1,GrpBLU_ENG1,GrpBLU_DT1,GrpBLU_TH1,GrpBLU_AH1],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// Iran
-//[[GrpIR_CO,GrpIR_DC,GrpIR_ASL,GrpIR_BSL,GrpIR_CSL,GrpIR_A1,GrpIR_A2,GrpIR_A3,GrpIR_B1,GrpIR_B2,GrpIR_B3,GrpIR_C1,GrpIR_C2,GrpIR_C3,GrpIR_MMG1,GrpIR_MAT1,GrpIR_ENG1,GrpIR_DT1,GrpIR_TH1,GrpIR_AH1],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// OPFOR > RED
+//[[GrpRED_CO,GrpRED_DC,GrpRED_ASL,GrpRED_BSL,GrpRED_CSL,GrpRED_A1,GrpRED_A2,GrpRED_A3,GrpRED_B1,GrpRED_B2,GrpRED_B3,GrpRED_C1,GrpRED_C2,GrpRED_C3,GrpRED_MMG1,GrpRED_MAT1,GrpRED_ENG1,GrpRED_DT1,GrpRED_TH1,GrpRED_AH1],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+
+// INDEPENDENT > GREEN
+//[[GrpGRN_CO,GrpGRN_DC,GrpGRN_ASL,GrpGRN_BSL,GrpGRN_CSL,GrpGRN_A1,GrpGRN_A2,GrpGRN_A3,GrpGRN_B1,GrpGRN_B2,GrpGRN_B3,GrpGRN_C1,GrpGRN_C2,GrpGRN_C3,GrpGRN_MMG1,GrpGRN_MAT1,GrpGRN_ENG1,GrpGRN_DT1,GrpGRN_TH1,GrpGRN_AH1],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // ====================================================================================
 
@@ -159,14 +162,6 @@ f_endSelected = -1;
 // f_isFriendlyToBLU_RES = 1;
 // f_isFriendlyToBLU_CIV = 1;
 // [] execVM "f\common\f_setAISkillAD.sqf";
-
-// ====================================================================================
-
-// F3 - Construction Interface (COIN) Presets
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// f_COINstopped = false;
-// [COINName,"UnitName",0,2500] execVM "f\common\f_COINpresets.sqf";
 
 // ====================================================================================
 
