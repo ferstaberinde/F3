@@ -215,7 +215,11 @@ Version | Date
 * Quick updates to reflect key ArmA 3 Beta content and changes.
 * Updated all F3 Folk ARPS components to include Green faction.
 * Updated all F3 Folk ARPS components to reflect Blue/Red/Green faction names.
-* Updated F3 Folk ARPS Platoons component to include new/upgraded vehicles. 
+* Updated F3 Folk ARPS Platoons component to include new/upgraded vehicles.
+* Updated ORBAT Notes component (group names are now clickable and zoom map to group marker).
+* Updated F3 Folk ARPS JIP Reinforcement Options component (JIP group does not follow player).
+* Updated F3 Folk ARPS JIP Reinforcement Options component (JIP option more visible).
+* Fixed F3 Common Local Variables component (prevented double-counts of vehicle crew).
 
 3-0-2 | 25 MAR 2013
 
@@ -257,7 +261,7 @@ Version | Date
 * Migrated Casualties Cap component.
 * Migrated Casualties Cap (Advanced) component.
 * Migrated Dynamic View Distance component.
-* Migrated  Group E&E Check component.
+* Migrated Group E&E Check component.
 * Migrated Mission Maker Teleport component.
 * Migrated Name Tags component.
 * Migrated (and renamed) F3 Folk ARPS Platoons component.

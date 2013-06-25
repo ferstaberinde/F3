@@ -19,6 +19,7 @@ onLoadName = "*** Insert mission name here. ***";
 onLoadMission = "Made with the F3 Mission Development Framework";
 author = "*** Insert mission author name here. ***";
 loadScreen = "logo.paa";
+
 // ============================================================================================
 
 // F3 - Respawn Settings

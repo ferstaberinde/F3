@@ -37,7 +37,7 @@ class Mission
 	class Intel
 	{
 		briefingName="F3";
-		overviewText="*** Insert mission description here ***";
+		overviewText="*** Insert mission description here. ***";
 		startWeather=0;
 		startWind=0;
 		forecastWeather=1;
