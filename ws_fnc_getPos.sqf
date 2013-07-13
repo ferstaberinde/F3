@@ -19,21 +19,22 @@
 // PARAMETERS
 // 1. location can be String (Markername), Array [x,y,z] or Objectname		| MANDATORY	
 // 2. radius has to be int > 0 and defines the radius around the position 	| OPTIONAL - default is 0
-// 3. road (bool) forces unit to be placed on road 							| OPTIONAL - default is false
-// 4. building allowed (bool) enables the position to be in/on a building	| OPTIONAL - default is false
-// 5. water allowed (bool) enables the position to be on water as well		| OPTIONAL - default is false
+// 3. minimal distance from center, has to be int > 0 and > radius		 	| OPTIONAL - default is 0
+// 4. road (bool) forces unit to be placed on road 							| OPTIONAL - default is false
+// 5. building allowed (bool) enables the position to be in/on a building	| OPTIONAL - default is false
+// 6. water allowed (bool) enables the position to be on water as well		| OPTIONAL - default is false
 //
 // EXAMPLES
 // ["spawnmarker"] call ws_fnc_getPos; - turns the marker location into a position array
-// ["spawnmarker",0,true] call ws_fnc_getPos; - gets a position on a road in closest possible distance to the marker location
+// ["spawnmarker",0,0,true] call ws_fnc_getPos; - gets a position on a road in closest possible distance to the marker location
 // [church,250] call ws_fnc_getPos; - gets a position in 250m radius to the object named "church"
-// [v1,500,false,true] call ws_fnc_getPos; - gets a position in 50m radius to the object named "v1" and also allows position to be on water
+// [v1,500,100,false,true] call ws_fnc_getPos; - gets a position in 500m radius and 100m minimal distance to the object named "v1" and also allows position to be on a building
 //
 // TODO
 // implement angle
 // check if marker is area, if yes place pos within
 
-private ["_debug","_count","_posloc","_pos","_posradius","_dir","_road","_building","_water","_posX","_posY"];
+private ["_debug","_count","_posloc","_pos","_posradius","_mindis","_dir","_road","_building","_water","_posX","_posY"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};   //Debug mode. If ws_debug is globally defined it overrides _debug
 
@@ -42,16 +43,18 @@ _count = count _this;
 _posloc = _this select 0;
 _pos = [0,0,0];
 _posradius = 0;
+_mindis = 0;
 _road = false;
-_building = true;
+_building = false;
 _water = false;
 
 //Optional variables parsed
 if (_count > 1) then {_posradius = _this select 1;};
+if (_count > 2) then {_mindis = _this select 2;}; if (_mindis > _posradius) then {_mindis = _posradius * 2};
 //if (_count > 2) then {_dir = _this select 2;} else {};
-if (_count > 2) then {_road = _this select 2;};
-if (_count > 3) then {_building = _this select 3;};
-if (_count > 4) then {_water = _this select 4;};
+if (_count > 3) then {_road = _this select 3;};
+if (_count > 4) then {_building = _this select 4;};
+if (_count > 5) then {_water = _this select 5;};
 
 _dir = random 360;
 
@@ -73,13 +76,21 @@ _pos set [2,0];
 //Fault checks
 //Checking the variables we have against what we should have
 {[_x,["ARRAY"],"ws_fnc_getPos"] call ws_fnc_typecheck;}  forEach [_pos];
-{[_x,["SCALAR"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_posradius,_dir,_posX,_posY];  
+{[_x,["SCALAR"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_posradius,_mindis,_dir,_posX,_posY];  
 {[_x,["BOOL"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_road,_water];
 
 if (_posradius > 0) then {
 	_newX = _posX + ((random _posradius) * sin _dir);
 	_newY = _posY + ((random _posradius) * cos _dir);
 	_pos = [_newX,_newY,0];
+	
+	if (_mindis > 0) then {
+		while {_pos distance _posloc < _mindis} do {
+			_newX = _posX + ((random _posradius) * sin _dir);
+			_newY = _posY + ((random _posradius) * cos _dir);
+			_pos = [_newX,_newY,0];
+		};	
+	};
 };
 
 //If the position has to be on dry land
