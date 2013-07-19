@@ -29,8 +29,8 @@ if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction 
 // PRECOMPILE
 // Prevents the next script to be read by the engine everytime it's ised:
 
-fnc_folk_localGroupMarker = compile preprocessFile "f\common\folk_localGroupMarker.sqf";
-fnc_folk_localSpecialistMarker = compile preprocessFile "f\common\folk_localSpecialistMarker.sqf";
+fnc_folk_localGroupMarker = compile preprocessFileLineNumbers "f\common\folk_localGroupMarker.sqf";
+fnc_folk_localSpecialistMarker = compile preprocessFileLineNumbers "f\common\folk_localSpecialistMarker.sqf";
 
 // ====================================================================================
 switch (_unitfaction) do
