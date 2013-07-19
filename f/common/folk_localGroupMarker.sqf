@@ -49,7 +49,7 @@ if (isNil "_grp") then
 // EXIT FOR EMPTY GROUPS (PART I)
 // If the group is empty, this script exits.
 
-if ({isnil "_grp"} || {(count (units _grp)) == 0}) then
+if ({isnil "_grp"} || {((count (units _grp)) == 0)}) then
 	{
 	if (true) exitWith {};
 	}
