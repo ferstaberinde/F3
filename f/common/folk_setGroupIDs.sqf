@@ -22,68 +22,62 @@ if(!isnil "GrpBLU_MMG1") then {GrpBLU_MMG1 setGroupId ["Blue MMG1 -","GroupColor
 if(!isnil "GrpBLU_MAT1") then {GrpBLU_MAT1 setGroupId ["Blue MAT1 -","GroupColor0"];};
 
 if(!isnil "GrpBLU_ST1") then {GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];};
-if(!isnil "GrpBLU_ST1") then {GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];};
-if(!isnil "GrpBLU_ST1") then {GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];};
-if(!isnil "GrpBLU_ST1") then {GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];};
-// GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];
-// GrpBLU_HMG1 setGroupId ["Blue HMG1 -","GroupColor0"];
-// GrpBLU_MTR1 setGroupId ["Blue MTR1 -","GroupColor0"];
-// GrpBLU_HAT1 setGroupId ["Blue HAT1 -","GroupColor0"];
-// GrpBLU_SAM1 setGroupId ["Blue SAM1 -","GroupColor0"];
+if(!isnil "GrpBLU_HMG1") then {GrpBLU_HMG1 setGroupId ["Blue HMG1 -","GroupColor0"];};
+if(!isnil "GrpBLU_MTR1") then {GrpBLU_MTR1 setGroupId ["Blue MTR1 -","GroupColor0"];};
+if(!isnil "GrpBLU_HAT1") then {GrpBLU_HAT1 setGroupId ["Blue GrpBLU_HAT1 -","GroupColor0"];};
+
 if(!isnil "GrpBLU_ENG1") then {GrpBLU_ENG1 setGroupId ["Blue ENG1 -","GroupColor0"];};
 if(!isnil "GrpBLU_IFV1") then {GrpBLU_IFV1 setGroupId ["Blue IFV1 -","GroupColor0"];};
-// GrpBLU_IFV2 setGroupId ["Blue IFV2 -","GroupColor0"];
-// GrpBLU_IFV3 setGroupId ["Blue IFV3 -","GroupColor0"];
-// GrpBLU_TNK1 setGroupId ["Blue TNK1 -","GroupColor0"];
+if(!isnil "GrpBLU_IFV2") then {GrpBLU_IFV2 setGroupId ["Blue IFV2 -","GroupColor0"];};
+if(!isnil "GrpBLU_IFV3") then {GrpBLU_IFV3 setGroupId ["Blue IFV3 -","GroupColor0"];};
+if(!isnil "GrpBLU_TNK1") then {GrpBLU_TNK1 setGroupId ["Blue TNK1 -","GroupColor0"];};
 
-GrpBLU_TH1 setGroupId ["Blue TH1 -","GroupColor0"];
+if(!isnil "GrpBLU_TH1") then {GrpBLU_TH1 setGroupId ["Blue TH1 -","GroupColor0"];};
+if(!isnil "GrpBLU_TH2") then {GrpBLU_TH2 setGroupId ["Blue TH2 -","GroupColor0"];};
 
-// GrpBLU_TH2 setGroupId ["Blue TH2 -","GroupColor0"];
+if(!isnil "GrpBLU_AH1") then {GrpBLU_AH1 setGroupId ["Blue AH1 -","GroupColor0"];};
+if(!isnil "GrpBLU_DT1") then {GrpBLU_DT1 setGroupId ["Blue DT1 -","GroupColor0"];};
 
-GrpBLU_AH1 setGroupId ["Blue AH1 -","GroupColor0"];
-GrpBLU_DT1 setGroupId ["Blue DT1 -","GroupColor0"];
+
 
 // ====================================================================================
 
 // GROUP IDs: OPFOR > RED
 // Automatically assigns intelligible names to groups
 
-GrpRED_CO setGroupId ["Red CO -","GroupColor0"];
-GrpRED_DC setGroupId ["Red DC -","GroupColor0"];
-GrpRED_ASL setGroupId ["Red ASL -","GroupColor0"];
-GrpRED_A1 setGroupId ["Red A1 -","GroupColor0"];
-GrpRED_A2 setGroupId ["Red A2 -","GroupColor0"];
-GrpRED_A3 setGroupId ["Red A3 -","GroupColor0"];
-GrpRED_BSL setGroupId ["Red BSL -","GroupColor0"];
-GrpRED_B1 setGroupId ["Red B1 -","GroupColor0"];
-GrpRED_B2 setGroupId ["Red B2 -","GroupColor0"];
-GrpRED_B3 setGroupId ["Red B3 -","GroupColor0"];
-GrpRED_CSL setGroupId ["Red CSL -","GroupColor0"];
-GrpRED_C1 setGroupId ["Red C1 -","GroupColor0"];
-GrpRED_C2 setGroupId ["Red C2 -","GroupColor0"];
-GrpRED_C3 setGroupId ["Red C3 -","GroupColor0"];
-GrpRED_MMG1 setGroupId ["Red MMG1 -","GroupColor0"];
-GrpRED_MAT1 setGroupId ["Red MAT1 -","GroupColor0"];
+if(!isnil "GrpRED_CO") then {GrpRED_CO setGroupId ["Red CO -","GroupColor0"];};
+if(!isnil "GrpRED_DC") then {GrpRED_DC setGroupId ["Red DC -","GroupColor0"];};
+if(!isnil "GrpRED_ASL") then {GrpRED_ASL setGroupId ["Red ASL -","GroupColor0"];};
+if(!isnil "GrpRED_A1") then {GrpRED_A1 setGroupId ["Red A1 -","GroupColor0"];};
+if(!isnil "GrpRED_A2") then {GrpRED_A2 setGroupId ["Red A2 -","GroupColor0"];};
+if(!isnil "GrpRED_A3") then {GrpRED_A3 setGroupId ["Red A3 -","GroupColor0"];};
+if(!isnil "GrpRED_BSL") then {GrpRED_BSL setGroupId ["Red BSL -","GroupColor0"];};
+if(!isnil "GrpRED_B1") then {GrpRED_B1 setGroupId ["Red B1 -","GroupColor0"];};
+if(!isnil "GrpRED_B2") then {GrpRED_B2 setGroupId ["Red B2 -","GroupColor0"];};
+if(!isnil "GrpRED_B3") then {GrpRED_B3 setGroupId ["Red B3 -","GroupColor0"];};
+if(!isnil "GrpRED_CSL") then {GrpRED_CSL setGroupId ["Red CSL -","GroupColor0"];};
+if(!isnil "GrpRED_C1") then {GrpRED_C1 setGroupId ["Red C1 -","GroupColor0"];};
+if(!isnil "GrpRED_C2") then {GrpRED_C2 setGroupId ["Red C2 -","GroupColor0"];};
+if(!isnil "GrpRED_A3") then {GrpRED_C3 setGroupId ["Red C3 -","GroupColor0"];};
+if(!isnil "GrpRED_MMG1") then {GrpRED_MMG1 setGroupId ["Red MMG1 -","GroupColor0"];};
+if(!isnil "GrpRED_MAT1") then {GrpRED_MAT1 setGroupId ["Red MAT1 -","GroupColor0"];};
 
-// GrpRED_ST1 setGroupId ["Red ST1 -","GroupColor0"];
-// GrpRED_HMG1 setGroupId ["Red HMG1 -","GroupColor0"];
-// GrpRED_MTR1 setGroupId ["Red MTR1 -","GroupColor0"];
-// GrpRED_HAT1 setGroupId ["Red HAT1 -","GroupColor0"];
-// GrpRED_SAM1 setGroupId ["Red SAM1 -","GroupColor0"];
+if(!isnil "GrpRED_ST1") then {GrpRED_ST1 setGroupId ["Red ST1 -","GroupColor0"];};
+if(!isnil "GrpRED_HMG1") then {GrpRED_HMG1 setGroupId ["Red HMG1 -","GroupColor0"];};
+if(!isnil "GrpRED_MTR1") then {GrpRED_MTR1 setGroupId ["Red MTR1 -","GroupColor0"];};
+if(!isnil "GrpRED_HAT1") then {GrpRED_HAT1 setGroupId ["Red GrpRED_HAT1 -","GroupColor0"];};
 
-GrpRED_ENG1 setGroupId ["Red ENG1 -","GroupColor0"];
-GrpRED_IFV1 setGroupId ["Red IFV1 -","GroupColor0"];
+if(!isnil "GrpRED_ENG1") then {GrpRED_ENG1 setGroupId ["Red ENG1 -","GroupColor0"];};
+if(!isnil "GrpRED_IFV1") then {GrpRED_IFV1 setGroupId ["Red IFV1 -","GroupColor0"];};
+if(!isnil "GrpRED_IFV2") then {GrpRED_IFV2 setGroupId ["Red IFV2 -","GroupColor0"];};
+if(!isnil "GrpRED_IFV3") then {GrpRED_IFV3 setGroupId ["Red IFV3 -","GroupColor0"];};
+if(!isnil "GrpRED_TNK1") then {GrpRED_TNK1 setGroupId ["Red TNK1 -","GroupColor0"];};
 
-// GrpRED_IFV2 setGroupId ["Red IFV2 -","GroupColor0"];
-// GrpRED_IFV3 setGroupId ["Red IFV3 -","GroupColor0"];
-// GrpRED_TNK1 setGroupId ["Red TNK1 -","GroupColor0"];
+if(!isnil "GrpRED_TH1") then {GrpRED_TH1 setGroupId ["Red TH1 -","GroupColor0"];};
+if(!isnil "GrpRED_TH2") then {GrpRED_TH2 setGroupId ["Red TH2 -","GroupColor0"];};
 
-GrpRED_TH1 setGroupId ["Red TH1 -","GroupColor0"];
-
-// GrpRED_TH2 setGroupId ["Red TH2 -","GroupColor0"];
-
-GrpRED_AH1 setGroupId ["Red AH1 -","GroupColor0"];
-GrpRED_DT1 setGroupId ["Red DT1 -","GroupColor0"];
+if(!isnil "GrpRED_AH1") then {GrpRED_AH1 setGroupId ["Red AH1 -","GroupColor0"];};
+if(!isnil "GrpRED_DT1") then {GrpRED_DT1 setGroupId ["Red DT1 -","GroupColor0"];};
 
 // ===================================================================================== 
 
