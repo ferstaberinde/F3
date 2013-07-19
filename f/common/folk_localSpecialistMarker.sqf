@@ -26,7 +26,7 @@ _untName = _this select 0;
 _mkrType = _this select 1;
 _mkrText = _this select 2;
 _mkrColor = _this select 3;
-_mkrName = format ["mkr_%1",_unt];
+_mkrName = format ["mkr_%1",_untName];
 
 
 // ====================================================================================
@@ -40,8 +40,7 @@ if (isNil "_unt") then
 		waitUntil {sleep 3; count units %1 > 0}; 
 		_unt = %1;
 		
-	",_untName,_unt];
-	_mkrName = format ["mkr_%1",_unt];
+	",_untName];
 };
 
 // ====================================================================================
