@@ -4,33 +4,34 @@
 
 // GROUP IDs: BLUFOR > BLUE
 // Automatically assigns intelligible names to groups
+if(!isnil "GrpBLU_CO") then {GrpBLU_CO setGroupId ["Blue CO -","GroupColor0"];};
+if(!isnil "GrpBLU_DC") then {GrpBLU_DC setGroupId ["Blue DC -","GroupColor0"];};
+if(!isnil "GrpBLU_ASL") then {GrpBLU_ASL setGroupId ["Blue ASL -","GroupColor0"];};
+if(!isnil "GrpBLU_A1") then {GrpBLU_A1 setGroupId ["Blue A1 -","GroupColor0"];};
+if(!isnil "GrpBLU_A2") then {GrpBLU_A2 setGroupId ["Blue A2 -","GroupColor0"];};
+if(!isnil "GrpBLU_A3") then {GrpBLU_A3 setGroupId ["Blue A3 -","GroupColor0"];};
+if(!isnil "GrpBLU_BSL") then {GrpBLU_BSL setGroupId ["Blue BSL -","GroupColor0"];};
+if(!isnil "GrpBLU_B1") then {GrpBLU_B1 setGroupId ["Blue B1 -","GroupColor0"];};
+if(!isnil "GrpBLU_B2") then {GrpBLU_B2 setGroupId ["Blue B2 -","GroupColor0"];};
+if(!isnil "GrpBLU_B3") then {GrpBLU_B3 setGroupId ["Blue B3 -","GroupColor0"];};
+if(!isnil "GrpBLU_CSL") then {GrpBLU_CSL setGroupId ["Blue CSL -","GroupColor0"];};
+if(!isnil "GrpBLU_C1") then {GrpBLU_C1 setGroupId ["Blue C1 -","GroupColor0"];};
+if(!isnil "GrpBLU_C2") then {GrpBLU_C2 setGroupId ["Blue C2 -","GroupColor0"];};
+if(!isnil "GrpBLU_A3") then {GrpBLU_C3 setGroupId ["Blue C3 -","GroupColor0"];};
+if(!isnil "GrpBLU_MMG1") then {GrpBLU_MMG1 setGroupId ["Blue MMG1 -","GroupColor0"];};
+if(!isnil "GrpBLU_MAT1") then {GrpBLU_MAT1 setGroupId ["Blue MAT1 -","GroupColor0"];};
 
-GrpBLU_CO setGroupId ["Blue CO -","GroupColor0"];
-GrpBLU_DC setGroupId ["Blue DC -","GroupColor0"];
-GrpBLU_ASL setGroupId ["Blue ASL -","GroupColor0"];
-GrpBLU_A1 setGroupId ["Blue A1 -","GroupColor0"];
-GrpBLU_A2 setGroupId ["Blue A2 -","GroupColor0"];
-GrpBLU_A3 setGroupId ["Blue A3 -","GroupColor0"];
-GrpBLU_BSL setGroupId ["Blue BSL -","GroupColor0"];
-GrpBLU_B1 setGroupId ["Blue B1 -","GroupColor0"];
-GrpBLU_B2 setGroupId ["Blue B2 -","GroupColor0"];
-GrpBLU_B3 setGroupId ["Blue B3 -","GroupColor0"];
-GrpBLU_CSL setGroupId ["Blue CSL -","GroupColor0"];
-GrpBLU_C1 setGroupId ["Blue C1 -","GroupColor0"];
-GrpBLU_C2 setGroupId ["Blue C2 -","GroupColor0"];
-GrpBLU_C3 setGroupId ["Blue C3 -","GroupColor0"];
-GrpBLU_MMG1 setGroupId ["Blue MMG1 -","GroupColor0"];
-GrpBLU_MAT1 setGroupId ["Blue MAT1 -","GroupColor0"];
-
+if(!isnil "GrpBLU_ST1") then {GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];};
+if(!isnil "GrpBLU_ST1") then {GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];};
+if(!isnil "GrpBLU_ST1") then {GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];};
+if(!isnil "GrpBLU_ST1") then {GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];};
 // GrpBLU_ST1 setGroupId ["Blue ST1 -","GroupColor0"];
 // GrpBLU_HMG1 setGroupId ["Blue HMG1 -","GroupColor0"];
 // GrpBLU_MTR1 setGroupId ["Blue MTR1 -","GroupColor0"];
 // GrpBLU_HAT1 setGroupId ["Blue HAT1 -","GroupColor0"];
 // GrpBLU_SAM1 setGroupId ["Blue SAM1 -","GroupColor0"];
-
-GrpBLU_ENG1 setGroupId ["Blue ENG1 -","GroupColor0"];
-GrpBLU_IFV1 setGroupId ["Blue IFV1 -","GroupColor0"];
-
+if(!isnil "GrpBLU_ENG1") then {GrpBLU_ENG1 setGroupId ["Blue ENG1 -","GroupColor0"];};
+if(!isnil "GrpBLU_IFV1") then {GrpBLU_IFV1 setGroupId ["Blue IFV1 -","GroupColor0"];};
 // GrpBLU_IFV2 setGroupId ["Blue IFV2 -","GroupColor0"];
 // GrpBLU_IFV3 setGroupId ["Blue IFV3 -","GroupColor0"];
 // GrpBLU_TNK1 setGroupId ["Blue TNK1 -","GroupColor0"];
