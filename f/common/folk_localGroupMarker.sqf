@@ -26,7 +26,7 @@ _grpName = _this select 0;
 _mkrType = _this select 1;
 _mkrText = _this select 2;
 _mkrColor = _this select 3;
-
+_mkrName = format ["mkr_%1",_grpName];
 
 
 // ====================================================================================
@@ -56,7 +56,6 @@ if ({isnil "_grp"} || {(count (units _grp)) == 0}) then
 	else
 	{
 // ====================================================================================
-		_mkrName = format ["mkr_%1",_grp];
 // CREATE MARKER
 // Depending on the value of _mkrType a different type of marker is created.
 
