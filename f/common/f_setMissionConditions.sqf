@@ -20,7 +20,9 @@ waitUntil {scriptDone f_processParamsArray};
 _timeOfDay = f_param_timeOfDay;
 
 // WARNING: WEATHER PARAMETER IS DISABLED UNTIL CERTAIN ARMA 3 COMMANDS ARE FIXED
-// _weather = f_param_weather;
+//_weather = 11;
+//f_param_weather;
+
 
 // ====================================================================================
 
@@ -75,7 +77,7 @@ switch (_timeOfDay) do
 
 // SELECT MISSION WEATHER
 // Using the value of _weather, values for _MissionOvercast and _MissionFog are set.
-
+/*
 switch (_weather) do
 {
 // Clear (Calm)
@@ -211,7 +213,7 @@ switch (_weather) do
 		_MissionWaves = 0;
 	};
 };
-
+*/
 // ====================================================================================
 
 // ENABLE DEBUG MODE

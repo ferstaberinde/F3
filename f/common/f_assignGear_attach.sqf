@@ -17,7 +17,7 @@ switch(_wepClass) do
 			{
 				// loop trough them and remove them
 				_unit removePrimaryWeaponItem  _x;
-				_unit removeItem _x;
+				
 			} foreach _wepItems;
 			{
 				// loop trough the attachments and add them to the weapon
@@ -32,7 +32,7 @@ switch(_wepClass) do
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				_unit removeItem _x;
+				
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
@@ -46,7 +46,7 @@ switch(_wepClass) do
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				_unit removeItem _x;
+				
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
@@ -60,7 +60,7 @@ switch(_wepClass) do
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				_unit removeItem _x;
+				
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
@@ -74,7 +74,7 @@ switch(_wepClass) do
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				_unit removeItem _x;
+				
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
@@ -88,7 +88,7 @@ switch(_wepClass) do
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				_unit removeItem _x;
+				
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
@@ -102,7 +102,7 @@ switch(_wepClass) do
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				_unit removeItem _x;
+				
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
@@ -116,7 +116,7 @@ switch(_wepClass) do
 				_wepItems = primaryWeaponItems _unit;
 				{
 					_unit removePrimaryWeaponItem  _x;
-					_unit removeItem _x;
+					
 				} foreach _wepItems;
 				{
 					_unit addPrimaryWeaponItem _x;
