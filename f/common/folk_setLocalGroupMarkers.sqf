@@ -29,8 +29,8 @@ if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction 
 // PRECOMPILE
 // Prevents the next script to be read by the engine everytime it's ised:
 
-fnc_folk_localGroupMarker = compile preprocessFile "f\common\folk_localGroupMarker.sqf";
-fnc_folk_localSpecialistMarker = compile preprocessFile "f\common\folk_localSpecialistMarker.sqf";
+fnc_folk_localGroupMarker = compile preprocessFileLineNumbers "f\common\folk_localGroupMarker.sqf";
+fnc_folk_localSpecialistMarker = compile preprocessFileLineNumbers "f\common\folk_localSpecialistMarker.sqf";
 
 // ====================================================================================
 switch (_unitfaction) do
@@ -80,11 +80,11 @@ switch (_unitfaction) do
 		["GrpBLU_AH1",  8, "AH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
 		["GrpBLU_DT1",  4, "DT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
 
-		["UnitNO_CO_M", 0, "COM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitNO_DC_M", 0, "DCM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitNO_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;		
-		["UnitNO_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitNO_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitBLU_CO_M", 0, "COM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitBLU_DC_M", 0, "DCM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitBLU_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;		
+		["UnitBLU_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitBLU_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
 
 	};
 
@@ -132,11 +132,11 @@ switch (_unitfaction) do
 		["GrpRED_AH1",  8, "AH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
 		["GrpRED_DT1",  4, "DT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
 		
-		["UnitIR_CO_M", 0, "COM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitIR_DC_M", 0, "DCM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitIR_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;		
-		["UnitIR_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitIR_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitRED_CO_M", 0, "COM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitRED_DC_M", 0, "DCM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitRED_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;		
+		["UnitRED_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitRED_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
 	};
 
 
@@ -184,11 +184,11 @@ switch (_unitfaction) do
 
 		["GrpGRN_DT1",  4, "DT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
 		
-		["UnitGA_CO_M", 0, "COM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitGA_DC_M", 0, "DCM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitGA_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;		
-		["UnitGA_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
-		["UnitGA_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitGRN_CO_M", 0, "COM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitGRN_DC_M", 0, "DCM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitGRN_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;		
+		["UnitGRN_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitGRN_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
 	};
 };
 

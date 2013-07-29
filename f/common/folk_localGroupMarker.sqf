@@ -19,14 +19,17 @@ private ["_grp","_mkrType","_mkrText","_mkrColor","_mkrName","_mkr","_grpName"];
 // Using variables passed to the script instance, we will create some local variables:
 
 call compile format ["
+if(!isnil '%1') then
+{
 	_grp = %1;
+};
 ",_this select 0];
 
 _grpName = _this select 0;
 _mkrType = _this select 1;
 _mkrText = _this select 2;
 _mkrColor = _this select 3;
-_mkrName = format ["mkr_%1",_grp];
+_mkrName = format ["mkr_%1",_grpName];
 
 
 // ====================================================================================
@@ -37,11 +40,17 @@ _mkrName = format ["mkr_%1",_grp];
 if (isNil "_grp") then 
 {
 	call compile format ["
-		waitUntil {sleep 3; count units %1 > 0}; 
+		waitUntil {
+		sleep 3; 
+		if(!isnil '%1') then
+		{
+			count units %1 > 0
+		};
+		}; 
 		_grp = %1;
 		
-	",_grpName,_grp];
-	_mkrName = format ["mkr_%1",_grp];
+	",_grpName];
+	
 };
 
 // ====================================================================================
@@ -49,14 +58,13 @@ if (isNil "_grp") then
 // EXIT FOR EMPTY GROUPS (PART I)
 // If the group is empty, this script exits.
 
-if ((count (units _grp)) == 0) then
+if (isnil "_grp") then
 	{
 	if (true) exitWith {};
 	}
 	else
 	{
 // ====================================================================================
-
 // CREATE MARKER
 // Depending on the value of _mkrType a different type of marker is created.
 
