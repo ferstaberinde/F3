@@ -213,10 +213,11 @@ Version | Date
 
 3-0-4 | XX XXX 2013
 
+* Fixed time of day parameter in Mission Conditions Selector component.
 * Fixed "no entry 'bin\config.bin/CfgWeapons.'." error.
 * Fixed various unsassigned variable errors.
 * Fixed F3 Folk ARPS Group Markers component so medic markers display correctly.
-* Disabled Mission Conditions Selector component.
+* Disabled weather parameter in Mission Conditions Selector.
 
 3-0-3 | 25 JUN 2013
 
