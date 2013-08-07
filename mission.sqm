@@ -68,7 +68,7 @@ class Mission
 					vehicle="B_Soldier_SL_F";
 					leader=1;
 					skill=0.60000002;
-					text="F2_Precompile_West";
+					text="F3_Precompile_West";
 					init="f_fnc_assignGear = compile preprocessFileLineNumbers ""f\common\folk_assignGear.sqf""; nul = [""r"",this] call f_fnc_assignGear; this setskill 0; this allowdamage false;";
 				};
 			};
@@ -88,7 +88,7 @@ class Mission
 					vehicle="O_Soldier_F";
 					leader=1;
 					skill=0.60000002;
-					text="F2_Precompile_East";
+					text="F3_Precompile_East";
 					init="f_fnc_assignGear = compile preprocessFileLineNumbers ""f\common\folk_assignGear.sqf""; nul = [""r"",this] call f_fnc_assignGear; this setskill 0; this allowdamage false;";
 				};
 			};
