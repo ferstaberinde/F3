@@ -29,7 +29,7 @@ _textAction = localize "STR_f_mapClickTeleportAction";
 
 while {true} do
 {
-	F2_mapClickTeleportAction = player addaction [_textAction,"f\common\f_mapClickTeleport.sqf","", 0, false, true];
+	F3_mapClickTeleportAction = player addaction [_textAction,"f\common\f_mapClickTeleport.sqf","", 0, false, true];
 	waitUntil {!alive player};
 	waitUntil {alive player};
 	sleep 0.01;
