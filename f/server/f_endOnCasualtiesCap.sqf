@@ -38,6 +38,10 @@ _faction = _this select 4; // should be a array
 };
 _started = 0;
 
+if(isnil "_onlyPlayers") then
+{
+_onlyPlayers = true;
+};
 // ====================================================================================
 
 // Check if _grpstemp is a variable of type SIDE otherwise continue.
