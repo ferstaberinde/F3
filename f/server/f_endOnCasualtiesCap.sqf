@@ -18,9 +18,10 @@ private ["_grps","_pc","_end","_started","_remaining","_counter","_grpsno","_grp
 // Args
 // 0: = side or groupName as string array example blufor or ["mygroupvariable"]
 // 1: = how many % need to be dead before it triggers
-// 2: = what ending will be executed
-// 3: = what faction to filter for used with side argument
-// 4: = if only player groups will be included. based on if the leader is in playableUnits
+// 2: = what ending will be executed : 
+// 3: = if only player groups will be included. based on if the leader is in playableUnits
+// 4: = what faction to filter for used with side argument : ["blu_f","op_f"]etc
+
 
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
@@ -29,11 +30,11 @@ _pc = _this select 1;
 _end = _this select 2;
 if(count _this >= 4) then
 {
-_faction = _this select 3; // should be a array
+_onlyPlayers = _this select 3; // should be true or false if not defined true is assumed
 };
 if(count _this >= 5) then
 {
-_onlyPlayers = _this select 4; // should be true or false if not defined true is assumed
+_faction = _this select 4; // should be a array
 };
 _started = 0;
 
