@@ -38,7 +38,7 @@ if(!isnil "GrpBLU_TH2") then {GrpBLU_TH2 setGroupId ["Blue TH2 -","GroupColor0"]
 if(!isnil "GrpBLU_AH1") then {GrpBLU_AH1 setGroupId ["Blue AH1 -","GroupColor0"];};
 if(!isnil "GrpBLU_DT1") then {GrpBLU_DT1 setGroupId ["Blue DT1 -","GroupColor0"];};
 
-
+if(!isnil "GrpBLU_JIP") then {GrpBLU_JIP setGroupId ["Blue JIP -","GroupColor0"];};
 
 // ====================================================================================
 
@@ -79,6 +79,8 @@ if(!isnil "GrpRED_TH2") then {GrpRED_TH2 setGroupId ["Red TH2 -","GroupColor0"];
 if(!isnil "GrpRED_AH1") then {GrpRED_AH1 setGroupId ["Red AH1 -","GroupColor0"];};
 if(!isnil "GrpRED_DT1") then {GrpRED_DT1 setGroupId ["Red DT1 -","GroupColor0"];};
 
+if(!isnil "GrpRED_JIP") then {GrpRED_JIP setGroupId ["Red JIP -","GroupColor0"];};
+
 // ===================================================================================== 
 
 // GROUP IDs: INDEPEDENT > GREEN
@@ -117,6 +119,8 @@ if(!isnil "GrpGRN_TH2") then {GrpGRN_TH2 setGroupId ["Green TH2 -","GroupColor0"
 
 if(!isnil "GrpGRN_AH1") then {GrpGRN_AH1 setGroupId ["Green AH1 -","GroupColor0"];};
 if(!isnil "GrpGRN_DT1") then {GrpGRN_DT1 setGroupId ["Green DT1 -","GroupColor0"];};
+
+if(!isnil "GrpGRN_JIP") then {GrpGRN_JIP setGroupId ["Green JIP -","GroupColor0"];};
 
 // ===================================================================================== 
 
