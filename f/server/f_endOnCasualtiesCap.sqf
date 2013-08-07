@@ -51,7 +51,7 @@ if(_type == "SIDE") then // if the variable is any of the side variables use it 
 {
 	_temp_grp = []; 
 	{
-		if(!isnil "_onlyPlayers" && {_onlyPlayers == true}) then
+		if(_onlyPlayers == true) then
 		{
 			if((side _x == _grpstemp) && (leader _x in playableUnits)) then 
 			{
