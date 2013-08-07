@@ -15,12 +15,26 @@ private ["_grps","_pc","_end","_started","_remaining","_counter","_grpsno","_grp
 
 // ====================================================================================
 
+// Args
+// 0: = side or groupName as string array example blufor or ["mygroupvariable"]
+// 1: = how many % need to be dead before it triggers
+// 2: = what ending will be executed
+// 3: = what faction to filter for used with side argument
+// 4: = if only player groups will be included. based on if the leader is in playableUnits
+
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
-_grpstemp = _this select 0;
+_grpstemp = _this select 0; // either SIDE or array with group strings
 _pc = _this select 1;
 _end = _this select 2;
-_faction = _this select 3;
+if(count _this >= 4) then
+{
+_faction = _this select 3; // should be a array
+};
+if(count _this >= 5) then
+{
+_onlyPlayers = _this select 4; // should be true or false if not defined true is assumed
+};
 _started = 0;
 
 // ====================================================================================
@@ -32,11 +46,21 @@ if(_type == "SIDE") then // if the variable is any of the side variables use it 
 {
 	_temp_grp = []; 
 	{
-		if((side _x == _grpstemp) && (leader _x in playableUnits)) then 
+		if(!isnil "_onlyPlayers" && {_onlyPlayers == true}) then
 		{
-			_temp_grp = _temp_grp + [_x]; // Add group to array
+			if((side _x == _grpstemp) && (leader _x in playableUnits)) then 
+			{
+				_temp_grp = _temp_grp + [_x]; // Add group to array
 
-		};
+			};
+		}
+		else
+		{
+			if((side _x == _grpstemp)) then 
+			{
+				_temp_grp = _temp_grp + [_x]; // Add group to array
+			}
+		}
 	
 	} forEach allGroups;
 	if(!isnil "_faction") then
@@ -51,6 +75,22 @@ if(_type == "SIDE") then // if the variable is any of the side variables use it 
 		_temp_grp = _temp_grp2;
 	};
 	_grpstemp = _temp_grp; // set it.
+}
+else
+{
+	sleep 1;
+	_temp_grp = [];
+	{
+		_Tgrp = call compile format ["
+			%1
+		",_x];
+		if(!isnil "_Tgrp") then
+		{
+			_temp_grp = _temp_grp + [_Tgrp];
+		};
+	} foreach _grpstemp;
+	_grpstemp = _temp_grp;
+	
 };
 
 // ====================================================================================
