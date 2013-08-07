@@ -128,13 +128,13 @@ f_endSelected = -1;
 // [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // BLUFOR > BLUE
-[[BLUFOR,"BLU_F"],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+//[BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // OPFOR > RED
-[[OPFOR,"OPF_F"],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+//[OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // INDEPENDENT > GREEN
-[[INDEPENDENT,"IND_F"],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+//[INDEPENDENT,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // ====================================================================================
 
