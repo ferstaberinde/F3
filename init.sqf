@@ -142,7 +142,7 @@ f_endSelected = -1;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // BLUFOR > BLUE
-// [BLUFOR,1] execVM "f\server\f_casualtiesCapAdv.sqf";
+// [BLUFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
 // OPFOR > RED
 // [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
