@@ -141,7 +141,14 @@ f_endSelected = -1;
 // F3 - Casualties Cap (Advanced)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [[GroupName],100] execVM "f\server\f_casualtiesCapAdv.sqf";
+// BLUFOR > BLUE
+// [BLUFOR,1] execVM "f\server\f_casualtiesCapAdv.sqf";
+
+// OPFOR > RED
+// [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
+
+// INDEPENDENT > GREEN
+// [INDEPENDENT,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
 // ====================================================================================
 

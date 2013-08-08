@@ -11,7 +11,7 @@ if (isServer) then {
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_grps","_pc","_end","_started","_remaining","_counter","_grpsno","_grpsel","_grpstemp","_alive","_faction","_temp_grp","_temp_grp2","_type"];
+private ["_grps","_pc","_end","_started","_remaining","_counter","_grpsno","_grpsel","_grpstemp","_alive","_faction","_temp_grp","_temp_grp2","_type","_onlyPlayers"];
 
 // ====================================================================================
 
@@ -21,27 +21,31 @@ private ["_grps","_pc","_end","_started","_remaining","_counter","_grpsno","_grp
 // 0: = Side (e.g. BLUFOR), or group name(s) as string array (e.g. ["mrGroup1","myGroup2"])
 // 1: = What % of units must be dead before the ending is triggered
 // 2: = What ending will be executed 
-// 3: = If only groups with a playable leader slot will be included (default is 'true')
+// 3: = If only groups with a playable leader slot will be included (uses 1 for 'true', 0 for 'false'; default is 1)
 // 4: = What faction(s) to filter for if the first variable is a Side  (e.g. ["blu_f"])
 // Note: the last two variables are optional, and may not be passed to the script.
 
 _grpstemp = _this select 0; // either SIDE or array with group strings
 _pc = _this select 1;
 _end = _this select 2;
+
 if(count _this >= 4) then
 {
-_onlyPlayers = _this select 3; // should be true or false if not defined true is assumed
+	_onlyPlayers = _this select 3; // should be true or false if not defined true is assumed
 };
+
 if(count _this >= 5) then
 {
-_faction = _this select 4; // should be a array
+	_faction = _this select 4; // should be a array
 };
+
 _started = 0;
 
 if(isnil "_onlyPlayers") then
 {
-_onlyPlayers = true;
+	_onlyPlayers = 1;
 };
+
 // ====================================================================================
 
 // Check if _grpstemp is a variable of type SIDE otherwise continue.
@@ -51,7 +55,7 @@ if(_type == "SIDE") then // if the variable is any of the side variables use it 
 {
 	_temp_grp = []; 
 	{
-		if(_onlyPlayers == true) then
+		if(_onlyPlayers == 1) then
 		{
 			if((side _x == _grpstemp) && (leader _x in playableUnits)) then 
 			{
