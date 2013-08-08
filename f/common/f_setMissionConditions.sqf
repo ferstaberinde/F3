@@ -20,7 +20,9 @@ waitUntil {scriptDone f_processParamsArray};
 _timeOfDay = f_param_timeOfDay;
 
 // WARNING: WEATHER PARAMETER IS DISABLED UNTIL CERTAIN ARMA 3 COMMANDS ARE FIXED
-// _weather = f_param_weather;
+//_weather = 11;
+//f_param_weather;
+
 
 // ====================================================================================
 
@@ -32,17 +34,17 @@ switch (_timeOfDay) do
 // Dawn
 	case 0:
 	{
-		setDate [2007, 5, 11, 4, 20];
+		setDate [2007, 5, 11, 5, 0];
 	};
 // Early Morning
 	case 1:
 	{
-		setDate [2007, 5, 11, 5, 50];
+		setDate [2007, 5, 11, 6, 0];
 	};
 // Morning
 	case 2:
 	{
-		setDate [2007, 5, 11, 9, 00];
+		setDate [2007, 5, 11, 9, 0];
 	};
 // Noon
 	case 3:
@@ -52,17 +54,17 @@ switch (_timeOfDay) do
 // Afternoon
 	case 4:
 	{
-		setDate [2007, 5, 11, 15, 00];
+		setDate [2007, 5, 11, 15, 0];
 	};
 // Evening
 	case 5:
 	{
-		setDate [2007, 5, 11, 17, 50];
+		setDate [2007, 5, 11, 17, 40];
 	};
 // Dusk
 	case 6:
 	{
-		setDate [2007, 5, 11, 19, 30];
+		setDate [2007, 5, 11, 18, 40];
 	};
 // Night
 	case 7:
@@ -75,7 +77,7 @@ switch (_timeOfDay) do
 
 // SELECT MISSION WEATHER
 // Using the value of _weather, values for _MissionOvercast and _MissionFog are set.
-
+/*
 switch (_weather) do
 {
 // Clear (Calm)
@@ -211,7 +213,7 @@ switch (_weather) do
 		_MissionWaves = 0;
 	};
 };
-
+*/
 // ====================================================================================
 
 // ENABLE DEBUG MODE
