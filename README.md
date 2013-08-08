@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-3
+* Version: 3-0-4
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -27,6 +27,9 @@
 
 ### F3 Version History ###
 
+Version | Date | Notes
+
+* 3-0-4     | 08 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-3     | 25 JUN 2013 | Patch release - Various improvements (see change history).
 * 3-0-2     | 25 MAR 2013 | Patch release - Various improvements (see change history).
 * 3-0-1     | 17 MAR 2013 | Patch release - Various improvements (see change history).
@@ -209,6 +212,16 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-0-4 | 08 AUG 2013
+
+* Fixed "no entry 'bin\config.bin/CfgWeapons.'." error.
+* Fixed various unsassigned variable errors.
+* Fixed medic markers in F3 Folk ARPS Group Markers component.
+* Fixed time of day parameter in Mission Conditions Selector component.
+* Disabled weather parameter in Mission Conditions Selector component.
+* Added new options to Casualties Cap component.
+* Added new options to Casualties Cap (Advanced) component.
 
 3-0-3 | 25 JUN 2013
 

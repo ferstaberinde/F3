@@ -14,7 +14,7 @@ _joinDistance = 10;
 // NB This is on the assumption that the player has made positive selections and not
 // cancelled the menu.
 
-player removeAction F2_JIP_reinforcementOptionsAction;
+player removeAction F3_JIP_reinforcementOptionsAction;
 
 // ====================================================================================
 

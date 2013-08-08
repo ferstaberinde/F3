@@ -8,7 +8,7 @@
 // script).
 
 sleep 3;
-deleteVehicle F2_Precompile_East;
-deleteVehicle F2_Precompile_West;
+deleteVehicle F3_Precompile_East;
+deleteVehicle F3_Precompile_West;
 
 // ====================================================================================
