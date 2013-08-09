@@ -1,4 +1,4 @@
-// F3 - F3 Folk ARPS Assign Gear
+// F3 - Folk Assign Gear Script
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -46,10 +46,6 @@ _faction = toLower (faction _unit);
 // If the unitfaction is different from the group leader's faction and the unit is not a vehicle, the latters faction is used
 if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _unit)))) then {_faction = toLower (faction (leader group _unit))};
 
-
-
-
-
 // DEBUG
 	if (f_var_debugMode == 1) then
 	{
@@ -84,6 +80,18 @@ if (_faction == "OPF_F") then {
 
 if(_faction == "IND_F") then {
 #include "folk_assignGear_green.sqf";
+};
+
+// ====================================================================================
+
+// GEAR: ACRE
+// The following block of code executes only if the ACRE parameter is set to true; it 
+// automatically includes a file which contains the appropriate equipment data.
+
+_useACRE = paramsArray select 2;
+
+if (_useACRE == 1) then {
+	_this execVM "f\common\fa_ACRE_assignGear.sqf";
 };
 
 // ====================================================================================
