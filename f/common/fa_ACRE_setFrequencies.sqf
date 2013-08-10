@@ -10,11 +10,6 @@ if (!isDedicated) then {
 
 // ====================================================================================
 
-// TEMP_DEBUG
-player sideChat "DEBUG (fa_ACRE_setFrequencies.sqf): Running.";
-
-// ====================================================================================
-
   	// FETCH DEFAULT RADIO FREQUENCIES
   
 	_longRangeChannels  = ["ACRE_PRC148"] call acre_api_fnc_getDefaultChannels;
@@ -57,5 +52,4 @@ player sideChat "DEBUG (fa_ACRE_setFrequencies.sqf): Running.";
 
 // ====================================================================================
 
-// TEMP_DEBUG
-player sideChat "DEBUG (fa_ACRE_setFrequencies.sqf): Stopped.";
+};

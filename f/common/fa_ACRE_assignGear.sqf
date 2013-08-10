@@ -42,11 +42,6 @@
 //
 // ====================================================================================
 
-// TEMP_DEBUG
-player sideChat "DEBUG (fa_ACRE_assignGear.sqf): Running.";
-
-// ====================================================================================
-
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
 _radio1 = "ACRE_PRC117F"; //longrange
@@ -75,7 +70,7 @@ waitUntil{scriptDone _clearRadiosHandle};
 // ADD 343s
 // Gives each player a 343.
 
-_unit addWeapon _radio3;
+_unit addItem _radio3;
 
 // ====================================================================================
 
@@ -312,6 +307,3 @@ switch (_typeofUnit) do
 _unit selectweapon primaryweapon _unit;
 
 // ====================================================================================
-
-// TEMP_DEBUG
-player sideChat "DEBUG (fa_ACRE_assignGear.sqf): Stopped.";

@@ -2,14 +2,11 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// TEMP_DEBUG
-player sideChat "DEBUG (fa_ACRE_clearRadios.sqf): Running.";
-
-// ====================================================================================
-
 // DECLARE VARIABLES AND FUNCTIONS
 
 _unit = _this select 1;
+
+// ====================================================================================
 
 // CHECK FOR RADIO INITIALISATION
 // Wait until ACRE has assigned all radio items their own unique IDs, and populated the currentRadioList.
@@ -23,12 +20,12 @@ waitUntil{(count acre_sys_radio_currentRadioList) > 0};
 // Check for any radios that haven't been converted into unique items yet, due to errors or server-lag.
 
 { _isRadio = [_x] call acre_api_fnc_isRadio;
-if(_isRadio) then {_unit removeWeapon _x};
-} foreach weapons _unit;	
+if(_isRadio) then {_unit removeItem _x};
+} foreach items _unit;	
 
 // Remove all initialised radios.
 
-{_unit removeWeapon _x;} foreach acre_sys_radio_currentRadioList;
+{_unit unassignItem _x; _unit removeItem _x;} foreach acre_sys_radio_currentRadioList;
 
 waitUntil {count acre_sys_radio_currentRadioList < 1};				// Wait until radio list updated.
 
@@ -45,6 +42,3 @@ _setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
 waitUntil{scriptDone _setFreqsHandle};
 
 // ====================================================================================
-
-// TEMP_DEBUG
-player sideChat "DEBUG (fa_ACRE_clearRadios.sqf): Stopped.";
