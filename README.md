@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-4
+* Version: 3-0-5
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-0-5     | XX AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-4     | 08 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-3     | 25 JUN 2013 | Patch release - Various improvements (see change history).
 * 3-0-2     | 25 MAR 2013 | Patch release - Various improvements (see change history).
@@ -122,7 +123,7 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam
 * Documentation: Fer
 * Producers: Fer
 * Special Thanks: Zerith
@@ -212,6 +213,11 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-0-5 | XX AUG 2013
+
+* Migrated ACRE Support component.
+* Disabled automatic frequencies in ACRE Support component.
 
 3-0-4 | 08 AUG 2013
 
