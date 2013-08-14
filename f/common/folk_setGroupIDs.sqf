@@ -17,7 +17,7 @@ if(!isnil "GrpBLU_B3") then {GrpBLU_B3 setGroupId ["Blue B3 -","GroupColor0"];};
 if(!isnil "GrpBLU_CSL") then {GrpBLU_CSL setGroupId ["Blue CSL -","GroupColor0"];};
 if(!isnil "GrpBLU_C1") then {GrpBLU_C1 setGroupId ["Blue C1 -","GroupColor0"];};
 if(!isnil "GrpBLU_C2") then {GrpBLU_C2 setGroupId ["Blue C2 -","GroupColor0"];};
-if(!isnil "GrpBLU_A3") then {GrpBLU_C3 setGroupId ["Blue C3 -","GroupColor0"];};
+if(!isnil "GrpBLU_C3") then {GrpBLU_C3 setGroupId ["Blue C3 -","GroupColor0"];};
 if(!isnil "GrpBLU_MMG1") then {GrpBLU_MMG1 setGroupId ["Blue MMG1 -","GroupColor0"];};
 if(!isnil "GrpBLU_MAT1") then {GrpBLU_MAT1 setGroupId ["Blue MAT1 -","GroupColor0"];};
 
@@ -58,7 +58,7 @@ if(!isnil "GrpRED_B3") then {GrpRED_B3 setGroupId ["Red B3 -","GroupColor0"];};
 if(!isnil "GrpRED_CSL") then {GrpRED_CSL setGroupId ["Red CSL -","GroupColor0"];};
 if(!isnil "GrpRED_C1") then {GrpRED_C1 setGroupId ["Red C1 -","GroupColor0"];};
 if(!isnil "GrpRED_C2") then {GrpRED_C2 setGroupId ["Red C2 -","GroupColor0"];};
-if(!isnil "GrpRED_A3") then {GrpRED_C3 setGroupId ["Red C3 -","GroupColor0"];};
+if(!isnil "GrpRED_C3") then {GrpRED_C3 setGroupId ["Red C3 -","GroupColor0"];};
 if(!isnil "GrpRED_MMG1") then {GrpRED_MMG1 setGroupId ["Red MMG1 -","GroupColor0"];};
 if(!isnil "GrpRED_MAT1") then {GrpRED_MAT1 setGroupId ["Red MAT1 -","GroupColor0"];};
 
@@ -99,7 +99,7 @@ if(!isnil "GrpGRN_B3") then {GrpGRN_B3 setGroupId ["Green B3 -","GroupColor0"];}
 if(!isnil "GrpGRN_CSL") then {GrpGRN_CSL setGroupId ["Green CSL -","GroupColor0"];};
 if(!isnil "GrpGRN_C1") then {GrpGRN_C1 setGroupId ["Green C1 -","GroupColor0"];};
 if(!isnil "GrpGRN_C2") then {GrpGRN_C2 setGroupId ["Green C2 -","GroupColor0"];};
-if(!isnil "GrpGRN_A3") then {GrpGRN_C3 setGroupId ["Green C3 -","GroupColor0"];};
+if(!isnil "GrpGRN_C3") then {GrpGRN_C3 setGroupId ["Green C3 -","GroupColor0"];};
 if(!isnil "GrpGRN_MMG1") then {GrpGRN_MMG1 setGroupId ["Green MMG1 -","GroupColor0"];};
 if(!isnil "GrpGRN_MAT1") then {GrpGRN_MAT1 setGroupId ["Green MAT1 -","GroupColor0"];};
 
