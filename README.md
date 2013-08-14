@@ -216,8 +216,8 @@ Version | Date
 
 3-0-5 | XX AUG 2013
 
-* Migrated ACRE Support component.
-* Disabled automatic frequencies in ACRE Support component.
+* Migrated ACRE Support component (see wiki for details).
+* Fixed additional unsassigned variable errors.
 
 3-0-4 | 08 AUG 2013
 
