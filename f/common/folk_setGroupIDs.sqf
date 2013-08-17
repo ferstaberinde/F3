@@ -41,8 +41,8 @@ if(!isnil "GrpBLU_TNK1") then {GrpBLU_TNK1 setGroupId ["Blue TNK1 -","GroupColor
 
 if(!isnil "GrpBLU_TH1") then {GrpBLU_TH1 setGroupId ["Blue TH1 -","GroupColor0"];};
 if(!isnil "GrpBLU_TH2") then {GrpBLU_TH2 setGroupId ["Blue TH2 -","GroupColor0"];};
-if(!isnil "GrpBLU_TH3") then {GrpBLU_TH2 setGroupId ["Blue TH3 -","GroupColor0"];};
-if(!isnil "GrpBLU_TH4") then {GrpBLU_TH2 setGroupId ["Blue TH4 -","GroupColor0"];};
+if(!isnil "GrpBLU_TH3") then {GrpBLU_TH3 setGroupId ["Blue TH3 -","GroupColor0"];};
+if(!isnil "GrpBLU_TH4") then {GrpBLU_TH4 setGroupId ["Blue TH4 -","GroupColor0"];};
 if(!isnil "GrpBLU_TH5") then {GrpBLU_TH5 setGroupId ["Blue TH5 -","GroupColor0"];};
 if(!isnil "GrpBLU_TH6") then {GrpBLU_TH6 setGroupId ["Blue TH6 -","GroupColor0"];};
 if(!isnil "GrpBLU_TH7") then {GrpBLU_TH7 setGroupId ["Blue TH7 -","GroupColor0"];};
