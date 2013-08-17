@@ -63,7 +63,8 @@ class Params
 
 // F3 - Folk Assign Gear Script
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT OR PLACE ANY OTHER PARAMETERS BEFORE OR AFTER IT
+// WARNING: DO NOT DISABLE THIS COMPONENT OR PLACE ANY OTHER PARAMETERS BEFORE OR AFTER IT MUST 
+// BE REFERENCABLE AS "paramsarray select 1" FOR GEAR SCRIPTS TO WORK CORRECTLY
 
         class f_param_backpacks
         {
@@ -73,6 +74,22 @@ class Params
                 default = 2;
                 code = "f_param_backpacks = %1";
         }; 
+
+// ============================================================================================
+
+// F3 - ACRE Support
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
+// WARNING: DO NOT DISABLE THIS COMPONENT OR CHANGE POSITION IN PARAMS; IT MUST BE REFERENCABLE
+// AS "paramsarray select 2" FOR GEAR SCRIPTS TO WORK CORRECTLY
+
+        class f_param_acre
+        {
+                title = "ACRE";
+                values[] = {0,1};
+                texts[] = {"Off","On"};
+                default = 0;
+                code = "f_var_acre = %1";
+        };
 
 // ============================================================================================
 
@@ -148,20 +165,6 @@ class Params
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
 };
-
-// ============================================================================================
-
-// F3 - Kegetys Spectator Script
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-#include "f\common\f_spect\spectating.hpp"
-
-// ============================================================================================
-
-// F3 - Gear Snippets
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// #include "f\common\f_gearSnippets.hpp"
 
 // ============================================================================================
 

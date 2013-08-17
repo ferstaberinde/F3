@@ -81,13 +81,6 @@ f_endSelected = -1;
 
 // ====================================================================================
 
-// F3 - Kegetys Spectator Script
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-[] execVM "f\common\f_spect\specta_init.sqf";
-
-// ====================================================================================
-
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
