@@ -216,9 +216,10 @@ Version | Date
 
 3-0-5 | 17 AUG 2013
 
-* Migrated ACRE Support component (see wiki for details).
+* Migrated ACRE Support component (inc. pre-set frequencies, see F3 wiki for details).
 * Fixed additional unsassigned variable errors.
 * Removed Kegetys Spectator Script component.
+* Removed unused files and references.
 
 3-0-4 | 08 AUG 2013
 
