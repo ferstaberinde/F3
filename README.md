@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 3-0-5     | XX AUG 2013 | Patch release - Various improvements (see change history).
+* 3-0-5     | 17 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-4     | 08 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-3     | 25 JUN 2013 | Patch release - Various improvements (see change history).
 * 3-0-2     | 25 MAR 2013 | Patch release - Various improvements (see change history).
@@ -214,10 +214,11 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-0-5 | XX AUG 2013
+3-0-5 | 17 AUG 2013
 
 * Migrated ACRE Support component (see wiki for details).
 * Fixed additional unsassigned variable errors.
+* Removed Kegetys Spectator Script component.
 
 3-0-4 | 08 AUG 2013
 
