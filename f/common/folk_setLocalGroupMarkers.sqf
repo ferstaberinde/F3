@@ -67,15 +67,26 @@ switch (_unitfaction) do
 // 		["GrpBLU_SAM1",  3, "SAM1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
 
 		["GrpBLU_ENG1",  6, "ENG1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
- 		["GrpBLU_IFV1",  7, "IFV1", "ColorRed"] spawn fnc_folk_localGroupMarker;
 
-// 		["GrpBLU_IFV2",  7, "IFV2", "ColorBlue"] spawn fnc_folk_localGroupMarker;	
-// 		["GrpBLU_IFV3",  7, "IFV3", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+ 		["GrpBLU_IFV1",  7, "IFV1", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpBLU_IFV2",  7, "IFV2", "ColorRed"] spawn fnc_folk_localGroupMarker;	
+		["GrpBLU_IFV3",  7, "IFV3", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpBLU_IFV4",  7, "IFV4", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpBLU_IFV5",  7, "IFV5", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpBLU_IFV6",  7, "IFV6", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpBLU_IFV7",  7, "IFV7", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpBLU_IFV8",  7, "IFV8", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+
 // 		["GrpBLU_TNK1",  7, "TNK1", "ColorRed"] spawn fnc_folk_localGroupMarker;	
 
-		["GrpBLU_TH1",  8, "TH1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-
-// 		["GrpBLU_TH2",  8, "TH2", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpBLU_TH1",  8, "TH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
+ 		["GrpBLU_TH2",  8, "TH2", "ColorRed"] spawn fnc_folk_localGroupMarker;
+ 		["GrpBLU_TH3",  8, "TH3", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+ 		["GrpBLU_TH4",  8, "TH4", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+ 		["GrpBLU_TH5",  8, "TH5", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+  		["GrpBLU_TH6",  8, "TH6", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+   		["GrpBLU_TH7",  8, "TH7", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpBLU_TH8",  8, "TH8", "ColorOrange"] spawn fnc_folk_localGroupMarker;
 
 		["GrpBLU_AH1",  8, "AH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
 		["GrpBLU_DT1",  4, "DT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
@@ -119,15 +130,27 @@ switch (_unitfaction) do
 // 		["GrpRED_SAM1",  3, "SAM1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
 
 		["GrpRED_ENG1",  6, "ENG1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
- 		["GrpRED_IFV1",  7, "IFV1", "ColorRed"] spawn fnc_folk_localGroupMarker;
 
-// 		["GrpRED_IFV2",  7, "IFV2", "ColorBlue"] spawn fnc_folk_localGroupMarker;	
+ 		["GrpRED_IFV1",  7, "IFV1", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_IFV2",  7, "IFV2", "ColorRed"] spawn fnc_folk_localGroupMarker;
+ 		["GrpRED_IFV3",  7, "IFV3", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_IFV4",  7, "IFV4", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+ 		["GrpRED_IFV5",  7, "IFV5", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_IFV6",  7, "IFV6", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+ 		["GrpRED_IFV7",  7, "IFV7", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_IFV8",  7, "IFV8", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+
 // 		["GrpRED_IFV3",  7, "IFV3", "ColorGreen"] spawn fnc_folk_localGroupMarker;
 // 		["GrpRED_TNK1",  7, "TNK1", "ColorRed"] spawn fnc_folk_localGroupMarker;	
 
-		["GrpRED_TH1",  8, "TH1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-
-// 		["GrpRED_TH2",  8, "TH2", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_TH1",  8, "TH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_TH2",  8, "TH2", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_TH3",  8, "TH3", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_TH4",  8, "TH4", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_TH5",  8, "TH5", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_TH6",  8, "TH6", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_TH7",  8, "TH7", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpRED_TH8",  8, "TH8", "ColorOrange"] spawn fnc_folk_localGroupMarker;
 
 		["GrpRED_AH1",  8, "AH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
 		["GrpRED_DT1",  4, "DT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
@@ -177,7 +200,10 @@ switch (_unitfaction) do
 // 		["GrpGRN_IFV3",  7, "IFV3", "ColorGreen"] spawn fnc_folk_localGroupMarker;
 // 		["GrpGRN_TNK1",  7, "TNK1", "ColorRed"] spawn fnc_folk_localGroupMarker;	
 
-		["GrpGRN_TH1",  8, "TH1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpGRN_TH1",  8, "TH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpGRN_TH2",  8, "TH2", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpGRN_TH3",  8, "TH3", "ColorGreen"] spawn fnc_folk_localGroupMarker;		
+		["GrpGRN_TH4",  8, "TH4", "ColorOrange"] spawn fnc_folk_localGroupMarker;
 
 // 		["GrpGRN_TH2",  8, "TH2", "ColorOrange"] spawn fnc_folk_localGroupMarker;
 // 		["GrpGRN_AH1",  8, "AH1", "ColorRed"] spawn fnc_folk_localGroupMarker;

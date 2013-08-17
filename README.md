@@ -217,6 +217,10 @@ Version | Date
 3-0-5 | 17 AUG 2013
 
 * Migrated ACRE Support component (inc. pre-set frequencies, see F3 wiki for details).
+* Expanded F3 Folk ARPS Platoons component:
+ * BLUFOR platoon can now be helibourne or mechanised.
+ * OPFOR platoon can now be helibourne or mechanised.
+ * INDEPENDENT platoon can now be helibourne.
 * Fixed additional unsassigned variable errors.
 * Removed Kegetys Spectator Script component.
 * Removed unused files and references.
