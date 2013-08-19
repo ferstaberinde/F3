@@ -27,6 +27,7 @@ loadScreen = "logo.paa";
 
 respawn = 1;
 respawndelay = 3;
+respawnTemplates[] = {"Spectator"};
 
 // ============================================================================================
 
