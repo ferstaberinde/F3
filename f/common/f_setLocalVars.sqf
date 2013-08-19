@@ -8,7 +8,7 @@
 #include "f_waitForJIP.sqf"
 
 // ====================================================================================
-
+waitUntil {scriptDone f_processParamsArray};
 // DEBUG DEFINES
 
 #define SLV_NAME "(f\common\f_setLocalVars.sqf)"
