@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-3
+* Version: 3-0-6
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -27,6 +27,11 @@
 
 ### F3 Version History ###
 
+Version | Date | Notes
+
+* 3-0-6     | 20 AUG 2013 | Patch release - Various improvements (see change history).
+* 3-0-5     | 17 AUG 2013 | Patch release - Various improvements (see change history).
+* 3-0-4     | 08 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-3     | 25 JUN 2013 | Patch release - Various improvements (see change history).
 * 3-0-2     | 25 MAR 2013 | Patch release - Various improvements (see change history).
 * 3-0-1     | 17 MAR 2013 | Patch release - Various improvements (see change history).
@@ -119,10 +124,10 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam
 * Documentation: Fer
 * Producers: Fer
-* Special Thanks: Zerith
+* Special Thanks: Zerith | Draakon
 * Special Thanks: Everyone at Folk ARPS
 
 ### F2 Credits ###
@@ -210,12 +215,44 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
+3-0-6 | 20 AUG 2013
+
+* Updated Multiplayer Ending Controller component to use new BIS endings.
+* Updated F3 Folk ARPS Assign Gear Script component (various fixes/changes).
+* Fixed additional unsassigned variable errors.
+* Removed unused files and references.
+
+3-0-5 | 17 AUG 2013
+
+* Migrated ACRE Support component (inc. pre-set frequencies, see F3 wiki for details).
+* Expanded F3 Folk ARPS Platoons component:
+ * BLUFOR platoon can now be helibourne or mechanised.
+ * OPFOR platoon can now be helibourne or mechanised.
+ * INDEPENDENT platoon can now be helibourne.
+* Fixed additional unsassigned variable errors.
+* Removed Kegetys Spectator Script component.
+* Removed unused files and references.
+
+3-0-4 | 08 AUG 2013
+
+* Fixed "no entry 'bin\config.bin/CfgWeapons.'." error.
+* Fixed various unsassigned variable errors.
+* Fixed medic markers in F3 Folk ARPS Group Markers component.
+* Fixed time of day parameter in Mission Conditions Selector component.
+* Disabled weather parameter in Mission Conditions Selector component.
+* Added new options to Casualties Cap component.
+* Added new options to Casualties Cap (Advanced) component.
+
 3-0-3 | 25 JUN 2013
 
 * Quick updates to reflect key ArmA 3 Beta content and changes.
 * Updated all F3 Folk ARPS components to include Green faction.
 * Updated all F3 Folk ARPS components to reflect Blue/Red/Green faction names.
-* Updated F3 Folk ARPS Platoons component to include new/upgraded vehicles. 
+* Updated F3 Folk ARPS Platoons component to include new/upgraded vehicles.
+* Updated ORBAT Notes component (group names are now clickable and zoom map to group marker).
+* Updated F3 Folk ARPS JIP Reinforcement Options component (JIP group does not follow player).
+* Updated F3 Folk ARPS JIP Reinforcement Options component (JIP option more visible).
+* Fixed F3 Common Local Variables component (prevented double-counts of vehicle crew).
 
 3-0-2 | 25 MAR 2013
 
@@ -257,7 +294,7 @@ Version | Date
 * Migrated Casualties Cap component.
 * Migrated Casualties Cap (Advanced) component.
 * Migrated Dynamic View Distance component.
-* Migrated  Group E&E Check component.
+* Migrated Group E&E Check component.
 * Migrated Mission Maker Teleport component.
 * Migrated Name Tags component.
 * Migrated (and renamed) F3 Folk ARPS Platoons component.

@@ -8,7 +8,7 @@
 #include "f_waitForJIP.sqf"
 
 // ====================================================================================
-
+waitUntil {scriptDone f_processParamsArray};
 // DEBUG DEFINES
 
 #define SLV_NAME "(f\common\f_setLocalVars.sqf)"
@@ -23,7 +23,7 @@ private ["_str_f_var_units","_str_f_var_units_BLU","_str_f_var_units_RES","_str_
 // We will create an array containing all units.
 
 f_var_units = allUnits + vehicles;
-f_var_units = f_var_units - [F2_Precompile_WEST,F2_Precompile_EAST];
+f_var_units = f_var_units - [F3_Precompile_WEST,F3_Precompile_EAST];
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -38,7 +38,7 @@ if (f_var_debugMode == 1) then
 // Using f_var_units we will create an array containing all BLUFOR units.
 
 f_var_units_BLU = [];
-{if ((side _x) == west && _x != F2_Precompile_WEST ) then {f_var_units_BLU = f_var_units_BLU + [_x]}} forEach f_var_units;
+{if ((side _x) == west && _x != F3_Precompile_WEST ) then {f_var_units_BLU = f_var_units_BLU + [_x]}} forEach f_var_units;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -68,7 +68,7 @@ if (f_var_debugMode == 1) then
 // Using f_var_units we will create an array containing all OPFOR units.
 
 f_var_units_OPF = [];
-{if ((side _x) == east && _x != F2_Precompile_EAST) then {f_var_units_OPF = f_var_units_OPF + [_x]}} forEach f_var_units;
+{if ((side _x) == east && _x != F3_Precompile_EAST) then {f_var_units_OPF = f_var_units_OPF + [_x]}} forEach f_var_units;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -99,7 +99,7 @@ if (f_var_debugMode == 1) then
 
 f_var_men = [];
 {
-	if ((_x isKindOf "CAManBase")&&(_x != F2_Precompile_WEST && _x != F2_Precompile_EAST)) then 
+	if ((_x isKindOf "CAManBase")&&(_x != F3_Precompile_WEST && _x != F3_Precompile_EAST)) then 
 	{
 		f_var_men = f_var_men + [_x]
 	};
@@ -118,7 +118,7 @@ if (f_var_debugMode == 1) then
 // Using f_var_men we will create an array containing all BLUFOR men.
 
 f_var_men_BLU = [];
-{if ((side _x) == west && _x != F2_Precompile_WEST) then {f_var_men_BLU = f_var_men_BLU + [_x]}} forEach f_var_men;
+{if ((side _x) == west && _x != F3_Precompile_WEST) then {f_var_men_BLU = f_var_men_BLU + [_x]}} forEach f_var_men;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -148,7 +148,7 @@ if (f_var_debugMode == 1) then
 // Using f_var_men we will create an array containing all OPFOR men.
 
 f_var_men_OPF = [];
-{if ((side _x) == east && _x != F2_Precompile_EAST) then {f_var_men_OPF = f_var_men_OPF + [_x]}} forEach f_var_men;
+{if ((side _x) == east && _x != F3_Precompile_EAST) then {f_var_men_OPF = f_var_men_OPF + [_x]}} forEach f_var_men;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -193,7 +193,7 @@ if (f_var_debugMode == 1) then
 // Using f_var_units_BLU we will create an array containing all BLUFOR groups.
 
 f_var_groups_BLU = [];
-{if (!((group _x) in f_var_groups_BLU) &&  leader _x != F2_Precompile_WEST) then {f_var_groups_BLU = f_var_groups_BLU + [group _x]}} forEach f_var_units_BLU;
+{if (!((group _x) in f_var_groups_BLU) &&  leader _x != F3_Precompile_WEST) then {f_var_groups_BLU = f_var_groups_BLU + [group _x]}} forEach f_var_units_BLU;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -223,7 +223,7 @@ if (f_var_debugMode == 1) then
 // Using f_var_units_OPF we will create an array containing all OPFOR groups.
 
 f_var_groups_OPF = [];
-{if (!((group _x) in f_var_groups_OPF) && leader _x != F2_Precompile_EAST) then {f_var_groups_OPF = f_var_groups_OPF + [group _x]}} forEach f_var_units_OPF;
+{if (!((group _x) in f_var_groups_OPF) && leader _x != F3_Precompile_EAST) then {f_var_groups_OPF = f_var_groups_OPF + [group _x]}} forEach f_var_units_OPF;
 
 // DEBUG
 if (f_var_debugMode == 1) then

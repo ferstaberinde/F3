@@ -19,14 +19,17 @@ private ["_unt","_mkrType","_mkrText","_mkrColor","_mkrName","_mkr","_untName"];
 // Using variables passed to the script instance, we will create some local variables:
 
 call compile format ["
+if(!isnil '%1') then
+{
 	_unt = %1;
+};
 ",_this select 0];
 
 _untName = _this select 0;
 _mkrType = _this select 1;
 _mkrText = _this select 2;
 _mkrColor = _this select 3;
-_mkrName = format ["mkr_%1",_unt];
+_mkrName = format ["mkr_%1",_untName];
 
 
 // ====================================================================================
@@ -37,11 +40,13 @@ _mkrName = format ["mkr_%1",_unt];
 if (isNil "_unt") then 
 {
 	call compile format ["
-		waitUntil {sleep 3; count units %1 > 0}; 
+		waitUntil {
+		sleep 3;
+		!isnil '%1'
+		};
 		_unt = %1;
 		
-	",_untName,_unt];
-	_mkrName = format ["mkr_%1",_unt];
+	",_untName];
 };
 
 // ====================================================================================
@@ -49,7 +54,7 @@ if (isNil "_unt") then
 // EXIT FOR DEAD UNITS (PART I)
 // If the unit does not exist, this script exits.
 
-if (!alive _unt) then
+if (!alive _unt ) then
 	{
 	if (true) exitWith {};
 	}

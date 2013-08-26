@@ -24,23 +24,15 @@ if (isServer) then
 // DEBUG
 	if (f_var_debugMode == 1) then
 	{
-		player sideChat "DEBUG (f\server\f_mpEndBroadcast.sqf): This is the server.";
+		player sideChat "DEBUG (f\server\f_mpEndReceiver.sqf): This is the server.";
 	};
 };
 
 // DEBUG
 if (f_var_debugMode == 1) then
 {
-	player sideChat format ["DEBUG (f\server\f_mpEndBroadcast.sqf): f_endSelected = %1",f_endSelected];
+	player sideChat format ["DEBUG (f\server\f_mpEndReceiver.sqf): f_endSelected = %1",f_endSelected];
 };
-
-// ====================================================================================
-
-// CREATE LOCAL END TRIGGER
-// Dynamically alter the trigger f_trgEndReceiver so that it becomes an End trigger.
-
-f_trgEndReceiver setTriggerType format ["End%1",f_endSelected];
-f_trgEndReceiver setTriggerStatements [format ["f_fireEnd%1",f_endSelected],"",""];
 
 // ====================================================================================
 
@@ -64,49 +56,61 @@ switch (f_endSelected) do
 	case 1:
 	{
 // Place any custom code for ending #1 after this line:
-		
-		
-		
+
+
+
+// Do not allow custom code for ending #1 to continue after this comment.
+	"end1" call BIS_fnc_endMission;					
 	};
 // Ending #2
 	case 2:
 	{
 // Place any custom code for ending #2 after this line:
-		
-		
-		
+
+
+
+// Do not allow custom code for ending #2 to continue after this comment.
+	"end2" call BIS_fnc_endMission;	
 	};
 // Ending #3
 	case 3:
 	{
 // Place any custom code for ending #3 after this line:
-		
-		
-		
+
+
+
+// Do not allow custom code for ending #3 to continue after this comment.
+	"end3" call BIS_fnc_endMission;
 	};
 // Ending #4
 	case 4:
 	{
 // Place any custom code for ending #4 after this line:
-		
-		
-		
+
+
+
+// Do not allow custom code for ending #4 to continue after this comment.
+	"end4" call BIS_fnc_endMission;	
 	};
 // Ending #5
 	case 5:
 	{
 // Place any custom code for ending #5 after this line:
-		
-		
-		
+
+
+
+// Do not allow custom code for ending #5 to continue after this comment.
+	"end5" call BIS_fnc_endMission;	
 	};
 // Ending #6
 	case 6:
 	{
 // Place any custom code for ending #6 after this line:
-		
-				
-		
+
+
+
+// Do not allow custom code for ending #6 to continue after this comment.
+	"end6" call BIS_fnc_endMission;	
 	};
 };
 
@@ -118,40 +122,6 @@ switch (f_endSelected) do
 if (dialog) then
 {
 	closeDialog 0;
-};
-
-// ====================================================================================
-
-// CREATE VARIABLE TO FIRE APPROPRIATE LOCAL END TRIGGER
-// Using the value of f_endSelected a new variable is created (local to the client).
-// The new variable will fire the end trigger on the client.
-
-switch (f_endSelected) do
-{
-	case 1:
-	{
-		f_fireEnd1 = true;
-	};
-	case 2:
-	{
-		f_fireEnd2 = true;
-	};
-	case 3:
-	{
-		f_fireEnd3 = true;
-	};
-	case 4:
-	{
-		f_fireEnd4 = true;
-	};
-	case 5:
-	{
-		f_fireEnd5 = true;
-	};
-	case 6:
-	{
-		f_fireEnd6 = true;
-	};
 };
 
 // ====================================================================================

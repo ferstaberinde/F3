@@ -81,13 +81,6 @@ f_endSelected = -1;
 
 // ====================================================================================
 
-// F3 - Kegetys Spectator Script
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-[] execVM "f\common\f_spect\specta_init.sqf";
-
-// ====================================================================================
-
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -128,20 +121,27 @@ f_endSelected = -1;
 // [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // BLUFOR > BLUE
-//[[GrpBLU_CO,GrpBLU_DC,GrpBLU_ASL,GrpBLU_BSL,GrpBLU_CSL,GrpBLU_A1,GrpBLU_A2,GrpBLU_A3,GrpBLU_B1,GrpBLU_B2,GrpBLU_B3,GrpBLU_C1,GrpBLU_C2,GrpBLU_C3,GrpBLU_MMG1,GrpBLU_MAT1,GrpBLU_ENG1,GrpBLU_DT1,GrpBLU_TH1,GrpBLU_AH1],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // OPFOR > RED
-//[[GrpRED_CO,GrpRED_DC,GrpRED_ASL,GrpRED_BSL,GrpRED_CSL,GrpRED_A1,GrpRED_A2,GrpRED_A3,GrpRED_B1,GrpRED_B2,GrpRED_B3,GrpRED_C1,GrpRED_C2,GrpRED_C3,GrpRED_MMG1,GrpRED_MAT1,GrpRED_ENG1,GrpRED_DT1,GrpRED_TH1,GrpRED_AH1],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // INDEPENDENT > GREEN
-//[[GrpGRN_CO,GrpGRN_DC,GrpGRN_ASL,GrpGRN_BSL,GrpGRN_CSL,GrpGRN_A1,GrpGRN_A2,GrpGRN_A3,GrpGRN_B1,GrpGRN_B2,GrpGRN_B3,GrpGRN_C1,GrpGRN_C2,GrpGRN_C3,GrpGRN_MMG1,GrpGRN_MAT1,GrpGRN_ENG1,GrpGRN_DT1,GrpGRN_TH1,GrpGRN_AH1],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [INDEPENDENT,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // ====================================================================================
 
 // F3 - Casualties Cap (Advanced)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [[GroupName],100] execVM "f\server\f_casualtiesCapAdv.sqf";
+// BLUFOR > BLUE
+// [BLUFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
+
+// OPFOR > RED
+// [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
+
+// INDEPENDENT > GREEN
+// [INDEPENDENT,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
 // ====================================================================================
 
