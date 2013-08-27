@@ -66,7 +66,7 @@ class Params
 // F3 - Folk Assign Gear Script
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT OR PLACE ANY OTHER PARAMETERS BEFORE OR AFTER IT MUST 
-// BE REFERENCABLE AS "paramsarray select 1" FOR GEAR SCRIPTS TO WORK CORRECTLY
+// BE REFERENCABLE AS "f_param_backpacks" FOR GEAR SCRIPTS TO WORK CORRECTLY
 
         class f_param_backpacks
         {
@@ -253,3 +253,21 @@ class CfgDebriefing
 };
 
 // ============================================================================================
+class CfgFunctions
+{
+	class F3
+	{
+		class common
+		{
+			file = "f\common";
+			class f_assignGear_init
+			{
+				preInit = 1; 
+			};
+			class f_processParamsArray
+			{
+				preInit = 1; 
+			};
+		};
+	};
+};
