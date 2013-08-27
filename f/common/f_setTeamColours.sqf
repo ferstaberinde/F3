@@ -11,24 +11,29 @@
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_i"];
+private ["_i","_unit","_isFireteam"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 
 _i = 1;
+_unit = player;
 
 // ====================================================================================
 
 // CHECK GROUP SIZE
 // If the group isn't a full fireteam, leave teams as default.
 
-if( (count (units (group player))) < 3 ) exitWith {};
+if( (count (units (group _unit))) != 4 ) exitWith {};
+
+_isFireteam = ["_FTL", format["%1",(leader (group _unit))]] call BIS_fnc_inString;
+if(!_isFireteam) exitWith {};
+
 
 // WAIT FOR GAME START
 
-waitUntil{alive player};
+waitUntil{alive _unit};
 
 sleep 3;
 
@@ -49,7 +54,7 @@ sleep 3;
 
 	_i = _i + 1;
 
-} foreach units (group player);
+} foreach units (group _unit);
 
 // ===================================================================================== 
 
