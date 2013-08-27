@@ -11,21 +11,8 @@
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_unit","_mkrType","_mkrColor","_mkrName","_mkr"];
-_getColorMarker = 
-{
-private ["_color"];
-_color = "ColorWhite";
-switch (_this) do 
-{ 
-  case "MAIN": {_color = "ColorWhite"}; 
-  case "RED": {_color = "ColorRed"};
-  case "GREEN": {_color = "ColorGreen"}; 
-  case "BLUE": {_color = "ColorBlue"}; 
-  case "YELLOW": {_color = "ColorYellow"}; 
-};
-_color
-};
+private ["_unit","_mkrType","_mkrColor","_mkrName","_mkr","_mkrBorder"];
+
 // ====================================================================================
 
 // SET KEY VARIABLES
@@ -51,7 +38,7 @@ _mkrBorder setMarkerDirLocal (direction _unit);
 _mkr = createMarkerLocal [_mkrName,[(getPos _unit select 0),(getPos _unit select 1)]];
 _mkr setMarkerShapeLocal "ICON";
 _mkr setMarkerTypeLocal "MIL_TRIANGLE";
-_mkr setMarkerColorLocal ((assignedTeam _unit) call _getColorMarker);
+_mkr setMarkerColorLocal ([_unit] call f_getLocalMarkerVar);
 _mkr setMarkerSizeLocal [0.45, 0.45];
 //_mkr setMarkerTextLocal (name _unit);
 _mkr setMarkerDirLocal (direction _unit);
@@ -72,7 +59,7 @@ while{alive _unit} do
 		_mkrBorder setMarkerDirLocal _dir;
 		_mkr setMarkerPosLocal _pos;
 		_mkr setMarkerDirLocal _dir;
-		_mkr setMarkerColorLocal ((assignedTeam _unit) call _getColorMarker);
+		_mkr setMarkerColorLocal ([_unit] call f_getLocalMarkerVar);
 	};
 	sleep 3;
 

@@ -266,7 +266,7 @@ class CfgFunctions
 			};
 			class f_processParamsArray
 			{
-				preInit = 1; 
+				preInit = 1;
 			};
 		};
 	};

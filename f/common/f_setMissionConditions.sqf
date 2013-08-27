@@ -9,6 +9,7 @@ private ["_timeOfDay","_weather","_MissionOvercast","_MissionRain","_MissionRain
 // ====================================================================================
 
 // WAIT FOR PARAMSARRAY TO BE PROCESSED
+waitUntil {scriptDone f_processParamsArray};
 
 
 // ====================================================================================

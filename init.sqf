@@ -4,7 +4,7 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT
 
-//f_processParamsArray = [] execVM "f\common\f_processParamsArray.sqf";
+f_processParamsArray = [] execVM "f\common\f_processParamsArray.sqf";
 
 // ====================================================================================
 
