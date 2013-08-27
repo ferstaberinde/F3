@@ -51,6 +51,13 @@ f_script_setGroupIDs = [] execVM "f\common\folk_setGroupIDs.sqf";
 
 // ====================================================================================
 
+// F3 - F3 Folk ARPS Team Colours
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
+
+// ====================================================================================
+
 // F3 - ShackTactical Fireteam Member Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
