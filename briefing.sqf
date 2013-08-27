@@ -13,6 +13,7 @@
 
 private ["_unitfaction"];
 waitUntil {scriptDone f_processParamsArray};
+
 // ====================================================================================
 
 // DETECT PLAYER FACTION
