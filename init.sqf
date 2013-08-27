@@ -54,7 +54,7 @@ f_script_setGroupIDs = [] execVM "f\common\folk_setGroupIDs.sqf";
 // F3 - ShackTactical Fireteam Member Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\common\ShackTac_setlocalFTMemberMarkers.sqf";
+[] execVM "f\common\f_setlocalFTMemberMarkers.sqf";
 
 // ====================================================================================
 
