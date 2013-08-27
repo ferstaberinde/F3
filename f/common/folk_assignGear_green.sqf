@@ -189,14 +189,14 @@ _unit addItem _firstaid;
 
 // The following code removes any pre-added NVGs
 
-if("NVGoggles" in (assignedItems player)) then
+if("NVGoggles_INDEP" in (assignedItems player)) then
 {
-_unit unassignItem "NVGoggles";
-_unit removeItem "NVGoggles";
+_unit unassignItem "NVGoggles_INDEP";
+_unit removeItem "NVGoggles_INDEP";
 };
 // uncomment to remove nvgoogles
-_unit addItem "NVGoggles";
-_unit assignItem "NVGoggles";					// add universal NVG for this faction
+_unit addItem "NVGoggles_INDEP";
+_unit assignItem "NVGoggles_INDEP";					// add universal NVG for this faction
 
 //removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
 //unit addItem "ItemGPS"; 					// add gps to this faction
