@@ -255,18 +255,21 @@ class CfgDebriefing
 // ============================================================================================
 class CfgFunctions
 {
-	class F3
+	class F3 // Defines the "owner"
 	{
-		class common
+		class common // catagory
 		{
 			file = "f\common";
+			// Warning DO NOT REMOVE THESE, they are critical to the assignGear scripts and many others.
+			// defines the function to preInit the compling of the assignGear function used by units.
 			class f_assignGear_init
 			{
-				preInit = 1; 
+				preInit = 1;  // 1 to call the function upon mission start, before objects are initialized. Passed arguments are ["preInit"]
 			};
+			// defines the function to postInit (the paramArray dosent seem to be constructed at preInit stage)
 			class f_processParamsArray
 			{
-				preInit = 1;
+				postInit = 1; // 1 to call the function upon mission start, after objects are initialized. Passed arguments are ["postInit"]
 			};
 		};
 	};

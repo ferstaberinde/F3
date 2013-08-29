@@ -1,13 +1,5 @@
 // ====================================================================================
 
-// F3 - Process ParamsArray
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT
-
-f_processParamsArray = [] execVM "f\common\f_processParamsArray.sqf";
-
-// ====================================================================================
-
 // F3 - Disable Saving and Auto Saving
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
