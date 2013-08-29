@@ -9,7 +9,7 @@
 
 // ====================================================================================
 // DEBUG DEFINES
-waitUntil {scriptDone f_processParamsArray};
+
 
 #define SLV_NAME "(f\common\f_setLocalVars.sqf)"
 #define DEBUG_OUTPUT player sidechat 

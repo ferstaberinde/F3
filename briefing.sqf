@@ -12,7 +12,7 @@
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_unitfaction"];
-waitUntil {scriptDone f_processParamsArray};
+
 
 // ====================================================================================
 

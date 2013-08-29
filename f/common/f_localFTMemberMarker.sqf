@@ -11,7 +11,7 @@
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_unit","_mkrType","_mkrColor","_mkrName","_mkr","_mkrBorder"];
+private ["_unit","_mkrType","_mkrColor","_mkrName","_mkr","_mkrBorder","_pos"];
 
 // ====================================================================================
 
@@ -27,7 +27,8 @@ _mkrborderName = Format ["mkrB_%1",_unit];
 // Creater markers
 
 // this marker is slightly bigger and abused in such a way to make it seem like the next maker has a border
-_mkrBorder = createMarkerLocal [_mkrborderName,[(getPos _unit select 0),(getPos _unit select 1)]];
+_pos = getpos _unit;
+_mkrBorder = createMarkerLocal [_mkrborderName,_pos];
 _mkrBorder setMarkerShapeLocal "ICON";
 _mkrBorder setMarkerTypeLocal "MIL_TRIANGLE";
 _mkrBorder setMarkerColorLocal "ColorBlack";
@@ -35,12 +36,11 @@ _mkrBorder setMarkerSizeLocal [0.60, 0.60];
 _mkrBorder setMarkerDirLocal (direction _unit);
 
 // This marker is the real marker
-_mkr = createMarkerLocal [_mkrName,[(getPos _unit select 0),(getPos _unit select 1)]];
+_mkr = createMarkerLocal [_mkrName,_pos];
 _mkr setMarkerShapeLocal "ICON";
 _mkr setMarkerTypeLocal "MIL_TRIANGLE";
 _mkr setMarkerColorLocal ([_unit] call f_getLocalMarkerVar);
 _mkr setMarkerSizeLocal [0.45, 0.45];
-//_mkr setMarkerTextLocal (name _unit);
 _mkr setMarkerDirLocal (direction _unit);
 
 
@@ -59,13 +59,15 @@ while{alive _unit} do
 		_mkrBorder setMarkerDirLocal _dir;
 		_mkr setMarkerPosLocal _pos;
 		_mkr setMarkerDirLocal _dir;
+		// makes a call to the function defined in f_setLocalFTMemberMarkers.sqf
+		// retreives the stored color from the unit.
 		_mkr setMarkerColorLocal ([_unit] call f_getLocalMarkerVar);
 	};
 	sleep 3;
 
 };
 // ====================================================================================
-//He's dead, lets clean up.
+//He's dead jim, lets clean up.
 deleteMarkerLocal _mkrBorder;
 deleteMarkerLocal _mkr;
 
