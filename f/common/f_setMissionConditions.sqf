@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_timeOfDay","_weather","_MissionOvercast","_MissionRain","_MissionRainbow","_MissionLightnings","_MissionWindStr","_MissionWindGusts","_MissionFog","_MissionWaves"];
+private ["_timeOfDay","_weather","_MissionOvercast","_MissionRain","_MissionRainbow","_MissionLightnings","_MissionWindStr","_MissionWindGusts","_MissionFog","_MissionWaves","_MissionHumidity"];
 
 // ====================================================================================
 
@@ -35,7 +35,7 @@ switch (_weather) do
 // Clear (Calm)
 	case 0:
 	{
-		_MissionOvercast = 0;
+		_MissionOvercast = 0.01;
 		_MissionRain = 0.01;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
@@ -43,11 +43,12 @@ switch (_weather) do
 		_MissionWindGusts = 0;
 		_MissionFog = 0;
 		_MissionWaves = 0.1;
+		_MissionHumidity = 0.2;
 	};
 // Clear (Light Winds)
 	case 1:
 	{
-		_MissionOvercast = 0;
+		_MissionOvercast = 0.01;
 		_MissionRain = 0.01;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
@@ -55,11 +56,12 @@ switch (_weather) do
 		_MissionWindGusts = 0.5;
 		_MissionFog = 0;
 		_MissionWaves = 0.25;
+		_MissionHumidity = 0.2;
 	};
 // Clear (Strong Winds)
 	case 2:
 	{
-		_MissionOvercast = 0;
+		_MissionOvercast = 0.01;
 		_MissionRain = 0.01;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
@@ -67,6 +69,7 @@ switch (_weather) do
 		_MissionWindGusts = 1;
 		_MissionFog = 0;
 		_MissionWaves = 0.75;
+		_MissionHumidity = 0.2;
 	};
 // Overcast (Calm)
 	case 3:
@@ -79,6 +82,7 @@ switch (_weather) do
 		_MissionWindGusts = 0;
 		_MissionFog = 0;
 		_MissionWaves = 0.1;
+		_MissionHumidity = 0.8;
 	};
 // Overcast (Light Winds)
 	case 4:
@@ -91,6 +95,7 @@ switch (_weather) do
 		_MissionWindGusts = 0.5;
 		_MissionFog = 0;
 		_MissionWaves = 0.25;
+		_MissionHumidity = 0.8;
 	};
 // Overcast (Strong Winds)
 	case 5:
@@ -103,6 +108,7 @@ switch (_weather) do
 		_MissionWindGusts = 1;
 		_MissionFog = 0;
 		_MissionWaves = 0.75;
+		_MissionHumidity = 0.8;
 	};
 // Rain (Light Winds)
 	case 6:
@@ -115,6 +121,7 @@ switch (_weather) do
 		_MissionWindGusts = 0.5;
 		_MissionFog = 0;
 		_MissionWaves = 0.75;
+		_MissionHumidity = 0.9;
 	};
 // Rain (Strong Winds)
 	case 7:
@@ -127,6 +134,7 @@ switch (_weather) do
 		_MissionWindGusts = 1;
 		_MissionFog = 0;
 		_MissionWaves = 0.75;
+		_MissionHumidity = 0.9;
 	};
 // Storm
 	case 8:
@@ -139,6 +147,7 @@ switch (_weather) do
 		_MissionWindGusts = 1;
 		_MissionFog = 0;
 		_MissionWaves = 1;
+		_MissionHumidity = 1;
 	};
 // Light Fog
 	case 9:
@@ -151,6 +160,7 @@ switch (_weather) do
 		_MissionWindGusts = 0;
 		_MissionFog = 0.9;
 		_MissionWaves = 0;
+		_MissionHumidity = 0.7;
 	};
 // Heavy Fog
 	case 10:
@@ -163,6 +173,7 @@ switch (_weather) do
 		_MissionWindGusts = 0;
 		_MissionFog = 1;
 		_MissionWaves = 0;
+		_MissionHumidity = 0.7;
 	};
 };
 
@@ -186,7 +197,8 @@ switch (_weather) do
 // mission conditions on server and all clients (including JIP clients).
 
 
-[_MissionOvercast,_MissionFog,_MissionRain] call F3_fnc_f_SetWeather;
+[_MissionOvercast,_MissionFog,_MissionRain,_MissionRainbow,_MissionWindStr,_MissionWindGusts,_MissionWaves,_MissionHumidity] call F3_fnc_f_SetWeather;
+
 // ====================================================================================
 
 // SELECT MISSION TIME OF DAY
