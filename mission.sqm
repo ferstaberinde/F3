@@ -15,7 +15,8 @@ class Mission
 		"A3_Air_F_Beta_Heli_Attack_02",
 		"A3_Armor_F_AMV",
 		"A3_Armor_F_Marid",
-		"A3_Air_F_Beta_Heli_Transport_02"
+		"A3_Air_F_Beta_Heli_Transport_02",
+		"A3_Boat_F_Boat_Transport_01"
 	};
 	addOnsAuto[]=
 	{
@@ -38,11 +39,13 @@ class Mission
 	{
 		briefingName="F3";
 		overviewText="*** Insert mission description here. ***";
-		startWeather=0;
+		startWeather=0.84999996;
 		startWind=0;
 		forecastWeather=1;
 		forecastWind=0;
 		forecastWaves=0;
+		wavesForced=1;
+		windForced=1;
 		year=2035;
 		month=7;
 		day=6;
