@@ -30,7 +30,7 @@ private [
 "_carbine_attach","_smg_attach",
 "_glrifle_attach","_AR_attach",
 "_MMG_attach","_SNrifle_attach"
-,"_APmine"
+,"_APmine", "_nvg"
 ];
 
 // ====================================================================================
