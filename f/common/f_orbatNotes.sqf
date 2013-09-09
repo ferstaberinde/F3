@@ -12,7 +12,7 @@ The ORBAT below is only accurate at mission start.<br />
 <br />
 ORBAT<br />";
 _groups = [];
-_hiddenGroups = [group F3_Precompile_East] + [group F3_Precompile_West];
+_hiddenGroups = [];
 
 {
 	// Add to ORBAT if side matches, group isn't already listed, and group has players

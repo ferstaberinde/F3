@@ -1,13 +1,5 @@
 // ====================================================================================
 
-// F3 - Process ParamsArray
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT
-
-f_processParamsArray = [] execVM "f\common\f_processParamsArray.sqf";
-
-// ====================================================================================
-
 // F3 - Disable Saving and Auto Saving
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -51,10 +43,17 @@ f_script_setGroupIDs = [] execVM "f\common\folk_setGroupIDs.sqf";
 
 // ====================================================================================
 
+// F3 - F3 Folk ARPS Team Colours
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
+
+// ====================================================================================
+
 // F3 - ShackTactical Fireteam Member Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\common\ShackTac_setlocalFTMemberMarkers.sqf";
+[] execVM "f\common\f_setlocalFTMemberMarkers.sqf";
 
 // ====================================================================================
 

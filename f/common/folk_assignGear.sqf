@@ -111,13 +111,3 @@ if (isNil "_carbine") then { //_carbine should exist unless no faction has been 
 	};
 };
 
-// ====================================================================================
-
-// DELETE PRE-COMPILE UNITS
-// Two units are placed on the map (lower left-hand corner) to aid with the assignGear
-// scripts. After a short while we delete these (so they do not confuse the spectator
-// script).
-
-if (isServer) then {
-	[] execVM "f\common\folk_assignGearCleanUp.sqf";
-};
