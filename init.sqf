@@ -186,12 +186,6 @@ f_endSelected = -1;
 
 // ====================================================================================
 
-// F3 - Tripwire action
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// [[UnitName1,UnitName2],25,2,east] execVM "f\common\fa_tripwire_init.sqf";
-
-// ====================================================================================
 
 // F3 - Join Group Action
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
