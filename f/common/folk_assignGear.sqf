@@ -54,8 +54,8 @@ if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _u
 
 // ====================================================================================
 
-// GEAR: BLUFOR > BLUE
-// The following block of code executes only if the player is in a BLUE slot; it 
+// GEAR: NATO
+// The following block of code executes only if the player is in a NATO slot; it 
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "BLU_F") then {
@@ -64,8 +64,8 @@ if (_faction == "BLU_F") then {
 
 // ====================================================================================
 
-// GEAR: OPFOR > RED
-// The following block of code executes only if the player is in a RED slot; it 
+// GEAR: CSAT
+// The following block of code executes only if the player is in a CSAT slot; it 
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "OPF_F") then {
@@ -74,8 +74,8 @@ if (_faction == "OPF_F") then {
 
 // ====================================================================================
 
-// GEAR: INDEPEDENT > GREEN
-// The following block of code executes only if the player is in a GREEN slot; it 
+// GEAR: AAF
+// The following block of code executes only if the player is in a AAF slot; it 
 // automatically includes a file which contains the appropriate equipment data.
 
 if(_faction == "IND_F") then {
