@@ -37,7 +37,7 @@ respawndelay = 3;
 
 #include "f\common\f_JIP_kitpicker.h"
 #include "f\common\f_JIP_grppicker.h"
-enableDebugConsole = 1;
+
 // ============================================================================================
 
 // F3 - Start of Params code blocks.
@@ -266,7 +266,7 @@ class CfgFunctions
 			{
 
 			};
-			// defines the function to postInit (the paramArray dosent seem to be constructed at preInit stage)
+			// defines the function to preInit (the paramArray dosent seem to be constructed at preInit stage)
 			class processParamsArray
 			{
 				preInit = 1; // 1 to call the function upon mission start, after objects are initialized. Passed arguments are ["postInit"]
