@@ -108,14 +108,14 @@ class Params
         };
 
 // WARNING: WEATHER PARAMETER IS DISABLED UNTIL CERTAIN ARMA 3 COMMANDS ARE FIXED
-        class f_param_weather
-	{
-		title = "$STR_f_param_weather";
-		values[] = {0,1,2,3,4,5,6,7,8,9,10};
-		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option9,$STR_f_param_weather_Option10};
-		default = 0;
-		code = "f_param_weather = %1";
-        };
+	   class f_param_weather
+		{
+			title = "$STR_f_param_weather";
+			values[] = {0,1,2,3,4,5,6,7,8,9,10};
+			texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option9,$STR_f_param_weather_Option10};
+			default = 0;
+			code = "f_param_weather = %1";
+	    };
 
 // ============================================================================================
 
@@ -255,23 +255,23 @@ class CfgDebriefing
 // ============================================================================================
 class CfgFunctions
 {
-	class F3 // Defines the "owner"
+	class F // Defines the "owner"
 	{
 		class common // catagory
 		{
 			file = "f\common";
 			// Warning DO NOT REMOVE THESE, they are critical to the assignGear scripts and many others.
 			// defines the function to preInit the compling of the assignGear function used by units.
-			class f_assignGear_init
+			class folk_assignGear
 			{
-				preInit = 1;  // 1 to call the function upon mission start, before objects are initialized. Passed arguments are ["preInit"]
+
 			};
-			// defines the function to postInit (the paramArray dosent seem to be constructed at preInit stage)
-			class f_processParamsArray
+			// defines the function to preInit (the paramArray dosent seem to be constructed at preInit stage)
+			class processParamsArray
 			{
-				postInit = 1; // 1 to call the function upon mission start, after objects are initialized. Passed arguments are ["postInit"]
+				preInit = 1; // 1 to call the function upon mission start, after objects are initialized. Passed arguments are ["postInit"]
 			};
-			class f_SetWeather
+			class SetWeather
 			{
 			};
 		};
