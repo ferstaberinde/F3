@@ -11,13 +11,12 @@
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_i","_unit","_isFireteam"];
+private ["_unit","_isFireteam"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 
-_i = 1;
 _unit = player;
 
 // ====================================================================================
@@ -30,30 +29,17 @@ if( (count (units (group _unit))) != 4 ) exitWith {};
 _isFireteam = ["_FTL", format["%1",(leader (group _unit))]] call BIS_fnc_inString;
 if(!_isFireteam) exitWith {};
 
-
-// WAIT FOR GAME START
-
-waitUntil{alive _unit};
-
-sleep 3;
-
 // SET TEAM COLOURS
 
 {
-	// If AR/AAR
-	if( (_i == 2) or (_i == 3) ) then {
-
+	if((["_AR", format ["%1", vehicle _x]] call BIS_fnc_inString) || (["_AAR", format ["%1", vehicle _x]] call BIS_fnc_inString)) then
+	{
 		_x assignTeam "RED";
-
-	} else {
-
+	}
+	else
+	{
 		_x assignTeam "BLUE";
-
 	};
-
-
-	_i = _i + 1;
-
 } foreach units (group _unit);
 
 // ===================================================================================== 
