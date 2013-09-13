@@ -32,7 +32,7 @@ private [
 "_MMG_attach","_SNrifle_attach"
 ,"_APmine"
 ];
-diag_log "ran assignGear";
+
 // ====================================================================================
 
 // DETECT PLAYER FACTION
