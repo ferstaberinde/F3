@@ -36,35 +36,35 @@ f_respawnINIT = player addEventHandler ["killed", {_this execVM "init_onPlayerRe
 
 // ====================================================================================
 
-// F3 - Folk ARPS Group IDs
+// F3 - F3 Folk ARPS Group IDs
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 f_script_setGroupIDs = [] execVM "f\common\folk_setGroupIDs.sqf";
 
 // ====================================================================================
 
-// F3 - Folk ARPS Team Colours
+// F3 - F3 Folk ARPS Team Colours
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
 
 // ====================================================================================
 
-// F3 - Fireteam Member Markers
+// F3 - F3 Folk ARPS Fireteam Member Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\common\f_setlocalFTMemberMarkers.sqf";
 
 // ====================================================================================
 
-// F3 - Folk ARPS Group Markers
+// F3 - F3 Folk ARPS Group Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\common\folk_setLocalGroupMarkers.sqf";
 
 // ====================================================================================
 
-// F3 - Common Local Variables
+// F3 - F3 Common Local Variables
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT
 
@@ -89,7 +89,7 @@ f_endSelected = -1;
 
 // ====================================================================================
 
-// F3 - Dynamic View Distance 
+// F3 - Dynamic View Distance
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // f_viewDistance_default = 1250;
