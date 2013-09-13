@@ -13,7 +13,7 @@ private ["_timeOfDay","_weather","_MissionOvercast","_MissionRain","_MissionRain
 
 #include "f_waitForJIP.sqf"
 
-
+waitUntil {!isNil "f_param_weather" && !isnil "f_param_weather"};
 // ====================================================================================
 
 // SET KEY VARIABLES

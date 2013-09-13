@@ -269,7 +269,7 @@ class CfgFunctions
 			// defines the function to preInit (the paramArray dosent seem to be constructed at preInit stage)
 			class processParamsArray
 			{
-				preInit = 1; // 1 to call the function upon mission start, after objects are initialized. Passed arguments are ["postInit"]
+				preInit = 1;
 			};
 			class SetWeather
 			{
