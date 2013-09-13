@@ -8,7 +8,7 @@ removeheadgear _unit;
 removevest _unit;
 
 // use the type of the unit to figure out who gear they need
-switch (_typeofUnit) do 
+switch (_typeofUnit) do
 {
 	case "p":
 	{
@@ -25,6 +25,23 @@ switch (_typeofUnit) do
 		if(!isnil "_pilotRig" && _pilotRig != "") then
 		{
 		_unit addvest _pilotRig;
+		};
+	};
+	case "c":
+	{
+		// if there is a pilotuniform defeined add it to the unit
+		if(!isnil "_crewUniform" && _crewUniform != "") then
+		{
+		_unit adduniform _crewUniform;
+		};
+		// if there is ... etc.
+		if(!isnil "_crewHelmet" && _crewHelmet != "") then
+		{
+		_unit addheadgear _crewHelmet;
+		};
+		if(!isnil "_crewRig" && _crewRig != "") then
+		{
+		_unit addvest _crewRig;
 		};
 	};
 	case "div":

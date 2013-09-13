@@ -197,7 +197,7 @@ switch (_weather) do
 // mission conditions on server and all clients (including JIP clients).
 
 
-[_MissionOvercast,_MissionFog,_MissionRain,_MissionRainbow,_MissionWindStr,_MissionWindGusts,_MissionWaves,_MissionHumidity] call F3_fnc_f_SetWeather;
+[_MissionOvercast,_MissionFog,_MissionRain,_MissionRainbow,_MissionWindStr,_MissionWindGusts,_MissionWaves,_MissionHumidity] call f_fnc_SetWeather;
 
 // ====================================================================================
 
