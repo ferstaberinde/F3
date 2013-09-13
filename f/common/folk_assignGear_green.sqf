@@ -97,6 +97,9 @@ _smokegrenadegreen = "SmokeShellGreen";
 _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
+// Night Vision Goggles (NVGoggles)
+_nvg = "NVGoggles_INDEP";
+
 // Backpacks
 _bagmedium = "B_Fieldpack_oli";			// used by most roles
 _baglarge =  "B_Carryall_oli"; 			// used by medic and engineers
@@ -189,14 +192,14 @@ _unit addItem _firstaid;
 
 // The following code removes any pre-added NVGs
 
-if("NVGoggles" in (assignedItems player)) then
+if(_nvg in (assignedItems player)) then
 {
-_unit unassignItem "NVGoggles";
-_unit removeItem "NVGoggles";
+_unit unassignItem _nvg;
+_unit removeItem _nvg;
 };
 // uncomment to remove nvgoogles
-_unit addItem "NVGoggles";
-_unit assignItem "NVGoggles";					// add universal NVG for this faction
+_unit addItem _nvg;
+_unit assignItem _nvg;					// add universal NVG for this faction
 
 //removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
 //unit addItem "ItemGPS"; 					// add gps to this faction
