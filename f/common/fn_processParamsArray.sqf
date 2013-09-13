@@ -3,6 +3,7 @@
 // ====================================================================================
 
 _paramArray = paramsArray;
+diag_log format["array = %1",paramsArray];
 {
 	_paramName =(configName ((missionConfigFile >> "Params") select _forEachIndex));
 	_paramValue = (_paramArray select _forEachIndex);
