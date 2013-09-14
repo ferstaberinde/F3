@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-6
+* Version: 3-0-7
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-0-7     | 14 SEP 2013 | Patch release - Various improvements (see change history).
 * 3-0-6     | 20 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-5     | 17 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-4     | 08 AUG 2013 | Patch release - Various improvements (see change history).
@@ -124,7 +125,7 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster
 * Documentation: Fer
 * Producers: Fer
 * Special Thanks: Zerith | Draakon
@@ -214,6 +215,20 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-0-7 | 14 SEP 2013
+
+* Changed default terrain to Altis.
+* Added Fireteam Member Markers component.
+* Added Buddy Team Colours component.
+* Partially re-enabled weather parameter in Mission Conditions Selector component.
+* Expanded F3 Folk ARPS Platoons component:
+ * INDEPENDENT platoon can now be helibourne or mechanised.
+ * BLUFOR platoon now has 1 x tank.
+ * OPFOR platoon now has 1 x tank.
+* Implemented new functions-based approach to parameters, gear etc.
+* Updated F3 Folk ARPS Assign Gear Script component to support new NVG classnames.
+* Removed ShackTactical Fireteam Member Markers component.
 
 3-0-6 | 20 AUG 2013
 
