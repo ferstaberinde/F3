@@ -36,7 +36,7 @@ switch (_weather) do
 	case 0:
 	{
 		_MissionOvercast = 0.01;
-		_MissionRain = 0.01;
+		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0;
@@ -49,7 +49,7 @@ switch (_weather) do
 	case 1:
 	{
 		_MissionOvercast = 0.01;
-		_MissionRain = 0.01;
+		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0.25;
@@ -62,7 +62,7 @@ switch (_weather) do
 	case 2:
 	{
 		_MissionOvercast = 0.01;
-		_MissionRain = 0.01;
+		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0.75;
@@ -74,47 +74,47 @@ switch (_weather) do
 // Overcast (Calm)
 	case 3:
 	{
-		_MissionOvercast = 0.6;
-		_MissionRain = 0.01;
+		_MissionOvercast = 0.8;
+		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0;
 		_MissionWindGusts = 0;
 		_MissionFog = 0;
 		_MissionWaves = 0.1;
-		_MissionHumidity = 0.8;
+		_MissionHumidity = 0.2;
 	};
 // Overcast (Light Winds)
 	case 4:
 	{
-		_MissionOvercast = 0.6;
-		_MissionRain = 0.01;
+		_MissionOvercast = 0.8;
+		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0.25;
 		_MissionWindGusts = 0.5;
 		_MissionFog = 0;
 		_MissionWaves = 0.25;
-		_MissionHumidity = 0.8;
+		_MissionHumidity = 0.2;
 	};
 // Overcast (Strong Winds)
 	case 5:
 	{
-		_MissionOvercast = 0.6;
-		_MissionRain = 0.01;
+		_MissionOvercast = 0.8;
+		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0.75;
 		_MissionWindGusts = 1;
 		_MissionFog = 0;
 		_MissionWaves = 0.75;
-		_MissionHumidity = 0.8;
+		_MissionHumidity = 0.2;
 	};
 // Rain (Light Winds)
 	case 6:
 	{
 		_MissionOvercast = 0.8;
-		_MissionRain = 0.75;
+		_MissionRain = 1;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0.25;
@@ -127,7 +127,7 @@ switch (_weather) do
 	case 7:
 	{
 		_MissionOvercast = 0.8;
-		_MissionRain = 0.75;
+		_MissionRain = 1;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0.75;
@@ -158,7 +158,7 @@ switch (_weather) do
 		_MissionLightnings = 0;
 		_MissionWindStr = 0;
 		_MissionWindGusts = 0;
-		_MissionFog = 0.9;
+		_MissionFog = 0.7;
 		_MissionWaves = 0;
 		_MissionHumidity = 0.7;
 	};

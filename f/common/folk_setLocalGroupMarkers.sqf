@@ -202,7 +202,7 @@ switch (_unitfaction) do
  		["GrpGRN_IFV5",  7, "IFV5", "ColorGreen"] spawn fnc_folk_localGroupMarker;
 		["GrpGRN_IFV6",  7, "IFV6", "ColorGreen"] spawn fnc_folk_localGroupMarker;
  		["GrpGRN_IFV7",  7, "IFV7", "ColorOrange"] spawn fnc_folk_localGroupMarker;
-		["GrpRED_IFV8",  7, "IFV8", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpGRN_IFV8",  7, "IFV8", "ColorOrange"] spawn fnc_folk_localGroupMarker;
 
  		["GrpGRN_TNK1",  7, "TNK1", "ColorRed"] spawn fnc_folk_localGroupMarker;
 

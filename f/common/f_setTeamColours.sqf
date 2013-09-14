@@ -1,4 +1,4 @@
-// F3 - Set Group IDs
+// F3 - Buddy Team Colours
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -34,11 +34,11 @@ if(!_isFireteam) exitWith {};
 {
 	if((["_AR", format ["%1", vehicle _x]] call BIS_fnc_inString) || (["_AAR", format ["%1", vehicle _x]] call BIS_fnc_inString)) then
 	{
-		_x assignTeam "RED";
+		_x assignTeam "BLUE";
 	}
 	else
 	{
-		_x assignTeam "BLUE";
+		_x assignTeam "RED";
 	};
 } foreach units (group _unit);
 

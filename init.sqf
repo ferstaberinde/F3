@@ -43,14 +43,14 @@ f_script_setGroupIDs = [] execVM "f\common\folk_setGroupIDs.sqf";
 
 // ====================================================================================
 
-// F3 - F3 Folk ARPS Team Colours
+// F3 - Buddy Team Colours
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
 
 // ====================================================================================
 
-// F3 - ShackTactical Fireteam Member Markers
+// F3 - Fireteam Member Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\common\f_setlocalFTMemberMarkers.sqf";
