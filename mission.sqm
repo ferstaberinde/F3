@@ -3661,7 +3661,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1779.262,5.5,5816.5615};
+					position[]={1756.8542,5.5,5838.4854};
 					id=230;
 					side="WEST";
 					vehicle="B_crew_F";
@@ -3675,7 +3675,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1781.2428,5.5,5814.0645};
+					position[]={1758.8351,5.5,5835.9883};
 					id=231;
 					side="WEST";
 					vehicle="B_crew_F";
@@ -3688,7 +3688,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={1783.974,5.5,5813.8286};
+					position[]={1761.5663,5.5,5835.7524};
 					id=232;
 					side="WEST";
 					vehicle="B_crew_F";
@@ -4469,7 +4469,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={2440.7463,93.892151,4881.3882};
+					position[]={2419.8433,102.88959,4907.8252};
 					id=279;
 					side="EAST";
 					vehicle="O_crew_F";
@@ -4478,12 +4478,12 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitRED_TNK1_C";
-					init="GrpRED_TNK1 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehRED_TNK;";
+					init="GrpRED_TNK1 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehRED_TNK1;";
 					description="Red Tank 1 Commander";
 				};
 				class Item1
 				{
-					position[]={2443.7566,93.741165,4879.4932};
+					position[]={2422.8535,102.51373,4905.9302};
 					id=280;
 					side="EAST";
 					vehicle="O_crew_F";
@@ -4496,7 +4496,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={2446.2822,94.1922,4879.2788};
+					position[]={2425.3792,102.7464,4905.7158};
 					id=281;
 					side="EAST";
 					vehicle="O_crew_F";
@@ -4604,7 +4604,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1793.4106,5.5,5683.8066};
+					position[]={1782.7419,5.5,5686.8911};
 					id=288;
 					side="GUER";
 					vehicle="I_crew_F";
@@ -4617,26 +4617,26 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1795.0691,5.5,5681.6299};
+					position[]={1784.5762,5.5,5684.5596};
 					id=289;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV1_G";
-					init="GrpGRN_IFV1 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV1;";
+					init="GrpGRN_IFV1 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInGunner VehGRN_IFV1;";
 					description="Green IFV 1 Gunner";
 				};
 				class Item2
 				{
-					position[]={1797.6604,5.5,5680.8008};
+					position[]={1787.2769,5.5,5684.4976};
 					id=290;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV1_D";
-					init="GrpGRN_IFV1 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV1;";
+					init="GrpGRN_IFV1 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInDriver VehGRN_IFV1;";
 					description="Green IFV 1 Driver";
 				};
 			};
@@ -4649,7 +4649,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1801.371,5.5,5683.708};
+					position[]={1795.5511,5.5,5684.3066};
 					id=291;
 					side="GUER";
 					vehicle="I_crew_F";
@@ -4662,26 +4662,26 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1803.0294,5.5,5681.5313};
+					position[]={1797.2096,5.5,5682.1299};
 					id=292;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV2_G";
-					init="GrpGRN_IFV2 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV2;";
+					init="GrpGRN_IFV2 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInGunner VehGRN_IFV2;";
 					description="Green IFV 2 Gunner";
 				};
 				class Item2
 				{
-					position[]={1805.6207,5.5,5680.7021};
+					position[]={1799.8979,5.5,5681.9321};
 					id=293;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV2_D";
-					init="GrpGRN_IFV2 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV2;";
+					init="GrpGRN_IFV2 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInDriver VehGRN_IFV2;";
 					description="Green IFV 2 Driver";
 				};
 			};
@@ -4694,7 +4694,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1811.3889,5.5,5685.0894};
+					position[]={1810.5083,5.5,5686.5986};
 					id=294;
 					side="GUER";
 					vehicle="I_crew_F";
@@ -4707,26 +4707,26 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1813.0474,5.5,5682.9126};
+					position[]={1812.1667,5.5,5684.4219};
 					id=295;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV3_G";
-					init="GrpGRN_IFV3 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV3;";
+					init="GrpGRN_IFV3 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInGunner VehGRN_IFV3;";
 					description="Green IFV 3 Gunner";
 				};
 				class Item2
 				{
-					position[]={1815.6387,5.5,5682.0835};
+					position[]={1814.9772,5.5,5684.1406};
 					id=296;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV3_D";
-					init="GrpGRN_IFV3 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV3;";
+					init="GrpGRN_IFV3 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInDriver VehGRN_IFV3;";
 					description="Green IFV 3 Driver";
 				};
 			};
@@ -4739,7 +4739,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1819.9867,5.5,5683.6768};
+					position[]={1823.885,5.5,5683.7246};
 					id=297;
 					side="GUER";
 					vehicle="I_crew_F";
@@ -4752,26 +4752,26 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1821.6451,5.5,5681.5};
+					position[]={1825.5435,5.5,5681.5479};
 					id=298;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV4_G";
-					init="GrpGRN_IFV4 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV4;";
+					init="GrpGRN_IFV4 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInGunner VehGRN_IFV4;";
 					description="Green IFV 4 Gunner";
 				};
 				class Item2
 				{
-					position[]={1824.2365,5.5,5680.6709};
+					position[]={1828.4086,5.5,5681.3208};
 					id=299;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV4_D";
-					init="GrpGRN_IFV4 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV4;";
+					init="GrpGRN_IFV4 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInDriver VehGRN_IFV4;";
 					description="Green IFV 4 Driver";
 				};
 			};
@@ -4784,7 +4784,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1827.4413,5.5,5682.9795};
+					position[]={1838.0374,5.5,5687.252};
 					id=300;
 					side="GUER";
 					vehicle="I_crew_F";
@@ -4797,26 +4797,26 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1829.0997,5.5,5680.8027};
+					position[]={1839.6958,5.5,5685.0752};
 					id=301;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV5_G";
-					init="GrpGRN_IFV5 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV5;";
+					init="GrpGRN_IFV5 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInGunner VehGRN_IFV5;";
 					description="Green IFV 5 Gunner";
 				};
 				class Item2
 				{
-					position[]={1831.691,5.5,5679.9736};
+					position[]={1842.2806,5.5,5684.8638};
 					id=302;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV5_D";
-					init="GrpGRN_IFV5 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV5;";
+					init="GrpGRN_IFV5 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInDriver VehGRN_IFV5;";
 					description="Green IFV 5 Driver";
 				};
 			};
@@ -4829,7 +4829,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1835.6971,5.5,5684.5698};
+					position[]={1850.1777,5.5,5684.959};
 					id=303;
 					side="GUER";
 					vehicle="I_crew_F";
@@ -4842,26 +4842,26 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1837.3556,5.5,5682.3931};
+					position[]={1851.8362,5.5,5682.7822};
 					id=304;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV6_G";
-					init="GrpGRN_IFV6 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV6;";
+					init="GrpGRN_IFV6 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInGunner VehGRN_IFV6;";
 					description="Green IFV 6 Gunner";
 				};
 				class Item2
 				{
-					position[]={1839.9469,5.5,5681.564};
+					position[]={1854.2817,5.5,5682.6328};
 					id=305;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV6_D";
-					init="GrpGRN_IFV6 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV6;";
+					init="GrpGRN_IFV6 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInDriver VehGRN_IFV6;";
 					description="Green IFV 6 Driver";
 				};
 			};
@@ -4874,39 +4874,39 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1842.5698,5.5,5684.2817};
+					position[]={1865.6145,5.5,5687.0806};
 					id=306;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="UnitGRN_IFV7_D";
+					text="UnitGRN_IFV7_C";
 					init="GrpGRN_IFV7 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV7;";
 					description="Green IFV 7 Commander";
 				};
 				class Item1
 				{
-					position[]={1844.2283,5.5,5682.105};
+					position[]={1867.2729,5.5,5684.9038};
 					id=307;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV7_G";
-					init="GrpGRN_IFV7 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV7;";
+					init="GrpGRN_IFV7 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInGunner VehGRN_IFV7;";
 					description="Green IFV 7 Gunner";
 				};
 				class Item2
 				{
-					position[]={1846.8196,5.5,5681.2759};
+					position[]={1869.7186,5.5,5684.7549};
 					id=308;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV7_D";
-					init="GrpGRN_IFV7 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV7;";
+					init="GrpGRN_IFV7 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInDriver VehGRN_IFV7;";
 					description="Green IFV 7 Driver";
 				};
 			};
@@ -4919,7 +4919,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={1850.7483,5.5,5684.7017};
+					position[]={1877.948,5.5097399,5684.8193};
 					id=309;
 					side="GUER";
 					vehicle="I_crew_F";
@@ -4932,26 +4932,26 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={1852.4067,5.5,5682.5249};
+					position[]={1879.6064,5.5859032,5682.6426};
 					id=310;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitGRN_IFV8_G";
-					init="GrpGRN_IFV8 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV8;";
+					init="GrpGRN_IFV8 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInGunner VehGRN_IFV8;";
 					description="Green IFV 8 Gunner";
 				};
 				class Item2
 				{
-					position[]={1854.998,5.5,5681.6958};
+					position[]={1882.3434,5.7781572,5682.542};
 					id=311;
 					side="GUER";
 					vehicle="I_crew_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="UnitGRN_IFV8_D_7";
-					init="GrpGRN_IFV8 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInCommander VehGRN_IFV8;";
+					text="UnitGRN_IFV8_D";
+					init="GrpGRN_IFV8 = group this; nul = [""c"",this] call f_fnc_folk_assignGear ; this moveInDriver VehGRN_IFV8;";
 					description="Green IFV 8 Driver";
 				};
 			};
@@ -5431,7 +5431,7 @@ class Mission
 		};
 		class Item38
 		{
-			position[]={1781.7355,5.5,5809.2705};
+			position[]={1759.3278,5.5,5831.1943};
 			id=358;
 			side="EMPTY";
 			vehicle="B_MBT_01_cannon_F";
@@ -5440,7 +5440,7 @@ class Mission
 		};
 		class Item39
 		{
-			position[]={1795.1499,5.5,5667.2744};
+			position[]={1783.0969,5.5,5675.4668};
 			id=359;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
@@ -5450,7 +5450,7 @@ class Mission
 		};
 		class Item40
 		{
-			position[]={1802.4882,5.5,5668.9863};
+			position[]={1796.0214,5.5,5672.79};
 			id=360;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
@@ -5460,7 +5460,7 @@ class Mission
 		};
 		class Item41
 		{
-			position[]={1813.3324,5.5,5670.373};
+			position[]={1810.9736,5.5,5675.0029};
 			id=361;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
@@ -5470,7 +5470,7 @@ class Mission
 		};
 		class Item42
 		{
-			position[]={1822.79,5.5,5671.5952};
+			position[]={1824.1155,5.5,5672.8477};
 			id=362;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
@@ -5480,7 +5480,7 @@ class Mission
 		};
 		class Item43
 		{
-			position[]={1829.9653,5.5,5671.5957};
+			position[]={1838.0853,5.5,5675.0923};
 			id=363;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
@@ -5490,7 +5490,7 @@ class Mission
 		};
 		class Item44
 		{
-			position[]={1838.5262,5.5,5670.6172};
+			position[]={1850.3849,5.5,5673.0942};
 			id=364;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
@@ -5500,7 +5500,7 @@ class Mission
 		};
 		class Item45
 		{
-			position[]={1846.843,5.5,5671.5957};
+			position[]={1866.0206,5.5,5675.042};
 			id=365;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
@@ -5510,7 +5510,7 @@ class Mission
 		};
 		class Item46
 		{
-			position[]={1855.2408,5.5,5671.3511};
+			position[]={1878.3514,5.795186,5672.7578};
 			id=366;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
@@ -5520,7 +5520,7 @@ class Mission
 		};
 		class Item47
 		{
-			position[]={2453.1157,93.928696,4875.1445};
+			position[]={2432.2126,101.62086,4901.5815};
 			id=367;
 			side="EMPTY";
 			vehicle="O_MBT_02_cannon_F";

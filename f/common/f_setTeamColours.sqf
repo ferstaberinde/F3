@@ -1,4 +1,4 @@
-// F3 - Set Group IDs
+// F3 - Buddy Team Colours
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
