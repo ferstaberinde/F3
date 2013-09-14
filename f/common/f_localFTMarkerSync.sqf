@@ -1,7 +1,7 @@
 private ["_grp","_colorTeam"];
 _grp = _this select 0;
 _unit = _this select 1;
-waitUntil {!isnil "f_TeamLeaderSync"};
+waitUntil {!isnil "f_TeamLeaderSync" && !isnil "f_var_debugMode"};
 // if he is still alive and groupLeader
 while{_unit == (leader _grp) && alive _unit} do
 {

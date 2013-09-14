@@ -6,4 +6,6 @@ if (!isDedicated && (player != player)) then
 {
     waitUntil {player == player};
     waitUntil {time > 10};
+    // dedicated protection
+	waitUntil {!isnil "f_var_debugMode"};
 };

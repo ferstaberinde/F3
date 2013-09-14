@@ -270,6 +270,7 @@ class CfgFunctions
 			class processParamsArray
 			{
 				preInit = 1;
+				postInit = 1;
 			};
 			class SetWeather
 			{
