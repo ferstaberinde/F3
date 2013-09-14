@@ -6,13 +6,13 @@
 // Prevents the script executing until the player has synchronised correctly:
 
 #include "f_waitForJIP.sqf"
-
+waitUntil {!isnil "f_var_debugMode"};
 // ====================================================================================
 // DEBUG DEFINES
 
 
 #define SLV_NAME "(f\common\f_setLocalVars.sqf)"
-#define DEBUG_OUTPUT player sidechat 
+#define DEBUG_OUTPUT player sidechat
 
 // DECLARE VARIABLES AND FUNCTIONS
 private ["_str_f_var_units","_str_f_var_units_BLU","_str_f_var_units_RES","_str_f_var_units_OPF","_str_f_var_units_CIV","_str_f_var_men","_str_f_var_men_BLU","_str_f_var_men_RES","_str_f_var_men_OPF","_str_f_var_men_CIV","_str_f_var_groups_BLU","_str_f_var_groups_RES","_str_f_var_groups_OPF","_str_f_var_groups_CIV","_str_f_var_groups","_str_f_var_vehicles","_str_f_var_vehicles_BLU","_str_f_var_vehicles_RES","_str_f_var_vehicles_OPF","_str_f_var_vehicles_CIV"];
@@ -98,7 +98,7 @@ if (f_var_debugMode == 1) then
 
 f_var_men = [];
 {
-	if ((_x isKindOf "CAManBase")) then 
+	if ((_x isKindOf "CAManBase")) then
 	{
 		f_var_men = f_var_men + [_x]
 	};
