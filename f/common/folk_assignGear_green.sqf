@@ -1,4 +1,4 @@
-// F3 - Folk Assign Gear Script - AAF
+// F3 - Folk Assign Gear Script - Green
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -37,65 +37,68 @@
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
 
-// Attachments 
+// Attachments
 // nil = no change
 // [] = remove all
 // ["acc_pointer_IR","optic_ACO_grn"] = remove all, add items.
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
-_rifle = "arifle_Mk20_MRCO_F"; 
-_riflemag = "30Rnd_556x45_Stanag";			
-_riflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";		
+_rifle = "arifle_Mk20_MRCO_F";
+_riflemag = "30Rnd_556x45_Stanag";
+_riflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
 _rifle_attach = ["acc_pointer_IR","optic_ACO_grn"];
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
-_carbine = "arifle_Mk20C_F"; 
-_carbinemag = "30Rnd_556x45_Stanag"; 
-_carbinemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";	
+_carbine = "arifle_Mk20C_F";
+_carbinemag = "30Rnd_556x45_Stanag";
+_carbinemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
 _carbine_attach = ["acc_pointer_IR","optic_ACO_grn"];
 
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
-_smg = "SMG_02_F"; 
-_smgmag = "30Rnd_9x21_Mag"; 
-_smgmag_tr = "30Rnd_9x21_Mag";			
+_smg = "SMG_02_F";
+_smgmag = "30Rnd_9x21_Mag";
+_smgmag_tr = "30Rnd_9x21_Mag";
 _smg_attach = nil;
 
 // Diver
-_diverWep = "arifle_SDAR_F"; 
-_diverMag1 = "30Rnd_556x45_Stanag"; 
+_diverWep = "arifle_SDAR_F";
+_diverMag1 = "30Rnd_556x45_Stanag";
 _diverMag2 = "20Rnd_556x45_UW_mag";
 _diverWep_attach = nil;
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle = "arifle_Mk20_GL_MRCO_pointer_F"; 
+_glrifle = "arifle_Mk20_GL_MRCO_pointer_F";
 _glriflemag = "30Rnd_556x45_Stanag";
-_glriflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow"; 
-_glmag = "1Rnd_HE_Grenade_shell";														
+_glriflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_glmag = "1Rnd_HE_Grenade_shell";
 _glrifle_attach = ["acc_pointer_IR","optic_ACO_grn"];
 
-// Smoke for FTLs, Squad Leaders, etc 
-_glsmokewhite = "1Rnd_Smoke_Grenade_shell"; 
-_glsmokegreen = "1Rnd_SmokeGreen_Grenade_shell"; 
-_glsmokered = "1Rnd_SmokeRed_Grenade_shell";   
+// Smoke for FTLs, Squad Leaders, etc
+_glsmokewhite = "1Rnd_Smoke_Grenade_shell";
+_glsmokegreen = "1Rnd_SmokeGreen_Grenade_shell";
+_glsmokered = "1Rnd_SmokeRed_Grenade_shell";
 
-// Flares for FTLs, Squad Leaders, etc	
-_glflarewhite = "3Rnd_UGL_FlareWhite_F"; 
-_glflarered = "3Rnd_UGL_FlareRed_F"; 
-_glflareyellow = "3Rnd_UGL_FlareYellow_F"; 
+// Flares for FTLs, Squad Leaders, etc
+_glflarewhite = "3Rnd_UGL_FlareWhite_F";
+_glflarered = "3Rnd_UGL_FlareRed_F";
+_glflareyellow = "3Rnd_UGL_FlareYellow_F";
 _glflaregreen = "3Rnd_UGL_FlareGreen_F";
 
 // Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
 _pistol = "hgun_ACPC2_F";
-_pistolmag = "9Rnd_45ACP_Mag";	
+_pistolmag = "9Rnd_45ACP_Mag";
 
 // Grenades
-_grenade = "HandGrenade"; 
+_grenade = "HandGrenade";
 _smokegrenade = "SmokeShell";
-_smokegrenadegreen = "SmokeShellGreen";	
+_smokegrenadegreen = "SmokeShellGreen";
 
-// misc medical items.																			
+// misc medical items.
 _firstaid = "FirstAidKit";
 _medkit = "Medikit";
+
+// Night Vision Goggles (NVGoggles)
+_nvg = "NVGoggles_INDEP";
 
 // Backpacks
 _bagmedium = "B_Fieldpack_oli";			// used by most roles
@@ -107,36 +110,36 @@ _bagmediumdiver =  "B_AssaultPack_blk";		// used by divers
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = "LMG_Mk200_F"; 
+_AR = "LMG_Mk200_F";
 _ARmag = "200Rnd_65x39_cased_Box";
-_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";																							
+_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
 _AR_attach = ["acc_pointer_IR","optic_ACO_grn"];
 
 // Medium MG
-_MMG = "LMG_Zafir_F"; 
+_MMG = "LMG_Zafir_F";
 _MMGmag = "150Rnd_762x51_Box";
-_MMGmag_tr = "150Rnd_762x51_Box_Tracer";																								
+_MMGmag_tr = "150Rnd_762x51_Box_Tracer";
 _MMG_attach = ["acc_pointer_IR","optic_ACO"];
 
 // Rifleman AT
-_RAT = "launch_NLAW_F"; 
-_RATmag = "NLAW_F";					
+_RAT = "launch_NLAW_F";
+_RATmag = "NLAW_F";
 
 // Mortar
 _MTR = "B_Mk6Mortar_Wpn";
 _MTRmount = "B_Mk6Mortar_Support";
 
 // Medium AT
-_MAT = "launch_I_Titan_short_F"; 
-_MATmag1 = "Titan_AT"; 
-_MATmag2 = "Titan_AP";		
+_MAT = "launch_I_Titan_short_F";
+_MATmag1 = "Titan_AT";
+_MATmag2 = "Titan_AP";
 // Surface Air
 _SAM = "launch_I_Titan_F";
 _SAMmag = "Titan_AA";
 // Engineer items.
-_ATmine = "ATMine_Range_Mag"; 
-_satchel = "DemoCharge_Remote_Mag";																										
-_APmine1 = "APERSBoundingMine_Range_Mag"; 
+_ATmine = "ATMine_Range_Mag";
+_satchel = "DemoCharge_Remote_Mag";
+_APmine1 = "APERSBoundingMine_Range_Mag";
 _APmine2 = "APERSMine_Range_Mag";
 
 // ====================================================================================
@@ -159,7 +162,10 @@ _diverGlasses = "G_Diving";
 _pilotUniform = "U_I_HeliPilotCoveralls";
 _pilotHelmet = "H_PilotHelmetHeli_I";
 _pilotRig = "V_TacVest_oli";
-
+// Crewman
+_crewUniform = "U_I_CombatUniform";
+_crewHelmet = "H_HelmetCrew_I";
+_crewRig = "V_TacVest_oli";
 // ====================================================================================
 
 // INTERPRET PASSED VARIABLES
@@ -189,19 +195,19 @@ _unit addItem _firstaid;
 
 // The following code removes any pre-added NVGs
 
-if("NVGoggles" in (assignedItems player)) then
+if(_nvg in (assignedItems player)) then
 {
-_unit unassignItem "NVGoggles";
-_unit removeItem "NVGoggles";
+_unit unassignItem _nvg;
+_unit removeItem _nvg;
 };
 // uncomment to remove nvgoogles
-_unit addItem "NVGoggles";
-_unit assignItem "NVGoggles";					// add universal NVG for this faction
+_unit addItem _nvg;
+_unit assignItem _nvg;					// add universal NVG for this faction
 
 //removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
 //unit addItem "ItemGPS"; 					// add gps to this faction
-//_unit assignItem "ItemGPS";		
-//_unit addweapon "ItemMap";					
+//_unit assignItem "ItemGPS";
+//_unit addweapon "ItemMap";
 //_unit addweapon "ItemCompass";
 //_unit addweapon "ItemRadio";
 //_unit addweapon "ItemWatch";
@@ -225,7 +231,7 @@ _backpack = {
 			(unitBackpack _unit) addItemCargoGlobal [_medkit,1];
 			(unitBackpack _unit) addItemCargoGlobal [_firstaid,5];
 		};
-		
+
 		// BACKPACK: GRENADIER (CO/DC/SL/FTL/G)
 		case "g":
 		{
@@ -376,7 +382,7 @@ _backpack = {
 			(unitBackpack _unit) addItemCargoGlobal ["ToolKit",1];
 			(unitBackpack _unit) addMagazineCargoGlobal [_satchel, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_mine, 1];
-			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];	
+			(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
 		};
 
@@ -468,7 +474,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glsmokewhite,3];
 		_unit addweapon _glrifle;					//_COrifle
 		_unit addmagazines [_pistolmag,2];
-		_unit addweapon _pistol;		
+		_unit addweapon _pistol;
 		_unit addmagazines [_grenade,2];
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,1];
@@ -477,7 +483,7 @@ switch (_typeofUnit) do
 		_unit assignItem "ItemGPS";
 		["g"] call _backpack;
 	};
-  
+
 // LOADOUT: DEPUTY COMMANDER AND SQUAD LEADER
 	case "dc":
 	{
@@ -487,7 +493,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glsmokewhite,3];
 		_unit addweapon _glrifle;					//_DCrifle
 		_unit addmagazines [_pistolmag,2];
-		_unit addweapon _pistol;		
+		_unit addweapon _pistol;
 		_unit addmagazines [_grenade,2];
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,1];
@@ -495,8 +501,8 @@ switch (_typeofUnit) do
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
 		["g"] call _backpack;
-	};  
-	
+	};
+
 // LOADOUT: MEDIC
 	case "m":
 	{
@@ -513,7 +519,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag_tr,2];
 		_unit addmagazines [_glmag,4];
 		_unit addmagazines [_glsmokewhite,4];
-		_unit addweapon _glrifle;					//_FTLrifle		
+		_unit addweapon _glrifle;					//_FTLrifle
 		_unit addmagazines [_grenade,2];
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,1];
@@ -521,7 +527,7 @@ switch (_typeofUnit) do
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
 		["g"] call _backpack;
-	};		
+	};
 
 
 // LOADOUT: AUTOMATIC RIFLEMAN
@@ -535,14 +541,14 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		["ar"] call _backpack;
-	};	
-	
+	};
+
 // LOADOUT: ASSISTANT AUTOMATIC RIFLEMAN
 	case "aar":
 	{
 		_unit addmagazines [_riflemag,5];
 		_unit addmagazines [_riflemag_tr,2];
-		_unit addweapon _rifle;		
+		_unit addweapon _rifle;
 		_unit addmagazines [_grenade,1];
 		_unit addmagazines [_smokegrenade,1];
 		_unit addmagazines [_riflemag,2];
@@ -550,9 +556,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,1];
 		_unit addmagazines [_ARmag,3];
 		["ar"] call _backpack;
-	};				
-	
-// LOADOUT: RIFLEMAN (AT)	
+	};
+
+// LOADOUT: RIFLEMAN (AT)
 	case "rat":
 	{
 		_unit addmagazines [_carbinemag,5];
@@ -562,20 +568,20 @@ switch (_typeofUnit) do
 		["car"] call _backpack;
 		(unitBackpack _unit) addMagazineCargoGlobal [_RATmag,1];
 		_unit addweapon _RAT;
-	};		
-	
-// LOADOUT: MEDIUM MG GUNNER	
+	};
+
+// LOADOUT: MEDIUM MG GUNNER
 	case "mmgg":
 	{
 		_unit addmagazines [_MMGmag,4];
 		_unit addmagazines [_MMGmag_tr,1];
-		_unit addweapon _MMG;		
+		_unit addweapon _MMG;
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		["mmg"] call _backpack;
-	};			
+	};
 
-// LOADOUT: MEDIUM MG ASSISTANT GUNNER	
+// LOADOUT: MEDIUM MG ASSISTANT GUNNER
 	case "mmgag":
 	{
 		_unit addmagazines [_riflemag,6];
@@ -589,7 +595,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_MMGmag,4];
 		_unit addmagazines [_MMGmag_tr,3];
 		["mmg"] call _backpack;
-	};	
+	};
 // LOADOUT: MEDIUM AT GUNNER
 	case "matg":
 	{
@@ -598,9 +604,9 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		["matg"] call _backpack;
 		_unit addweapon _MAT;
-	};	
-	
-// LOADOUT: MEDIUM AT ASSISTANT GUNNER	
+	};
+
+// LOADOUT: MEDIUM AT ASSISTANT GUNNER
 	case "matag":
 	{
 		_unit addmagazines [_carbinemag,5];
@@ -612,8 +618,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade,1];
 		_unit addmagazines [_smokegrenade,1];
 		["matag"] call _backpack;
-	};	
-		
+	};
+
 // LOADOUT: MORTAR GUNNER
 	case "mtrg":
 	{
@@ -622,8 +628,8 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		_unit addmagazines [_smokegrenade,1];
 		_unit addBackpack _MTR;
-	};	
-	
+	};
+
 // LOADOUT: MORTAR ASSISTANT GUNNER
 	case "mtrag":
 	{
@@ -633,15 +639,15 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,1];
 		_unit addWeapon "Binocular";
 		_unit addBackpack _MTRmount;
-	};			
+	};
 // LOADOUT: AIR VEHICLE PILOTS
 	case "p":
 	{
 		_unit addmagazines [_smgmag,4];
 		_unit addweapon _smg;
 		_unit addmagazines [_smokegrenade,2];
-	};		
-	
+	};
+
 // LOADOUT: ENGINEER
 	case "eng":
 	{
@@ -655,8 +661,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_APmine1,3];
 		_unit addmagazines [_APmine2,3];
 		["eng"] call _backpack;
-	};	
-		
+	};
+
 // LOADOUT: RIFLEMAN
 	case "r":
 	{
@@ -727,8 +733,8 @@ switch (_typeofUnit) do
 		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
 		_unit addMagazineCargoGlobal [_glmag, 4];
 		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
-	};	
-	
+	};
+
 // CARGO: TRUCK - room for 50 weapons and 200 cargo items
 	case "v_tr":
 	{
@@ -746,7 +752,7 @@ switch (_typeofUnit) do
 		_unit addMagazineCargoGlobal [_glmag, 12];
 		_unit addMagazineCargoGlobal [_glsmokewhite, 12];
 	};
-	
+
 // CARGO: IFV - room for 10 weapons and 100 cargo items
 	case "v_ifv":
 	{
@@ -764,15 +770,15 @@ switch (_typeofUnit) do
 		_unit addMagazineCargoGlobal [_glmag, 8];
 		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
 	};
-	
+
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)
    default
    {
 		_unit addmagazines [_riflemag,7];
 		_unit addweapon _rifle;
-		
+
 		_unit selectweapon primaryweapon _unit;
-				
+
 		if (true) exitwith {player globalchat format ["DEBUG (f\common\folk_assignGear.sqf): Unit = %1. Gear template %2 does not exist, used Rifleman instead.",_unit,_typeofunit]};
    };
 

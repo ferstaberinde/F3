@@ -50,7 +50,7 @@ f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
 
 // ====================================================================================
 
-// F3 - F3 Folk ARPS Fireteam Member Markers
+// F3 - ShackTactical Fireteam Member Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\common\f_setlocalFTMemberMarkers.sqf";
@@ -72,7 +72,7 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 
 // ====================================================================================
 
-// F3 - Multiplayer Ending Controller 
+// F3 - Multiplayer Ending Controller
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 f_endSelected = -1;
@@ -117,16 +117,15 @@ f_endSelected = -1;
 // F3 - Casualties Cap
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [side,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 // [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// BLUFOR > NATO, FIA
+// BLUFOR > BLUE
 // [BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// OPFOR > CSAT
+// OPFOR > RED
 // [OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// INDEPENDENT > AAF
+// INDEPENDENT > GREEN
 // [INDEPENDENT,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // ====================================================================================
@@ -134,13 +133,13 @@ f_endSelected = -1;
 // F3 - Casualties Cap (Advanced)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// BLUFOR > NATO, FIA
+// BLUFOR > BLUE
 // [BLUFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
-// OPFOR > CSAT
+// OPFOR > RED
 // [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
-// INDEPENDENT > AAF
+// INDEPENDENT > GREEN
 // [INDEPENDENT,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
 // ====================================================================================
@@ -186,6 +185,12 @@ f_endSelected = -1;
 
 // ====================================================================================
 
+// F3 - Tripwire action
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+// [[UnitName1,UnitName2],25,2,east] execVM "f\common\fa_tripwire_init.sqf";
+
+// ====================================================================================
 
 // F3 - Join Group Action
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)

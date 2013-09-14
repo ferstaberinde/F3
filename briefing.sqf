@@ -13,6 +13,7 @@
 
 private ["_unitfaction"];
 
+waitUntil {!isnil "f_var_debugMode"};
 
 // ====================================================================================
 
@@ -35,8 +36,8 @@ if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction 
 
 // ====================================================================================
 
-// BRIEFING: NATO
-// The following block of code executes only if the player is in a NATO slot; it 
+// BRIEFING: BLUFOR > BLUE
+// The following block of code executes only if the player is in a BLUE slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction == "BLU_F") exitwith {
@@ -52,8 +53,8 @@ if (_unitfaction == "BLU_F") exitwith {
 
 // ====================================================================================
 
-// BRIEFING: CSAT
-// The following block of code executes only if the player is in a CSAT slot; it 
+// BRIEFING: OPFOR > RED
+// The following block of code executes only if the player is in a RED slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction == "OPF_F") exitwith {
@@ -68,8 +69,8 @@ if (_unitfaction == "OPF_F") exitwith {
 };
 // ====================================================================================
 
-// BRIEFING: AAF
-// The following block of code executes only if the player is in a AAF
+// BRIEFING: INDEPENDENT > GREEN
+// The following block of code executes only if the player is in a GREEN
 // slot; it automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction == "IND_F") exitwith {
