@@ -1,13 +1,5 @@
 // ====================================================================================
 
-// F3 - Process ParamsArray
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT
-
-f_processParamsArray = [] execVM "f\common\f_processParamsArray.sqf";
-
-// ====================================================================================
-
 // F3 - Disable Saving and Auto Saving
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -51,10 +43,17 @@ f_script_setGroupIDs = [] execVM "f\common\folk_setGroupIDs.sqf";
 
 // ====================================================================================
 
-// F3 - ShackTactical Fireteam Member Markers
+// F3 - Buddy Team Colours
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\common\ShackTac_setlocalFTMemberMarkers.sqf";
+f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
+
+// ====================================================================================
+
+// F3 - Fireteam Member Markers
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[] execVM "f\common\f_setlocalFTMemberMarkers.sqf";
 
 // ====================================================================================
 
@@ -73,7 +72,7 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 
 // ====================================================================================
 
-// F3 - Multiplayer Ending Controller 
+// F3 - Multiplayer Ending Controller
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 f_endSelected = -1;
@@ -90,7 +89,7 @@ f_endSelected = -1;
 
 // ====================================================================================
 
-// F3 - Dynamic View Distance 
+// F3 - Dynamic View Distance
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // f_viewDistance_default = 1250;

@@ -107,7 +107,7 @@ if(!isnil "GrpRED_DT1") then {GrpRED_DT1 setGroupId ["Red DT1 -","GroupColor0"];
 
 if(!isnil "GrpRED_JIP") then {GrpRED_JIP setGroupId ["Red JIP -","GroupColor0"];};
 
-// ===================================================================================== 
+// =====================================================================================
 
 // GROUP IDs: INDEPEDENT > GREEN
 // Automatically assigns intelligible names to groups
@@ -135,9 +135,16 @@ if(!isnil "GrpGRN_MTR1") then {GrpGRN_MTR1 setGroupId ["Green MTR1 -","GroupColo
 if(!isnil "GrpGRN_HAT1") then {GrpGRN_HAT1 setGroupId ["Green GrpGRN_HAT1 -","GroupColor0"];};
 
 if(!isnil "GrpGRN_ENG1") then {GrpGRN_ENG1 setGroupId ["Green ENG1 -","GroupColor0"];};
+
 if(!isnil "GrpGRN_IFV1") then {GrpGRN_IFV1 setGroupId ["Green IFV1 -","GroupColor0"];};
 if(!isnil "GrpGRN_IFV2") then {GrpGRN_IFV2 setGroupId ["Green IFV2 -","GroupColor0"];};
 if(!isnil "GrpGRN_IFV3") then {GrpGRN_IFV3 setGroupId ["Green IFV3 -","GroupColor0"];};
+if(!isnil "GrpGRN_IFV4") then {GrpGRN_IFV4 setGroupId ["Green IFV4 -","GroupColor0"];};
+if(!isnil "GrpGRN_IFV5") then {GrpGRN_IFV5 setGroupId ["Green IFV5 -","GroupColor0"];};
+if(!isnil "GrpGRN_IFV6") then {GrpGRN_IFV6 setGroupId ["Green IFV6 -","GroupColor0"];};
+if(!isnil "GrpGRN_IFV7") then {GrpGRN_IFV7 setGroupId ["Green IFV7 -","GroupColor0"];};
+if(!isnil "GrpGRN_IFV8") then {GrpGRN_IFV8 setGroupId ["Green IFV8 -","GroupColor0"];};
+
 if(!isnil "GrpGRN_TNK1") then {GrpGRN_TNK1 setGroupId ["Green TNK1 -","GroupColor0"];};
 
 if(!isnil "GrpGRN_TH1") then {GrpGRN_TH1 setGroupId ["Green TH1 -","GroupColor0"];};
@@ -150,7 +157,7 @@ if(!isnil "GrpGRN_DT1") then {GrpGRN_DT1 setGroupId ["Green DT1 -","GroupColor0"
 
 if(!isnil "GrpGRN_JIP") then {GrpGRN_JIP setGroupId ["Green JIP -","GroupColor0"];};
 
-// ===================================================================================== 
+// =====================================================================================
 
 if (true) exitWith {};
 

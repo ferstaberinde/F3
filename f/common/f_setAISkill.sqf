@@ -15,12 +15,6 @@ private ["_param_AISkill_Friendly","_param_AISkill_Enemy","_units","_localUnits"
 
 // ====================================================================================
 
-// WAIT FOR PARAMSARRAY TO BE PROCESSED
-
-waitUntil {scriptDone f_processParamsArray};
-
-// ====================================================================================
-
 // WAIT FOR COMMON VARIABLES TO BE SET
 // Before executing this script, we wait for the script 'f_setCommonVars.sqf' to run:
 
