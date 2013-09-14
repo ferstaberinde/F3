@@ -34,11 +34,11 @@ if(!_isFireteam) exitWith {};
 {
 	if((["_AR", format ["%1", vehicle _x]] call BIS_fnc_inString) || (["_AAR", format ["%1", vehicle _x]] call BIS_fnc_inString)) then
 	{
-		_x assignTeam "RED";
+		_x assignTeam "BLUE";
 	}
 	else
 	{
-		_x assignTeam "BLUE";
+		_x assignTeam "RED";
 	};
 } foreach units (group _unit);
 

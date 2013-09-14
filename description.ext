@@ -7,7 +7,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 196;
+	maxPlayers = 320;
 };
 
 // ============================================================================================
@@ -110,8 +110,8 @@ class Params
 	class f_param_weather
 	{
 		title = "$STR_f_param_weather";
-		values[] = {0,1,2,3,4,5,6,7,8,9,10};
-		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option9,$STR_f_param_weather_Option10};
+		values[] = {0,1,2,3,4,5,9,10};
+		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option9,$STR_f_param_weather_Option10};
 		default = 0;
 		code = "f_param_weather = %1";
 	};

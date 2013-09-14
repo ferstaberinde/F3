@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 3-0-7     | DD MMM 2013 | Patch release - Various improvements (see change history).
+* 3-0-7     | 14 SEP 2013 | Patch release - Various improvements (see change history).
 * 3-0-6     | 20 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-5     | 17 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-4     | 08 AUG 2013 | Patch release - Various improvements (see change history).
@@ -216,11 +216,12 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-0-7 | DD MMM 2013
+3-0-7 | 14 SEP 2013
 
+* Changed default terrain to Altis.
 * Added Fireteam Member Markers component.
 * Added Buddy Team Colours component.
-* Enabled weather parameter in Mission Conditions Selector component.
+* Partially re-enabled weather parameter in Mission Conditions Selector component.
 * Expanded F3 Folk ARPS Platoons component:
  * INDEPENDENT platoon can now be helibourne or mechanised.
  * BLUFOR platoon now has 1 x tank.
