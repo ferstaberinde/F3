@@ -193,7 +193,7 @@ _unit addItem _firstaid;
 
 // The following code removes any pre-added NVGs
 
-if(_nvg in (assignedItems player)) then
+if(_nvg in (assignedItems _unit)) then
 {
 _unit unassignItem _nvg;
 _unit removeItem _nvg;
