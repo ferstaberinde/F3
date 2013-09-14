@@ -12,7 +12,7 @@ The ORBAT below is only accurate at mission start.<br />
 <br />
 ORBAT<br />";
 _groups = [];
-_hiddenGroups = [group F2_Precompile_East] + [group F2_Precompile_West];
+_hiddenGroups = [];
 
 {
 	// Add to ORBAT if side matches, group isn't already listed, and group has players
@@ -26,7 +26,8 @@ _groups = _groups - _hiddenGroups;
 
 // Loop through the group, print out group ID and leader name
 {
-	_orbatText = _orbatText + format["%1 %2", _x, name leader _x] + "<br />";
+	_mkrName = format ["mkr_%1",_x];
+	_orbatText = _orbatText + format["<marker name='%3'>%1</marker> %2", _x, name leader _x,_mkrname] + "<br />";
 } forEach _groups;
 
 // Insert final result into subsection ORBAT of section Notes

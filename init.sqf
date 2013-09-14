@@ -1,13 +1,5 @@
 // ====================================================================================
 
-// F3 - Process ParamsArray
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT
-
-f_processParamsArray = [] execVM "f\common\f_processParamsArray.sqf";
-
-// ====================================================================================
-
 // F3 - Disable Saving and Auto Saving
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -51,10 +43,17 @@ f_script_setGroupIDs = [] execVM "f\common\folk_setGroupIDs.sqf";
 
 // ====================================================================================
 
-// F3 - ShackTactical Fireteam Member Markers
+// F3 - Buddy Team Colours
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\common\ShackTac_setlocalFTMemberMarkers.sqf";
+f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
+
+// ====================================================================================
+
+// F3 - Fireteam Member Markers
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[] execVM "f\common\f_setlocalFTMemberMarkers.sqf";
 
 // ====================================================================================
 
@@ -73,18 +72,11 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 
 // ====================================================================================
 
-// F3 - Multiplayer Ending Controller 
+// F3 - Multiplayer Ending Controller
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 f_endSelected = -1;
 [] execVM "f\common\f_mpEndSetUp.sqf";
-
-// ====================================================================================
-
-// F3 - Kegetys Spectator Script
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-[] execVM "f\common\f_spect\specta_init.sqf";
 
 // ====================================================================================
 
@@ -97,7 +89,7 @@ f_endSelected = -1;
 
 // ====================================================================================
 
-// F3 - Dynamic View Distance 
+// F3 - Dynamic View Distance
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // f_viewDistance_default = 1250;
@@ -127,18 +119,28 @@ f_endSelected = -1;
 
 // [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// NATO
-//[[GrpNO_CO,GrpNO_DC,GrpNO_ASL,GrpNO_BSL,GrpNO_CSL,GrpNO_A1,GrpNO_A2,GrpNO_A3,GrpNO_B1,GrpNO_B2,GrpNO_B3,GrpNO_C1,GrpNO_C2,GrpNO_C3,GrpNO_MMG1,GrpNO_MAT1,GrpNO_ENG1,GrpNO_DT1,GrpNO_TH1,GrpNO_AH1],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// BLUFOR > BLUE
+// [BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// Iran
-//[[GrpIR_CO,GrpIR_DC,GrpIR_ASL,GrpIR_BSL,GrpIR_CSL,GrpIR_A1,GrpIR_A2,GrpIR_A3,GrpIR_B1,GrpIR_B2,GrpIR_B3,GrpIR_C1,GrpIR_C2,GrpIR_C3,GrpIR_MMG1,GrpIR_MAT1,GrpIR_ENG1,GrpIR_DT1,GrpIR_TH1,GrpIR_AH1],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// OPFOR > RED
+// [OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+
+// INDEPENDENT > GREEN
+// [INDEPENDENT,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // ====================================================================================
 
 // F3 - Casualties Cap (Advanced)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [[GroupName],100] execVM "f\server\f_casualtiesCapAdv.sqf";
+// BLUFOR > BLUE
+// [BLUFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
+
+// OPFOR > RED
+// [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
+
+// INDEPENDENT > GREEN
+// [INDEPENDENT,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
 // ====================================================================================
 
@@ -159,14 +161,6 @@ f_endSelected = -1;
 // f_isFriendlyToBLU_RES = 1;
 // f_isFriendlyToBLU_CIV = 1;
 // [] execVM "f\common\f_setAISkillAD.sqf";
-
-// ====================================================================================
-
-// F3 - Construction Interface (COIN) Presets
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// f_COINstopped = false;
-// [COINName,"UnitName",0,2500] execVM "f\common\f_COINpresets.sqf";
 
 // ====================================================================================
 

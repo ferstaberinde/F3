@@ -15,12 +15,6 @@ private ["_param_AISkill_BLUFOR","_param_AISkill_OPFOR","_units","_localUnits","
 
 // ====================================================================================
 
-// WAIT FOR PARAMSARRAY TO BE PROCESSED
-
-waitUntil {scriptDone f_processParamsArray};
-
-// ====================================================================================
-
 // WAIT FOR COMMON VARIABLES TO BE SET
 // Before executing this script, we wait for the script 'f_setCommonVars.sqf' to run:
 

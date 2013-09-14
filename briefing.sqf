@@ -13,6 +13,8 @@
 
 private ["_unitfaction"];
 
+waitUntil {!isnil "f_var_debugMode"};
+
 // ====================================================================================
 
 // DETECT PLAYER FACTION
@@ -24,9 +26,7 @@ _unitfaction = toLower (faction player);
 // If the unitfaction is different from the group leader's faction, the latters faction is used
 if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction = toLower (faction (leader group player))};
 
-// As PMC units are used as exchange medics and engineers, they are defaulted to the UN briefing.
-// Change "bis_un" to "bis_tk_gue" when using the TK Local Platoon
-if (_unitfaction == "pmc_baf") then {_unitfaction = "bis_un"}; 
+
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -36,13 +36,13 @@ if (_unitfaction == "pmc_baf") then {_unitfaction = "bis_un"};
 
 // ====================================================================================
 
-// BRIEFING: NATO
-// The following block of code executes only if the player is in a US slot; it 
+// BRIEFING: BLUFOR > BLUE
+// The following block of code executes only if the player is in a BLUE slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction == "BLU_F") exitwith {
 
-#include "f\common\f_briefing_nato.sqf"
+#include "f\common\f_briefing_blue.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -53,13 +53,29 @@ if (_unitfaction == "BLU_F") exitwith {
 
 // ====================================================================================
 
-// BRIEFING: IRAN
-// The following block of code executes only if the player is in a BRITISH ARMED FORCES
-// slot; it automatically includes a file which contains the appropriate briefing data.
+// BRIEFING: OPFOR > RED
+// The following block of code executes only if the player is in a RED slot; it
+// automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction == "OPF_F") exitwith {
 
-#include "f\common\f_briefing_iran.sqf"
+#include "f\common\f_briefing_red.sqf"
+
+// DEBUG
+	if (f_var_debugMode == 1) then
+	{
+	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
+	};
+};
+// ====================================================================================
+
+// BRIEFING: INDEPENDENT > GREEN
+// The following block of code executes only if the player is in a GREEN
+// slot; it automatically includes a file which contains the appropriate briefing data.
+
+if (_unitfaction == "IND_F") exitwith {
+
+#include "f\common\f_briefing_green.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -71,7 +87,7 @@ if (_unitfaction == "OPF_F") exitwith {
 // ====================================================================================
 
 // BRIEFING: CIVILIAN
-// The following block of code executes only if the player is in a BRITISH ARMED FORCES
+// The following block of code executes only if the player is in a CIVILIAN
 // slot; it automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction == "CIV_F") exitwith {
