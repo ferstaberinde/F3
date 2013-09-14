@@ -1,4 +1,4 @@
-// F3 - Folk Assign Gear Script - Green
+s// F3 - Folk Assign Gear Script - Green
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -195,7 +195,7 @@ _unit addItem _firstaid;
 
 // The following code removes any pre-added NVGs
 
-if(_nvg in (assignedItems player)) then
+if(_nvg in (assignedItems _unit)) then
 {
 _unit unassignItem _nvg;
 _unit removeItem _nvg;
