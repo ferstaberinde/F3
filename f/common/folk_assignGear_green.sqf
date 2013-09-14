@@ -1,4 +1,4 @@
-s// F3 - Folk Assign Gear Script - Green
+// F3 - Folk Assign Gear Script - Green
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
