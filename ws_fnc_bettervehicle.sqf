@@ -1,5 +1,5 @@
 // better vehicle behaviour function
-// v2 15.09.2013
+// v1 13.04.2013
 // By Wolfenswan: wolfenswanarps@gmail.com
 //
 // FEATURE

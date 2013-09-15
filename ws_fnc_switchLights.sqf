@@ -9,9 +9,9 @@
 // [switch,center,radius] call ws_fnc_switchLights;
 //
 // PARAMETERS
-// 1. Switch can be "ON" or "OFF"								| MANDATORY	
-// 2. Center can be markername, object or positional array		| MANDATORY	
-// 3. Radius has to be integer		| MANDATORY	
+// 1. Switch can be "ON" or "OFF"								| MANDATORY
+// 2. Center can be markername, object or positional array		| MANDATORY
+// 3. Radius has to be integer		| MANDATORY
 //
 // EXAMPLES
 // ["OFF",church,1000] call ws_fnc_switchLights; - turn off all lights in 1k radius around the object named "church"
@@ -19,6 +19,8 @@
 //
 // TODO
 // make sure all light classes are implemented
+
+if !(isServer) exitWith {};
 
 _types = ["Land_PowLines_WoodL", "Land_PowLines_ConcL", "Land_lampa_ind_zebr", "Land_lampa_sidl_3", "Land_lampa_vysoka", "Land_lampa_ind", "Land_lampa_ind_b", "Land_lampa_sidl"];
 

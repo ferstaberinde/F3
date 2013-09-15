@@ -15,9 +15,9 @@
 // [created vehicle,group of vehicle,arguments]
 //
 // PARAMETERS
-// 1. position as array [x,y,z]													| MANDATORY	
-// 2. Side as west,east,resistance or civilian									| MANDATORY	
-// 3. legit vehicleclass														| MANDATORY	
+// 1. position as array [x,y,z]													| MANDATORY
+// 2. Side as west,east,resistance or civilian									| MANDATORY
+// 3. legit vehicleclass														| MANDATORY
 // 4. Array of strings to define additional vehicle settings:					| OPTIONAL - can be empty, order does not matter
 //	 . "improved" - improved vehicle behaviour as per ws_fnc_betterVehicle
 //	 . "disableTIEquipment" - disables thermal imaging optics
@@ -35,6 +35,8 @@
 // EXAMPLES
 // [getPos base,west,"HMMWV_M2"] call ws_fnc_createVehicle;
 // [getPos t2,east,"BMP3",["lockturret","clearcargo","improved"],[5,["RU_Soldier_2","RU_Soldier_1"],true],["COMBAT","RED"],{sleep 5;_this select 0 setDamage 1}] call ws_fnc_createVehicle;
+
+if !(isServer) exitWith {};
 
 private ["_debug",
 "_count","_pos","_side","_type","_modarray","_behaviour",
@@ -80,10 +82,10 @@ if (_count > 6) then {_code = _this select 6};
 {[_x,["BOOL"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_load];
 {[_x,["SCALAR"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_guards,_pos select 0,_pos select 1];
 {[_x,["STRING","CODE"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_code];
-  
+
 
 _grp = createGroup _side;
-  
+
 //Creating the vehicle
 _mod = "NONE";
 if ("flying" in _modarray) then {_mod = "FLY"};
@@ -112,22 +114,22 @@ _grp setCombatMode (_behaviour select 1);
 //Create the infantry nearby. Load them up if flag is set, delete all units that don't fit in cargo
 if (_guards > 0) then {
 	_grp = createGroup _side;
-	
+
 	if !(_load) then {
 		for "_x" from 1 to _guards do {
-		_unit = _grp createUnit [_guardclasses call ws_fnc_selectRandom, getPos _veh, [], 2, "NONE"];	
+		_unit = _grp createUnit [_guardclasses call ws_fnc_selectRandom, getPos _veh, [], 2, "NONE"];
 		};
 	} else
 	{
 		_cargospace = getNumber(configfile >> "CfgVehicles" >> _type >> "transportSoldier");
 		for "_x" from 1 to _cargospace do {
 		if (_x > _guards) exitWith {};
-		_unit = _grp createUnit [_guardclasses call ws_fnc_selectRandom, getPos _veh, [], 2, "NONE"];	
+		_unit = _grp createUnit [_guardclasses call ws_fnc_selectRandom, getPos _veh, [], 2, "NONE"];
 		_unit assignAsCargo _veh; _unit moveInCargo _veh;
 		};
 			if (_guards > _cargospace) then {
 				_grp = createGroup _side;
-				
+
 				for "_x" from 1 to (_guards - _cargospace) do {
 				_unit = _grp createUnit [_guardclasses call ws_fnc_selectRandom, getPos _veh, [], 2, "NONE"];
 				};
@@ -162,23 +164,23 @@ _veh setDir (random 360);
 //Debug stuff
 if (_debug) then {
 	player globalchat format ["DEBUG: ws_createVehicle. Vehicle created. _veh:%1, side: %2, modificators: %3",_veh,_side, _modarray];
-	
+
 	_mkr = createMarker [format ["_veh_%1",_veh], _pos];
 	_mkr setMarkerType "n_armor";
 	_mkr setMarkerColor "ColorGreen";
 	_mkr setMarkerText format ["DBG:Veh %1",_veh];
 	_mkr setMarkerSize [0.5,0.5];
-	
+
 	[_veh,_mkr] spawn {
 		  while {alive (_this select 0)} do {
 		 sleep 5;
 		 (_this select 1) setMarkerPos (getPos (_this select 0));
 		 };
-		 
+
 	 (_this select 1) setMarkerColor "ColorRed";
 	 (_this select 1) setMarkerText format ["DBG:Grp %1 dead",_this select 0];
 	};
-};	
+};
 
 //Script outputs the generated vehicle
 [_veh,_vehgrp,_this]

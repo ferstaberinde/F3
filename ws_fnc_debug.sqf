@@ -16,9 +16,11 @@
 //Radio trigger INDIA: run code from clipboard
 //Radio trigger JULIET: recompiles ws_fnc
 
+if (isNil "ws_debug") then {ws_debug = true}; //Set this to true for debug markers and messages from all functions
+
 ws_fnc_typecheck = {
 private ["_variable","_check_array","_scriptname","_typenames","_false_types","_error"];
-	
+
 	_variable = nil;
 	_variable = _this select 0;
 	_check_array = _this select 1;
@@ -26,13 +28,13 @@ private ["_variable","_check_array","_scriptname","_typenames","_false_types","_
 	_typenames = ["ARRAY","BOOL","CODE","CONFIG","CONTROL","DISPLAY","GROUP","LOCATION","OBJECT","SCALAR","SCRIPT","SIDE","STRING","TEXT"]; //All possible typenames. http://community.bistudio.com/wiki/typeName
 	_false_types = _typenames - _check_array;
 	_error = false;
-	
+
 	if (isNil {_variable}) then {
 	player sidechat format ["ws_fnc_typecheck: ERROR. _variable %1 parsed by %2 is NIL when it should be in %3 !",_variable,_scriptname,_check_array];
 	diag_log format ["ws_fnc_typecheck: ERROR. _variable %1 parsed by %2 is NIL when it should be in %3 !",_variable,_scriptname,_check_array];
 	_error = true;
 	};
-	
+
 	{
 	if (typename _variable == toUpper _x) then {
 	player sidechat format ["ws_fnc_typecheck: ERROR. _variable %1 parsed by %2 is %3 when it should be of %4 !",_variable,_scriptname,format ["%1",_x],_check_array];
@@ -40,7 +42,7 @@ private ["_variable","_check_array","_scriptname","_typenames","_false_types","_
 	_error = true;
 	};
 	} forEach _false_types;
-	
+
 	_error
 };
 
@@ -98,23 +100,32 @@ onMapSingleClick "player setPos _pos";
 ws_dbg_trg=createTrigger["EmptyDetector",[0,0,0]];
 ws_dbg_trg setTriggerArea[0,0,0,false];
 ws_dbg_trg setTriggerActivation["GOLF","PRESENT",true];
-ws_dbg_trg setTriggerStatements["this", "call ws_fnc_countUnits", ""]; 
+ws_dbg_trg setTriggerStatements["this", "call ws_fnc_countUnits", ""];
 ws_dbg_trg setTriggerText "Count units";
 
 ws_dbg_trg=createTrigger["EmptyDetector",[0,0,0]];
 ws_dbg_trg setTriggerArea[0,0,0,false];
 ws_dbg_trg setTriggerActivation["HOTEL","PRESENT",true];
-ws_dbg_trg setTriggerStatements["this", "call ws_fnc_copyPos", ""]; 
+ws_dbg_trg setTriggerStatements["this", "call ws_fnc_copyPos", ""];
 ws_dbg_trg setTriggerText "Copy player position";
 
 ws_dbg_trg=createTrigger["EmptyDetector",[0,0,0]];
 ws_dbg_trg setTriggerArea[0,0,0,false];
 ws_dbg_trg setTriggerActivation["INDIA","PRESENT",true];
-ws_dbg_trg setTriggerStatements["this", "call ws_fnc_clipboardcode", ""]; 
+ws_dbg_trg setTriggerStatements["this", "call ws_fnc_clipboardcode", ""];
 ws_dbg_trg setTriggerText "execute code from clipboard";
 
-ws_dbg_trg2=createTrigger["EmptyDetector",[0,0,0]];
-ws_dbg_trg2 setTriggerArea[0,0,0,false];
-ws_dbg_trg2 setTriggerActivation["JULIET","PRESENT",true];
-ws_dbg_trg2 setTriggerStatements["this", "nul = [] execVM ""ws_fnc\ws_fnc_init.sqf"";", ""];
-ws_dbg_trg2 setTriggerText "recompile ws_fnc";
+
+_game = [] call ws_fnc_gameCheck;
+
+ws_dbg_trg=createTrigger["EmptyDetector",[0,0,0]];
+ws_dbg_trg setTriggerArea[0,0,0,false];
+ws_dbg_trg setTriggerActivation["JULIET","PRESENT",true];
+if (_game == "a2") then {
+ws_dbg_trg setTriggerStatements["this", "ws_fnc_compiled = false;nul = [] execVM ""ws_fnc\ws_fnc_init.sqf"";", ""];
+} else {
+ws_dbg_trg setTriggerStatements["this", "ws_fnc_compiled = false;call BIS_fnc_Recompile;", ""];
+};
+ws_dbg_trg setTriggerText "recompile all ws_fnc";
+
+ws_fnc_compiled = true; publicVariable "ws_fnc_compiled";

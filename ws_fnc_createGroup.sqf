@@ -15,13 +15,15 @@
 // [created group,arguments]
 //
 // PARAMETERS
-// 1. position as array [x,y,z]														| MANDATORY	
-// 2. Side as west,east,resistance or civilian										| MANDATORY	
+// 1. position as array [x,y,z]														| MANDATORY
+// 2. Side as west,east,resistance or civilian										| MANDATORY
 // 3 The size of the group (any integer)											| MANDATORY
 // 4.1 Array of classes that are exactly ONCE in the group							| MANDATORY
 // 4.2 Array of classes that fill up the group after all forced classes are used	| MANDATORY
 // 5. Array to define default behaviour and combatmode 								| OPTIONAL - default is ["AWARE","YELLOW"], can be empty
 // 6. code that is executed after the vehicle is spawned							| OPTIONAL - executed as [_grp,_this] spawn _code, code has to be string or code
+
+if !(isServer) exitWith {};
 
 private ["_debug","_count",
 "_faction","_spawn","_waypoint","_classes_array","_commonclasses","_forcedclasses","_rareclasses","_rarechance","_respawns",
@@ -62,10 +64,10 @@ _unit = _grp createUnit [_forcedclasses select 0,_pos,[],0,"NONE"];
 
 for "_x" from 2 to (_size) do {
   if (_x <= (count _forcedclasses)) then {
-  _spos = [getPos leader _grp,5,false,false,false] call ws_fnc_getPos; 
+  _spos = [getPos leader _grp,5,false,false,false] call ws_fnc_getPos;
   _unit = _grp createUnit [_forcedclasses select (_x - 1),_spos,[],1,"NONE"];
   } else {
-	 _spos = [getPos leader _grp,5,false,false,false] call ws_fnc_getPos; 
+	 _spos = [getPos leader _grp,5,false,false,false] call ws_fnc_getPos;
 	 _unit = _grp createUnit [_commonclasses call ws_fnc_selectrandom,_spos,[],1,"NONE"];
 	 };
 };
@@ -91,7 +93,7 @@ player globalchat format ["DEBUG: ws_fnc_createGroup done. _grp:%1 of size: %2 a
   _mkr setMarkerColor "ColorBlue";
   _mkr setMarkerText format ["DBG:Grp %1",_grp];
   _mkr setMarkerSize [0.5,0.5];
-  
+
   [_grp,_mkr] spawn {
 	 _check = count (units (_this select 0));
 	 while {_check > 0} do {
@@ -99,7 +101,7 @@ player globalchat format ["DEBUG: ws_fnc_createGroup done. _grp:%1 of size: %2 a
 		 sleep 5;
 		 (_this select 1) setMarkerPos (getPos (leader (_this select 0)));
 		 };
-		 
+
 	 (_this select 1) setMarkerColor "ColorRed";
 	 (_this select 1) setMarkerText format ["DBG:Grp %1 dead",_this select 0];
    };
@@ -116,7 +118,7 @@ if (_respawns > 0) then {
 	  [_grp,[_pos,_side,[_size,_respawns],[_forcedclasses,_commonclasses],_behaviour,_code]] spawn {
 	  _grp = _this select 0;
 	  _args = _this select 1;
-	  
+
 	  _check = count (units _grp);
 	  while {_check > 0} do {
 		 _check = {alive _x} count (units _grp);

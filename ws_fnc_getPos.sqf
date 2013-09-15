@@ -17,7 +17,7 @@
 // Array: [x,y,z]
 //
 // PARAMETERS
-// 1. location can be String (Markername), Array [x,y,z] or Objectname		| MANDATORY	
+// 1. location can be String (Markername), Array [x,y,z] or Objectname		| MANDATORY
 // 2. radius has to be int > 0 and defines the radius around the position 	| OPTIONAL - default is 0
 // 3. minimal distance from center, has to be int > 0 and > radius		 	| OPTIONAL - default is 0
 // 4. road (bool) forces unit to be placed on road 							| OPTIONAL - default is false
@@ -58,7 +58,7 @@ if (_count > 5) then {_water = _this select 5;};
 
 _dir = random 360;
 
-//Interpreting variables   
+//Interpreting variables
 //Creating the array for the spawnpos
 
 //Getting a good position from the parsed values
@@ -76,20 +76,20 @@ _pos set [2,0];
 //Fault checks
 //Checking the variables we have against what we should have
 {[_x,["ARRAY"],"ws_fnc_getPos"] call ws_fnc_typecheck;}  forEach [_pos];
-{[_x,["SCALAR"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_posradius,_mindis,_dir,_posX,_posY];  
+{[_x,["SCALAR"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_posradius,_mindis,_dir,_posX,_posY];
 {[_x,["BOOL"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_road,_water];
 
 if (_posradius > 0) then {
 	_newX = _posX + ((random _posradius) * sin _dir);
 	_newY = _posY + ((random _posradius) * cos _dir);
 	_pos = [_newX,_newY,0];
-	
+
 	if (_mindis > 0) then {
 		while {_pos distance _posloc < _mindis} do {
 			_newX = _posX + ((random _posradius) * sin _dir);
 			_newY = _posY + ((random _posradius) * cos _dir);
 			_pos = [_newX,_newY,0];
-		};	
+		};
 	};
 };
 

@@ -1,4 +1,4 @@
-// TaskDefend Function
+// WS_fnc_taskDefend
 // v1 (14.04.2013)
 // By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 // Thanks to Rommel's CBA_fnc_taskDefend and Binesi's improved BIS_fnc_taskDefend
@@ -16,7 +16,7 @@
 // [group,pos,radius,bool,bool,bool] call ws_fnc_taskDefend
 //
 // PARAMETERS
-// 1. name of group															| MANDATORY	
+// 1. name of group															| MANDATORY
 // 2. position. can be marker, object or [x,y,z]						 	| MANDATORY
 // 3. radius of the area where statics/buildings will be occupied			| MANDATORY
 // 4. Whether to man statics or not											| OPTIONAL - default is TRUE
@@ -24,17 +24,27 @@
 // 6. Whether to garrison civilian buildings								| OPTIONAL - default is FALSE
 //
 
-private ["_debug","_count",
+private ["_debug","_game","_count",
 "_group","_newGroup","_pos","_radius","_guns","_garrison","_civil",
 "_buildings","_vehicles","_milbuildings","_staticarray","_badarray","_milarray","_units","_units2","_static"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug}; //Debug mode. If ws_debug is globally defined it overrides _debug
 
-//Customizable variables
+_game = [] call ws_fnc_gameCheck;
+
+//Customizable variables ARMA 2
+if (_game == "a2") then {
 // Military buildings that are garrisoned before civilian buildings
 _milarray = ["Land_Fort_Watchtower","Land_Fort_Watchtower_EP1","Land_fortified_nest_small","Land_fortified_nest_small_EP1","Land_fortified_nest_big","Land_fortified_nest_big_EP1","Land_Mil_Guardhouse_EP1","Land_Mil_ControlTower","Land_Mil_ControlTower_EP1"];
 // Buildings NEVER to garrison
 _badarray = ["Land_Misc_Cargo1Ao","Land_Misc_Cargo1Bo","Land_Misc_Cargo1Bo_military","Land_vysilac_FM2","Land_vysilac_FM","Land_Ind_MalyKomin"];
+} else {
+//Customizable variables ARMA 3
+// Military buildings that are garrisoned before civilian buildings
+_milarray = [];
+// Buildings NEVER to garrison
+_badarray = [];
+};
 
 //Declaring variables
 _count = count _this;
@@ -59,9 +69,13 @@ _units2 = _units - [leader _group];
 
 //Create an array containing all vehicles in the area that are uncrewed and have a free gunner seat
 {
-	if ((_x emptyPositions "gunner") > 0 && !(locked _x) && ((count crew _x) == 0)) then 
+	//BI changed the value returned by locked in A3. See http://community.bistudio.com/wiki/locked
+	_locked = false;
+	if (_game == "a2") then {_locked = locked _x} else {if (locked _x >= 2) then {_locked = true};};
+
+	if ((_x emptyPositions "gunner") > 0 && !(_locked) && ((count crew _x) == 0)) then
 	{
-		_staticarray = _staticarray + [_x];    
+		_staticarray = _staticarray + [_x];
 	};
 } forEach _vehicles;
 
@@ -69,7 +83,7 @@ _units2 = _units - [leader _group];
 //Create a subarray containing all military type buildings
 {
 	if (typeof _x in _milarray) then {_milbuildings = _milbuildings + [_x];};
-	if ((str(_x buildingpos 5) == "[0,0,0]") || (typeof _x in _badarray) || (typeof _x in _milarray) || (damage _x >= 0.5)) then {_buildings = _buildings - [_x]};
+	if ((str(_x buildingpos 3) == "[0,0,0]") || (typeof _x in _badarray) || (typeof _x in _milarray) || (damage _x >= 0.5)) then {_buildings = _buildings - [_x]};
 } foreach _buildings;
 
 //Man the statics

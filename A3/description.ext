@@ -1,0 +1,36 @@
+onLoadName = "WS Function Library";
+onLoadMission = "Testing, Development and Playground";
+author = "Wolfenswan [FA]";
+
+enableDebugConsole = 2;
+allowFunctionsRecompile = 1;
+
+class CfgFunctions
+{
+	class WS
+	{
+		class Debug
+		{
+		class debug {file = "ws_fnc\ws_fnc_debug.sqf";preInit = 1;};
+		};
+		class tools
+		{
+			class selectRandom {file = "ws_fnc\ws_fnc_selectRandom.sqf"};
+			class gameCheck {file = "ws_fnc\ws_fnc_gamecheck.sqf"};
+			class getPos {file = "ws_fnc\ws_fnc_getPos.sqf";};
+			class getBPos {file = "ws_fnc\ws_fnc_getBPos.sqf";};
+			class addWaypoint {file = "ws_fnc\ws_fnc_addWaypoint.sqf";};
+			class switchLights {file = "ws_fnc\ws_fnc_switchLights.sqf";};
+			class attachLight {file = "ws_fnc\ws_fnc_attachLight.sqf";};
+		};
+		class AI
+		{
+			class createGroup {file = "ws_fnc\ws_fnc_createGroup.sqf";};
+			class createVehicle {file = "ws_fnc\ws_fnc_createVehicle.sqf";};
+			class betterVehicle {file = "ws_fnc\ws_fnc_bettervehicle.sqf";};
+			class enterBuilding {file = "ws_fnc\ws_fnc_enterBuilding.sqf";};
+			class taskDefend {file = "ws_fnc\ws_fnc_taskDefend.sqf";};
+		};
+
+	};
+};
