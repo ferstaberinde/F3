@@ -1,6 +1,6 @@
 // better vehicle behaviour function
-// v1 13.04.2013
-// By Wolfenswan: wolfenswanarps@gmail.com 
+// v2 15.09.2013
+// By Wolfenswan: wolfenswanarps@gmail.com
 //
 // FEATURE
 // Vehicle crews will only bail when the vehicle damage is over x (by default 0.8) or the guns are destroyed
@@ -55,21 +55,38 @@ switch (typename _side) do {
 _handle = _x getVariable "ws_better_vehicle";
 if (isNil "_handle") then {
 	if _debug then {player sidechat format ["ws_bettervehicles DBG: Improving: %1",_x]};
-	[_x,_alloweddamage,_debug] spawn {
+
+	/*[_x,_alloweddamage,_debug] spawn {
 		private ["_unit","_alloweddamage"];
 		_unit = _this select 0;
 		_unit allowCrewInImmobile true;
-		_unit setvariable ["ws_better_vehicle",1];	
+		_unit setvariable ["ws_better_vehicle",1];
 		_alloweddamage = _this select 1;
-		while {damage _unit < _alloweddamage && canFire _unit} do 
+		while {damage _unit < _alloweddamage && canFire _unit} do
 		{
 			sleep 2.5;
 		};
 		_unit allowCrewInImmobile false;
 		{_x action ["eject", _unit];} forEach crew _unit;
 
-		if (_this select 2) then {player sidechat format ["ws_bettervehicles DBG: %1 has taken enough damage or can't fire any more. crew bailing",_unit]};	
-	   };
+		if (_this select 2) then {player sidechat format ["ws_bettervehicles DBG: %1 has taken enough damage or can't fire any more. crew bailing",_unit]};
+	   };*/
+
+	_unit = _x;
+	_unit allowCrewInImmobile true;
+	_unit setvariable ["ws_better_vehicle",_alloweddamage];
+
+	_unit addEventHandler [
+		"HandleDamage",
+	{
+	 _unit = _this select 0;
+
+	 if (damage _unit > (_unit getVariable "ws_better_vehicle") || !(canFire _unit)) then {
+ 		_unit allowCrewInImmobile false;
+ 		{_x action ["eject", _unit];} forEach crew _unit;
+ 		if (ws_debug) then {player sidechat format ["ws_bettervehicles DBG: %1 has taken enough damage or can't fire any more. crew bailing",_unit]};
+ 	};
+	}];
    };
 } forEach _vehicles;
 
