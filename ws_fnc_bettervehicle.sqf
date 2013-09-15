@@ -1,5 +1,5 @@
 // better vehicle behaviour function
-// v2 15.09.2013
+// v1 13.04.2013
 // By Wolfenswan: wolfenswanarps@gmail.com
 //
 // FEATURE
@@ -77,16 +77,21 @@ if (isNil "_handle") then {
 	_unit setvariable ["ws_better_vehicle",_alloweddamage];
 
 	_unit addEventHandler [
-		"HandleDamage",
+		"Hit",
 	{
 	 _unit = _this select 0;
+	 _damage = getDammage _unit;
 
-	 if (damage _unit > (_unit getVariable "ws_better_vehicle") || !(canFire _unit)) then {
+	 hint format ["%1",_damage];
+
+	 if (_damage > (_unit getVariable "ws_better_vehicle") || !(canFire _unit)) then {
  		_unit allowCrewInImmobile false;
  		{_x action ["eject", _unit];} forEach crew _unit;
+ 		_unit removeEventHandler ["Hit",0];
  		if (ws_debug) then {player sidechat format ["ws_bettervehicles DBG: %1 has taken enough damage or can't fire any more. crew bailing",_unit]};
  	};
 	}];
+
    };
 } forEach _vehicles;
 
