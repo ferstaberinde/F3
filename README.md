@@ -220,6 +220,7 @@ Version | Date
 3-0-8 | XX XXX 2013
 
 * Added BIS debug console for logged-in admins.
+* Added Safe Start component.
 * Fixed minor bug in F3 Folk ARPS Platoons component.
 
 3-0-7 | 14 SEP 2013
