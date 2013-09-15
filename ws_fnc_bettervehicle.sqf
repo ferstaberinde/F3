@@ -1,5 +1,5 @@
 // better vehicle behaviour function
-// v1 13.04.2013
+// v2 15.09.2013
 // By Wolfenswan: wolfenswanarps@gmail.com
 //
 // FEATURE
@@ -81,8 +81,6 @@ if (isNil "_handle") then {
 	{
 	 _unit = _this select 0;
 	 _damage = getDammage _unit;
-
-	 hint format ["%1",_damage];
 
 	 if (_damage > (_unit getVariable "ws_better_vehicle") || !(canFire _unit)) then {
  		_unit allowCrewInImmobile false;
