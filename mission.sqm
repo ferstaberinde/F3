@@ -1116,7 +1116,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitRED_B1_FTL";
-					init="GrpRED_B1 = group this; nul = [""ftl"",this] call f_fnc_BssignGear;";
+					init="GrpRED_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
 					description="Red Bravo 1 Fireteam Leader";
 				};
 				class Item1
