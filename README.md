@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-7
+* Version: 3-0-8
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-0-8     | XX XXX 2013 | Patch release - Various improvements (see change history).
 * 3-0-7     | 14 SEP 2013 | Patch release - Various improvements (see change history).
 * 3-0-6     | 20 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-5     | 17 AUG 2013 | Patch release - Various improvements (see change history).
@@ -215,6 +216,11 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-0-8 | XX XXX 2013
+
+* Added BIS debug console for logged-in admins.
+* Fixed minor bug in F3 Folk ARPS Platoons component.
 
 3-0-7 | 14 SEP 2013
 
