@@ -16,7 +16,7 @@ switch (_switch) do
 		
 		//Make playable units invincible, clientside
 		{
-			_x allowdamage true;
+			_x allowdamage false;
 		} foreach playableunits;
 	};
 	
