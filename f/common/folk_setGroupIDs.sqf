@@ -1,8 +1,8 @@
 // F3 - Set Group IDs
-// CCSATits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// GROUP IDs: NATOFOR > NATO
+// GROUP IDs: BLUFOR > NATO
 // Automatically assigns intelligible names to groups
 if(!isnil "GrpNATO_CO") then {GrpNATO_CO setGroupId ["NATO CO -","GroupColor0"];};
 if(!isnil "GrpNATO_DC") then {GrpNATO_DC setGroupId ["NATO DC -","GroupColor0"];};
