@@ -1,37 +1,59 @@
-//Don't use this file if you're initializing the scripts through the description.ext
+// ws_fnc_init
+// By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
+//
+/*
+FEATURE
+Compile all WS_fnc for Arma 2
 
-ws_debug = true; //Set this to true for debug markers and messages from all functions
+USAGE (ARMA 2)
+Use Call compile preprocess "ws_fnc\ws_fnc_init.sqf" from either the init.sqf or a unit init.
+
+NOTE (ARMA 3)
+This file only controls the debug for ws_fnc in ARMA 3. It is not necessary to call it if the description.ext is used.
+*/
+
+//DEBUG
+ //Set this to true for debug markers and messages from all functions
+_debug = true;
 
 //Let's check if the functions are already compiled
 if (isNil "ws_fnc_compiled") then {ws_fnc_compiled = false} else {exitWith {}};
 
-//Let's check whether we're running A3 or A2:OA/CO
-ws_fnc_gameCheck = compile preprocessFiles "ws_fnc\ws_fnc_gamecheck.sqf";
-
-_game = [] call ws_fnc_gamecheck.sqf;
-if (_game == "a2") then {
-	compile preprocessFileLineNumbers "ws_fnc\BIS\bis_fnc_param";
-	compile preprocessFileLineNumbers "ws_fnc\BIS\bis_fnc_error";
-
-	if (isnil "bis_fnc_init") then {_fm = createGroup sideLogic;_fm createUnit ["FunctionsManager", [0,0,0], [],0,"NONE"];};
+//Set the global debug flag according to user settings
+if (isNil "ws_debug") then {
+	ws_debug = _debug;
+	publicVariable "ws_debug";
 };
 
-//Functions for all clients
-ws_fnc_selectRandom = compile preprocessfile "ws_fnc\ws_fnc_selectRandom.sqf";
-call compile preprocessfile "ws_fnc\ws_fnc_debug.sqf";
+ws_fnc_gameCheck = call compile preprocessFile "ws_fnc\tools\ws_fnc_gamecheck.sqf";
 
-if !(isServer) exitWith {};
+if !(ws_game_a3) then {
 
-//Serverside functions
-ws_fnc_enterBuilding = compile preprocessfile "ws_fnc\ws_fnc_enterBuildings.sqf";
-ws_fnc_taskDefend = compile preprocessfile "ws_fnc\ws_fnc_taskDefend.sqf";
-ws_fnc_getPos = compile preprocessfile "ws_fnc\ws_fnc_getPos.sqf";
-ws_fnc_getBPos = compile preprocessfile "ws_fnc\ws_fnc_getBPos.sqf";
-ws_fnc_addWaypoint = compile preprocessfile "ws_fnc\ws_fnc_addWaypoint.sqf";
-ws_fnc_taskDefend = compile preprocessfile "ws_fnc\ws_fnc_taskDefend.sqf";
-ws_fnc_bettervehicle = compile preprocessfile "ws_fnc\ws_fnc_betterVehicle.sqf";
-ws_fnc_createGroup = compile preprocessfile "ws_fnc\ws_fnc_createGroup.sqf";
-ws_fnc_createVehicle = compile preprocessfile "ws_fnc\ws_fnc_createVehicle.sqf";
-ws_fnc_switchLights = compile preprocessfile "ws_fnc\ws_fnc_switchLights.sqf";
+	if (isnil "bis_fnc_init") then {_fm = createGroup sideLogic;_fm createUnit ["FunctionsManager", [0,0,0], [],0,"NONE"];}
+
+	//Debug Functions
+	ws_fnc_debugText = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";
+	ws_fnc_clipBoardCode = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";
+	ws_fnc_countUnits = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";
+	ws_fnc_debugText = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";
+	ws_fnc_typecheck = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";
+	call compile preprocessFile "ws_fnc\dbg\ws_fnc_debugTriggers.sqf";
+
+	//Tool Functions
+	ws_fnc_selectRandom = compile preprocessfile "ws_fnc\tools\ws_fnc_selectRandom.sqf";
+	ws_fnc_getPos = compile preprocessfile "ws_fnc\tools\ws_fnc_getPos.sqf";
+	ws_fnc_getBPos = compile preprocessfile "ws_fnc\tools\ws_fnc_getBPos.sqf";
+	ws_fnc_switchLights = compile preprocessfile "ws_fnc\tools\ws_fnc_switchLights.sqf";
+	ws_fnc_attachLight = compile preprocessfile "ws_fnc\tools\ws_fnc_attachLight.sqf";
+
+	//AI Functions
+	ws_fnc_enterBuilding = compile preprocessfile "ws_fnc\AI\ws_fnc_enterBuildings.sqf";
+	ws_fnc_taskDefend = compile preprocessfile "ws_fnc\AI\ws_fnc_taskDefend.sqf";
+	ws_fnc_taskCrew = compile preprocessfile "ws_fnc\AI\ws_fnc_taskCrew.sqf";
+	ws_fnc_createGroup = compile preprocessfile "ws_fnc\AI\ws_fnc_createGroup.sqf";
+	ws_fnc_createVehicle = compile preprocessfile "ws_fnc\AI\ws_fnc_createVehicle.sqf";
+	ws_fnc_addWaypoint = compile preprocessfile "ws_fnc\AI\ws_fnc_addWaypoint.sqf";
+	ws_fnc_bettervehicle = compile preprocessfile "ws_fnc\AI\ws_fnc_betterVehicle.sqf";
+};
 
 ws_fnc_compiled = true; publicVariable "ws_fnc_compiled";
