@@ -119,13 +119,13 @@ f_endSelected = -1;
 
 // [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// BLUFOR > BLUE
+// BLUFOR > NATO
 // [BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// OPFOR > RED
+// OPFOR > CSAT
 // [OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// INDEPENDENT > GREEN
+// INDEPENDENT > AAF
 // [INDEPENDENT,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // ====================================================================================
