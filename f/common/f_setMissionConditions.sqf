@@ -153,7 +153,7 @@ switch (_weather) do
 	case 9:
 	{
 		_MissionOvercast = 0.25;
-		_MissionRain = 0.01;
+		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0;
@@ -166,7 +166,7 @@ switch (_weather) do
 	case 10:
 	{
 		_MissionOvercast = 0.8;
-		_MissionRain = 0.01;
+		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0;
@@ -247,6 +247,18 @@ switch (_timeOfDay) do
 		setDate [2007, 5, 11, 0, 0];
 	};
 };
+// ====================================================================================
+
+// reset the values here, to make sure nothing freaky happens ,like rain.
+0 setOvercast _MissionOvercast;
+0 setFog _MissionFog;
+0 setRain _MissionRain;
+0 setRainbow _MissionRainbow;
+0 setWindStr  _MissionWindStr;
+0 setWindForce _MissionWindGusts;
+0 setWaves _MissionWaves;
+
+// ====================================================================================
 
 // DEBUG
  if (f_var_debugMode == 1) then
