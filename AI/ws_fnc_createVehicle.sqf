@@ -1,4 +1,4 @@
-// Vehicle spawn function
+// ws_fnc_createVehicle
 // v1 (13.04.2013)
 // By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 //
@@ -24,7 +24,7 @@
 //	 . "clearcargo" - clears the vehicles cargo space
 //   . "flying"	- vehicle is spawned as flying
 //   . "lockall","lockturret","lockdriver","lockcargo" - locks the entire vehicle or the corresponding seats
-//   . "v_car","v_ifv","v_tr" - F2 only. Loads the vehicle with the faction-specific cargo
+//   . "v_car","v_ifv","v_tr" - F2/F3 only. Loads the vehicle with the faction-specific cargo
 // 5. Array to define units guarding and loaded in the vehicle:					| OPTIONAL - can be empty, default is no guards
 //	1. number of guards (int > 0)
 //  2. array with classnames of possible guard units
@@ -35,8 +35,6 @@
 // EXAMPLES
 // [getPos base,west,"HMMWV_M2"] call ws_fnc_createVehicle;
 // [getPos t2,east,"BMP3",["lockturret","clearcargo","improved"],[5,["RU_Soldier_2","RU_Soldier_1"],true],["COMBAT","RED"],{sleep 5;_this select 0 setDamage 1}] call ws_fnc_createVehicle;
-
-if !(isServer) exitWith {};
 
 private ["_debug",
 "_count","_pos","_side","_type","_modarray","_behaviour",

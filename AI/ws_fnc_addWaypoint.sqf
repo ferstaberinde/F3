@@ -15,16 +15,16 @@
 // Created waypoint
 //
 // PARAMETERS
-// 1. name of group															| MANDATORY	
+// 1. name of group															| MANDATORY
 // 2. position. can be marker, object or [x,y,z]						 	| MANDATORY
 // 3. array for waypoint type and modifier									| OPTIONAL - default is ["move",0], can be empty
-// 	3.1. the waypoint type, can be:											
+// 	3.1. the waypoint type, can be:
 //		a. any of http://community.bistudio.com/wiki/setWaypointType
 //  	b. "patrol" - the group moves to the position and starts a randomized patrol
 //  	c. "defend" - the group moves to the position and mans all statics, guarding the area
 //  	d. "garrison" - the group moves to the position, mans statics and takes position inside buildings, prioritizing bunkers and other military structures over civilian buildings
-// 	3.2. modifier - the waypoint radius or radius to patrol/defend	
-//  3.3  completition radius		
+// 	3.2. modifier - the waypoint radius or radius to patrol/defend
+//  3.3  completition radius
 // 5. array defining waypoint behaviour, combatmode and speed				| OPTIONAL - default is ["AWARE","YELLOW","NORMAL], can be empty
 // 6. code that is executed on waypoint completition						| OPTIONAL - must be string! (e.g. "hint 'waypoint completed'")
 //
@@ -51,23 +51,23 @@ _modifier = 0;
 _compl = 0;
 _mode = "move";
 _marray = [];
-_behaviour = ["AWARE","YELLOW","NORMAL"];					
+_behaviour = ["AWARE","YELLOW","NORMAL"];
 _code = "";
 
-//Interpreting variables   
+//Interpreting variables
 //Setting up the array for the movepos
 if (_count > 2) then {_marray = _this select 2;};
 if (count _marray > 0) then {_mode = _marray select 0;};if (count _marray > 1) then {_modifier = _marray select 1;};
 if (count _marray > 2) then {_compl = _marray select 2;};
 if (_count > 3) then {_behaviour = _this select 3;if (count _behaviour < 3) then {_behaviour = ["AWARE","YELLOW","NORMAL"];};};
 if (_count > 4) then {_code = _this select 4};
-   
+
 //Fault checks
 //Checking the variables we have enough against what we should have
-[_grp,["GROUP"],format ["ws_fnc_createWaypoint: %1",_x]] call ws_fnc_typecheck;
-[_mode,["STRING"],format ["ws_fnc_createWaypoint: %1",_x]] call ws_fnc_typecheck;
-[_modifier,["SCALAR"],format ["ws_fnc_createWaypoint: %1",_x]] call ws_fnc_typecheck;
-[_code,["STRING"],format ["ws_fnc_createWaypoint: %1",_x]] call ws_fnc_typecheck;
+[_grp,["GROUP"],format ["ws_fnc_createWaypoint: %1",_grp]] call ws_fnc_typecheck;
+[_mode,["STRING"],format ["ws_fnc_createWaypoint: %1",_mode]] call ws_fnc_typecheck;
+[_modifier,["SCALAR"],format ["ws_fnc_createWaypoint: %1",_modifier]] call ws_fnc_typecheck;
+[_code,["STRING"],format ["ws_fnc_createWaypoint: %1",_code]] call ws_fnc_typecheck;
 {[_x,["ARRAY"],format ["ws_fnc_createWaypoint: %1",_x]] call ws_fnc_typecheck;}  forEach [_pos,_behaviour,_marray];
 
 if !(_mode in _modes) exitWith {["ws_fnc_addWaypoint ERROR: ",_mode," is not a legal waypoint mode"] call ws_fnc_debugText;};
@@ -82,7 +82,7 @@ _wp setWaypointSpeed (_behaviour select 2);
 _wp setWaypointCompletionRadius _compl;
 
 _wp = _grp addWaypoint [_pos,0];
-switch (_mode) do {   
+switch (_mode) do {
 	case "sad": {
 		_grp setCombatMode "RED";
 		_wp setWaypointPosition [_pos,_modifier];
@@ -94,17 +94,17 @@ switch (_mode) do {
 		_wp setWaypointType "MOVE";
 		_wp setWaypointStatements ["true", format["[group this,getPos this,%2,true,false,false] call ws_fnc_taskDefend;%1",_code,_modifier]];
 	};
-	
+
 	case "garrison": {
 		_wp setWaypointType "MOVE";
 		_wp setWaypointStatements ["true", format["[group this,getPos this,%2,true,true,true] call ws_fnc_taskDefend;%1",_code,_modifier]];
 	};
-	
+
 	case "patrol": {
 		_wp setWaypointType "MOVE";
 		_wp setWaypointStatements ["true", format["[group this,getPos this,%2] call BIS_fnc_taskPatrol;%1",_code,_modifier]];
 	};
-	
+
 	default {
 		_wp setWaypointPosition [_pos,_modifier];
 		_wp setWaypointType _mode;
@@ -116,12 +116,12 @@ switch (_mode) do {
 
 if (_debug) then {
 player globalchat format ["DEBUG: ws_fnc_createWaypoint. Waypoint %1 for _grp%2 created",_wp,_grp];
-   
-  _mkr = createMarker [format ["%1-WP",_wp],waypointPosition _wp]; 
+
+  _mkr = createMarker [format ["%1-WP",_wp],waypointPosition _wp];
   _mkr setMarkerType "mil_dot";
   _mkr setMarkerColor "ColorBlue";
   _mkr setMarkerText format ["DBG:Grp_%1-WP-%2",_grp,_mode];
 
 };
-   
+
 _wp

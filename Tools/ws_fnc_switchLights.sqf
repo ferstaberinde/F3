@@ -22,7 +22,14 @@
 
 if !(isServer) exitWith {};
 
-_types = ["Land_PowLines_WoodL", "Land_PowLines_ConcL", "Land_lampa_ind_zebr", "Land_lampa_sidl_3", "Land_lampa_vysoka", "Land_lampa_ind", "Land_lampa_ind_b", "Land_lampa_sidl"];
+_game = [] call ws_fnc_gameCheck;
+
+if (_game == "a2") then {
+//ARMA 2 lamps
+_types = ["Land_PowLines_WoodL", "Land_PowLines_ConcL", "Land_lampa_ind_zebr", "Land_lampa_sidl_3", "Land_lampa_vysoka", "Land_lampa_ind", "Land_lampa_ind_b", "Land_lampa_sidl"];} else {
+//ARMA 3 lamps
+_types = [];
+};
 
 _switch = _this select 0;
 _center = _this select 1;
@@ -32,11 +39,11 @@ _radius = _this select 2;
 [_radius,["SCALAR"],"ws_fnc_getPos"] call ws_fnc_typecheck;
 
 
-_pos = [_center,0,false,true,true] call ws_fnc_getPos;
+_pos = [_center,0,[0,360],false,true,true] call ws_fnc_getPos;
 
 for [{_i=0},{_i < (count _types)},{_i=_i+1}] do
 	{
 		_lamps = _pos nearObjects [_types select _i, _radius];
-		sleep 0.5;
+		sleep 0.1;
 		{_x switchLight _switch} forEach _lamps;
 	};

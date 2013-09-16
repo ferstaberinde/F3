@@ -1,9 +1,9 @@
-// Group and wave spawn function
+// WS_fnc_createGroup
 // v1 (13.04.2013)
 // By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 //
 // FEATURE
-// Spawns a group of the desired side, respawnable
+// Spawns a group of the desired side
 //
 // USAGE
 // Minimal:
@@ -15,15 +15,14 @@
 // [created group,arguments]
 //
 // PARAMETERS
-// 1. position as array [x,y,z]														| MANDATORY
-// 2. Side as west,east,resistance or civilian										| MANDATORY
-// 3 The size of the group (any integer)											| MANDATORY
-// 4.1 Array of classes that are exactly ONCE in the group							| MANDATORY
-// 4.2 Array of classes that fill up the group after all forced classes are used	| MANDATORY
-// 5. Array to define default behaviour and combatmode 								| OPTIONAL - default is ["AWARE","YELLOW"], can be empty
-// 6. code that is executed after the vehicle is spawned							| OPTIONAL - executed as [_grp,_this] spawn _code, code has to be string or code
-
-if !(isServer) exitWith {};
+// 1. position as array [x,y,z]									| MANDATORY
+// 2. Side as west,east,resistance or civilian							| MANDATORY
+// 3 The size of the group (any integer)								| MANDATORY
+// 4. Array containing two sub arrays:								| MANDATORY
+// 	4.1 Array of classes that are exactly ONCE in the group					| MANDATORY
+// 	4.2 Array of classes that fill up the group after all forced classes are used		| MANDATORY
+// 5. Array to define default behaviour and combatmode 					| OPTIONAL - default is ["AWARE","YELLOW"], can be empty
+// 6. code that is executed after the group is spawned						| OPTIONAL - executed as [_grp,_this] spawn _code, code has to be string or    // code
 
 private ["_debug","_count",
 "_faction","_spawn","_waypoint","_classes_array","_commonclasses","_forcedclasses","_rareclasses","_rarechance","_respawns",
@@ -64,10 +63,10 @@ _unit = _grp createUnit [_forcedclasses select 0,_pos,[],0,"NONE"];
 
 for "_x" from 2 to (_size) do {
   if (_x <= (count _forcedclasses)) then {
-  _spos = [getPos leader _grp,5,false,false,false] call ws_fnc_getPos;
+  _spos = [getPos leader _grp,5] call ws_fnc_getPos;
   _unit = _grp createUnit [_forcedclasses select (_x - 1),_spos,[],1,"NONE"];
   } else {
-	 _spos = [getPos leader _grp,5,false,false,false] call ws_fnc_getPos;
+	 _spos = [getPos leader _grp,5] call ws_fnc_getPos;
 	 _unit = _grp createUnit [_commonclasses call ws_fnc_selectrandom,_spos,[],1,"NONE"];
 	 };
 };
