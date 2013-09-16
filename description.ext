@@ -44,6 +44,7 @@ class CfgFunctions
 		class A3
 		{
 			class broadcast {file = "ws_fnc\A3\ws_fnc_broadcast.sqf";};
+			class showFPS {file = "ws_fnc\A3\ws_fnc_showFPS.sqf";};
 		};
 
 	};
