@@ -59,7 +59,7 @@ if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _u
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "BLU_F") then {
-#include "folk_assignGear_blue.sqf"
+#include "folk_assignGear_NATO.sqf"
 };
 
 // ====================================================================================
@@ -69,7 +69,7 @@ if (_faction == "BLU_F") then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "OPF_F") then {
-#include "folk_assignGear_red.sqf"
+#include "folk_assignGear_CSAT.sqf"
 };
 
 // ====================================================================================
@@ -79,7 +79,7 @@ if (_faction == "OPF_F") then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if(_faction == "IND_F") then {
-#include "folk_assignGear_green.sqf";
+#include "folk_assignGear_AAF.sqf";
 };
 
 // ====================================================================================
