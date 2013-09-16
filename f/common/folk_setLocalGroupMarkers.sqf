@@ -1,5 +1,5 @@
 // F3 - Folk Group Markers
-// CCSATits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
 // JIP CHECK
@@ -38,10 +38,10 @@ switch (_unitfaction) do
 
 // ====================================================================================
 
-// MARKERS: NATOFOR > NATO
+// MARKERS: BLUFOR > NATO
 // Markers seen by players in NATO slots.
 
-	case "NATO_f":
+	case "blu_f":
 	{
 		["GrpNATO_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
 		["GrpNATO_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
