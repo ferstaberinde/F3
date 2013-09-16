@@ -1,7 +1,6 @@
-Ws_Fnc - Function library for ArmA2:CO and ArmA3
+Function library for ArmA2:CO and ArmA3
 ==
 Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
-==
 
 1. INTRODUCTION
 This is a collection of various functions that I've worked on the last weeks to streamline my mission making. 
