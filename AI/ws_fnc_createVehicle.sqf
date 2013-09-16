@@ -12,11 +12,11 @@
 // [pos,side,"vehicleclass",["option1","option2"],[no of guards,["guardclasses"],loaded],["BEHAVIOUR","COMBATMODE"],{code}] call ws_fnc_createVehicle
 //
 // RETURNS
-// [created vehicle,group of vehicle,arguments]
+// [created vehicle,group of vehicle,initially parsed arguments]
 //
 // PARAMETERS
-// 1. position as array [x,y,z]													| MANDATORY
-// 2. Side as west,east,resistance or civilian									| MANDATORY
+// 1. position, can be array, object or marker											| MANDATORY
+// 2. Side as west,east,resistance or civilian OR existing group		 							| MANDATORY
 // 3. legit vehicleclass														| MANDATORY
 // 4. Array of strings to define additional vehicle settings:					| OPTIONAL - can be empty, order does not matter
 //	 . "improved" - improved vehicle behaviour as per ws_fnc_betterVehicle
@@ -25,16 +25,18 @@
 //   . "flying"	- vehicle is spawned as flying
 //   . "lockall","lockturret","lockdriver","lockcargo" - locks the entire vehicle or the corresponding seats
 //   . "v_car","v_ifv","v_tr" - F2/F3 only. Loads the vehicle with the faction-specific cargo
-// 5. Array to define units guarding and loaded in the vehicle:					| OPTIONAL - can be empty, default is no guards
-//	1. number of guards (int > 0)
-//  2. array with classnames of possible guard units
-//  3. bool wether guards are loaded into the vehicle							| If more guards than cargo seats are spawned the units outside are put into their own group next to the vehicle
-// 6. Array to define default behaviour and combatmode 							| OPTIONAL - default is ["AWARE","YELLOW"], can be empty
-// 7. code that is executed after the vehicle is spawned						| OPTIONAL - executed as [_veh,_vehgrp,_this] spawn _code; Code has to be string or code
+// 5. Array to define units guarding and loaded in the vehicle:		| OPTIONAL - can be empty, default is no guards
+//	5.1. number of guards (int > 0)
+//  5.2. array with classnames of possible guard units
+//  5.3. bool wether guards are loaded into the vehicle			| If more guards than cargo seats are spawned the units outside are put into their own group next to the vehicle
+// 6. Array to define default behaviour and combatmode 		| OPTIONAL - default is ["AWARE","YELLOW"], can be empty
+// 7. code that is executed after the vehicle is spawned			| OPTIONAL - executed as [_veh,_vehgrp,_this] spawn _code; Code has to be string or code
 //
-// EXAMPLES
-// [getPos base,west,"HMMWV_M2"] call ws_fnc_createVehicle;
-// [getPos t2,east,"BMP3",["lockturret","clearcargo","improved"],[5,["RU_Soldier_2","RU_Soldier_1"],true],["COMBAT","RED"],{sleep 5;_this select 0 setDamage 1}] call ws_fnc_createVehicle;
+/* EXAMPLES
+ ["base",resistance,"HMMWV_M2"] call ws_fnc_createVehicle; - spawn a M2 HMMWV at marker base belonging to side independent
+
+[getPos t2,GrpOpfHQ,"BMP3",["lockturret","clearcargo"],[5,["RU_Soldier_2","RU_Soldier_1"],true],["COMBAT","RED"]] call ws_fnc_createVehicle; - Spawn a BMP3 at object t2 that belongs to the group GrpOPFHQ, has a locked turret and empty cargo and 5 soldiers loaded inside. It is in combat-mode and opens fire on will.
+*/
 
 private ["_debug",
 "_count","_pos","_side","_type","_modarray","_behaviour",
@@ -45,7 +47,7 @@ _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};  //Debug mode. 
 
 //Declare variables
 _count = count _this;
-_pos = _this select 0;
+_pos = [(_this select 0)] call ws_fnc_getPos;
 _side = _this select 1;
 _type = _this select 2;
 _modarray = [];
@@ -74,15 +76,16 @@ if (_count > 6) then {_code = _this select 6};
 
 //Fault checks
 //Checking the variables we have enough against what we should have
-{[_x,["SIDE"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_side];
+{[_x,["SIDE","GROUP"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_side];
 {[_x,["STRING"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_type];
 {[_x,["ARRAY"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_pos,_behaviour,_guardarray,_guardclasses,_modarray];
 {[_x,["BOOL"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_load];
 {[_x,["SCALAR"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_guards,_pos select 0,_pos select 1];
 {[_x,["STRING","CODE"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_code];
 
-
-_grp = createGroup _side;
+if (typename _side == "SIDE") then {
+_grp = createGroup _side;} else
+{_grp = _side};
 
 //Creating the vehicle
 _mod = "NONE";
@@ -109,7 +112,7 @@ _vehgrp = _grp;
 _grp setBehaviour (_behaviour select 0);
 _grp setCombatMode (_behaviour select 1);
 
-//Create the infantry nearby. Load them up if flag is set, delete all units that don't fit in cargo
+//Create the infantry nearby. Load them up if flag is set, put units that don't fit in cargo in new group
 if (_guards > 0) then {
 	_grp = createGroup _side;
 
@@ -136,23 +139,23 @@ if (_guards > 0) then {
 };
 
 // Set the extra options for the vehicle
-for "_x" from 0 to (count _modarray - 1) do {
-switch (_modarray select _x) do {
-	case "improved": {if (canfire _veh) then {[_veh,0.8] call ws_fnc_bettervehicle;};};
-	case "clearcargo": {clearWeaponCargoGlobal _veh;clearMagazineCargoGlobal _veh;};
-	case "lockall": {_veh lock true;};
-	case "lockdriver": {_veh lockDriver true;};
-	case "lockcargo": {_veh lockCargo true;};
-	case "lockturret": {_veh lockTurret [[0],true];};
-	case "allowcrewinimmobile": {_veh allowcrewinimmobile true;};
-	case "v_ifv": {[_veh,"v_ifv"] call f_fnc_assignGear;};
-	case "v_tr": {[_veh,"v_tr"] call f_fnc_assignGear;};
-	case "v_car": {[_veh,"v_car"] call f_fnc_assignGear;};
-	case "flying": {};
-	case "disableTIEquipment": {_veh disableTIEquipment true};
-	default {["ws_fnc_createVehicle: ",_modarray select _x," is not a valid input for the _modarray!"] call ws_fnc_debugText;}
+{
+	switch (_modarray select _forEachIndex) do {
+		case "improved": {if (canfire _veh) then {[_veh,0.8] call ws_fnc_bettervehicle;};};
+		case "clearcargo": {clearWeaponCargoGlobal _veh;clearMagazineCargoGlobal _veh;};
+		case "lockall": {_veh lock true;};
+		case "lockdriver": {_veh lockDriver true;};
+		case "lockcargo": {_veh lockCargo true;};
+		case "lockturret": {_veh lockTurret [[0],true];};
+		case "allowcrewinimmobile": {_veh allowcrewinimmobile true;};
+		case "v_ifv": {[_veh,"v_ifv"] call f_fnc_assignGear;};
+		case "v_tr": {[_veh,"v_tr"] call f_fnc_assignGear;};
+		case "v_car": {[_veh,"v_car"] call f_fnc_assignGear;};
+		case "flying": {};
+		case "disableTIEquipment": {_veh disableTIEquipment true};
+		default {["ws_fnc_createVehicle: ",(_modarray select _forEachIndex)," is not a valid input for the _modarray!"] call ws_fnc_debugText;}
 	};
-};
+} forEach _modarray;
 
 _veh setDir (random 360);
 

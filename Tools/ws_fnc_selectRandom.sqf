@@ -11,7 +11,7 @@ RETURNS
 random selection
 */
 
+[_this,["ARRAY"],format ["ws_fnc_selectRandom ERROR: %1",_this]] call ws_fnc_typecheck;
 _selection = _this select (floor (random (count _this)));
-[_selection,["ARRAY"],format ["ws_fnc_selectRandom: %1",_selection]] call ws_fnc_typecheck;
 
 _selection

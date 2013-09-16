@@ -17,7 +17,8 @@ This file only controls the debug for ws_fnc in ARMA 3. It is not necessary to c
 _debug = true;
 
 //Let's check if the functions are already compiled
-if (isNil "ws_fnc_compiled") then {ws_fnc_compiled = false} else {exitWith {}};
+if (isNil "ws_fnc_compiled") then {ws_fnc_compiled = false};
+if (ws_fnc_compiled) exitWith {};
 
 //Set the global debug flag according to user settings
 if (isNil "ws_debug") then {
@@ -29,7 +30,7 @@ ws_fnc_gameCheck = call compile preprocessFile "ws_fnc\tools\ws_fnc_gamecheck.sq
 
 if !(ws_game_a3) then {
 
-	if (isnil "bis_fnc_init") then {_fm = createGroup sideLogic;_fm createUnit ["FunctionsManager", [0,0,0], [],0,"NONE"];}
+	if (isnil "bis_fnc_init") then {_fm = createGroup sideLogic;_fm createUnit ["FunctionsManager", [0,0,0], [],0,"NONE"];};
 
 	//Debug Functions
 	ws_fnc_debugText = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";

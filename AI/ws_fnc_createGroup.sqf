@@ -3,7 +3,7 @@
 // By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 //
 // FEATURE
-// Spawns a group of the desired side
+// Spawns an infantry group of the desired side
 //
 // USAGE
 // Minimal:
@@ -106,27 +106,5 @@ player globalchat format ["DEBUG: ws_fnc_createGroup done. _grp:%1 of size: %2 a
    };
 };
 
-//OBSOLETE
-//
-//Every 5 seconds we'll get a headcount of the group and if it's zero, a new group with the same conditions will spawn
-//To make this work we have to spawn a script run in parallel, as we can't use sleep in call space (where this function is run)
-//and don't need to check every frame, which a while loop without sleep does
-/*
-if (_respawns > 0) then {
-  _respawns = _respawns - 1;
-	  [_grp,[_pos,_side,[_size,_respawns],[_forcedclasses,_commonclasses],_behaviour,_code]] spawn {
-	  _grp = _this select 0;
-	  _args = _this select 1;
-
-	  _check = count (units _grp);
-	  while {_check > 0} do {
-		 _check = {alive _x} count (units _grp);
-		 sleep 5;
-	  };
-	  _args call ws_fnc_createGroup;
-	  };
-};
-*/
-
-//Output the created group
+//Output the created group and parameters
 [_grp,_this]

@@ -35,8 +35,8 @@ ws_dbg_trg=createTrigger["EmptyDetector",[0,0,0]];
 ws_dbg_trg setTriggerArea[0,0,0,false];
 ws_dbg_trg setTriggerActivation["JULIET","PRESENT",true];
 if !(ws_game_a3) then {
-ws_dbg_trg setTriggerStatements["this", "ws_fnc_compiled = false;nul = [] execVM ""ws_fnc\ws_fnc_init.sqf"";", ""];
+ws_dbg_trg setTriggerStatements["this", "ws_fnc_compiled = false;ws_fnc_compiled = false;publicVariable ""ws_fnc_compiled"";nul = [] execVM ""ws_fnc\ws_fnc_init.sqf"";", ""];
 } else {
-ws_dbg_trg setTriggerStatements["this", "ws_fnc_compiled = false;call BIS_fnc_Recompile;", ""];
+ws_dbg_trg setTriggerStatements["this", "ws_fnc_compiled = false;publicVariable ""ws_fnc_compiled"";[] call BIS_fnc_Recompile;", ""];
 };
 ws_dbg_trg setTriggerText "recompile all ws_fnc";

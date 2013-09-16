@@ -10,7 +10,7 @@ if !(_debug) exitWith {};
 _string1= _this select 0;
 _variables = _this select 1;
 _string2 = _this select 2;
-_text = _string1 + format ["%1",_variables] + _string2;
+_text = format ["%1: ",date] + _string1 + format [" %1 ",_variables] + _string2;
 
 player groupchat _text;
 diag_log _text;

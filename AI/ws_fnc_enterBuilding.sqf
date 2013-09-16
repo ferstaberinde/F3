@@ -12,6 +12,7 @@ _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
 _units = _this select 0;
 _barray = _this select 1;
 _treshold = _this select 2;
+
 if (typename _barray != "ARRAY") then {_barray = [_this select 1]};
 
 while {count _units != 0 && count _barray != 0} do {
