@@ -11,7 +11,7 @@
 // Minimal:
 // [location] call ws_fnc_getPos;
 // Full:
-// [location,radius (int), road (bool), building allowed (bool), water allowed (bool)] call ws_fnc_getPos;
+// [location,radius (int), [minDistance,maxDistance],[minAngle,maxAngle],road (bool), building allowed (bool), water allowed (bool)] call ws_fnc_getPos;
 //
 // OUTPUT
 // Array: [x,y,z]
@@ -53,7 +53,7 @@ _water = false;
 if (_count > 1) then {_posradius = _this select 1;};
 if (_count > 2) then {_mindis = _this select 2;}; if (_mindis > _posradius) then {_mindis = _posradius * 2};
 if (_count > 3) then {_dir = random (((_this select 3) select 0) + ((_this select 3) select 1))};
-if (_count > 4) then {_road = _this select 3;};
+if (_count > 4) then {_road = _this select 4;};
 if (_count > 5) then {_building = _this select 4;};
 if (_count > 6) then {_water = _this select 5;};
 
