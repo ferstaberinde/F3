@@ -40,6 +40,7 @@ class CfgFunctions
 			class taskDefend {file = "ws_fnc\AI\ws_fnc_taskDefend.sqf";};
 			class taskCrew {file = "ws_fnc\AI\ws_fnc_taskCrew.sqf";};
 			class addWaypoint {file = "ws_fnc\AI\ws_fnc_addWaypoint.sqf";};
+			class setAIMode {file = "ws_fnc\AI\ws_fnc_setAIMode.sqf";};
 		};
 		class A3
 		{

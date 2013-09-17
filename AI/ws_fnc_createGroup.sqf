@@ -9,7 +9,7 @@
 // Minimal:
 // [position,side,size,[["forcedclasses"],["commonclasses"]] call ws_fnc_createGroup;
 // Full:
-// [position,side,size,[["forcedclasses"],["commonclasses"]],["BEHAVIOUR","COMBATMODE"],{code}] call ws_fnc_createGroup;
+// [position,side,size,[["forcedclasses"],["commonclasses"]],{code}] call ws_fnc_createGroup;
 //
 // RETURNS
 // [created group,arguments]
@@ -21,8 +21,7 @@
 // 4. Array containing two sub arrays:								| MANDATORY
 // 	4.1 Array of classes that are exactly ONCE in the group					| MANDATORY
 // 	4.2 Array of classes that fill up the group after all forced classes are used		| MANDATORY
-// 5. Array to define default behaviour and combatmode 					| OPTIONAL - default is ["AWARE","YELLOW"], can be empty
-// 6. code that is executed after the group is spawned						| OPTIONAL - executed as [_grp,_this] spawn _code, code has to be string or    // code
+// 5. code that is executed after the group is spawned						| OPTIONAL - executed as [_grp,_this] spawn _code, code has to be string or    // code
 
 private ["_debug","_count",
 "_faction","_spawn","_waypoint","_classes_array","_commonclasses","_forcedclasses","_rareclasses","_rarechance","_respawns",
@@ -38,19 +37,17 @@ _size = _this select 2 ;
 _forcedclasses = (_this select 3) select 0;
 _commonclasses = (_this select 3) select 1;
 
-_behaviour = ["AWARE","YELLOW"];
 _code = {};
 
 //Optional parameters parsed with the call
-if (_count > 4) then {_behaviour = _this select 4;if (count _behaviour < 2) then {_behaviour = ["AWARE","YELLOW"];};};
-if (_count > 5) then {_code = _this select 5;};
+if (_count > 4) then {_code = _this select 4;};
 
 ["ws_fnc_createGroup DBG: running with: ",_this,""] call ws_fnc_debugText;
 
 //Fault checks
 //Checking the variables we have enough against what we should have
 {[_x,["SIDE"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_side];
-{[_x,["ARRAY"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_commonclasses,_forcedclasses,_behaviour,_pos];
+{[_x,["ARRAY"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_commonclasses,_forcedclasses,_pos];
 {[_x,["SCALAR"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_size];
 {[_x,["STRING","CODE"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_code];
 
@@ -76,8 +73,7 @@ for "_x" from 2 to (_size) do {
 [_x] joinSilent _grp;
 } forEach units _grp;
 
-_grp setBehaviour (_behaviour select 0);
-_grp setCombatMode (_behaviour select 1);
+[_grp,"AWARE","YELLOW"] call ws_fnc_setAIMode;
 
 //After the spawn is done execute code
 [_grp,_this] spawn _code;

@@ -55,6 +55,7 @@ if !(ws_game_a3) then {
 	ws_fnc_createVehicle = compile preprocessfile "ws_fnc\AI\ws_fnc_createVehicle.sqf";
 	ws_fnc_addWaypoint = compile preprocessfile "ws_fnc\AI\ws_fnc_addWaypoint.sqf";
 	ws_fnc_bettervehicle = compile preprocessfile "ws_fnc\AI\ws_fnc_betterVehicle.sqf";
+	ws_fnc_setAIMode = compile preprocessfile "ws_fnc\AI\ws_fnc_setAIMode.sqf";
 };
 
 ws_fnc_compiled = true; publicVariable "ws_fnc_compiled";

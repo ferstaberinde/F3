@@ -16,7 +16,7 @@ SETUP
 Unzip the archive to your mission root folder. You should now have a ws_fnc folder with various subfolders inside.
 
 ArmA 2:
-[] call compile preProcess "ws_fnc\ws_fnc_init.sqf" from either your init.sqf or a unit init field.
+[] call compile preProcessFile "ws_fnc\ws_fnc_init.sqf" from either your init.sqf or a unit init field.
 You can delete the description.ext that is inside ws_fnc\
 
 ArmA 3:

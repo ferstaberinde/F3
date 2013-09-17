@@ -29,13 +29,12 @@
 //	5.1. number of guards (int > 0)
 //  5.2. array with classnames of possible guard units
 //  5.3. bool wether guards are loaded into the vehicle			| If more guards than cargo seats are spawned the units outside are put into their own group next to the vehicle
-// 6. Array to define default behaviour and combatmode 		| OPTIONAL - default is ["AWARE","YELLOW"], can be empty
-// 7. code that is executed after the vehicle is spawned			| OPTIONAL - executed as [_veh,_vehgrp,_this] spawn _code; Code has to be string or code
+// 6. code that is executed after the vehicle is spawned			| OPTIONAL - executed as [_veh,_vehgrp,_this] spawn _code; Code has to be string or code
 //
 /* EXAMPLES
  ["base",resistance,"HMMWV_M2"] call ws_fnc_createVehicle; - spawn a M2 HMMWV at marker base belonging to side independent
 
-[getPos t2,GrpOpfHQ,"BMP3",["lockturret","clearcargo"],[5,["RU_Soldier_2","RU_Soldier_1"],true],["COMBAT","RED"]] call ws_fnc_createVehicle; - Spawn a BMP3 at object t2 that belongs to the group GrpOPFHQ, has a locked turret and empty cargo and 5 soldiers loaded inside. It is in combat-mode and opens fire on will.
+[getPos t2,GrpOpfHQ,"BMP3",["lockturret","clearcargo"],[5,["RU_Soldier_2","RU_Soldier_1"],true]] call ws_fnc_createVehicle; - Spawn a BMP3 at object t2 that belongs to the group GrpOPFHQ, has a locked turret and empty cargo and 5 soldiers loaded inside.
 */
 
 private ["_debug",
@@ -53,7 +52,7 @@ _type = _this select 2;
 _modarray = [];
 
 //The default behaviour
-_behaviour = ["AWARE","YELLOW"];
+//_behaviour = ["AWARE","YELLOW"];
 
 _guardarray = [];
 _guards = 0;
@@ -71,14 +70,13 @@ if (_count > 4) then {
 	_load = _guardarray select 2;	//if troops are loaded in
 	};
 };
-if (_count > 5) then {_behaviour = _this select 5;if (count _behaviour < 2) then {_behaviour = ["AWARE","YELLOW"];};};
-if (_count > 6) then {_code = _this select 6};
+if (_count > 5) then {_code = _this select 5};
 
 //Fault checks
 //Checking the variables we have enough against what we should have
 {[_x,["SIDE","GROUP"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_side];
 {[_x,["STRING"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_type];
-{[_x,["ARRAY"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_pos,_behaviour,_guardarray,_guardclasses,_modarray];
+{[_x,["ARRAY"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_pos,_guardarray,_guardclasses,_modarray];
 {[_x,["BOOL"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_load];
 {[_x,["SCALAR"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_guards,_pos select 0,_pos select 1];
 {[_x,["STRING","CODE"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_code];
@@ -109,8 +107,7 @@ _crewman =_grp createUnit [_crew, _pos, [], 0, "NONE"]; _crewman assignAsDriver 
 
 _vehgrp = _grp;
 
-_grp setBehaviour (_behaviour select 0);
-_grp setCombatMode (_behaviour select 1);
+[_grp,"AWARE","YELLOW"] call ws_fnc_setAIMode;
 
 //Create the infantry nearby. Load them up if flag is set, put units that don't fit in cargo in new group
 if (_guards > 0) then {
