@@ -17,6 +17,6 @@ ARMA 3 only
 
 private ["_time"];
 
-_time = = [_this,0,60,["SCALAR"]] call BIS_fnc_Param;
+_time = [_this,0,60,["SCALAR"]] call BIS_fnc_Param;
 
 [_time,[format ["%1",name player]]] call BIS_fnc_FPS;
