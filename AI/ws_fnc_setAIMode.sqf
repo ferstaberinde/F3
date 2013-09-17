@@ -13,15 +13,26 @@ USAGE
 PARAMETERS
 1. Group to be set
 2. Combat mode, Behaviour and/or formation to be set (all strings, order does not matter)
+
+EXAMPLES
+[Group1,"LINE"] call ws_fnc_setAIMode;
+[Group2,"COMBAT","ECH LEFT","RED"] call ws_fnc_setAIMode;
+
+Accepted Strings:
+"COLUMN" "STAG COLUMN" "WEDGE" "ECH LEFT" "ECH RIGHT" "VEE" "LINE" "FILE" "DIAMOND"
+
+"CARELESS" "SAFE" "AWARE" "COMBAT" "STEALTH".
+
+"BLUE"  "GREEN"  "WHITE"  "YELLOW" "RED"
 */
 
 private ["_grp","_modes"];
 
 _grp = _this select 0;
-ws_modes = _this - [_this select 0];
+_modes = _this - [_this select 0];
 
 //Debugging - _modearray shouldnt have over three entries
-if (count ws_modes > 3) then {["ws_fnc_setAIMode DBG:",_modearray,"for some reason has over three entries. Why?"] call ws_fnc_debugText;};
+if (count _modes > 3) then {["ws_fnc_setAIMode DBG:",_modearray,"for some reason has over three entries. Why?"] call ws_fnc_debugText;};
 
 {
 switch (_x) do {
@@ -54,6 +65,6 @@ switch (_x) do {
 	default {["ws_fnc_setAIMode DBG:",_x,"is not a valid combatmode, behaviour or formation!"] call ws_fnc_debugText};
 };
 
-} forEach ws_modes;
+} forEach _modes;
 
 _grp
