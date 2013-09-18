@@ -196,9 +196,11 @@ switch (_weather) do
 // Use new values for _MissionTime, _MissionOvercast and _MissionFog to set
 // mission conditions on server and all clients (including JIP clients).
 
+if(!isDedicated) then
+{
 
 [_MissionOvercast,_MissionFog,_MissionRain,_MissionRainbow,_MissionWindStr,_MissionWindGusts,_MissionWaves,_MissionHumidity] call f_fnc_SetWeather;
-
+};
 // ====================================================================================
 
 // SELECT MISSION TIME OF DAY
@@ -209,42 +211,42 @@ switch (_timeOfDay) do
 // Dawn
 	case 0:
 	{
-		setDate [2007, 5, 11, 5, 0];
+		setDate [2030, 5, 11, 5, 0];
 	};
 // Early Morning
 	case 1:
 	{
-		setDate [2007, 5, 11, 6, 0];
+		setDate [2030, 5, 11, 6, 0];
 	};
 // Morning
 	case 2:
 	{
-		setDate [2007, 5, 11, 9, 0];
+		setDate [2030, 5, 11, 9, 0];
 	};
 // Noon
 	case 3:
 	{
-		setDate [2007, 5, 11, 12, 0];
+		setDate [2030, 5, 11, 12, 0];
 	};
 // Afternoon
 	case 4:
 	{
-		setDate [2007, 5, 11, 15, 0];
+		setDate [2030, 5, 11, 15, 0];
 	};
 // Evening
 	case 5:
 	{
-		setDate [2007, 5, 11, 17, 40];
+		setDate [2030, 5, 11, 17, 40];
 	};
 // Dusk
 	case 6:
 	{
-		setDate [2007, 5, 11, 18, 40];
+		setDate [2030, 5, 11, 18, 40];
 	};
 // Night
 	case 7:
 	{
-		setDate [2007, 5, 11, 0, 0];
+		setDate [2030, 5, 11, 0, 0];
 	};
 };
 // ====================================================================================
