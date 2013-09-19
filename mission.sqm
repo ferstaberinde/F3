@@ -856,7 +856,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitCSAT_ASL_SL";
-					init="GrpCSAT_ASL = group this; nul = [""ftl"",this] call f_fnc_folk_assignGear ;";
+					init="GrpCSAT_ASL = group this; nul = [""dc"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Alpha Squad Leader";
 				};
 				class Item1
@@ -1079,7 +1079,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitCSAT_BSL_SL";
-					init="GrpCSAT_BSL = group this; nul = [""ftl"",this] call f_fnc_folk_assignGear ;";
+					init="GrpCSAT_BSL = group this; nul = [""dc"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Bravo Squad Leader";
 				};
 				class Item1
@@ -1302,7 +1302,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitCSAT_CSL_SL";
-					init="GrpCSAT_CSL = group this; nul = [""ftl"",this] call f_fnc_folk_assignGear ;";
+					init="GrpCSAT_CSL = group this; nul = [""dc"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Charlie Squad Leader";
 				};
 				class Item1
