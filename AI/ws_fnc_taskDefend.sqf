@@ -16,19 +16,17 @@
 // [group,pos,radius,bool,bool,bool] call ws_fnc_taskDefend
 //
 // PARAMETERS
-// 1. name of group															| MANDATORY
+// 1. name of group											| MANDATORY
 // 2. position. can be marker, object or [x,y,z]						 	| MANDATORY
-// 3. radius of the area where statics/buildings will be occupied			| MANDATORY
-// 4. Whether to man statics or not											| OPTIONAL - default is TRUE
-// 5. Whether to garrison military structures								| OPTIONAL - default is TRUE	- modify _milarray for military building classes
+// 3. radius of the area where statics/buildings will be occupied				| MANDATORY
+// 4. Whether to man statics or not								| OPTIONAL - default is TRUE
+// 5. Whether to garrison military structures  modify _milarray for military building classes	| OPTIONAL - default is TRUE	-
 // 6. Whether to garrison civilian buildings								| OPTIONAL - default is true
 //
 
 private ["_debug","_game","_count","_milarrayA2","_badarrayA2","_badarrayA3","_milarrayA3",
 "_group","_newGroup","_pos","_radius","_guns","_garrison","_civil",
 "_buildings","_vehicles","_milbuildings","_staticarray","_badarray","_milarray","_units","_static"];
-
-_debug = false; if !(isNil "ws_debug") then {_debug = ws_debug}; //Debug mode. If ws_debug is globally defined it overrides _debug
 
 //Customizable Variables
 _treshold = 3; //Minimum number of available building positions for a building to be considered
@@ -41,9 +39,12 @@ _badarrayA2 = ["Land_Misc_Cargo1Ao","Land_Misc_Cargo1Bo","Land_Misc_Cargo1Bo_mil
 
 // ARMA 3 only
 // Military buildings that are garrisoned before civilian buildings
-_milarrayA3 = [];
-// Buildings NEVER to garrisond
+_milarrayA3 = ["Land_Cargo_HQ_V1_F","Land_Cargo_HQ_V2_F","Land_Cargo_HQ_V3_F","Land_Cargo_Tower_V1_F","Land_Cargo_Tower_V1_No1_F","Land_Cargo_Tower_V1_No2_F","Land_Cargo_Tower_V1_No3_F","Land_Cargo_Tower_V1_No4_F","Land_Cargo_Tower_V1_No5_F","Land_Cargo_Tower_V1_No6_F","Land_Cargo_Tower_V1_No7_F","Land_Cargo_Tower_V2_F","Land_Cargo_Tower_V3_F","Land_Radar_F","Land_Cargo_Patrol_V1_F","Land_Cargo_Patrol_V2_F","Land_Cargo_Patrol_V3_F","Land_Bunker_F","Land_Airport_Tower_F","Land_i_Barracks_V1_F","Land_i_Barracks_V2_F","Land_u_Barracks_V2_F"];
+// Buildings NEVER to garrison
 _badarrayA3 = [];
+
+//Debug mode. If ws_debug is globally defined it overrides _debug
+_debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
 
 //Declaring variables
 _count = count _this;
@@ -87,8 +88,8 @@ if (ws_game_a3) then {
 
 //Remove undesired classes from the array and populate the array containg military buildings in the area
 {
+    if (typeof _x in _milarray) then {_milbuildings = _milbuildings + [_x];_buildings = _buildings - [_x]};
    if ((str(_x buildingpos _treshold) == "[0,0,0]") || (typeOf _x in _badarray)) then {_buildings = _buildings - [_x]};
-   if (typeof _x in _milarray) then {_milbuildings = _milbuildings + [_x];_buildings = _buildings - [_x]};
 } foreach _buildings;
 
 //Man the statics
@@ -100,7 +101,7 @@ _units = units _group;
 
 // Fill bunkers etc
 if (count _milbuildings > 0 && count _units > 0 && _garrison) then {
-_units = [_units,_milbuildings,2] call ws_fnc_enterbuilding;
+_units = [_units,_milbuildings,0] call ws_fnc_enterbuilding;
 
 if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _milbuildings;};
 };
@@ -108,15 +109,15 @@ if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarker
 
 //Take position in regular buildings
 if (count _buildings > 0 && count _units > 0 && _civil) then {
-_units = [_units,_buildings,5] call ws_fnc_enterbuilding;
+_units = [_units,_buildings,3] call ws_fnc_enterbuilding;
 if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _buildings;};
 };
 
 //By disabling enableAttack every unit engages by itself
 _group enableattack false;
 
-//If there are at least three units left they are put in new groups either patroling holding the area.
-if (count _units >= 3) then {
+//If there are at least two units left they are put in new groups either patroling or holding the area.
+if (count _units >= 2) then {
 _newgroup = createGroup (side (leader _group));
 {
 [_x] joinSilent _newGroup;
