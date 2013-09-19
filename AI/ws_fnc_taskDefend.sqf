@@ -1,13 +1,17 @@
 // WS_fnc_taskDefend
-// v1 (14.04.2013)
+// Last Update 19.09.2013
 // By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 // Thanks to Rommel's CBA_fnc_taskDefend and Binesi's improved BIS_fnc_taskDefend
 //
 // FEATURE
 // Have a group man statics and garrison in buildings in a given radius around a position. They prioritize military structures over civilian buildings
 //
+//
 // NOTE
 // To avoid perfomance issues the garrisoning troops will just enter the building and stay there, they won't necessarily face in a smart direction
+//
+// RETURNS
+// [mil buildings occupied, civ buildings occupied]
 //
 // USAGE
 // Minimal:
@@ -88,7 +92,7 @@ if (ws_game_a3) then {
 
 //Remove undesired classes from the array and populate the array containg military buildings in the area
 {
-    if (typeof _x in _milarray) then {_milbuildings = _milbuildings + [_x];_buildings = _buildings - [_x]};
+    if (!(str(_x buildingpos 1) == "[0,0,0]") && typeof _x in _milarray) then {_milbuildings = _milbuildings + [_x];_buildings = _buildings - [_x]};
    if ((str(_x buildingpos _treshold) == "[0,0,0]") || (typeOf _x in _badarray)) then {_buildings = _buildings - [_x]};
 } foreach _buildings;
 
@@ -113,18 +117,11 @@ _units = [_units,_buildings,3] call ws_fnc_enterbuilding;
 if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _buildings;};
 };
 
-//By disabling enableAttack every unit engages by itself
-_group enableattack false;
+//If there's one unit left they either patrol or hold the area.
+if (count _units >= 1) then {
+	if (random 1 > 0.5) then {[_group,_pos,["hold",_radius]] call ws_fnc_addWaypoint;} else {
+		[_group,_pos,["patrol",_radius]] call ws_fnc_addWaypoint;
+	};
+} else {deleteGroup _group};
 
-//If there are at least two units left they are put in new groups either patroling or holding the area.
-if (count _units >= 2) then {
-_newgroup = createGroup (side (leader _group));
-{
-[_x] joinSilent _newGroup;
-} forEach _units;
-if (random 1 > 0.5) then {[_newGroup,_pos,["hold",_radius]] call ws_fnc_addWaypoint;} else {
-[_newGroup,_pos,["patrol",_radius]] call ws_fnc_addWaypoint;
-};
-};
-
-true
+[_milbuildings,_buildings]
