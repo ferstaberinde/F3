@@ -42,7 +42,7 @@ if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction 
 
 if (_unitfaction == "BLU_F") exitwith {
 
-#include "f\common\f_briefing_blue.sqf"
+#include "f\common\f_briefing_nato.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -59,7 +59,7 @@ if (_unitfaction == "BLU_F") exitwith {
 
 if (_unitfaction == "OPF_F") exitwith {
 
-#include "f\common\f_briefing_red.sqf"
+#include "f\common\f_briefing_csat.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -75,7 +75,7 @@ if (_unitfaction == "OPF_F") exitwith {
 
 if (_unitfaction == "IND_F") exitwith {
 
-#include "f\common\f_briefing_green.sqf"
+#include "f\common\f_briefing_aaf.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
