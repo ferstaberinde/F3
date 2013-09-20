@@ -221,6 +221,10 @@ Version | Date
 
 * Added BIS debug console for logged-in admins.
 * Added Safe Start component.
+* Updated F3 Folk ARPS Platoons component to reflect new faction names.
+* Updated F3 Folk ARPS Assign Gear Script component to reflect new faction names.
+* Updated Briefing Template component to reflect new faction names.
+* Re-enabled more weather parameter options in Mission Conditions Selector component.
 * Fixed minor bug in F3 Folk ARPS Platoons component.
 
 3-0-7 | 14 SEP 2013

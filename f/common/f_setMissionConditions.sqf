@@ -113,7 +113,7 @@ switch (_weather) do
 // Rain (Light Winds)
 	case 6:
 	{
-		_MissionOvercast = 0.8;
+		_MissionOvercast = 1;
 		_MissionRain = 1;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
@@ -126,7 +126,7 @@ switch (_weather) do
 // Rain (Strong Winds)
 	case 7:
 	{
-		_MissionOvercast = 0.8;
+		_MissionOvercast = 1;
 		_MissionRain = 1;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
