@@ -85,7 +85,7 @@ f_endSelected = -1;
 
 f_removeBodyDelay = 180;
 f_removeBodyDistance = 500;
-f_doNotRemoveBodies = [UnitFIA_CO];
+f_doNotRemoveBodies = [];
 [] execVM "f\common\f_addRemoveBodyEH.sqf";
 
 // ====================================================================================
