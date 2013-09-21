@@ -101,6 +101,69 @@ switch (_unitfaction) do
 
 // ====================================================================================
 
+// MARKERS: BLUFOR > FIA
+// Markers seen by players in FIA slots.
+
+	case "blu_g_f":
+	{
+		["GrpFIA_CO", 0, "CO", "ColorYellow"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_DC", 0, "DC", "ColorYellow"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_ASL", 0, "ASL", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_A1", 1, "A1", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_A2", 1, "A2", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_A3", 1, "A3", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_BSL", 0, "BSL", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_B1", 1, "B1", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_B2", 1, "B2", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_B3", 1, "B3", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_CSL", 0, "CSL", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_C1", 1, "C1", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_C2", 1, "C2", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_C3", 1, "C3", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_MMG1", 2, "MMG1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_MAT1", 3, "MAT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+
+// 		["GrpFIA_ST1",  4, "ST1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+// 		["GrpFIA_HMG1",  2, "HMG1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+// 		["GrpFIA_MTR1",  5, "MTR1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+// 		["GrpFIA_HAT1",  3, "HAT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+// 		["GrpFIA_SAM1",  3, "SAM1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+
+		["GrpFIA_ENG1",  6, "ENG1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+
+ 		["GrpFIA_IFV1",  7, "IFV1", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_IFV2",  7, "IFV2", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_IFV3",  7, "IFV3", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_IFV4",  7, "IFV4", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_IFV5",  7, "IFV5", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_IFV6",  7, "IFV6", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_IFV7",  7, "IFV7", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_IFV8",  7, "IFV8", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+
+ 		["GrpFIA_TNK1",  7, "TNK1", "ColorRed"] spawn fnc_folk_localGroupMarker;
+
+		["GrpFIA_TH1",  8, "TH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
+ 		["GrpFIA_TH2",  8, "TH2", "ColorRed"] spawn fnc_folk_localGroupMarker;
+ 		["GrpFIA_TH3",  8, "TH3", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+ 		["GrpFIA_TH4",  8, "TH4", "ColorBlue"] spawn fnc_folk_localGroupMarker;
+ 		["GrpFIA_TH5",  8, "TH5", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+  		["GrpFIA_TH6",  8, "TH6", "ColorGreen"] spawn fnc_folk_localGroupMarker;
+   		["GrpFIA_TH7",  8, "TH7", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_TH8",  8, "TH8", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+
+		["GrpFIA_AH1",  8, "AH1", "ColorRed"] spawn fnc_folk_localGroupMarker;
+		["GrpFIA_DT1",  4, "DT1", "ColorOrange"] spawn fnc_folk_localGroupMarker;
+
+		["UnitFIA_CO_M", 0, "COM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitFIA_DC_M", 0, "DCM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitFIA_ASL_M", 0, "AM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitFIA_BSL_M", 0, "BM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+		["UnitFIA_CSL_M", 0, "CM", "ColorBlack"] spawn fnc_folk_localSpecialistMarker;
+
+	};
+
+// ====================================================================================
+
 // MARKERS: OPFOR > CSAT
 // Markers seen by players in CSAT slots.
 

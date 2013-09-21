@@ -55,6 +55,60 @@ if(!isnil "GrpNATO_JIP") then {GrpNATO_JIP setGroupId ["NATO JIP -","GroupColor0
 
 // ====================================================================================
 
+// GROUP IDs: BLUFOR > FIA
+// Automatically assigns intelligible names to groups
+if(!isnil "GrpFIA_CO") then {GrpFIA_CO setGroupId ["FIA CO -","GroupColor0"];};
+if(!isnil "GrpFIA_DC") then {GrpFIA_DC setGroupId ["FIA DC -","GroupColor0"];};
+if(!isnil "GrpFIA_ASL") then {GrpFIA_ASL setGroupId ["FIA ASL -","GroupColor0"];};
+if(!isnil "GrpFIA_A1") then {GrpFIA_A1 setGroupId ["FIA A1 -","GroupColor0"];};
+if(!isnil "GrpFIA_A2") then {GrpFIA_A2 setGroupId ["FIA A2 -","GroupColor0"];};
+if(!isnil "GrpFIA_A3") then {GrpFIA_A3 setGroupId ["FIA A3 -","GroupColor0"];};
+if(!isnil "GrpFIA_BSL") then {GrpFIA_BSL setGroupId ["FIA BSL -","GroupColor0"];};
+if(!isnil "GrpFIA_B1") then {GrpFIA_B1 setGroupId ["FIA B1 -","GroupColor0"];};
+if(!isnil "GrpFIA_B2") then {GrpFIA_B2 setGroupId ["FIA B2 -","GroupColor0"];};
+if(!isnil "GrpFIA_B3") then {GrpFIA_B3 setGroupId ["FIA B3 -","GroupColor0"];};
+if(!isnil "GrpFIA_CSL") then {GrpFIA_CSL setGroupId ["FIA CSL -","GroupColor0"];};
+if(!isnil "GrpFIA_C1") then {GrpFIA_C1 setGroupId ["FIA C1 -","GroupColor0"];};
+if(!isnil "GrpFIA_C2") then {GrpFIA_C2 setGroupId ["FIA C2 -","GroupColor0"];};
+if(!isnil "GrpFIA_C3") then {GrpFIA_C3 setGroupId ["FIA C3 -","GroupColor0"];};
+if(!isnil "GrpFIA_MMG1") then {GrpFIA_MMG1 setGroupId ["FIA MMG1 -","GroupColor0"];};
+if(!isnil "GrpFIA_MAT1") then {GrpFIA_MAT1 setGroupId ["FIA MAT1 -","GroupColor0"];};
+
+if(!isnil "GrpFIA_ST1") then {GrpFIA_ST1 setGroupId ["FIA ST1 -","GroupColor0"];};
+if(!isnil "GrpFIA_HMG1") then {GrpFIA_HMG1 setGroupId ["FIA HMG1 -","GroupColor0"];};
+if(!isnil "GrpFIA_MTR1") then {GrpFIA_MTR1 setGroupId ["FIA MTR1 -","GroupColor0"];};
+if(!isnil "GrpFIA_HAT1") then {GrpFIA_HAT1 setGroupId ["FIA GrpFIA_HAT1 -","GroupColor0"];};
+
+if(!isnil "GrpFIA_ENG1") then {GrpFIA_ENG1 setGroupId ["FIA ENG1 -","GroupColor0"];};
+
+if(!isnil "GrpFIA_IFV1") then {GrpFIA_IFV1 setGroupId ["FIA IFV1 -","GroupColor0"];};
+if(!isnil "GrpFIA_IFV2") then {GrpFIA_IFV2 setGroupId ["FIA IFV2 -","GroupColor0"];};
+if(!isnil "GrpFIA_IFV3") then {GrpFIA_IFV3 setGroupId ["FIA IFV3 -","GroupColor0"];};
+if(!isnil "GrpFIA_IFV4") then {GrpFIA_IFV4 setGroupId ["FIA IFV4 -","GroupColor0"];};
+if(!isnil "GrpFIA_IFV5") then {GrpFIA_IFV5 setGroupId ["FIA IFV5 -","GroupColor0"];};
+if(!isnil "GrpFIA_IFV6") then {GrpFIA_IFV6 setGroupId ["FIA IFV6 -","GroupColor0"];};
+if(!isnil "GrpFIA_IFV7") then {GrpFIA_IFV7 setGroupId ["FIA IFV7 -","GroupColor0"];};
+if(!isnil "GrpFIA_IFV8") then {GrpFIA_IFV8 setGroupId ["FIA IFV8 -","GroupColor0"];};
+
+if(!isnil "GrpFIA_TNK1") then {GrpFIA_TNK1 setGroupId ["FIA TNK1 -","GroupColor0"];};
+
+if(!isnil "GrpFIA_TH1") then {GrpFIA_TH1 setGroupId ["FIA TH1 -","GroupColor0"];};
+if(!isnil "GrpFIA_TH2") then {GrpFIA_TH2 setGroupId ["FIA TH2 -","GroupColor0"];};
+if(!isnil "GrpFIA_TH3") then {GrpFIA_TH3 setGroupId ["FIA TH3 -","GroupColor0"];};
+if(!isnil "GrpFIA_TH4") then {GrpFIA_TH4 setGroupId ["FIA TH4 -","GroupColor0"];};
+if(!isnil "GrpFIA_TH5") then {GrpFIA_TH5 setGroupId ["FIA TH5 -","GroupColor0"];};
+if(!isnil "GrpFIA_TH6") then {GrpFIA_TH6 setGroupId ["FIA TH6 -","GroupColor0"];};
+if(!isnil "GrpFIA_TH7") then {GrpFIA_TH7 setGroupId ["FIA TH7 -","GroupColor0"];};
+if(!isnil "GrpFIA_TH8") then {GrpFIA_TH8 setGroupId ["FIA TH8 -","GroupColor0"];};
+
+if(!isnil "GrpFIA_AH1") then {GrpFIA_AH1 setGroupId ["FIA AH1 -","GroupColor0"];};
+if(!isnil "GrpFIA_DT1") then {GrpFIA_DT1 setGroupId ["FIA DT1 -","GroupColor0"];};
+
+if(!isnil "GrpFIA_JIP") then {GrpFIA_JIP setGroupId ["FIA JIP -","GroupColor0"];};
+
+
+// ====================================================================================
+
 // GROUP IDs: OPFOR > CSAT
 // Automatically assigns intelligible names to groups
 
