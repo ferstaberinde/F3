@@ -226,6 +226,7 @@ Version | Date
 * Updated Briefing Template component to reflect new faction names.
 * Re-enabled more weather parameter options in Mission Conditions Selector component.
 * Fixed minor bug in F3 Folk ARPS Platoons component.
+* Fixed Automatic Body Removal component.
 
 3-0-7 | 14 SEP 2013
 
