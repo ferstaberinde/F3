@@ -83,9 +83,10 @@ f_endSelected = -1;
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_removeBodyDelay = 180;
-// f_doNotRemoveBodies = [];
-// [] execVM "f\common\f_addRemoveBodyEH.sqf";
+f_removeBodyDelay = 180;
+f_removeBodyDistance = 500;
+f_doNotRemoveBodies = [UnitFIA_CO];
+[] execVM "f\common\f_addRemoveBodyEH.sqf";
 
 // ====================================================================================
 
