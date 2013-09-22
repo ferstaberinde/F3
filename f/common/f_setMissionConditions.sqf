@@ -241,7 +241,7 @@ switch (_timeOfDay) do
 // Dusk
 	case 6:
 	{
-		setDate [2030, 5, 11, 18, 40];
+		setDate [2030, 5, 11, 19, 10];
 	};
 // Night
 	case 7:
