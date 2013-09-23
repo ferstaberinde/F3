@@ -33,11 +33,11 @@ if !(ws_game_a3) then {
 	if (isnil "bis_fnc_init") then {_fm = createGroup sideLogic;_fm createUnit ["FunctionsManager", [0,0,0], [],0,"NONE"];};
 
 	//Debug Functions
-	ws_fnc_debugText = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";
-	ws_fnc_clipBoardCode = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";
-	ws_fnc_countUnits = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";
-	ws_fnc_debugText = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";
-	ws_fnc_typecheck = compile preprocessFile "ws_fnc\dbg\ws_fnc_.sqf";
+	ws_fnc_debugText = compile preprocessFile "ws_fnc\dbg\ws_fnc_debugText.sqf";
+	ws_fnc_clipBoardCode = compile preprocessFile "ws_fnc\dbg\ws_fnc_clipBoardCode.sqf";
+	ws_fnc_countUnits = compile preprocessFile "ws_fnc\dbg\ws_fnc_countUnits.sqf";
+	ws_fnc_debugText = compile preprocessFile "ws_fnc\dbg\ws_fnc_debugText.sqf";
+	ws_fnc_typecheck = compile preprocessFile "ws_fnc\dbg\ws_fnc_typecheck.sqf";
 	call compile preprocessFile "ws_fnc\dbg\ws_fnc_debugTriggers.sqf";
 
 	//Tool Functions
@@ -48,7 +48,7 @@ if !(ws_game_a3) then {
 	ws_fnc_attachLight = compile preprocessfile "ws_fnc\tools\ws_fnc_attachLight.sqf";
 
 	//AI Functions
-	ws_fnc_enterBuilding = compile preprocessfile "ws_fnc\AI\ws_fnc_enterBuildings.sqf";
+	ws_fnc_enterBuilding = compile preprocessfile "ws_fnc\AI\ws_fnc_enterBuilding.sqf";
 	ws_fnc_taskDefend = compile preprocessfile "ws_fnc\AI\ws_fnc_taskDefend.sqf";
 	ws_fnc_taskCrew = compile preprocessfile "ws_fnc\AI\ws_fnc_taskCrew.sqf";
 	ws_fnc_createGroup = compile preprocessfile "ws_fnc\AI\ws_fnc_createGroup.sqf";
