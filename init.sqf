@@ -134,13 +134,13 @@ f_doNotRemoveBodies = [];
 // F3 - Casualties Cap (Advanced)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// BLUFOR > NATO
+// BLUFOR
 // [BLUFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
-// OPFOR > CSAT
+// OPFOR
 // [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
-// INDEPENDENT > AAF
+// INDEPENDENT
 // [INDEPENDENT,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
 // ====================================================================================
