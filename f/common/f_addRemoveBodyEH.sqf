@@ -43,7 +43,6 @@ if (f_var_debugMode == 1) then
 if !(_x in f_doNotRemoveBodies) then {
 	_x addEventHandler ["killed", {(_this select 0) execVM "f\server\f_removeBody.sqf"}]
 	};
-player groupchat format ["added eventhandler to %1",_x];
 } forEach _men;
 
 // ====================================================================================

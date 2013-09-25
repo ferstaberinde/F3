@@ -11,7 +11,7 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_body","_wait","_distance","_pos","_nearPlayers","_nearUnits","_check"];
+private ["_body","_wait","_group","_distance","_pos","_nearPlayers","_nearUnits","_check"];
 
 // ====================================================================================
 
@@ -24,6 +24,7 @@ waitUntil {scriptDone f_script_setLocalVars};
 // The body to remove is passed to this script by the event handler itself. The time to sleep and minimal distance to remove are defined by global variables
 
 _body = _this;
+_group = group _this;
 _wait = f_removeBodyDelay;
 _distance = f_removeBodyDistance;
 
@@ -46,12 +47,18 @@ while {count _nearPlayers > 0} do {
 
 // ====================================================================================
 
-// REMOVE GROUP AND BODY
-// We check if anyone in the body's group is alive and if not delete the group
-// Afterwards the body is deleted
+// REMOVE BODY
+// Remove the body from the game
 
-_check = {alive _x}  count (units (group _body));
-if (_check == 0) then {deleteGroup (group _body)};
 deleteVehicle _body;
+
+// ====================================================================================
+
+// REMOVE BODY'S GROUP IF EMPTY
+// We wait a while to make sure the body has been removed from the group. Then we count the living units in it and remove the group if it is empty
+sleep 30;
+_check = count (units (_group));
+if (_check == 0) then {deleteGroup _group};
+
 
 if (true) exitWith {};
