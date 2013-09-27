@@ -1,4 +1,4 @@
-// F3 - Folk Assign Gear Script - Red
+// F3 - Folk Assign Gear Script - FIA
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -21,7 +21,7 @@
 //		mtrag		- mortar assistant (deployable)
 //		p		- air vehicle pilots
 //		eng		- engineers
-//		div    		- divers
+// 		div		- divers
 //
 //		r 		- rifleman
 //		car		- carabineer
@@ -36,28 +36,27 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-
 // Attachments
 // nil = no change
 // [] = remove all
 // ["acc_pointer_IR","optic_ACO_grn"] = remove all, add items.
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
-_rifle = "arifle_Katiba_F";
-_riflemag = "30Rnd_65x39_caseless_green";
-_riflemag_tr = "30Rnd_65x39_caseless_green_mag_Tracer";
-_rifle_attach = ["acc_pointer_IR","optic_ACO_grn"];
+_rifle = "arifle_TRG20_F";
+_riflemag = "30Rnd_556x45_Stanag";
+_riflemag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
+_rifle_attach = ["acc_pointer_IR","optic_Aco"];
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
-_carbine = "arifle_Katiba_C_F";
-_carbinemag = "30Rnd_65x39_caseless_green";
-_carbinemag_tr = "30Rnd_65x39_caseless_green_mag_Tracer";
-_carbine_attach = ["acc_pointer_IR","optic_ACO_grn"];
+_carbine = "arifle_Mk20_F";
+_carbinemag = "30Rnd_556x45_Stanag";
+_carbinemag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
+_carbine_attach = ["acc_pointer_IR","optic_Aco"];
 
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
-_smg = "SMG_02_F";
-_smgmag = "30Rnd_9x21_Mag";
-_smgmag_tr = "30Rnd_9x21_Mag";
+_smg = "SMG_01_F";
+_smgmag = "30Rnd_45ACP_Mag_SMG_01";
+_smgmag_tr = "30Rnd_45ACP_Mag_SMG_01_tracer_green";
 _smg_attach = nil;
 
 // Diver
@@ -67,11 +66,11 @@ _diverMag2 = "20Rnd_556x45_UW_mag";
 _diverWep_attach = nil;
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle = "arifle_Katiba_GL_F";
-_glriflemag = "30Rnd_65x39_caseless_green";
-_glriflemag_tr = "30Rnd_65x39_caseless_green_mag_Tracer";
+_glrifle = "arifle_TRG21_GL_F";
+_glriflemag = "30Rnd_556x45_Stanag";
+_glriflemag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 _glmag = "1Rnd_HE_Grenade_shell";
-_glrifle_attach = ["acc_pointer_IR","optic_ACO_grn"];
+_glrifle_attach = ["acc_pointer_IR","optic_Aco"];
 
 // Smoke for FTLs, Squad Leaders, etc
 _glsmokewhite = "1Rnd_Smoke_Grenade_shell";
@@ -85,7 +84,7 @@ _glflareyellow = "3Rnd_UGL_FlareYellow_F";
 _glflaregreen = "3Rnd_UGL_FlareGreen_F";
 
 // Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
-_pistol = "hgun_Rook40_F";
+_pistol = "hgun_P07_F";
 _pistolmag = "16Rnd_9x21_Mag";
 
 // Grenades
@@ -98,11 +97,11 @@ _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
 // Night Vision Goggles (NVGoggles)
-_nvg = "NVGoggles_OPFOR";
+_nvg = "NVGoggles";
 
 // Backpacks
-_bagmedium = "B_FieldPack_ocamo";			// used by most roles
-_baglarge =  "B_Carryall_ocamo"; 			// used by medic and engineers
+_bagmedium = "B_AssaultPack_mcamo";  			// used by most roles
+_baglarge =  "B_Kitbag_mcamo"; 	   			// used by medic and engineers
 _bagmediumdiver =  "B_AssaultPack_blk";		// used by divers
 
 // ====================================================================================
@@ -113,7 +112,7 @@ _bagmediumdiver =  "B_AssaultPack_blk";		// used by divers
 _AR = "LMG_Mk200_F";
 _ARmag = "200Rnd_65x39_cased_Box";
 _ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
-_AR_attach = ["acc_pointer_IR","optic_ACO_grn"];
+_AR_attach = ["acc_pointer_IR","optic_ACO"];
 
 // Medium MG
 _MMG = "LMG_Zafir_F";
@@ -130,11 +129,11 @@ _MTR = "B_Mk6Mortar_Wpn";
 _MTRmount = "B_Mk6Mortar_Support";
 
 // Medium AT
-_MAT = "launch_O_Titan_short_F";
+_MAT = "launch_B_Titan_short_F";
 _MATmag1 = "Titan_AT";
 _MATmag2 = "Titan_AP";
 // Surface Air
-_SAM = "launch_O_Titan_F";
+_SAM = "launch_B_Titan_F";
 _SAMmag = "Titan_AA";
 // Engineer items.
 _ATmine = "ATMine_Range_Mag";
@@ -147,24 +146,27 @@ _APmine2 = "APERSMine_Range_Mag";
 // CLOTHES AND UNIFORMS
 
 // Base
-_baseUniform = "U_O_CombatUniform_ocamo";
-_baseHelmet = "H_HelmetO_ocamo";
-_lightRig = "V_HarnessO_brn"; // co,dc,ftl,medic,rat,matag,mmgag
-_heavyRig = "V_HarnessOGL_brn"; // ar,eng
+_baseUniform = "U_IG_Guerilla1_1";
+_baseHelmet = "H_Shemag_olive";
+_lightRig = "V_Chestrig_khk"; // co,dc,ftl,medic,rat,matag,mmgag
+_heavyRig = "V_TacVest_khk"; // ar,eng
 
 // Diver
-_diverUniform =  "U_O_Wetsuit";
+_diverUniform =  "U_B_Wetsuit";
 _diverHelmet = "";
-_diverRig = "V_RebreatherIR";
+_diverRig = "V_RebreatherB";
 _diverGlasses = "G_Diving";
+
 // Pilot
-_pilotUniform = "U_O_PilotCoveralls";
-_pilotHelmet = "H_PilotHelmetHeli_O";
+_pilotUniform = "U_B_HeliPilotCoveralls";
+_pilotHelmet = "H_PilotHelmetHeli_B";
 _pilotRig = "V_TacVest_blk";
+
 // Crewman
-_crewUniform = "U_O_SpecopsUniform_ocamo"; // default in A3 :)
-_crewHelmet = "H_HelmetCrew_O";
+_crewUniform = "U_B_CombatUniform_mcam_vest";
+_crewHelmet = "H_HelmetCrew_B";
 _crewRig = "V_TacVest_blk";
+
 // ====================================================================================
 
 // INTERPRET PASSED VARIABLES

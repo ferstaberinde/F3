@@ -221,6 +221,18 @@ Version | Date
 
 * Added BIS debug console for logged-in admins.
 * Added Safe Start component.
+* Updated Mission Observers component to use BIS Splendid Camera.
+* Updated F3 Folk ARPS Platoons component to reflect new faction names.
+* Updated F3 Folk ARPS Assign Gear Script component to reflect new faction names.
+* Updated Briefing Template component to reflect new faction names.
+* Updated F3 Folk ARPS Group IDs to reflect new faction names.
+* Expanded F3 Folk ARPS Platoons component to include FIA platoon.
+* Expanded F3 Folk ARPS Assign Gear Script component to support FIA platoon.
+* Expanded Briefing Template component to support FIA platoon.
+* Expanded F3 Folk ARPS Group IDs to support FIA platoon.
+* Expanded F3 Folk ARPS Group Markers to support FIA platoon.
+* Expanded F3 Folk ARPS JIP Reinforcement Options to support FIA platoon.
+* Re-enabled more weather parameter options in Mission Conditions Selector component.
 * Fixed minor bug in F3 Folk ARPS Platoons component.
 
 3-0-7 | 14 SEP 2013

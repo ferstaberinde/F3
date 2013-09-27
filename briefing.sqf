@@ -36,13 +36,13 @@ if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction 
 
 // ====================================================================================
 
-// BRIEFING: BLUFOR > BLUE
-// The following block of code executes only if the player is in a BLUE slot; it
+// BRIEFING: BLUFOR > FIA
+// The following block of code executes only if the player is in a FIA slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction == "BLU_F") exitwith {
 
-#include "f\common\f_briefing_blue.sqf"
+#include "f\common\f_briefing_nato.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -53,13 +53,30 @@ if (_unitfaction == "BLU_F") exitwith {
 
 // ====================================================================================
 
-// BRIEFING: OPFOR > RED
-// The following block of code executes only if the player is in a RED slot; it
+// BRIEFING: BLUFOR > FIA
+// The following block of code executes only if the player is in a FIA slot; it
+// automatically includes a file which contains the appropriate briefing data.
+
+if (_unitfaction == "BLU_G_F") exitwith {
+
+#include "f\common\f_briefing_fia.sqf"
+
+// DEBUG
+	if (f_var_debugMode == 1) then
+	{
+	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
+	};
+};
+
+// ====================================================================================
+
+// BRIEFING: OPFOR > CSAT
+// The following block of code executes only if the player is in a CSAT slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction == "OPF_F") exitwith {
 
-#include "f\common\f_briefing_red.sqf"
+#include "f\common\f_briefing_csat.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -69,13 +86,13 @@ if (_unitfaction == "OPF_F") exitwith {
 };
 // ====================================================================================
 
-// BRIEFING: INDEPENDENT > GREEN
-// The following block of code executes only if the player is in a GREEN
+// BRIEFING: INDEPENDENT > AAF
+// The following block of code executes only if the player is in a AAF
 // slot; it automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction == "IND_F") exitwith {
 
-#include "f\common\f_briefing_green.sqf"
+#include "f\common\f_briefing_aaf.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then

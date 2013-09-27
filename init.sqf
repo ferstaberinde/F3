@@ -119,13 +119,13 @@ f_endSelected = -1;
 
 // [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// BLUFOR > BLUE
+// BLUFOR > NATO
 // [BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// OPFOR > RED
+// OPFOR > CSAT
 // [OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// INDEPENDENT > GREEN
+// INDEPENDENT > AAF
 // [INDEPENDENT,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // ====================================================================================
@@ -133,13 +133,13 @@ f_endSelected = -1;
 // F3 - Casualties Cap (Advanced)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// BLUFOR > BLUE
+// BLUFOR
 // [BLUFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
-// OPFOR > RED
+// OPFOR
 // [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
-// INDEPENDENT > GREEN
+// INDEPENDENT
 // [INDEPENDENT,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
 // ====================================================================================
