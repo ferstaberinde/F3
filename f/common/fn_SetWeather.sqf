@@ -16,8 +16,8 @@ _humid = _this select 7;
 0 setWindStr  _windStr;
 0 setWindForce _windGus;
 0 setWaves _waves;
-simulSetHumidity _humid;
+
 simulWeatherSync;
 skiptime 1;
-simulSetHumidity _humid;
+
 simulWeatherSync;
