@@ -36,8 +36,8 @@ if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction 
 
 // ====================================================================================
 
-// BRIEFING: BLUFOR > FIA
-// The following block of code executes only if the player is in a FIA slot; it
+// BRIEFING: BLUFOR > NATO
+// The following block of code executes only if the player is in a NATO slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction == "BLU_F") exitwith {
