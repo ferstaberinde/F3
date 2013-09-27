@@ -3,7 +3,6 @@ class Mission
 {
 	addOns[]=
 	{
-		"a3_map_stratis",
 		"A3_Characters_F_OPFOR",
 		"a3_characters_f_beta",
 		"A3_Characters_F_INDEP",
@@ -6407,7 +6406,6 @@ class Intro
 {
 	addOns[]=
 	{
-		"a3_map_stratis",
 		"a3_map_altis"
 	};
 	addOnsAuto[]=
@@ -6438,7 +6436,6 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"a3_map_stratis",
 		"a3_map_altis"
 	};
 	addOnsAuto[]=
@@ -6469,7 +6466,6 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"a3_map_stratis",
 		"a3_map_altis"
 	};
 	addOnsAuto[]=
