@@ -83,9 +83,10 @@ f_endSelected = -1;
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_removeBodyDelay = 180;
-// f_doNotRemoveBodies = [];
-// [] execVM "f\common\f_addRemoveBodyEH.sqf";
+f_removeBodyDelay = 180;
+f_removeBodyDistance = 500;
+f_doNotRemoveBodies = [];
+[] execVM "f\common\f_addRemoveBodyEH.sqf";
 
 // ====================================================================================
 
@@ -182,13 +183,6 @@ f_endSelected = -1;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\common\f_orbatNotes.sqf";
-
-// ====================================================================================
-
-// F3 - Tripwire action
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// [[UnitName1,UnitName2],25,2,east] execVM "f\common\fa_tripwire_init.sqf";
 
 // ====================================================================================
 
