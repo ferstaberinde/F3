@@ -1,17 +1,17 @@
-// F3 - AI Skill Selector (coop)
+// F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
 // JIP CHECK
 // Prevents the script executing until the player has synchronised correctly:
 
-#include "f_waitForJIP.sqf"
+ #include "f_waitForJIP.sqf"
 
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_param_AISkill_Friendly","_param_AISkill_Enemy","_units","_localUnits","_localBLUUnits","_localRESUnits","_localOPFUnits","_localCIVUnits","_strMen","_strLocalUnits","_strLocalBLUUnits","_strLocalRESUnits","_strLocalOPFUnits","_strLocalCIVUnits","_superSkill","_highSkill","_mediumSkill","_lowSkill","_skillFriendly","_skillEnemy"];
+private ["_units","_localUnits","_localBLUUnits","_localRESUnits","_localOPFUnits","_localCIVUnits","_strMen","_strLocalUnits","_strLocalBLUUnits","_strLocalRESUnits","_strLocalOPFUnits","_strLocalCIVUnits","_superSkill","_highSkill","_mediumSkill","_lowSkill"];
 
 // ====================================================================================
 
@@ -22,21 +22,53 @@ waitUntil {scriptDone f_script_setLocalVars};
 
 // ====================================================================================
 
-// SET KEY VARIABLES
-// AI Skills are set in the parameters screen (during mission set-up).
+// DEFINE SKILL LEVELS
+// These values define the total skill level as set by the parameter
 
-_param_AISkill_Friendly = f_param_AISkill_Friendly;
-_param_AISkill_Enemy = f_param_AISkill_Enemy;
 _superSkill = 1.00;
 _highSkill = 0.75;
 _mediumSkill = 0.50;
 _lowSkill = 0.25;
 
+// This are the skills a soldier set to _superSkill would have. For all other skill levels the values are rounded using the numbers above.
+// These are recommended levels to avoid "laser" AI snipers. Change them accordingly if you are finding the AI to be too inaccurate or are using AI mods.
+
+f_skillSet = [
+0.7,		// aimingAccuracy
+1,		// aimingShake
+0.7,		// aimingSpeed
+1,		// endurance
+0.4,		// spotDistance
+0.7,		// spotTime
+1,		// courage
+1,		// reloadSpeed
+1,		// commanding
+1		// general
+];
+
+// These are the ranges in which skills can differ between two soldiers on the same skill level.
+f_randomUp = 0.15;
+f_randomDown = 0.15;
+
+// ====================================================================================
+
+// SET KEY VARIABLES
+
 // Using a common variable, we will create an array containing all men.
 
 _units = f_var_units;
 
+// The default skill levels for all sides. They are overriden by any parameters set.
+
+
+f_skillBlu = _mediumSkill;
+f_skillRes = _mediumSkill;
+f_skillOpf = _mediumSkill;
+f_skillCiv = _mediumSkill;
+
+
 // We split out the contents of _units - first by locality, then by side.
+// By checking for the Variable "f_skillarray" on each unit we can make sure that only units that haven't been touched by the script are added to the array.
 
 _localUnits = [];
 _localBLUUnits = [];
@@ -44,7 +76,7 @@ _localRESUnits = [];
 _localOPFUnits = [];
 _localCIVUnits = [];
 
-{if (local _x) then {_localUnits = _localUnits + [_x]}} forEach _units;
+{if (local _x && (count (_x getVariable ["f_skillarray",[]])) == 0) then {_localUnits = _localUnits + [_x]}} forEach _units;
 {if ((side _x) == west) then {_localBLUUnits = _localBLUUnits + [_x]}} forEach _localUnits;
 {if ((side _x) == resistance) then {_localRESUnits = _localRESUnits + [_x]}} forEach _localUnits;
 {if ((side _x) == east) then {_localOPFUnits = _localOPFUnits + [_x]}} forEach _localUnits;
@@ -69,106 +101,27 @@ if (f_var_debugMode == 1) then
 
 // ====================================================================================
 
-// SELECT FRIENDLY AI SKILLS
-// Using the value of _param_AISkill_Friendly, a value for _skillFriendly is set.
+// EXECUTE FOLLOW-UP SCRIPT
+// Depending on enabled parameters either the script for A&D or for COOP is included
 
-switch (_param_AISkill_Friendly) do
-{
-// Super
-	case 0:
-	{
-		_skillFriendly = _superSkill;
-	};
-// High
-	case 1:
-	{
-		_skillFriendly = _highSkill;
-	};
-// Medium
-	case 2:
-	{
-		_skillFriendly = _mediumSkill;
-	};
-// Low
-	case 3:
-	{
-		_skillFriendly = _lowSkill;
-	};
+if !(isNil "f_param_AISkill_Friendly" && isNil "f_param_AISkill_Enemy") then {
+	 #include "f_setAISkillCoop.sqf";
+};
+if !(isNil "f_param_AISkill_BLUFOR" && isNil "f_param_AISkill_OPFOR") then {
+	 #include "f_setAISkillAD.sqf";
 };
 
-// ====================================================================================
 
-// SELECT ENEMY AI SKILLS
-// Using the value of _param_AISkill_Enemy, a value for _skillEnemy is set.
-
-switch (_param_AISkill_Enemy) do
-{
-// Super
-	case 0:
-	{
-		_skillEnemy = _superSkill;
-	};
-// High
-	case 1:
-	{
-		_skillEnemy = _highSkill;
-	};
-// Medium
-	case 2:
-	{
-		_skillEnemy = _mediumSkill;
-	};
-// Low
-	case 3:
-	{
-		_skillEnemy = _lowSkill;
-	};
-};
-
-// ====================================================================================
-
-// ENABLE DEBUG MODE
-// If either _param_AISkill_Friendly or _param_AISkill_Enemy is set to 99, debug mode is 
-// enabled; in this case _skillFriendly and _skillEnemy are set to _lowSkill.
-
-if ((_param_AISkill_Friendly == 99) || (_param_AISkill_Enemy == 99)) then 
-{
-	_skillFriendly = _lowSkill;
-	_skillEnemy = _lowSkill;
-};
-
-// ====================================================================================
-
-// SET SIDE AI SKILL LEVELS
-// AI Skill for each side is set (in part using variables from the init.sqf file).
-
-if (f_isFriendlyBLU == 1) then {f_skillBLU = _skillFriendly} else {f_skillBLU = _skillEnemy};
-if (f_isFriendlyRES == 1) then {f_skillRES = _skillFriendly} else {f_skillRES = _skillEnemy};
-if (f_isFriendlyOPF == 1) then {f_skillOPF = _skillFriendly} else {f_skillOPF = _skillEnemy};
-if (f_isFriendlyCIV == 1) then {f_skillCIV = _skillFriendly} else {f_skillCIV = _skillEnemy};
-
-// DEBUG
-if (f_var_debugMode == 1) then
-{
-	_strSkillFriendly = str _skillFriendly;
-	_strSkillEnemy = str _skillEnemy;
-	player sideChat format ["DEBUG (f\common\f_setAISkill.sqf): _skillFriendly = %1",_strSkillFriendly];
-	player sideChat format ["DEBUG (f\common\f_setAISkill.sqf): _skillEnemy = %1",_strSkillEnemy];
-	player sideChat format ["DEBUG (f\common\f_setAISkill.sqf): f_skillBLU = %1",f_skillBLU];
-	player sideChat format ["DEBUG (f\common\f_setAISkill.sqf): f_skillRES = %1",f_skillRES];
-	player sideChat format ["DEBUG (f\common\f_setAISkill.sqf): f_skillOPF = %1",f_skillOPF];
-	player sideChat format ["DEBUG (f\common\f_setAISkill.sqf): f_skillCIV = %1",f_skillCIV];
-};
 
 // ====================================================================================
 
 // SET SKILL LEVELS FOR ALL LOCAL AI
 // AI Skill for all local AIs is set using side levels (see above).
 
-{_x setSkill f_skillBLU} forEach _localBLUUnits;
-{_x setSkill f_skillRES} forEach _localRESUnits;
-{_x setSkill f_skillOPF} forEach _localOPFUnits;
-{_x setSkill f_skillCIV} forEach _localCIVUnits;
+{[_x,f_skillBlu] call f_fnc_setAISkill} forEach _localBLUUnits;
+{[_x,f_skillRes] call f_fnc_setAISkill} forEach _localRESUnits;
+{[_x,f_skillOpf] call f_fnc_setAISkill} forEach _localOPFUnits;
+{[_x,f_skillCiv] call f_fnc_setAISkill} forEach _localCIVUnits;
 
 // DEBUG (SPECIAL)
 // if (f_var_debugMode == 1) then

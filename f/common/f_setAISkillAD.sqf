@@ -2,70 +2,22 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
+// MAKE SURE KEY VARIABLES ARE DEFINED
+// If one of the two required global variables is not defined we default it to medium skill
 
-#include "f_waitForJIP.sqf"
-
-// ====================================================================================
-
-// DECLARE VARIABLES AND FUNCTIONS
-
-private ["_param_AISkill_BLUFOR","_param_AISkill_OPFOR","_units","_localUnits","_localBLUUnits","_localRESUnits","_localOPFUnits","_localCIVUnits","_strMen","_strLocalUnits","_strLocalBLUUnits","_strLocalRESUnits","_strLocalOPFUnits","_strLocalCIVUnits","_superSkill","_highSkill","_mediumSkill","_lowSkill","_skillSideBLUFOR","_skillSideOPFOR"];
-
-// ====================================================================================
-
-// WAIT FOR COMMON VARIABLES TO BE SET
-// Before executing this script, we wait for the script 'f_setCommonVars.sqf' to run:
-
-waitUntil {scriptDone f_script_setLocalVars};
-
-// ====================================================================================
+if (isNil "f_param_AISkill_BLUFOR") then {f_param_AISkill_BLUFOR = 2};
+if (isNil "f_param_AISkill_OPFOR") then {f_param_AISkill_OPFOR = 2};
+if (isNil "f_isFriendlyToBLU_RES") exitWith {player sidechat format ["DEBUG (f\common\f_setAISkillAD.sqf): f_isFriendlyToBlu_RES is undefined. Needs to be set in init.sqf!"]};
+if (isNil "f_isFriendlyToBLU_CIV") exitWith {player sidechat format ["DEBUG (f\common\f_setAISkillAD.sqf): f_isFriendlyToBLU_CIV is undefined. Needs to be set in init.sqf!"]};
 
 // SET KEY VARIABLES
 // AI Skills are set in the parameters screen (during mission set-up).
 
 _param_AISkill_BLUFOR = f_param_AISkill_BLUFOR;
 _param_AISkill_OPFOR = f_param_AISkill_OPFOR;
-_superSkill = 1.00;
-_highSkill = 0.75;
-_mediumSkill = 0.50;
-_lowSkill = 0.25;
 
-// Using a common variable, we will create an array containing all men.
-
-_units = f_var_units;
-
-// We split out the contents of _units - first by locality, then by side.
-
-_localUnits = [];
-_localBLUUnits = [];
-_localRESUnits = [];
-_localOPFUnits = [];
-_localCIVUnits = [];
-
-{if (local _x) then {_localUnits = _localUnits + [_x]}} forEach _units;
-{if ((side _x) == west) then {_localBLUUnits = _localBLUUnits + [_x]}} forEach _localUnits;
-{if ((side _x) == resistance) then {_localRESUnits = _localRESUnits + [_x]}} forEach _localUnits;
-{if ((side _x) == east) then {_localOPFUnits = _localOPFUnits + [_x]}} forEach _localUnits;
-{if ((side _x) == civilian) then {_localCIVUnits = _localCIVUnits + [_x]}} forEach _localUnits;
-
-// DEBUG
-if (f_var_debugMode == 1) then
-{
-	_strUnits = str _units;
-	_strLocalUnits = str _localUnits;
-	_strLocalBLUUnits = str _localBLUUnits;
-	_strLocalRESUnits = str _localRESUnits;
-	_strLocalOPFUnits = str _localOPFUnits;
-	_strLocalCIVUnits = str _localCIVUnits;
-	player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): _units = %1",_strUnits];
-	player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): _localUnits = %1",_strLocalUnits];
-	player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): _localBLUUnits = %1",_strLocalBLUUnits];
-	player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): _localRESUnits = %1",_strLocalRESUnits];
-	player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): _localOPFUnits = %1",_strLocalOPFUnits];
-	player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): _localCIVUnits = %1",_strLocalCIVUnits];
-};
+_skillSideBLUFOR = 0;
+_skillSideOPFOR = 0;
 
 // ====================================================================================
 
@@ -128,10 +80,10 @@ switch (_param_AISkill_OPFOR) do
 // ====================================================================================
 
 // ENABLE DEBUG MODE
-// If either _param_AISkill_BLUFOR or _param_AISkill_OPFOR is set to 99, debug mode is 
+// If either _param_AISkill_BLUFOR or _param_AISkill_OPFOR is set to 99, debug mode is
 // enabled; in this case _skillSideBLUFOR and _skillSideOPFOR are set to _lowSkill.
 
-if ((_param_AISkill_BLUFOR == 99) || (_param_AISkill_OPFOR == 99)) then 
+if ((_param_AISkill_BLUFOR == 99) || (_param_AISkill_OPFOR == 99)) then
 {
 	_skillSideBLUFOR = _lowSkill;
 	_skillSideOPFOR = _lowSkill;
@@ -161,21 +113,3 @@ if (f_var_debugMode == 1) then
 };
 
 // ====================================================================================
-
-// SET SKILL LEVELS FOR ALL LOCAL AI
-// AI Skill for all local AIs is set using side levels (see above).
-
-{_x setSkill f_skillBLU} forEach _localBLUUnits;
-{_x setSkill f_skillRES} forEach _localRESUnits;
-{_x setSkill f_skillOPF} forEach _localOPFUnits;
-{_x setSkill f_skillCIV} forEach _localCIVUnits;
-
-// DEBUG (SPECIAL)
-// if (f_var_debugMode == 1) then
-// {
-// 	{_x addEventHandler ["hit", {_v=_this select 0; _skillV = skill _v; player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): Skill %1 = %2",_v,_skillV]}];} forEach _localUnits;
-// };
-
-// ====================================================================================
-
-if (true) exitWith {};
