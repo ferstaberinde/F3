@@ -34,8 +34,7 @@ enableDebugConsole = 1;
 
 respawn = 1;
 respawndelay = 3;
-
-// respawnTemplates[] = {"Spectator"};
+respawnTemplates[] = {"f_Spectator"};
 
 // ============================================================================================
 
@@ -205,6 +204,24 @@ class RscTitles {
 
 // ============================================================================================
 
+// F3 - Spectator Script
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+class CfgRespawnTemplates
+{
+	// Class used in respawnTemplates entry
+	class f_Spectator
+	{
+		onPlayerRespawn = "f_fnc_cam_init";
+	};
+};
+
+// contains configs for the UI.
+#include "f\spect\config.hpp"
+
+
+// ============================================================================================
+
 // F3 - Briefing Template
 // Credits: BIS - Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -299,6 +316,11 @@ class CfgFunctions
 			{
 			};
 		};
+		class spect
+		{
+			file = "f\spect";
+			class cam_init{};
+		}
 	};
 };
 
