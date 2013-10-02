@@ -100,6 +100,12 @@ _medkit = "Medikit";
 // Night Vision Goggles (NVGoggles)
 _nvg = "NVGoggles_OPFOR";
 
+// Chemlights
+_chemgreen =  "Chemlight_green";
+_chemred = "Chemlight_red";
+_chemyellow =  "Chemlight_yellow";
+_chemblue = "Chemlight_blue";
+
 // Backpacks
 _bagsmall = "B_AssaultPack_dgtl";			// carries 120, weighs 20
 _bagmedium = "B_FieldPack_ocamo";				// carries 240, weighs 30
@@ -247,6 +253,13 @@ _backpack = {
 		// BACKPACK: GRENADIER (CO/DC/SL/FTL/G)
 		case "g":
 		{
+			// NO BACKPACK
+			if (f_param_backpacks == 0) then {
+				_unit addmagazines [_glriflemag,2];
+				_unit addmagazines [_glmag,1];
+				_unit addmagazines [_glsmokewhite,1];
+			};
+
 			// BACKPACK: LIGHT
 			if (f_param_backpacks == 1) then {
 				_unit addBackpack _bagsmall;
@@ -278,6 +291,7 @@ _backpack = {
 			if (f_param_backpacks == 0) then {
 				_unit addmagazines [_ARmag_Tr,1];
 			};
+
 			// BACKPACK: LIGHT (None for AR)
 			if (f_param_backpacks == 1) then {
 				_unit addBackpack _bagsmall;
@@ -331,6 +345,11 @@ _backpack = {
 		// BACKPACK: RIFLEMAN AT (RAT)
 		case "rat":
 		{
+			// NO BACKPACK
+			if (f_param_backpacks == 0) then {
+				_unit addmagazines [_riflemag,2];
+			};
+
 			// BACKPACK: LIGHT
 			if (f_param_backpacks == 1) then {
 				_unit addBackpack _bagsmall;
@@ -355,6 +374,11 @@ _backpack = {
 		// BACKPACK: RIFLEMAN (R)
 		case "r":
 		{
+			// NO BACKPACK
+			if (f_param_backpacks == 0) then {
+				_unit addmagazines [_riflemag,2];
+			};
+
 			// BACKPACK: LIGHT
 			if (f_param_backpacks == 1) then {
 				_unit addBackpack _bagsmall;
@@ -377,6 +401,11 @@ _backpack = {
 		// BACKPACK: CARABINEER (CAR)
 		case "car":
 		{
+			// NO BACKPACK
+			if (f_param_backpacks == 0) then {
+				_unit addmagazines [_carbinemag,2];
+			};
+
 			// BACKPACK: LIGHT
 			if (f_param_backpacks == 1) then {
 				_unit addBackpack _bagsmall;
@@ -442,6 +471,7 @@ _backpack = {
 				(unitBackpack _unit) addMagazineCargoGlobal [_MMGmag_tr, 2];
 			};
 		};
+
 
 		// BACKPACK: MAT GUNNER (MATG)
 		case "matg":

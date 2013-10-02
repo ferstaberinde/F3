@@ -24,13 +24,14 @@ private [
 "_rifle","_riflemag","_riflemag_tr",
 "_carbine","_carbinemag","_carbinemag_tr",
 "_smg","_smgmag","_smgmag_tr",
-"_bagmedium","_baglarge",
+"_bagsmall","_bagmedium","_baglarge",
 "_ATmine","_satchel",
 "_medkit","_rifle_attach",
 "_carbine_attach","_smg_attach",
 "_glrifle_attach","_AR_attach",
 "_MMG_attach","_SNrifle_attach"
-,"_APmine", "_nvg"
+,"_APmine", "_nvg",
+"_chemgreen","_chemred","_chemblue","_chemyellow"
 ];
 
 // ====================================================================================
