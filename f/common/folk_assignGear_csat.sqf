@@ -157,7 +157,7 @@ _APmine2 = "APERSMine_Range_Mag";
 _baseUniform = "U_O_CombatUniform_ocamo";
 _baseHelmet = "H_HelmetO_ocamo";
 _lightRig = "V_PlateCarrier1_rgr";
-_mediumRig = "V_PlateCarrier3_rgr"; 	// default for all classes
+_mediumRig = "V_PlateCarrier3_rgr"; 	// default for all infantry classes
 _heavyRig ="V_PlateCarrierGL_rgr";
 
 // Diver
