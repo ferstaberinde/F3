@@ -239,7 +239,7 @@ _backpack = {
 			_unit addBackpack _bagsmall;
 			clearMagazineCargoGlobal (unitBackpack _unit);
 			(unitBackpack _unit) addItemCargoGlobal [_medkit,1];
-			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
+			(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 4];
 			(unitBackpack _unit) addItemCargoGlobal [_firstaid, 4];
 			};
 
