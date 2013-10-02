@@ -10,7 +10,7 @@ private [
 "_glrifle","_glriflemag","_glriflemag_tr","_glmag",
 "_glsmokewhite","_glsmokegreen","_glsmokered",
 "_glflarewhite","_glflarered","_glflareyellow","_glflaregreen",
-"_AR","_ARmag",	"_ARmag_tr",
+"_AR","_ARmag","_ARmag_tr",
 "_MMG","_MMGmag","_MMGmag_tr",
 "_HMG","_HMGmount",
 "_RAT","_RATmag",

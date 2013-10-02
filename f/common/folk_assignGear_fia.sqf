@@ -155,8 +155,9 @@ _APmine2 = "APERSMine_Range_Mag";
 // Base
 _baseUniform = "U_IG_Guerilla1_1";
 _baseHelmet = "H_Shemag_olive";
-_lightRig = "V_Chestrig_khk"; // co,dc,ftl,medic,rat,matag,mmgag
-_heavyRig = "V_HarnessOGL_gry"; // ar,eng
+_lightRig = "V_Chestrig_khk"
+_mediumRig = "V_TacVest_khk"; 	// default for all classes
+_heavyRig ="V_HarnessOGL_gry";
 
 // Diver
 _diverUniform =  "U_B_Wetsuit";
