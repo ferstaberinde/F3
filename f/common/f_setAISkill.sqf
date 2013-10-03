@@ -15,13 +15,6 @@ private ["_units","_localUnits","_localBLUUnits","_localRESUnits","_localOPFUnit
 
 // ====================================================================================
 
-// WAIT FOR COMMON VARIABLES TO BE SET
-// Before executing this script, we wait for the script 'f_setCommonVars.sqf' to run:
-
-waitUntil {scriptDone f_script_setLocalVars};
-
-// ====================================================================================
-
 // DEFINE SKILL LEVELS
 // These values define the total skill level as set by the parameter
 
@@ -54,12 +47,15 @@ f_randomDown = 0.15;
 
 // SET KEY VARIABLES
 
-// Using a common variable, we will create an array containing all men.
+// If an array of units was passed to the script we will use that, otherwise we use a common variable containing all men and vehicles
 
-_units = f_var_units;
+if (count _this > 0) then {
+	_units = _this;
+} else {
+	_units = allUnits;
+};
 
 // The default skill levels for all sides. They are overriden by any parameters set.
-
 
 f_skillBlu = _mediumSkill;
 f_skillRes = _mediumSkill;

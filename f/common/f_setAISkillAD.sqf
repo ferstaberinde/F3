@@ -5,8 +5,8 @@
 // MAKE SURE KEY VARIABLES ARE DEFINED
 // If one of the two required global variables is not defined we default it to medium skill
 
-if (isNil "f_param_AISkill_BLUFOR") then {f_param_AISkill_BLUFOR = 2};
-if (isNil "f_param_AISkill_OPFOR") then {f_param_AISkill_OPFOR = 2};
+if (isNil "f_param_AISkill_BLUFOR") then {f_param_AISkill_BLUFOR = 1};
+if (isNil "f_param_AISkill_OPFOR") then {f_param_AISkill_OPFOR = 1};
 if (isNil "f_isFriendlyToBLU_RES") exitWith {player sidechat format ["DEBUG (f\common\f_setAISkillAD.sqf): f_isFriendlyToBlu_RES is undefined. Needs to be set in init.sqf!"]};
 if (isNil "f_isFriendlyToBLU_CIV") exitWith {player sidechat format ["DEBUG (f\common\f_setAISkillAD.sqf): f_isFriendlyToBLU_CIV is undefined. Needs to be set in init.sqf!"]};
 

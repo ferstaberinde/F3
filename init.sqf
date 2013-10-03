@@ -148,8 +148,8 @@ f_doNotRemoveBodies = [];
 // F3 - AI Skill Selector (Coop)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_isFriendly = [west,independent,civilian];
-// [] execVM "f\common\f_setAISkill.sqf";
+// f_isFriendly = [west,civilian];
+// []  execVM "f\common\f_setAISkill.sqf";
 
 // ====================================================================================
 

@@ -5,8 +5,8 @@
 // MAKE SURE KEY VARIABLES ARE DEFINED
 // If one of the two required global variables is not defined we default it to medium skill
 
-if (isNil "f_param_AISkill_Friendly") then {f_param_AISkill_Friendly = 2};
-if (isNil "f_param_AISkill_Enemy") then {f_param_AISkill_Enemy = 2};
+if (isNil "f_param_AISkill_Friendly") then {f_param_AISkill_Friendly = 1};
+if (isNil "f_param_AISkill_Enemy") then {f_param_AISkill_Enemy = 1};
 if (isNil "f_isFriendly") exitWith {player sidechat format ["DEBUG (f\common\f_setAISkillCoop.sqf): f_isFriendly is undefined. Needs to be set in init.sqf!"]};
 
 // SET KEY VARIABLES
