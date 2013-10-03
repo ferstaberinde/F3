@@ -2,6 +2,12 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
+// WAIT UNTIL THE MISSION HAS STARTED
+
+waitUntil {time > 1};
+
+// ====================================================================================
+
 // JIP CHECK
 // Prevents the script executing until the player has synchronised correctly:
 
@@ -15,6 +21,7 @@ private ["_units","_localUnits","_localBLUUnits","_localRESUnits","_localOPFUnit
 
 // ====================================================================================
 
+
 // DEFINE SKILL LEVELS
 // These values define the total skill level as set by the parameter
 
@@ -27,7 +34,7 @@ _lowSkill = 0.25;
 // These are recommended levels to avoid "laser" AI snipers. Change them accordingly if you are finding the AI to be too inaccurate or are using AI mods.
 
 f_skillSet = [
-0.7,		// aimingAccuracy
+0.6,		// aimingAccuracy
 1,		// aimingShake
 0.7,		// aimingSpeed
 1,		// endurance
@@ -47,13 +54,9 @@ f_randomDown = 0.15;
 
 // SET KEY VARIABLES
 
-// If an array of units was passed to the script we will use that, otherwise we use a common variable containing all men and vehicles
+// We use a common variable containing all men and vehicles
 
-if (count _this > 0) then {
-	_units = _this;
-} else {
-	_units = allUnits;
-};
+_units = allUnits;
 
 // The default skill levels for all sides. They are overriden by any parameters set.
 
@@ -72,7 +75,14 @@ _localRESUnits = [];
 _localOPFUnits = [];
 _localCIVUnits = [];
 
-{if (local _x && (count (_x getVariable ["f_skillarray",[]])) == 0) then {_localUnits = _localUnits + [_x]}} forEach _units;
+// To save processing power we stop looping through it once we hit the first unit that has already been touched by f_setAISkill as newly spawned units are always added to the beginning of the allUnits array
+{
+	if (count (_x getVariable ["f_skillarray",[]])) == 0) exitWith {};
+	if (local _x && () then {_localUnits = _localUnits + [_x]}
+} forEach _units;
+
+if (count _localUnits == 0) exitWith {};
+
 {if ((side _x) == west) then {_localBLUUnits = _localBLUUnits + [_x]}} forEach _localUnits;
 {if ((side _x) == resistance) then {_localRESUnits = _localRESUnits + [_x]}} forEach _localUnits;
 {if ((side _x) == east) then {_localOPFUnits = _localOPFUnits + [_x]}} forEach _localUnits;
@@ -106,10 +116,6 @@ if !(isNil "f_param_AISkill_Friendly" && isNil "f_param_AISkill_Enemy") then {
 if !(isNil "f_param_AISkill_BLUFOR" && isNil "f_param_AISkill_OPFOR") then {
 	 #include "f_setAISkillAD.sqf";
 };
-
-
-
-// ====================================================================================
 
 // SET SKILL LEVELS FOR ALL LOCAL AI
 // AI Skill for all local AIs is set using side levels (see above).
