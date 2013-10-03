@@ -77,7 +77,7 @@ _localCIVUnits = [];
 
 // To save processing power we stop looping through it once we hit the first unit that has already been touched by f_setAISkill as newly spawned units are always added to the beginning of the allUnits array
 {
-	if (count (_x getVariable ["f_skillarray",[]])) == 0) exitWith {};
+	if (count (_x getVariable ["f_skillarray",[]])) != 0) exitWith {};
 	if (local _x && () then {_localUnits = _localUnits + [_x]}
 } forEach _units;
 
