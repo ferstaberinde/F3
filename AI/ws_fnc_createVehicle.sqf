@@ -12,7 +12,7 @@
 // [pos,side,"vehicleclass",["option1","option2"],[no of guards,["guardclasses"],loaded],["BEHAVIOUR","COMBATMODE"],{code}] call ws_fnc_createVehicle
 //
 // RETURNS
-// [created vehicle,group of vehicle,initially parsed arguments]
+// [created vehicle,group of vehicle,guarding group, initially parsed arguments]
 //
 // PARAMETERS
 // 1. position, can be array, object or marker											| MANDATORY
@@ -181,4 +181,4 @@ if (_debug) then {
 };
 
 //Script outputs the generated vehicle
-[_veh,_vehgrp,_this]
+[_veh,_vehgrp,_grp,_this]
