@@ -56,6 +56,7 @@ f_randomDown = 0.15;
 // We use a common variable containing all men and vehicles
 
 _units = allUnits ;
+if (count _this > 0) then {_units = _this};
 
 // The default skill levels for all sides. They are overriden by any parameters set.
 

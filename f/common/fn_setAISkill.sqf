@@ -35,7 +35,7 @@ waitUntil {count _skillarray == 10};
 _unit setSkill [_x,_skillarray select _forEachIndex];
 } forEach ['aimingAccuracy','aimingShake','aimingSpeed','endurance','spotDistance','spotTime','courage','reloadSpeed','commanding','general'];
 
-_unit setVariable ["f_skillarray",true];
+_unit setVariable ["f_setAISkill",true];
 
 // Returns true
 true
