@@ -16,7 +16,7 @@ _skillarray = _this select 1;
 // ====================================================================================
 
 // If a specific skill level was passed we update _skillArray using the new value.
-if (typename (_this select 1) == 'SCALAR') then {
+if (typename _skillarray == 'SCALAR') then {
 	_skill = _this select 1;
 	_skillArray = [];
 	for '_x' from 0 to 9 do {
@@ -35,8 +35,7 @@ waitUntil {count _skillarray == 10};
 _unit setSkill [_x,_skillarray select _forEachIndex];
 } forEach ['aimingAccuracy','aimingShake','aimingSpeed','endurance','spotDistance','spotTime','courage','reloadSpeed','commanding','general'];
 
-// We set a Variable on the processed unit to indicate it's changed skill and differentiate it from 'untouched' units
-_unit setVariable ['f_skillarray',_skillarray];
+_unit setVariable ["f_skillarray",true];
 
 // Returns true
 true

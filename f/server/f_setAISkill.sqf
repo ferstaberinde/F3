@@ -55,7 +55,7 @@ f_randomDown = 0.15;
 
 // We use a common variable containing all men and vehicles
 
-_units = allUnits;
+_units = allUnits ;
 
 // The default skill levels for all sides. They are overriden by any parameters set.
 
@@ -90,9 +90,8 @@ if !(isNil "f_param_AISkill_BLUFOR" && isNil "f_param_AISkill_OPFOR") then {
 // By using the BI function BIS_fnc_MP we ensure that AI is set to the correct level for all connected clients, including the server
 
 {
-	if (count (_x getVariable ["f_skillarray",[]]) != 0) exitWith {};
-
-	//´We change the value of skill to the appropiate one depending on the unit's side
+    if !(_x getVariable ["f_setAISkill",false]) then {
+	// We change the value of skill to the appropiate one depending on the unit's side
 	switch (side _x) do {
 		case west: {_skill = f_skillBLU};
 		case east: {_skill = f_skillOPF};
@@ -101,14 +100,15 @@ if !(isNil "f_param_AISkill_BLUFOR" && isNil "f_param_AISkill_OPFOR") then {
 	};
 
 	_skillArray = [];
-	for "_x" from 0 to 9 do {
-		_skilllevel = (f_skillSet select _x) * _skill;
+	for "_i" from 0 to 9 do {
+		_skilllevel = (f_skillSet select _i) * _skill;
 		_random =  random f_randomUp - random f_randomDown;
-		_skillArray set [_x, (_skilllevel + _random)];
+		_skillArray set [_i, (_skilllevel + _random)];
 	};
 
 	// We run the function that sets the skills on all clients
 	[[_x,_skillArray],"f_fnc_setAISkill"] spawn BIS_fnc_MP;
+     };
 
 } forEach _units;
 
