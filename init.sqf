@@ -149,7 +149,7 @@ f_doNotRemoveBodies = [];
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // f_isFriendly = [west,civilian];
-// []  execVM "f\common\f_setAISkill.sqf";
+// []  execVM "f\server\f_setAISkill.sqf";
 
 // ====================================================================================
 
@@ -158,7 +158,7 @@ f_doNotRemoveBodies = [];
 
 // f_isFriendlyToBLU_RES = 1;
 // f_isFriendlyToBLU_CIV = 1;
-// [] execVM "f\common\f_setAISkill.sqf";
+// [] execVM "f\server\f_setAISkill.sqf";
 
 // ====================================================================================
 
