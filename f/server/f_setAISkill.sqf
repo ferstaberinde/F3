@@ -97,8 +97,16 @@ if !(isNil "f_param_AISkill_BLUFOR" && isNil "f_param_AISkill_OPFOR") then {
 		case civilian: {_skill = f_skillCIV};
 	};
 
+	_skillArray = [];
+	for "_x" from 0 to 9 do {
+		_skilllevel = (f_skillSet select _x) * _skill;
+		_random =  random f_randomUp - random f_randomDown;
+		_skillArray set [_x, (_skilllevel + _random)];
+	};
+
 	// We run the function that sets the skills on all clients
-	[[_x,_skill],"f_fnc_setAISkill"] spawn BIS_fnc_MP;
+	[[_x,_skillArray],"f_fnc_setAISkill"] spawn BIS_fnc_MP;
+
 } forEach _units;
 
 // DEBUG (SPECIAL)
