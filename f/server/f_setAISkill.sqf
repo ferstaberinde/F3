@@ -16,7 +16,7 @@ waitUntil {time > 1};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_units","_skill","_strMen","_strLocalUnits","_strLocalBLUUnits","_strLocalRESUnits","_strLocalOPFUnits","_strLocalCIVUnits","_superSkill","_highSkill","_mediumSkill","_lowSkill"];
+private ["_units","_skill","_skillarray","_superSkill","_highSkill","_mediumSkill","_lowSkill"];
 
 // ====================================================================================
 
@@ -48,6 +48,9 @@ f_skillSet = [
 // These are the ranges in which skills can differ between two soldiers on the same skill level.
 f_randomUp = 0.15;
 f_randomDown = 0.15;
+
+// We make the global variables known to all clients
+{publicVariable _x} forEach ["f_skillSet","f_randomUP","f_randomDown"];
 
 // ====================================================================================
 
@@ -84,13 +87,17 @@ if !(isNil "f_param_AISkill_BLUFOR" && isNil "f_param_AISkill_OPFOR") then {
 // By using the BI function BIS_fnc_MP we ensure that AI is set to the correct level for all connected clients, including the server
 
 {
-if (count (_x getVariable ["f_skillarray",[]]) != 0) exitWith {};
-switch (side _x) do {
-	case west: {_skill = f_skillBLU};
-	case east: {_skill = f_skillOPF};
-	case independent: {_skill = f_skillRES};
-	case civilian: {_skill = f_skillCIV};
-};
+	if (count (_x getVariable ["f_skillarray",[]]) != 0) exitWith {};
+
+	//´We change the value of skill to the appropiate one depending on the unit's side
+	switch (side _x) do {
+		case west: {_skill = f_skillBLU};
+		case east: {_skill = f_skillOPF};
+		case independent: {_skill = f_skillRES};
+		case civilian: {_skill = f_skillCIV};
+	};
+
+	// We run the function that sets the skills on all clients
 	[[_x,_skill],"f_fnc_setAISkill"] spawn BIS_fnc_MP;
 } forEach _units;
 
