@@ -49,9 +49,6 @@ f_skillSet = [
 f_randomUp = 0.15;
 f_randomDown = 0.15;
 
-// We make the global variables known to all clients
-{publicVariable _x} forEach ["f_skillSet","f_randomUP","f_randomDown"];
-
 // ====================================================================================
 
 // SET KEY VARIABLES
@@ -79,6 +76,12 @@ if !(isNil "f_param_AISkill_Friendly" && isNil "f_param_AISkill_Enemy") then {
 if !(isNil "f_param_AISkill_BLUFOR" && isNil "f_param_AISkill_OPFOR") then {
 	 #include "f_setAISkillAD.sqf";
 };
+
+// ====================================================================================
+
+// BROADCAST PUBLIC VARIABLES
+// We make the global variables known to all clients
+{publicVariable _x} forEach ["f_skillSet","f_randomUP","f_randomDown","f_skillBLU","f_skillOPF","f_skillRES","f_skillCIV"];
 
 // ====================================================================================
 
