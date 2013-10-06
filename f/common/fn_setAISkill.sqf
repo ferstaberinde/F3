@@ -26,8 +26,6 @@ if (typename _skillarray == 'SCALAR') then {
 	};
 };
 
-waitUntil {count _skillarray == 10};
-
 // ====================================================================================
 
 // We loop through all skilltypes and set them for the individual unit
