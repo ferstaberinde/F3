@@ -63,36 +63,7 @@ switch (_typeofUnit) do
 		_unit addGoggles _diverGlasses;
 		};
 	};
-	case "eng":
-	{
-		if(!isnil "_baseUniform" && _baseUniform != "") then
-		{
-		_unit adduniform _baseUniform;
-		};
-		if(!isnil "_baseHelmet" && _baseHelmet != "") then
-		{
-		_unit addheadgear _baseHelmet;
-		};
-		if(!isnil "_heavyRig" && _heavyRig != "") then
-		{
-		_unit addvest _heavyRig;
-		};
-	};
-	case "ar":
-	{
-		if(!isnil "_baseUniform" && _baseUniform != "") then
-		{
-		_unit adduniform _baseUniform;
-		};
-		if(!isnil "_baseHelmet" && _baseHelmet != "") then
-		{
-		_unit addheadgear _baseHelmet;
-		};
-		if(!isnil "_heavyRig" && _heavyRig != "") then
-		{
-		_unit addvest _heavyRig;
-		};
-	};
+
 	default
 	{
 		if(!isnil "_baseUniform" && _baseUniform != "") then
@@ -103,9 +74,9 @@ switch (_typeofUnit) do
 		{
 		_unit addheadgear _baseHelmet;
 		};
-		if(!isnil "_lightRig" && _lightRig != "") then
+		if(!isnil "_mediumrig" && _mediumrig != "") then
 		{
-		_unit addvest _lightRig;
+		_unit addvest _mediumrig;
 		};
 	};
 };
