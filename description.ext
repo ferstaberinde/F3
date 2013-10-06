@@ -79,7 +79,7 @@ class Params
                 title = "$STR_f_param_backpacks";
                 values[] = {0,1,2};
                 texts[] = {"Off","Light","Heavy"};
-                default = 2;
+                default = 1;
                 code = "f_param_backpacks = %1";
         };
 
@@ -184,21 +184,6 @@ class Params
 
 // F3 - End of Params code blocks.
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
-
-};
-
-// ============================================================================================
-
-class RscTitles {
-
-// ============================================================================================
-
-// F3 - Name Tags
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// #include "f\common\f_recog\recogOverlay.hpp"
-
-// ============================================================================================
 
 };
 
