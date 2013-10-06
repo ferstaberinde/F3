@@ -10,7 +10,7 @@ private [
 "_glrifle","_glriflemag","_glriflemag_tr","_glmag",
 "_glsmokewhite","_glsmokegreen","_glsmokered",
 "_glflarewhite","_glflarered","_glflareyellow","_glflaregreen",
-"_AR","_ARmag",	"_ARmag_tr",
+"_AR","_ARmag","_ARmag_tr",
 "_MMG","_MMGmag","_MMGmag_tr",
 "_HMG","_HMGmount",
 "_RAT","_RATmag",
@@ -24,13 +24,14 @@ private [
 "_rifle","_riflemag","_riflemag_tr",
 "_carbine","_carbinemag","_carbinemag_tr",
 "_smg","_smgmag","_smgmag_tr",
-"_bagmedium","_baglarge",
+"_bagsmall","_bagmedium","_baglarge",
 "_ATmine","_satchel",
 "_medkit","_rifle_attach",
 "_carbine_attach","_smg_attach",
 "_glrifle_attach","_AR_attach",
 "_MMG_attach","_SNrifle_attach"
-,"_APmine", "_nvg"
+,"_APmine", "_nvg",
+"_chemgreen","_chemred","_chemblue","_chemyellow"
 ];
 
 // ====================================================================================

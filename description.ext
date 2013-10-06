@@ -80,7 +80,7 @@ class Params
                 title = "$STR_f_param_backpacks";
                 values[] = {0,1,2};
                 texts[] = {"Off","Light","Heavy"};
-                default = 2;
+                default = 1;
                 code = "f_param_backpacks = %1";
         };
 
