@@ -79,8 +79,16 @@ switch (_type) do
 // handles dropboxes
     case "LBListSelChanged":
     {
-        _unit = f_cam_units select (_args select 1);
-        if(!isnil "_unit") then
+        _unit = objNull;
+        if(f_cam_playersOnly)
+        {
+            _unit = f_cam_players select (_args select 1);
+        }
+        else
+        {
+            _unit = f_cam_units select (_args select 1);
+        };
+        if(isNull _unit) then
         {
         f_cam_camera camSetTarget _unit;
         f_cam_curTarget = _unit;
