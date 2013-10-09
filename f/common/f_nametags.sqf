@@ -8,19 +8,22 @@
 #include "f_waitForJIP.sqf"
 
 // ====================================================================================
-// pre stuff
 
+// SET GLOBAL VARIABLES
+
+F_COLOR_NAMETAGS =  [1,1,1,0.9]; // The color for the player names in [red,blue,green,opacity]
+F_FONT_NAMETAGS = "EtelkaMonospaceProBold"; // Font for the names
+F_SIZE_NAMETAGS = 0.05; // The size the names are displayed in
+F_KEY_NAMETAGS =  "TeamSwitch"; // The action key that will be used to toggle the name tags. See possible keys here: http://community.bistudio.com/wiki/Category:Key_Actions
 
 F_DIST_NAMETAGS = _this select 0;
-F_FONT_NAMETAGS = "EtelkaMonospaceProBold"; // change font here if you want
 F_DRAW_NAMETAGS = false;
-
 
 waitUntil {isNull (findDisplay 46)}; // some misc functions for toggleing nametags (T)
 F_KEYUP_NAMETAG = {
 	_key = _this select 1;
 	_handeld = false;
-	if(_key == 20) then
+	if(_key == (actionKeys F_KEY_NAMETAGS) select 0) then
 	{
 		_handeld = true;
 	};
@@ -30,7 +33,7 @@ F_KEYUP_NAMETAG = {
 F_KEYDOWN_NAMETAG = {
 	_key = _this select 1;
 	_handeld = false;
-	if(_key == 20) then
+	if(_key == (actionKeys F_KEY_NAMETAGS) select 0) then
 	{
 		F_DRAW_NAMETAGS = !F_DRAW_NAMETAGS;
 
@@ -39,13 +42,14 @@ F_KEYDOWN_NAMETAG = {
 	_handeld;
 };
 // ====================================================================================
-// gotta wait until after init to add handlers
-sleep 0.1;
-
+// We wait a few seconds into the mission
+sleep 5;
 
 (findDisplay 46) displayAddEventHandler   ["keyup", "_this call F_KEYUP_NAMETAG"];
 (findDisplay 46) displayAddEventHandler   ["keydown", "_this call F_KEYDOWN_NAMETAG"];
 
+// NOTIFY PLAYER ABOUT NAMETAGS
+hintsilent format ["Press %1 to toggle name tags",actionKeysNames F_KEY_NAMETAGS];
 
 // ====================================================================================
 // the real code.
@@ -60,7 +64,7 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 		if(side _x == side player && _x != player) then
 		{
 			_pos = visiblePosition _x;
-			drawIcon3D ["", [1,1,1,0.6], [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  name _x, 0, 0.04, F_FONT_NAMETAGS];
+			drawIcon3D ["", F_COLOR_NAMETAGS, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  name _x, 0,F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 		};
 	}
 	else
@@ -70,7 +74,7 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 		_alternate = 0;
 		{
 			_prefix = "P:";
-			_color = [1,1,1,0.6];
+			_color = F_COLOR_NAME;
 			if(driver _veh == _x) then
 			{
 				_prefix = "D:";
@@ -98,11 +102,11 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 				{
 					_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier");
 					_freeSlots = _veh emptyPositions "cargo";
-				drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2(%3/%4)",_prefix,name _x,(_maxSlots-_freeSlots),_maxSlots], 0, 0.04, F_FONT_NAMETAGS];
+				drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2(%3/%4)",_prefix,name _x,(_maxSlots-_freeSlots),_maxSlots], 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 				}
 				else
 				{
-					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, 0.04, F_FONT_NAMETAGS];
+					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 				};
 			}
 			else
@@ -111,14 +115,14 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 				{
 					_pos = _veh modeltoworld (_veh selectionPosition "gunnerview");
 					_visPos = visiblePosition _x;
-					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_visPos select 2) + 2], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, 0.04, F_FONT_NAMETAGS];
+					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_visPos select 2) + 2], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 				}
 				else
 				{
 					_pos = visiblePosition _x;
 					_angle = (getdir _veh)+180;
 					_pos = [((_pos select 0) + sin(_angle)*(0.6*_inc)) , (_pos select 1) + cos(_angle)*(0.6*_inc),_pos select 2];
-					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 1.5], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, 0.04, F_FONT_NAMETAGS];
+					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 1.5], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 					_inc = _inc + 1;
 				};
 			};
