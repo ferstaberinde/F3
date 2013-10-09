@@ -15,7 +15,7 @@
 // [created group,arguments]
 //
 // PARAMETERS
-// 1. position as array [x,y,z]									| MANDATORY
+// 1. position (can be object, marker or array)							| MANDATORY
 // 2. Side as west,east,resistance or civilian							| MANDATORY
 // 3 The size of the group (any integer)								| MANDATORY
 // 4. Array containing two sub arrays:								| MANDATORY
@@ -47,13 +47,14 @@ if (_count > 4) then {_code = _this select 4;};
 //Fault checks
 //Checking the variables we have enough against what we should have
 {[_x,["SIDE"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_side];
-{[_x,["ARRAY"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_commonclasses,_forcedclasses,_pos];
+{[_x,["ARRAY"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_commonclasses,_forcedclasses];
 {[_x,["SCALAR"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_size];
 {[_x,["STRING","CODE"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_code];
 
 //Creating the group
 _grp = createGroup _side;
 
+_pos = [_this select 0,0,0,0,false,false,true] call ws_fnc_getPos;
 //REWRITE: assign folk gear ?
 //Create the group leader around who the group assembles
 _unit = _grp createUnit [_forcedclasses select 0,_pos,[],0,"NONE"];

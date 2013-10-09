@@ -27,4 +27,4 @@ If your mission does have a description.ext open the descripion.ext inside ws_fn
 
 DOCUMENTATION
 
-All major functions are documented in themselves. To see how they work open their .sqf with a text editor or their pages on github. If you're running ArmA 3 then you can also seem them all in the editor when opening the function viewer (CTRL+G). Make sure to select "missionConfigFile" in the top-left drop-down menu.
+All major functions are documented in themselves. To see how they work open their .sqf with a text editor or their pages on github. If you're running ArmA 3 then you can also seem them all in the editor when opening the function viewer (CTRL+F). Make sure to select "missionConfigFile" in the top-left drop-down menu.

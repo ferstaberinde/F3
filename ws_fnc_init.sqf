@@ -48,7 +48,7 @@ if !(ws_game_a3) then {
 	ws_fnc_attachLight = compile preprocessfile "ws_fnc\tools\ws_fnc_attachLight.sqf";
 
 	//AI Functions
-	ws_fnc_enterBuilding = compile preprocessfile "ws_fnc\AI\ws_fnc_enterBuilding.sqf";
+	ws_fnc_enterBuilding = compile preprocessfile "ws_fnc\AI\ws_fnc_enterBuildings.sqf";
 	ws_fnc_taskDefend = compile preprocessfile "ws_fnc\AI\ws_fnc_taskDefend.sqf";
 	ws_fnc_taskCrew = compile preprocessfile "ws_fnc\AI\ws_fnc_taskCrew.sqf";
 	ws_fnc_createGroup = compile preprocessfile "ws_fnc\AI\ws_fnc_createGroup.sqf";
