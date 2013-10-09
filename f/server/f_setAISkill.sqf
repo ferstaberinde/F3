@@ -33,8 +33,8 @@ _lowSkill = 0.25;
 // These are recommended levels to avoid "laser" AI snipers. Change them accordingly if you are finding the AI to be too inaccurate or are using AI mods.
 
 f_skillSet = [
-0.5,		// aimingAccuracy
-1,		// aimingShake
+0.55,		// aimingAccuracy
+0.6,		// aimingShake
 0.7,		// aimingSpeed
 1,		// endurance
 0.5,		// spotDistance
