@@ -44,7 +44,7 @@ if !(ws_game_a3) then {
 	ws_fnc_selectRandom = compile preprocessfile "ws_fnc\tools\ws_fnc_selectRandom.sqf";
 	ws_fnc_switchLights = compile preprocessfile "ws_fnc\tools\ws_fnc_switchLights.sqf";
 	ws_fnc_attachLight = compile preprocessfile "ws_fnc\tools\ws_fnc_attachLight.sqf";
-	ws_fnc_loadGroups = compile preprocessfile "ws_fnc\tools\ws_fnc_loadGroups.sqf";
+	ws_fnc_loadVehicle = compile preprocessfile "ws_fnc\tools\ws_fnc_loadVehicle.sqf";
 
 	//GetPos Functions
 	ws_fnc_getPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_getPos.sqf";

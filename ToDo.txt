@@ -1,3 +1,0 @@
-Externalize various functions in getPos
-Ambush function
-Patrol function
