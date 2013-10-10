@@ -12,9 +12,10 @@
 // SET GLOBAL VARIABLES
 
 // MODIFYABLE
-F_COLOR_NAMETAGS =  [1,1,1,0.9]; // The color for the player names in [red,blue,green,opacity]
+F_COLOR_NAMETAGS =  [1,1,1,0.9]; // The color for infantry and units in vehicle cargo (in [red,green, blue, opacity])
+F_COLOR2_NAMETAGS = [0,0,1,0.9]; // The color for units in driver, gunner and other vehicle positions positions
+F_SIZE_NAMETAGS = 0.04; // The size the names are displayed in
 F_FONT_NAMETAGS = "EtelkaMonospaceProBold"; // Font for the names
-F_SIZE_NAMETAGS = 0.05; // The size the names are displayed in
 F_KEY_NAMETAGS =  "TeamSwitch"; // The action key that will be used to toggle the name tags. See possible keys here: http://community.bistudio.com/wiki/Category:Key_Actions
 
 // SCRIPTSIDE
@@ -78,26 +79,26 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 		_alternate = 0;
 		{
 			_prefix = "P:";
-			_color = F_COLOR_NAME;
+			_color = F_COLOR_NAMETAGS;
 			if(driver _veh == _x) then
 			{
 				_prefix = "D:";
-				_color = [0,0,1,0.6];
+				_color = F_COLOR2_NAMETAGS;
 			};
 			if(gunner _veh == _x) then
 			{
 				_prefix = "G:";
-				_color = [0,0,1,0.6];
+				_color = F_COLOR2_NAMETAGS;
 			};
 			if(commander _veh == _x) then
 			{
 				_prefix = "C:";
-				_color = [0,0,1,0.6];
+				_color = F_COLOR2_NAMETAGS;
 			};
 			if(assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x) then
 			{
 				_prefix = "G:";
-				_color = [0,0,1,0.6];
+				_color = F_COLOR2_NAMETAGS;
 			};
 			_pos = visiblePosition _x;
 			if(_pos distance (visiblePosition (driver _veh)) > 0.1 || driver _veh == _x) then
