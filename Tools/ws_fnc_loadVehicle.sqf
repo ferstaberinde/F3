@@ -22,7 +22,7 @@ _count = count _this;
 _veh = _this select 0;
 _units = _this select 1;
 
-if (typeName _this select 1 == "GROUP") then {
+if (typeName (_this select 1) == "GROUP") then {
 	_grps = [_this select 1];
 
 	[_veh,["OBJECT"],"ws_fnc_loadVehicle"] call ws_fnc_typecheck;

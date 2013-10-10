@@ -113,26 +113,21 @@ _vehgrp = _grp;
 if (_guards > 0) then {
 	_grp = createGroup _side;
 
-	if !(_load) then {
-		for "_x" from 1 to _guards do {
+	for "_x" from 1 to _guards do {
 		_unit = _grp createUnit [_guardclasses call ws_fnc_selectRandom, getPos _veh, [], 2, "NONE"];
-		};
-	} else
-	{
-		_cargospace = getNumber(configfile >> "CfgVehicles" >> _type >> "transportSoldier");
-		for "_x" from 1 to _cargospace do {
-		if (_x > _guards) exitWith {};
-		_unit = _grp createUnit [_guardclasses call ws_fnc_selectRandom, getPos _veh, [], 2, "NONE"];
-		_unit assignAsCargo _veh; _unit moveInCargo _veh;
-		};
-			if (_guards > _cargospace) then {
-				_grp = createGroup _side;
-
-				for "_x" from 1 to (_guards - _cargospace) do {
-				_unit = _grp createUnit [_guardclasses call ws_fnc_selectRandom, getPos _veh, [], 2, "NONE"];
-				};
-			};
 	};
+
+	if (_load) then {
+		_guards = [_veh,_grp] call ws_fnc_loadVehicle;
+
+		if (count _guards > 0) then {
+			_grp = createGroup _side;
+			{[_x] joinSilent _grp} forEach _guards;
+			[_grp,getPos _veh,["hold",50]] call ws_fnc_addWaypoint;
+		};
+	} else {
+		[_grp,getPos _veh,["hold",50]] call ws_fnc_addWaypoint;
+	}
 };
 
 // Set the extra options for the vehicle
