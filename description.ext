@@ -11,26 +11,33 @@ class CfgFunctions
 	{
 		class init
 		{
-		class init {file = "ws_fnc\ws_fnc_init.sqf";postInit = 1;};
+			class init {file = "ws_fnc\ws_fnc_init.sqf";postInit = 1;};
 		};
 		class debug
 		{
-		class debugText {file = "ws_fnc\dbg\ws_fnc_debugText.sqf";};
-		class typeCheck {file = "ws_fnc\dbg\ws_fnc_typeCheck.sqf";};
-		class clipboardCode {file = "ws_fnc\dbg\ws_fnc_clipBoardcode.sqf";};
-		class copyPos {file = "ws_fnc\dbg\ws_fnc_copypos.sqf";};
-		class countUnits {file = "ws_fnc\dbg\ws_fnc_countUnits.sqf";};
-		class debugTriggers {file = "ws_fnc\dbg\ws_fnc_debugTriggers.sqf";postInit = 1;};
+			class debugText {file = "ws_fnc\dbg\ws_fnc_debugText.sqf";};
+			class typeCheck {file = "ws_fnc\dbg\ws_fnc_typeCheck.sqf";};
+			class clipboardCode {file = "ws_fnc\dbg\ws_fnc_clipBoardcode.sqf";};
+			class copyPos {file = "ws_fnc\dbg\ws_fnc_copypos.sqf";};
+			class countUnits {file = "ws_fnc\dbg\ws_fnc_countUnits.sqf";};
+			class debugTriggers {file = "ws_fnc\dbg\ws_fnc_debugTriggers.sqf";postInit = 1;};
 		};
 		class tools
 		{
 			class selectRandom {file = "ws_fnc\tools\ws_fnc_selectRandom.sqf"};
 			class gameCheck {file = "ws_fnc\tools\ws_fnc_gamecheck.sqf";preInit = 1;};
-			class getPos {file = "ws_fnc\tools\ws_fnc_getPos.sqf";};
-			class getBPos {file = "ws_fnc\tools\ws_fnc_getBPos.sqf";};
 			class switchLights {file = "ws_fnc\tools\ws_fnc_switchLights.sqf";};
 			class attachLight {file = "ws_fnc\tools\ws_fnc_attachLight.sqf";};
+			class collectMarkers {file = "ws_fnc\tools\ws_fnc_collectMarkers.sqf"};
+			class loadGroups {file = "ws_fnc\tools\ws_fnc_loadGroups.sqf"};
 		};
+		class getPos
+		{
+			class getPos {file ="ws_fnc\getPos\ws_fnc_getPos.sqf";};
+			class nearestRoadPos {file = "ws_fnc\getPos\ws_fnc_NearestRoadPos.sqf";};
+			class nearestLandPos {file = "ws_fnc\getPos\ws_fnc_NearestLandPos.sqf";};
+			class getBPos {file = "ws_fnc\getPos\ws_fnc_getBPos.sqf";};
+		}
 		class AI
 		{
 			class createGroup {file = "ws_fnc\AI\ws_fnc_createGroup.sqf";};

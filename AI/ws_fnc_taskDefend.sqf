@@ -93,7 +93,7 @@ if (ws_game_a3) then {
 //Remove undesired classes from the array and populate the array containg military buildings in the area
 {
     if (!(str(_x buildingpos 1) == "[0,0,0]") && typeof _x in _milarray) then {_milbuildings = _milbuildings + [_x];_buildings = _buildings - [_x]};
-   if ((str(_x buildingpos _treshold) == "[0,0,0]") || (typeOf _x in _badarray)) then {_buildings = _buildings - [_x]};
+    if ((str(_x buildingpos _treshold) == "[0,0,0]") || (typeOf _x in _badarray)) then {_buildings = _buildings - [_x]};
 } foreach _buildings;
 
 //Man the statics

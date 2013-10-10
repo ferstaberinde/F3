@@ -11,16 +11,16 @@
 // Minimal:
 // [location] call ws_fnc_getPos;
 // Full:
-// [location,radius (int), [minDistance,maxDistance],[minAngle,maxAngle],road (bool), building allowed (bool), water allowed (bool)] call ws_fnc_getPos;
+// [location,radius (int), minDistance,angle,road (bool), building allowed (bool), water allowed (bool)] call ws_fnc_getPos;
 //
 // OUTPUT
 // Array: [x,y,z]
 //
 // PARAMETERS
-// 1. location can be String (Markername), Array [x,y,z] or Objectname									| MANDATORY
+// 1. location can be String (Markername), Array [x,y,z] or Objectname								| MANDATORY
 // 2. radius has to be int > 0 and defines the radius around the position 								| OPTIONAL - default is 0
 // 3. minimal distance from center, has to be int > 0 and > radius		 							| OPTIONAL - default is 0
-// 4. Minimal and maximal angle from center. Array: [minAngle,maxAngle] with both values being integers from 0- 360		| OPTIONAL - default is [0,360]
+// 4. Minimal and maximal angle from center. Array: [minAngle,maxAngle] with both values being integers from 0- 360	| OPTIONAL - default is [0,360]
 // 5. road (bool) forces pos to be placed on road 											| OPTIONAL - default is false
 // 6. building allowed (bool) enables the position to be in/on a building								| OPTIONAL - default is false
 // 7. water allowed (bool) enables the position to be on water as well								| OPTIONAL - default is false
@@ -52,7 +52,7 @@ _water = false;
 //Optional variables parsed
 if (_count > 1) then {_posradius = _this select 1;};
 if (_count > 2) then {_mindis = _this select 2;}; if (_mindis > _posradius) then {_mindis = _posradius * 2};
-if (_count > 3) then {_dir = random (((_this select 3) select 0) + ((_this select 3) select 1))};
+if (_count > 3) then {_dir = random (_this select 3)};
 if (_count > 4) then {_road = _this select 4;};
 if (_count > 5) then {_building = _this select 5;};
 if (_count > 6) then {_water = _this select 6;};
@@ -93,22 +93,12 @@ if (_posradius > 0) then {
 
 //If the position has to be on dry land
 if (!_water && (surfaceIsWater _pos)) then {
-	_i = 0;
-	_distance = 0;
-	_done = false;
-	while {!_done && _i <= 50} do {
-		for "_x" from 0 to 340 step 20 do {
-			_distance = _distance + 100;
-			_pos set [0,_posX + (_distance * sin _x)];
-			_pos set [1,_posY + (_distance * cos _x)];
-			if !(surfaceIsWater _pos) exitWith {_done = true};
-		};
-		_i = _i + 1;
-	};
+	_pos = [_pos] call ws_fnc_NearestLandPos;
 };
 
 //If building positions are disallowed
-if (!_building && (count (_pos nearObjects ["House",2]) >= 1)) then {
+if (!_building && (count (_pos nearObjects ["House",10]) >= 1)) then {
+	player sidechat "2";
 	_i = 0;
 	_distance = 0;
 	_done = false;
@@ -117,7 +107,7 @@ if (!_building && (count (_pos nearObjects ["House",2]) >= 1)) then {
 			_distance = _distance + 50;
 			_pos set [0,_posX + (_distance * sin _x)];
 			_pos set [1,_posY + (_distance * cos _x)];
-			if !(count (_pos nearObjects ["House",2]) >= 1) exitWith {_done = true};
+			if !(count (_pos nearObjects ["House",10]) >= 1) exitWith {_done = true};
 		};
 		_i = _i + 1;
 	};
@@ -125,19 +115,7 @@ if (!_building && (count (_pos nearObjects ["House",2]) >= 1)) then {
 
 //If the position is supposed to be on a road
 if (_road) then {
-	_i = 0;
-	_distance = 5;
-	_done = false;
-	while {!_done && _i <= 20} do {
-		_roads = _pos nearroads _distance;
-		if (count _roads > 0) then {
-			_pos = getPos (_roads call ws_fnc_selectRandom);
-			_done = true;
-		} else {
-		_distance = _distance + 100;
-		_i = _i + 1;
-		};
-	};
+	_pos = [_pos] call ws_fnc_NearestRoadPos;
 };
 
 if (_debug) then {
