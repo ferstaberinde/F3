@@ -30,6 +30,7 @@ class CfgFunctions
 			class attachLight {file = "ws_fnc\tools\ws_fnc_attachLight.sqf";};
 			class collectMarkers {file = "ws_fnc\tools\ws_fnc_collectMarkers.sqf"};
 			class loadGroups {file = "ws_fnc\tools\ws_fnc_loadGroups.sqf"};
+			class checkHC {file = "ws_fnc\tools\ws_fnc_checkHC.sqf"};
 		};
 		class getPos
 		{
