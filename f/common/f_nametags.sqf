@@ -47,14 +47,40 @@ F_KEYDOWN_NAMETAG = {
 	_handeld;
 };
 // ====================================================================================
-// We wait a few seconds into the mission
+
+// ADD BRIEFING SECTION
+// A section is added to the player's briefing to inform them about name tags being available.
+
+[] spawn {
+waitUntil {scriptDone f_script_briefing};
+
+player createDiaryRecord ["Diary", ["NameTags",
+format ["<br/>You can toggle name tags for friendly units on and off by pressing %1. This will display all player names in a distance of %3 m.<br/><br/>
+
+If you do not have an key bound for %2 this will be 'T' by default. If you want to bind the toggle to a different key bind your %2 key and click
+<execute expression=""
+F_ACTIONKEY_NAMETAGS = (actionKeys F_KEY_NAMETAGS) select 0;
+F_KEYNAME_NAMETAGS = actionKeysNames F_KEY_NAMETAGS;
+if (isNil 'F_ACTIONKEY_NAMETAGS') then {F_ACTIONKEY_NAMETAGS = 20; F_KEYNAME_NAMETAGS = 'T';};
+hintsilent 'Team switch key rebound!';
+"">here</execute>.
+",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DIST_NAMETAGS]
+]];
+
+// NOTIFY PLAYER ABOUT NAMETAGS VIA HINT
 sleep 5;
+hintsilent format ["Press %1 to toggle name tags", F_KEYNAME_NAMETAGS ];
+};
+
+// ====================================================================================
+
+// ADD EVENTHANDLERS
+// After the mission has initialized eventhandlers are added to the register keypresses.
+
+sleep 0.1;
 
 (findDisplay 46) displayAddEventHandler   ["keyup", "_this call F_KEYUP_NAMETAG"];
 (findDisplay 46) displayAddEventHandler   ["keydown", "_this call F_KEYDOWN_NAMETAG"];
-
-// NOTIFY PLAYER ABOUT NAMETAGS
-hintsilent format ["Press %1 to toggle name tags", F_KEYNAME_NAMETAGS ];
 
 // ====================================================================================
 // the real code.
@@ -107,7 +133,11 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 				{
 					_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier");
 					_freeSlots = _veh emptyPositions "cargo";
-				drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2(%3/%4)",_prefix,name _x,(_maxSlots-_freeSlots),_maxSlots], 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+					if (_maxSlots != 0) then {
+						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2(%3/%4)",_prefix,name _x,(_maxSlots-_freeSlots),_maxSlots], 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+					} else {
+						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+					};
 				}
 				else
 				{
