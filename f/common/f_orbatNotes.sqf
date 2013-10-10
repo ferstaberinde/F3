@@ -26,9 +26,9 @@ _groups = _groups - _hiddenGroups;
 
 // Loop through the group, print out group ID and leader name
 {
-	_mkrName = format ["mkr_%1",_x];
-	_orbatText = _orbatText + format["<marker name='%3'>%1</marker> %2", _x, name leader _x,_mkrname] + "<br />";
+	_orbatText = _orbatText + format["%1 %2", _x, name leader _x] + "<br />";
 } forEach _groups;
 
 // Insert final result into subsection ORBAT of section Notes
+waitUntil {scriptDone f_script_briefing};
 player createDiaryRecord ["diary", ["ORBAT", _orbatText]];
