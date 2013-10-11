@@ -29,6 +29,8 @@ _pos = _this select 1;
 _radius = 400; if (_count > 2) then {_radius = _this select 2;};
 _mindis = 100;
 
+if (_mindis > _radius) then {_radius = _mindis * 4};
+
 _side = side _grp;
 _sidesEnemy = _side call BIS_fnc_enemySides;
 

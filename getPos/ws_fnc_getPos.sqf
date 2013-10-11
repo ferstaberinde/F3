@@ -98,6 +98,7 @@ switch (typename _posradius) do {
 	};
 	case "BOOL": {
 	_pos = [_posloc] call ws_fnc_getPosInArea;
+}	;
 };
 
 
