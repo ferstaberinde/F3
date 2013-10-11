@@ -25,7 +25,7 @@ _area = _this select 0;
 _shape = "";
 _center = [];
 _pos = [];
-_dir = 0;
+_dir = 360;
 
 switch (typeName _area) do {
 	case "OBJECT": { _center = getPos _area;_area = triggerarea _area;  _shape = _area select 3; _dir = _area select 2;};
@@ -63,6 +63,10 @@ _vector = if (_shape) then {
 };
 
 // Rotate vector
+_vector = +_vector;
+_dir = -_dir;
+_pX = _vector select 0;
+_pY = _vector select 1;
 _vector set [0, (cos _dir)*_px - (sin _dir)*_py];
 _vector set [1, (sin _dir)*_px + (cos _dir)*_py];
 
