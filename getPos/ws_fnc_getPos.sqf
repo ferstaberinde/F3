@@ -74,12 +74,12 @@ _pos set [2,0];
 //Fault checks
 //Checking the variables we have against what we should have
 {[_x,["ARRAY"],"ws_fnc_getPos"] call ws_fnc_typecheck;}  forEach [_pos];
-[_posradius,["SCALAR","BOOLEAN"],"ws_fnc_getPos"] call ws_fnc_typecheck;
+[_posradius,["SCALAR","BOOL"],"ws_fnc_getPos"] call ws_fnc_typecheck;
 {[_x,["SCALAR"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_mindis,_dir,_posX,_posY];
 {[_x,["BOOL"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_road,_water];
 
 switch (typename _posradius) do {
-	case "SALAR": {
+	case "SCALAR": {
 		if (_mindis > _posradius) then {_mindis = _posradius * 2};
 
 		if (_posradius > 0) then {

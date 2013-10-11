@@ -39,7 +39,7 @@ _radius = _this select 2;
 [_radius,["SCALAR"],"ws_fnc_getPos"] call ws_fnc_typecheck;
 
 
-_pos = [_center,0,[0,360],false,true,true] call ws_fnc_getPos;
+_pos = [_center,0,360,false,true,true] call ws_fnc_getPos;
 
 for [{_i=0},{_i < (count _types)},{_i=_i+1}] do
 	{
