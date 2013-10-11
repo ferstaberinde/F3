@@ -42,6 +42,7 @@ class CfgFunctions
 			class betterVehicle {file = "ws_fnc\AI\ws_fnc_bettervehicle.sqf";};
 			class enterBuilding {file = "ws_fnc\AI\ws_fnc_enterBuilding.sqf";};
 			class taskDefend {file = "ws_fnc\AI\ws_fnc_taskDefend.sqf";};
+			class taskAmbush {file = "ws_fnc\AI\ws_fnc_taskAmbush.sqf";};
 			class taskCrew {file = "ws_fnc\AI\ws_fnc_taskCrew.sqf";};
 			class addWaypoint {file = "ws_fnc\AI\ws_fnc_addWaypoint.sqf";};
 			class setAIMode {file = "ws_fnc\AI\ws_fnc_setAIMode.sqf";};
