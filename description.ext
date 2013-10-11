@@ -1,10 +1,3 @@
-onLoadName = "WS Function Library";
-onLoadMission = "Testing, Development and Playground";
-author = "Wolfenswan [FA]";
-
-enableDebugConsole = 2;
-allowFunctionsRecompile = 1;
-
 class CfgFunctions
 {
 	class WS
@@ -29,13 +22,15 @@ class CfgFunctions
 			class switchLights {file = "ws_fnc\tools\ws_fnc_switchLights.sqf";};
 			class attachLight {file = "ws_fnc\tools\ws_fnc_attachLight.sqf";};
 			class collectMarkers {file = "ws_fnc\tools\ws_fnc_collectMarkers.sqf"};
-			class loadGroups {file = "ws_fnc\tools\ws_fnc_loadGroups.sqf"};
+			class loadVehicle {file = "ws_fnc\tools\ws_fnc_loadVehicle.sqf"};
+			class checkHC {file = "ws_fnc\tools\ws_fnc_checkHC.sqf"};
 		};
 		class getPos
 		{
 			class getPos {file ="ws_fnc\getPos\ws_fnc_getPos.sqf";};
 			class nearestRoadPos {file = "ws_fnc\getPos\ws_fnc_NearestRoadPos.sqf";};
 			class nearestLandPos {file = "ws_fnc\getPos\ws_fnc_NearestLandPos.sqf";};
+			class getPosInArea {file = "ws_fnc\getPos\ws_fnc_getPosInArea.sqf";};
 			class getBPos {file = "ws_fnc\getPos\ws_fnc_getBPos.sqf";};
 		}
 		class AI

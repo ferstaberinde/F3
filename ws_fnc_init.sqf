@@ -44,12 +44,13 @@ if !(ws_game_a3) then {
 	ws_fnc_selectRandom = compile preprocessfile "ws_fnc\tools\ws_fnc_selectRandom.sqf";
 	ws_fnc_switchLights = compile preprocessfile "ws_fnc\tools\ws_fnc_switchLights.sqf";
 	ws_fnc_attachLight = compile preprocessfile "ws_fnc\tools\ws_fnc_attachLight.sqf";
-	ws_fnc_loadGroups = compile preprocessfile "ws_fnc\tools\ws_fnc_loadGroups.sqf";
+	ws_fnc_loadVehicle = compile preprocessfile "ws_fnc\tools\ws_fnc_loadVehicle.sqf";
 
 	//GetPos Functions
 	ws_fnc_getPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_getPos.sqf";
 	ws_fnc_NearestRoadPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_NearestRoadPos.sqf";
-	ws_fnc_NearestRoadPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_NearestLandPos.sqf";
+	ws_fnc_NearestLandPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_NearestLandPos.sqf";
+	ws_fnc_getPosInArea = compile preprocessfile "ws_fnc\getPos\ws_fnc_getPosInArea.sqf";
 	ws_fnc_getBPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_getBPos.sqf";
 
 	//AI Functions
