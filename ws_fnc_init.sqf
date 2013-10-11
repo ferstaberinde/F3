@@ -49,7 +49,8 @@ if !(ws_game_a3) then {
 	//GetPos Functions
 	ws_fnc_getPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_getPos.sqf";
 	ws_fnc_NearestRoadPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_NearestRoadPos.sqf";
-	ws_fnc_NearestRoadPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_NearestLandPos.sqf";
+	ws_fnc_NearestLandPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_NearestLandPos.sqf";
+	ws_fnc_getPosInArea = compile preprocessfile "ws_fnc\getPos\ws_fnc_getPosInArea.sqf";
 	ws_fnc_getBPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_getBPos.sqf";
 
 	//AI Functions
