@@ -65,7 +65,7 @@ if (count _road > 3) then {_road = _road select 2;};
 if (_count > 3) then {_behaviour = _this select 3;if (count _behaviour < 3) then {_behaviour = ["AWARE","YELLOW","NORMAL"];};};
 if (_count > 4) then {_code = _this select 4};
 
-_pos= [(_this select 1),0,0,_road] call ws_fnc_getPos;
+_pos= [(_this select 1),0,0,360,_road] call ws_fnc_getPos;
 
 //Fault checks
 //Checking the variables we have enough against what we should have
