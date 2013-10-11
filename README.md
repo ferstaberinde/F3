@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 3-0-8     | XX XXX 2013 | Patch release - Various improvements (see change history).
+* 3-0-8     | XX OCT 2013 | Patch release - Various improvements (see change history).
 * 3-0-7     | 14 SEP 2013 | Patch release - Various improvements (see change history).
 * 3-0-6     | 20 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-5     | 17 AUG 2013 | Patch release - Various improvements (see change history).
@@ -128,7 +128,7 @@ Version | Date | Notes
 
 * Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster
 * Documentation: Fer
-* Producers: Fer
+* Producers: Fer | Wolfenswan
 * Special Thanks: Zerith | Draakon
 * Special Thanks: Everyone at Folk ARPS
 
@@ -223,6 +223,7 @@ Version | Date
 * Added Safe Start component.
 * Overhauled F3 Name Tag component
 * Overhauled F3 Automatic Body Removal Component
+* Overhauled F3 Set AI Skill Component
 * Updated Mission Observers component to use BIS Splendid Camera.
 * Updated F3 Folk ARPS Platoons component to reflect new faction names.
 * Updated F3 Folk ARPS Assign Gear Script component to reflect new faction names.
@@ -240,12 +241,9 @@ Version | Date
 * Removed now obsolete old F2 name tag component
 * Removed obsolete F2 Tripwire Action entry in init.sqf
 * Removed unnecessary references to Stratis in mission.sqm
+* Disabled Weather synchronization in F3 Missions Conditions selector component for perfomance reasons
 * Fixed minor bug in F3 Folk ARPS Platoons component.
 * Fixed bugs in F3 Mission Conditions Selector introduced by A3 1.02.110.424
-
-*** Not included yet ***
-* Overhauled F3 Set AI Skill Component
-* Disabled Weather synchronization in F3 Missions Conditions selector component for perfomance reasons
 
 3-0-7 | 14 SEP 2013
 
