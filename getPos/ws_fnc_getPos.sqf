@@ -86,20 +86,21 @@ switch (typename _posradius) do {
 		_newX = _posX + ((random _posradius) * sin _dir);
 		_newY = _posY + ((random _posradius) * cos _dir);
 		_pos = [_newX,_newY,0];
+
+		if (_mindis > 0) then {
+			while {_pos distance _posloc < _mindis} do {
+				_newX = _posX + ((random _posradius) * sin _dir);
+				_newY = _posY + ((random _posradius) * cos _dir);
+				_pos = [_newX,_newY,0];
+			};
+		};
 		};
 	};
 	case "BOOL": {
 	_pos = [_posloc] call ws_fnc_getPosInArea;
-	};
 };
 
-if (_mindis > 0) then {
-	while {_pos distance _posloc < _mindis} do {
-		_newX = _posX + ((random _posradius) * sin _dir);
-		_newY = _posY + ((random _posradius) * cos _dir);
-		_pos = [_newX,_newY,0];
-	};
-};
+
 
 
 //If the position has to be on dry land
