@@ -1,10 +1,3 @@
-onLoadName = "WS Function Library";
-onLoadMission = "Testing, Development and Playground";
-author = "Wolfenswan [FA]";
-
-enableDebugConsole = 2;
-allowFunctionsRecompile = 1;
-
 class CfgFunctions
 {
 	class WS
@@ -39,6 +32,7 @@ class CfgFunctions
 			class getPos {file ="ws_fnc\getPos\ws_fnc_getPos.sqf";};
 			class nearestRoadPos {file = "ws_fnc\getPos\ws_fnc_NearestRoadPos.sqf";};
 			class nearestLandPos {file = "ws_fnc\getPos\ws_fnc_NearestLandPos.sqf";};
+			class getPosInArea {file = "ws_fnc\getPos\ws_fnc_getPosInArea.sqf";};
 			class getBPos {file = "ws_fnc\getPos\ws_fnc_getBPos.sqf";};
 		}
 		class AI

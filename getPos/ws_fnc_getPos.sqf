@@ -11,19 +11,19 @@
 // Minimal:
 // [location] call ws_fnc_getPos;
 // Full:
-// [location,radius (int), minDistance,angle,road (bool), building allowed (bool), water allowed (bool)] call ws_fnc_getPos;
+// [location,radius (int or true), minDistance,angle,road (bool), building allowed (bool), water allowed (bool)] call ws_fnc_getPos;
 //
 // OUTPUT
 // Array: [x,y,z]
 //
 // PARAMETERS
-// 1. location can be String (Markername), Array [x,y,z] or Objectname								| MANDATORY
-// 2. radius has to be int > 0 and defines the radius around the position 								| OPTIONAL - default is 0
-// 3. minimal distance from center, has to be int > 0 and > radius		 							| OPTIONAL - default is 0
-// 4. Minimal and maximal angle from center. Array: [minAngle,maxAngle] with both values being integers from 0- 360	| OPTIONAL - default is [0,360]
-// 5. road (bool) forces pos to be placed on road 											| OPTIONAL - default is false
-// 6. building allowed (bool) enables the position to be in/on a building								| OPTIONAL - default is false
-// 7. water allowed (bool) enables the position to be on water as well								| OPTIONAL - default is false
+// 1. location can be String (Markername), Array [x,y,z] or Objectname														| MANDATORY
+// 2. radius has to be int > 0 and defines the radius around the position. If set to true it will instead return a position inside a trigger/marker passed in the 1. parameter	| OPTIONAL - default is 0
+// 3. minimal distance from center, has to be int > 0 and > radius		 													| OPTIONAL - default is 0
+// 4. Minimal and maximal angle from center. Array: [minAngle,maxAngle] with both values being integers from 0- 360							| OPTIONAL - default is [0,360]
+// 5. road (bool) forces pos to be placed on road 																	| OPTIONAL - default is false
+// 6. building allowed (bool) enables the position to be in/on a building														| OPTIONAL - default is false
+// 7. water allowed (bool) enables the position to be on water as well														| OPTIONAL - default is false
 //
 // EXAMPLES
 // ["spawnmarker"] call ws_fnc_getPos; - turns the marker location into a position array
@@ -51,7 +51,7 @@ _water = false;
 
 //Optional variables parsed
 if (_count > 1) then {_posradius = _this select 1;};
-if (_count > 2) then {_mindis = _this select 2;}; if (_mindis > _posradius) then {_mindis = _posradius * 2};
+if (_count > 2) then {_mindis = _this select 2;};
 if (_count > 3) then {_dir = random (_this select 3)};
 if (_count > 4) then {_road = _this select 4;};
 if (_count > 5) then {_building = _this select 5;};
@@ -74,22 +74,33 @@ _pos set [2,0];
 //Fault checks
 //Checking the variables we have against what we should have
 {[_x,["ARRAY"],"ws_fnc_getPos"] call ws_fnc_typecheck;}  forEach [_pos];
-{[_x,["SCALAR"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_posradius,_mindis,_dir,_posX,_posY];
+[_posradius,["SCALAR","BOOLEAN"],"ws_fnc_getPos"] call ws_fnc_typecheck;
+{[_x,["SCALAR"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_mindis,_dir,_posX,_posY];
 {[_x,["BOOL"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_road,_water];
 
-if (_posradius > 0) then {
-	_newX = _posX + ((random _posradius) * sin _dir);
-	_newY = _posY + ((random _posradius) * cos _dir);
-	_pos = [_newX,_newY,0];
+switch (typename _posradius) do {
+	case "SALAR": {
+		if (_mindis > _posradius) then {_mindis = _posradius * 2};
 
-	if (_mindis > 0) then {
-		while {_pos distance _posloc < _mindis} do {
-			_newX = _posX + ((random _posradius) * sin _dir);
-			_newY = _posY + ((random _posradius) * cos _dir);
-			_pos = [_newX,_newY,0];
+		if (_posradius > 0) then {
+		_newX = _posX + ((random _posradius) * sin _dir);
+		_newY = _posY + ((random _posradius) * cos _dir);
+		_pos = [_newX,_newY,0];
 		};
 	};
+	case "BOOL": {
+	_pos = [_posloc] call ws_fnc_getPosInArea;
+	};
 };
+
+if (_mindis > 0) then {
+	while {_pos distance _posloc < _mindis} do {
+		_newX = _posX + ((random _posradius) * sin _dir);
+		_newY = _posY + ((random _posradius) * cos _dir);
+		_pos = [_newX,_newY,0];
+	};
+};
+
 
 //If the position has to be on dry land
 if (!_water && (surfaceIsWater _pos)) then {
@@ -123,7 +134,6 @@ player globalchat format ["DEBUG: ws_fnc_getPos done. Pos is %1, direction is %2
   _mkr = createMarker [format ["%1",_pos], _pos];
   _mkr setMarkerType "mil_dot";
   _mkr setMarkerColor "ColorGreen";
-  //_mkr setMarkerText format ["DBG:Pos %1",_pos];
   _mkr setMarkerSize [0.5,0.5];
 };
 
