@@ -49,11 +49,11 @@ _mkr setMarkerDirLocal (direction _unit);
 
 // We shall run the loop!
 
-while{alive _unit && (_unit in f_handlerGroup}} do
+while{alive _unit && (_unit in f_handlerGroup)} do
 {
 	_pos = getpos _unit;
 	_dir = (direction _unit);
-	if (alive _unit && {_unit in units group player}) then 
+	if (alive _unit && {_unit in units group player}) then
 	{
 		_mkrBorder setMarkerPosLocal _pos;
 		_mkrBorder setMarkerDirLocal _dir;
