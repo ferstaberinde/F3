@@ -23,7 +23,8 @@
 //  	b. "patrol" - the group moves to the position and starts a randomized patrol
 //  	c. "defend" - the group moves to the position and mans all statics, guarding the area
 //  	d. "garrison" - the group moves to the position, mans statics and takes position inside buildings, prioritizing bunkers and other military structures over civilian buildings
-// 	3.2. modifier - the waypoint radius or radius to patrol/defend
+//	e. "ambush" - group finds a position that provides overwatch over the passed position, then goes into stealth mode. When an emey approaches the position or their hiding spot they change to search & destroy.
+// 	3.2. modifier - the waypoint radius or radius to patrol/defend/find ambush position
 //  3.3  completition radius
 // 5. array defining waypoint behaviour, combatmode and speed				| OPTIONAL - default is ["AWARE","YELLOW","NORMAL], can be empty
 // 6. code that is executed on waypoint completition						| OPTIONAL - must be string! (e.g. "hint 'waypoint completed'")
@@ -70,18 +71,11 @@ if (_count > 4) then {_code = _this select 4};
 [_code,["STRING"],format ["ws_fnc_createWaypoint: %1",_code]] call ws_fnc_typecheck;
 {[_x,["ARRAY"],format ["ws_fnc_createWaypoint: %1",_x]] call ws_fnc_typecheck;}  forEach [_pos,_behaviour,_marray];
 
-if !(_mode in _modes) exitWith {["ws_fnc_addWaypoint ERROR: ",_mode," is not a legal waypoint mode"] call ws_fnc_debugText;};
+if !(toLower _mode in _modes) exitWith {["ws_fnc_addWaypoint ERROR: ",_mode," is not a legal waypoint mode"] call ws_fnc_debugText;};
 
 //WAYPOINT CREATION
 _wp = _grp addWaypoint [_pos,0];
 
-//Setting behaviour etc for waypoint
-_wp setWaypointBehaviour (_behaviour select 0);
-_wp setWaypointCombatMode (_behaviour select 1);
-_wp setWaypointSpeed (_behaviour select 2);
-_wp setWaypointCompletionRadius _compl;
-
-_wp = _grp addWaypoint [_pos,0];
 switch (_mode) do {
 	case "sad": {
 		_grp setCombatMode "RED";
@@ -105,12 +99,24 @@ switch (_mode) do {
 		_wp setWaypointStatements ["true", format["[group this,getPos this,%2] call BIS_fnc_taskPatrol;%1",_code,_modifier]];
 	};
 
+	case "ambush": {
+		_wp setWaypointType "MOVE";
+		_wp setWaypointStatements ["true", format["[group this,getPos this,%2] call ws_fnc_taskAmbush;%1",_code,_modifier]];
+		_wp setWaypointCompletionRadius 100;
+	};
+
 	default {
 		_wp setWaypointPosition [_pos,_modifier];
 		_wp setWaypointType _mode;
 		_wp setWaypointStatements ["true", format["%1;",_code]];
 	};
 };
+
+//Setting behaviour etc for waypoint
+_wp setWaypointBehaviour (_behaviour select 0);
+_wp setWaypointCombatMode (_behaviour select 1);
+_wp setWaypointSpeed (_behaviour select 2);
+_wp setWaypointCompletionRadius _compl;
 
 //_grp setCurrentWaypoint _wp;
 
