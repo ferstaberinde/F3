@@ -29,7 +29,7 @@ _dir = 0;
 
 switch (typeName _area) do {
 	case "OBJECT": { _center = getPos _area;_area = triggerarea _area;  _shape = _area select 3; _dir = _area select 2;};
-	case "STRING":{ _center = getMarkerPos _area; _shape = MarkerShape _area; _area = markerSize _area;_dir = 0;};
+	case "STRING":{ _center = getMarkerPos _area; _shape = MarkerShape _area; _dir = markerDir _area;_area = markerSize _area;};
 };
 
 if (typename _shape == typename "") then {
@@ -40,6 +40,7 @@ if (typename _shape == typename "") then {
 };
 
 // Get random position
+
 _pX = _area select 0;
 _pY = _area select 1;
 
@@ -61,7 +62,11 @@ _vector = if (_shape) then {
 	];
 };
 
-//--- Convert to world coordinates
+// Rotate vector
+_vector set [0, (cos _dir)*_px - (sin _dir)*_py];
+_vector set [1, (sin _dir)*_px + (cos _dir)*_py];
+
+// Return new position
 _pos = [
 	(_center select 0) + (_vector select 0),
 	(_center select 1)+ (_vector select 1),
