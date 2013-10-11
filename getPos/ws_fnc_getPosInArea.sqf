@@ -1,5 +1,5 @@
 /* ws_fnc_getPosInArea
-Latest: XX.10.2013
+Latest: 11.10.2013
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 Based on Moricky's BIS_fnc_randomPosTrigger
 
