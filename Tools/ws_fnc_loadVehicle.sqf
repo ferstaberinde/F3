@@ -30,8 +30,9 @@ if (typeName (_this select 1) == "GROUP") then {
 	[(_grps select 0),["GROUP"],"ws_fnc_loadVehicle"] call ws_fnc_typecheck;
 
 	if (_count > 2) then {
+
 		for "_x" from 2 to (_count) do {
-			_grps = _grps + [_this select 2];
+			_grps = _grps + [_this select _x];
 		};
 	};
 
