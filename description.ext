@@ -31,6 +31,8 @@ class CfgFunctions
 			class collectMarkers {file = "ws_fnc\tools\ws_fnc_collectMarkers.sqf"};
 			class loadVehicle {file = "ws_fnc\tools\ws_fnc_loadVehicle.sqf"};
 			class checkHC {file = "ws_fnc\tools\ws_fnc_checkHC.sqf"};
+			class broadcast {file = "ws_fnc\tools\ws_fnc_broadcast.sqf";};
+			class showFPS {file = "ws_fnc\tools\ws_fnc_showFPS.sqf";};
 		};
 		class getPos
 		{
@@ -50,11 +52,5 @@ class CfgFunctions
 			class addWaypoint {file = "ws_fnc\AI\ws_fnc_addWaypoint.sqf";};
 			class setAIMode {file = "ws_fnc\AI\ws_fnc_setAIMode.sqf";};
 		};
-		class A3
-		{
-			class broadcast {file = "ws_fnc\A3\ws_fnc_broadcast.sqf";};
-			class showFPS {file = "ws_fnc\A3\ws_fnc_showFPS.sqf";};
-		};
-
 	};
 };
