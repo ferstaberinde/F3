@@ -20,7 +20,7 @@ PARAMETERS
 
 if !(ws_game_a3) exitWith {["ws_fnc_taskAmbush DBG: Game version: ",[_game]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
-private ["_grp","_pos","_radius","_mindis","_side","_sidesEnemy","_wp"];
+private ["_grp","_pos","_nPos","_radius","_mindis","_side","_sidesEnemy","_wp"];
 
 _count = count _this;
 _grp = _this select 0;
@@ -35,10 +35,9 @@ _side = side _grp;
 _sidesEnemy = _side call BIS_fnc_enemySides;
 
 _nPos = [_pos, _radius, _mindis, 10] call BIS_fnc_findOverwatch;
-
-_wp = [_grp,_nPos,["MOVE",0],["AWARE","YELLOW","NORMAL"]] call ws_fnc_addWaypoint;
+_wp = _grp addWaypoint [_npos,0];
+_wp setWaypointType "move";
 _grp setCurrentWaypoint _wp;
-_grp setFormation "DIAMOND";
 
 _wp = [_grp,_nPos,["HOLD",0],["STEALTH","GREEN","NORMAL"]] call ws_fnc_addWaypoint;
 
@@ -58,6 +57,10 @@ _wp = [_grp,_nPos,["HOLD",0],["STEALTH","GREEN","NORMAL"]] call ws_fnc_addWaypoi
                 _trg synchronizeTrigger [_wp];
 } forEach _sidesEnemy;
 
+
 [_grp,_Pos,["SAD",0],["COMBAT","RED","FULL"]] call ws_fnc_addWaypoint;
+
+
+
 
 true

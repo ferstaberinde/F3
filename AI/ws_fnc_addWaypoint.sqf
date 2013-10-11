@@ -82,31 +82,36 @@ _wp = _grp addWaypoint [_pos,0];
 
 switch (_mode) do {
 	case "sad": {
-		_grp setCombatMode "RED";
 		_wp setWaypointPosition [_pos,_modifier];
-		_wp setWaypointType "SAD";
 		_wp setWaypointStatements ["true", format["%1",_code]];
+		_behaviour = ["AWARE","RED","FULL"];
 	};
 
 	case "defend": {
 		_wp setWaypointType "MOVE";
-		_wp setWaypointStatements ["true", format["[group this,getPos this,%2] call ws_fnc_taskDefend;%1",_code,_modifier]];
+		_wp setWaypointStatements ["true", format["[group this,getPos this,%2] spawn ws_fnc_taskDefend;%1",_code,_modifier]];
 	};
 
 	case "garrison": {
 		_wp setWaypointType "MOVE";
-		_wp setWaypointStatements ["true", format["[group this,getPos this,%2,true,true,true] call ws_fnc_taskDefend;%1",_code,_modifier]];
+		_wp setWaypointStatements ["true", format["[group this,getPos this,%2,true,true,true] spawn ws_fnc_taskDefend;%1",_code,_modifier]];
 	};
 
 	case "patrol": {
 		_wp setWaypointType "MOVE";
-		_wp setWaypointStatements ["true", format["[group this,getPos this,%2] call BIS_fnc_taskPatrol;%1",_code,_modifier]];
+		_wp setWaypointStatements ["true", format["[group this,getPos this,%2] spawn BIS_fnc_taskPatrol;%1",_code,_modifier]];
 	};
 
 	case "ambush": {
 		_wp setWaypointType "MOVE";
-		_wp setWaypointStatements ["true", format["[group this,getPos this,%2] call ws_fnc_taskAmbush;%1",_code,_modifier]];
-		_wp setWaypointCompletionRadius 100;
+		_wp setWaypointStatements ["true", format["[group this,getPos this,%2] spawn ws_fnc_taskAmbush;%1",_code,_modifier]];
+		_wp setWaypointCompletionRadius 50;
+	};
+
+	case "move": {
+		_wp setWaypointPosition [_pos,_modifier];
+		_wp setWaypointType _mode;
+		_wp setWaypointStatements ["true", format["%1;",_code]];
 	};
 
 	default {
@@ -116,11 +121,13 @@ switch (_mode) do {
 	};
 };
 
+
 //Setting behaviour etc for waypoint
 _wp setWaypointBehaviour (_behaviour select 0);
 _wp setWaypointCombatMode (_behaviour select 1);
 _wp setWaypointSpeed (_behaviour select 2);
 _wp setWaypointCompletionRadius _compl;
+
 
 //_grp setCurrentWaypoint _wp;
 
