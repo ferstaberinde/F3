@@ -35,6 +35,12 @@ _side = side _grp;
 _sidesEnemy = _side call BIS_fnc_enemySides;
 
 _nPos = [_pos, _radius, _mindis, 10] call BIS_fnc_findOverwatch;
+_roads = _npos nearroads 50;
+while {count _roads > 0} do {
+        _nPos = [_pos, _radius, _mindis, 10] call BIS_fnc_findOverwatch;
+        _roads = _npos nearroads 50;
+};
+
 _wp = _grp addWaypoint [_npos,0];
 _wp setWaypointType "move";
 _grp setCurrentWaypoint _wp;
