@@ -176,4 +176,4 @@ if (_debug) then {
 };
 
 //Script outputs the generated vehicle
-[_veh,_vehgrp,_this]
+[_veh,_vehgrp,_grp,_this]
