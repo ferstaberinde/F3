@@ -79,25 +79,26 @@ switch (_type) do
 // handles dropboxes
     case "LBListSelChanged":
     {
-        _unit = objNull;
         if(f_cam_playersOnly)
         {
             _unit = f_cam_players select (_args select 1);
-        }
+        {
         else
         {
             _unit = f_cam_units select (_args select 1);
         };
-        if(isNull _unit) then
+        if(!isnil "_unit") then
         {
-        f_cam_camera camSetTarget _unit;
-        f_cam_curTarget = _unit;
-        if(f_cam_toggleCamera) then
-        {
-          f_cam_curTarget switchCamera "INTERNAL";
-        };
-        ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
-        };
+            f_cam_camera camSetTarget _unit;
+            f_cam_curTarget = _unit;
+            if(f_cam_toggleCamera) then
+            {
+              f_cam_curTarget switchCamera "INTERNAL";
+            };
+            ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
+            };
+        }
+
     };
     case "LBListSelChanged_modes":
     {
