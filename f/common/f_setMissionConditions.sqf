@@ -282,6 +282,9 @@ sleep 10;
 // WEATHER SYNCHRONIZATION
 // Every 10 seconds the weather on the server client is broadcasted to all player clients to keep weather in sync.
 
+// Disabled for perfomance reasons
+
+/*
 f2_weather = [_MissionOvercast, _MissionRain, _MissionFog];
 "f2_weather" addPublicVariableEventHandler
 {
@@ -303,6 +306,7 @@ if (isServer) then
 		sleep 10;
 	};
 };
+*/
 
 // ====================================================================================
 

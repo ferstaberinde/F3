@@ -25,7 +25,7 @@ f_respawnINIT = player addEventHandler ["killed", {_this execVM "init_onPlayerRe
 // F3 - Briefing
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "briefing.sqf";
+f_script_briefing = [] execVM "briefing.sqf";
 
 // ====================================================================================
 
@@ -83,10 +83,10 @@ f_endSelected = -1;
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_removeBodyDelay = 180;
-f_removeBodyDistance = 500;
-f_doNotRemoveBodies = [];
-[] execVM "f\common\f_addRemoveBodyEH.sqf";
+// f_removeBodyDelay = 180;
+// f_removeBodyDistance = 500;
+// f_doNotRemoveBodies = [];
+// [] execVM "f\common\f_addRemoveBodyEH.sqf";
 
 // ====================================================================================
 
@@ -145,14 +145,11 @@ f_doNotRemoveBodies = [];
 
 // ====================================================================================
 
-// F3 - AI Skill Selector (coop)
+// F3 - AI Skill Selector (Coop)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_isFriendlyBLU = 1;
-// f_isFriendlyRES = 1;
-// f_isFriendlyOPF = 0;
-// f_isFriendlyCIV = 1;
-// [] execVM "f\common\f_setAISkill.sqf";
+// f_isFriendly = [west,civilian];
+// []  execVM "f\server\f_setAISkill.sqf";
 
 // ====================================================================================
 
@@ -161,7 +158,7 @@ f_doNotRemoveBodies = [];
 
 // f_isFriendlyToBLU_RES = 1;
 // f_isFriendlyToBLU_CIV = 1;
-// [] execVM "f\common\f_setAISkillAD.sqf";
+// [] execVM "f\server\f_setAISkill.sqf";
 
 // ====================================================================================
 

@@ -11,7 +11,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_men","_str_Men","_str_menLessExempt"];
+private ["_men","_str_Men","_str_menLessExempt","_handle"];
 
 // ====================================================================================
 
@@ -25,7 +25,7 @@ waitUntil {scriptDone f_script_setLocalVars};
 // SET KEY VARIABLES
 // Using a common variable, we will create an array containing all men.
 
-_men = f_var_men;
+_men = allUnits;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -36,12 +36,24 @@ if (f_var_debugMode == 1) then
 
 // ====================================================================================
 
+// PREVENT UNTIS FROM BEING REMOVED
+// All units in the corresponding array are flagged to never be removed
+if (isNil "f_doNotRemoveBodies") then {f_doNotRemoveBodies = []};
+
+{
+	_x setVariable ["f_removeBodyEH",true];
+} forEach f_doNotRemoveBodies;
+
+// ====================================================================================
+
 // ADD EVENT HANDLER
 // A killed event handler is added to all units in the array _men that are not part of the exempt group
 
 {
-if !(_x in f_doNotRemoveBodies) then {
-	_x addEventHandler ["killed", {(_this select 0) execVM "f\server\f_removeBody.sqf"}]
+_handle = _x getVariable ["f_removeBodyEH",false];
+if !(_handle) then {
+	_x addEventHandler ["killed", {(_this select 0) execVM "f\server\f_removeBody.sqf"}];
+	_x setVariable ["f_removeBodyEH",true];
 	};
 } forEach _men;
 

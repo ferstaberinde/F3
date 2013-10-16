@@ -49,11 +49,11 @@ _mkr setMarkerDirLocal (direction _unit);
 
 // We shall run the loop!
 
-while{alive _unit} do
+while{alive _unit && (_unit in f_handlerGroup)} do
 {
 	_pos = getpos _unit;
 	_dir = (direction _unit);
-	if (alive _unit) then 
+	if (alive _unit && {_unit in units group player}) then
 	{
 		_mkrBorder setMarkerPosLocal _pos;
 		_mkrBorder setMarkerDirLocal _dir;
@@ -62,6 +62,8 @@ while{alive _unit} do
 		// makes a call to the function defined in f_setLocalFTMemberMarkers.sqf
 		// retreives the stored color from the unit.
 		_mkr setMarkerColorLocal ([_unit] call f_getLocalMarkerVar);
+	} else {
+		f_handlerGroup = f_handlerGroup - [_unit];
 	};
 	sleep 3;
 

@@ -146,7 +146,7 @@ class Params
 //		title = "$STR_f_param_AISkill_Friendly";
 //		values[] = {0,1,2,3};
 //		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 2;
+//		default = 1;
 //		code = "f_param_AISkill_Friendly = %1";
 //	};
 //	class f_param_AISkill_Enemy
@@ -154,7 +154,7 @@ class Params
 //		title = "$STR_f_param_AISkill_Enemy";
 //		values[] = {0,1,2,3};
 //		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 2;
+//		default = 1;
 //		code = "f_param_AISkill_Enemy = %1";
 //	};
 
@@ -168,7 +168,7 @@ class Params
 //		title = "$STR_f_param_AISkill_BLUFOR";
 //		values[] = {0,1,2,3};
 //		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 2;
+//		default = 1;
 //		code = "f_param_AISkill_BLUFOR = %1";
 //	};
 //	class f_param_AISkill_OPFOR
@@ -176,7 +176,7 @@ class Params
 //		title = "$STR_f_param_AISkill_OPFOR";
 //		values[] = {0,1,2,3};
 //		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 2;
+//		default = 1;
 //		code = "f_param_AISkill_OPFOR = %1";
 //	};
 
@@ -298,6 +298,9 @@ class CfgFunctions
 				postInit = 1;
 			};
 			class SetWeather
+			{
+			};
+			class SetAISKill
 			{
 			};
 		};

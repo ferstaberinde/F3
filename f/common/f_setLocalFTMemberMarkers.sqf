@@ -46,14 +46,14 @@ f_TeamLeaderSync = compile preprocessFileLineNumbers "f\common\f_localFTMarkerSy
 
 // launch the subscript for drawing the marker for each unit.
 [] spawn {
-	_handlerGroup = [];
+	f_handlerGroup = [];
 	while{alive player} do
 	{
 		{
-			if(!(_x in _handlerGroup) && alive _x) then
+			if(!(_x in f_handlerGroup) && alive _x) then
 			{
 				[_x] execVM "f\common\f_localFTMemberMarker.sqf";
-				_handlerGroup = _handlerGroup  + [_x];
+				f_handlerGroup = f_handlerGroup  + [_x];
 			};
 		} forEach units (group player);
 	sleep 5;
