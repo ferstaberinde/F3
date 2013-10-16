@@ -4,9 +4,10 @@
 
 // wait for the death animation to finish then disable the effects.
 _unit = _this select 0;
-waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true]};
+//waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true]};
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
+
 	BIS_fnc_feedback_allowPP = false;
 };
 

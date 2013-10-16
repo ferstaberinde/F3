@@ -2,7 +2,7 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ==================================================================
 // draw tags
-_ents = (getpos f_cam_camera) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], 250];
+_ents = (getpos f_cam_camera) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], 500];
 {
 	_visPos = visiblePosition _x;
 	_color = [side _x] call BIS_fnc_sideColor;
