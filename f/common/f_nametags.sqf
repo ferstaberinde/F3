@@ -60,7 +60,12 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 		if(side _x == side player && _x != player) then
 		{
 			_pos = visiblePosition _x;
-			drawIcon3D ["", [1,1,1,0.6], [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  name _x, 0, 0.04, F_FONT_NAMETAGS];
+			_color = [1,1,1,0.6];
+			if(_x in units player) then
+			{
+				_color = [0,0,1,0.6];
+			};
+			drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  name _x, 0, 0.04, F_FONT_NAMETAGS];
 		};
 	}
 	else
@@ -69,64 +74,74 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 		_inc = 1;
 		_alternate = 0;
 		{
-			_prefix = "P:";
-			_color = [1,1,1,0.6];
-			if(driver _veh == _x) then
+			if(alive _x) then
 			{
-				_prefix = "D:";
-				_color = [0,0,1,0.6];
-			};
-			if(gunner _veh == _x) then
-			{
-				_prefix = "G:";
-				_color = [0,0,1,0.6];
-			};
-			if(commander _veh == _x) then
-			{
-				_prefix = "C:";
-				_color = [0,0,1,0.6];
-			};
-			if(assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x) then
-			{
-				_prefix = "G:";
-				_color = [0,0,1,0.6];
-			};
-			_pos = visiblePosition _x;
-			if(_pos distance (visiblePosition (driver _veh)) > 0.1 || driver _veh == _x) then
-			{
+				_prefix = "P:";
+				_color = [1,1,1,0.6];
 				if(driver _veh == _x) then
 				{
-					_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier");
-					_freeSlots = _veh emptyPositions "cargo";
-				drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2(%3/%4)",_prefix,name _x,(_maxSlots-_freeSlots),_maxSlots], 0, 0.04, F_FONT_NAMETAGS];
-				}
-				else
-				{
-					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, 0.04, F_FONT_NAMETAGS];
+					_prefix = "D:";
+					_color = [1,0,0,0.6];
 				};
-			}
-			else
-			{
-				if(_x == gunner _veh) then
+				if(gunner _veh == _x) then
 				{
-					_pos = _veh modeltoworld (_veh selectionPosition "gunnerview");
-					_visPos = visiblePosition _x;
-					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_visPos select 2) + 2], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, 0.04, F_FONT_NAMETAGS];
+					_prefix = "G:";
+					_color = [1,0,0,0.6];
+				};
+				if(commander _veh == _x) then
+				{
+					_prefix = "C:";
+					_color = [1,0,0,0.6];
+				};
+				if(assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x) then
+				{
+					_prefix = "G:";
+					_color = [1,0,0,0.6];
+				};
+				_pos = visiblePosition _x;
+				if(_pos distance (visiblePosition (driver _veh)) > 0.1 || driver _veh == _x) then
+				{
+					if(driver _veh == _x) then
+					{
+						_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier");
+						_freeSlots = _veh emptyPositions "cargo";
+					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2(%3/%4)",_prefix,name _x,(_maxSlots-_freeSlots),_maxSlots], 0, 0.04, F_FONT_NAMETAGS];
+					}
+					else
+					{
+						if(_x in units player) then
+						{
+							_color = [0,0,1,0.6];
+						};
+						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, 0.04, F_FONT_NAMETAGS];
+					};
 				}
 				else
 				{
-					_pos = visiblePosition _x;
-					_angle = (getdir _veh)+180;
-					_pos = [((_pos select 0) + sin(_angle)*(0.6*_inc)) , (_pos select 1) + cos(_angle)*(0.6*_inc),_pos select 2];
-					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 1.5], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, 0.04, F_FONT_NAMETAGS];
-					_inc = _inc + 1;
+					if(_x == gunner _veh) then
+					{
+						_pos = _veh modeltoworld (_veh selectionPosition "gunnerview");
+						_visPos = visiblePosition _x;
+						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_visPos select 2) + 2], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, 0.04, F_FONT_NAMETAGS];
+					}
+					else
+					{
+						_pos = visiblePosition _x;
+						_angle = (getdir _veh)+180;
+						_pos = [((_pos select 0) + sin(_angle)*(0.6*_inc)) , (_pos select 1) + cos(_angle)*(0.6*_inc),_pos select 2];
+						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 1.5], 0, 0, 0,  format["%1%2",_prefix,name _x], 0, 0.04, F_FONT_NAMETAGS];
+						_inc = _inc + 1;
+					};
 				};
 			};
 
 		} foreach crew _veh;
 	};
 } foreach _ents;
+
 };
+
+
 }
 ];
 
