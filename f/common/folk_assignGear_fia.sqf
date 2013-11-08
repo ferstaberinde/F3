@@ -153,7 +153,7 @@ _APmine2 = "APERSMine_Range_Mag";
 // CLOTHES AND UNIFORMS
 
 // Base
-_baseUniform = "U_IG_Guerilla1_1";
+_baseUniform = "U_BG_Guerilla1_1";
 _baseHelmet = "H_Shemag_olive";
 _lightRig = "V_Chestrig_khk";
 _mediumRig = "V_TacVest_khk"; 	// default for all infantry classes
