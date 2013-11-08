@@ -25,7 +25,9 @@ waitUntil {scriptDone f_script_setLocalVars};
 
 _body = _this;
 _group = group _this;
+if (isNil " f_removeBodyDelay") then { f_removeBodyDelay = 20};
 _wait = f_removeBodyDelay;
+if (isNil " f_removeBodyDistance") then { f_removeBodyDistance = 50};
 _distance = f_removeBodyDistance;
 
 waitUntil  {!isNull _body};
