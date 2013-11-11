@@ -1,5 +1,5 @@
 // GetPos function
-// v2 (15.09.2013)
+// Latest: 11.11.2013
 // By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 // Thanks to Shuko for SHK_pos
 //
@@ -29,10 +29,7 @@
 // ["spawnmarker"] call ws_fnc_getPos; - turns the marker location into a position array
 // ["spawnmarker",0,0,[0,360],true] call ws_fnc_getPos; - gets a position on a road in closest possible distance to the marker location
 // [church,250] call ws_fnc_getPos; - gets a position in 250m radius to the object named "church"
-// [v1,500,100,[0,180],false,true] call ws_fnc_getPos; - gets a position in 500m radius, 100m minimal distance and a 180° angle to the object named "v1" and also allows position // to be on a building
-//
-// TODO
-// check if marker is area, if yes place pos within
+// [v1,500,100,[0,180],false,true] call ws_fnc_getPos; - gets a position in 500m radius, 100m minimal distance and a 180° angle to the object named "v1" and also allows position to be on a building
 
 private ["_debug","_count","_posloc","_pos","_posradius","_mindis","_dir","_road","_building","_water","_posX","_posY"];
 
