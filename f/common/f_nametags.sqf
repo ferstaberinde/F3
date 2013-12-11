@@ -13,6 +13,7 @@
 
 // MODIFYABLE
 F_COLOR_NAMETAGS =  [1,1,1,0.9]; // The color for infantry and units in vehicle cargo (in [red,green, blue, opacity])
+F_COLOR_NAMETAGS_GROUP = [0,0,1,0.9];
 F_COLOR2_NAMETAGS = [0,0,1,0.9]; // The color for units in driver, gunner and other vehicle positions positions
 F_SIZE_NAMETAGS = 0.04; // The size the names are displayed in
 F_FONT_NAMETAGS = "EtelkaMonospaceProBold"; // Font for the names
@@ -95,7 +96,9 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 		if(side _x == side player && _x != player) then
 		{
 			_pos = visiblePosition _x;
-			drawIcon3D ["", F_COLOR_NAMETAGS, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  name _x, 0,F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+			_color = F_COLOR_NAMETAGS;
+			if(_x in units player) then { _color = F_COLOR_NAMETAGS_GROUP };
+			drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, 0, 0,  name _x, 0,F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 		};
 	}
 	else
