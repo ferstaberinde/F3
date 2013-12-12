@@ -103,6 +103,7 @@ _displayDialog = (findDisplay 9228);
 _displayDialog displaySetEventHandler["KeyDown", "[""KeyDown"",_this] call f_cam_eventHandler"];
 _displayDialog displaySetEventHandler["KeyUp", "[""KeyUp"",_this] call f_cam_eventHandler"];
 call f_cam_reloadModesBox;
+ctrlShow [2100,false];
 
 // ====================================================================================
 // spawn sub scripts

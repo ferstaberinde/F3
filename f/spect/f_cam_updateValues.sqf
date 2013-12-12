@@ -10,25 +10,17 @@ while {true} do
 	ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
 	_listBox = 2100;
 	lbClear _listBox;
+	_tempArr = f_cam_units;
 	if(f_cam_playersOnly) then
 	{
-		{
-			if(alive _x) then
-			{
-				_index = lbAdd [_listBox,name _x];
-			};
-		} foreach f_cam_players;
-
+		_tempArr = f_cam_players;
 	};
-	if(!f_cam_playersOnly) then
 	{
+		if(alive _x) then
 		{
-			if(alive _x) then
-			{
-				_index = lbAdd [_listBox,name _x];
-			};
-		} foreach f_cam_units;
-
-	};
+			_index = lbAdd [_listBox,name _x];
+			lbSetColor [_listBox,_index,[side _x,false] call BIS_fnc_sideColor];
+		}
+	} foreach _tempArr;
 	sleep 5;
 };
