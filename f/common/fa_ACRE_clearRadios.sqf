@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-_unit = _this select 1;
+_unit = player;
 
 // ====================================================================================
 
@@ -31,8 +31,8 @@ waitUntil {count acre_sys_radio_currentRadioList < 1};				// Wait until radio li
 
 // ====================================================================================
 
-// SET CUSTOM FREQUENCIES (CURRENTLY DISABLED)
-// For TvTs, both sides need to have seperated radio channels, for gameplay purposes. 
+// SET CUSTOM FREQUENCIES
+// For TvTs, both sides need to have seperated radio channels, for gameplay purposes.
 // This script adds a predetermined value (0.2, 0.4 or 0.6) to each radio frequency, depending on the player's side.
 
 _setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
