@@ -48,6 +48,7 @@ class spect_RscListBox {
         font = "PuristaMedium";
         sizeEx = 0.02;
         text = "";
+
     };
   class spect_Button {
     access = 0;
@@ -253,6 +254,30 @@ class f_spec_dialog {
             w = safezoneW;
             h = safezoneH/20;
         };
+        class SpecWindow: spect_IGUIBack
+        {
+            idc = 2500;
+            x = 0 * safezoneW + safezoneX;
+            y = 0 * safezoneH + safezoneY;
+            w = safezoneW;
+            h = safezoneH/20;
+        };
+        class SpectFrame: RscFrame
+        {
+            idc = 1300;
+            x = 0.332501 * safezoneW + safezoneX;
+            y = 0.265089 * safezoneH + safezoneY;
+            w = 0.334998 * safezoneW;
+            h = 0.432237 * safezoneH;
+        };
+        class SpectGround: IGUIBack
+        {
+            idc = 1305;
+            x = 0.332501 * safezoneW + safezoneX;
+            y = 0.265089 * safezoneH + safezoneY;
+            w = 0.334998 * safezoneW;
+            h = 0.432237 * safezoneH;
+        };
 		class mouseHandler: spect_RscControlsGroup {
             class ScrollBar
             {
@@ -313,6 +338,23 @@ class f_spec_dialog {
             y = 0.00159198 * safezoneH + safezoneY;
             w = 0.100 * safezoneW;
             h = 0.0200 * safezoneH;
+        };
+        class SpectStrText: RscStructuredText
+        {
+            idc = 1310;
+            x = 0.341317 * safezoneW + safezoneX;
+            y = 0.283882 * safezoneH + safezoneY;
+            w = 0.317366 * safezoneW;
+            h = 0.375858 * safezoneH;
+            text = "Yolo!";
+        };
+        class SpectButtonExit: RscButton
+        {
+            idc = 1315;
+            x = 0.62342 * safezoneW + safezoneX;
+            y = 0.669136 * safezoneH + safezoneY;
+            w = 0.0352629 * safezoneW;
+            h = 0.0187929 * safezoneH;
         };
 
     };
