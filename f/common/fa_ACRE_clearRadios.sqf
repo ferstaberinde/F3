@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-_unit = player;
+_unit = _this select 0;
 
 // ====================================================================================
 
