@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-_unit = _this select 0;
+_unit = _this select 1;
 
 // ====================================================================================
 
