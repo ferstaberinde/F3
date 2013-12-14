@@ -8,13 +8,19 @@ f_cam_zoom = 3;
 f_cam_height = 3;
 
 
+
 // simple..
 while{true} do
 {
+
+
+
 	// if freemode.
 	if(f_cam_mode == 0) then
 	{
+
 		cameraEffectEnableHUD true;
+
 		_target = visiblePosition (camTarget f_cam_camera);
 		_point = getpos f_cam_camera;
 		_pointX = _point select 0;
@@ -23,6 +29,7 @@ while{true} do
 		_targetX = _target select 0;
 		_targetY = _target select 1;
 		_targetZ = _target select 2;
+
 
 
 		_point =  [(_target select 0) + (sin((f_cam_angle))*f_cam_zoom) , (_target select 1) + (cos((f_cam_angle))*f_cam_zoom) ,f_cam_height];
@@ -57,6 +64,7 @@ while{true} do
 		if(f_cam_mode == 0) then
 		{
 		f_cam_camera camCommit 0;
+
 		waitUntil {(camCommitted f_cam_camera)};
 		};
 	};

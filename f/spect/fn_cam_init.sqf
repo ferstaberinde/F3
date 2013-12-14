@@ -4,6 +4,12 @@
 
 // wait for the death animation to finish then disable the effects.
 _unit = _this select 0;
+_killer = _this select 1;
+player sidechat format ["%1", _this];
+if(isnil "_killer") then
+{
+	_killer = _this select 1;
+};
 //waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true]};
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
@@ -12,12 +18,12 @@ if(!isnil "BIS_fnc_feedback_allowPP") then
 };
 
 // ====================================================================================
-
+_unit setPos [0,0,0];
 // create the camera and set it up.
-f_cam_camera = "camera" camCreate [position player select 0,position player select 1,3];
+f_cam_camera = "camera" camCreate [position _killer select 0,position _killer select 1,3];
 f_cam_camera cameraEffect ["INTERNAL", "BACK"];
-f_cam_camera camSetTarget player;
-f_cam_curTarget = player;
+f_cam_camera camSetTarget _killer;
+f_cam_curTarget = _killer;
 cameraEffectEnableHUD true;
 f_cam_camera camCommit 0;
 
@@ -77,6 +83,7 @@ f_cam_detlaX = 0;
 f_cam_detlaY = 0;
 f_cam_zoom = 0;
 f_cam_hideUI = 0;
+f_cam_map_zoom = 0.5;
 f_cam_mode = 0;
 f_cam_toggleCamera = false;
 f_cam_playersOnly = false;
@@ -104,7 +111,10 @@ _displayDialog displaySetEventHandler["KeyDown", "[""KeyDown"",_this] call f_cam
 _displayDialog displaySetEventHandler["KeyUp", "[""KeyUp"",_this] call f_cam_eventHandler"];
 call f_cam_reloadModesBox;
 ctrlShow [2100,false];
-
+_helpWindow = _displayDialog displayCtrl 1310;
+_mapWindow = _displayDialog displayCtrl 1350;
+_mapWindow mapCenterOnCamera false;
+_helpWindow ctrlSetStructuredText parseText ("<br /> Hold left click to pan the camera or the WASD to control the camera.<br/>Use the scroll wheel or numpad+/- to zoom in and  out<br/> H to show and close the help window.<br /> Press M for the map.<br /> ");
 // ====================================================================================
 // spawn sub scripts
 [] spawn f_cam_freeCam;

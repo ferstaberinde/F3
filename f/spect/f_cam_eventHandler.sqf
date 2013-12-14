@@ -5,7 +5,7 @@
 // handles all the events. be afraid.
 _type = _this select 0;
 _args = _this select 1;
-
+_handled = true;
 switch (_type) do
 {
 // ==================================================================
@@ -55,6 +55,19 @@ switch (_type) do
                 f_cam_curTarget switchCamera "internal";
             }
         }
+    };
+    case "MapZoom":
+    {
+        f_cam_map_zoom = f_cam_map_zoom+((_args select 1)*0.05);
+        if(f_cam_map_zoom > 0.5) then
+        {
+            f_cam_map_zoom = 0.5;
+        };
+        if(f_cam_map_zoom < 0.05) then
+        {
+            f_cam_map_zoom = 0.05;
+        };
+        _handled = true;
     };
     case "MouseMoving":
     {
@@ -257,6 +270,20 @@ switch (_type) do
                 f_cam_zoom = 0.3 max f_cam_zoom;
                 _handled = true;
             };
+            // H
+            case 35:
+            {
+                ctrlShow [1315, !ctrlVisible 1315];
+                ctrlShow [1310, !ctrlVisible 1310];
+                ctrlShow [1300, !ctrlVisible 1300];
+                ctrlShow [1305, !ctrlVisible 1305];
+                 _handled = true;
+            };
+            case 50:
+            {
+                ctrlShow [1350, !ctrlVisible 1350];
+                 _handled = true;
+            };
 
         };
         _handled
@@ -298,5 +325,6 @@ switch (_type) do
         };
         _handled
     };
+    _handled
 };
 
