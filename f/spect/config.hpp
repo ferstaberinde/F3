@@ -579,6 +579,9 @@ class spect_RscList
         shadow = 0;
         thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
     };
+    autoScrollSpeed = 0;
+    autoScrollDelay = 0;
+    autoScrollRewind = 0;
 
 };
 
