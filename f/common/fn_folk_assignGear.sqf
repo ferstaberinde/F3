@@ -52,7 +52,11 @@ if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _u
 	{
 	player sideChat format ["DEBUG (assignGear.sqf): Player faction: %1",_faction];
 	};
+// ====================================================================================
 
+// Only the server deals out the gear
+if(isServer) then
+{
 // ====================================================================================
 
 // GEAR: BLUFOR > NATO
@@ -94,17 +98,14 @@ if(_faction == "IND_F") then {
 };
 
 // ====================================================================================
-
 // GEAR: ACRE
 // The following block of code executes only if the ACRE parameter is set to true; it
 // automatically includes a file which contains the appropriate equipment data.
-
 _useACRE = paramsArray select 2;
 
 if (_useACRE == 1) then {
 	_this execVM "f\common\fa_ACRE_assignGear.sqf";
 };
-
 // ====================================================================================
 
 // DEBUG
@@ -121,4 +122,17 @@ if (isNil "_carbine") then { //_carbine should exist unless no faction has been 
 		player sideChat format ["DEBUG (assignGear.sqf): Gear for %1: %1 slot selected.",_unit,_faction,_typeofUnit];
 	};
 };
+// ====================================================================================
+// Gear Block End
+};
+// ====================================================================================
 
+// SET CUSTOM FREQUENCIES
+// For TvTs, both sides need to have seperated radio channels, for gameplay purposes.
+// This script adds a predetermined value (0.2, 0.4 or 0.6) to each radio frequency, depending on the player's side.
+_useACRE = paramsArray select 2;
+
+if (_useACRE == 1) then {
+_setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
+};
+// ====================================================================================
