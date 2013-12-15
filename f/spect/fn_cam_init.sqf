@@ -67,9 +67,37 @@ f_cam_reloadModesBox = {
 	{
 		f_cam_lb_toggleTagsIndex = lbAdd[_listBox,"Enable Tags"];
 	};
-	f_cam_lb_toggletiNVIndex = lbAdd[_listBox,"Toggle NV"];
-	f_cam_lb_toggletiBHIndex = lbAdd[_listBox,"Toggle Blackhot"];
-	f_cam_lb_toggletiWHIndex = lbAdd[_listBox,"Toggle Whitehot"];
+	// NV
+	if(f_cam_nvOn) then
+	{
+		f_cam_lb_toggletiNVIndex = lbAdd[_listBox,"[Toggle NV]"];
+
+	}
+	else
+	{
+		f_cam_lb_toggletiNVIndex = lbAdd[_listBox,"Toggle NV"];
+	};
+	// blackhot
+	if(f_cam_tiBHOn) then
+	{
+		f_cam_lb_toggletiBHIndex = lbAdd[_listBox,"[Toggle Blackhot]"];
+
+	}
+	else
+	{
+		f_cam_lb_toggletiBHIndex = lbAdd[_listBox,"Toggle Blackhot"];
+	};
+
+	// whtiehot
+	if(f_cam_tiWHOn) then
+	{
+		f_cam_lb_toggletiWHIndex = lbAdd[_listBox,"[Toggle Whitehot]"];
+
+	}
+	else
+	{
+		f_cam_lb_toggletiWHIndex = lbAdd[_listBox,"Toggle Whitehot"];
+	};
 
 };
 // ====================================================================================

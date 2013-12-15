@@ -7,6 +7,8 @@ while {true} do
 {
     f_cam_units = allunits;
 	f_cam_players = call f_cam_getPlayers;
+	f_cam_units = f_cam_units - f_cam_players;
+	f_cam_units = f_cam_players + f_cam_units;
 	ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
 	_listBox = 2100;
 	lbClear _listBox;

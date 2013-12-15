@@ -13,7 +13,7 @@ switch (_type) do
     case "MouseButtonDown":
     {
 
-    	if(_args select 1 == 0) then
+    	if(_args select 1 == 1 && f_cam_mode != 1) then
     	{
 
     		f_cam_mLeftDown = true;
@@ -36,7 +36,7 @@ switch (_type) do
     };
     case "MouseButtonUp":
     {
-    	if(_args select 1 == 0) then
+    	if(_args select 1 == 1 && f_cam_mode != 1) then
     	{
     		f_cam_mLeftDown = false;
             f_cam_mShift = false;
@@ -88,36 +88,43 @@ switch (_type) do
         f_cam_zoom = f_cam_zoom - (_args select 1);
 
     };
+
 // ==================================================================
 // handles dropboxes
     case "LBListSelChanged":
     {
         if(f_cam_playersOnly) then
         {
-            _unit = f_cam_players select (_args select 1);
-            if(!isnil "_unit") then
+            if(count f_cam_players > (_args select 1)) then
             {
-                f_cam_camera camSetTarget _unit;
-                f_cam_curTarget = _unit;
-                if(f_cam_toggleCamera) then
+                _unit = f_cam_players select (_args select 1);
+                if(!isnil "_unit") then
                 {
-                  f_cam_curTarget switchCamera "INTERNAL";
+                    f_cam_camera camSetTarget _unit;
+                    f_cam_curTarget = _unit;
+                    if(f_cam_toggleCamera) then
+                    {
+                      f_cam_curTarget switchCamera "INTERNAL";
+                    };
+                    ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
                 };
-                ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
             };
         }
         else
         {
-            _unit = f_cam_units select (_args select 1);
-            if(!isnil "_unit") then
+            if(count f_cam_units > (_args select 1)) then
             {
-                f_cam_camera camSetTarget _unit;
-                f_cam_curTarget = _unit;
-                if(f_cam_toggleCamera) then
+                _unit = f_cam_units select (_args select 1);
+                if(!isnil "_unit") then
                 {
-                  f_cam_curTarget switchCamera "INTERNAL";
+                    f_cam_camera camSetTarget _unit;
+                    f_cam_curTarget = _unit;
+                    if(f_cam_toggleCamera) then
+                    {
+                      f_cam_curTarget switchCamera "INTERNAL";
+                    };
+                    ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
                 };
-                ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
             };
         };
 
