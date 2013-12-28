@@ -22,13 +22,19 @@ loadScreen = "logo.paa";
 
 // ============================================================================================
 
+// F3 - Debug Console
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+enableDebugConsole = 1;
+
+// ============================================================================================
+
 // F3 - Respawn Settings
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 respawn = 1;
 respawndelay = 3;
-
-// respawnTemplates[] = {"Spectator"};
+respawnTemplates[] = {"f_Spectator"};
 
 // ============================================================================================
 
@@ -73,7 +79,7 @@ class Params
                 title = "$STR_f_param_backpacks";
                 values[] = {0,1,2};
                 texts[] = {"Off","Light","Heavy"};
-                default = 2;
+                default = 1;
                 code = "f_param_backpacks = %1";
         };
 
@@ -95,6 +101,20 @@ class Params
 
 // ============================================================================================
 
+// F3 - Mission Timer/Safe Start
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
+
+        class f_param_mission_timer
+        {
+                title = "$STR_f_param_mission_timer";
+                values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
+                texts[] = {"$STR_f_param_mission_timer_off","1","2","3","4","5","6","7","8","9","10","15"};
+                default = 0;
+                code = "f_var_mission_timer = %1";
+        };
+
+// ============================================================================================
+
 // F3 - Mission Conditions Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -110,8 +130,8 @@ class Params
 	class f_param_weather
 	{
 		title = "$STR_f_param_weather";
-		values[] = {0,1,2,3,4,5,9,10};
-		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option9,$STR_f_param_weather_Option10};
+		values[] = {0,1,2,3,4,5,6,7,8,9,10};
+		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option9,$STR_f_param_weather_Option10};
 		default = 0;
 		code = "f_param_weather = %1";
 	};
@@ -126,7 +146,7 @@ class Params
 //		title = "$STR_f_param_AISkill_Friendly";
 //		values[] = {0,1,2,3};
 //		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 2;
+//		default = 1;
 //		code = "f_param_AISkill_Friendly = %1";
 //	};
 //	class f_param_AISkill_Enemy
@@ -134,7 +154,7 @@ class Params
 //		title = "$STR_f_param_AISkill_Enemy";
 //		values[] = {0,1,2,3};
 //		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 2;
+//		default = 1;
 //		code = "f_param_AISkill_Enemy = %1";
 //	};
 
@@ -148,7 +168,7 @@ class Params
 //		title = "$STR_f_param_AISkill_BLUFOR";
 //		values[] = {0,1,2,3};
 //		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 2;
+//		default = 1;
 //		code = "f_param_AISkill_BLUFOR = %1";
 //	};
 //	class f_param_AISkill_OPFOR
@@ -156,7 +176,7 @@ class Params
 //		title = "$STR_f_param_AISkill_OPFOR";
 //		values[] = {0,1,2,3};
 //		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 2;
+//		default = 1;
 //		code = "f_param_AISkill_OPFOR = %1";
 //	};
 
@@ -169,18 +189,21 @@ class Params
 
 // ============================================================================================
 
-class RscTitles {
-
-// ============================================================================================
-
-// F3 - Name Tags
+// F3 - Spectator Script
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// #include "f\common\f_recog\recogOverlay.hpp"
-
-// ============================================================================================
-
+class CfgRespawnTemplates
+{
+	// Class used in respawnTemplates entry
+	class f_Spectator
+	{
+		onPlayerRespawn = "f_fnc_cam_init";
+	};
 };
+
+// contains configs for the UI.
+#include "f\spect\config.hpp"
+
 
 // ============================================================================================
 
@@ -277,7 +300,15 @@ class CfgFunctions
 			class SetWeather
 			{
 			};
+			class SetAISKill
+			{
+			};
 		};
+		class spect
+		{
+			file = "f\spect";
+			class cam_init{};
+		}
 	};
 };
 

@@ -25,7 +25,7 @@ f_respawnINIT = player addEventHandler ["killed", {_this execVM "init_onPlayerRe
 // F3 - Briefing
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "briefing.sqf";
+f_script_briefing = [] execVM "briefing.sqf";
 
 // ====================================================================================
 
@@ -84,6 +84,7 @@ f_endSelected = -1;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // f_removeBodyDelay = 180;
+// f_removeBodyDistance = 500;
 // f_doNotRemoveBodies = [];
 // [] execVM "f\common\f_addRemoveBodyEH.sqf";
 
@@ -119,13 +120,13 @@ f_endSelected = -1;
 
 // [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// BLUFOR > BLUE
+// BLUFOR > NATO
 // [BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// OPFOR > RED
+// OPFOR > CSAT
 // [OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
-// INDEPENDENT > GREEN
+// INDEPENDENT > AAF
 // [INDEPENDENT,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // ====================================================================================
@@ -133,25 +134,22 @@ f_endSelected = -1;
 // F3 - Casualties Cap (Advanced)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// BLUFOR > BLUE
+// BLUFOR
 // [BLUFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
-// OPFOR > RED
+// OPFOR
 // [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
-// INDEPENDENT > GREEN
+// INDEPENDENT
 // [INDEPENDENT,100] execVM "f\server\f_casualtiesCapAdv.sqf";
 
 // ====================================================================================
 
-// F3 - AI Skill Selector (coop)
+// F3 - AI Skill Selector (Coop)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_isFriendlyBLU = 1;
-// f_isFriendlyRES = 1;
-// f_isFriendlyOPF = 0;
-// f_isFriendlyCIV = 1;
-// [] execVM "f\common\f_setAISkill.sqf";
+// f_isFriendly = [west,civilian];
+// []  execVM "f\server\f_setAISkill.sqf";
 
 // ====================================================================================
 
@@ -160,14 +158,14 @@ f_endSelected = -1;
 
 // f_isFriendlyToBLU_RES = 1;
 // f_isFriendlyToBLU_CIV = 1;
-// [] execVM "f\common\f_setAISkillAD.sqf";
+// [] execVM "f\server\f_setAISkill.sqf";
 
 // ====================================================================================
 
 // F3 - Name Tags
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [] execVM "f\common\f_recog\recog_init.sqf";
+// [20] execVM "f\common\f_nametags.sqf";
 
 // ====================================================================================
 
@@ -185,15 +183,15 @@ f_endSelected = -1;
 
 // ====================================================================================
 
-// F3 - Tripwire action
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// [[UnitName1,UnitName2],25,2,east] execVM "f\common\fa_tripwire_init.sqf";
-
-// ====================================================================================
-
 // F3 - Join Group Action
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [false] execVM "f\common\f_groupJoinAddOption.sqf";
+
+// ====================================================================================
+
+// F3 - Mission Timer/Safe Start
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[] execVM "f\common\f_safeStart.sqf";
 

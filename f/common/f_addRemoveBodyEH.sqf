@@ -11,9 +11,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_men","_str_Men","_str_menLessExempt"];
-
-f_abrAddToFIFO = objNull;
+private ["_men","_str_Men","_str_menLessExempt","_handle"];
 
 // ====================================================================================
 
@@ -27,7 +25,7 @@ waitUntil {scriptDone f_script_setLocalVars};
 // SET KEY VARIABLES
 // Using a common variable, we will create an array containing all men.
 
-_men = f_var_men;
+_men = allUnits;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -38,49 +36,26 @@ if (f_var_debugMode == 1) then
 
 // ====================================================================================
 
-// REMOVE EXEMPT GROUPS
-// Units from groups named in the global array f_doNotRemoveBodies are removed from
-// the array _men.
+// PREVENT UNTIS FROM BEING REMOVED
+// All units in the corresponding array are flagged to never be removed
+if (isNil "f_doNotRemoveBodies") then {f_doNotRemoveBodies = []};
 
-{if ((group _x) in f_doNotRemoveBodies) then {_men = _men - [_x]}} forEach _men;
-
-// DEBUG
-if (f_var_debugMode == 1) then
 {
-	_str_menLessExempt = str _men;
-	player sideChat format ["DEBUG (f\common\f_addRemoveBodyEH.sqf): _menLessExempt = %1",_str_menLessExempt];
-};
+	_x setVariable ["f_removeBodyEH",true];
+} forEach f_doNotRemoveBodies;
 
 // ====================================================================================
 
 // ADD EVENT HANDLER
-// A killed event handler is added to all units in the array _men.
+// A killed event handler is added to all units in the array _men that are not part of the exempt group
 
-if (count _this == 0) then
 {
-	//delay method
-	{_x addEventHandler ["killed", {_this execVM "f\common\f_removeBody.sqf"}]} forEach _men;
-}else
-{
-	//FIFO method
-	{
-		_x addEventHandler ["killed", 
-		{
-			if (isServer) then
-			{
-				f_abrFIFO = f_abrFIFO + [_this select 0];
-			} else
-			{
-				_this execVM "f\common\f_abrAddToFIFO.sqf"	
-			};
-		}]
-	} forEach _men;
-	// DEBUG
-	if (f_var_debugMode == 1) then
-	{
-	player sideChat "DEBUG (f\common\f_addRemoveBodyEH.sqf): FIFO EHs added";
+_handle = _x getVariable ["f_removeBodyEH",false];
+if !(_handle) then {
+	_x addEventHandler ["killed", {(_this select 0) execVM "f\server\f_removeBody.sqf"}];
+	_x setVariable ["f_removeBodyEH",true];
 	};
-};
+} forEach _men;
 
 // ====================================================================================
 

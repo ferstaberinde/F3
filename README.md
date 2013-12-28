@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-7
+* Version: 3-0-8
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-0-8     | 28 DEC 2013 | Patch release - Various improvements (see change history).
 * 3-0-7     | 14 SEP 2013 | Patch release - Various improvements (see change history).
 * 3-0-6     | 20 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-5     | 17 AUG 2013 | Patch release - Various improvements (see change history).
@@ -125,9 +126,9 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster
-* Documentation: Fer
-* Producers: Fer
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark
+* Documentation: Fer | Wolfenswan
+* Producers: Fer | Wolfenswan
 * Special Thanks: Zerith | Draakon
 * Special Thanks: Everyone at Folk ARPS
 
@@ -193,7 +194,7 @@ The online manual can be found at:
 
 ## 08. INSTALLATION ##
 
-To begin using the Software, move all the folders in this archive into one of the following directories:
+To begin using the Software, move the F3.Altis folder into one of the following directories:
 
 * \My Documents\Arma 3 Alpha\MPMissions\
 * \My Documents\Arma 3 Alpha Other Profiles\YourPlayerName\MPMissions\
@@ -215,6 +216,36 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-0-8 | 28 DEC 2013
+
+* Moved README.md to the F3 folder.
+* Added BIS debug console for logged-in admins.
+* Added Safe Start component.
+* Added new F3 Spectator component.
+* Overhauled F3 Name Tag component
+* Overhauled F3 Automatic Body Removal Component
+* Overhauled F3 Set AI Skill Component
+* Updated Briefing Template component to reflect new faction names.
+* Updated Mission Observers component to use BIS Splendid Camera.
+* Updated F3 Folk ARPS Platoons component to reflect new faction names.
+* Updated F3 Folk ARPS Assign Gear Script component to reflect new faction names.
+* Updated F3 Folk ARPS Group IDs to reflect new faction names.
+* Updated F3 Folk ARPS Assign Gear scripts to improve weight-distribution in fire teams and reduce overall weight
+* Expanded F3 Folk ARPS Platoons component to include FIA platoon.
+* Expanded F3 Folk ARPS Assign Gear Script component to support FIA platoon.
+* Expanded F3 Folk ARPS Assign Gear Script component to offer more variety for backpacks and vests
+* Expanded Briefing Template component to support FIA platoon.
+* Expanded F3 Folk ARPS Group IDs to support FIA platoon.
+* Expanded F3 Folk ARPS Group Markers to support FIA platoon.
+* Expanded F3 Folk ARPS JIP Reinforcement Options to support FIA platoon.
+* Re-enabled more weather parameter options in Mission Conditions Selector component.
+* Removed now obsolete old F2 name tag component
+* Removed obsolete F2 Tripwire Action entry in init.sqf
+* Removed unnecessary references to Stratis in mission.sqm
+* Disabled Weather synchronization in F3 Missions Conditions selector component for perfomance reasons
+* Fixed minor bug in F3 Folk ARPS Platoons component.
+* Fixed bugs in F3 Mission Conditions Selector introduced by A3 1.02.110.424
 
 3-0-7 | 14 SEP 2013
 

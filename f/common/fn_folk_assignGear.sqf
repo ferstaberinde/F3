@@ -10,7 +10,7 @@ private [
 "_glrifle","_glriflemag","_glriflemag_tr","_glmag",
 "_glsmokewhite","_glsmokegreen","_glsmokered",
 "_glflarewhite","_glflarered","_glflareyellow","_glflaregreen",
-"_AR","_ARmag",	"_ARmag_tr",
+"_AR","_ARmag","_ARmag_tr",
 "_MMG","_MMGmag","_MMGmag_tr",
 "_HMG","_HMGmount",
 "_RAT","_RATmag",
@@ -24,13 +24,14 @@ private [
 "_rifle","_riflemag","_riflemag_tr",
 "_carbine","_carbinemag","_carbinemag_tr",
 "_smg","_smgmag","_smgmag_tr",
-"_bagmedium","_baglarge",
+"_bagsmall","_bagmedium","_baglarge",
 "_ATmine","_satchel",
 "_medkit","_rifle_attach",
 "_carbine_attach","_smg_attach",
 "_glrifle_attach","_AR_attach",
 "_MMG_attach","_SNrifle_attach"
-,"_APmine", "_nvg"
+,"_APmine", "_nvg",
+"_chemgreen","_chemred","_chemblue","_chemyellow"
 ];
 
 // ====================================================================================
@@ -51,49 +52,60 @@ if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _u
 	{
 	player sideChat format ["DEBUG (assignGear.sqf): Player faction: %1",_faction];
 	};
-
 // ====================================================================================
 
-// GEAR: BLUFOR > BLUE
-// The following block of code executes only if the player is in a BLUE slot; it
+// Only the server deals out the gear
+if(isServer) then
+{
+// ====================================================================================
+
+// GEAR: BLUFOR > NATO
+// The following block of code executes only if the player is in a NATO slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "BLU_F") then {
-#include "folk_assignGear_blue.sqf"
+#include "folk_assignGear_nato.sqf"
 };
 
 // ====================================================================================
 
-// GEAR: OPFOR > RED
-// The following block of code executes only if the player is in a RED slot; it
+// GEAR: BLUFOR > FIA
+// The following block of code executes only if the player is in a FIA slot; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction == "BLU_G_F") then {
+#include "folk_assignGear_fia.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: OPFOR > CSAT
+// The following block of code executes only if the player is in a CSAT slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "OPF_F") then {
-#include "folk_assignGear_red.sqf"
+#include "folk_assignGear_csat.sqf"
 };
 
 // ====================================================================================
 
-// GEAR: INDEPEDENT > GREEN
-// The following block of code executes only if the player is in a GREEN slot; it
+// GEAR: INDEPEDENT > AAF
+// The following block of code executes only if the player is in a AAF slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if(_faction == "IND_F") then {
-#include "folk_assignGear_green.sqf";
+#include "folk_assignGear_aaf.sqf";
 };
 
 // ====================================================================================
-
 // GEAR: ACRE
 // The following block of code executes only if the ACRE parameter is set to true; it
 // automatically includes a file which contains the appropriate equipment data.
-
 _useACRE = paramsArray select 2;
 
 if (_useACRE == 1) then {
 	_this execVM "f\common\fa_ACRE_assignGear.sqf";
 };
-
 // ====================================================================================
 
 // DEBUG
@@ -110,4 +122,17 @@ if (isNil "_carbine") then { //_carbine should exist unless no faction has been 
 		player sideChat format ["DEBUG (assignGear.sqf): Gear for %1: %1 slot selected.",_unit,_faction,_typeofUnit];
 	};
 };
+// ====================================================================================
+// Gear Block End
+};
+// ====================================================================================
 
+// SET CUSTOM FREQUENCIES
+// For TvTs, both sides need to have seperated radio channels, for gameplay purposes.
+// This script adds a predetermined value (0.2, 0.4 or 0.6) to each radio frequency, depending on the player's side.
+_useACRE = paramsArray select 2;
+
+if (_useACRE == 1) then {
+_setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
+};
+// ====================================================================================
