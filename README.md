@@ -126,7 +126,7 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark
 * Documentation: Fer | Wolfenswan
 * Producers: Fer | Wolfenswan
 * Special Thanks: Zerith | Draakon
