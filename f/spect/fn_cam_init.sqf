@@ -5,10 +5,9 @@
 // wait for the death animation to finish then disable the effects.
 _unit = _this select 0;
 _killer = _this select 1;
-player sidechat format ["%1", _this];
 if(isnil "_killer") then
 {
-	_killer = _this select 1;
+	_killer = _this select 0;
 };
 //waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true]};
 if(!isnil "BIS_fnc_feedback_allowPP") then
@@ -142,7 +141,7 @@ ctrlShow [2100,false];
 _helpWindow = _displayDialog displayCtrl 1310;
 _mapWindow = _displayDialog displayCtrl 1350;
 _mapWindow mapCenterOnCamera false;
-_helpWindow ctrlSetStructuredText parseText ("<br /> Hold left click to pan the camera or the WASD to control the camera.<br/>Use the scroll wheel or numpad+/- to zoom in and  out<br/> H to show and close the help window.<br /> Press M for the map.<br /> ");
+_helpWindow ctrlSetStructuredText parseText ("<br /> Hold right click to pan the camera or the WASD to control the camera.<br/>Use the scroll wheel or numpad+/- to zoom in and  out<br/> H to show and close the help window.<br /> Press M for the map.<br /> ");
 // ====================================================================================
 // spawn sub scripts
 [] spawn f_cam_freeCam;
