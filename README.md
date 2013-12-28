@@ -194,7 +194,7 @@ The online manual can be found at:
 
 ## 08. INSTALLATION ##
 
-To begin using the Software, move all the folders in this archive into one of the following directories:
+To begin using the Software, move the F3.Altis folder into one of the following directories:
 
 * \My Documents\Arma 3 Alpha\MPMissions\
 * \My Documents\Arma 3 Alpha Other Profiles\YourPlayerName\MPMissions\
@@ -219,6 +219,7 @@ Version | Date
 
 3-0-8 | 28 DEC 2013
 
+* Moved README.md to the F3 folder.
 * Added BIS debug console for logged-in admins.
 * Added Safe Start component.
 * Added new F3 Spectator component.
