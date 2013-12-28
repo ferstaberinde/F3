@@ -42,20 +42,20 @@ while{true} do
 		};
 
 		f_cam_camera camSetPos _point;
-		if(f_cam_detlaX > (safezonew/6)*3) then
+		if(f_cam_detlaX > 0.6) then
 		{
 			_max = 1 max f_cam_detlaX;
 			f_cam_angle = f_cam_angle - _valueX*(abs(f_cam_detlaX-1));
 		};
-		if(f_cam_detlaX < -((safezonew/6)*3)+1) then
+		if(f_cam_detlaX < 0.4) then
 		{
 			f_cam_angle = f_cam_angle + _valueX*(abs(f_cam_detlaX));
 		};
-		if (f_cam_detlaY > (safezoneh/6)*3) then
+		if (f_cam_detlaY > 0.6) then
 		{
 			f_cam_height = f_cam_height - _valueY*(abs(f_cam_detlaY-1));
 		};
-		if (f_cam_detlaY < -((safezoneh/6)*3)+1)then
+		if (f_cam_detlaY < 0.4) then
 		{
 			f_cam_height = f_cam_height +  _valueY*(abs(f_cam_detlaY));
 		};
