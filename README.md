@@ -126,8 +126,8 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster
-* Documentation: Fer
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba
+* Documentation: Fer | Wolfenswan
 * Producers: Fer | Wolfenswan
 * Special Thanks: Zerith | Draakon
 * Special Thanks: Everyone at Folk ARPS
@@ -221,6 +221,7 @@ Version | Date
 
 * Added BIS debug console for logged-in admins.
 * Added Safe Start component.
+* Added new F3 Spectator component.
 * Overhauled F3 Name Tag component
 * Overhauled F3 Automatic Body Removal Component
 * Overhauled F3 Set AI Skill Component
