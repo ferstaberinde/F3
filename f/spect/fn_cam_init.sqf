@@ -5,10 +5,9 @@
 // wait for the death animation to finish then disable the effects.
 _unit = _this select 0;
 _killer = _this select 1;
-player sidechat format ["%1", _this];
 if(isnil "_killer") then
 {
-	_killer = _this select 1;
+	_killer = _this select 0;
 };
 //waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true]};
 if(!isnil "BIS_fnc_feedback_allowPP") then
