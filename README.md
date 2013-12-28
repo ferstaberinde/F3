@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 3-0-8     | XX OCT 2013 | Patch release - Various improvements (see change history).
+* 3-0-8     | 28 DEC 2013 | Patch release - Various improvements (see change history).
 * 3-0-7     | 14 SEP 2013 | Patch release - Various improvements (see change history).
 * 3-0-6     | 20 AUG 2013 | Patch release - Various improvements (see change history).
 * 3-0-5     | 17 AUG 2013 | Patch release - Various improvements (see change history).
@@ -217,17 +217,17 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-0-8 | XX XXX 2013
+3-0-8 | 28 DEC 2013
 
 * Added BIS debug console for logged-in admins.
 * Added Safe Start component.
 * Overhauled F3 Name Tag component
 * Overhauled F3 Automatic Body Removal Component
 * Overhauled F3 Set AI Skill Component
+* Updated Briefing Template component to reflect new faction names.
 * Updated Mission Observers component to use BIS Splendid Camera.
 * Updated F3 Folk ARPS Platoons component to reflect new faction names.
 * Updated F3 Folk ARPS Assign Gear Script component to reflect new faction names.
-* Updated Briefing Template component to reflect new faction names.
 * Updated F3 Folk ARPS Group IDs to reflect new faction names.
 * Updated F3 Folk ARPS Assign Gear scripts to improve weight-distribution in fire teams and reduce overall weight
 * Expanded F3 Folk ARPS Platoons component to include FIA platoon.
