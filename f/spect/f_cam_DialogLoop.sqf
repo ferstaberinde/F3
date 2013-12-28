@@ -24,5 +24,5 @@ while {true} do
 	call f_cam_reloadModesBox;
 	ctrlShow [2100,false];
 	_helpWindow = _displayDialog displayCtrl 1310;
-	_helpWindow ctrlSetStructuredText parseText ("<br /> Hold left click to pan the camera or the arrow keys to control the camera.<br/>Use the scroll wheel or numpad+/- to zoom in and  out<br/> H to show and close the help window.<br /> Press M for the map.<br /> ");
+	_helpWindow ctrlSetStructuredText parseText ("<br /> Hold right click to pan the camera or the arrow keys to control the camera.<br/>Use the scroll wheel or numpad+/- to zoom in and  out<br/> H to show and close the help window.<br /> Press M for the map.<br /> ");
 };
