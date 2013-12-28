@@ -141,7 +141,7 @@ ctrlShow [2100,false];
 _helpWindow = _displayDialog displayCtrl 1310;
 _mapWindow = _displayDialog displayCtrl 1350;
 _mapWindow mapCenterOnCamera false;
-_helpWindow ctrlSetStructuredText parseText ("<br /> Hold right click to pan the camera or the WASD to control the camera.<br/>Use the scroll wheel or numpad+/- to zoom in and  out<br/> H to show and close the help window.<br /> Press M for the map.<br /> ");
+_helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click (or shift-right-click) and drag to the edges of the screen to pan the camera, or use the arrow keys to control the camera.<br /><br />Use the scroll wheel or numpad+/- to zoom in and out.<br /><br />Press H to show and close the help window.<br /><br />Press M for the map.<br /> ");
 // ====================================================================================
 // spawn sub scripts
 [] spawn f_cam_freeCam;
