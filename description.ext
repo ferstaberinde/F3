@@ -47,4 +47,11 @@ class CfgFunctions
 			class addWaypoint {file = "ws_fnc\AI\ws_fnc_addWaypoint.sqf";};
 			class setAIMode {file = "ws_fnc\AI\ws_fnc_setAIMode.sqf";};
 		};
+		class cache
+		{
+			class cInit {file = "ws_fnc\cache\ws_fnc_cInit.sqf";};
+			class cache {file = "ws_fnc\cache\ws_fnc_cache.sqf";};
+			class uncache {file = "ws_fnc\cache\ws_fnc_uncache.sqf";};
+			class cTracker {file = "ws_fnc\cache\ws_fnc_cTracker.sqf";};
+		};
 };
