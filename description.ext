@@ -47,4 +47,5 @@ class CfgFunctions
 			class addWaypoint {file = "ws_fnc\AI\ws_fnc_addWaypoint.sqf";};
 			class setAIMode {file = "ws_fnc\AI\ws_fnc_setAIMode.sqf";};
 		};
+	};
 };
