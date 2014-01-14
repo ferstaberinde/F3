@@ -17,9 +17,10 @@ F_COLOR_NAMETAGS_GROUP = [0,1,0.7,0.9];
 F_COLOR2_NAMETAGS = [0.5,0.1,0.2,0.9]; // The color for units in driver, gunner and other vehicle positions positions
 
 F_SIZE_NAMETAGS = 0.04; // The size the names are displayed in
-F_HEIGHT_NAMETAGS = 0; // The height of the name tags (0 = hovering over player head)
+F_HEIGHT_NAMETAGS = 0; // The height of the name tags for infantry (0 = hovering over unit, -1 = about belt height)
+F_VHEIGHT_NAMETAGS = 0; // The height of the name tags for units in vehicles (0 = hovering)
 
-F_SHOWDISTANCE_NAMETAGS = true; // Show distance to player
+F_SHOWDISTANCE_NAMETAGS = false; // Show distance to player
 F_SHOWVEHICLE_NAMETAGS = false; // Show vehicle player is in
 
 F_FONT_NAMETAGS = "EtelkaMonospaceProBold"; // Font for the names
@@ -61,8 +62,7 @@ F_KEYDOWN_NAMETAG = {
 [] spawn {
 waitUntil {scriptDone f_script_briefing};
 
-player createDiaryRecord ["Diary", ["NameTags",
-format ["<br/>You can toggle name tags for friendly units on and off by pressing %1. This will display all player names in a distance of %3 m.<br/><br/>
+_bstr = format ["<br/>You can toggle name tags for friendly units on and off by pressing %1. This will display all player names in a distance of %3 m.<br/><br/>
 
 If you do not have an key bound for %2 this will be 'T' by default. If you want to bind the toggle to a different key bind your %2 key and click
 <execute expression=""
@@ -71,8 +71,9 @@ F_KEYNAME_NAMETAGS = actionKeysNames F_KEY_NAMETAGS;
 if (isNil 'F_ACTIONKEY_NAMETAGS') then {F_ACTIONKEY_NAMETAGS = 20; F_KEYNAME_NAMETAGS = 'T';};
 hintsilent 'Team switch key rebound!';
 "">here</execute>.
-",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DIST_NAMETAGS]
-]];
+",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DIST_NAMETAGS];
+
+player createDiaryRecord ["Diary", ["NameTags",_bstr]];
 
 // NOTIFY PLAYER ABOUT NAMETAGS VIA HINT
 sleep 5;
@@ -93,8 +94,30 @@ sleep 0.1;
 // the real code.
 
 addMissionEventHandler ["Draw3D", {
+
+// A function to create the string for the name tags on demand
+_fnc_createString = {
+	private ["_u","_prefix","_cargo","_str"];
+	_u = _this select 0;
+	_prefix = "";
+	_cargo = "";
+	if (count _this > 1) then {_prefix = _this select 1};
+	if (count _this > 2) then {_cargo = _this select 2};
+
+	_str = name _u;
+
+	if (F_SHOWDISTANCE_NAMETAGS) then {_str = _str + format [" (%1 m)",round (_pos distance player)]};
+	if (F_SHOWVEHICLE_NAMETAGS && !(typeOf (vehicle _u) isKindof "Man")) then {_str = _str + format [" (%1)",getText (configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayname")]};
+
+	if (_prefix != "") then {_str = _prefix + _str};
+	if (_cargo != "") then {_str = _str + _cargo};
+
+	_str
+};
+
 if(F_DRAW_NAMETAGS) then
 {
+
 _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], F_DIST_NAMETAGS];
 {
 	if(typeof _x iskindof "Man") then
@@ -104,10 +127,8 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 			_pos = visiblePosition _x;
 			_color = F_COLOR_NAMETAGS;
 			if(_x in units player) then { _color = F_COLOR_NAMETAGS_GROUP };
-			_str = name _x;
-		  if (F_SHOWDISTANCE_NAMETAGS) then {_str = _str + format [" (%1 m)",_pos distance player]};
 
-			drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, F_HEIGHT_NAMETAGS, 0, _str, 0,F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+			drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_HEIGHT_NAMETAGS], 0, 0, 0, [_x] call _fnc_createString, 0,F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 		};
 	}
 	else
@@ -115,36 +136,35 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 		_veh = _x;
 		_inc = 1;
 		_alternate = 0;
-		_vehtype = "";
-
-		_str = name _x;
-		if (F_SHOWDISTANCE_NAMETAGS) then {_str = _str + format [" (_x m)",_pos distance player]};
-		if (F_SHOWVEHICLE_NAMETAGS) then {_str = _str + format ["( %1)",typeOf _x]};};  //prob replace with getText > config > name
+		_prefix = "";
 
 		{
-			_str = "P: " + _str;
+		  _prefix = "P: ";
 			_color = F_COLOR_NAMETAGS;
 			if(driver _veh == _x) then
 			{
-				_str = "D: " + _str;
+				_prefix = "D: ";
 				_color = F_COLOR2_NAMETAGS;
 			};
 			if(gunner _veh == _x) then
 			{
-				_str = "G: " + _str;
+			_prefix = "G: ";
 				_color = F_COLOR2_NAMETAGS;
 			};
 			if(commander _veh == _x) then
 			{
-				_str = "C: " + _str;
+				_prefix = "C: ";
 				_color = F_COLOR2_NAMETAGS;
 			};
 			if(assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x) then
 			{
-				_str = "G: " + _str;
+				_prefix = "G: ";
 				_color = F_COLOR2_NAMETAGS;
 			};
+
 			_pos = visiblePosition _x;
+
+
 			if(_pos distance (visiblePosition (driver _veh)) > 0.1 || driver _veh == _x) then
 			{
 				if(driver _veh == _x) then
@@ -152,17 +172,18 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 					_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier");
 					_freeSlots = _veh emptyPositions "cargo";
 
-					_str = _str + format [" (%1/%4)",(_maxSlots-_freeSlots),_maxSlots];
-
 					if (_maxSlots != 0) then {
-						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, F_HEIGHT_NAMETAGS, 0, _str, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+
+						_str = _str + format [" (%1/%2)",(_maxSlots-_freeSlots),_maxSlots];
+						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0, [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 					} else {
-						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, F_HEIGHT_NAMETAGS, 0,  _str, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0,  [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 					};
 				}
 				else
 				{
-					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2], 0, F_HEIGHT_NAMETAGS, 0,  _str, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+
+					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0,  [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 				};
 			}
 			else
@@ -170,15 +191,17 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 				if(_x == gunner _veh) then
 				{
 					_pos = _veh modeltoworld (_veh selectionPosition "gunnerview");
+
 					_visPos = visiblePosition _x;
-					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_visPos select 2) + 2], 0, F_HEIGHT_NAMETAGS, 0,  _str, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_visPos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0,  [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 				}
 				else
 				{
 					_pos = visiblePosition _x;
+
 					_angle = (getdir _veh)+180;
-					_pos = [((_pos select 0) + sin(_angle)*(0.6*_inc)) , (_pos select 1) + cos(_angle)*(0.6*_inc),_pos select 2];
-					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 1.5], 0, F_HEIGHT_NAMETAGS, 0,  _str, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+					_pos = [((_pos select 0) + sin(_angle)*(0.6*_inc)) , (_pos select 1) + cos(_angle)*(0.6*_inc),_pos select 2 + F_VHEIGHT_NAMETAGS];
+					drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 1.5 + F_VHEIGHT_NAMETAGS], 0, 0, 0,  [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 					_inc = _inc + 1;
 				};
 			};
