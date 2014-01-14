@@ -20,8 +20,8 @@ F_SIZE_NAMETAGS = 0.04; // The size the names are displayed in
 F_HEIGHT_NAMETAGS = 0; // The height of the name tags for infantry (0 = hovering over unit, -1 = about belt height)
 F_VHEIGHT_NAMETAGS = 0; // The height of the name tags for units in vehicles (0 = hovering)
 
-F_SHOWDISTANCE_NAMETAGS = false; // Show distance to player
-F_SHOWVEHICLE_NAMETAGS = false; // Show vehicle player is in
+F_SHOWDISTANCE_NAMETAGS = true; // Show distance to player
+F_SHOWVEHICLE_NAMETAGS = true; // Show vehicle player is in
 
 F_FONT_NAMETAGS = "EtelkaMonospaceProBold"; // Font for the names
 F_KEY_NAMETAGS =  "TeamSwitch"; // The action key that will be used to toggle the name tags. See possible keys here: http://community.bistudio.com/wiki/Category:Key_Actions
@@ -72,6 +72,18 @@ if (isNil 'F_ACTIONKEY_NAMETAGS') then {F_ACTIONKEY_NAMETAGS = 20; F_KEYNAME_NAM
 hintsilent 'Team switch key rebound!';
 "">here</execute>.
 ",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DIST_NAMETAGS];
+
+if (F_SHOWDISTANCE_NAMETAGS) then {
+_bstr = _bstr + "<br/><br/>Units will display the relative distance to the player next to their name. To toggle this behaviour click <execute expression=""
+if (F_SHOWDISTANCE_NAMETAGS) then {hintsilent 'Display of vehicle type deactivated!';F_SHOWDISTANCE_NAMETAGS= false} else {F_SHOWDISTANCE_NAMETAGS = true;hintsilent 'Display of vehicle type activated!'};""
+>here</execute>."
+};
+
+if (F_SHOWVEHICLE_NAMETAGS) then {
+_bstr = _bstr + "<br/><br/>Mounted units will display their vehicle next to their name. To toggle this behaviour click <execute expression=""
+if (F_SHOWVEHICLE_NAMETAGS) then {hintsilent 'Distance display deactivated!';F_SHOWVEHICLE_NAMETAGS= false} else {F_SHOWVEHICLE_NAMETAGS = true;hintsilent 'Distance display activated!'};""
+>here</execute>."
+};
 
 player createDiaryRecord ["Diary", ["NameTags",_bstr]];
 
@@ -174,8 +186,7 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 
 					if (_maxSlots != 0) then {
 
-						_str = _str + format [" (%1/%2)",(_maxSlots-_freeSlots),_maxSlots];
-						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0, [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0, [_x,_prefix,format [" (%1/%2)",(_maxSlots-_freeSlots),_maxSlots]] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 					} else {
 						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0,  [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 					};
