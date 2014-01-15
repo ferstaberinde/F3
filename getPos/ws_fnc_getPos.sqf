@@ -17,7 +17,7 @@
 // Array: [x,y,z]
 //
 // PARAMETERS
-// 1. location can be String (Markername), Array [x,y,z] or Objectname														| MANDATORY
+// 1. location can be String (Markername), Array [x,y,z], Group or Objectname														| MANDATORY
 // 2. radius has to be int > 0 and defines the radius around the position. If set to true it will instead return a position inside a trigger/marker passed in the 1. parameter	| OPTIONAL - default is 0
 // 3. minimal distance from center, has to be int > 0 and > radius		 													| OPTIONAL - default is 0
 // 4. Minimal and maximal angle from center. Array: [minAngle,maxAngle] with both values being integers from 0- 360							| OPTIONAL - default is [0,360]
@@ -60,8 +60,9 @@ if (_count > 6) then {_water = _this select 6;};
 switch (typename _posloc) do {
 	case "STRING": {_pos = getMarkerPos _posloc;};
 	case "OBJECT": {_pos = getPos _posloc;};
+	case "GROUP": {_pos = getPos (leader _posLoc)};
 	case "ARRAY": {_pos = _posloc};
-	default {[_posloc,["ARRAY","OBJECT","STRING"],"ws_fnc_getPos"] call ws_fnc_typecheck;};
+	default {[_posloc,["ARRAY","OBJECT","STRING","GROUP"],"ws_fnc_getPos"] call ws_fnc_typecheck;};
 };
 
 _posX = (_pos select 0);
