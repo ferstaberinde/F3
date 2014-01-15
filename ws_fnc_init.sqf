@@ -45,6 +45,7 @@ if !(ws_game_a3) then {
 	ws_fnc_switchLights = compile preprocessfile "ws_fnc\tools\ws_fnc_switchLights.sqf";
 	ws_fnc_attachLight = compile preprocessfile "ws_fnc\tools\ws_fnc_attachLight.sqf";
 	ws_fnc_loadVehicle = compile preprocessfile "ws_fnc\tools\ws_fnc_loadVehicle.sqf";
+	ws_fnc_nearPlayer = compile preprocessfile "ws_fnc\tools\ws_fnc_nearPlayer.sqf";
 
 	//GetPos Functions
 	ws_fnc_getPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_getPos.sqf";
@@ -65,9 +66,9 @@ if !(ws_game_a3) then {
 
 	//Cache Functions
 	ws_fnc_cInit = compile preprocessfile "ws_fnc\cache\ws_fnc_cInit.sqf";
-	ws_fnc_cache = compile preprocessfile"ws_fnc\cache\ws_fnc_cache.sqf";
-	ws_fnc_uncache = compile preprocessfile "ws_fnc\cache\ws_fnc_uncache.sqf";
 	ws_fnc_cTracker = compile preprocessfile "ws_fnc\cache\ws_fnc_cTracker.sqf";
+	ws_fnc_gCache = compile preprocessfile"ws_fnc\cache\ws_fnc_gCache.sqf";
+	ws_fnc_gUncache = compile preprocessfile "ws_fnc\cache\ws_fnc_gUncache.sqf";
 };
 
 ws_fnc_compiled = true; publicVariable "ws_fnc_compiled";

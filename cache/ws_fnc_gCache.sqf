@@ -1,3 +1,13 @@
+/*
+ws_fnc_cTracker
+Latest: 15.01.2014
+
+based on Black Mamba's work, which in turn is based on Nou and Jaynus' work. (All credit to them)
+
+FEATURE
+Disables Simulation and AI behaviour on all units but the group leader (and driver in vehicles.). Moves all disabled units out of view.
+*/
+
 {
 private["_pos"];
 if(_x != leader _this && !("Driver" in assignedVehicleRole _x)) then {

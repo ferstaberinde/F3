@@ -26,6 +26,7 @@ class CfgFunctions
 			class checkHC {file = "ws_fnc\tools\ws_fnc_checkHC.sqf"};
 			class broadcast {file = "ws_fnc\tools\ws_fnc_broadcast.sqf";};
 			class showFPS {file = "ws_fnc\tools\ws_fnc_showFPS.sqf";};
+			class nearPlayer {file = "ws_fnc\tools\ws_fnc_nearPlayer.sqf";};
 		};
 		class getPos
 		{
@@ -50,8 +51,8 @@ class CfgFunctions
 		class cache
 		{
 			class cInit {file = "ws_fnc\cache\ws_fnc_cInit.sqf";};
-			class cache {file = "ws_fnc\cache\ws_fnc_cache.sqf";};
-			class uncache {file = "ws_fnc\cache\ws_fnc_uncache.sqf";};
+			class gCache {file = "ws_fnc\cache\ws_fnc_gCache.sqf";};
+			class gUncache {file = "ws_fnc\cache\ws_fnc_gUncache.sqf";};
 			class cTracker {file = "ws_fnc\cache\ws_fnc_cTracker.sqf";};
 		};
 };
