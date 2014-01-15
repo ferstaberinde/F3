@@ -12,17 +12,20 @@ _groups = _this select 0;
 _range = _this select 1;
 _sleep = _this select 2;
 
+_debug = true;
+//if !(isNil "ws_debug") then {_debug = ws_debug};
+
 While {count _groups > 0} do {
         {
+
                 _groups = allGroups;
 
-                if (ws_debug) then ["ws_fnc_cache DBG: Tracking groups, range, sleep ",[count _groups,_range,_sleep],""] call ws_fnc_debugtext;
-
+                if (_debug) then{ ["ws_fnc_cache DBG: Tracking ",[count _groups]," groups"] call ws_fnc_debugtext;};
 
                 if (isnull _x) then {
                         _groups = _groups - [_x];
-                        if (ws_debug) then ["ws_fnc_cache DBG: Group is null, deleting: ",[_x,count _groups]," groups left"] call ws_fnc_debugtext;
 
+                        if (_debug) then{ ["ws_fnc_cache DBG: Group is null, deleting: ",[_x,count _groups]," groups left"] call ws_fnc_debugtext;};
 
                 } else {
                         _exclude = _x getvariable ["ws_cacheExcl",false];
@@ -30,16 +33,27 @@ While {count _groups > 0} do {
 
                         if (!_exclude) then {
                                 if (_cached) then {
-                                        if ([_x, _range] call BIS_fnc_nearPlayer) then {
+
+                                        if (_debug) then {["ws_fnc_cache DBG: Checking group: ",[_x],""] call ws_fnc_debugtext;};
+
+                                        if ([_x, _range] call ws_fnc_nearPlayer) then {
+
+                                                if (_debug) then {["ws_fnc_cache DBG: Decaching: ",[_x],""] call ws_fnc_debugtext;};
+
                                                 _x setvariable ["ws_cached", false];
                                                 _x call ws_fnc_gUncache;
                                         };
                                 } else {
-                                        if !([_x, _range * 1.1] call BIS_fnc_nearPlayer) then {
+                                        if !([_x, _range * 1.1] call ws_fnc_nearPlayer) then {
+
+                                                if (_debug) then {["ws_fnc_cache DBG: Caching: ",[_x],""] call ws_fnc_debugtext;};
+
                                                 _x setvariable ["ws_cached", true];
                                                 _x call ws_fnc_gCache;
                                         };
                                 };
+
+                                if (_debug) then {["ws_fnc_cache DBG: Group is excluded: ",[_x]," - Ignoring."] call ws_fnc_debugtext;};
                         };
                 };
         } foreach _groups;

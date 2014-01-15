@@ -14,7 +14,7 @@ This file only controls the debug for ws_fnc in ARMA 3. It is not necessary to c
 
 //DEBUG
  //Set this to true for debug markers and messages from all functions
-_debug = true;
+_debug = false;
 
 //Let's check if the functions are already compiled
 if (isNil "ws_fnc_compiled") then {ws_fnc_compiled = false};

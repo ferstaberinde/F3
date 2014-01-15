@@ -8,7 +8,7 @@ FEATURE
 Checks if player is within distance of unit
 
 USAGE
-[unit,distance] call ws_fnc_cInit in init.sqf or unit init
+[unit,distance] call ws_fnc_nearPlayer
 
 To exclude a group from being cached:
 a) In unit init: (group this) setVariable ["ws_cacheExcl",true];

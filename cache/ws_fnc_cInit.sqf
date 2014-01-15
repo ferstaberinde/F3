@@ -38,12 +38,38 @@ waituntil {!isnil "bis_fnc_init"};
 // Collect currently present groups
 _groups = allGroups;
 
+// All groups with playable units are set to be ignored as well
+{
+if ({_x in playableUnits} count units _x > 0) then {_x setVariable ["ws_cacheExcl",true];};
+} forEach _groups;
+
 // Define parameters
 _range = if (count _this > 0) then [{_this select 0},{1500}];
 _sleep = if (count _this > 1) then [{_this select 1},{6}];
 
 [_groups, _range, _sleep] spawn ws_fnc_cTracker;
 
-if (ws_debug) then ["ws_fnc_cache DBG: Starting to track %1 groups, range:%2, sleep:%3 ",[count _groups,_range,_sleep],""] call ws_fnc_debugtext;
+_debug = true;
+//if !(isNil "ws_debug") then {_debug = ws_debug};
+if (_debug) then {
+	["ws_fnc_cache DBG: Starting to track groups, range, sleep",[count _groups,_range,_sleep],""] call ws_fnc_debugtext;
+
+	[_sleep] spawn {
+
+	sleep (_this select 0 * 3);
+
+		while {true} do {
+			_str1 = "ws_fnc_cache DBG:<br/>";
+			_str2 = format["Total groups: %1<br/>",count allGroups];
+			_str3 = format ["Cached groups:%1<br/>",{_x getvariable "ws_cached"} count allGroups];
+			_str4 = format ["Activated groups:%1<br/>",{!(_x getvariable "ws_cached")} count allGroups];
+
+			hintsilent parseText (_str1+_str2+_str3+_str4);
+
+			sleep (_this select 0);
+		};
+	};
+};
+
 
 true
