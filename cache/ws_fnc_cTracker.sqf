@@ -12,8 +12,7 @@ _groups = _this select 0;
 _range = _this select 1;
 _sleep = _this select 2;
 
-_debug = true;
-//if !(isNil "ws_debug") then {_debug = ws_debug};
+_debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
 
 While {count _groups > 0} do {
         {

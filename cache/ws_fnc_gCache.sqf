@@ -5,7 +5,7 @@ Latest: 15.01.2014
 based on Black Mamba's work, which in turn is based on Nou and Jaynus' work. (All credit to them)
 
 FEATURE
-Disables Simulation and AI behaviour on all units but the group leader (and driver in vehicles.). Moves all disabled units out of view.
+Disables Simulation and AI behaviour on all units but the group leader (or vehicle crew). Moves all disabled units out of view.
 */
 
 {
@@ -19,11 +19,12 @@ if(_x != leader _this && !("Driver" in assignedVehicleRole _x)) then {
 
         _x enableSimulation false;
         _x allowDamage false;
-if (vehicle _x == _x) then {
-        _pos = getPosATL _x;
-        _pos set [2, -100];
-        _x setPosATL _pos;
-};
+
+        if (vehicle _x == _x) then {
+                _pos = getPosATL _x;
+                _pos set [2, -100];
+                _x setPosATL _pos;
+        };
 } else {
         _x allowDamage true;
         _x enableSimulation true;

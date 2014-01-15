@@ -49,22 +49,24 @@ _sleep = if (count _this > 1) then [{_this select 1},{6}];
 
 [_groups, _range, _sleep] spawn ws_fnc_cTracker;
 
-_debug = true;
-//if !(isNil "ws_debug") then {_debug = ws_debug};
+_debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
+
 if (_debug) then {
 	["ws_fnc_cache DBG: Starting to track groups, range, sleep",[count _groups,_range,_sleep],""] call ws_fnc_debugtext;
 
 	[_sleep] spawn {
 
-	sleep (_this select 0 * 3);
+	// Giving the tracker a head start
+	sleep (_this select 0 * 1.1);
 
 		while {true} do {
 			_str1 = "ws_fnc_cache DBG:<br/>";
 			_str2 = format["Total groups: %1<br/>",count allGroups];
 			_str3 = format ["Cached groups:%1<br/>",{_x getvariable "ws_cached"} count allGroups];
 			_str4 = format ["Activated groups:%1<br/>",{!(_x getvariable "ws_cached")} count allGroups];
+			_str5 = format ["Excluded groups:%1<br/>",{(_x getvariable "ws_cacheExcl")} count allGroups];
 
-			hintsilent parseText (_str1+_str2+_str3+_str4);
+			hintsilent parseText (_str1+_str2+_str3+_str4+_str5);
 
 			sleep (_this select 0);
 		};

@@ -12,19 +12,13 @@ NOTE (ARMA 3)
 This file only controls the debug for ws_fnc in ARMA 3. It is not necessary to call it if the description.ext is used.
 */
 
-//DEBUG
- //Set this to true for debug markers and messages from all functions
-_debug = false;
-
 //Let's check if the functions are already compiled
 if (isNil "ws_fnc_compiled") then {ws_fnc_compiled = false};
 if (ws_fnc_compiled) exitWith {};
 
-//Set the global debug flag according to user settings
-if (isNil "ws_debug") then {
-	ws_debug = _debug;
-	publicVariable "ws_debug";
-};
+// DEBUG
+// To enable debug mode either change false to true or put ws_debug = true in any unit init
+ws_debug = missionNameSpace getVariable ["ws_debug",false];
 
 ws_fnc_gameCheck = call compile preprocessFile "ws_fnc\tools\ws_fnc_gamecheck.sqf";
 
