@@ -63,6 +63,8 @@ if (_count > 3) then {_guns = _this select 3};
 if (_count > 4) then {_garrison = _this select 4};
 if (_count > 5) then {_civil  = _this select 5};
 
+_group setVariable ["ws_cacheExcl",true];
+
 _buildings = [];
 _milarray = [];
 _badarray = [];
