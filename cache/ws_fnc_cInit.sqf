@@ -14,6 +14,9 @@ To exclude a group from being cached:
 a) In unit init: (group this) setVariable ["ws_cacheExcl",true];
 b) Anywhere: Groupname setVariable ["ws_cacheExcl",true];
 
+NOTE
+It's recommended to wait up until a minute into the mission before launching the caching script to make sure that all AI have settled
+
 PARAMETERS
 1. Distance to players for units to be de-cached 							| OPTIONAL - default is 1500
 2. Amount of seconds between distance-checks to player units	| OPTIONAL - default is 5 seconds
