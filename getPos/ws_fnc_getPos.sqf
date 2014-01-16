@@ -109,7 +109,6 @@ if (!_water && (surfaceIsWater _pos)) then {
 
 //If building positions are disallowed
 if (!_building && (count (_pos nearObjects ["House",10]) >= 1)) then {
-	player sidechat "2";
 	_i = 0;
 	_distance = 0;
 	_done = false;
