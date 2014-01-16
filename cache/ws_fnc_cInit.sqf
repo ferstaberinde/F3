@@ -31,16 +31,16 @@ if !isDedicated then {
 if !(isServer) exitWith {};
 
 // Make sure script is only run once
-if (missionNameSpace getVariable ["ws_Track", false]) exitWith {};
-ws_Track = true;
+if (missionNameSpace getVariable ["ws_cInit", false]) exitWith {};
+ws_cInit = true;
 waituntil {!isnil "bis_fnc_init"};
 
 // Collect currently present groups
 _groups = allGroups;
 
-// All groups with playable units are set to be ignored as well
+// All groups with playable units or only one unit are set to be ignored as well
 {
-if ({_x in playableUnits} count units _x > 0) then {_x setVariable ["ws_cacheExcl",true];};
+if ({_x in playableUnits} count units _x > 0 || (count units _x == 1)) then {_x setVariable ["ws_cacheExcl",true];};
 } forEach _groups;
 
 // Define parameters
