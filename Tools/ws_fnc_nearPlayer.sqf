@@ -10,25 +10,23 @@ Checks if player is within distance of unit
 USAGE
 [unit,distance] call ws_fnc_nearPlayer
 
-To exclude a group from being cached:
-a) In unit init: (group this) setVariable ["ws_cacheExcl",true];
-b) Anywhere: Groupname setVariable ["ws_cacheExcl",true];
-
 PARAMETERS
-1. Unit to be checked from 										| MANDATORY
-2. Distance to unit to be checked for player	| OPTIONAL - default is 1000
+1. Entitiy to be checked from 										| MANDATORY
+2. Distance to unit to be checked for player			| MANDATORY
 
 RETURNS
 true or false
 */
 
+_ent = _this select 0;
+_distance = _this select 1;
 
-_unit = _this select 0;
-_distance = if (count _this > 1) then [{_this select 1},{1000}];
+private ["_pos","_players"];
+_pos = _ent call ws_fnc_getEPos;
+_players = [] call ws_fnc_listPlayers;
 
-private ["_position"];
-_position = [_unit] call ws_fnc_getpos;
+
 {
-	if ((_position distance _x) < _distance) exitWith { true };
+	if (_pos distance _x < _distance) exitWith {true};
 	false;
-} forEach ([] call BIS_fnc_listPlayers);
+} forEach _players;
