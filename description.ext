@@ -31,6 +31,7 @@ class CfgFunctions
 		class getPos
 		{
 			class getPos {file ="ws_fnc\getPos\ws_fnc_getPos.sqf";};
+			class getEPos	{file ="ws_fnc\getPos\ws_fnc_getEPos.sqf";};
 			class nearestRoadPos {file = "ws_fnc\getPos\ws_fnc_NearestRoadPos.sqf";};
 			class nearestLandPos {file = "ws_fnc\getPos\ws_fnc_NearestLandPos.sqf";};
 			class getPosInArea {file = "ws_fnc\getPos\ws_fnc_getPosInArea.sqf";};

@@ -55,19 +55,10 @@ if (_count > 5) then {_building = _this select 5;};
 if (_count > 6) then {_water = _this select 6;};
 
 //Interpreting variables
-
-//Getting a good position from the parsed values
-switch (typename _posloc) do {
-	case "STRING": {_pos = getMarkerPos _posloc;};
-	case "OBJECT": {_pos = getPos _posloc;};
-	case "GROUP": {_pos = getPos (leader _posLoc)};
-	case "ARRAY": {_pos = _posloc};
-	default {[_posloc,["ARRAY","OBJECT","STRING","GROUP"],"ws_fnc_getPos"] call ws_fnc_typecheck;};
-};
+_pos = _posloc call ws_fnc_getEpos;
 
 _posX = (_pos select 0);
 _posY = (_pos select 1);
-_pos set [2,0];
 
 //Fault checks
 //Checking the variables we have against what we should have
