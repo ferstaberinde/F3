@@ -26,6 +26,7 @@ class CfgFunctions
 			class checkHC {file = "ws_fnc\tools\ws_fnc_checkHC.sqf"};
 			class broadcast {file = "ws_fnc\tools\ws_fnc_broadcast.sqf";};
 			class showFPS {file = "ws_fnc\tools\ws_fnc_showFPS.sqf";};
+			class listPlayers {file = "ws_fnc\tools\ws_fnc_listPlayers.sqf";};
 			class nearPlayer {file = "ws_fnc\tools\ws_fnc_nearPlayer.sqf";};
 		};
 		class getPos
