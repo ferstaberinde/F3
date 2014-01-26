@@ -154,26 +154,26 @@ _APmine2 = "APERSMine_Range_Mag";
 // CLOTHES AND UNIFORMS
 
 // Base
-_baseUniform = "U_I_CombatUniform";
-_baseHelmet = "H_HelmetIA_net";
-_lightRig = "V_PlateCarrierIA1_dgtl";
-_mediumRig = "V_PlateCarrierIA2_dgtl"; 	// default for all infantry classes
-_heavyRig ="V_PlateCarrierIAGL_dgtl";
+_baseUniform = ["U_I_CombatUniform"];
+_baseHelmet = ["H_HelmetIA_net"];
+_lightRig = ["V_PlateCarrierIA1_dgtl"];
+_mediumRig = ["V_PlateCarrierIA2_dgtl"]; 	// default for all infantry classes
+_heavyRig = ["V_PlateCarrierIAGL_dgtl"];
 
 // Diver
-_diverUniform =  "U_I_Wetsuit";
-_diverHelmet = "";
-_diverRig = "V_RebreatherIA";
-_diverGlasses = "G_Diving";
+_diverUniform =  ["U_I_Wetsuit"];
+_diverHelmet = [];
+_diverRig = ["V_RebreatherIA"];
+_diverGlasses = ["G_Diving"];
 
 // Pilot
-_pilotUniform = "U_I_HeliPilotCoveralls";
-_pilotHelmet = "H_PilotHelmetHeli_I";
-_pilotRig = "V_TacVest_oli";
+_pilotUniform = ["U_I_HeliPilotCoveralls"];
+_pilotHelmet = ["H_PilotHelmetHeli_I"];
+_pilotRig = ["V_TacVest_oli"];
 // Crewman
-_crewUniform = "U_I_CombatUniform";
-_crewHelmet = "H_HelmetCrew_I";
-_crewRig = "V_TacVest_oli";
+_crewUniform = ["U_I_CombatUniform"];
+_crewHelmet = ["H_HelmetCrew_I"];
+_crewRig = ["V_TacVest_oli"];
 // ====================================================================================
 
 // INTERPRET PASSED VARIABLES

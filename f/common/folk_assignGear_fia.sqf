@@ -106,9 +106,9 @@ _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
 // Backpacks
-_bagsmall = "B_AssaultPack_cbr";				// carries 120, weighs 20
-_bagmedium = "B_BergenC_grn";				// carries 240, weighs 30
-_baglarge =  "B_Carryall_cbr"; 				// carries 320, weighs 40
+_bagsmall = "B_AssaultPack_rgr";				// carries 160, weighs 20
+_bagmedium = "B_Kitbag_rgr";				// carries 280, weighs 50
+_baglarge =  "B_Carryall_oli"; 				// carries 320, weighs 60
 _bagmediumdiver =  "B_AssaultPack_blk";			// used by divers
 
 // ====================================================================================
@@ -153,28 +153,26 @@ _APmine2 = "APERSMine_Range_Mag";
 // CLOTHES AND UNIFORMS
 
 // Base
-_baseUniform = "U_BG_Guerilla1_1";
-_baseHelmet = "H_Shemag_olive";
-_lightRig = "V_Chestrig_khk";
-_mediumRig = "V_TacVest_khk"; 	// default for all infantry classes
-_heavyRig ="V_HarnessOGL_gry";
+_baseUniform = ["U_BG_Guerilla1_1","U_BG_Guerilla2_1","U_BG_Guerilla2_2","U_BG_Guerilla2_3","U_BG_Guerilla3_1","U_BG_Guerilla3_2"];
+_baseHelmet = ["H_Shemag_olive","H_Bandanna_khk","H_Booniehat_khk","H_Cap_oli","H_Watchcap_blk"];
+_lightRig = ["V_Chestrig_rgr"];
+_mediumRig = ["V_TacVest_oli"]; 	// default for all infantry classes
+_heavyRig = ["V_HarnessOGL_gry"];
 
 // Diver
-_diverUniform =  "U_B_Wetsuit";
-_diverHelmet = "";
-_diverRig = "V_RebreatherB";
-_diverGlasses = "G_Diving";
+_diverUniform =  ["U_B_Wetsuit"];
+_diverHelmet = [];
+_diverRig = ["V_RebreatherB"];
+_diverGlasses = ["G_Diving"];
 
 // Pilot
-_pilotUniform = "U_B_HeliPilotCoveralls";
-_pilotHelmet = "H_PilotHelmetHeli_B";
-_pilotRig = "V_TacVest_blk";
-
+_pilotUniform = ["U_B_HeliPilotCoveralls"];
+_pilotHelmet = ["H_PilotHelmetHeli_B"];
+_pilotRig = ["V_TacVest_blk"];
 // Crewman
-_crewUniform = "U_B_CombatUniform_mcam_vest";
-_crewHelmet = "H_HelmetCrew_B";
-_crewRig = "V_TacVest_blk";
-
+_crewUniform = ["U_B_CombatUniform_mcam_vest"];
+_crewHelmet = ["H_HelmetCrew_B"];
+_crewRig = ["V_TacVest_blk"];
 // ====================================================================================
 
 // INTERPRET PASSED VARIABLES

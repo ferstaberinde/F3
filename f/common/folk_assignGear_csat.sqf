@@ -154,25 +154,26 @@ _APmine2 = "APERSMine_Range_Mag";
 // CLOTHES AND UNIFORMS
 
 // Base
-_baseUniform = "U_O_CombatUniform_ocamo";
-_baseHelmet = "H_HelmetO_ocamo";
-_lightRig = "V_HarnessO_brn";
-_mediumRig = "V_TacVest_khk"; 	// default for all infantry classes
-_heavyRig ="V_TacVest_khk";
+_baseUniform = ["U_O_CombatUniform_ocamo"];
+_baseHelmet = ["H_HelmetO_ocamo"];
+_lightRig = ["V_HarnessO_brn"];
+_mediumRig = ["V_TacVest_khk"]; 	// default for all infantry classes
+_heavyRig = ["V_TacVest_khk"];
 
 // Diver
-_diverUniform =  "U_O_Wetsuit";
-_diverHelmet = "";
-_diverRig = "V_RebreatherIR";
-_diverGlasses = "G_Diving";
+_diverUniform =  ["U_O_Wetsuit"];
+_diverHelmet = [];
+_diverRig = ["V_RebreatherIR"];
+_diverGlasses = ["G_Diving"];
+
 // Pilot
-_pilotUniform = "U_O_PilotCoveralls";
-_pilotHelmet = "H_PilotHelmetHeli_O";
-_pilotRig = "V_TacVest_blk";
+_pilotUniform = ["U_O_PilotCoveralls"];
+_pilotHelmet = ["H_PilotHelmetHeli_O"];
+_pilotRig = ["V_TacVest_blk"];
 // Crewman
-_crewUniform = "U_O_SpecopsUniform_ocamo"; // default in A3 :)
-_crewHelmet = "H_HelmetCrew_O";
-_crewRig = "V_TacVest_blk";
+_crewUniform = ["U_O_SpecopsUniform_ocamo"];
+_crewHelmet = ["H_HelmetCrew_O"];
+_crewRig = ["V_TacVest_blk"];
 // ====================================================================================
 
 // INTERPRET PASSED VARIABLES
