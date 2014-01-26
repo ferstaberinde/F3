@@ -220,6 +220,8 @@ Version | Date
 
 3-0-9 | DD MMM 2014
 
+* Group and Specialist Markers functions are defined in cfgFunctions via description.ext
+* Minor tweak to Group Marker Function to prevent bug where Marker was frozen despite Group still having members
 * Fixed / updated F3 Folk ARPS Assign Gear Script component:
  * MAT teams now use NLAWs or RPGs.
  * Rifleman (AT) loadout tweaked.
