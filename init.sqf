@@ -149,7 +149,7 @@ f_endSelected = -1;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // f_isFriendly = [west,civilian];
-// []  execVM "f\server\f_setAISkill.sqf";
+// [] execVM "f\server\f_setAISkill.sqf";
 
 // ====================================================================================
 

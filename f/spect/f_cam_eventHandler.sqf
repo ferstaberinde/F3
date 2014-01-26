@@ -168,8 +168,6 @@ switch (_type) do
                 if(f_cam_toggleTags) then
                 {
                     f_cam_tagsEvent = addMissionEventHandler ["Draw3D", {_this call f_cam_drawTags}];
-                    player sidechat "hallo";
-
                 }
                 else
                 {
