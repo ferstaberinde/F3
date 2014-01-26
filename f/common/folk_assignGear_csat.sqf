@@ -137,13 +137,15 @@ _MTR = "B_Mk6Mortar_Wpn";
 _MTRmount = "B_Mk6Mortar_Support";
 
 // Medium AT
-_MAT = "launch_O_Titan_short_F";
-_MATmag1 = "Titan_AT";
-_MATmag2 = "Titan_AP";
+_MAT = "launch_RPG32_F";
+_MATmag1 = "RPG32_F";
+_MATmag2 = "RPG32_F";
+
 // Surface Air
 _SAM = "launch_O_Titan_F";
 _SAMmag = "Titan_AA";
-// Engineer items.
+
+// Engineer items
 _ATmine = "ATMine_Range_Mag";
 _satchel = "DemoCharge_Remote_Mag";
 _APmine1 = "APERSBoundingMine_Range_Mag";
@@ -166,14 +168,17 @@ _diverHelmet = [];
 _diverRig = ["V_RebreatherIR"];
 _diverGlasses = ["G_Diving"];
 
+
 // Pilot
 _pilotUniform = ["U_O_PilotCoveralls"];
 _pilotHelmet = ["H_PilotHelmetHeli_O"];
 _pilotRig = ["V_TacVest_blk"];
+
 // Crewman
 _crewUniform = ["U_O_SpecopsUniform_ocamo"];
 _crewHelmet = ["H_HelmetCrew_O"];
 _crewRig = ["V_TacVest_blk"];
+
 // ====================================================================================
 
 // INTERPRET PASSED VARIABLES
@@ -349,11 +354,10 @@ _backpack = {
 		// BACKPACK: RIFLEMAN AT (RAT)
 		case "rat":
 		{
-			// NO BACKPACK
+			// NO BACKPACK (STILL ADD MEDIUM FOR ROCKETS)
 			if (f_param_backpacks == 0) then {
-				_unit addmagazines [_riflemag,2];
-				_unit addmagazines [_grenade,1];
-				_unit addmagazines [_smokegrenade,1];
+				_unit addBackpack _bagsmall;
+				clearMagazineCargoGlobal (unitBackpack _unit);
 			};
 
 			// BACKPACK: LIGHT
@@ -363,7 +367,6 @@ _backpack = {
 				(unitBackpack _unit) addMagazineCargoGlobal [_riflemag, 2];
 				(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 				(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
-				(unitBackpack _unit) addMagazineCargoGlobal [_RATmag, 1];
 
 			};
 			// BACKPACK: HEAVY
@@ -373,7 +376,7 @@ _backpack = {
 				(unitBackpack _unit) addMagazineCargoGlobal [_riflemag, 4];
 				(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 				(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
-				(unitBackpack _unit) addMagazineCargoGlobal [_RATmag, 2];
+				(unitBackpack _unit) addMagazineCargoGlobal [_RATmag, 1];
 			};
 		};
 
@@ -486,51 +489,63 @@ _backpack = {
 
 		// BACKPACK: MAT GUNNER (MATG)
 		case "matg":
-		{
-			// BACKPACK: LIGHT
-			if (f_param_backpacks == 1) then {
-				_unit addBackpack _bagmedium;
-				clearMagazineCargoGlobal (unitBackpack _unit);
-				(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 1];
-				(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 4];
-				(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag_tr, 2];
-				(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
-				(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
-			};
-			// BACKPACK: HEAVY
-			if (f_param_backpacks == 2) then {
-				_unit addBackpack _bagmedium;
-				clearMagazineCargoGlobal (unitBackpack _unit);
-				(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 4];
-				(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag_tr, 2];
-				(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
-				(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
-				(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 1];
-			};
-		};
+		        {
+		            // NO BACKPACK (STILL ADD MEDIUM FOR ROCKETS)
+		            if (f_param_backpacks == 0) then {
+		                _unit addBackpack _bagmedium;
+		                clearMagazineCargoGlobal (unitBackpack _unit);
+		            };
+		            // BACKPACK: LIGHT
+		            if (f_param_backpacks == 1) then {
+		                _unit addBackpack _baglarge;
+		                clearMagazineCargoGlobal (unitBackpack _unit);
+		                (unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 4];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_carbinemag_tr, 2];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
+		            };
+		            // BACKPACK: HEAVY
+		            if (f_param_backpacks == 2) then {
+		                _unit addBackpack _baglarge;
+		                clearMagazineCargoGlobal (unitBackpack _unit);
+		                (unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 1];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 4];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_carbinemag_tr, 2];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
+		            };
+        	};
 
 		// BACKPACK: MAT ASSISTANT (MATAG)
 		case "matag":
-		{
-			// BACKPACK: LIGHT
-			if (f_param_backpacks <= 1) then {
-				_unit addBackpack _baglarge;
-				clearMagazineCargoGlobal (unitBackpack _unit);
-				(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 4];
-				(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
-				(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
-				(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 1];
-			};
-			// BACKPACK: HEAVY
-			if (f_param_backpacks == 2) then {
-				_unit addBackpack _baglarge;
-				clearMagazineCargoGlobal (unitBackpack _unit);
-				(unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 4];
-				(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
-				(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
-				(unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 2];
-			};
-		};
+	        {
+		            // NO BACKPACK (STILL ADD MEDIUM FOR ROCKETS)
+		            if (f_param_backpacks == 0) then {
+		                _unit addBackpack _bagmedium;
+		                clearMagazineCargoGlobal (unitBackpack _unit);
+		                (unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 1];
+		            };
+		            // BACKPACK: LIGHT
+		            if (f_param_backpacks == 1) then {
+		                _unit addBackpack _baglarge;
+		                clearMagazineCargoGlobal (unitBackpack _unit);
+		                (unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 2];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 4];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_carbinemag_tr, 2];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
+		            };
+		            // BACKPACK: HEAVY
+		            if (f_param_backpacks == 2) then {
+		                _unit addBackpack _baglarge;
+		                clearMagazineCargoGlobal (unitBackpack _unit);
+		                (unitBackpack _unit) addMagazineCargoGlobal [_MATmag1, 3];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_carbinemag, 4];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_carbinemag_tr, 2];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
+		                (unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 1];
+		            };
+	        };
 
 		// BACKPACK: ENGINEER
 		case "eng":
@@ -740,6 +755,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,1];
 		["mmgag"] call _backpack;
 	};
+
 // LOADOUT: MEDIUM AT GUNNER
 	case "matg":
 	{
@@ -748,6 +764,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag_tr,2];
 		_unit addweapon _carbine;
 		_unit addweapon _MAT;
+		_unit addmagazines [_MATMag1,1];
 	};
 
 // LOADOUT: MEDIUM AT ASSISTANT GUNNER
