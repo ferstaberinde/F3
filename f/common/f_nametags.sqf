@@ -138,10 +138,11 @@ _ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter",
 		{
 
 				_pos = visiblePosition _x;
+
 				_color = F_COLOR_NAMETAGS;
 				if(_x in units player) then { _color = F_COLOR_NAMETAGS_GROUP };
 
-				drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_HEIGHT_NAMETAGS], 0, 0, 0, [_x] call _fnc_createString, 0,F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+				drawIcon3D ["", _color, [_pos select 0,_pos select 1,getPosATL _x select 2 + 2 + F_HEIGHT_NAMETAGS], 0, 0, 0, [_x] call _fnc_createString, 0,F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 		}
 		else
 		{
