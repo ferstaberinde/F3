@@ -303,6 +303,12 @@ class CfgFunctions
 			class SetAISKill
 			{
 			};
+			class localGroupMarker
+			{
+			};
+			class localSpecialistMarker
+			{
+			};
 		};
 		class spect
 		{
