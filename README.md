@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-9
+* Version: 3-0-8
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,7 +29,6 @@
 
 Version | Date | Notes
 
-* 3-0-9     | DD MMM 2014 | Patch release - Various improvements (see change history).
 * 3-0-8     | 28 DEC 2013 | Patch release - Various improvements (see change history).
 * 3-0-7     | 14 SEP 2013 | Patch release - Various improvements (see change history).
 * 3-0-6     | 20 AUG 2013 | Patch release - Various improvements (see change history).
@@ -217,15 +216,6 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
-
-3-0-9 | DD MMM 2014
-
-* Moved Functions governing group and specialist markers into description.ext
-* Tweaked Group Marker function to avoid "frozen markers"
-* Fixed / updated F3 Folk ARPS Assign Gear Script component:
- * MAT teams now use NLAWs or RPGs.
- * Rifleman (AT) loadout tweaked.
- * Rifleman (AT), MAT loadouts work when backpacks are disabled.
 
 3-0-8 | 28 DEC 2013
 
