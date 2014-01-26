@@ -158,9 +158,9 @@ _APmine2 = "APERSMine_Range_Mag";
 // Base
 _baseUniform = ["U_BG_Guerilla1_1","U_BG_Guerilla2_1","U_BG_Guerilla2_2","U_BG_Guerilla2_3","U_BG_Guerilla3_1","U_BG_Guerilla3_2"];
 _baseHelmet = ["H_Shemag_olive","H_Bandanna_khk","H_Booniehat_khk","H_Cap_oli","H_Watchcap_blk"];
-_lightRig = ["V_Chestrig_rgr"];
-_mediumRig = ["V_TacVest_oli"]; 	// default for all infantry classes
-_heavyRig = ["V_HarnessOGL_gry"];
+_lightRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];
+_mediumRig = ["V_PlateCarrierL_CTRG"]; 	// default for all infantry classes
+_heavyRig = ["V_PlateCarrierH_CTRG"];
 
 // Diver
 _diverUniform =  ["U_B_Wetsuit"];

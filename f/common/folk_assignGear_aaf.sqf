@@ -157,8 +157,8 @@ _APmine2 = "APERSMine_Range_Mag";
 // CLOTHES AND UNIFORMS
 
 // Base
-_baseUniform = ["U_I_CombatUniform"];
-_baseHelmet = ["H_HelmetIA_net"];
+_baseUniform = ["U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt"];
+_baseHelmet = ["H_HelmetIA_net","H_HelmetIA_camo","H_HelmetIA"];
 _lightRig = ["V_PlateCarrierIA1_dgtl"];
 _mediumRig = ["V_PlateCarrierIA2_dgtl"]; 	// default for all infantry classes
 _heavyRig = ["V_PlateCarrierIAGL_dgtl"];

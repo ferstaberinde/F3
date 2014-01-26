@@ -157,11 +157,17 @@ _APmine2 = "APERSMine_Range_Mag";
 // CLOTHES AND UNIFORMS
 
 // Base
+// Woodland-Hex
 _baseUniform = ["U_O_CombatUniform_ocamo"];
 _baseHelmet = ["H_HelmetO_ocamo"];
+
+// Urban
+//_baseUniform = ["U_O_CombatUniform_oucamo"];
+//_baseHelmet = ["H_HelmetO_oucamo"];
+
 _lightRig = ["V_HarnessO_brn"];
-_mediumRig = ["V_TacVest_khk"]; 	// default for all infantry classes
-_heavyRig = ["V_TacVest_khk"];
+_mediumRig = ["V_HarnessOGL_brn"]; 	// default for all infantry classes
+_heavyRig = ["V_HarnessOGL_brn"];
 
 // Diver
 _diverUniform =  ["U_O_Wetsuit"];
