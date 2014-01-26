@@ -12,16 +12,16 @@
 // SET GLOBAL VARIABLES
 
 // MODIFYABLE
-F_COLOR_NAMETAGS =  [1,1,1,0.9]; // The color for infantry and units in vehicle cargo (in [red,green, blue, opacity])
-F_COLOR_NAMETAGS_GROUP = [0,1,0.7,0.9];
-F_COLOR2_NAMETAGS = [0.5,0.1,0.2,0.9]; // The color for units in driver, gunner and other vehicle positions positions
+F_SHOWDISTANCE_NAMETAGS = false; // Show distance to player
+F_SHOWVEHICLE_NAMETAGS = false; // Show vehicle player is in
 
 F_SIZE_NAMETAGS = 0.04; // The size the names are displayed in
 F_HEIGHT_NAMETAGS = 0; // The height of the name tags for infantry (0 = hovering over unit, -1 = about belt height)
-F_VHEIGHT_NAMETAGS = 0; // The height of the name tags for units in vehicles (0 = hovering)
+F_VHEIGHT_NAMETAGS = 0; // The height of the name tags for units in vehicles (0 = hovering over vehicle)
 
-F_SHOWDISTANCE_NAMETAGS = false; // Show distance to player
-F_SHOWVEHICLE_NAMETAGS = false; // Show vehicle player is in
+F_COLOR_NAMETAGS =  [1,1,1,0.9]; // The color for infantry and units in vehicle cargo (in [red,green, blue, opacity])
+F_COLOR_NAMETAGS_GROUP = [0,1,0.7,0.9];
+F_COLOR2_NAMETAGS = [0.5,0.1,0.2,0.9]; // The color for units in driver, gunner and other vehicle positions positions
 
 F_FONT_NAMETAGS = "EtelkaMonospaceProBold"; // Font for the names
 F_KEY_NAMETAGS =  "TeamSwitch"; // The action key that will be used to toggle the name tags. See possible keys here: http://community.bistudio.com/wiki/Category:Key_Actions
