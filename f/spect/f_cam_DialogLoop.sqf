@@ -25,4 +25,9 @@ while {true} do
 	ctrlShow [2100,false];
 	_helpWindow = _displayDialog displayCtrl 1310;
 	_helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click (or shift-right-click) and drag to the edges of the screen to pan the camera, or use the arrow keys to control the camera.<br /><br />Use the scroll wheel or numpad+/- to zoom in and out.<br /><br />Press H to show and close the help window.<br /><br />Press M for the map.<br /> ");
+	// hide it to stop from being spammed open.
+	ctrlShow [1315, !ctrlVisible 1315];
+	ctrlShow [1310, !ctrlVisible 1310];
+	ctrlShow [1300, !ctrlVisible 1300];
+	ctrlShow [1305, !ctrlVisible 1305];
 };
