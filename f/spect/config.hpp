@@ -612,7 +612,7 @@ class spect_RscCombo
     wholeHeight = 0.45;
     x = 0;
     y = 0;
-    class ListScrollBar
+    class ComboScrollBar
     {
         arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
         arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
