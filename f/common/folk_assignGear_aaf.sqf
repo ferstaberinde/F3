@@ -160,6 +160,8 @@ _APmine2 = "APERSMine_Range_Mag";
 _baseUniform = ["U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt"];
 _baseHelmet = ["H_HelmetIA_net","H_HelmetIA_camo","H_HelmetIA"];
 _lightRig = ["V_PlateCarrierIA1_dgtl"];
+
+//Note: The actually to be used armor V_PlateCarrierIA2_dgtl is bugged as of 1.10, thus light and medium rig share the same armor for now
 _mediumRig = ["V_PlateCarrierIA1_dgtl"]; 	// default for all infantry classes
 _heavyRig = ["V_PlateCarrierIAGL_dgtl"];
 
