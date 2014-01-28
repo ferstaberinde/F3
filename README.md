@@ -229,6 +229,12 @@ Version | Date
  * Rifleman (AT), MAT loadouts work when backpacks are disabled.
  * Added Mini Grenades to Gear component
  * Adjusted Loadouts and Outfits to reflect changes introduced in A3 1.10
+* Fixed / updated F3 Nametag component:
+ * Added optional feature to display distance in m
+ * Added optional feature to display type of mounted vehicle
+ * Fixed issue where nametag height for units in buildings would be incorrect
+ * Fixed issue where nametags would display for enemy/neutral units in vehicles
+ * Misc. improvements
 * Misc. Typo fixes
 
 3-0-8 | 28 DEC 2013
