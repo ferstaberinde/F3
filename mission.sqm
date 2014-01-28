@@ -930,7 +930,7 @@ class Mission
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="GrpCSAT_A1_AT";
+					text="UnitCSAT_A1_AT";
 					init="GrpCSAT_A1 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Alpha 1 Rifleman (AT)";
 				};
@@ -992,7 +992,7 @@ class Mission
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="GrpCSAT_A2_AT";
+					text="UnitCSAT_A2_AT";
 					init="GrpCSAT_A2 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Alpha 2 Rifleman (AT)";
 				};
@@ -1054,7 +1054,7 @@ class Mission
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="GrpCSAT_A3_AT";
+					text="UnitCSAT_A3_AT";
 					init="GrpCSAT_A3 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Alpha 3 Rifleman (AT)";
 				};
@@ -1153,7 +1153,7 @@ class Mission
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="GrpCSAT_B1_AT";
+					text="UnitCSAT_B1_AT";
 					init="GrpCSAT_B1 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Bravo 1 Rifleman (AT)";
 				};
@@ -1215,7 +1215,7 @@ class Mission
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="GrpCSAT_B2_AT";
+					text="UnitCSAT_B2_AT";
 					init="GrpCSAT_B2 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Bravo 2 Rifleman (AT)";
 				};
@@ -1277,7 +1277,7 @@ class Mission
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="GrpCSAT_B3_AT";
+					text="UnitCSAT_B3_AT";
 					init="GrpCSAT_B3 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Bravo 3 Rifleman (AT)";
 				};
@@ -1376,7 +1376,7 @@ class Mission
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="GrpCSAT_C1_AT";
+					text="UnitCSAT_C1_AT";
 					init="GrpCSAT_C1 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Charlie 1 Rifleman (AT)";
 				};
@@ -1438,7 +1438,7 @@ class Mission
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="GrpCSAT_C2_AT";
+					text="UnitCSAT_C2_AT";
 					init="GrpCSAT_C2 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Charlie 2 Rifleman (AT)";
 				};
@@ -1500,7 +1500,7 @@ class Mission
 					player="PLAY CDG";
 					lock="UNLOCKED";
 					skill=0.60000002;
-					text="GrpCSAT_C3_AT";
+					text="UnitCSAT_C3_AT";
 					init="GrpCSAT_C3 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
 					description="CSAT Charlie 3 Rifleman (AT)";
 				};
