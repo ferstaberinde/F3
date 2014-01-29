@@ -12,6 +12,7 @@
 // SET GLOBAL VARIABLES
 
 // MODIFYABLE
+F_SHOWGROUP_NAMETAGS = true;			// Display unit's group (uses GroupID)
 F_SHOWDISTANCE_NAMETAGS = false; // Show distance to player
 F_SHOWVEHICLE_NAMETAGS = false; // Show vehicle player is in
 
@@ -107,122 +108,119 @@ sleep 0.1;
 
 addMissionEventHandler ["Draw3D", {
 
-// A function to create the string for the name tags on demand
-_fnc_createString = {
-	private ["_u","_prefix","_cargo","_str"];
-	_u = _this select 0;
-	_prefix = "";
-	_cargo = "";
-	if (count _this > 1) then {_prefix = _this select 1};
-	if (count _this > 2) then {_cargo = _this select 2};
+	// Function to create the string and draw the 3D tags
+	f_fnc_drawNameTag = {
 
-	_str = name _u;
+	};
 
-	if (F_SHOWDISTANCE_NAMETAGS) then {_str = _str + format [" (%1 m)",round (_pos distance player)]};
-	if (F_SHOWVEHICLE_NAMETAGS && !(typeOf (vehicle _u) isKindof "Man")) then {_str = _str + format [" (%1)",getText (configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayname")]};
-
-	if (_prefix != "") then {_str = _prefix + _str};
-	if (_cargo != "") then {_str = _str + _cargo};
-
-	_str
-};
-
-if(F_DRAW_NAMETAGS) then
-{
-
-_ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], F_DIST_NAMETAGS];
-{
-	if(side _x == side player && _x != player) then
+	if(F_DRAW_NAMETAGS) then
 	{
-		if(typeof _x iskindof "Man") then
+
+	// Collect all entities in the relevant distance
+	_ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], F_DIST_NAMETAGS];
+
+		// Start looping through all entities
 		{
-
-				_pos = visiblePosition _x;
-
-				_color = F_COLOR_NAMETAGS;
-				if(_x in units player) then { _color = F_COLOR_NAMETAGS_GROUP };
-
-				drawIcon3D ["", _color, [_pos select 0,_pos select 1,(getPosATL _x select 2) + 2 + F_HEIGHT_NAMETAGS], 0, 0, 0, [_x] call _fnc_createString, 0,F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
-		}
-		else
-		{
-			_veh = _x;
-			_inc = 1;
-			_alternate = 0;
-			_prefix = "";
-
+			// Only display units of players side
+			if(side _x == side player && _x != player) then
 			{
-			  _prefix = "P: ";
-				_color = F_COLOR_NAMETAGS;
-				if(driver _veh == _x) then
+
+				// If the entity is Infantry
+				if(typeof _x iskindof "Man") then
 				{
-					_prefix = "D: ";
-					_color = F_COLOR2_NAMETAGS;
-				};
-				if(gunner _veh == _x) then
-				{
-				_prefix = "G: ";
-					_color = F_COLOR2_NAMETAGS;
-				};
-				if(commander _veh == _x) then
-				{
-					_prefix = "C: ";
-					_color = F_COLOR2_NAMETAGS;
-				};
-				if(assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x) then
-				{
-					_prefix = "G: ";
-					_color = F_COLOR2_NAMETAGS;
-				};
 
-				_pos = visiblePosition _x;
-
-
-				if(_pos distance (visiblePosition (driver _veh)) > 0.1 || driver _veh == _x) then
-				{
-					if(driver _veh == _x) then
-					{
-						_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier");
-						_freeSlots = _veh emptyPositions "cargo";
-
-						if (_maxSlots != 0) then {
-
-							drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0, [_x,_prefix,format [" (%1/%2)",(_maxSlots-_freeSlots),_maxSlots]] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
-						} else {
-							drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0,  [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
-						};
-					}
-					else
-					{
-
-						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0,  [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
-					};
-				}
-				else
-				{
-					if(_x == gunner _veh) then
-					{
-						_pos = _veh modeltoworld (_veh selectionPosition "gunnerview");
-
-						_visPos = visiblePosition _x;
-						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_visPos select 2) + 2 + F_VHEIGHT_NAMETAGS], 0, 0, 0,  [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
-					}
-					else
-					{
 						_pos = visiblePosition _x;
 
-						_angle = (getdir _veh)+180;
-						_pos = [((_pos select 0) + sin(_angle)*(0.6*_inc)) , (_pos select 1) + cos(_angle)*(0.6*_inc),_pos select 2 + F_VHEIGHT_NAMETAGS];
-						drawIcon3D ["", _color, [_pos select 0,_pos select 1,(_pos select 2) + 1.5 + F_VHEIGHT_NAMETAGS], 0, 0, 0,  [_x,_prefix] call _fnc_createString, 0, F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
-						_inc = _inc + 1;
-					};
-				};
+						_color = F_COLOR_NAMETAGS;
+						if(_x in units player) then { _color = F_COLOR_NAMETAGS_GROUP };
 
-			} foreach crew _veh;
-		};
-	};
-} foreach _ents;
-};
-}
-];
+						[_x,_color,_pos] call f_fnc_drawNameTag;
+				}
+
+				// Else (if it's a vehicle)
+				else
+				{
+
+					_veh = _x;
+					_inc = 1;
+					_alternate = 0;
+					_suffix = "";
+
+					{
+						_color = F_COLOR_NAMETAGS;
+
+						// Get the various crew slots
+						if(driver _veh == _x) then
+						{
+							_suffix = " - D";
+							_color = F_COLOR2_NAMETAGS;
+						};
+						if(gunner _veh == _x) then
+						{
+						_suffix = " - G";
+							_color = F_COLOR2_NAMETAGS;
+						};
+						if(commander _veh == _x) then
+						{
+							_suffix = " - C";
+							_color = F_COLOR2_NAMETAGS;
+						};
+						if(assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x) then
+						{
+							_suffix = " - G";
+							_color = F_COLOR2_NAMETAGS;
+						};
+
+						_pos = visiblePosition _x;
+
+
+						if(_pos distance (visiblePosition (driver _veh)) > 0.1 || driver _veh == _x) then
+						{
+							if(driver _veh == _x) then
+							{
+								_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier");
+								_freeSlots = _veh emptyPositions "cargo";
+
+								if (_maxSlots != 0) then {
+
+									_suffix = _suffix + format [" (%1/%2)",(_maxSlots-_freeSlots),_maxSlots];
+
+									[_x,_color,_pos,_suffix] call f_fnc_drawNameTag;
+								} else {
+									[_x,_color,_pos,_suffix] call f_fnc_drawNameTag;
+								};
+							}
+							else
+							{
+								[_x,_color,_pos,_suffix] call f_fnc_drawNameTag;
+							};
+						}
+						else
+						{
+							if(_x == gunner _veh) then
+							{
+								_pos = [_veh modeltoworld (_veh selectionPosition "gunnerview") select 0,_veh modeltoworld (_veh selectionPosition "gunnerview") select 1,(visiblePosition _x) select 2];
+
+								[_x,_color,_pos,_suffix] call f_fnc_drawNameTag;
+							}
+							else
+							{
+								_pos = visiblePosition _x;
+
+								_angle = (getdir _veh)+180;
+								_pos = [((_pos select 0) + sin(_angle)*(0.6*_inc)) , (_pos select 1) + cos(_angle)*(0.6*_inc),_pos select 2 + F_VHEIGHT_NAMETAGS];
+
+								[_x,_color,_pos,_suffix] call f_fnc_drawNameTag;
+								_inc = _inc + 1;
+							};
+						};
+
+					} foreach crew _veh;
+				};
+			};
+		} foreach _ents;
+
+	}; // Outmost if scope
+
+}]; // End of the Eventhandler Scope
 
