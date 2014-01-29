@@ -1,5 +1,5 @@
 /*
-ws_fnc_cTracker
+ws_fnc_gCache
 Latest: 15.01.2014
 
 based on Black Mamba's work, which in turn is based on Nou and Jaynus' work. (All credit to them)

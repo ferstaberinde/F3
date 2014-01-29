@@ -8,7 +8,7 @@ FEATURE
 Caches groups.
 
 USAGE
-[min caching distance,sleep] call ws_fnc_cInit in init.sqf or unit init
+[min caching distance,sleep] call ws_fnc_cInit;
 
 To exclude a group from being cached:
 a) In unit init: (group this) setVariable ["ws_cacheExcl",true];

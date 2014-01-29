@@ -1,6 +1,14 @@
 /* ws_getEPos
 Returns the position of an entitiy
 
+USAGE
+[entity] call ws_fnc_getEPos;
+
+PARAMETERS
+1. Can be string (markername), object, groupname or location
+
+RETURNS
+positional array
 */
 
 _e = _this;
@@ -12,7 +20,7 @@ switch (typename _e) do {
 	case "OBJECT": {_pos = getPosATL _e};
 	case "GROUP": {_pos = getPosATL (leader _e)};
 	case "LOCATION": {_pos = position _e};
-	default {[_posloc,["ARRAY","OBJECT","STRING","GROUP"],"ws_fnc_getPos"] call ws_fnc_typecheck;};
+	default {[_e,["ARRAY","OBJECT","STRING","GROUP"],"ws_fnc_getEPos"] call ws_fnc_typecheck;};
 };
 
 _pos

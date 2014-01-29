@@ -12,7 +12,7 @@ NOTE (ARMA 3)
 This file only controls the debug for ws_fnc in ARMA 3. It is not necessary to call it if the description.ext is used.
 */
 
-//Let's check if the functions are already compiled
+//Check if the functions are already compiled
 if (isNil "ws_fnc_compiled") then {ws_fnc_compiled = false};
 if (ws_fnc_compiled) exitWith {};
 

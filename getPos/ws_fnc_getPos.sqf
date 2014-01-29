@@ -5,7 +5,6 @@
 //
 // FEATURE
 // Turn input into legit positional array [x,y,z], returns array
-// For a more powerful getPos script look up SHK_pos by Shuko
 //
 // USAGE
 // Minimal:
