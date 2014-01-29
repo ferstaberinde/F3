@@ -220,10 +220,16 @@ Version | Date
 
 3-0-9 | DD MMM 2014
 
+* Added optional Uniform Randomization to F3 Folk ARPS Assign Gear Script component
+* Group and Specialist Markers functions are now defined in cfgFunctions via description.ext
+* Minor tweak to Group Marker Function to prevent bug where Marker was frozen despite Group still having members
 * Fixed / updated F3 Folk ARPS Assign Gear Script component:
  * MAT teams now use NLAWs or RPGs.
  * Rifleman (AT) loadout tweaked.
  * Rifleman (AT), MAT loadouts work when backpacks are disabled.
+ * Added Mini Grenades to Gear component
+ * Adjusted Loadouts and Outfits to reflect changes introduced in A3 1.10
+* Misc. Typo fixes
 
 3-0-8 | 28 DEC 2013
 

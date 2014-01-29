@@ -169,7 +169,7 @@ if (isnil "_grp") then
 // As long as certain conditions are met (the group leader is alive) the marker
 // position is updated periodically. This only happens locally - so as not to burden
 // the server.
-// head:task:rewrite
+
 		for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
 		{
 			if ({alive _x} count units _grp > 0) then
