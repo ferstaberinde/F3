@@ -6,7 +6,8 @@
 f_cam_angle = 360;
 f_cam_zoom = 3;
 f_cam_height = 3;
-
+_centerX = safeZoneX + safeZoneW/2;
+_centerY = safezoneY + safeZoneH/2;
 
 
 // simple..
@@ -33,31 +34,34 @@ while{true} do
 
 
 		_point =  [(_target select 0) + (sin((f_cam_angle))*f_cam_zoom) , (_target select 1) + (cos((f_cam_angle))*f_cam_zoom) ,f_cam_height];
-		_valueX = 0.03;
-		_valueY = 0.03;
+		_valueX = 0.05;
+		_valueY = 0.01;
 		if(f_cam_mShift) then
 		{
 			_valueY = 0.05;
 			_valueX = 0.1;
 		};
-
+		if(f_cam_zoom < 7.0) then
+		{
+			_valueY = 0.001;
+		};
 		f_cam_camera camSetPos _point;
-		if(f_cam_detlaX > 0.6) then
+		if(f_cam_detlaX > _centerX && f_cam_MouseMoving) then
 		{
 			_max = 1 max f_cam_detlaX;
-			f_cam_angle = f_cam_angle - _valueX*(abs(f_cam_detlaX-1));
+			f_cam_angle = f_cam_angle - _valueX;
 		};
-		if(f_cam_detlaX < 0.4) then
+		if(f_cam_detlaX < _centerX && f_cam_MouseMoving) then
 		{
-			f_cam_angle = f_cam_angle + _valueX*(abs(f_cam_detlaX));
+			f_cam_angle = f_cam_angle + _valueX;
 		};
-		if (f_cam_detlaY > 0.6) then
+		if (f_cam_detlaY > _centerY && f_cam_MouseMoving) then
 		{
-			f_cam_height = f_cam_height - _valueY*(abs(f_cam_detlaY-1));
+			f_cam_height = f_cam_height - _valueY;
 		};
-		if (f_cam_detlaY < 0.4) then
+		if (f_cam_detlaY < _centerY && f_cam_MouseMoving) then
 		{
-			f_cam_height = f_cam_height +  _valueY*(abs(f_cam_detlaY));
+			f_cam_height = f_cam_height +  _valueY;
 		};
 		f_cam_height = 0.3 max f_cam_height;
 		f_cam_zoom = 0.3 max f_cam_zoom;

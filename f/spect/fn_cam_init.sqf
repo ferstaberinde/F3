@@ -34,18 +34,18 @@ f_cam_curTarget = _killer;
 cameraEffectEnableHUD true;
 f_cam_camera camCommit 0;
 showCinemaBorder false;
-
+f_cam_MouseMoving = false;
 // ====================================================================================
 
 // compile functions
 
-f_cam_eventHandler = compile preprocessFile "f\spect\f_cam_eventHandler.sqf";
-f_cam_getPlayers = compile preprocessFile "f\spect\f_cam_getPlayers.sqf";
-f_cam_freeCam = compile preprocessFile "f\spect\f_cam_freeCam.sqf";
-f_cam_dialogLoop = compile preprocessFile "f\spect\f_cam_dialogLoop.sqf";
-f_cam_updateValues = compile preprocessFile "f\spect\f_cam_updateValues.sqf";
-f_cam_drawTags = compile preprocessFile "f\spect\f_cam_drawTags.sqf";
-
+f_cam_eventHandler = compile preprocessFileLineNumbers "f\spect\f_cam_eventHandler.sqf";
+f_cam_getPlayers = compile preprocessFileLineNumbers "f\spect\f_cam_getPlayers.sqf";
+f_cam_freeCam = compile preprocessFileLineNumbers "f\spect\f_cam_freeCam.sqf";
+f_cam_dialogLoop = compile preprocessFileLineNumbers "f\spect\f_cam_dialogLoop.sqf";
+f_cam_updateValues = compile preprocessFileLineNumbers "f\spect\f_cam_updateValues.sqf";
+f_cam_drawTags = compile preprocessFileLineNumbers "f\spect\f_cam_drawTags.sqf";
+f_cam_getIcon = compile preprocessFileLineNumbers "f\spect\f_cam_getIcon.sqf";
 // function to refresh the modes box.
 f_cam_reloadModesBox = {
 	_listBox = 2101;

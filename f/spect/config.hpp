@@ -15,7 +15,7 @@
         soundSelect[] = {"", 0.1, 1};
         arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
         arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
-        class ScrollBar {
+        class ListScrollBar {
             color[] = {1, 1, 1, 0.6};
             colorActive[] = {1, 1, 1, 1};
             colorDisabled[] = {1, 1, 1, 0.3};
@@ -522,7 +522,7 @@ class spect_RscControlsGroup {
 		height = 0.028;
 	};
 
-class ScrollBar  {
+class ListScrollBar  {
      arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
         arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
         border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
@@ -568,7 +568,7 @@ class spect_RscList
     wholeHeight = 0.45;
     x = 0;
     y = 0;
-    class ScrollBar
+    class ListScrollBar
     {
         arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
         arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
@@ -612,7 +612,7 @@ class spect_RscCombo
     wholeHeight = 0.45;
     x = 0;
     y = 0;
-    class ScrollBar
+    class ComboScrollBar
     {
         arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
         arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
@@ -666,7 +666,7 @@ class f_spec_dialog {
             h = 0.432237 * safezoneH;
         };
 		class mouseHandler: spect_RscControlsGroup {
-            class ScrollBar
+            class ListScrollBar
             {
                 color[] = {1,1,1,0.6};
                 colorActive[] = {1,1,1,1};
@@ -723,7 +723,7 @@ class f_spec_dialog {
             text = "Spectating:Unknown"; //--- ToDo: Localize;
             x = 0.460336 * safezoneW + safezoneX;
             y = 0.00159198 * safezoneH + safezoneY;
-            w = 0.100 * safezoneW;
+            w = 0.800 * safezoneW;
             h = 0.0200 * safezoneH;
         };
         class SpectStrText: spect_RscStructuredText
