@@ -13,8 +13,8 @@
 
 // MODIFYABLE
 F_SHOWGROUP_NAMETAGS = true;			// Display unit's group (uses GroupID)
-F_SHOWDISTANCE_NAMETAGS = false; // Show distance to player
-F_SHOWVEHICLE_NAMETAGS = false; // Show vehicle player is in
+F_SHOWDISTANCE_NAMETAGS = true; // Show distance to player
+F_SHOWVEHICLE_NAMETAGS = true; // Show vehicle player is in
 
 F_SIZE_NAMETAGS = 0.04; // The size the names are displayed in
 F_HEIGHT_NAMETAGS = 0; // The height of the name tags for infantry (0 = hovering over unit, -1 = about belt height)
@@ -74,14 +74,20 @@ hintsilent 'Team switch key rebound!';
 "">here</execute>.
 ",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DIST_NAMETAGS];
 
+if (F_SHOWGROUP_NAMETAGS) then {
+_bstr = _bstr + "<br/><br/>Nametags will display the unit's group name next to them. To toggle this behaviour click <execute expression=""
+if (F_SHOWGROUP_NAMETAGS) then {hintsilent 'Group display deactivated!';F_SHOWGROUP_NAMETAGS= false} else {F_SHOWGROUP_NAMETAGS = true;hintsilent 'Group display activated!'};""
+>here</execute>."
+};
+
 if (F_SHOWDISTANCE_NAMETAGS) then {
-_bstr = _bstr + "<br/><br/>Units will display the relative distance to the player next to their name. To toggle this behaviour click <execute expression=""
+_bstr = _bstr + "<br/><br/>Nametags will display the unit's relative distance to the player next to their name. To toggle this behaviour click <execute expression=""
 if (F_SHOWDISTANCE_NAMETAGS) then {hintsilent 'Distance display deactivated!';F_SHOWDISTANCE_NAMETAGS= false} else {F_SHOWDISTANCE_NAMETAGS = true;hintsilent 'Distance display activated!'};""
 >here</execute>."
 };
 
 if (F_SHOWVEHICLE_NAMETAGS) then {
-_bstr = _bstr + "<br/><br/>Mounted units will display their vehicle next to their name. To toggle this behaviour click <execute expression=""
+_bstr = _bstr + "<br/><br/>Nametags will display vehicle of mounted units next to their name. To toggle this behaviour click <execute expression=""
 if (F_SHOWVEHICLE_NAMETAGS) then {hintsilent 'Display of vehicle type deactivated!';F_SHOWVEHICLE_NAMETAGS= false} else {F_SHOWVEHICLE_NAMETAGS = true;hintsilent 'Display of vehicle typ activated!'};""
 >here</execute>."
 };
@@ -110,6 +116,8 @@ addMissionEventHandler ["Draw3D", {
 
 	if(F_DRAW_NAMETAGS) then
 	{
+
+	private ["_ents","_veh","_color","_inc","_suffix","_pos","_angle"];
 
 	// Collect all entities in the relevant distance
 	_ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], F_DIST_NAMETAGS];
@@ -205,7 +213,7 @@ addMissionEventHandler ["Draw3D", {
 								_angle = (getdir _veh)+180;
 								_pos = [((_pos select 0) + sin(_angle)*(0.6*_inc)) , (_pos select 1) + cos(_angle)*(0.6*_inc),_pos select 2 + F_VHEIGHT_NAMETAGS];
 
-								[_x,_color,_pos,_suffix] call f_fnc_drawNameTag;
+								[_x,_color,_pos] call f_fnc_drawNameTag;
 								_inc = _inc + 1;
 							};
 						};

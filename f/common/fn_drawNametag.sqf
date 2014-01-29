@@ -2,6 +2,8 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
+private ["_u","_pos","_suffix","_color","_str"];
+
 _u = _this select 0;
 _color = _this select 1;
 _pos = _this select 2;
