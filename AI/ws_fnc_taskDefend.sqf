@@ -68,6 +68,7 @@ _milarray = [];
 _badarray = [];
 _milbuildings = [];
 
+
 //Fill buildings array with classes shared by both games
 {
 _buildings = _buildings + nearestObjects [_pos,[_x],_radius];
@@ -101,7 +102,9 @@ if (_guns) then {
 [_group, _radius] call ws_fnc_taskCrew;
 };
 
+
 _units = units _group;
+_group enableAttack false; // Prevent the group leader to issue attack orders to the members, improving their attack from buildings
 
 // Fill bunkers etc
 if (count _milbuildings > 0 && count _units > 0 && _garrison) then {
@@ -113,15 +116,18 @@ if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarker
 
 //Take position in regular buildings
 if (count _buildings > 0 && count _units > 0 && _civil) then {
-_units = [_units,_buildings,3] call ws_fnc_enterbuilding;
+_units = [_units,_buildings,2] call ws_fnc_enterbuilding;
 if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _buildings;};
 };
 
+
 //If there's one unit left they either patrol or hold the area.
 if (count _units >= 1) then {
+	_group = createGroup (side _units select 0);
+	_units joinSilent _group;
 	if (random 1 > 0.5) then {[_group,_pos,["hold",_radius]] call ws_fnc_addWaypoint;} else {
 		[_group,_pos,["patrol",_radius]] call ws_fnc_addWaypoint;
 	};
-} else {deleteGroup _group};
+};
 
 [_milbuildings,_buildings]

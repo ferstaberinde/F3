@@ -45,23 +45,25 @@ if !(_occupied && (count _bposleft > 0) && (count _units > 0)) then {
 	//["ws_fnc_enterbuilding DBG2: ",[_unit,typeOf _building,_bpos,_bposleft],""] call ws_fnc_debugText;
 	[_unit,_bpos] spawn {
 		private ["_unit","_pos"];
-		//doStop (_this select 0);
-		//[_this select 0] joinSilent grpNull;
+
 		_unit = _this select 0;
 		_pos = _this select 1;
 
-		[_unit] joinSilent grpNull;
+		_unit setVariable ["ws_bpos",_pos];
+
 		_unit doMove _pos;
 		waitUntil {_pos distance (getPos _unit) < 10};
 		(group _unit) setSpeedMode "Limited";
 		sleep 1;
 		waituntil {unitready _unit};
-		if ((getPos _unit select 2) != (_pos select 2)) then {_unit setPos _pos;_unit doMove _pos;waituntil {unitready _unit};}; //Silly fix to make sure units are on the correct z-level. For some reason they don't like stairs when using doMove
+
+		//Silly fix to make sure units are on the correct z-level. For some reason they don't like stairs when using doMove
+		if ((getPos _unit select 2) != (_pos select 2)) then {_unit setPos _pos;_unit doMove _pos;waituntil {unitready _unit};};
+
 		dostop _unit;
-		if (random 1 > 0.5) then {_unit setunitpos "Middle";};
-		//_unit setDir (getDir _unit - 180);
+		if (random 1 > 0.75) then {_unit setunitpos "Middle";};
+
 		(group _unit) setSpeedMode "NORMAL";
-		_unit setVariable ["ws_bpos",_pos];
 		//[_unit] call ws_fnc_clearView;
 	};
 

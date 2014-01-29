@@ -12,19 +12,13 @@ NOTE (ARMA 3)
 This file only controls the debug for ws_fnc in ARMA 3. It is not necessary to call it if the description.ext is used.
 */
 
-//DEBUG
- //Set this to true for debug markers and messages from all functions
-_debug = true;
-
 //Let's check if the functions are already compiled
 if (isNil "ws_fnc_compiled") then {ws_fnc_compiled = false};
 if (ws_fnc_compiled) exitWith {};
 
-//Set the global debug flag according to user settings
-if (isNil "ws_debug") then {
-	ws_debug = _debug;
-	publicVariable "ws_debug";
-};
+// DEBUG
+// To enable debug mode either change false to true or put ws_debug = true in any unit init
+ws_debug = missionNameSpace getVariable ["ws_debug",false];
 
 ws_fnc_gameCheck = call compile preprocessFile "ws_fnc\tools\ws_fnc_gamecheck.sqf";
 
@@ -45,6 +39,7 @@ if !(ws_game_a3) then {
 	ws_fnc_switchLights = compile preprocessfile "ws_fnc\tools\ws_fnc_switchLights.sqf";
 	ws_fnc_attachLight = compile preprocessfile "ws_fnc\tools\ws_fnc_attachLight.sqf";
 	ws_fnc_loadVehicle = compile preprocessfile "ws_fnc\tools\ws_fnc_loadVehicle.sqf";
+	ws_fnc_nearPlayer = compile preprocessfile "ws_fnc\tools\ws_fnc_nearPlayer.sqf";
 
 	//GetPos Functions
 	ws_fnc_getPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_getPos.sqf";
@@ -62,6 +57,12 @@ if !(ws_game_a3) then {
 	ws_fnc_addWaypoint = compile preprocessfile "ws_fnc\AI\ws_fnc_addWaypoint.sqf";
 	ws_fnc_bettervehicle = compile preprocessfile "ws_fnc\AI\ws_fnc_betterVehicle.sqf";
 	ws_fnc_setAIMode = compile preprocessfile "ws_fnc\AI\ws_fnc_setAIMode.sqf";
+
+	//Cache Functions
+	ws_fnc_cInit = compile preprocessfile "ws_fnc\cache\ws_fnc_cInit.sqf";
+	ws_fnc_cTracker = compile preprocessfile "ws_fnc\cache\ws_fnc_cTracker.sqf";
+	ws_fnc_gCache = compile preprocessfile"ws_fnc\cache\ws_fnc_gCache.sqf";
+	ws_fnc_gUncache = compile preprocessfile "ws_fnc\cache\ws_fnc_gUncache.sqf";
 };
 
 ws_fnc_compiled = true; publicVariable "ws_fnc_compiled";
