@@ -108,11 +108,6 @@ sleep 0.1;
 
 addMissionEventHandler ["Draw3D", {
 
-	// Function to create the string and draw the 3D tags
-	f_fnc_drawNameTag = {
-
-	};
-
 	if(F_DRAW_NAMETAGS) then
 	{
 
