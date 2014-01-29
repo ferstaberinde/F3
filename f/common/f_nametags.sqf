@@ -131,13 +131,8 @@ addMissionEventHandler ["Draw3D", {
 				// If the entity is Infantry
 				if(typeof _x iskindof "Man") then
 				{
-
 						_pos = visiblePosition _x;
-
-						_color = F_COLOR_NAMETAGS;
-						if(_x in units player) then { _color = F_COLOR_NAMETAGS_GROUP };
-
-						[_x,_color,_pos] call f_fnc_drawNameTag;
+						[_x,_pos] call f_fnc_drawNameTag;
 				}
 
 				// Else (if it's a vehicle)
@@ -147,38 +142,36 @@ addMissionEventHandler ["Draw3D", {
 					_veh = _x;
 					_inc = 1;
 					_alternate = 0;
-					_suffix = "";
 
 					{
-						_color = F_COLOR_NAMETAGS;
+
+						_suffix = "";
 
 						// Get the various crew slots
 						if(driver _veh == _x) then
 						{
 							_suffix = " - D";
-							_color = F_COLOR2_NAMETAGS;
 						};
 						if(gunner _veh == _x) then
 						{
-						_suffix = " - G";
-							_color = F_COLOR2_NAMETAGS;
+							_suffix = " - G";
 						};
 						if(commander _veh == _x) then
 						{
 							_suffix = " - C";
-							_color = F_COLOR2_NAMETAGS;
 						};
 						if(assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x) then
 						{
 							_suffix = " - G";
-							_color = F_COLOR2_NAMETAGS;
 						};
 
 						_pos = visiblePosition _x;
 
-
+						// If the unit is sitting in the driver position or is the driver
 						if(_pos distance (visiblePosition (driver _veh)) > 0.1 || driver _veh == _x) then
 						{
+
+							// If it's the driver calculate the cargo slots
 							if(driver _veh == _x) then
 							{
 								_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier");
@@ -188,14 +181,14 @@ addMissionEventHandler ["Draw3D", {
 
 									_suffix = _suffix + format [" (%1/%2)",(_maxSlots-_freeSlots),_maxSlots];
 
-									[_x,_color,_pos,_suffix] call f_fnc_drawNameTag;
+									[_x,_pos,_suffix] call f_fnc_drawNameTag;
 								} else {
-									[_x,_color,_pos,_suffix] call f_fnc_drawNameTag;
+									[_x,_pos,_suffix] call f_fnc_drawNameTag;
 								};
 							}
 							else
 							{
-								[_x,_color,_pos,_suffix] call f_fnc_drawNameTag;
+								[_x,_pos,_suffix] call f_fnc_drawNameTag;
 							};
 						}
 						else
@@ -204,16 +197,14 @@ addMissionEventHandler ["Draw3D", {
 							{
 								_pos = [_veh modeltoworld (_veh selectionPosition "gunnerview") select 0,_veh modeltoworld (_veh selectionPosition "gunnerview") select 1,(visiblePosition _x) select 2];
 
-								[_x,_color,_pos,_suffix] call f_fnc_drawNameTag;
+								[_x,_pos,_suffix] call f_fnc_drawNameTag;
 							}
 							else
 							{
-								_pos = visiblePosition _x;
-
 								_angle = (getdir _veh)+180;
 								_pos = [((_pos select 0) + sin(_angle)*(0.6*_inc)) , (_pos select 1) + cos(_angle)*(0.6*_inc),_pos select 2 + F_VHEIGHT_NAMETAGS];
 
-								[_x,_color,_pos] call f_fnc_drawNameTag;
+								[_x,_pos,_suffix] call f_fnc_drawNameTag;
 								_inc = _inc + 1;
 							};
 						};
