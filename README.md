@@ -230,11 +230,13 @@ Version | Date
  * Added Mini Grenades to Gear component
  * Adjusted Loadouts and Outfits to reflect changes introduced in A3 1.10
 * Fixed / updated F3 Nametag component:
+ * Added optional display of unit group (defined by setGroupID / F3 Folk ARPS Group IDs component)
  * Added optional feature to display distance in m
- * Added optional feature to display type of mounted vehicle
+ * Added optional feature to display type of mounted vehicle for driver/gunner/commander
+ * Drawing of nametags is now it's own function defined in cfgFunctions
  * Fixed issue where nametag height for units in buildings would be incorrect
  * Fixed issue where nametags would display for enemy/neutral units in vehicles
- * Misc. improvements
+ * Misc. improvements and tweaks
 * Misc. Typo fixes
 
 3-0-8 | 28 DEC 2013
