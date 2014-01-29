@@ -309,6 +309,9 @@ class CfgFunctions
 			class localSpecialistMarker
 			{
 			};
+			class drawNameTag
+			{
+			};
 		};
 		class spect
 		{
