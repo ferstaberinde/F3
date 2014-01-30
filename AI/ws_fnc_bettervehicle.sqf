@@ -6,15 +6,17 @@
 // Vehicle crews will only bail when the vehicle damage is over x (by default 0.8) or the guns are destroyed
 //
 // USAGE
-// [parameter1,parameter2] execVM "ws_fnc_bettervehicle.sqf";
-// Or compile and call.
+// [parameter1,parameter2] call ws_fnc_betterVehicle
 //
 // PARAMETERS
-// 1.side, object or array of objects
-// 2. damage until the crew bails (any integer from 0.1 to 1)
+// 1.side, object or array of objects			| MANDATORY
+// 2. damage until the crew bails (any integer from 0.1 to 1)	| OPTIONAL - default is 0.6
 //
 // USAGE WITH F2:
 // Use f_var_vehicles or f_var_vehicles_BLU or f_var_vehicles_RES or f_var_vehicles_OPF as first parameter
+//
+// EXAMPLE
+// [east] call ws_fnc_betterVehicle - improves behaviour for all OPFOR vehicles
 
 if !(isServer) exitWith {};
 
@@ -23,7 +25,7 @@ private ["_debug","_side","_alloweddamage","_vehicles","_handle"];
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};   //Debug mode. If ws_debug is globally defined it overrides _debug
 
 _side = _this select 0;
-_alloweddamage = _this select 1; //damage allowed before the group bails no matter what
+_alloweddamage = if(count _this > 1) then {_this select 1} else {0.6}; //damage allowed before the group bails no matter what
 _vehicles = [];
 
 //Fault checks
