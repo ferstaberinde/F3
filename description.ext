@@ -309,6 +309,9 @@ class CfgFunctions
 			class localSpecialistMarker
 			{
 			};
+			class removeBody
+			{
+			};
 		};
 		class spect
 		{
