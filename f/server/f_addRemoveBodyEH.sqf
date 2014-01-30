@@ -2,9 +2,9 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// RUN THE SCRIPT ONLY SERVER SIDE
+// RUN THE SCRIPT ONLY SERVER SIDE OR ON HEADLESS CLIENT
 
-if !(isServer) exitWith {};
+if (!isDedicated || hasInterface) exitWith {};
 
 // ====================================================================================
 
@@ -15,7 +15,7 @@ private ["_men","_str_Men","_handle"];
 // ====================================================================================
 
 // SET KEY VARIABLES
-// Using a common variable, we will create an array containing all men.
+// Using a common variable, we will create an array containing all men, minus playable units.
 
 _men = allUnits - playableUnits;
 
@@ -43,8 +43,8 @@ if (isNil "f_doNotRemoveBodies") then {f_doNotRemoveBodies = []};
 
 {
 _handle = _x getVariable ["f_removeBodyEH",false];
-if !(_handle) then {
-	_x addMPEventHandler ["MPkilled", {(_this select 0) spawn f_fnc_removeBody}];
+if !(_handle && local _x) then {
+	_x addEventHandler ["killed", {(_this select 0) spawn f_fnc_removeBody}];
 	_x setVariable ["f_removeBodyEH",true];
 	};
 } forEach _men;
