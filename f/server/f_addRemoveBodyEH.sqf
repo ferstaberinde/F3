@@ -17,7 +17,7 @@ private ["_men","_str_Men","_handle"];
 // SET KEY VARIABLES
 // Using a common variable, we will create an array containing all men.
 
-_men = allUnits;
+_men = allUnits - playableUnits;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -44,7 +44,7 @@ if (isNil "f_doNotRemoveBodies") then {f_doNotRemoveBodies = []};
 {
 _handle = _x getVariable ["f_removeBodyEH",false];
 if !(_handle) then {
-	_x addEventHandler ["killed", {(_this select 0) spawn f_fnc_removeBody}];
+	_x addMPEventHandler ["MPkilled", {(_this select 0) spawn f_fnc_removeBody}];
 	_x setVariable ["f_removeBodyEH",true];
 	};
 } forEach _men;
