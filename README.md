@@ -13,7 +13,7 @@ I've also tried and comment everything as best as possible to make understanding
 
 SETUP
 
-Unzip the archive to your mission root folder. You should now have a ws_fnc folder with various subfolders inside.
+Unzip the archive to your mission root folder and rename the folder ws-fnc-master to ws-fnc. You should now have a ws_fnc folder with various subfolders inside.
 
 ArmA 2:
 * [] call compile preProcessFile "ws_fnc\ws_fnc_init.sqf" from unit or module init field.
