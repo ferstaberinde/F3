@@ -31,9 +31,9 @@ _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug}; //Debug mode. I
 
 //Declaring variables
 _count = count _this;
-_pos = _this select 0;
+_pos = (_this select 0) call ws_fnc_getEPos;
 _side = _this select 1;
-_size = _this select 2 ;
+_size = _this select 2;
 _forcedclasses = (_this select 3) select 0;
 _commonclasses = (_this select 3) select 1;
 
@@ -51,21 +51,19 @@ if (_count > 4) then {_code = _this select 4;};
 {[_x,["SCALAR"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_size];
 {[_x,["STRING","CODE"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_code];
 
+
 //Creating the group
 _grp = createGroup _side;
 
-_pos = [_this select 0,0,0,0,false,false,true] call ws_fnc_getPos;
 //REWRITE: assign folk gear ?
 //Create the group leader around who the group assembles
 _unit = _grp createUnit [_forcedclasses select 0,_pos,[],0,"NONE"];
 
 for "_x" from 2 to (_size) do {
   if (_x <= (count _forcedclasses)) then {
-  _spos = [getPos leader _grp,5] call ws_fnc_getPos;
-  _unit = _grp createUnit [_forcedclasses select (_x - 1),_spos,[],1,"NONE"];
+  _unit = _grp createUnit [_forcedclasses select (_x - 1),_pos,[],5,"NONE"];
   } else {
-	 _spos = [getPos leader _grp,5] call ws_fnc_getPos;
-	 _unit = _grp createUnit [_commonclasses call ws_fnc_selectrandom,_spos,[],1,"NONE"];
+	 _unit = _grp createUnit [_commonclasses call ws_fnc_selectrandom,_pos,[],5,"NONE"];
 	 };
 };
 

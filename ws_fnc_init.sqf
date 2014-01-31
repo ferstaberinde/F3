@@ -36,9 +36,12 @@ if !(ws_game_a3) then {
 
 	//Misc Functions
 	ws_fnc_selectRandom = compile preprocessfile "ws_fnc\tools\ws_fnc_selectRandom.sqf";
+	ws_fnc_collectMarkers =  compile preprocessfile "ws_fnc\tools\ws_fnc_collectMarkers.sqf";
+	ws_fnc_collectBuildings =  compile preprocessfile "ws_fnc\tools\ws_fnc_collectBuildings.sqf";
 	ws_fnc_switchLights = compile preprocessfile "ws_fnc\tools\ws_fnc_switchLights.sqf";
 	ws_fnc_attachLight = compile preprocessfile "ws_fnc\tools\ws_fnc_attachLight.sqf";
 	ws_fnc_loadVehicle = compile preprocessfile "ws_fnc\tools\ws_fnc_loadVehicle.sqf";
+	ws_fnc_listPlayers = compile preprocessfile "ws_fnc\tools\ws_fnc_listPlayers.sqf";
 	ws_fnc_nearPlayer = compile preprocessfile "ws_fnc\tools\ws_fnc_nearPlayer.sqf";
 
 	//GetPos Functions
@@ -47,6 +50,7 @@ if !(ws_game_a3) then {
 	ws_fnc_NearestLandPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_NearestLandPos.sqf";
 	ws_fnc_getPosInArea = compile preprocessfile "ws_fnc\getPos\ws_fnc_getPosInArea.sqf";
 	ws_fnc_getBPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_getBPos.sqf";
+	ws_fnc_getEPos = compile preprocessfile "ws_fnc\getPos\ws_fnc_getEPos.sqf";
 
 	//AI Functions
 	ws_fnc_enterBuilding = compile preprocessfile "ws_fnc\AI\ws_fnc_enterBuilding.sqf";
@@ -54,6 +58,7 @@ if !(ws_game_a3) then {
 	ws_fnc_taskCrew = compile preprocessfile "ws_fnc\AI\ws_fnc_taskCrew.sqf";
 	ws_fnc_createGroup = compile preprocessfile "ws_fnc\AI\ws_fnc_createGroup.sqf";
 	ws_fnc_createVehicle = compile preprocessfile "ws_fnc\AI\ws_fnc_createVehicle.sqf";
+	ws_fnc_createGarrison = compile preprocessfile "ws_fnc\AI\ws_fnc_createGarrison.sqf";
 	ws_fnc_addWaypoint = compile preprocessfile "ws_fnc\AI\ws_fnc_addWaypoint.sqf";
 	ws_fnc_bettervehicle = compile preprocessfile "ws_fnc\AI\ws_fnc_betterVehicle.sqf";
 	ws_fnc_setAIMode = compile preprocessfile "ws_fnc\AI\ws_fnc_setAIMode.sqf";

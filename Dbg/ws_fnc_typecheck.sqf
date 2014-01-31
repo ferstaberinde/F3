@@ -13,7 +13,7 @@ _typenames = ["ARRAY","BOOL","CODE","CONFIG","CONTROL","DISPLAY","GROUP","LOCATI
 _false_types = _typenames - _check_array;
 _error = false;
 
-if (isNil {_variable}) then {
+if (isNil {_variable}) exitWith {
 player sidechat format ["ws_fnc_typecheck: ERROR. _variable %1 parsed by %2 is NIL when it should be in %3 !",_variable,_scriptname,_check_array];
 diag_log format ["ws_fnc_typecheck: ERROR. _variable %1 parsed by %2 is NIL when it should be in %3 !",_variable,_scriptname,_check_array];
 _error = true;
