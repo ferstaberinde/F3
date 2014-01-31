@@ -14,7 +14,7 @@ PARAMETERS:
 1. Center of town. Can be ellipse/rectangle marker, object or location     | MANDATORY - string (markername) or object name
 2. Radius of area to be considered																				 | MANDATORY - int
 3. Side of units to spawn																									 | MANDATORY - side (east, west, resistance)
-4. Number of units.																								         | OPTIONAL - integer - default is No. of buildings/4
+4. Number of units.																								         | OPTIONAL - integer - default is No. of available building positions/10
 5. Array of classes to spawn																		           | OPTIONAL - array w. strings  - default are classes defined below
 
 EXAMPLE
@@ -23,7 +23,7 @@ RETURNS
 array of created units
 */
 
-// Default classes
+// Default classes (Arma 3)
 // BLUFOR
 _wclasses = ["B_Soldier_lite_F"];
 // OPFOR
@@ -40,6 +40,7 @@ _radius = _this select 1;
 _side = _this select 2;
 _int = if (count _this > 3) then {_this select 3} else {0};
 _classes = if (count _this > 4) then {_this select 4} else {[]};
+
 //Fault checks
 //Checking the variables we have enough against what we should have
 {[_x,["SIDE"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_side];
@@ -47,11 +48,6 @@ _classes = if (count _this > 4) then {_this select 4} else {[]};
 {[_x,["ARRAY"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_classes,_area];
 
 _buildings = [_area,_radius] call ws_fnc_collectBuildings;
-
-// If no amount of units is set, calculate default
-if (_int == 0) then {
-	_int = round (count _buildings / 4);
-};
 
 // If default classes are being used, select the corresponding array
 if (count _classes == 0) then {
@@ -65,48 +61,60 @@ if (count _classes == 0) then {
 	};
 };
 
-// Generate building positions
+// Collect building positions
 
 {
-	[_x] call ws_fnc_getBPos;
+	_ba = [_x] call ws_fnc_getBPos;
+	if (count _ba == 0) then {_buildings = _buildings - [_x]};
 } forEach _buildings;
 
+// If no amount of units is set, calculate default
+if (_int == 0) then {
+	_int = round (count _bpos / 10);
+};
 
 _grp = createGroup _side;
 _units = units _grp;
 
+//Rewrite?
 for "_x" from 1 to _int do {
-	_bpos = [];
+
 	_b = _buildings call ws_fnc_selectRandom;
+	_bpa = _b getVariable ["ws_bPos",false];
 
-	while {count _bpos == 0 && count _buildings > 0} do {
-		_bpos = _b getVariable ["ws_bpos",false];
-
-		while {!(typeName _bpos == typename []) && (count _buildings > 0)} do {
-				_buildings = _buildings - [_b];
-				_b = _buildings call ws_fnc_selectRandom;
-				_bpos = _b getVariable ["ws_bpos",false];
-		};
-
-		if (count _bpos == 0 || (typeName _bpos != typename [])) then {_buildings = _buildings - [_b];};
+	while {typeName _bpa != typeName [] && count _buildings > 0} do {
+		_buildings = _buildings - [_b];
 		_b = _buildings call ws_fnc_selectRandom;
+		_bpa = _b getVariable ["ws_bPos",false];
 	};
 
-	// Create a unit and move itin place
+	while {count _bpa == 0 && count _buildings > 0} do {
+		_buildings = _buildings - [_b];
+		_b = _buildings call ws_fnc_selectRandom;
+		_bpa = _b getVariable ["ws_bPos",false];
+	};
+
+	if (count _buildings == 0) exitWith {};
+
+	_i = floor (random (count _bpa));
+	_bp = _bpa select _i;
+
+	if (isNil "_bp") then {
+			player globalchat format ["%1,%2,%3",_bp,_b,count _bpa];
+	};
+
+	// Create a unit and move it into place
   _u = _grp createUnit [_classes call ws_fnc_selectRandom,_area,[],5,"NONE"];
-
-  _i = floor (random (count _bpos));
-  _bp = _bpos select _i;
-
 	_u setPosATL _bp;
   dostop _u;
 
-  if (_debug) then {_mkr = createMarker [format ["%1-bpos",_u],getPos _u];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorGreen";};
+  if (_debug) then
+  	{_mkr = createMarker [format ["%1-bpos",_u],getPos _u];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorGreen";};
 
   // Remove the building position from the array
-	_bpos set [_i,0];			//Workaround as in http://community.bistudio.com/wiki/Array#Subtraction
-	_bpos = _bpos - [0];
-	_b setVariable ["ws_bpos",_bpos];
+	_bpa set [_i,0];			//Workaround as in http://community.bistudio.com/wiki/Array#Subtraction
+	_bpa = _bpa - [0];
+	_b setVariable ["ws_bpos",_bpa];
 
 };
 
