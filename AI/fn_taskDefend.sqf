@@ -63,8 +63,6 @@ if (_count > 3) then {_guns = _this select 3};
 if (_count > 4) then {_garrison = _this select 4};
 if (_count > 5) then {_civil  = _this select 5};
 
-player Globalchat format ["%1",_pos];
-
 _buildings = [_pos,_radius] call ws_fnc_collectBuildings;
 _milarray = [];
 _badarray = [];
