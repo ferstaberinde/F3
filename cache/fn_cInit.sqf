@@ -30,7 +30,7 @@ if !isDedicated then {
         group player setVariable ["ws_cacheExcl", true, true];
 };
 
-// Script is run server-side
+// Script is run server-side (toDo: make HC compatible)
 if !(isServer) exitWith {};
 
 // Make sure script is only run once
