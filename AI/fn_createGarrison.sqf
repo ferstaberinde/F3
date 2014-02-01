@@ -14,7 +14,7 @@ PARAMETERS:
 1. Center of town. Can be ellipse/rectangle marker, object or location     | MANDATORY - string (markername) or object name
 2. Radius of area to be considered																				 | MANDATORY - int
 3. Side of units to spawn																									 | MANDATORY - side (east, west, resistance)
-4. Number of units.																								         | OPTIONAL - integer - default is No. of available building positions/10
+4. Number of units.																								         | OPTIONAL - integer - default is No. of available buildings/2
 5. Array of classes to spawn																		           | OPTIONAL - array w. strings  - default are classes defined below
 
 EXAMPLE
@@ -70,11 +70,10 @@ if (count _classes == 0) then {
 
 // If no amount of units is set, calculate default
 if (_int == 0) then {
-	_int = round (count _bpos / 10);
+	_int = round (count _buildings / 2);
 };
 
 _grp = createGroup _side;
-_units = units _grp;
 
 //Rewrite?
 for "_x" from 1 to _int do {
@@ -107,6 +106,7 @@ for "_x" from 1 to _int do {
   _u = _grp createUnit [_classes call ws_fnc_selectRandom,_area,[],5,"NONE"];
 	_u setPosATL _bp;
   dostop _u;
+  if (random 1 > 0.75) then {_unit setunitpos "Middle";};
 
   if (_debug) then
   	{_mkr = createMarker [format ["%1-bpos",_u],getPos _u];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorGreen";};
@@ -120,4 +120,5 @@ for "_x" from 1 to _int do {
 
 _grp enableAttack false; // Prevent the group leader to issue attack orders to the members, improving their attack from buildings
 
+_units = units _grp;
 _units
