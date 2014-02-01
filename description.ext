@@ -28,6 +28,7 @@ class CfgFunctions
 			class broadcast {};
 			class showFPS {};
 			class nearPlayer {};
+			class listPlayers {};
 		};
 		class getPos
 		{

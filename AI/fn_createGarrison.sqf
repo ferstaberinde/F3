@@ -47,7 +47,8 @@ _classes = if (count _this > 4) then {_this select 4} else {[]};
 {[_x,["SCALAR"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_int,_radius];
 {[_x,["ARRAY"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_classes,_area];
 
-_buildings = [_area,_radius] call ws_fnc_collectBuildings;
+// Collect buildings and assign building positions
+_buildings = [_area,_radius,true,true] call ws_fnc_collectBuildings;
 
 // If default classes are being used, select the corresponding array
 if (count _classes == 0) then {
@@ -60,13 +61,6 @@ if (count _classes == 0) then {
 		case independent: {_classes = _iclasses};
 	};
 };
-
-// Collect building positions
-
-{
-	_ba = [_x] call ws_fnc_getBPos;
-	if (count _ba == 0) then {_buildings = _buildings - [_x]};
-} forEach _buildings;
 
 // If no amount of units is set, calculate default
 if (_int == 0) then {
