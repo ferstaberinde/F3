@@ -3,61 +3,68 @@ class CfgFunctions
 {
 	class WS
 	{
-		class init
-		{
-			class init {file = "ws_fnc\ws_fnc_init.sqf";postInit = 1;};
-		};
+
 		class debug
 		{
-			class debugText {file = "ws_fnc\dbg\ws_fnc_debugText.sqf";};
-			class typeCheck {file = "ws_fnc\dbg\ws_fnc_typeCheck.sqf";};
-			class clipboardCode {file = "ws_fnc\dbg\ws_fnc_clipBoardcode.sqf";};
-			class copyPos {file = "ws_fnc\dbg\ws_fnc_copypos.sqf";};
-			class countUnits {file = "ws_fnc\dbg\ws_fnc_countUnits.sqf";};
-			class debugTriggers {file = "ws_fnc\dbg\ws_fnc_debugTriggers.sqf";postInit = 1;};
+			file = "ws_fnc\dbg";
+			class debugText {};
+			class typeCheck {};
+			class clipboardCode {};
+			class copyPos {};
+			class countUnits {};
+			class debugTriggers {postInit = 1;};
 		};
 		class tools
 		{
-			class selectRandom {file = "ws_fnc\tools\ws_fnc_selectRandom.sqf"};
-			class gameCheck {file = "ws_fnc\tools\ws_fnc_gamecheck.sqf";preInit = 1;};
-			class switchLights {file = "ws_fnc\tools\ws_fnc_switchLights.sqf";};
-			class attachLight {file = "ws_fnc\tools\ws_fnc_attachLight.sqf";};
-			class collectMarkers {file = "ws_fnc\tools\ws_fnc_collectMarkers.sqf"};
-			class collectBuildings {file = "ws_fnc\tools\ws_fnc_collectBuildings.sqf"};
-			class loadVehicle {file = "ws_fnc\tools\ws_fnc_loadVehicle.sqf"};
-			class checkHC {file = "ws_fnc\tools\ws_fnc_checkHC.sqf"};
-			class broadcast {file = "ws_fnc\tools\ws_fnc_broadcast.sqf";};
-			class showFPS {file = "ws_fnc\tools\ws_fnc_showFPS.sqf";};
-			class nearPlayer {file = "ws_fnc\tools\ws_fnc_nearPlayer.sqf";};
+			file = "ws_fnc\tools";
+			class selectRandom {};
+			class gameCheck {preInit=1;};
+			class switchLights {};
+			class attachLight {};
+			class collectMarkers {};
+			class collectBuildings {};
+			class loadVehicle {};
+			class checkHC {};
+			class broadcast {};
+			class showFPS {};
+			class nearPlayer {};
 		};
 		class getPos
 		{
-			class getPos {file ="ws_fnc\getPos\ws_fnc_getPos.sqf";};
-			class getBPos {file = "ws_fnc\getPos\ws_fnc_getBPos.sqf";};
-			class getEPos {file = "ws_fnc\getPos\ws_fnc_getEPos.sqf";};
-			class nearestRoadPos {file = "ws_fnc\getPos\ws_fnc_NearestRoadPos.sqf";};
-			class nearestLandPos {file = "ws_fnc\getPos\ws_fnc_NearestLandPos.sqf";};
-			class getPosInArea {file = "ws_fnc\getPos\ws_fnc_getPosInArea.sqf";};
+			file = "ws_fnc\getPos";
+			class getPos {};
+			class getBPos {};
+			class getEPos {};
+			class nearestRoadPos {};
+			class nearestLandPos {};
+			class getPosInArea {};
 		};
 		class AI
 		{
-			class createGroup {file = "ws_fnc\AI\ws_fnc_createGroup.sqf";};
-			class createVehicle {file = "ws_fnc\AI\ws_fnc_createVehicle.sqf";};
-			class createGarrison {file = "ws_fnc\AI\ws_fnc_createGarrison.sqf";};
-			class betterVehicle {file = "ws_fnc\AI\ws_fnc_bettervehicle.sqf";};
-			class enterBuilding {file = "ws_fnc\AI\ws_fnc_enterBuilding.sqf";};
-			class taskDefend {file = "ws_fnc\AI\ws_fnc_taskDefend.sqf";};
-			class taskCrew {file = "ws_fnc\AI\ws_fnc_taskCrew.sqf";};
-			class taskAmbush {file = "ws_fnc\AI\ws_fnc_taskAmbush.sqf";};
-			class addWaypoint {file = "ws_fnc\AI\ws_fnc_addWaypoint.sqf";};
-			class setAIMode {file = "ws_fnc\AI\ws_fnc_setAIMode.sqf";};
+			file = "ws_fnc\AI";
+			class createGroup {};
+			class createVehicle {};
+			class createGarrison {};
+			class betterVehicle {};
+			class enterBuilding {};
+			class taskDefend {};
+			class taskCrew {};
+			class taskAmbush {};
+			class addWaypoint {};
+			class setAIMode {};
 		};
 		class cache
 		{
-			class cInit {file = "ws_fnc\cache\ws_fnc_cInit.sqf";};
-			class gCache {file = "ws_fnc\cache\ws_fnc_gCache.sqf";};
-			class gUncache {file = "ws_fnc\cache\ws_fnc_gUncache.sqf";};
-			class cTracker {file = "ws_fnc\cache\ws_fnc_cTracker.sqf";};
+			file = "ws_fnc\cache";
+			class cInit {};
+			class gCache {};
+			class gUncache {};
+			class cTracker {};
 		};
+
+		class init {
+			class init {file = "ws_fnc\ws_fnc_init.sqf";preInit = 1;};
+		};
+
 	};
 };
