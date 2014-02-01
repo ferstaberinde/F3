@@ -40,9 +40,9 @@ if !(ws_game_a3) then {
 	{
 	_buildings = _buildings + nearestObjects [_pos,[_x],_radius];
 	} forEach ["Church"];
-};
+} else
 
-if (ws_game_a3) then {
+{
 	{
 	_buildings = _buildings + nearestObjects [_pos,[_x],_radius];
 	} forEach ["Ruins_F","BagBunker_base_F","Stall_base_F","Shelter_base_F"];
