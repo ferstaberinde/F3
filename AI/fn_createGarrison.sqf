@@ -108,6 +108,8 @@ for "_x" from 1 to _int do {
   dostop _u;
   if (random 1 > 0.75) then {_unit setunitpos "Middle";};
 
+  _u setVariable ["ws_bpos",_bp];
+
   if (_debug) then
   	{_mkr = createMarker [format ["%1-bpos",_u],getPos _u];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorGreen";};
 
