@@ -11,8 +11,8 @@ USAGE
 [min caching distance,sleep] call ws_fnc_cInit;
 
 To exclude a group from being cached:
-a) In unit init: (group this) setVariable ["ws_cacheExcl",true];
-b) Anywhere: Groupname setVariable ["ws_cacheExcl",true];
+a) In unit init: (group this) setVariable ["ws_cacheExcl",true,true];
+b) Anywhere: Groupname setVariable ["ws_cacheExcl",true,true];
 
 NOTE
 It's recommended to wait up until a minute into the mission before launching the caching script to make sure that all AI have settled
