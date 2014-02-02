@@ -65,12 +65,6 @@ if !(ws_game_a3) then {
 	ws_fnc_addWaypoint = compile preprocessfile "ws_fnc\AI\fn_addWaypoint.sqf";
 	ws_fnc_bettervehicle = compile preprocessfile "ws_fnc\AI\fn_betterVehicle.sqf";
 	ws_fnc_setAIMode = compile preprocessfile "ws_fnc\AI\fn_setAIMode.sqf";
-
-	//Cache Functions
-	ws_fnc_cInit = compile preprocessfile "ws_fnc\cache\fn_cInit.sqf";
-	ws_fnc_cTracker = compile preprocessfile "ws_fnc\cache\fn_cTracker.sqf";
-	ws_fnc_gCache = compile preprocessfile"ws_fnc\cache\fn_gCache.sqf";
-	ws_fnc_gUncache = compile preprocessfile "ws_fnc\cache\fn_gUncache.sqf";
 };
 
 ws_fnc_compiled = true;
