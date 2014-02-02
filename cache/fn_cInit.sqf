@@ -52,7 +52,7 @@ _sleep = if (count _this > 1) then [{_this select 1},{6}];
 _debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
 
 if (_debug) then {
-	["ws_fnc_cache DBG: Starting to track groups, range, sleep",[count _groups,_range,_sleep],""] call ws_fnc_debugtext;
+	["ws_fnc_cache DBG: Starting to track groups, range, sleep",[count allGroups,_range,_sleep],""] call ws_fnc_debugtext;
 
 	[_sleep] spawn {
 

@@ -13,9 +13,10 @@ _sleep = _this select 1;
 
 _debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
 
+_groups = allGroups;
+
 While {count _groups > 0} do {
         {
-
                 _groups = allGroups;
 
                 if (_debug) then{ ["ws_fnc_cache DBG: Tracking ",[count _groups]," groups"] call ws_fnc_debugtext;};
@@ -48,7 +49,7 @@ While {count _groups > 0} do {
                                                 if (_debug) then {["ws_fnc_cache DBG: Caching: ",[_x],""] call ws_fnc_debugtext;};
 
                                                 _x setvariable ["ws_cached", true];
-                                                [_x,"ws_fnc_gCache", true] spawn BIS_fnc_MP;
+                                                [_x,"ws_fnc_gCache",true] spawn BIS_fnc_MP;
                                         };
                                 };
 
