@@ -40,7 +40,8 @@ While {count _groups > 0} do {
                                                 if (_debug) then {["ws_fnc_cache DBG: Decaching: ",[_x],""] call ws_fnc_debugtext;};
 
                                                 _x setvariable ["ws_cached", false];
-                                                _x call ws_fnc_gUncache;
+                                                [_x,"ws_fnc_gUncache", true] spawn BIS_fnc_MP;
+
                                         };
                                 } else {
                                         if !([_x, _range * 1.1] call ws_fnc_nearPlayer) then {
@@ -48,7 +49,7 @@ While {count _groups > 0} do {
                                                 if (_debug) then {["ws_fnc_cache DBG: Caching: ",[_x],""] call ws_fnc_debugtext;};
 
                                                 _x setvariable ["ws_cached", true];
-                                                _x call ws_fnc_gCache;
+                                                [_x,"ws_fnc_gCache", true] spawn BIS_fnc_MP;
                                         };
                                 };
 

@@ -11,7 +11,7 @@ Enables Simulation and AI behaviour on all units but the group leader (or vehicl
  {
 if(_x != leader _this && !("Driver" in assignedVehicleRole _x)) then {
 
-                if (vehicle _x == _x) then {
+                if (vehicle _x == _x && local _x) then {
 
                                         // Workaround for ws_taskDefend:
                                         // For some reason units moved by taskDefend get assigned formationPosition z-level -100 after caching

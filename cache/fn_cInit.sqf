@@ -25,16 +25,13 @@ RETURNS
 true
 */
 
-// Script is only run server-side and on headless client
-_hc = [] call ws_fnc_checkHC;
-
 // Player and the headless client's groups are always excluded from being cached
-if (!isDedicated || _hc) then {
+if (!isDedicated) then {
         group player setVariable ["ws_cacheExcl", true, true];
 };
 
 // Script is only run server-side and on headless client
-if !(_hc || isServer) exitWith {};
+if !(isServer) exitWith {};
 
 // Make sure script is only run once
 if (missionNameSpace getVariable ["ws_cInit", false]) exitWith {};
@@ -46,7 +43,7 @@ _groups = allGroups;
 
 // All groups with playable units or only one unit are set to be ignored as well
 {
-if ({_x in playableUnits} count units _x > 0 || (count units _x == 1)) then {_x setVariable ["ws_cacheExcl",true];};
+	if ({_x in playableUnits} count units _x > 0 || (count units _x == 1)) then {_x setVariable ["ws_cacheExcl",true];};
 } forEach _groups;
 
 // Define parameters

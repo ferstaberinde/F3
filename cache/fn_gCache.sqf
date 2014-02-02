@@ -20,7 +20,7 @@ if(_x != leader _this && !("Driver" in assignedVehicleRole _x)) then {
         _x enableSimulation false;
         _x allowDamage false;
 
-        if (vehicle _x == _x) then {
+        if (vehicle _x == _x && local _x) then {
                 _pos = getPosATL _x;
                 _pos set [2, -100];
                 _x setPosATL _pos;
