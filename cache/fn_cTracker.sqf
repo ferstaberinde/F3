@@ -8,9 +8,8 @@ FEATURE
 Tracks all currently present AI-only groups and caches/uncaches them according to distance to parameters
 */
 
-_groups = _this select 0;
-_range = _this select 1;
-_sleep = _this select 2;
+_range = _this select 0;
+_sleep = _this select 1;
 
 _debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
 

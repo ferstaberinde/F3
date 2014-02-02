@@ -38,19 +38,16 @@ if (missionNameSpace getVariable ["ws_cInit", false]) exitWith {};
 ws_cInit = true;
 waituntil {!isnil "bis_fnc_init"};
 
-// Collect currently present groups
-_groups = allGroups;
-
 // All groups with playable units or only one unit are set to be ignored as well
 {
 	if ({_x in playableUnits} count units _x > 0 || (count units _x == 1)) then {_x setVariable ["ws_cacheExcl",true];};
-} forEach _groups;
+} forEach allGroups;
 
 // Define parameters
 _range = if (count _this > 0) then [{_this select 0},{1500}];
 _sleep = if (count _this > 1) then [{_this select 1},{6}];
 
-[_groups, _range, _sleep] spawn ws_fnc_cTracker;
+[_range, _sleep] spawn ws_fnc_cTracker;
 
 _debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
 
