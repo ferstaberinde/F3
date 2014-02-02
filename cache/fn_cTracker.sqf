@@ -8,15 +8,15 @@ FEATURE
 Tracks all currently present AI-only groups and caches/uncaches them according to distance to parameters
 */
 
-_groups = _this select 0;
-_range = _this select 1;
-_sleep = _this select 2;
+_range = _this select 0;
+_sleep = _this select 1;
 
 _debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
 
+_groups = allGroups;
+
 While {count _groups > 0} do {
         {
-
                 _groups = allGroups;
 
                 if (_debug) then{ ["ws_fnc_cache DBG: Tracking ",[count _groups]," groups"] call ws_fnc_debugtext;};
@@ -40,7 +40,8 @@ While {count _groups > 0} do {
                                                 if (_debug) then {["ws_fnc_cache DBG: Decaching: ",[_x],""] call ws_fnc_debugtext;};
 
                                                 _x setvariable ["ws_cached", false];
-                                                _x call ws_fnc_gUncache;
+                                                [_x,"ws_fnc_gUncache", true] spawn BIS_fnc_MP;
+
                                         };
                                 } else {
                                         if !([_x, _range * 1.1] call ws_fnc_nearPlayer) then {
@@ -48,7 +49,7 @@ While {count _groups > 0} do {
                                                 if (_debug) then {["ws_fnc_cache DBG: Caching: ",[_x],""] call ws_fnc_debugtext;};
 
                                                 _x setvariable ["ws_cached", true];
-                                                _x call ws_fnc_gCache;
+                                                [_x,"ws_fnc_gCache",true] spawn BIS_fnc_MP;
                                         };
                                 };
 

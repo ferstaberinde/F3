@@ -21,9 +21,7 @@ if(_x != leader _this && !("Driver" in assignedVehicleRole _x)) then {
         _x allowDamage false;
 
         if (vehicle _x == _x) then {
-                _pos = getPosATL _x;
-                _pos set [2, -100];
-                _x setPosATL _pos;
+                _x hideObject true;
         };
 } else {
         _x allowDamage true;
@@ -34,5 +32,7 @@ if(_x != leader _this && !("Driver" in assignedVehicleRole _x)) then {
         _x enableAI "MOVE";
         _x enableAI "ANIM";
         _x enableAI "FSM";
+
+        _x hideObject false;
 };
 } forEach units _this;

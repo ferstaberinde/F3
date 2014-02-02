@@ -11,8 +11,8 @@ USAGE
 [min caching distance,sleep] call ws_fnc_cInit;
 
 To exclude a group from being cached:
-a) In unit init: (group this) setVariable ["ws_cacheExcl",true];
-b) Anywhere: Groupname setVariable ["ws_cacheExcl",true];
+a) In unit init: (group this) setVariable ["ws_cacheExcl",true,true];
+b) Anywhere: Groupname setVariable ["ws_cacheExcl",true,true];
 
 NOTE
 It's recommended to wait up until a minute into the mission before launching the caching script to make sure that all AI have settled
@@ -25,12 +25,12 @@ RETURNS
 true
 */
 
-// Player groups are always excluded from being cached
-if !isDedicated then {
+// Player and the headless client's groups are always excluded from being cached
+if (!isDedicated) then {
         group player setVariable ["ws_cacheExcl", true, true];
 };
 
-// Script is run server-side (toDo: make HC compatible)
+// Script is only run server-side
 if !(isServer) exitWith {};
 
 // Make sure script is only run once
@@ -38,24 +38,21 @@ if (missionNameSpace getVariable ["ws_cInit", false]) exitWith {};
 ws_cInit = true;
 waituntil {!isnil "bis_fnc_init"};
 
-// Collect currently present groups
-_groups = allGroups;
-
 // All groups with playable units or only one unit are set to be ignored as well
 {
-if ({_x in playableUnits} count units _x > 0 || (count units _x == 1)) then {_x setVariable ["ws_cacheExcl",true];};
-} forEach _groups;
+	if ({_x in playableUnits} count units _x > 0 || (count units _x == 1)) then {_x setVariable ["ws_cacheExcl",true];};
+} forEach allGroups;
 
 // Define parameters
 _range = if (count _this > 0) then [{_this select 0},{1500}];
 _sleep = if (count _this > 1) then [{_this select 1},{6}];
 
-[_groups, _range, _sleep] spawn ws_fnc_cTracker;
+[_range, _sleep] spawn ws_fnc_cTracker;
 
 _debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
 
 if (_debug) then {
-	["ws_fnc_cache DBG: Starting to track groups, range, sleep",[count _groups,_range,_sleep],""] call ws_fnc_debugtext;
+	["ws_fnc_cache DBG: Starting to track groups, range, sleep",[count allGroups,_range,_sleep],""] call ws_fnc_debugtext;
 
 	[_sleep] spawn {
 
