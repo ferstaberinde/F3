@@ -34,7 +34,7 @@ if (!isDedicated || _hc) then {
 };
 
 // Script is only run server-side and on headless client
-if !(_hc && isServer) exitWith {};
+if !(_hc || isServer) exitWith {};
 
 // Make sure script is only run once
 if (missionNameSpace getVariable ["ws_cInit", false]) exitWith {};
