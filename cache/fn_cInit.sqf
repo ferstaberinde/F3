@@ -30,7 +30,7 @@ if (!isDedicated) then {
         group player setVariable ["ws_cacheExcl", true, true];
 };
 
-// Script is only run server-side and on headless client
+// Script is only run server-side
 if !(isServer) exitWith {};
 
 // Make sure script is only run once
