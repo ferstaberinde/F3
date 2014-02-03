@@ -312,6 +312,12 @@ class CfgFunctions
 			class drawNameTag
 			{
 			};
+			class mpEndBroadcast
+			{
+			};
+			class mpEndReceiver
+			{
+			};
 		};
 		class spect
 		{
