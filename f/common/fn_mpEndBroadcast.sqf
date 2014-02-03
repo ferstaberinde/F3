@@ -14,16 +14,15 @@ if (isServer) then
 {
 // SET ENDING & BROADCAST
 // The desired ending # is taken from the arguments passed to this script.
-// A new value for f_endSelected is being listened for by a trigger on all machines.
-// When fired, the trigger will call f_mpEndReceiver.sqf. The same variable will
-// also be used locally to change the listening trigger into an appropriate end trigger.
+// Using BIS_fnc_MP the function mpEndReceiver is being called on all clients (and server),
+// with the passed ending # as parameter
 
 	[_this select 0,"f_fnc_mpEndReceiver",true,true] spawn BIS_fnc_MP;
 
 // DEBUG
 	if (f_var_debugMode == 1) then
 	{
-		player sideChat format ["DEBUG (f\server\f_mpEndBroadcast.sqf): f_endSelected = %1",f_endSelected];
+		player sideChat format ["DEBUG (f_fnc_mpEndBroadcast.sqf): f_endSelected = %1",f_endSelected];
 	};
 };
 

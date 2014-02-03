@@ -13,6 +13,8 @@
 
 private ["_ending","_validEndings"];
 
+_ending = _this;
+
 // ====================================================================================
 
 // SERVER DELAY
@@ -24,14 +26,14 @@ if (isServer) then
 // DEBUG
 	if (f_var_debugMode == 1) then
 	{
-		player sideChat "DEBUG (f\server\f_mpEndReceiver.sqf): This is the server.";
+		player sideChat "DEBUG (f_fnc_mpEndReciever): This is the server.";
 	};
 };
 
 // DEBUG
 if (f_var_debugMode == 1) then
 {
-	player sideChat format ["DEBUG (f\server\f_mpEndReceiver.sqf): f_endSelected = %1",f_endSelected];
+	player sideChat format ["DEBUG (f_fnc_mpEndReciever): _ending = %1",_ending];
 };
 
 // ====================================================================================
@@ -43,12 +45,12 @@ if (f_var_debugMode == 1) then
 // been broadcast a sidechat will be displayed and the script will exit (by default
 // allowed values are: 1,2,3,4,5,6).
 
-_ending = _this;
+
 
 _validEndings = [1,2,3,4,5,6];
 if (!(_ending in _validEndings)) then
 {
-	player sideChat format ["DEBUG (f\common\f_mpEndReciever.sqf): f_endSelected = %1 (INVALID)",f_endSelected];
+	player sideChat format ["DEBUG (f_fnc_mpEndReciever.sqf): _ending = %1 (INVALID)",_ending];
 	exit;
 };
 
