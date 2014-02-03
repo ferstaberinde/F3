@@ -312,6 +312,9 @@ class CfgFunctions
 			class drawNameTag
 			{
 			};
+			class removeBody
+			{
+			};
 		};
 		class spect
 		{
