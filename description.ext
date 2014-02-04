@@ -185,14 +185,14 @@ class Params
 // F3 - Caching
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-//	class f_param_caching
-//	{
-//		title = "$STR_f_param_caching";
-//		values[] = {0,600,800,1000,1500,2000};
-//		texts[] = {$STR_f_param_caching_Option0,$STR_f_param_caching_Option1,$STR_f_param_caching_Option2,$STR_f_param_caching_Option3,$STR_f_param_caching_Option4,$STR_f_param_caching_Option5};
-//		default = 0;
-//		code = "f_param_caching = %1";
-//	};
+	class f_param_caching
+	{
+		title = "$STR_f_param_caching";
+		values[] = {0,600,800,1000,1500,2000};
+		texts[] = {$STR_f_param_caching_Option0,$STR_f_param_caching_Option1,$STR_f_param_caching_Option2,$STR_f_param_caching_Option3,$STR_f_param_caching_Option4,$STR_f_param_caching_Option5};
+		default = 600;
+		code = "f_param_caching = %1";
+	};
 
 // ============================================================================================
 
@@ -336,7 +336,7 @@ class CfgFunctions
 		class cache
 		{
 			file = "f\cache";
-			class cInit {postInit = 1;};
+			class cInit {};
 			class cTracker {};
 			class gCache {};
 			class gUncache {};

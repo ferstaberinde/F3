@@ -2,19 +2,20 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// Check whether the paramater is defined - if not, just exit
+// Check whether the paramater is defined (or caching switched off)) - if not, just exit
 if (isNil "f_param_caching" || {f_param_caching == 0}) exitWith {};
 
 // ====================================================================================
 
-// Wait 30 seconds into the mission to give AI and players time to settle
-waitUntil {time > 30};
+// Wait up to the desired time into the mission to give AI and players time to settle
+sleep 0.1;
+waitUntil {time > (_this select 0)};
 
 // ====================================================================================
 
 // Player and the headless client's (if present) groups are always excluded from being cached
-if (!isDedicated && !(group player getVariable [["f_cacheExcl", false])) then {
-        group player setVariable ["f_cacheExcl", true, true];
+if (!isDedicated && !(group player getVariable ["f_cacheExcl", false])) then {
+        (group player) setVariable ["f_cacheExcl", true, true];
 };
 
 // ====================================================================================
@@ -28,9 +29,6 @@ if !(isServer) exitWith {};
 if (missionNameSpace getVariable ["f_cInit", false]) exitWith {};
 f_cInit = true;
 
-// Wait for the BIS functions to initialize
-waituntil {!isnil "bis_fnc_init"};
-
 // ====================================================================================
 
 // All groups with playable units are set to be ignored as well
@@ -40,13 +38,13 @@ waituntil {!isnil "bis_fnc_init"};
 
 // Define parameters
 _range = f_param_caching;	// The range outside of which to cache units
-_sleep = 5; // The time to sleep between checking
+_sleep = _this select 1; // The time to sleep between checking
 
 [_range, _sleep] spawn f_fnc_cTracker;
 
 // Start the debug tracker
 if (f_var_debugMode == 1) then {
-	player globalchat format ["f_fnc_cInit DBG: Starting to track groups, range, sleep",[count allGroups,_range,_sleep];
+	player globalchat format ["f_fnc_cInit DBG: Starting to track %1 groups, %2 range, %3 sleep",count allGroups,_range,_sleep];
 
 	[_sleep] spawn {
 

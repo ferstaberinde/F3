@@ -26,8 +26,8 @@ While {count _groups > 0} do {
                         if (_debug) then{player globalchat format ["f_fnc_cache DBG: Group is null, deleting: %1",_x,count _groups]};
 
                 } else {
-                        _exclude = _x getvariable ["ws_cacheExcl",false];
-                        _cached = _x getvariable ["ws_cached", false];
+                        _exclude = _x getvariable ["f_cacheExcl",false];
+                        _cached = _x getvariable ["f_cached", false];
 
                         if (!_exclude) then {
                                 if (_cached) then {
