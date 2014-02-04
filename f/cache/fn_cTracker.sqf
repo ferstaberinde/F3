@@ -27,13 +27,13 @@ _fnc_nearPlayer = {
         _players = [];
 
         {
-        if (isPlayer _x) then {_players = _players + [_x]};
+                if (isPlayer _x) then {_players = _players + [_x]};
         } forEach playableUnits;
 
         // Check whether a player is in the given distance
         {
-        if (_pos distance _x < _distance) exitWith {true};
-        false;
+                if (_pos distance _x < _distance) exitWith {true};
+                false;
         } forEach _players;
 };
 
