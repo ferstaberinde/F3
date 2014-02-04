@@ -3,7 +3,7 @@
 // ====================================================================================
 
 // Check whether the paramater is defined - if not, just exit
-if (isNil "f_param_caching") exitWith {};
+if (isNil "f_param_caching" || {f_param_caching == 0}) exitWith {};
 
 // ====================================================================================
 
