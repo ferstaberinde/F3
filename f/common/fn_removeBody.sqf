@@ -35,15 +35,7 @@ _nearPlayers = 0;
 
 while {!_done} do {
 
-	// Create an array of players
-	_players = [];
-	{
-		if (isPlayer _x) then {_players = _players + [_x]};
-	} forEach playableUnits;
-
-	_nearPlayers = {_x distance _body < _distance} count _players;
-
-	if (_nearPlayers == 0) exitWith {_done = true};
+	_done = [_body,_distance] call f_fnc_nearPlayer;
 
 	sleep _wait;
 

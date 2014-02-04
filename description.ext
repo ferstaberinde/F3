@@ -329,6 +329,9 @@ class CfgFunctions
 			class removeBody
 			{
 			};
+			class nearPlayer
+			{
+			};
 		};
 		class cache
 		{

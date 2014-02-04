@@ -13,32 +13,6 @@ _debug = if (f_var_debugMode == 1) then [{true},{false}];
 
 // ====================================================================================
 
-// DEFINE SUB-FUNCTION
-// THe tracker needs a function to check whether players a need. As it is only required for this script,
-// it's defined locally and not in the cfgFunctions
-
-_fnc_nearPlayer = {
-        // DECLARE VARIABLES AND FUNCTIONS
-        private ["_ent","_distance","_pos","_players"];
-        _pos = getPosATL (_this select 0);
-        _distance = _this select 1;
-
-        // Create a list of all players
-        _players = [];
-
-        {
-                if (isPlayer _x) then {_players = _players + [_x]};
-        } forEach playableUnits;
-
-        // Check whether a player is in the given distance
-        {
-                if (_pos distance _x < _distance) exitWith {true};
-                false;
-        } forEach _players;
-};
-
-// ====================================================================================
-
 // BEGIN THE TRACKING LOOP
 While {count _groups > 0} do {
         {
@@ -60,7 +34,7 @@ While {count _groups > 0} do {
 
                                         if (_debug) then {player globalchat format ["f_fnc_cache DBG: Checking group: %1",_x]};
 
-                                        if ([leader _x, _range] call _fnc_nearPlayer) then {
+                                        if ([leader _x, _range] call f_fnc_nearPlayer) then {
 
                                                 if (_debug) then {player globalchat format ["f_fnc_cache DBG: Decaching: %1",_x]};
 
@@ -69,7 +43,7 @@ While {count _groups > 0} do {
 
                                         };
                                 } else {
-                                        if !([leader _x, _range * 1.1] call _fnc_nearPlayer) then {
+                                        if !([leader _x, _range * 1.1] call f_fnc_nearPlayer) then {
 
                                                 if (_debug) then {player globalchat format ["f_fnc_cache DBG: Caching: %1",_x]};
 
