@@ -33,9 +33,9 @@ waituntil {!isnil "bis_fnc_init"};
 
 // ====================================================================================
 
-// All groups with playable units or only one unit are set to be ignored as well
+// All groups with playable units are set to be ignored as well
 {
-	if ({_x in playableUnits} count units _x > 0 || (count units _x == 1)) then {_x setVariable ["f_cacheExcl",true,true];};
+	if ({_x in playableUnits} count units _x > 0) then {_x setVariable ["f_cacheExcl",true,true];};
 } forEach allGroups;
 
 // Define parameters
