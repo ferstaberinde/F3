@@ -3,13 +3,13 @@
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
-private ["_range","_sleep","_groups"];
+private ["_range","_sleep","_groups","_debug"];
 
 _range = _this select 0;
 _sleep = _this select 1;
 _groups = allGroups;
 
-_debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
+_debug = if (f_var_debugMode == 1) then [{true},{false}];
 
 // ====================================================================================
 
@@ -18,12 +18,12 @@ While {count _groups > 0} do {
         {
                 _groups = allGroups;
 
-                if (_debug) then{ ["f_fnc_cache DBG: Tracking ",[count _groups]," groups"] call f_fnc_debugtext;};
+                if (_debug) then{player globalchat format ["f_fnc_cache DBG: Tracking %1 groups",count _groups]};
 
                 if (isnull _x) then {
                         _groups = _groups - [_x];
 
-                        if (_debug) then{ ["f_fnc_cache DBG: Group is null, deleting: ",[_x,count _groups]," groups left"] call f_fnc_debugtext;};
+                        if (_debug) then{player globalchat format ["f_fnc_cache DBG: Group is null, deleting: %1",_x,count _groups]};
 
                 } else {
                         _exclude = _x getvariable ["ws_cacheExcl",false];
@@ -32,27 +32,27 @@ While {count _groups > 0} do {
                         if (!_exclude) then {
                                 if (_cached) then {
 
-                                        if (_debug) then {["f_fnc_cache DBG: Checking group: ",[_x],""] call f_fnc_debugtext;};
+                                        if (_debug) then {player globalchat format ["f_fnc_cache DBG: Checking group: %1",_x]};
 
                                         if ([_x, _range] call f_fnc_nearPlayer) then {
 
-                                                if (_debug) then {["f_fnc_cache DBG: Decaching: ",[_x],""] call f_fnc_debugtext;};
+                                                if (_debug) then {player globalchat format ["f_fnc_cache DBG: Decaching: %1",_x]};
 
-                                                _x setvariable ["ws_cached", false];
+                                                _x setvariable ["f_cached", false];
                                                 [_x,"f_fnc_gUncache", true] spawn BIS_fnc_MP;
 
                                         };
                                 } else {
                                         if !([_x, _range * 1.1] call f_fnc_nearPlayer) then {
 
-                                                if (_debug) then {["f_fnc_cache DBG: Caching: ",[_x],""] call f_fnc_debugtext;};
+                                                if (_debug) then {player globalchat format ["f_fnc_cache DBG: Caching: %1",_x]};
 
-                                                _x setvariable ["ws_cached", true];
+                                                _x setvariable ["f_cached", true];
                                                 [_x,"f_fnc_gCache",true] spawn BIS_fnc_MP;
                                         };
                                 };
 
-                                if (_debug) then {["f_fnc_cache DBG: Group is excluded: ",[_x]," - Ignoring."] call f_fnc_debugtext;};
+                                if (_debug) then {player globalchat format ["f_fnc_cache DBG: Group is excluded: %1",_x]};
                         };
                 };
         } foreach _groups;

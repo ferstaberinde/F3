@@ -7,6 +7,11 @@ if (isNil "f_param_caching") exitWith {};
 
 // ====================================================================================
 
+// Wait 30 seconds into the mission to give AI and players time to settle
+waitUntil {time > 30};
+
+// ====================================================================================
+
 // Player and the headless client's (if present) groups are always excluded from being cached
 if (!isDedicated && !(group player getVariable [["f_cacheExcl", false])) then {
         group player setVariable ["f_cacheExcl", true, true];
@@ -34,8 +39,8 @@ waituntil {!isnil "bis_fnc_init"};
 } forEach allGroups;
 
 // Define parameters
-_range = f_param_caching;
-_sleep = 6; // The time to sleep between checking
+_range = f_param_caching;	// The range outside of which to cache units
+_sleep = 5; // The time to sleep between checking
 
 [_range, _sleep] spawn f_fnc_cTracker;
 

@@ -3,7 +3,7 @@
 // ====================================================================================
 
  {
-if(_x != leader _this && !("Driver" in assignedVehicleRole _x)) then {
+        if(_x != leader _this && !("Driver" in assignedVehicleRole _x)) then {
 
                 if (vehicle _x == _x) then {
                         _x hideObject false;
