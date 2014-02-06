@@ -100,6 +100,12 @@ for "_x" from 1 to _int do {
   _u = _grp createUnit [_classes call ws_fnc_selectRandom,_area,[],5,"NONE"];
 	_u setPosATL _bp;
   dostop _u;
+
+  _dir = if (ws_game_A3) then {([_u,_b] call BIS_fnc_DirTo) +180} else {random 360};
+  player globalchat format ["%1",_dir];
+
+  _u setDir _dir;
+
   if (random 1 > 0.75) then {_u setunitpos "Middle";};
 
   _u setVariable ["ws_bpos",_bp];
