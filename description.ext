@@ -26,6 +26,7 @@ class CfgFunctions
 			class loadVehicle {};
 			class checkHC {};
 			class broadcast {};
+			class showIntro {};
 			class showFPS {};
 			class nearPlayer {};
 			class listPlayers {};
