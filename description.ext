@@ -306,6 +306,15 @@ class CfgFunctions
 			class localGroupMarker
 			{
 			};
+			class SetLocalFTMemberMarkers
+			{
+			};
+			class GetMarkerColor
+			{
+			};
+			class LocalFTMarkerSync
+			{
+			};
 			class localSpecialistMarker
 			{
 			};

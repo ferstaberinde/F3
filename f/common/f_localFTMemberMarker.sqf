@@ -39,7 +39,7 @@ _mkrBorder setMarkerDirLocal (direction _unit);
 _mkr = createMarkerLocal [_mkrName,_pos];
 _mkr setMarkerShapeLocal "ICON";
 _mkr setMarkerTypeLocal "MIL_TRIANGLE";
-_mkr setMarkerColorLocal ([_unit] call f_getLocalMarkerVar);
+_mkr setMarkerColorLocal (_unit getvariable ["assignedTeam","ColorWhite"]);
 _mkr setMarkerSizeLocal [0.45, 0.45];
 _mkr setMarkerDirLocal (direction _unit);
 
@@ -49,7 +49,7 @@ _mkr setMarkerDirLocal (direction _unit);
 
 // We shall run the loop!
 
-while{alive _unit && (_unit in f_handlerGroup)} do
+while{alive _unit && (_unit in f_HandlerGroup)} do
 {
 	_pos = getpos _unit;
 	_dir = (direction _unit);
@@ -61,9 +61,9 @@ while{alive _unit && (_unit in f_handlerGroup)} do
 		_mkr setMarkerDirLocal _dir;
 		// makes a call to the function defined in f_setLocalFTMemberMarkers.sqf
 		// retreives the stored color from the unit.
-		_mkr setMarkerColorLocal ([_unit] call f_getLocalMarkerVar);
+		_mkr setMarkerColorLocal (_unit getvariable ["assignedTeam","ColorWhite"]);
 	} else {
-		f_handlerGroup = f_handlerGroup - [_unit];
+		f_HandlerGroup = f_HandlerGroup - [_unit];
 	};
 	sleep 3;
 
