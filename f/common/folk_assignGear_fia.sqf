@@ -827,12 +827,26 @@ switch (_typeofUnit) do
 		_unit addWeapon "Binocular";
 		_unit addBackpack _MTRmount;
 	};
+
+// LOADOUT: VEHICLE CREW
+	case "c":
+	{
+		_unit addmagazines [_smgmag,5];
+		_unit addweapon _smg;
+		_unit addmagazines [_smokegrenade,2];
+		_unit addItem "ItemGPS";
+		_unit assignItem "ItemGPS";
+	};
+
+
 // LOADOUT: AIR VEHICLE PILOTS
 	case "p":
 	{
 		_unit addmagazines [_smgmag,5];
 		_unit addweapon _smg;
 		_unit addmagazines [_smokegrenade,2];
+		_unit addItem "ItemGPS";
+		_unit assignItem "ItemGPS";
 	};
 
 // LOADOUT: ENGINEER
