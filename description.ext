@@ -190,7 +190,7 @@ class Params
 		title = "$STR_f_param_caching";
 		values[] = {0,600,800,1000,1500,2000};
 		texts[] = {$STR_f_param_caching_Option0,$STR_f_param_caching_Option1,$STR_f_param_caching_Option2,$STR_f_param_caching_Option3,$STR_f_param_caching_Option4,$STR_f_param_caching_Option5};
-		default = 600;
+		default = 0;
 		code = "f_param_caching = %1";
 	};
 
