@@ -200,5 +200,5 @@ f_endSelected = -1;
 // F3 - AI Unit Caching
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[30,6] spawn f_fnc_cInit;
+[30] spawn f_fnc_cInit;
 

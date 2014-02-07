@@ -38,7 +38,7 @@ f_cInit = true;
 
 // Define parameters
 _range = f_param_caching;	// The range outside of which to cache units
-_sleep = _this select 1; // The time to sleep between checking
+_sleep = 6; 							// The time to sleep between checking
 
 [_range, _sleep] spawn f_fnc_cTracker;
 
