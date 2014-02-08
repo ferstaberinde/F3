@@ -7,8 +7,11 @@ if (isNil "f_param_caching" || {f_param_caching == 0}) exitWith {};
 
 // ====================================================================================
 
-// Wait up to the desired time into the mission to give AI and players time to settle
+// Wait for the mission to have launched before starting to cache.
 sleep 0.1;
+
+
+// Wait up to the desired time into the mission to give AI and players time to settle
 waitUntil {time > (_this select 0)};
 
 // ====================================================================================
