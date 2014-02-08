@@ -237,6 +237,28 @@
       <Key ID="STR_f_param_mission_timer_off">
         <English> Off </English>
       </Key>
+      <Key ID="STR_f_param_caching">
+        <English> AI Caching</English>
+      </Key>
+      <Key ID="STR_f_param_caching_Option0">
+        <English> Off </English>
+        <German> Aus </German>
+      </Key>
+       <Key ID="STR_f_param_caching_Option1">
+        <English> outside 600 (m) </English>
+      </Key>
+      <Key ID="STR_f_param_caching_Option2">
+        <English> outside 800 (m) </English>
+      </Key>
+      <Key ID="STR_f_param_caching_Option3">
+        <English> outside 1000 (m) </English>
+      </Key>
+       <Key ID="STR_f_param_caching_Option4">
+        <English> outside 1500 (m) </English>
+      </Key>
+       <Key ID="STR_f_param_caching_Option5">
+        <English> outside 2000 (m) </English>
+      </Key>
     </Container>
   </Package>
 </Project>

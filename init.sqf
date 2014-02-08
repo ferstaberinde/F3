@@ -195,3 +195,10 @@ f_endSelected = -1;
 
 [] execVM "f\common\f_safeStart.sqf";
 
+// ====================================================================================
+
+// F3 - AI Unit Caching
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[30] spawn f_fnc_cInit;
+

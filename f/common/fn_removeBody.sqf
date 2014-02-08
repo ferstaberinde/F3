@@ -30,23 +30,10 @@ _nearPlayers = [objNull];
 // WAITING UNTIL ALL CONDITIONS ARE MET
 // While there's at least 1 player within the minimal radius around the body the script sleeps the designated time.
 
-_done = false;
-_nearPlayers = 0;
-
-while {!_done} do {
-
-	// Create an array of players
-	_players = [];
-	{
-		if (isPlayer _x) then {_players = _players + [_x]};
-	} forEach playableUnits;
-
-	_nearPlayers = {_x distance _body < _distance} count _players;
-
-	if (_nearPlayers == 0) exitWith {_done = true};
-
+_loop = true;
+while {_loop} do {
 	sleep _wait;
-
+	_loop = [_body,_distance] call f_fnc_nearPlayer;
 };
 
 
