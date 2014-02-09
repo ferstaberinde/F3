@@ -9,7 +9,6 @@
 
                         _x enableAI "TARGET";
                         _x enableAI "AUTOTARGET";
-                        _x enableAI "MOVE";
                         _x enableAI "ANIM";
                         _x enableAI "FSM";
         };

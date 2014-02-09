@@ -8,7 +8,6 @@
         if(_x != leader _this && !("Driver" in assignedVehicleRole _x)) then {
                 _x disableAI "TARGET";
                 _x disableAI "AUTOTARGET";
-                _x disableAI "MOVE";
                 _x disableAI "ANIM";
                 _x disableAI "FSM";
 
@@ -20,7 +19,6 @@
 
                 _x enableAI "TARGET";
                 _x enableAI "AUTOTARGET";
-                _x enableAI "MOVE";
                 _x enableAI "ANIM";
                 _x enableAI "FSM";
         };
