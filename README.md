@@ -226,7 +226,6 @@ Version | Date
  * Fixed bug where marker was frozen despite the group still having members.
 * Updated F3 Folk ARPS Assign Gear Script component:
  * Added uniform randomisation.
- * Added tank and attack helo groups to AAF.
  * MAT teams now use NLAWs or RPGs.
  * Rifleman (AT) loadout tweaked.
  * Rifleman (AT), MAT loadouts work when backpacks are disabled.
@@ -242,6 +241,9 @@ Version | Date
  * Fixed issue where name tag height for units in buildings would be incorrect.
  * Fixed issue where name tags would display for enemy/neutral units in vehicles.
  * Misc. improvements and tweaks.
+* Updated F3 Folk ARPS Platoons component:
+ * Added tank and attack helo groups to AAF.
+ * Temporarily removed JIP groups (for all factions).
 * Updated Mission Conditions component to adjust fog values.
 * Updated Buddy Team Colours component.
 * Updated Automatic Body Removal component.
