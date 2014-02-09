@@ -245,19 +245,19 @@
         <German> Aus </German>
       </Key>
        <Key ID="STR_f_param_caching_Option1">
-        <English> outside 600 (m) </English>
+        <English> Outside 600m </English>
       </Key>
       <Key ID="STR_f_param_caching_Option2">
-        <English> outside 800 (m) </English>
+        <English> Outside 800m </English>
       </Key>
       <Key ID="STR_f_param_caching_Option3">
-        <English> outside 1000 (m) </English>
+        <English> Outside 1000m </English>
       </Key>
        <Key ID="STR_f_param_caching_Option4">
-        <English> outside 1500 (m) </English>
+        <English> Outside 1500m </English>
       </Key>
        <Key ID="STR_f_param_caching_Option5">
-        <English> outside 2000 (m) </English>
+        <English> Outside 2000m </English>
       </Key>
     </Container>
   </Package>
