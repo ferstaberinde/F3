@@ -21,7 +21,7 @@ switch (_type) do
             {
                 f_cam_mShift = true;
             };
-
+            f_cam_MouseMoving = true;
     		f_cam_onMouseMoving = (_args select 0) ctrlAddEventHandler ["MouseMoving", "['MouseMoving',_this] call f_cam_eventHandler"];
 
     	};
@@ -41,7 +41,7 @@ switch (_type) do
     		f_cam_mLeftDown = false;
             f_cam_mShift = false;
     		(_args select 0) ctrlRemoveEventHandler  ["MouseMoving",f_cam_onMouseMoving];
-    		//f_cam_onMouseMoving = -1;
+    		f_cam_MouseMoving = false;
     		f_cam_startX = 0;
     		f_cam_startY = 0;
     		f_cam_detlaX = 0;

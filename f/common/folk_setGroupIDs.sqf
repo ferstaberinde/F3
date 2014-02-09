@@ -4,29 +4,33 @@
 
 // GROUP IDs: BLUFOR > NATO
 // Automatically assigns intelligible names to groups
+
 if(!isnil "GrpNATO_CO") then {GrpNATO_CO setGroupId ["NATO CO -","GroupColor0"];};
 if(!isnil "GrpNATO_DC") then {GrpNATO_DC setGroupId ["NATO DC -","GroupColor0"];};
+
 if(!isnil "GrpNATO_ASL") then {GrpNATO_ASL setGroupId ["NATO ASL -","GroupColor0"];};
 if(!isnil "GrpNATO_A1") then {GrpNATO_A1 setGroupId ["NATO A1 -","GroupColor0"];};
 if(!isnil "GrpNATO_A2") then {GrpNATO_A2 setGroupId ["NATO A2 -","GroupColor0"];};
 if(!isnil "GrpNATO_A3") then {GrpNATO_A3 setGroupId ["NATO A3 -","GroupColor0"];};
+
 if(!isnil "GrpNATO_BSL") then {GrpNATO_BSL setGroupId ["NATO BSL -","GroupColor0"];};
 if(!isnil "GrpNATO_B1") then {GrpNATO_B1 setGroupId ["NATO B1 -","GroupColor0"];};
 if(!isnil "GrpNATO_B2") then {GrpNATO_B2 setGroupId ["NATO B2 -","GroupColor0"];};
 if(!isnil "GrpNATO_B3") then {GrpNATO_B3 setGroupId ["NATO B3 -","GroupColor0"];};
+
 if(!isnil "GrpNATO_CSL") then {GrpNATO_CSL setGroupId ["NATO CSL -","GroupColor0"];};
 if(!isnil "GrpNATO_C1") then {GrpNATO_C1 setGroupId ["NATO C1 -","GroupColor0"];};
 if(!isnil "GrpNATO_C2") then {GrpNATO_C2 setGroupId ["NATO C2 -","GroupColor0"];};
 if(!isnil "GrpNATO_C3") then {GrpNATO_C3 setGroupId ["NATO C3 -","GroupColor0"];};
+
 if(!isnil "GrpNATO_MMG1") then {GrpNATO_MMG1 setGroupId ["NATO MMG1 -","GroupColor0"];};
 if(!isnil "GrpNATO_MAT1") then {GrpNATO_MAT1 setGroupId ["NATO MAT1 -","GroupColor0"];};
+if(!isnil "GrpNATO_ENG1") then {GrpNATO_ENG1 setGroupId ["NATO ENG1 -","GroupColor0"];};
 
 if(!isnil "GrpNATO_ST1") then {GrpNATO_ST1 setGroupId ["NATO ST1 -","GroupColor0"];};
 if(!isnil "GrpNATO_HMG1") then {GrpNATO_HMG1 setGroupId ["NATO HMG1 -","GroupColor0"];};
 if(!isnil "GrpNATO_MTR1") then {GrpNATO_MTR1 setGroupId ["NATO MTR1 -","GroupColor0"];};
 if(!isnil "GrpNATO_HAT1") then {GrpNATO_HAT1 setGroupId ["NATO GrpNATO_HAT1 -","GroupColor0"];};
-
-if(!isnil "GrpNATO_ENG1") then {GrpNATO_ENG1 setGroupId ["NATO ENG1 -","GroupColor0"];};
 
 if(!isnil "GrpNATO_IFV1") then {GrpNATO_IFV1 setGroupId ["NATO IFV1 -","GroupColor0"];};
 if(!isnil "GrpNATO_IFV2") then {GrpNATO_IFV2 setGroupId ["NATO IFV2 -","GroupColor0"];};
@@ -49,6 +53,7 @@ if(!isnil "GrpNATO_TH7") then {GrpNATO_TH7 setGroupId ["NATO TH7 -","GroupColor0
 if(!isnil "GrpNATO_TH8") then {GrpNATO_TH8 setGroupId ["NATO TH8 -","GroupColor0"];};
 
 if(!isnil "GrpNATO_AH1") then {GrpNATO_AH1 setGroupId ["NATO AH1 -","GroupColor0"];};
+
 if(!isnil "GrpNATO_DT1") then {GrpNATO_DT1 setGroupId ["NATO DT1 -","GroupColor0"];};
 
 if(!isnil "GrpNATO_JIP") then {GrpNATO_JIP setGroupId ["NATO JIP -","GroupColor0"];};
@@ -57,29 +62,33 @@ if(!isnil "GrpNATO_JIP") then {GrpNATO_JIP setGroupId ["NATO JIP -","GroupColor0
 
 // GROUP IDs: BLUFOR > FIA
 // Automatically assigns intelligible names to groups
+
 if(!isnil "GrpFIA_CO") then {GrpFIA_CO setGroupId ["FIA CO -","GroupColor0"];};
 if(!isnil "GrpFIA_DC") then {GrpFIA_DC setGroupId ["FIA DC -","GroupColor0"];};
+
 if(!isnil "GrpFIA_ASL") then {GrpFIA_ASL setGroupId ["FIA ASL -","GroupColor0"];};
 if(!isnil "GrpFIA_A1") then {GrpFIA_A1 setGroupId ["FIA A1 -","GroupColor0"];};
 if(!isnil "GrpFIA_A2") then {GrpFIA_A2 setGroupId ["FIA A2 -","GroupColor0"];};
 if(!isnil "GrpFIA_A3") then {GrpFIA_A3 setGroupId ["FIA A3 -","GroupColor0"];};
+
 if(!isnil "GrpFIA_BSL") then {GrpFIA_BSL setGroupId ["FIA BSL -","GroupColor0"];};
 if(!isnil "GrpFIA_B1") then {GrpFIA_B1 setGroupId ["FIA B1 -","GroupColor0"];};
 if(!isnil "GrpFIA_B2") then {GrpFIA_B2 setGroupId ["FIA B2 -","GroupColor0"];};
 if(!isnil "GrpFIA_B3") then {GrpFIA_B3 setGroupId ["FIA B3 -","GroupColor0"];};
+
 if(!isnil "GrpFIA_CSL") then {GrpFIA_CSL setGroupId ["FIA CSL -","GroupColor0"];};
 if(!isnil "GrpFIA_C1") then {GrpFIA_C1 setGroupId ["FIA C1 -","GroupColor0"];};
 if(!isnil "GrpFIA_C2") then {GrpFIA_C2 setGroupId ["FIA C2 -","GroupColor0"];};
 if(!isnil "GrpFIA_C3") then {GrpFIA_C3 setGroupId ["FIA C3 -","GroupColor0"];};
+
 if(!isnil "GrpFIA_MMG1") then {GrpFIA_MMG1 setGroupId ["FIA MMG1 -","GroupColor0"];};
 if(!isnil "GrpFIA_MAT1") then {GrpFIA_MAT1 setGroupId ["FIA MAT1 -","GroupColor0"];};
+if(!isnil "GrpFIA_ENG1") then {GrpFIA_ENG1 setGroupId ["FIA ENG1 -","GroupColor0"];};
 
 if(!isnil "GrpFIA_ST1") then {GrpFIA_ST1 setGroupId ["FIA ST1 -","GroupColor0"];};
 if(!isnil "GrpFIA_HMG1") then {GrpFIA_HMG1 setGroupId ["FIA HMG1 -","GroupColor0"];};
 if(!isnil "GrpFIA_MTR1") then {GrpFIA_MTR1 setGroupId ["FIA MTR1 -","GroupColor0"];};
 if(!isnil "GrpFIA_HAT1") then {GrpFIA_HAT1 setGroupId ["FIA GrpFIA_HAT1 -","GroupColor0"];};
-
-if(!isnil "GrpFIA_ENG1") then {GrpFIA_ENG1 setGroupId ["FIA ENG1 -","GroupColor0"];};
 
 if(!isnil "GrpFIA_IFV1") then {GrpFIA_IFV1 setGroupId ["FIA IFV1 -","GroupColor0"];};
 if(!isnil "GrpFIA_IFV2") then {GrpFIA_IFV2 setGroupId ["FIA IFV2 -","GroupColor0"];};
@@ -102,6 +111,7 @@ if(!isnil "GrpFIA_TH7") then {GrpFIA_TH7 setGroupId ["FIA TH7 -","GroupColor0"];
 if(!isnil "GrpFIA_TH8") then {GrpFIA_TH8 setGroupId ["FIA TH8 -","GroupColor0"];};
 
 if(!isnil "GrpFIA_AH1") then {GrpFIA_AH1 setGroupId ["FIA AH1 -","GroupColor0"];};
+
 if(!isnil "GrpFIA_DT1") then {GrpFIA_DT1 setGroupId ["FIA DT1 -","GroupColor0"];};
 
 if(!isnil "GrpFIA_JIP") then {GrpFIA_JIP setGroupId ["FIA JIP -","GroupColor0"];};
@@ -114,27 +124,30 @@ if(!isnil "GrpFIA_JIP") then {GrpFIA_JIP setGroupId ["FIA JIP -","GroupColor0"];
 
 if(!isnil "GrpCSAT_CO") then {GrpCSAT_CO setGroupId ["CSAT CO -","GroupColor0"];};
 if(!isnil "GrpCSAT_DC") then {GrpCSAT_DC setGroupId ["CSAT DC -","GroupColor0"];};
+
 if(!isnil "GrpCSAT_ASL") then {GrpCSAT_ASL setGroupId ["CSAT ASL -","GroupColor0"];};
 if(!isnil "GrpCSAT_A1") then {GrpCSAT_A1 setGroupId ["CSAT A1 -","GroupColor0"];};
 if(!isnil "GrpCSAT_A2") then {GrpCSAT_A2 setGroupId ["CSAT A2 -","GroupColor0"];};
 if(!isnil "GrpCSAT_A3") then {GrpCSAT_A3 setGroupId ["CSAT A3 -","GroupColor0"];};
+
 if(!isnil "GrpCSAT_BSL") then {GrpCSAT_BSL setGroupId ["CSAT BSL -","GroupColor0"];};
 if(!isnil "GrpCSAT_B1") then {GrpCSAT_B1 setGroupId ["CSAT B1 -","GroupColor0"];};
 if(!isnil "GrpCSAT_B2") then {GrpCSAT_B2 setGroupId ["CSAT B2 -","GroupColor0"];};
 if(!isnil "GrpCSAT_B3") then {GrpCSAT_B3 setGroupId ["CSAT B3 -","GroupColor0"];};
+
 if(!isnil "GrpCSAT_CSL") then {GrpCSAT_CSL setGroupId ["CSAT CSL -","GroupColor0"];};
 if(!isnil "GrpCSAT_C1") then {GrpCSAT_C1 setGroupId ["CSAT C1 -","GroupColor0"];};
 if(!isnil "GrpCSAT_C2") then {GrpCSAT_C2 setGroupId ["CSAT C2 -","GroupColor0"];};
 if(!isnil "GrpCSAT_C3") then {GrpCSAT_C3 setGroupId ["CSAT C3 -","GroupColor0"];};
+
 if(!isnil "GrpCSAT_MMG1") then {GrpCSAT_MMG1 setGroupId ["CSAT MMG1 -","GroupColor0"];};
 if(!isnil "GrpCSAT_MAT1") then {GrpCSAT_MAT1 setGroupId ["CSAT MAT1 -","GroupColor0"];};
+if(!isnil "GrpCSAT_ENG1") then {GrpCSAT_ENG1 setGroupId ["CSAT ENG1 -","GroupColor0"];};
 
 if(!isnil "GrpCSAT_ST1") then {GrpCSAT_ST1 setGroupId ["CSAT ST1 -","GroupColor0"];};
 if(!isnil "GrpCSAT_HMG1") then {GrpCSAT_HMG1 setGroupId ["CSAT HMG1 -","GroupColor0"];};
 if(!isnil "GrpCSAT_MTR1") then {GrpCSAT_MTR1 setGroupId ["CSAT MTR1 -","GroupColor0"];};
 if(!isnil "GrpCSAT_HAT1") then {GrpCSAT_HAT1 setGroupId ["CSAT GrpCSAT_HAT1 -","GroupColor0"];};
-
-if(!isnil "GrpCSAT_ENG1") then {GrpCSAT_ENG1 setGroupId ["CSAT ENG1 -","GroupColor0"];};
 
 if(!isnil "GrpCSAT_IFV1") then {GrpCSAT_IFV1 setGroupId ["CSAT IFV1 -","GroupColor0"];};
 if(!isnil "GrpCSAT_IFV2") then {GrpCSAT_IFV2 setGroupId ["CSAT IFV2 -","GroupColor0"];};
@@ -157,6 +170,7 @@ if(!isnil "GrpCSAT_TH7") then {GrpCSAT_TH7 setGroupId ["CSAT TH7 -","GroupColor0
 if(!isnil "GrpCSAT_TH8") then {GrpCSAT_TH8 setGroupId ["CSAT TH8 -","GroupColor0"];};
 
 if(!isnil "GrpCSAT_AH1") then {GrpCSAT_AH1 setGroupId ["CSAT AH1 -","GroupColor0"];};
+
 if(!isnil "GrpCSAT_DT1") then {GrpCSAT_DT1 setGroupId ["CSAT DT1 -","GroupColor0"];};
 
 if(!isnil "GrpCSAT_JIP") then {GrpCSAT_JIP setGroupId ["CSAT JIP -","GroupColor0"];};
@@ -168,27 +182,30 @@ if(!isnil "GrpCSAT_JIP") then {GrpCSAT_JIP setGroupId ["CSAT JIP -","GroupColor0
 
 if(!isnil "GrpAAF_CO") then {GrpAAF_CO setGroupId ["AAF CO -","GroupColor0"];};
 if(!isnil "GrpAAF_DC") then {GrpAAF_DC setGroupId ["AAF DC -","GroupColor0"];};
+
 if(!isnil "GrpAAF_ASL") then {GrpAAF_ASL setGroupId ["AAF ASL -","GroupColor0"];};
 if(!isnil "GrpAAF_A1") then {GrpAAF_A1 setGroupId ["AAF A1 -","GroupColor0"];};
 if(!isnil "GrpAAF_A2") then {GrpAAF_A2 setGroupId ["AAF A2 -","GroupColor0"];};
 if(!isnil "GrpAAF_A3") then {GrpAAF_A3 setGroupId ["AAF A3 -","GroupColor0"];};
+
 if(!isnil "GrpAAF_BSL") then {GrpAAF_BSL setGroupId ["AAF BSL -","GroupColor0"];};
 if(!isnil "GrpAAF_B1") then {GrpAAF_B1 setGroupId ["AAF B1 -","GroupColor0"];};
 if(!isnil "GrpAAF_B2") then {GrpAAF_B2 setGroupId ["AAF B2 -","GroupColor0"];};
 if(!isnil "GrpAAF_B3") then {GrpAAF_B3 setGroupId ["AAF B3 -","GroupColor0"];};
+
 if(!isnil "GrpAAF_CSL") then {GrpAAF_CSL setGroupId ["AAF CSL -","GroupColor0"];};
 if(!isnil "GrpAAF_C1") then {GrpAAF_C1 setGroupId ["AAF C1 -","GroupColor0"];};
 if(!isnil "GrpAAF_C2") then {GrpAAF_C2 setGroupId ["AAF C2 -","GroupColor0"];};
 if(!isnil "GrpAAF_C3") then {GrpAAF_C3 setGroupId ["AAF C3 -","GroupColor0"];};
+
 if(!isnil "GrpAAF_MMG1") then {GrpAAF_MMG1 setGroupId ["AAF MMG1 -","GroupColor0"];};
 if(!isnil "GrpAAF_MAT1") then {GrpAAF_MAT1 setGroupId ["AAF MAT1 -","GroupColor0"];};
+if(!isnil "GrpAAF_ENG1") then {GrpAAF_ENG1 setGroupId ["AAF ENG1 -","GroupColor0"];};
 
 if(!isnil "GrpAAF_ST1") then {GrpAAF_ST1 setGroupId ["AAF ST1 -","GroupColor0"];};
 if(!isnil "GrpAAF_HMG1") then {GrpAAF_HMG1 setGroupId ["AAF HMG1 -","GroupColor0"];};
 if(!isnil "GrpAAF_MTR1") then {GrpAAF_MTR1 setGroupId ["AAF MTR1 -","GroupColor0"];};
 if(!isnil "GrpAAF_HAT1") then {GrpAAF_HAT1 setGroupId ["AAF GrpAAF_HAT1 -","GroupColor0"];};
-
-if(!isnil "GrpAAF_ENG1") then {GrpAAF_ENG1 setGroupId ["AAF ENG1 -","GroupColor0"];};
 
 if(!isnil "GrpAAF_IFV1") then {GrpAAF_IFV1 setGroupId ["AAF IFV1 -","GroupColor0"];};
 if(!isnil "GrpAAF_IFV2") then {GrpAAF_IFV2 setGroupId ["AAF IFV2 -","GroupColor0"];};
@@ -207,6 +224,7 @@ if(!isnil "GrpAAF_TH3") then {GrpAAF_TH3 setGroupId ["AAF TH3 -","GroupColor0"];
 if(!isnil "GrpAAF_TH4") then {GrpAAF_TH4 setGroupId ["AAF TH4 -","GroupColor0"];};
 
 if(!isnil "GrpAAF_AH1") then {GrpAAF_AH1 setGroupId ["AAF AH1 -","GroupColor0"];};
+
 if(!isnil "GrpAAF_DT1") then {GrpAAF_DT1 setGroupId ["AAF DT1 -","GroupColor0"];};
 
 if(!isnil "GrpAAF_JIP") then {GrpAAF_JIP setGroupId ["AAF JIP -","GroupColor0"];};
