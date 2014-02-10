@@ -2,21 +2,29 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// wait for the death animation to finish then disable the effects.
+
 _unit = _this select 0;
 _killer = _this select 1;
 if(isnil "_killer") then
 {
 	_killer = _this select 0;
 };
+
+// enable this to show the death animation.
 //waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true]};
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
-
+	// disable effects
 	BIS_fnc_feedback_allowPP = false;
 };
-
+// if acre is enabled set player to acre channel
+if(f_var_acre == 1) then
+{
+	[true] call acre_api_fnc_setSpectator;
+};
 // ====================================================================================
+
+// teleport seagull away because its ugly
 _unit setPos [0,0,0];
 // create the camera and set it up.
 f_cam_camera = "camera" camCreate [position _killer select 0,position _killer select 1,3];
@@ -25,18 +33,19 @@ f_cam_camera camSetTarget _killer;
 f_cam_curTarget = _killer;
 cameraEffectEnableHUD true;
 f_cam_camera camCommit 0;
-
 showCinemaBorder false;
-
+f_cam_MouseMoving = false;
 // ====================================================================================
+
 // compile functions
 
-f_cam_eventHandler = compile preprocessFile "f\spect\f_cam_eventHandler.sqf";
-f_cam_getPlayers = compile preprocessFile "f\spect\f_cam_getPlayers.sqf";
-f_cam_freeCam = compile preprocessFile "f\spect\f_cam_freeCam.sqf";
-f_cam_dialogLoop = compile preprocessFile "f\spect\f_cam_dialogLoop.sqf";
-f_cam_updateValues = compile preprocessFile "f\spect\f_cam_updateValues.sqf";
-f_cam_drawTags = compile preprocessFile "f\spect\f_cam_drawTags.sqf";
+f_cam_eventHandler = compile preprocessFileLineNumbers "f\spect\f_cam_eventHandler.sqf";
+f_cam_getPlayers = compile preprocessFileLineNumbers "f\spect\f_cam_getPlayers.sqf";
+f_cam_freeCam = compile preprocessFileLineNumbers "f\spect\f_cam_freeCam.sqf";
+f_cam_dialogLoop = compile preprocessFileLineNumbers "f\spect\f_cam_dialogLoop.sqf";
+f_cam_updateValues = compile preprocessFileLineNumbers "f\spect\f_cam_updateValues.sqf";
+f_cam_drawTags = compile preprocessFileLineNumbers "f\spect\f_cam_drawTags.sqf";
+f_cam_getIcon = compile preprocessFileLineNumbers "f\spect\f_cam_getIcon.sqf";
 // function to refresh the modes box.
 f_cam_reloadModesBox = {
 	_listBox = 2101;
@@ -99,6 +108,7 @@ f_cam_reloadModesBox = {
 	};
 
 };
+
 // ====================================================================================
 // set inital values.
 

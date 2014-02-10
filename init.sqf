@@ -53,7 +53,7 @@ f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
 // F3 - Fireteam Member Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\common\f_setlocalFTMemberMarkers.sqf";
+[] spawn f_fnc_SetLocalFTMemberMarkers;
 
 // ====================================================================================
 
@@ -86,7 +86,7 @@ f_endSelected = -1;
 // f_removeBodyDelay = 180;
 // f_removeBodyDistance = 500;
 // f_doNotRemoveBodies = [];
-// [] execVM "f\common\f_addRemoveBodyEH.sqf";
+// [] execVM "f\server\f_addRemoveBodyEH.sqf";
 
 // ====================================================================================
 
@@ -149,7 +149,7 @@ f_endSelected = -1;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 // f_isFriendly = [west,civilian];
-// []  execVM "f\server\f_setAISkill.sqf";
+// [] execVM "f\server\f_setAISkill.sqf";
 
 // ====================================================================================
 
@@ -165,6 +165,9 @@ f_endSelected = -1;
 // F3 - Name Tags
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
+// f_showGroup_Nametags = true;			// Display unit's group (uses GroupID)
+// f_showDistance_Nametags = true;	// Show distance to player
+// f_showVehicle_Nametags = true;		// Show vehicle player is in
 // [20] execVM "f\common\f_nametags.sqf";
 
 // ====================================================================================
@@ -194,4 +197,11 @@ f_endSelected = -1;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\common\f_safeStart.sqf";
+
+// ====================================================================================
+
+// F3 - AI Unit Caching
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[30] spawn f_fnc_cInit;
 
