@@ -102,7 +102,6 @@ for "_x" from 1 to _int do {
   dostop _u;
 
   _dir = if (ws_game_A3) then {([_u,_b] call BIS_fnc_DirTo) +180} else {random 360};
-  player globalchat format ["%1",_dir];
 
   _u setDir _dir;
 
