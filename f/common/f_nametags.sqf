@@ -12,23 +12,24 @@
 // SET GLOBAL VARIABLES
 
 // MODIFYABLE
-F_SHOWGROUP_NAMETAGS = true;			// Display unit's group (uses GroupID)
-F_SHOWDISTANCE_NAMETAGS = true; // Show distance to player
-F_SHOWVEHICLE_NAMETAGS = true; // Show vehicle player is in
+f_size_Nametags = 0.04; // The size the names are displayed in
+f_height_Nametags = 0; // The height of the name tags for infantry (0 = hovering over unit, -1 = about belt height)
+f_vheight_Nametags = 0; // The height of the name tags for units in vehicles (0 = hovering over vehicle)
 
-F_SIZE_NAMETAGS = 0.04; // The size the names are displayed in
-F_HEIGHT_NAMETAGS = 0; // The height of the name tags for infantry (0 = hovering over unit, -1 = about belt height)
-F_VHEIGHT_NAMETAGS = 0; // The height of the name tags for units in vehicles (0 = hovering over vehicle)
-
-F_COLOR_NAMETAGS =  [1,1,1,0.9]; // The color for infantry and units in vehicle cargo (in [red,green, blue, opacity])
-F_COLOR_NAMETAGS_GROUP = [0,1,0.7,0.9];
-F_COLOR2_NAMETAGS = [0.5,0.1,0.2,0.9]; // The color for units in driver, gunner and other vehicle positions positions
+f_color_Nametags =  [1,1,1,0.9]; // The color for infantry and units in vehicle cargo (in [red,green, blue, opacity])
+f_color2_Nametags = [0.5,0.1,0.2,0.9]; // The color for units in driver, gunner and other vehicle positions positions
+f_groupColor_Nametags = [0,1,0.7,0.9]; // The color for units of the same group
 
 F_FONT_NAMETAGS = "EtelkaMonospaceProBold"; // Font for the names
 F_KEY_NAMETAGS =  "TeamSwitch"; // The action key that will be used to toggle the name tags. See possible keys here: http://community.bistudio.com/wiki/Category:Key_Actions
 
 // SCRIPTSIDE
 F_DIST_NAMETAGS = _this select 0;
+
+if (isNil "f_showGroup_Nametags") then {f_showGroup_Nametags = false};
+if (isNil "f_showDistance_Nametags") then {f_showDistance_Nametags = false};
+if (isNil "f_showVehicle_Nametags") then {f_showVehicle_Nametags = false};
+
 F_DRAW_NAMETAGS = false;
 F_ACTIONKEY_NAMETAGS = (actionKeys F_KEY_NAMETAGS) select 0;
 F_KEYNAME_NAMETAGS = actionKeysNames F_KEY_NAMETAGS;

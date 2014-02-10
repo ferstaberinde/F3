@@ -165,6 +165,9 @@ f_endSelected = -1;
 // F3 - Name Tags
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
+// f_showGroup_Nametags = true;			// Display unit's group (uses GroupID)
+// f_showDistance_Nametags = true;	// Show distance to player
+// f_showVehicle_Nametags = true;		// Show vehicle player is in
 // [20] execVM "f\common\f_nametags.sqf";
 
 // ====================================================================================
@@ -194,4 +197,11 @@ f_endSelected = -1;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\common\f_safeStart.sqf";
+
+// ====================================================================================
+
+// F3 - AI Unit Caching
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[30] spawn f_fnc_cInit;
 

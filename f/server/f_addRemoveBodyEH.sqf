@@ -33,7 +33,7 @@ if (f_var_debugMode == 1) then
 if (isNil "f_doNotRemoveBodies") then {f_doNotRemoveBodies = []};
 
 {
- _x setVariable ["f_removeBodyEH",true];
+	if (!isNil format ["%1",_x]) then {_x setVariable ["f_removeBodyEH",true];};
 } forEach f_doNotRemoveBodies;
 
 // ====================================================================================
@@ -48,6 +48,7 @@ if !(_handle && local _x) then {
 	_x setVariable ["f_removeBodyEH",true];
 	};
 } forEach _men;
+
 
 // ====================================================================================
 
