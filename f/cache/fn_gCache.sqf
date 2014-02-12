@@ -18,4 +18,5 @@
                 _x hideObject true;
                 if (vehicle _x != _x) then {(vehicle _x) hideObject true};
 
+sleep 0.01;
 } forEach units _this;
