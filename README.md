@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-9
+* Version: 3-0-9A
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-0-9A    | 12 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-9     | 09 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-8     | 28 DEC 2013 | Patch release - Various improvements (see change history).
 * 3-0-7     | 14 SEP 2013 | Patch release - Various improvements (see change history).
@@ -217,6 +218,10 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-0-9A | 09 FEB 2014
+
+* Updated AI Caching component.
 
 3-0-9 | 09 FEB 2014
 
