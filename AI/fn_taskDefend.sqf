@@ -11,7 +11,7 @@ NOTE
 To avoid perfomance issues the garrisoning troops will just enter the building and stay there, they won't necessarily face in a smart direction
 
 RETURNS
-[mil buildings occupied, civ buildings occupied]
+[mil buildings occupied (array), civ buildings occupied (array), units left (array)]
 
 USAGE
 Minimal:
@@ -113,7 +113,7 @@ _units = [_units,_buildings,2] call ws_fnc_enterbuilding;
 if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _buildings;};
 };
 
-/*
+
 //If there's one unit left they either patrol or hold the area.
 if (count _units >= 1) then {
 	_group = createGroup (side (_units select 0));
@@ -122,6 +122,6 @@ if (count _units >= 1) then {
 		[_group,_pos,["patrol",_radius]] call ws_fnc_addWaypoint;
 	};
 };
-*/
-[_milbuildings,_buildings]
+
+[_milbuildings,_buildings,_units]
 
