@@ -1,32 +1,38 @@
-// WS_fnc_taskDefend
-// Last Update 19.09.2013
-// By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
-// Thanks to Rommel's CBA_fnc_taskDefend and Binesi's improved BIS_fnc_taskDefend
-//
-// FEATURE
-// Have a group man statics and garrison in buildings in a given radius around a position. They prioritize military structures over civilian buildings
-//
-//
-// NOTE
-// To avoid perfomance issues the garrisoning troops will just enter the building and stay there, they won't necessarily face in a smart direction
-//
-// RETURNS
-// [mil buildings occupied, civ buildings occupied]
-//
-// USAGE
-// Minimal:
-// [group,position,radius] call ws_fnc_taskDefend;
-// Full:
-// [group,pos,radius,bool,bool,bool] call ws_fnc_taskDefend
-//
-// PARAMETERS
-// 1. name of group																												| MANDATORY
-// 2. position. can be marker, object or [x,y,z]												 	| MANDATORY
-// 3. radius of the area where statics/buildings will be occupied					| MANDATORY
-// 4. Whether to man statics or not																				| OPTIONAL - default is TRUE
-// 5. Whether to garrison military structures  modify _milarray for military building classes	| OPTIONAL - default is TRUE	-
-// 6. Whether to garrison civilian buildings																									| OPTIONAL - default is true
-//
+/*
+ws_fnc_taskDefend
+Last Update 19.09.2013
+By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
+Thanks to Rommel's CBA_fnc_taskDefend and Binesi's improved BIS_fnc_taskDefend
+
+FEATURE
+Have a group man statics and garrison in buildings in a given radius around a position. They prioritize military structures over civilian buildings
+
+NOTE
+To avoid perfomance issues the garrisoning troops will just enter the building and stay there, they won't necessarily face in a smart direction
+
+RETURNS
+[mil buildings occupied, civ buildings occupied]
+
+USAGE
+Minimal:
+[group,position,radius] call ws_fnc_taskDefend;
+Full:
+[group,pos,radius,bool,bool,bool] call ws_fnc_taskDefend
+
+PARAMETERS
+1. name of group																			| MANDATORY
+2. position. can be marker, object or [x,y,z]												| MANDATORY
+3. radius of the area where statics/buildings will be occupied								| MANDATORY
+4. Whether to man statics or not															| OPTIONAL - default is TRUE
+5. Whether to garrison military structures  modify _milarray for military building classes	| OPTIONAL - default is TRUE	-
+6. Whether to garrison civilian buildings													| OPTIONAL - default is true
+
+EXAMPLE
+[group this,getPosATL this,200] call ws_fnc_taskDefend - in the on activation field of a waypoint this would cause the assigned group to take position in buildings in a 200m radius around the WP
+
+[GrpUS_CO,"mkrTown",150,false,false,true] call ws_fnc_taskDefend - this causes the group assigned as "GrpUS_CO" to take positions in only civilian buildings in a radius of 150 around the marker named "mkrTown"
+
+*/
 
 private ["_debug","_game","_count","_milarrayA2","_badarrayA2","_badarrayA3","_milarrayA3",
 "_group","_newGroup","_pos","_radius","_guns","_garrison","_civil",
