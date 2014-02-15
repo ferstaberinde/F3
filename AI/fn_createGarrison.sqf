@@ -11,7 +11,7 @@ Full:
 [center,radius,side,integer,array] call ws_fnc_createGarrison
 
 PARAMETERS:
-1. Center of town. Can be ellipse/rectangle marker, object or location     | MANDATORY - string (markername) or object name
+1. Center of town. Can be marker, object or location     | MANDATORY - string (markername) or object name
 2. Radius of area to be considered																				 | MANDATORY - int
 3. Side of units to spawn																									 | MANDATORY - side (east, west, resistance)
 4. Number of units.																								         | OPTIONAL - integer - default is No. of available buildings/2
