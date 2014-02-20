@@ -21,7 +21,7 @@
 // 4. Array containing two sub arrays:								| MANDATORY
 // 	4.1 Array of classes that are exactly ONCE in the group					| MANDATORY
 // 	4.2 Array of classes that fill up the group after all forced classes are used		| MANDATORY
-// 5. code that is executed after the group is spawned						| OPTIONAL - executed as [_grp,_this] spawn _code, code has to be string or    // code
+// 5. code that is executed after the group is spawned						| OPTIONAL - executed as [_grp,_this] spawn _code, code has to be string or code
 
 private ["_debug","_count",
 "_faction","_spawn","_waypoint","_classes_array","_commonclasses","_forcedclasses","_rareclasses","_rarechance","_respawns",
@@ -69,7 +69,7 @@ for "_x" from 2 to (_size) do {
 
 //Weird step necessary to get the correct side for the group
 {
-[_x] joinSilent _grp;
+	[_x] joinSilent _grp;
 } forEach units _grp;
 
 [_grp,"AWARE","YELLOW"] call ws_fnc_setAIMode;
