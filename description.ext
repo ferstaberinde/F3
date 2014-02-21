@@ -19,17 +19,24 @@ class CfgFunctions
 			file = "ws_fnc\tools";
 			class selectRandom {};
 			class gameCheck {preInit=1;};
-			class switchLights {};
-			class attachLight {};
 			class collectMarkers {};
 			class collectBuildings {};
 			class loadVehicle {};
 			class checkHC {};
-			class broadcast {};
-			class showIntro {};
 			class showFPS {};
 			class nearPlayer {};
 			class listPlayers {};
+		};
+		class misc
+		{
+			file = "ws_fnc\misc";
+			class switchLights {};
+			class attachLight {};
+			class attachChem {};
+			class attachIR {};
+			class tripFlare {};
+			class broadcast {};
+			class showIntro {};
 		};
 		class getPos
 		{

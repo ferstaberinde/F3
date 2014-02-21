@@ -37,15 +37,17 @@ if !(ws_game_a3) then {
 	ws_fnc_typecheck = compile preprocessFile "ws_fnc\dbg\fn_typecheck.sqf";
 	call compile preprocessFile "ws_fnc\dbg\fn_debugTriggers.sqf";
 
-	//Misc Functions
+	//Tool Functions
 	ws_fnc_selectRandom = compile preprocessfile "ws_fnc\tools\fn_selectRandom.sqf";
 	ws_fnc_collectMarkers =  compile preprocessfile "ws_fnc\tools\fn_collectMarkers.sqf";
 	ws_fnc_collectBuildings =  compile preprocessfile "ws_fnc\tools\fn_collectBuildings.sqf";
-	ws_fnc_switchLights = compile preprocessfile "ws_fnc\tools\fn_switchLights.sqf";
-	ws_fnc_attachLight = compile preprocessfile "ws_fnc\tools\fn_attachLight.sqf";
 	ws_fnc_loadVehicle = compile preprocessfile "ws_fnc\tools\fn_loadVehicle.sqf";
 	ws_fnc_listPlayers = compile preprocessfile "ws_fnc\tools\fn_listPlayers.sqf";
 	ws_fnc_nearPlayer = compile preprocessfile "ws_fnc\tools\fn_nearPlayer.sqf";
+
+	//Misc Functions
+	ws_fnc_switchLights = compile preprocessfile "ws_fnc\tools\fn_switchLights.sqf";
+	ws_fnc_attachLight = compile preprocessfile "ws_fnc\tools\fn_attachLight.sqf";
 
 	//GetPos Functions
 	ws_fnc_getPos = compile preprocessfile "ws_fnc\getPos\fn_getPos.sqf";
