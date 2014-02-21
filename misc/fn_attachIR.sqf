@@ -9,9 +9,9 @@ true
 
 USAGE
 Minimal:
-[object] spawn ws_fnc_attachChem
+[object] spawn ws_fnc_attachIR
 Full:
-[object, duration, attachPoint, memoryPoint] spawn ws_fnc_attachChem
+[object, duration, attachPoint, memoryPoint] spawn ws_fnc_attachIR
 
 PARAMETERS
 1. Object to attach chem to (object)				| MANDATORY
@@ -20,7 +20,7 @@ PARAMETERS
 4. MemoryPoint to attach to (string					| OPTIONAL - see http://resources.bisimulations.com/wiki/Named_Selection and https://community.bistudio.com/wiki/ArmA:_Selection_Translations for memory points. Not all work.
 
 EXAMPLES
-[UnitNATO_CO,5,[-0.15,0.05,0.1],"Spine3"] spawn ws_fnc_attachChem; - attaches an IR to the left shoulder of UnitNATO_CO
+[UnitNATO_CO,5,[-0.15,0.05,0.1],"Spine3"] spawn ws_fnc_attachIR - attaches an IR to the left shoulder of UnitNATO_CO
 */
 
 private ["_obj","_duration","_offset","_mpoint","_class","_ir"];
@@ -32,9 +32,9 @@ _mpoint = if (count _this > 3) then {_this select 4} else {""};
 
 _class = "I_IR_Grenade";
 switch (side _obj) do {
-	case west: 	{_class = "B_IR_Grenade"};
-	case east: 	{_class = "O_IR_Grenade"};
-	default {_class = "I_IR_Grenade";};
+	case west: 	{_class = "B_IRStrobe"};
+	case east: 	{_class = "O_IRStrobe"};
+	default {_class = "I_IRStrobe";};
 };
 
 _ir = _class createVehicle [0,0,0];
