@@ -1,5 +1,6 @@
 /*ws_fnc_spawnGarrison
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
+Usage Guide: http://www.folkarps.com/forum/viewtopic.php?f=48&t=1224
 
 FEATURE
 Populates the buildings in the given area with the given number of units
