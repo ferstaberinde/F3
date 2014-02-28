@@ -7,6 +7,7 @@ if !(isNil "ws_dbg_trg") exitWith {};
 
 onMapSingleClick "player setPos _pos";
 player allowDammage false;
+player addAction ["Start Camera","[] call bis_fnc_camera;",[],2,false,true,"","driver _target == _this"];
 
 //Radio triggers to assist with debugging
 
