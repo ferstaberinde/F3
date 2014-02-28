@@ -120,7 +120,7 @@ if (ws_debug) then {["ws_fnc_taskLand DBG:",[_helo]," taking off."] call ws_fnc_
 //_pilot enableAI "move";
 _helo land "NONE";
 _wp = [_grp,_extract] call ws_fnc_addWayPoint;
-_grp setCurrentWaypoint [_grp,_wp];
+_grp setCurrentWaypoint _wp;
 _pilot enableai "AUTOTARGET"; _pilot enableai "TARGET"; _pilot allowFleeing 1;
 deleteVehicle _hp;
 
