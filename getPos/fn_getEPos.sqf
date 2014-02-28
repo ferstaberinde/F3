@@ -11,6 +11,8 @@ RETURNS
 positional array
 */
 
+private ["_e","_pos"];
+
 _e = _this;
 _pos = [];
 

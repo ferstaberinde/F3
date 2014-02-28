@@ -1,4 +1,4 @@
-/* ws_fnc_taskDefend
+/* ws_fnc_taskAmbush
 Latest: 11.10.2013
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 Thanks to Black Mamba for the idea/concept
@@ -18,7 +18,7 @@ PARAMETERS
 3. The max radius in which to find a good ambush spot | OPTIONAL (default: 400)
 */
 
-if !(ws_game_a3) exitWith {["ws_fnc_taskAmbush DBG: Game version: ",[_game]," Must be ARMA 3!"] call ws_fnc_debugtext};
+if !(ws_game_a3) exitWith {["ws_fnc_taskAmbush DBG:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
 private ["_grp","_pos","_nPos","_radius","_mindis","_side","_sidesEnemy","_wp"];
 
@@ -65,8 +65,5 @@ _wp = [_grp,_nPos,["HOLD",0],["STEALTH","GREEN","NORMAL"]] call ws_fnc_addWaypoi
 
 
 [_grp,_Pos,["SAD",0],["COMBAT","RED","FULL"]] call ws_fnc_addWaypoint;
-
-
-
 
 true

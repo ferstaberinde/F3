@@ -59,6 +59,7 @@ class CfgFunctions
 			class taskDefend {};
 			class taskCrew {};
 			class taskAmbush {};
+			class taskLand {};
 			class addWaypoint {};
 			class setAIMode {};
 		};
