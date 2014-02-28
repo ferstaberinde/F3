@@ -7,6 +7,7 @@ FEATURE
 Prompts a Helicopter to land a certain location. It will ignore enemy fire as best as possible.
 If it has units in cargo it'll wait until all are out, if it is empty,
 it'll wait for the designated time or until all cargo seats are filled.
+Afterwards it will move to the designated location.
 
 RETURNS
 true - after helicopter has taken off again
@@ -23,20 +24,16 @@ PARAMETERS
 3. The position to move to after landing       | MANDATORY - can be marker, object or positional array
 4. The max. time to wait after touching ground | OPTIONAL - should be integer (default: 15s)
 
-NOTE
-If no extract if given and there's no WP in line, the helo will simply hover over the landing area.
-
 EXAMPLE
-[vehicle (leader group this),position this,"mkrExtract"] spawn ws_fnc_taskLand; - in the on Act. Field of a WP this would cause the helicopter to land at the WP's center and then move to the marker named "mkrExtract". It's suggested to give the WP an activation radius of at least 200.
+nul = [vehicle (leader group this),position this,"mkrExtract"] spawn ws_fnc_taskLand; - in the on Act. Field of a WP would cause the helicopter to land at the WP's center and then move to the marker named "mkrExtract". It's suggested to give the WP an activation radius of at least 200.
 
 TODO
-use BIS_fnc_findSafePos to avoid slopes
-Count remaining waypoints and set next one active
+Use BIS_fnc_findSafePos to avoid slopes
 */
 
 if !(ws_game_a3) exitWith {["ws_fnc_taskLand DBG:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
-private ["_debug","_helo","_pos","_wait","_pilot","_grp","_hp"];
+private ["_debug","_helo","_pos","_wait","_pilot","_grp","_hp","_wp"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
 _debug = false;  if !(isNil "ws_debug") then {_debug = ws_debug};
@@ -121,8 +118,9 @@ if (ws_debug) then {["ws_fnc_taskLand DBG:",[_helo]," taking off."] call ws_fnc_
 
 //_pilot enableAI "move";
 _helo land "NONE";
-_helo doMove _extract;
-_grp setSpeedMode "FULL";
+_wp = [_grp,_extract] call ws_fnc_addWayPoint;
+_grp setCurrentWaypoint [_grp,_wp];
+_pilot enableai "AUTOTARGET"; _pilot enableai "TARGET"; _pilot allowFleeing 1;
 deleteVehicle _hp;
 
 true
