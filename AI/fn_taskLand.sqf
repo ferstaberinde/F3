@@ -79,11 +79,12 @@ while { ( (alive _helo ) && !(unitReady _helo ) ) } do
    sleep 1;
    if (ws_debug) then {["ws_fnc_taskLand DBG: Waiting for ",[_helo]," to be ready"] call ws_fnc_debugtext};
 };
-if (alive _helo ) then
-{
-  _helo land "GET OUT";
-  if (ws_debug) then {["ws_fnc_taskLand DBG:",[_helo]," landing."] call ws_fnc_debugtext};
-};
+
+//If helo has been downed exit script, otherwise begin landing
+if !(alive _helo ) exitWith {};
+
+_helo land "GET OUT";
+if (ws_debug) then {["ws_fnc_taskLand DBG:",[_helo]," landing."] call ws_fnc_debugtext};
 
 waituntil {isTouchingGround  _helo};
 if (ws_debug) then {["ws_fnc_taskLand DBG:",[_helo]," touched ground."] call ws_fnc_debugtext};
