@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-9
+* Version: 3-0-9A
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,7 +29,8 @@
 
 Version | Date | Notes
 
-* 3-0-9     | DD MMM 2014 | Patch release - Various improvements (see change history).
+* 3-0-9A    | 12 FEB 2014 | Patch release - Various improvements (see change history).
+* 3-0-9     | 09 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-8     | 28 DEC 2013 | Patch release - Various improvements (see change history).
 * 3-0-7     | 14 SEP 2013 | Patch release - Various improvements (see change history).
 * 3-0-6     | 20 AUG 2013 | Patch release - Various improvements (see change history).
@@ -218,26 +219,41 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-0-9 | DD MMM 2014
+3-0-9A | 12 FEB 2014
 
-* Added optional Uniform Randomization to F3 Folk ARPS Assign Gear Script component
-* Group and Specialist Markers functions are now defined in cfgFunctions via description.ext
-* Minor tweak to Group Marker Function to prevent bug where Marker was frozen despite Group still having members
-* Fixed / updated F3 Folk ARPS Assign Gear Script component:
+* Updated AI Caching component.
+
+3-0-9 | 09 FEB 2014
+
+* Added AI Caching component.
+* Updated F3 Folk ARPS Group Markers component:
+ * Functions are now defined in cfgFunctions via description.ext.
+ * Fixed bug where marker was frozen despite the group still having members.
+* Updated F3 Folk ARPS Assign Gear Script component:
+ * Added uniform randomisation.
  * MAT teams now use NLAWs or RPGs.
  * Rifleman (AT) loadout tweaked.
  * Rifleman (AT), MAT loadouts work when backpacks are disabled.
- * Added Mini Grenades to Gear component
- * Adjusted Loadouts and Outfits to reflect changes introduced in A3 1.10
-* Fixed / updated F3 Nametag component:
- * Added optional display of unit group (defined by setGroupID / F3 Folk ARPS Group IDs component)
- * Added optional feature to display distance in m
- * Added optional feature to display type of mounted vehicle for driver/gunner/commander
- * Drawing of nametags is now it's own function defined in cfgFunctions
- * Fixed issue where nametag height for units in buildings would be incorrect
- * Fixed issue where nametags would display for enemy/neutral units in vehicles
- * Misc. improvements and tweaks
-* Misc. Typo fixes
+ * Added mini grenades to many loadouts.
+ * Expanded engineer detachment.
+ * Split engineer role into two specialisms: demo and mines (both types have repair kits and mine detectors).
+ * Adjusted loadouts and outfits to reflect changes introduced in A3 1.10.
+* Updated Name Tags component:
+ * Added optional display of unit group (defined by setGroupID / F3 Folk ARPS Group IDs component).
+ * Added optional feature to display distance in metres.
+ * Added optional feature to display type of mounted vehicle for driver/gunner/commander.
+ * Drawing of name tags is now its own function defined in cfgFunctions.
+ * Fixed issue where name tag height for units in buildings would be incorrect.
+ * Fixed issue where name tags would display for enemy/neutral units in vehicles.
+ * Misc. improvements and tweaks.
+* Updated F3 Folk ARPS Platoons component:
+ * Added tank and attack helo groups to AAF.
+ * Temporarily removed JIP groups (for all factions).
+* Updated Mission Conditions component to adjust fog values.
+* Updated Buddy Team Colours component.
+* Updated Automatic Body Removal component.
+* Fixed ACRE Support component issue with spectator script.
+* Misc. typo fixes in various components.
 
 3-0-8 | 28 DEC 2013
 
