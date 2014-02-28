@@ -1,7 +1,7 @@
 /* ws_fnc_taskLand
-Latest: XX.02.2014
+Latest: 28.02.2014
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
-Thanks to Head Mamba for the concept
+Based on a script made by Head
 
 FEATURE
 Prompts a Helicopter to land a certain location. It will ignore enemy fire as best as possible.
@@ -48,7 +48,7 @@ _wait = if (count _this > 3) then {_this select 3} else {15};
 {[_x,["SCALAR"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_wait];
 {[_x,["ARRAY"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_pos,_extract];
 
-if !(_helo isKindOf "Helicopter") exitWith {["ws_fnc_taskLand DBG:",[_helo]," Must be a helicopter!"] call ws_fnc_debugtext};
+if !(_helo isKindOf "Helicopter") exitWith {["ws_fnc_taskLand DBG:",[_helo]," must be a helicopter!"] call ws_fnc_debugtext};
 
 // Set other variables
 _pilot = driver _helo;
