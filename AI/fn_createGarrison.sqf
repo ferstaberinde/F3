@@ -1,4 +1,5 @@
 /*ws_fnc_spawnGarrison
+Latest: 01/03/2014
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 Usage Guide: http://www.folkarps.com/forum/viewtopic.php?f=48&t=1224
 
@@ -112,7 +113,7 @@ for "_x" from 1 to _int do {
 
   _u setDir _dir;
 
-  if (random 1 > 0.75) then {_u setunitpos "Middle";};
+    if (random 1 > 0.75) then {_u setunitpos "Middle";} else {_u setUnitPos "UP"};
 
   _u setVariable ["ws_bpos",_bp];
 
