@@ -5,9 +5,9 @@ _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
 if !(_debug) exitWith {};
 if !(isNil "ws_dbg_trg") exitWith {};
 
-onMapSingleClick "player setPos _pos";
+
 player allowDammage false;
-player addAction ["Start Camera","[] call bis_fnc_camera;",[],2,false,true,"","driver _target == _this"];
+if (ws_game_a3) then {player addAction ["Start Camera","[] call bis_fnc_camera;",[],2,false,true,"","driver _target == _this"];} else {onMapSingleClick "player setPos _pos";};
 
 //Radio triggers to assist with debugging
 

@@ -14,16 +14,16 @@ Full:
 [group,position, killzone (array), radius, minimal distance] call ws_fnc_taskAmbush;
 
 PARAMETERS
-1. The ambush group                                                         | MANDATORY
-2. The position to be ambushed                                              | MANDATORY - can be marker, object, group or positional array
-3. The killzone around the position (if enemies enter the group engages)    | OPTIONAL (default: [50,50])
-4. The radius in which to find a spot overlooking the ambush site           | OPTIONAL (default: 400)
-5. The minimal distance the overwatch has to be from the ambush location    | OPTIONAL (default: 100)
+1. The ambush group                                                                | MANDATORY
+2. The position to be ambushed                                                     | MANDATORY - can be marker, object, group or positional array
+3. The killzone in [x,y]around the position (if enemies enter, the group engages)  | OPTIONAL (default: [50,50])
+4. The radius in which to find a spot overlooking the ambush site                  | OPTIONAL (default: 400)
+5. The minimal distance the overwatch has to be from the ambush location           | OPTIONAL (default: 100)
 */
 
 if !(ws_game_a3) exitWith {["ws_fnc_taskAmbush DBG:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
-private ["_debug","_grp","_pos","_nPos","_killzone","_radius","_mindis","_side","_sidesEnemy","_wp"];
+private ["_debug","_grp","_pos","_nPos","_killzone","_radius","_mindis","_side","_sidesEnemy","_wp","_mkr"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
 _debug = if !(isNil "ws_debug") then {ws_debug} else {false};
@@ -45,8 +45,9 @@ _sidesEnemy = _side call BIS_fnc_enemySides;
 // Get a position overwatching the ambush point
 _nPos = [_pos, _radius, _mindis, 10] call BIS_fnc_findOverwatch;
 
+
 // Get group to move to overwatch position
-_wp = [_grp,_nPos,["MOVE",0],["AWARE","GREEN","NORMAL"]] call ws_fnc_addWaypoint;
+_wp = [_grp,_nPos] call ws_fnc_addWaypoint;
 _grp setCurrentWaypoint _wp;
 
 // Set group to go stealth at overwatch position
@@ -70,7 +71,7 @@ _wp = [_grp,_nPos,["HOLD",0],["STEALTH","GREEN","NORMAL"]] call ws_fnc_addWaypoi
 } forEach _sidesEnemy;
 
 // Create attack waypoint (becomes active once trigger flips)
-[_grp,_Pos,["SAD",0],["COMBAT","RED","FULL"]] call ws_fnc_addWaypoint;
+// [_grp,_Pos,["SAD",0],["COMBAT","RED","FULL"]] call ws_fnc_addWaypoint;
 
 // If debug's enabled, place markers
 if (_debug) then {
