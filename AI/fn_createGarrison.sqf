@@ -40,7 +40,7 @@ _eclasses = ["O_Soldier_lite_F"];
 _iclasses = ["I_Soldier_lite_F"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
-_debug = true;  if !(isNil "ws_debug") then {_debug = ws_debug};
+_debug = if !(isNil "ws_debug") then {ws_debug} else {false};
 
 // Declare Variables
 _area = (_this select 0) call ws_fnc_getEPos;
