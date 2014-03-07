@@ -32,9 +32,9 @@ _count = count _this;
 _grp = _this select 0;
 _pos = (_this select 1) call ws_fnc_getEpos;
 
-_killzone = if (_count > 2) then {_this select 2;} else {[50,50]};
-_radius = if (_count > 3) then {_this select 3;} else {400};
-_mindis = if (_count > 4) then {_this select 4;} else {100};
+_killzone = if (_count > 2) then {_this select 2} else {[50,50]};
+_radius = if (_count > 3) then {_this select 3} else {400};
+_mindis = if (_count > 4) then {_this select 4} else {100};
 
 if (_mindis > _radius) then {_radius = _mindis * 4};
 
