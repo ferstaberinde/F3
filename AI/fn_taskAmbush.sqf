@@ -46,7 +46,7 @@ _sidesEnemy = _side call BIS_fnc_enemySides;
 _nPos = [_pos, _radius, _mindis, 10] call BIS_fnc_findOverwatch;
 
 // Get group to move to overwatch position
-_grp addWaypoint [_npos,0];
+_wp = _grp addWaypoint [_npos,0];
 _grp setCurrentWaypoint _wp;
 
 // Set group to go stealth at overwatch position
