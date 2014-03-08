@@ -45,9 +45,8 @@ _sidesEnemy = _side call BIS_fnc_enemySides;
 // Get a position overwatching the ambush point
 _nPos = [_pos, _radius, _mindis, 10] call BIS_fnc_findOverwatch;
 
-
 // Get group to move to overwatch position
-_wp = [_grp,_nPos] call ws_fnc_addWaypoint;
+_grp addWaypoint [_npos,0];
 _grp setCurrentWaypoint _wp;
 
 // Set group to go stealth at overwatch position
@@ -71,7 +70,7 @@ _wp = [_grp,_nPos,["HOLD",0],["STEALTH","GREEN","NORMAL"]] call ws_fnc_addWaypoi
 } forEach _sidesEnemy;
 
 // Create attack waypoint (becomes active once trigger flips)
-// [_grp,_Pos,["SAD",0],["COMBAT","RED","FULL"]] call ws_fnc_addWaypoint;
+[_grp,_Pos,["SAD",0],["COMBAT","RED","FULL"]] call ws_fnc_addWaypoint;
 
 // If debug's enabled, place markers
 if (_debug) then {
