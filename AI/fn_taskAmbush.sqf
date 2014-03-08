@@ -50,7 +50,7 @@ _grp addWaypoint [_npos,0];
 _grp setCurrentWaypoint _wp;
 
 // Set group to go stealth at overwatch position
-_wp = [_grp,_nPos,["HOLD",0],["STEALTH","GREEN","NORMAL"]] call ws_fnc_addWaypoint;
+_wp = [_grp,_nPos,["HOLD",0,10],["STEALTH","GREEN","NORMAL"]] call ws_fnc_addWaypoint;
 
 // Create switch triggers for each enemy side and synch them to overwatch-hold waypoint
 {
@@ -70,7 +70,7 @@ _wp = [_grp,_nPos,["HOLD",0],["STEALTH","GREEN","NORMAL"]] call ws_fnc_addWaypoi
 } forEach _sidesEnemy;
 
 // Create attack waypoint (becomes active once trigger flips)
-[_grp,_Pos,["SAD",0],["COMBAT","RED","FULL"]] call ws_fnc_addWaypoint;
+[_grp,_Pos,["SAD",0],["AWARE","RED","FULL"]] call ws_fnc_addWaypoint;
 
 // If debug's enabled, place markers
 if (_debug) then {
