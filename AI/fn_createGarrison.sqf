@@ -39,6 +39,8 @@ _eclasses = ["O_Soldier_lite_F"];
 // INDEPENDENT
 _iclasses = ["I_Soldier_lite_F"];
 
+private ["_debug","_area","_radius","_side","_classes","_buildings","_int","_grp"];
+
 // Debug. If ws_debug is globally defined it overrides _debug
 _debug = if !(isNil "ws_debug") then {ws_debug} else {false};
 
@@ -55,9 +57,6 @@ _classes = if (count _this > 4) then {_this select 4} else {[]};
 {[_x,["SCALAR"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_int,_radius];
 {[_x,["ARRAY"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_classes,_area];
 
-// Collect buildings and assign building positions
-_buildings = [_area,_radius,true,true] call ws_fnc_collectBuildings;
-
 // If default classes are being used, select the corresponding array
 if (count _classes == 0) then {
 	switch (_side) do {
@@ -70,6 +69,11 @@ if (count _classes == 0) then {
 	};
 };
 
+// Collect buildings and assign building positions
+_buildings = [_area,_radius,true,true] call ws_fnc_collectBuildings;
+
+if (count _buildings == 0) exitWith {["ws_fnc_createGarrison DBG: no buildings found at ",[_area],""] call ws_fnc_debugText};
+
 // If no amount of units is set, calculate default
 if (_int == 0) then {
 	_int = round (count _buildings / 2);
@@ -77,8 +81,8 @@ if (_int == 0) then {
 
 _grp = createGroup _side;
 
-//Rewrite?
 for "_x" from 1 to _int do {
+	private ["_b","_bpa","_i","_u","_dir"];
 
 	_b = _buildings call ws_fnc_selectRandom;
 	_bpa = _b getVariable ["ws_bPos",false];
@@ -101,26 +105,25 @@ for "_x" from 1 to _int do {
 	_bp = _bpa select _i;
 
 	if (isNil "_bp") then {
-			player globalchat format ["%1,%2,%3",_bp,_b,count _bpa];
+		["ws_fnc_createGarrison DBG: illegal building position ",[_b,_bp],""] call ws_fnc_debugText;
 	};
 
 	// Create a unit and move it into place
-  _u = _grp createUnit [_classes call ws_fnc_selectRandom,_area,[],5,"NONE"];
+  	_u = _grp createUnit [_classes call ws_fnc_selectRandom,_area,[],5,"NONE"];
 	_u setPosATL _bp;
-  dostop _u;
+  	dostop _u;
 
-  _dir = if (ws_game_A3) then {([_u,_b] call BIS_fnc_DirTo) +180} else {random 360};
-
-  _u setDir _dir;
+  	_dir = if (ws_game_A3) then {([_u,_b] call BIS_fnc_DirTo) +180} else {random 360};
+	_u setDir _dir;
 
     if (random 1 > 0.75) then {_u setunitpos "Middle";} else {_u setUnitPos "UP"};
 
-  _u setVariable ["ws_bpos",_bp];
+  	_u setVariable ["ws_bpos",_bp];
 
-  if (_debug) then
+  	if (_debug) then
   	{_mkr = createMarker [format ["%1-bpos",_u],getPos _u];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorGreen";};
 
-  // Remove the building position from the array
+  	// Remove the building position from the array
 	_bpa set [_i,0];			//Workaround as in http://community.bistudio.com/wiki/Array#Subtraction
 	_bpa = _bpa - [0];
 	_b setVariable ["ws_bpos",_bpa];
@@ -129,5 +132,4 @@ for "_x" from 1 to _int do {
 
 _grp enableAttack false; // Prevent the group leader to issue attack orders to the members, improving their attack from buildings
 
-_units = units _grp;
-_units
+(units _grp)

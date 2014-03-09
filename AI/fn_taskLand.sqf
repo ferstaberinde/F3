@@ -25,7 +25,9 @@ PARAMETERS
 4. The max. time to wait after touching ground | OPTIONAL - should be integer (default: 15s)
 
 EXAMPLE
-nul = [vehicle (leader group this),position this,"mkrExtract"] spawn ws_fnc_taskLand; - in the on Act. Field of a WP would cause the helicopter to land at the WP's center and then move to the marker named "mkrExtract". It's suggested to give the WP an activation radius of at least 200.
+[VehAAF_H,"mkrLand",airport] spawn ws_fnc_taskLand; - would cause the helicopter named "VehAAF_H" to take off, fly towards the marker named "mkrLand" and extract towards the object named "airport".
+
+nul = [vehicle (leader group this),position this,"mkrExtract"] spawn ws_fnc_taskLand; - in the on Act. Field of a WP would cause the helicopter to land at the WP's center and then move to the marker named "mkrExtract". I'd suggest to give the WP an activation radius of at least 200.
 
 TODO
 Use BIS_fnc_findSafePos to avoid slopes
@@ -63,38 +65,37 @@ _helo doMove _pos;
 // Wait until the helo is within 150 m of the landing zone
 while {(getPosATL _helo) distance _pos > 150} do {
     sleep 1;
-    if (ws_debug) then {["ws_fnc_taskLand DBG: Waiting for ",[_helo]," to be in distance"] call ws_fnc_debugtext};
+    if (_debug) then {["ws_fnc_taskLand DBG: Waiting for ",[_helo]," to be in distance"] call ws_fnc_debugtext};
 };
 
 // Set up helicopter
-// doStop _helo;
-_pilot disableai "AUTOTARGET"; _pilot disableai "TARGET";
-_pilot setCombatMode "BLUE"; _pilot setBehaviour "CARELESS";
+//_pilot disableai "AUTOTARGET"; _pilot disableai "TARGET";
+//_grp enableAttack false;
+_pilot setBehaviour "CARELESS";
 _pilot allowFleeing 0;
-_grp enableAttack false;
 
 // Begin landing
 while { ( (alive _helo ) && !(unitReady _helo ) ) } do
 {
    sleep 1;
-   if (ws_debug) then {["ws_fnc_taskLand DBG: Waiting for ",[_helo]," to be ready"] call ws_fnc_debugtext};
+   if (_debug) then {["ws_fnc_taskLand DBG: Waiting for ",[_helo]," to be ready"] call ws_fnc_debugtext};
 };
 
 //If helo has been downed exit script, otherwise begin landing
 if !(alive _helo ) exitWith {};
 
 _helo land "GET OUT";
-if (ws_debug) then {["ws_fnc_taskLand DBG:",[_helo]," landing."] call ws_fnc_debugtext};
+if (_debug) then {["ws_fnc_taskLand DBG:",[_helo]," landing."] call ws_fnc_debugtext};
 
 waituntil {isTouchingGround  _helo};
-if (ws_debug) then {["ws_fnc_taskLand DBG:",[_helo]," touched ground."] call ws_fnc_debugtext};
+if (_debug) then {["ws_fnc_taskLand DBG:",[_helo]," touched ground."] call ws_fnc_debugtext};
 
 // Prevent helo from taking off
 //_pilot disableAI "move";
 
 // If cargo is onboard wait until all are out
 if (count (assignedCargo _helo) > 0) then {
-    if (ws_debug) then {["ws_fnc_taskLand DBG:",[_helo]," waiting for cargo to get out."] call ws_fnc_debugtext};
+    if (_debug) then {["ws_fnc_taskLand DBG:",[_helo]," waiting for cargo to get out."] call ws_fnc_debugtext};
 
     {
         doGetOut  _x;
@@ -107,7 +108,7 @@ if (count (assignedCargo _helo) > 0) then {
 
 // Otherwise wait until the designated time or all seats are filled
 } else {
-    if (ws_debug) then {["ws_fnc_taskLand DBG:",[_helo,_wait]," waiting designated time."] call ws_fnc_debugtext};
+    if (_debug) then {["ws_fnc_taskLand DBG:",[_helo,_wait]," waiting designated time."] call ws_fnc_debugtext};
     for "_i" from 1 to _wait do {
         if (_helo  emptyPositions "Cargo" == 0) exitWith {};
         sleep 1;
@@ -115,13 +116,15 @@ if (count (assignedCargo _helo) > 0) then {
 };
 
 // Take off
-if (ws_debug) then {["ws_fnc_taskLand DBG:",[_helo]," taking off."] call ws_fnc_debugtext};
+if (_debug) then {["ws_fnc_taskLand DBG:",[_helo]," taking off."] call ws_fnc_debugtext};
 
 //_pilot enableAI "move";
 _helo land "NONE";
 _wp = [_grp,_extract] call ws_fnc_addWayPoint;
 _grp setCurrentWaypoint _wp;
-_pilot enableai "AUTOTARGET"; _pilot enableai "TARGET"; _pilot allowFleeing 1;
 deleteVehicle _hp;
+
+// Re-Enable normal AI behaviour
+_pilot enableai "AUTOTARGET"; _pilot enableai "TARGET"; _pilot allowFleeing 1;
 
 true
