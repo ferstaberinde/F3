@@ -16,7 +16,7 @@ positional array
 
 private ["_i","_distance","_increment","_roads","_done"];
 
-_pos = _this select 0;
+_pos = (_this select 0) call ws_fnc_getEPos;;
 
 _i = 0;
 _distance = 10;
