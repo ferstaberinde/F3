@@ -57,7 +57,7 @@ _groups = [
 ["GrpNATO_TH6","NATO TH6 -"],
 ["GrpNATO_TH7","NATO TH7 -"],
 ["GrpNATO_TH8","NATO TH8 -"],
-["GrpNATO_AH1","NATO AH1 -"]
+["GrpNATO_AH1","NATO AH1 -"],
 
 // ====================================================================================
 
@@ -110,7 +110,7 @@ _groups = [
 ["GrpFIA_TH6","FIA TH6 -"],
 ["GrpFIA_TH7","FIA TH7 -"],
 ["GrpFIA_TH8","FIA TH8 -"],
-["GrpFIA_AH1","FIA AH1 -"]
+["GrpFIA_AH1","FIA AH1 -"],
 
 // ====================================================================================
 
@@ -163,7 +163,7 @@ _groups = [
 ["GrpCSAT_TH6","CSAT TH6 -"],
 ["GrpCSAT_TH7","CSAT TH7 -"],
 ["GrpCSAT_TH8","CSAT TH8 -"],
-["GrpCSAT_AH1","CSAT AH1 -"]
+["GrpCSAT_AH1","CSAT AH1 -"],
 
 // ====================================================================================
 
