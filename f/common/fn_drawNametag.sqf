@@ -11,6 +11,9 @@ _suffix = if (count _this > 2) then {_this select 2} else {""};
 
 _str = name _u + _suffix;
 
+//If the unit is dead, exit.
+if (!alive _u) exitWith {};
+
 // Define the color of the nametag
 _color = F_COLOR_NAMETAGS; // Default color
 if (_suffix != "") then {_color = F_COLOR2_NAMETAGS};						 // Mounted units
