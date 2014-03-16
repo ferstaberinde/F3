@@ -39,7 +39,7 @@ While {count _groups > 0} do {
                                                 if (_debug) then {player globalchat format ["f_fnc_cache DBG: Decaching: %1",_x]};
 
                                                 _x setvariable ["f_cached", false, false];
-                                               [_x] spawn f_fnc_gUncache;
+                                                _x spawn f_fnc_gUncache;
 
                                         };
                                 } else {
@@ -48,7 +48,7 @@ While {count _groups > 0} do {
                                                 if (_debug) then {player globalchat format ["f_fnc_cache DBG: Caching: %1",_x]};
 
                                                 _x setvariable ["f_cached", true, true];
-                                                [_x] spawn f_fnc_gCache;
+                                                _x spawn f_fnc_gCache;
                                         };
                                 };
 
