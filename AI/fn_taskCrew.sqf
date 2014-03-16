@@ -1,6 +1,5 @@
-// WS_fnc_taskCrew
-// By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
-// Thanks to Binesi's improved BIS_fnc_taskDefend
+/*WS_fnc_taskCrew
+By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 /*
 FEATURE
 Send a group of units to man empty statics and gunner-less vehicles in a given radius
@@ -8,6 +7,8 @@ Send a group of units to man empty statics and gunner-less vehicles in a given r
 USAGE
 [group, radius] call ws_fnc_taskCrew
 */
+
+private ["_group","_radius","_vehicles","_staticarray","_static","_units2","_locked"];
 
 _group = _this select 0;
 _radius = _this select 1;

@@ -25,7 +25,7 @@ PARAMETERS
 3. radius of the area where statics/buildings will be occupied								| MANDATORY
 4. Whether to man statics or not															| OPTIONAL - default is TRUE
 5. Whether to garrison military structures  modify _milarray for military building classes	| OPTIONAL - default is TRUE	-
-6. Whether to garrison civilian buildings													| OPTIONAL - default is true
+6. Whether to garrison civilian buildings													| OPTIONAL - default is TRUE
 
 EXAMPLE
 [group this,getPosATL this,200] call ws_fnc_taskDefend - in the on activation field of a waypoint this would cause the assigned group to take position in buildings in a 200m radius around the WP
@@ -39,7 +39,7 @@ private ["_debug","_game","_count","_milarrayA2","_badarrayA2","_badarrayA3","_m
 "_buildings","_vehicles","_milbuildings","_staticarray","_badarray","_milarray","_units","_static"];
 
 //Customizable Variables
-_treshold = 3; //Minimum number of available building positions for a building to be considered
+_treshold = 3; //Minimum number of available building positions for a civilian building to be considered (for mil. building all spots will always be used)
 
 // ARMA 2 only
 // Military buildings that are garrisoned before civilian buildings
@@ -109,7 +109,7 @@ if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarker
 
 //Take position in regular buildings
 if (count _buildings > 0 && count _units > 0 && _civil) then {
-_units = [_units,_buildings,2] call ws_fnc_enterbuilding;
+_units = [_units,_buildings,_treshold] call ws_fnc_enterbuilding;
 if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _buildings;};
 };
 

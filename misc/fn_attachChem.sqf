@@ -44,4 +44,4 @@ if (_duration > 0) then {
 	deleteVehicle _chm;
 };
 
-true;
+true

@@ -69,6 +69,7 @@ while {(getPosATL _helo) distance _pos > 150} do {
 };
 
 // Set up helicopter
+// NOTE: experiment with dis-/enabling stuff here, to achieve the ideal landing w/o gimping AI too much
 //_pilot disableai "AUTOTARGET"; _pilot disableai "TARGET";
 //_grp enableAttack false;
 _pilot setBehaviour "CARELESS";
@@ -118,13 +119,12 @@ if (count (assignedCargo _helo) > 0) then {
 // Take off
 if (_debug) then {["ws_fnc_taskLand DBG:",[_helo]," taking off."] call ws_fnc_debugtext};
 
-//_pilot enableAI "move";
 _helo land "NONE";
 _wp = [_grp,_extract] call ws_fnc_addWayPoint;
 _grp setCurrentWaypoint _wp;
 deleteVehicle _hp;
 
-// Re-Enable normal AI behaviour
+// Re-Enable normal pilot behaviour
 _pilot enableai "AUTOTARGET"; _pilot enableai "TARGET"; _pilot allowFleeing 1;
 
 true

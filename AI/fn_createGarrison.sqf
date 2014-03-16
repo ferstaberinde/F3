@@ -19,7 +19,7 @@ PARAMETERS:
 1. Center of town. Can be marker, object or location     | MANDATORY - string (markername) or object name
 2. Radius of area to be considered																				 | MANDATORY - int
 3. Side of units to spawn																									 | MANDATORY - side (east, west, resistance)
-4. Number of units.																								         | OPTIONAL - integer - default is No. of available buildings/2
+4. Number of units.																								         | OPTIONAL - integer - default is No. of available buildings/4
 5. Array of classes to spawn																		           | OPTIONAL - array w. strings  - default are classes defined below
 
 EXAMPLE
@@ -76,7 +76,7 @@ if (count _buildings == 0) exitWith {["ws_fnc_createGarrison DBG: no buildings f
 
 // If no amount of units is set, calculate default
 if (_int == 0) then {
-	_int = round (count _buildings / 2);
+	_int = round (count _buildings / 4);
 };
 
 _grp = createGroup _side;
