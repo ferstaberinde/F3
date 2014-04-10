@@ -63,7 +63,7 @@ if(isServer) then
 // The following block of code executes only if the player is in a NATO slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "BLU_F") then {
+if (_faction == "blu_f") then {
 #include "folk_assignGear_nato.sqf"
 };
 
@@ -73,7 +73,7 @@ if (_faction == "BLU_F") then {
 // The following block of code executes only if the player is in a FIA slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction in ["BLU_G_F","IND_G_F","OPF_G_F"]) then {
+if (_faction in ["blu_g_f","ind_g_f","opf_g_f"]) then {
 #include "folk_assignGear_fia.sqf"
 };
 
@@ -83,7 +83,7 @@ if (_faction in ["BLU_G_F","IND_G_F","OPF_G_F"]) then {
 // The following block of code executes only if the player is in a CSAT slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "OPF_F") then {
+if (_faction == "opf_f") then {
 #include "folk_assignGear_csat.sqf"
 };
 
@@ -93,7 +93,7 @@ if (_faction == "OPF_F") then {
 // The following block of code executes only if the player is in a AAF slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if(_faction == "IND_F") then {
+if(_faction == "ind_f") then {
 #include "folk_assignGear_aaf.sqf";
 };
 

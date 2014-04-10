@@ -175,6 +175,64 @@ if(!isnil "GrpCSAT_DT1") then {GrpCSAT_DT1 setGroupId ["CSAT DT1 -","GroupColor0
 
 if(!isnil "GrpCSAT_JIP") then {GrpCSAT_JIP setGroupId ["CSAT JIP -","GroupColor0"];};
 
+// ====================================================================================
+
+// GROUP IDs: OPFOR > FIA
+// Automatically assigns intelligible names to groups
+
+if(!isnil "GrpOFIA_CO") then {GrpOFIA_CO setGroupId ["FIA CO -","GroupColor0"];};
+if(!isnil "GrpOFIA_DC") then {GrpOFIA_DC setGroupId ["FIA DC -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_ASL") then {GrpOFIA_ASL setGroupId ["FIA ASL -","GroupColor0"];};
+if(!isnil "GrpOFIA_A1") then {GrpOFIA_A1 setGroupId ["FIA A1 -","GroupColor0"];};
+if(!isnil "GrpOFIA_A2") then {GrpOFIA_A2 setGroupId ["FIA A2 -","GroupColor0"];};
+if(!isnil "GrpOFIA_A3") then {GrpOFIA_A3 setGroupId ["FIA A3 -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_BSL") then {GrpOFIA_BSL setGroupId ["FIA BSL -","GroupColor0"];};
+if(!isnil "GrpOFIA_B1") then {GrpOFIA_B1 setGroupId ["FIA B1 -","GroupColor0"];};
+if(!isnil "GrpOFIA_B2") then {GrpOFIA_B2 setGroupId ["FIA B2 -","GroupColor0"];};
+if(!isnil "GrpOFIA_B3") then {GrpOFIA_B3 setGroupId ["FIA B3 -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_CSL") then {GrpOFIA_CSL setGroupId ["FIA CSL -","GroupColor0"];};
+if(!isnil "GrpOFIA_C1") then {GrpOFIA_C1 setGroupId ["FIA C1 -","GroupColor0"];};
+if(!isnil "GrpOFIA_C2") then {GrpOFIA_C2 setGroupId ["FIA C2 -","GroupColor0"];};
+if(!isnil "GrpOFIA_C3") then {GrpOFIA_C3 setGroupId ["FIA C3 -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_MMG1") then {GrpOFIA_MMG1 setGroupId ["FIA MMG1 -","GroupColor0"];};
+if(!isnil "GrpOFIA_MAT1") then {GrpOFIA_MAT1 setGroupId ["FIA MAT1 -","GroupColor0"];};
+if(!isnil "GrpOFIA_ENG1") then {GrpOFIA_ENG1 setGroupId ["FIA ENG1 -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_ST1") then {GrpOFIA_ST1 setGroupId ["FIA ST1 -","GroupColor0"];};
+if(!isnil "GrpOFIA_HMG1") then {GrpOFIA_HMG1 setGroupId ["FIA HMG1 -","GroupColor0"];};
+if(!isnil "GrpOFIA_MTR1") then {GrpOFIA_MTR1 setGroupId ["FIA MTR1 -","GroupColor0"];};
+if(!isnil "GrpOFIA_HAT1") then {GrpOFIA_HAT1 setGroupId ["FIA GrpOFIA_HAT1 -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_IFV1") then {GrpOFIA_IFV1 setGroupId ["FIA IFV1 -","GroupColor0"];};
+if(!isnil "GrpOFIA_IFV2") then {GrpOFIA_IFV2 setGroupId ["FIA IFV2 -","GroupColor0"];};
+if(!isnil "GrpOFIA_IFV3") then {GrpOFIA_IFV3 setGroupId ["FIA IFV3 -","GroupColor0"];};
+if(!isnil "GrpOFIA_IFV4") then {GrpOFIA_IFV4 setGroupId ["FIA IFV4 -","GroupColor0"];};
+if(!isnil "GrpOFIA_IFV5") then {GrpOFIA_IFV5 setGroupId ["FIA IFV5 -","GroupColor0"];};
+if(!isnil "GrpOFIA_IFV6") then {GrpOFIA_IFV6 setGroupId ["FIA IFV6 -","GroupColor0"];};
+if(!isnil "GrpOFIA_IFV7") then {GrpOFIA_IFV7 setGroupId ["FIA IFV7 -","GroupColor0"];};
+if(!isnil "GrpOFIA_IFV8") then {GrpOFIA_IFV8 setGroupId ["FIA IFV8 -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_TNK1") then {GrpOFIA_TNK1 setGroupId ["FIA TNK1 -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_TH1") then {GrpOFIA_TH1 setGroupId ["FIA TH1 -","GroupColor0"];};
+if(!isnil "GrpOFIA_TH2") then {GrpOFIA_TH2 setGroupId ["FIA TH2 -","GroupColor0"];};
+if(!isnil "GrpOFIA_TH3") then {GrpOFIA_TH3 setGroupId ["FIA TH3 -","GroupColor0"];};
+if(!isnil "GrpOFIA_TH4") then {GrpOFIA_TH4 setGroupId ["FIA TH4 -","GroupColor0"];};
+if(!isnil "GrpOFIA_TH5") then {GrpOFIA_TH5 setGroupId ["FIA TH5 -","GroupColor0"];};
+if(!isnil "GrpOFIA_TH6") then {GrpOFIA_TH6 setGroupId ["FIA TH6 -","GroupColor0"];};
+if(!isnil "GrpOFIA_TH7") then {GrpOFIA_TH7 setGroupId ["FIA TH7 -","GroupColor0"];};
+if(!isnil "GrpOFIA_TH8") then {GrpOFIA_TH8 setGroupId ["FIA TH8 -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_AH1") then {GrpOFIA_AH1 setGroupId ["FIA AH1 -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_DT1") then {GrpOFIA_DT1 setGroupId ["FIA DT1 -","GroupColor0"];};
+
+if(!isnil "GrpOFIA_JIP") then {GrpOFIA_JIP setGroupId ["FIA JIP -","GroupColor0"];};
+
 // =====================================================================================
 
 // GROUP IDs: INDEPEDENT > AAF
@@ -229,7 +287,66 @@ if(!isnil "GrpAAF_DT1") then {GrpAAF_DT1 setGroupId ["AAF DT1 -","GroupColor0"];
 
 if(!isnil "GrpAAF_JIP") then {GrpAAF_JIP setGroupId ["AAF JIP -","GroupColor0"];};
 
-// =====================================================================================
+
+// ====================================================================================
+
+// GROUP IDs: INDEPENDENT > FIA
+// Automatically assigns intelligible names to groups
+
+if(!isnil "GrpIFIA_CO") then {GrpIFIA_CO setGroupId ["FIA CO -","GroupColor0"];};
+if(!isnil "GrpIFIA_DC") then {GrpIFIA_DC setGroupId ["FIA DC -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_ASL") then {GrpIFIA_ASL setGroupId ["FIA ASL -","GroupColor0"];};
+if(!isnil "GrpIFIA_A1") then {GrpIFIA_A1 setGroupId ["FIA A1 -","GroupColor0"];};
+if(!isnil "GrpIFIA_A2") then {GrpIFIA_A2 setGroupId ["FIA A2 -","GroupColor0"];};
+if(!isnil "GrpIFIA_A3") then {GrpIFIA_A3 setGroupId ["FIA A3 -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_BSL") then {GrpIFIA_BSL setGroupId ["FIA BSL -","GroupColor0"];};
+if(!isnil "GrpIFIA_B1") then {GrpIFIA_B1 setGroupId ["FIA B1 -","GroupColor0"];};
+if(!isnil "GrpIFIA_B2") then {GrpIFIA_B2 setGroupId ["FIA B2 -","GroupColor0"];};
+if(!isnil "GrpIFIA_B3") then {GrpIFIA_B3 setGroupId ["FIA B3 -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_CSL") then {GrpIFIA_CSL setGroupId ["FIA CSL -","GroupColor0"];};
+if(!isnil "GrpIFIA_C1") then {GrpIFIA_C1 setGroupId ["FIA C1 -","GroupColor0"];};
+if(!isnil "GrpIFIA_C2") then {GrpIFIA_C2 setGroupId ["FIA C2 -","GroupColor0"];};
+if(!isnil "GrpIFIA_C3") then {GrpIFIA_C3 setGroupId ["FIA C3 -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_MMG1") then {GrpIFIA_MMG1 setGroupId ["FIA MMG1 -","GroupColor0"];};
+if(!isnil "GrpIFIA_MAT1") then {GrpIFIA_MAT1 setGroupId ["FIA MAT1 -","GroupColor0"];};
+if(!isnil "GrpIFIA_ENG1") then {GrpIFIA_ENG1 setGroupId ["FIA ENG1 -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_ST1") then {GrpIFIA_ST1 setGroupId ["FIA ST1 -","GroupColor0"];};
+if(!isnil "GrpIFIA_HMG1") then {GrpIFIA_HMG1 setGroupId ["FIA HMG1 -","GroupColor0"];};
+if(!isnil "GrpIFIA_MTR1") then {GrpIFIA_MTR1 setGroupId ["FIA MTR1 -","GroupColor0"];};
+if(!isnil "GrpIFIA_HAT1") then {GrpIFIA_HAT1 setGroupId ["FIA GrpIFIA_HAT1 -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_IFV1") then {GrpIFIA_IFV1 setGroupId ["FIA IFV1 -","GroupColor0"];};
+if(!isnil "GrpIFIA_IFV2") then {GrpIFIA_IFV2 setGroupId ["FIA IFV2 -","GroupColor0"];};
+if(!isnil "GrpIFIA_IFV3") then {GrpIFIA_IFV3 setGroupId ["FIA IFV3 -","GroupColor0"];};
+if(!isnil "GrpIFIA_IFV4") then {GrpIFIA_IFV4 setGroupId ["FIA IFV4 -","GroupColor0"];};
+if(!isnil "GrpIFIA_IFV5") then {GrpIFIA_IFV5 setGroupId ["FIA IFV5 -","GroupColor0"];};
+if(!isnil "GrpIFIA_IFV6") then {GrpIFIA_IFV6 setGroupId ["FIA IFV6 -","GroupColor0"];};
+if(!isnil "GrpIFIA_IFV7") then {GrpIFIA_IFV7 setGroupId ["FIA IFV7 -","GroupColor0"];};
+if(!isnil "GrpIFIA_IFV8") then {GrpIFIA_IFV8 setGroupId ["FIA IFV8 -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_TNK1") then {GrpIFIA_TNK1 setGroupId ["FIA TNK1 -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_TH1") then {GrpIFIA_TH1 setGroupId ["FIA TH1 -","GroupColor0"];};
+if(!isnil "GrpIFIA_TH2") then {GrpIFIA_TH2 setGroupId ["FIA TH2 -","GroupColor0"];};
+if(!isnil "GrpIFIA_TH3") then {GrpIFIA_TH3 setGroupId ["FIA TH3 -","GroupColor0"];};
+if(!isnil "GrpIFIA_TH4") then {GrpIFIA_TH4 setGroupId ["FIA TH4 -","GroupColor0"];};
+if(!isnil "GrpIFIA_TH5") then {GrpIFIA_TH5 setGroupId ["FIA TH5 -","GroupColor0"];};
+if(!isnil "GrpIFIA_TH6") then {GrpIFIA_TH6 setGroupId ["FIA TH6 -","GroupColor0"];};
+if(!isnil "GrpIFIA_TH7") then {GrpIFIA_TH7 setGroupId ["FIA TH7 -","GroupColor0"];};
+if(!isnil "GrpIFIA_TH8") then {GrpIFIA_TH8 setGroupId ["FIA TH8 -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_AH1") then {GrpIFIA_AH1 setGroupId ["FIA AH1 -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_DT1") then {GrpIFIA_DT1 setGroupId ["FIA DT1 -","GroupColor0"];};
+
+if(!isnil "GrpIFIA_JIP") then {GrpIFIA_JIP setGroupId ["FIA JIP -","GroupColor0"];};
+
+// ====================================================================================
 
 if (true) exitWith {};
 
