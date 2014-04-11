@@ -25,4 +25,5 @@ waitUntil {isNull _smk};
 sleep 0.5;
 deleteVehicle _smk;
 deleteVehicle _chm;
+
 true
