@@ -4,7 +4,7 @@ FEATURE
 Creates Ordnance over the given area
 
 USAGE
-[position,type] call ws_fnc_createOrdnance
+[position,type] spawn ws_fnc_createOrdnance
 
 PARAMETERS
 1. Center of ordnance strike (can be unit, marker or position)  | MANDATORY
@@ -30,6 +30,6 @@ _dummy setVariable ["type",_class];
 
 [_dummy,nil,true] call BIS_fnc_moduleProjectile;
 
-sleep 30;
+sleep 10;
 
 deleteVehicle _dummy;

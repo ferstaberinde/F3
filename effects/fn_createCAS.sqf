@@ -5,7 +5,7 @@ Creates a CAS run at the given location
 
 USAGE
 MinimaL:
-[position,direction] call ws_fnc_createCAS
+[position,direction] spawn ws_fnc_createCAS
 
 PARAMETERS
 1. Center of CAS run (can be unit, marker or position)  	| MANDATORY
