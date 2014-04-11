@@ -989,6 +989,8 @@ switch (_typeofUnit) do
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
 		_unit addWeaponCargoGlobal [_carbine, 2];
 		_unit addMagazineCargoGlobal [_riflemag, 8];
 		_unit addMagazineCargoGlobal [_glriflemag, 8];
@@ -1007,6 +1009,8 @@ switch (_typeofUnit) do
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
 		_unit addWeaponCargoGlobal [_carbine, 10];
 		_unit addMagazineCargoGlobal [_riflemag, 40];
 		_unit addMagazineCargoGlobal [_glriflemag, 40];
@@ -1026,6 +1030,8 @@ switch (_typeofUnit) do
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
 		_unit addWeaponCargoGlobal [_carbine, 4];
 		_unit addMagazineCargoGlobal [_riflemag, 20];
 		_unit addMagazineCargoGlobal [_glriflemag, 20];
