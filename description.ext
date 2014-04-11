@@ -27,6 +27,14 @@ class CfgFunctions
 			class nearPlayer {};
 			class listPlayers {};
 		};
+		class effects
+		{
+			file = "ws_fnc\effects";
+			class createTripflare {};
+			class createLightning {};
+			class createCAS {};
+			class createOrdnance {};
+		};
 		class misc
 		{
 			file = "ws_fnc\misc";
@@ -34,7 +42,6 @@ class CfgFunctions
 			class attachLight {};
 			class attachChem {};
 			class attachIR {};
-			class tripFlare {};
 			class broadcast {};
 			class showIntro {};
 		};
