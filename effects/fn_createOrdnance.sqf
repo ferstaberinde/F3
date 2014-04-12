@@ -1,4 +1,4 @@
-/*ws_fnc_createCAS
+/*ws_fnc_createOrdnance
 
 FEATURE
 Creates Ordnance over the given area

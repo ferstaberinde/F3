@@ -1,4 +1,4 @@
-/*ws_fnc_createCAS
+/*ws_fnc_createLightning
 
 FEATURE
 Creates a CAS run at the given location
