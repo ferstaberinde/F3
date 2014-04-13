@@ -7,7 +7,6 @@ It displays two paragraphs of text and the current date & time in the third.
 
 USAGE
 ["string1","string2"] call ws_fnc_showIntro
-["message","type of text","display type"] call ws_fnc_broadcast | See https://community.bistudio.com/wiki/titleText for valid types
 
 PARAMETERS
 1. The string in the first paragraph  | MANDATORY
