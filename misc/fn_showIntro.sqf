@@ -19,7 +19,7 @@ NOTE
 ARMA 3 only
 */
 
-if !(ws_game_a3) exitWith {["ws_fnc_broadcast DBG: Game version: ",[_game]," Must be ARMA 3!"] call ws_fnc_debugtext};
+if !(ws_game_a3) exitWith {["ws_fnc_showIntro DBG: Game version: ",[_game]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
 [
 	[
