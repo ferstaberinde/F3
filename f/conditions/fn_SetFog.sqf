@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_fog"];
+private ["_fog","_strenght","_decay","_base"];
 
 // ====================================================================================
 
@@ -24,22 +24,27 @@ _base = 0; 		//base altitude of fog (in meters)
 
 switch (_fog) do
 {
+	//None
 	case 0:
 	{
 		_strength = 0;
 		_decay = 0;
 		_base = 0;
 	};
+
+	//Light
 	case 1:
 	{
 		_strength = 0.2;
-		_decay = 0;
+		_decay = 0.2;
 		_base = 0;
 	};
+
+	//Heavy
 	case 2:
 	{
 		_strength = 0.4;
-		_decay = 0;
+		_decay = 0.4;
 		_base = 0;
 	};
 };
