@@ -5875,6 +5875,7 @@ class Mission
 					id=371;
 					side="EAST";
 					vehicle="O_G_officer_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -5888,6 +5889,7 @@ class Mission
 					id=372;
 					side="EAST";
 					vehicle="O_G_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitOFIA_CO_M";
@@ -5908,6 +5910,7 @@ class Mission
 					id=373;
 					side="EAST";
 					vehicle="O_G_officer_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -5921,6 +5924,7 @@ class Mission
 					id=374;
 					side="EAST";
 					vehicle="O_G_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitOFIA_DC_M";
@@ -5941,6 +5945,7 @@ class Mission
 					id=375;
 					side="EAST";
 					vehicle="O_G_Soldier_SL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -5954,6 +5959,7 @@ class Mission
 					id=376;
 					side="EAST";
 					vehicle="O_G_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitOFIA_ASL_M";
@@ -5974,6 +5980,7 @@ class Mission
 					id=377;
 					side="EAST";
 					vehicle="O_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -5987,6 +5994,7 @@ class Mission
 					id=378;
 					side="EAST";
 					vehicle="O_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_A1_AR";
 					init="GrpOFIA_A1 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -5998,6 +6006,7 @@ class Mission
 					id=379;
 					side="EAST";
 					vehicle="O_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_A1_AAR";
 					init="GrpOFIA_A1 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6009,6 +6018,7 @@ class Mission
 					id=380;
 					side="EAST";
 					vehicle="O_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_A1_AT";
 					init="GrpOFIA_A1 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6028,6 +6038,7 @@ class Mission
 					id=381;
 					side="EAST";
 					vehicle="O_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6041,6 +6052,7 @@ class Mission
 					id=382;
 					side="EAST";
 					vehicle="O_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_A2_AR";
 					init="GrpOFIA_A2 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6052,6 +6064,7 @@ class Mission
 					id=383;
 					side="EAST";
 					vehicle="O_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_A2_AAR";
 					init="GrpOFIA_A2 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6063,6 +6076,7 @@ class Mission
 					id=384;
 					side="EAST";
 					vehicle="O_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_A2_AT";
 					init="GrpOFIA_A2 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6082,6 +6096,7 @@ class Mission
 					id=385;
 					side="EAST";
 					vehicle="O_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6095,6 +6110,7 @@ class Mission
 					id=386;
 					side="EAST";
 					vehicle="O_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_A3_AR";
 					init="GrpOFIA_A3 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6106,6 +6122,7 @@ class Mission
 					id=387;
 					side="EAST";
 					vehicle="O_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_A3_AAR";
 					init="GrpOFIA_A3 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6117,6 +6134,7 @@ class Mission
 					id=388;
 					side="EAST";
 					vehicle="O_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_A3_AT";
 					init="GrpOFIA_A3 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6136,6 +6154,7 @@ class Mission
 					id=389;
 					side="EAST";
 					vehicle="O_G_Soldier_SL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -6149,6 +6168,7 @@ class Mission
 					id=390;
 					side="EAST";
 					vehicle="O_G_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitOFIA_BSL_M";
@@ -6169,6 +6189,7 @@ class Mission
 					id=391;
 					side="EAST";
 					vehicle="O_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6182,6 +6203,7 @@ class Mission
 					id=392;
 					side="EAST";
 					vehicle="O_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_B1_AR";
 					init="GrpOFIA_B1 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6193,6 +6215,7 @@ class Mission
 					id=393;
 					side="EAST";
 					vehicle="O_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_B1_AAR";
 					init="GrpOFIA_B1 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6204,6 +6227,7 @@ class Mission
 					id=394;
 					side="EAST";
 					vehicle="O_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_B1_AT";
 					init="GrpOFIA_B1 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6223,6 +6247,7 @@ class Mission
 					id=395;
 					side="EAST";
 					vehicle="O_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6236,6 +6261,7 @@ class Mission
 					id=396;
 					side="EAST";
 					vehicle="O_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_B2_AR";
 					init="GrpOFIA_B2 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6247,6 +6273,7 @@ class Mission
 					id=397;
 					side="EAST";
 					vehicle="O_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_B2_AAR";
 					init="GrpOFIA_B2 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6258,6 +6285,7 @@ class Mission
 					id=398;
 					side="EAST";
 					vehicle="O_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_B2_AT";
 					init="GrpOFIA_B2 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6277,6 +6305,7 @@ class Mission
 					id=399;
 					side="EAST";
 					vehicle="O_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6290,6 +6319,7 @@ class Mission
 					id=400;
 					side="EAST";
 					vehicle="O_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_B3_AR";
 					init="GrpOFIA_B3 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6301,6 +6331,7 @@ class Mission
 					id=401;
 					side="EAST";
 					vehicle="O_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_B3_AAR";
 					init="GrpOFIA_B3 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6312,6 +6343,7 @@ class Mission
 					id=402;
 					side="EAST";
 					vehicle="O_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_B3_AT";
 					init="GrpOFIA_B3 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6331,6 +6363,7 @@ class Mission
 					id=403;
 					side="EAST";
 					vehicle="O_G_Soldier_SL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -6344,6 +6377,7 @@ class Mission
 					id=404;
 					side="EAST";
 					vehicle="O_G_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitOFIA_CSL_M";
@@ -6364,6 +6398,7 @@ class Mission
 					id=405;
 					side="EAST";
 					vehicle="O_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6377,6 +6412,7 @@ class Mission
 					id=406;
 					side="EAST";
 					vehicle="O_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_C1_AR";
 					init="GrpOFIA_C1 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6388,6 +6424,7 @@ class Mission
 					id=407;
 					side="EAST";
 					vehicle="O_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_C1_AAR";
 					init="GrpOFIA_C1 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6399,6 +6436,7 @@ class Mission
 					id=408;
 					side="EAST";
 					vehicle="O_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_C1_AT";
 					init="GrpOFIA_C1 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6418,6 +6456,7 @@ class Mission
 					id=409;
 					side="EAST";
 					vehicle="O_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6431,6 +6470,7 @@ class Mission
 					id=410;
 					side="EAST";
 					vehicle="O_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_C2_AR";
 					init="GrpOFIA_C2 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6442,6 +6482,7 @@ class Mission
 					id=411;
 					side="EAST";
 					vehicle="O_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_C2_AAR";
 					init="GrpOFIA_C2 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6453,6 +6494,7 @@ class Mission
 					id=412;
 					side="EAST";
 					vehicle="O_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_C2_AT";
 					init="GrpOFIA_C2 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6472,6 +6514,7 @@ class Mission
 					id=413;
 					side="EAST";
 					vehicle="O_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6485,6 +6528,7 @@ class Mission
 					id=414;
 					side="EAST";
 					vehicle="O_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_C3_AR";
 					init="GrpOFIA_C3 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6496,6 +6540,7 @@ class Mission
 					id=415;
 					side="EAST";
 					vehicle="O_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_C3_AAR";
 					init="GrpOFIA_C3 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6507,6 +6552,7 @@ class Mission
 					id=416;
 					side="EAST";
 					vehicle="O_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_C3_AT";
 					init="GrpOFIA_C3 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6526,6 +6572,7 @@ class Mission
 					id=417;
 					side="EAST";
 					vehicle="O_G_soldier_AR_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6539,6 +6586,7 @@ class Mission
 					id=418;
 					side="EAST";
 					vehicle="O_G_Soldier_A_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_MMG1_AG";
 					init="GrpOFIA_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_folk_assignGear ; ";
@@ -6558,6 +6606,7 @@ class Mission
 					id=419;
 					side="EAST";
 					vehicle="O_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6571,6 +6620,7 @@ class Mission
 					id=420;
 					side="EAST";
 					vehicle="O_G_soldier_A_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					health=0.99000001;
 					text="UnitOFIA_MAT1_AG";
@@ -6591,6 +6641,7 @@ class Mission
 					id=421;
 					side="EAST";
 					vehicle="O_G_engineer_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6604,6 +6655,7 @@ class Mission
 					id=422;
 					side="EAST";
 					vehicle="O_G_engineer_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_ENG1_A1";
 					init="GrpOFIA_ENG1 = group this; nul = [""eng"",this] call f_fnc_folk_assignGear ;";
@@ -6615,6 +6667,7 @@ class Mission
 					id=423;
 					side="EAST";
 					vehicle="O_G_engineer_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_ENG1_A2";
 					init="GrpOFIA_ENG1 = group this; nul = [""engm"",this] call f_fnc_folk_assignGear ;";
@@ -6626,6 +6679,7 @@ class Mission
 					id=424;
 					side="EAST";
 					vehicle="O_G_engineer_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitOFIA_ENG1_A3";
 					init="GrpOFIA_ENG1 = group this; nul = [""engm"",this] call f_fnc_folk_assignGear ;";
@@ -6659,6 +6713,7 @@ class Mission
 					id=426;
 					side="GUER";
 					vehicle="I_G_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIFIA_CO_M";
@@ -6679,6 +6734,7 @@ class Mission
 					id=427;
 					side="GUER";
 					vehicle="I_G_officer_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -6692,6 +6748,7 @@ class Mission
 					id=428;
 					side="GUER";
 					vehicle="I_G_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIFIA_DC_M";
@@ -6712,6 +6769,7 @@ class Mission
 					id=429;
 					side="GUER";
 					vehicle="I_G_Soldier_SL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -6725,6 +6783,7 @@ class Mission
 					id=430;
 					side="GUER";
 					vehicle="I_G_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIFIA_ASL_M";
@@ -6745,6 +6804,7 @@ class Mission
 					id=431;
 					side="GUER";
 					vehicle="I_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6758,6 +6818,7 @@ class Mission
 					id=432;
 					side="GUER";
 					vehicle="I_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_A1_AR";
 					init="GrpIFIA_A1 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6769,6 +6830,7 @@ class Mission
 					id=433;
 					side="GUER";
 					vehicle="I_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_A1_AAR";
 					init="GrpIFIA_A1 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6780,6 +6842,7 @@ class Mission
 					id=434;
 					side="GUER";
 					vehicle="I_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_A1_AT";
 					init="GrpIFIA_A1 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6799,6 +6862,7 @@ class Mission
 					id=435;
 					side="GUER";
 					vehicle="I_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6812,6 +6876,7 @@ class Mission
 					id=436;
 					side="GUER";
 					vehicle="I_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_A2_AR";
 					init="GrpIFIA_A2 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6823,6 +6888,7 @@ class Mission
 					id=437;
 					side="GUER";
 					vehicle="I_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_A2_AAR";
 					init="GrpIFIA_A2 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6834,6 +6900,7 @@ class Mission
 					id=438;
 					side="GUER";
 					vehicle="I_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_A2_AT";
 					init="GrpIFIA_A2 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6853,6 +6920,7 @@ class Mission
 					id=439;
 					side="GUER";
 					vehicle="I_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6866,6 +6934,7 @@ class Mission
 					id=440;
 					side="GUER";
 					vehicle="I_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_A3_AR";
 					init="GrpIFIA_A3 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6877,6 +6946,7 @@ class Mission
 					id=441;
 					side="GUER";
 					vehicle="I_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_A3_AAR";
 					init="GrpIFIA_A3 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6888,6 +6958,7 @@ class Mission
 					id=442;
 					side="GUER";
 					vehicle="I_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_A3_AT";
 					init="GrpIFIA_A3 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6907,6 +6978,7 @@ class Mission
 					id=443;
 					side="GUER";
 					vehicle="I_G_Soldier_SL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -6920,6 +6992,7 @@ class Mission
 					id=444;
 					side="GUER";
 					vehicle="I_G_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIFIA_BSL_M";
@@ -6940,6 +7013,7 @@ class Mission
 					id=445;
 					side="GUER";
 					vehicle="I_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -6953,6 +7027,7 @@ class Mission
 					id=446;
 					side="GUER";
 					vehicle="I_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_B1_AR";
 					init="GrpIFIA_B1 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -6964,6 +7039,7 @@ class Mission
 					id=447;
 					side="GUER";
 					vehicle="I_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_B1_AAR";
 					init="GrpIFIA_B1 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -6975,6 +7051,7 @@ class Mission
 					id=448;
 					side="GUER";
 					vehicle="I_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_B1_AT";
 					init="GrpIFIA_B1 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -6994,6 +7071,7 @@ class Mission
 					id=449;
 					side="GUER";
 					vehicle="I_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -7007,6 +7085,7 @@ class Mission
 					id=450;
 					side="GUER";
 					vehicle="I_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_B2_AR";
 					init="GrpIFIA_B2 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -7018,6 +7097,7 @@ class Mission
 					id=451;
 					side="GUER";
 					vehicle="I_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_B2_AAR";
 					init="GrpIFIA_B2 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -7029,6 +7109,7 @@ class Mission
 					id=452;
 					side="GUER";
 					vehicle="I_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_B2_AT";
 					init="GrpIFIA_B2 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -7048,6 +7129,7 @@ class Mission
 					id=453;
 					side="GUER";
 					vehicle="I_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -7061,6 +7143,7 @@ class Mission
 					id=454;
 					side="GUER";
 					vehicle="I_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_B3_AR";
 					init="GrpIFIA_B3 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -7072,6 +7155,7 @@ class Mission
 					id=455;
 					side="GUER";
 					vehicle="I_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_B3_AAR";
 					init="GrpIFIA_B3 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -7083,6 +7167,7 @@ class Mission
 					id=456;
 					side="GUER";
 					vehicle="I_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_B3_AT";
 					init="GrpIFIA_B3 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -7102,6 +7187,7 @@ class Mission
 					id=457;
 					side="GUER";
 					vehicle="I_G_Soldier_SL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
@@ -7115,6 +7201,7 @@ class Mission
 					id=458;
 					side="GUER";
 					vehicle="I_G_medic_F";
+					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitIFIA_CSL_M";
@@ -7135,6 +7222,7 @@ class Mission
 					id=459;
 					side="GUER";
 					vehicle="I_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -7148,6 +7236,7 @@ class Mission
 					id=460;
 					side="GUER";
 					vehicle="I_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_C1_AR";
 					init="GrpIFIA_C1 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -7159,6 +7248,7 @@ class Mission
 					id=461;
 					side="GUER";
 					vehicle="I_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_C1_AAR";
 					init="GrpIFIA_C1 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -7170,6 +7260,7 @@ class Mission
 					id=462;
 					side="GUER";
 					vehicle="I_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_C1_AT";
 					init="GrpIFIA_C1 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -7189,6 +7280,7 @@ class Mission
 					id=463;
 					side="GUER";
 					vehicle="I_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -7202,6 +7294,7 @@ class Mission
 					id=464;
 					side="GUER";
 					vehicle="I_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_C2_AR";
 					init="GrpIFIA_C2 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -7213,6 +7306,7 @@ class Mission
 					id=465;
 					side="GUER";
 					vehicle="I_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_C2_AAR";
 					init="GrpIFIA_C2 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -7224,6 +7318,7 @@ class Mission
 					id=466;
 					side="GUER";
 					vehicle="I_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_C2_AT";
 					init="GrpIFIA_C2 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -7243,6 +7338,7 @@ class Mission
 					id=467;
 					side="GUER";
 					vehicle="I_G_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -7256,6 +7352,7 @@ class Mission
 					id=468;
 					side="GUER";
 					vehicle="I_G_soldier_AR_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_C3_AR";
 					init="GrpIFIA_C3 = group this; nul = [""ar"",this] call f_fnc_folk_assignGear ;";
@@ -7267,6 +7364,7 @@ class Mission
 					id=469;
 					side="GUER";
 					vehicle="I_G_Soldier_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_C3_AAR";
 					init="GrpIFIA_C3 = group this; nul = [""aar"",this] call f_fnc_folk_assignGear ;";
@@ -7278,6 +7376,7 @@ class Mission
 					id=470;
 					side="GUER";
 					vehicle="I_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_C3_AT";
 					init="GrpIFIA_C3 = group this; nul = [""rat"",this] call f_fnc_folk_assignGear ;";
@@ -7297,6 +7396,7 @@ class Mission
 					id=471;
 					side="GUER";
 					vehicle="I_G_soldier_AR_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -7310,6 +7410,7 @@ class Mission
 					id=472;
 					side="GUER";
 					vehicle="I_G_Soldier_A_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_MMG1_AG";
 					init="GrpIFIA_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_folk_assignGear ; ";
@@ -7329,6 +7430,7 @@ class Mission
 					id=473;
 					side="GUER";
 					vehicle="I_G_Soldier_LAT_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -7342,6 +7444,7 @@ class Mission
 					id=474;
 					side="GUER";
 					vehicle="I_G_soldier_A_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					health=0.99000001;
 					text="UnitIFIA_MAT1_AG";
@@ -7362,6 +7465,7 @@ class Mission
 					id=475;
 					side="GUER";
 					vehicle="I_G_engineer_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -7375,6 +7479,7 @@ class Mission
 					id=476;
 					side="GUER";
 					vehicle="I_G_engineer_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_ENG1_A1";
 					init="GrpIFIA_ENG1 = group this; nul = [""eng"",this] call f_fnc_folk_assignGear ;";
@@ -7386,6 +7491,7 @@ class Mission
 					id=477;
 					side="GUER";
 					vehicle="I_G_engineer_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_ENG1_A2";
 					init="GrpIFIA_ENG1 = group this; nul = [""engm"",this] call f_fnc_folk_assignGear ;";
@@ -7397,6 +7503,7 @@ class Mission
 					id=478;
 					side="GUER";
 					vehicle="I_G_engineer_F";
+					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitIFIA_ENG1_A3";
 					init="GrpIFIA_ENG1 = group this; nul = [""engm"",this] call f_fnc_folk_assignGear ;";
