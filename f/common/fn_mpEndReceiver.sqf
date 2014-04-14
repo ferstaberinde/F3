@@ -2,13 +2,6 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
-
-#include "f_waitForJIP.sqf"
-
-// ====================================================================================
-
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_ending","_validEndings"];
