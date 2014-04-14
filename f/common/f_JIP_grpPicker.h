@@ -57,7 +57,7 @@ class GrpPicker
             soundCollapse[] = NOSOUND;
 
             maxHistoryDelay = 1.0;
-            class ListScrollBar
+            class ScrollBar
             {
                 color[] = {1, 1, 1, 0.6};
                 colorActive[] = {1, 1, 1, 1};
