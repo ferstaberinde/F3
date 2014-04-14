@@ -44,14 +44,29 @@ _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
 _faction = toLower (faction _unit);
 
+
+// ====================================================================================
+
+// MAKE SURE THE SCRIPT IS RUN ON SERVER
+// The script needs only run server-side
+
+// ====================================================================================
+
+if (!isServer) then {
+	[[_typeOfUnit,_unit]"f_fnc_folk_assignGear",false,true] call BIS_fnc_MP;
+};
+
+// ====================================================================================
+
 // If the unitfaction is different from the group leader's faction and the unit is not a vehicle, the latters faction is used
 if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _unit)))) then {_faction = toLower (faction (leader group _unit))};
 
 // DEBUG
-	if (f_var_debugMode == 1) then
-	{
+if (f_var_debugMode == 1) then
+{
 	player sideChat format ["DEBUG (assignGear.sqf): Player faction: %1",_faction];
-	};
+};
+
 // ====================================================================================
 
 // Only the server deals out the gear
@@ -64,7 +79,7 @@ if(isServer) then
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "BLU_F") then {
-#include "folk_assignGear_nato.sqf"
+	#include "folk_assignGear_nato.sqf"
 };
 
 // ====================================================================================
@@ -74,7 +89,7 @@ if (_faction == "BLU_F") then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "BLU_G_F") then {
-#include "folk_assignGear_fia.sqf"
+	#include "folk_assignGear_fia.sqf"
 };
 
 // ====================================================================================
@@ -84,7 +99,7 @@ if (_faction == "BLU_G_F") then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "OPF_F") then {
-#include "folk_assignGear_csat.sqf"
+	#include "folk_assignGear_csat.sqf"
 };
 
 // ====================================================================================
@@ -94,7 +109,7 @@ if (_faction == "OPF_F") then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if(_faction == "IND_F") then {
-#include "folk_assignGear_aaf.sqf";
+	#include "folk_assignGear_aaf.sqf";
 };
 
 // ====================================================================================
@@ -133,6 +148,6 @@ if (isNil "_carbine") then { //_carbine should exist unless no faction has been 
 _useACRE = paramsArray select 2;
 
 if (_useACRE == 1) then {
-_setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
+	_setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
 };
 // ====================================================================================
