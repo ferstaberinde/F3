@@ -300,11 +300,6 @@ class CfgFunctions
 		class common // catagory
 		{
 			file = "f\common";
-			// Defines the function to preInit the compling of the assignGear function used by units.
-			class folk_assignGear
-			{
-
-			};
 			// Defines the function to preInit (the paramArray dosent seem to be constructed at preInit stage).
 			class processParamsArray
 			{
@@ -341,6 +336,13 @@ class CfgFunctions
 			class nearPlayer
 			{
 			};
+		};
+		class gear
+		{
+			// Defines the functions to preInit the compling of the assignGear function used by units.
+			file = "f\gear";
+			class assignGear;
+			class assignGearS;
 		};
 		class cache
 		{

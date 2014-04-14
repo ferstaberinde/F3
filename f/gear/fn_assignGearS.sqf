@@ -1,5 +1,10 @@
-// F3 - Folk Assign Gear Script
+// F3 - Folk Assign Gear Script (Server-side)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// ====================================================================================
+
+// RUN THIS SCRIPT ONLY ON THE SERVER
+if (!isServer) exitWith {};
+
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
@@ -36,25 +41,13 @@ private [
 
 // ====================================================================================
 
-// DETECT PLAYER FACTION
-// The following code detects what faction the player's slot belongs to, and stores
+// DETECT unit FACTION
+// The following code detects what faction the unit's slot belongs to, and stores
 // it in the private variable _faction
 
 _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
 _faction = toLower (faction _unit);
-
-
-// ====================================================================================
-
-// MAKE SURE THE SCRIPT IS RUN ON SERVER
-// The script needs only run server-side
-
-// ====================================================================================
-
-if (!isServer) then {
-	[[_typeOfUnit,_unit]"f_fnc_folk_assignGear",false,true] call BIS_fnc_MP;
-};
 
 // ====================================================================================
 
@@ -64,52 +57,49 @@ if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _u
 // DEBUG
 if (f_var_debugMode == 1) then
 {
-	player sideChat format ["DEBUG (assignGear.sqf): Player faction: %1",_faction];
+	unit sideChat format ["DEBUG (assignGear.sqf): unit faction: %1",_faction];
 };
 
 // ====================================================================================
 
-// Only the server deals out the gear
-if(isServer) then
-{
 // ====================================================================================
 
 // GEAR: BLUFOR > NATO
-// The following block of code executes only if the player is in a NATO slot; it
+// The following block of code executes only if the unit is in a NATO slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "BLU_F") then {
-	#include "folk_assignGear_nato.sqf"
+	#include "f_assignGear_nato.sqf"
 };
 
 // ====================================================================================
 
 // GEAR: BLUFOR > FIA
-// The following block of code executes only if the player is in a FIA slot; it
+// The following block of code executes only if the unit is in a FIA slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "BLU_G_F") then {
-	#include "folk_assignGear_fia.sqf"
+	#include "f_assignGear_fia.sqf"
 };
 
 // ====================================================================================
 
 // GEAR: OPFOR > CSAT
-// The following block of code executes only if the player is in a CSAT slot; it
+// The following block of code executes only if the unit is in a CSAT slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "OPF_F") then {
-	#include "folk_assignGear_csat.sqf"
+	#include "f_assignGear_csat.sqf"
 };
 
 // ====================================================================================
 
 // GEAR: INDEPEDENT > AAF
-// The following block of code executes only if the player is in a AAF slot; it
+// The following block of code executes only if the unit is in a AAF slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if(_faction == "IND_F") then {
-	#include "folk_assignGear_aaf.sqf";
+	#include "f_assignGear_aaf.sqf";
 };
 
 // ====================================================================================
@@ -131,20 +121,18 @@ if (_useACRE == 1) then {
 // If the faction of the unit cannot be defined, the script exits with an error.
 
 if (isNil "_carbine") then { //_carbine should exist unless no faction has been called
-	player globalchat format ["DEBUG (assignGear.sqf): Faction %1 is not defined.",_faction];
+	unit globalchat format ["DEBUG (assignGear.sqf): Faction %1 is not defined.",_faction];
 } else {
  	if (f_var_debugMode == 1) then	{
-		player sideChat format ["DEBUG (assignGear.sqf): Gear for %1: %1 slot selected.",_unit,_faction,_typeofUnit];
+		unit sideChat format ["DEBUG (assignGear.sqf): Gear for %1: %1 slot selected.",_unit,_faction,_typeofUnit];
 	};
 };
-// ====================================================================================
-// Gear Block End
-};
+
 // ====================================================================================
 
 // SET CUSTOM FREQUENCIES
 // For TvTs, both sides need to have seperated radio channels, for gameplay purposes.
-// This script adds a predetermined value (0.2, 0.4 or 0.6) to each radio frequency, depending on the player's side.
+// This script adds a predetermined value (0.2, 0.4 or 0.6) to each radio frequency, depending on the unit's side.
 _useACRE = paramsArray select 2;
 
 if (_useACRE == 1) then {
