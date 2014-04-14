@@ -356,9 +356,9 @@ class CfgFunctions
 			{
 			};
 		};
-		class conditions
+		class missionConditions
 		{
-			file = "f\conditions";
+			file = "f\missionConditions";
 			class SetTime
 			{
 			};

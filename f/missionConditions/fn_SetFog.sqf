@@ -36,7 +36,7 @@ switch (_fog) do
 	case 1:
 	{
 		_strength = 0.2;
-		_decay = 0.2;
+		_decay = 0;
 		_base = 0;
 	};
 
@@ -44,7 +44,7 @@ switch (_fog) do
 	case 2:
 	{
 		_strength = 0.4;
-		_decay = 0.4;
+		_decay = 0;
 		_base = 0;
 	};
 };
@@ -56,7 +56,6 @@ switch (_fog) do
 // mission conditions on server and all clients (including JIP clients).
 
 0 setFog [_strength,_decay,_base];
-forceweatherchange;
 
 // ====================================================================================
 

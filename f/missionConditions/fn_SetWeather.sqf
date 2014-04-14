@@ -152,8 +152,6 @@ switch (_weather) do
 0 setWindForce _MissionWindGusts;
 0 setWaves _MissionWaves;
 
-forceweatherchange;
-
 // ====================================================================================
 
 if (true) exitWith {};

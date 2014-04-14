@@ -10,8 +10,21 @@ private ["_timeOfDay"];
 
 // SET KEY VARIABLES
 // Conditions are set in the parameters screen (during mission set-up).
+// If a number is passed as parameter it is used instead.
 
 _timeOfDay = if (count _this == 0) then {f_param_timeOfDay} else {(_this select 0)};
+
+
+// ====================================================================================
+
+// SET DEFAULT VALUES
+// The default values that together form the in-game date are set.
+
+_year = 2030;
+_month = 5;
+_day = 5;
+_hour = 0;
+_minute = 0;
 
 // ====================================================================================
 
@@ -23,44 +36,60 @@ switch (_timeOfDay) do
 // Dawn
 	case 0:
 	{
-		setDate [2030, 5, 11, 5, 0];
+		_hour = 5;
+		_minute = 30;
 	};
 // Early Morning
 	case 1:
 	{
-		setDate [2030, 5, 11, 6, 0];
+		_hour = 7;
+		_minute = 30;
 	};
 // Morning
 	case 2:
 	{
-		setDate [2030, 5, 11, 9, 0];
+		_hour = 10;
+		_minute = 30;
 	};
 // Noon
 	case 3:
 	{
-		setDate [2030, 5, 11, 12, 0];
+		_hour = 12;
+		_minute = 00;
 	};
 // Afternoon
 	case 4:
 	{
-		setDate [2030, 5, 11, 15, 0];
+		_hour = 14;
+		_minute = 30;
 	};
 // Evening
 	case 5:
 	{
-		setDate [2030, 5, 11, 17, 40];
+		_hour = 17;
+		_minute = 40;
 	};
 // Dusk
 	case 6:
 	{
-		setDate [2030, 5, 11, 19, 10];
+		_hour = 19;
+		_minute = 10;
 	};
 // Night
 	case 7:
 	{
-		setDate [2030, 5, 11, 0, 0];
+		_hour = 0;
+		_minute = 0;
 	};
 };
+
+// ====================================================================================
+
+// SET DATE FOR ALL CLIENTS
+// Using a BIS function we share the new date across the network
+
+_date = [_year,_month,_day,_hour,_minute];
+[_date,true,false] call BIS_fnc_setDate;
 
 // ====================================================================================
 
