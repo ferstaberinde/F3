@@ -337,10 +337,10 @@ class CfgFunctions
 			{
 			};
 		};
-		class gear
+		class assignGear
 		{
 			// Defines the functions to preInit the compling of the assignGear function used by units.
-			file = "f\gear";
+			file = "f\assignGear";
 			class assignGear;
 			class assignGearS;
 		};
