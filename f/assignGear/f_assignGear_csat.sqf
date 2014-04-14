@@ -165,7 +165,6 @@ _divers = ["div"];
 _pilots = ["p"];
 _crews = ["c"];
 
-// Basic Clothing
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
 
