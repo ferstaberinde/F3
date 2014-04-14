@@ -155,7 +155,17 @@ _APmine2 = "APERSMine_Range_Mag";
 
 // CLOTHES AND UNIFORMS
 
-// Base
+// Define classes. This defines which gear class gets which uniform
+// "medium" vests are used for all classes if they are not assigned a specific uniform
+
+_light = ["sp"];
+_heavy =  ["eng","engm"];
+_divers = ["div"];
+_pilots = ["p"];
+_crews = ["c"];
+
+// Basic clothing
+// The outfit-piece is randomly selected from the array for each unit
 _baseUniform = ["U_B_CombatUniform_mcam"];
 _baseHelmet = ["H_HelmetB"];
 _lightRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];

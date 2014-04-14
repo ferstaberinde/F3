@@ -156,14 +156,24 @@ _APmine2 = "APERSMine_Range_Mag";
 
 // CLOTHES AND UNIFORMS
 
-// Base
+// Define classes. This defines which gear class gets which uniform
+// "medium" vests are used for all classes if they are not assigned a specific uniform
+
+_light = ["sp"];
+_heavy =  ["eng","engm"];
+_divers = ["div"];
+_pilots = ["p"];
+_crews = ["c"];
+
+// Basic clothing
+// The outfit-piece is randomly selected from the array for each unit
+
 _baseUniform = ["U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt"];
 _baseHelmet = ["H_HelmetIA_net","H_HelmetIA_camo","H_HelmetIA"];
 
+// Armored vests
 _lightRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];
-
-//Note: The actually to be used armor V_PlateCarrierIA2_dgtl is bugged as of 1.10, thus light and medium rig share the same armor for now
-_mediumRig = ["V_PlateCarrierIA1_dgtl"]; 	// default for all infantry classes
+_mediumRig = ["V_PlateCarrierIA2_dgtl","V_PlateCarrierIA1_dgtl"]; 	// default for all infantry classes
 _heavyRig = ["V_PlateCarrierIAGL_dgtl"];
 
 // Diver
@@ -176,10 +186,12 @@ _diverGlasses = ["G_Diving"];
 _pilotUniform = ["U_I_HeliPilotCoveralls"];
 _pilotHelmet = ["H_PilotHelmetHeli_I"];
 _pilotRig = ["V_TacVest_oli"];
+
 // Crewman
 _crewUniform = ["U_I_CombatUniform"];
 _crewHelmet = ["H_HelmetCrew_I"];
 _crewRig = ["V_TacVest_oli"];
+
 // ====================================================================================
 
 // INTERPRET PASSED VARIABLES

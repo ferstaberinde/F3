@@ -156,7 +156,19 @@ _APmine2 = "APERSMine_Range_Mag";
 
 // CLOTHES AND UNIFORMS
 
-// Base
+// Define classes. This defines which gear class gets which uniform
+// "medium" vests are used for all classes if they are not assigned a specific uniform
+
+_light = ["sp"];
+_heavy =  ["eng","engm"];
+_divers = ["div"];
+_pilots = ["p"];
+_crews = ["c"];
+
+// Basic Clothing
+// Basic clothing
+// The outfit-piece is randomly selected from the array for each unit
+
 // Woodland-Hex
 _baseUniform = ["U_O_CombatUniform_ocamo"];
 _baseHelmet = ["H_HelmetO_ocamo"];
@@ -174,7 +186,6 @@ _diverUniform =  ["U_O_Wetsuit"];
 _diverHelmet = [];
 _diverRig = ["V_RebreatherIR"];
 _diverGlasses = ["G_Diving"];
-
 
 // Pilot
 _pilotUniform = ["U_O_PilotCoveralls"];
