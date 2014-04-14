@@ -13,9 +13,9 @@ private ["_fog","_strenght","_decay","_base"];
 
 _fog = if (count _this == 0) then {f_param_fog} else {(_this select 0)};
 
-_strength = 0;	//value for fog at base level
-_decay = 0; 	//decay of fog density with altitude
-_base = 0; 		//base altitude of fog (in meters)
+_strength = 0;	// Value for fog at base level
+_decay = 0; 	// Decay of fog density with altitude. If set to 0 fog strenght is consistent throughout.
+_base = 0; 		// Base altitude of fog (in meters). Up until this height fog does *not* loose density.
 
 // ====================================================================================
 

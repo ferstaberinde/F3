@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_timeOfDay"];
+private ["_timeOfDay","_year","_month","_day","_hour","_minute"];
 
 // ====================================================================================
 
@@ -29,7 +29,7 @@ _minute = 0;
 // ====================================================================================
 
 // SELECT MISSION TIME OF DAY
-// Using the value of _timeOfDay, a new date is set.
+// Using the value of _timeOfDay, we define new values for _hour and _minute.
 
 switch (_timeOfDay) do
 {
