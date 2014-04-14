@@ -13,8 +13,7 @@ private ["_timeOfDay","_year","_month","_day","_hour","_minute","_transition"];
 // ====================================================================================
 
 // SET KEY VARIABLES
-// Conditions are set in the parameters screen (during mission set-up).
-// If a number is passed as parameter it is used instead.
+// We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
 _timeOfDay = _this select 0;
 

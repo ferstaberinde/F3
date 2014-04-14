@@ -9,7 +9,7 @@ private ["_weather","_missionOvercast","_MissionRain","_MissionRainbow","_Missio
 // ====================================================================================
 
 // SET KEY VARIABLES
-// Conditions are set in the parameters screen (during mission set-up) or parsed to the script.
+// We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
 _weather = _this select 0;
 _transition = if (count _this > 1) then {_this select 1} else {0};

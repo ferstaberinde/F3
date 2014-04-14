@@ -9,7 +9,7 @@ private ["_fog","_strenght","_decay","_base"];
 // ====================================================================================
 
 // SET KEY VARIABLES
-// Conditions are set in the parameters screen (during mission set-up).
+// We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
 _fog = _this select 0;
 _transition = if (count _this > 1) then {_this select 1} else {0};
