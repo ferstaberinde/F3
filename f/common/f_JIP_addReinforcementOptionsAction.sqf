@@ -29,5 +29,5 @@ _unit disableAI "move";
 // We add the action to the player's action menu.
 
 if (_unit == player) then {
-	F3_JIP_reinforcementOptionsAction = player addaction ["<t color='#dddd00'>" + _textAction + "</t>","f\common\f_JIP_reinforcementOptions.sqf",[],6,true,false,"","_target == player"];
+	F3_JIP_reinforcementOptionsAction = player addaction ["<t color='#dddd00'>" + _textAction + "</t>","f\common\f_JIP_reinforcementOptions.sqf",[_uni],6,true,false,"","_target == player"];
 };
