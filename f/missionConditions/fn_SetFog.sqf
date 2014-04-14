@@ -52,10 +52,9 @@ switch (_fog) do
 // ====================================================================================
 
 // SET MISSION CONDITIONS
-// Use new values to set
-// mission conditions on server and all clients (including JIP clients).
+// Use the new values and a BI function the new fog values are share across the network.
 
-0 setFog [_strength,_decay,_base];
+[_strength,_decay,_base] call BIS_fnc_setFog;
 
 // ====================================================================================
 

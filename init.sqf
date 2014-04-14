@@ -29,13 +29,6 @@ f_script_briefing = [] execVM "briefing.sqf";
 
 // ====================================================================================
 
-// F3 - Mission Conditions Selector
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// [] execVM "f\common\f_setMissionConditions.sqf";
-
-// ====================================================================================
-
 // F3 - F3 Folk ARPS Group IDs
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
