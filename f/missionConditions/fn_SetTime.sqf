@@ -16,8 +16,7 @@ private ["_timeOfDay","_year","_month","_day","_hour","_minute","_transition"];
 // Conditions are set in the parameters screen (during mission set-up).
 // If a number is passed as parameter it is used instead.
 
-_timeOfDay = if (count _this == 0) then {f_param_timeOfDay} else {(_this select 0)};
-
+_timeOfDay = _this select 0;
 
 // ====================================================================================
 

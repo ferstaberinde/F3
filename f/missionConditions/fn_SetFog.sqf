@@ -11,7 +11,8 @@ private ["_fog","_strenght","_decay","_base"];
 // SET KEY VARIABLES
 // Conditions are set in the parameters screen (during mission set-up).
 
-_fog = if (count _this == 0) then {f_param_fog} else {(_this select 0)};
+_fog = _this select 0;
+_transition = if (count _this > 1) then {_this select 1} else {0};
 
 _strength = 0;	// Value for fog at base level
 _decay = 0; 	// Decay of fog density with altitude. If set to 0 fog strenght is consistent throughout.
@@ -52,9 +53,9 @@ switch (_fog) do
 // ====================================================================================
 
 // SET MISSION CONDITIONS
-// Use the new values and a BI function the new fog values are share across the network.
+// Use the new values to set the transition across the network
 
-[_strength,_decay,_base] call BIS_fnc_setFog;
+_transition setFog [_strength,_decay,_base];
 
 // ====================================================================================
 

@@ -9,9 +9,10 @@ private ["_weather","_missionOvercast","_MissionRain","_MissionRainbow","_Missio
 // ====================================================================================
 
 // SET KEY VARIABLES
-// Conditions are set in the parameters screen (during mission set-up).
+// Conditions are set in the parameters screen (during mission set-up) or parsed to the script.
 
-_weather = if (count _this == 0) then {f_param_weather} else {(_this select 0)};
+_weather = _this select 0;
+_transition = if (count _this > 1) then {_this select 1} else {0};
 
 _MissionOvercast = 0;
 _MissionRain = 0;
@@ -145,12 +146,12 @@ switch (_weather) do
 // Use new values to set
 // mission conditions on server and all clients (including JIP clients).
 
-0 setOvercast  _MissionOvercast;
-0 setRain _MissionRain;
-0 setRainbow _MissionRainbow;
-0 setWindStr  _MissionWindStr;
-0 setWindForce _MissionWindGusts;
-0 setWaves _MissionWaves;
+_transition setOvercast  _MissionOvercast;
+_transition setRain _MissionRain;
+_transition setRainbow _MissionRainbow;
+_transition setWindStr  _MissionWindStr;
+_transition setWindForce _MissionWindGusts;
+_transition setWaves _MissionWaves;
 
 // ====================================================================================
 
