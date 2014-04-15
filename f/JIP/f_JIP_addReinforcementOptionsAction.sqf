@@ -2,10 +2,13 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
+// MAKE SURE THE PLAYER INITIALIZES PROPERLY
 
-#include "f_waitForJIP.sqf"
+if (!isDedicated && (player != player)) then
+{
+    waitUntil {player == player};
+};
+
 
 // ====================================================================================
 
