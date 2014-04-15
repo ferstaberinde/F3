@@ -342,6 +342,7 @@ class CfgFunctions
 			class nearPlayer
 			{
 			};
+		};
 		class mpEnd
 		{
 			file = "f\mpEnd";
@@ -364,7 +365,7 @@ class CfgFunctions
 		{
 			file = "f\spect";
 			class cam_init{};
-		}
+		};
 	};
 };
 
