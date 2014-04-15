@@ -41,8 +41,8 @@ respawnTemplates[] = {"f_Spectator"};
 // F3 - JIP Reinforcement Options
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-#include "f\common\f_JIP_kitpicker.h"
-#include "f\common\f_JIP_grppicker.h"
+#include "f\JIP\f_JIP_kitpicker.h"
+#include "f\JIP\f_JIP_grppicker.h"
 
 // ============================================================================================
 
@@ -342,7 +342,6 @@ class CfgFunctions
 			// Defines the functions to preInit the compling of the assignGear function used by units.
 			file = "f\assignGear";
 			class assignGear;
-			class assignGearS;
 		};
 		class cache
 		{

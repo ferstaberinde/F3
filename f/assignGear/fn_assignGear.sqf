@@ -1,13 +1,155 @@
-// F3 - Folk Assign Gear Script (Client-side)
+// F3 - Folk Assign Gear Script (Server-side)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// Run this script only on players
-if (isServer && isDedicated) exitWith {};
 
-// Declare Variables
+
+// ====================================================================================
+
+// DECLARE VARIABLES AND FUNCTIONS
+
+private ["_faction","_typeofUnit","_unit"];
+
+// ====================================================================================
+
+// DETECT unit FACTION
+// The following code detects what faction the unit's slot belongs to, and stores
+// it in the private variable _faction
+
 _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
+_faction = toLower (faction _unit);
 
-// Bounce it to the server
-[[_typeOfUnit,_unit],"f_fnc_assignGearS",false,true] call BIS_fnc_MP;
+// ====================================================================================
+
+// If we are on a client, the script is terminated and send to the server
+if (local _unit && !isServer) exitWith {
+  [_this,"f_fnc_assignGear",false,true] spawn BIS_fnc_MP;
+};
+
+// ====================================================================================
+
+// RUN THE REST OF THE SCRIPT ONLY ON THE SERVER
+if (!isServer) exitWith {};
+
+private [
+"_glrifle","_glriflemag","_glriflemag_tr","_glmag",
+"_glsmokewhite","_glsmokegreen","_glsmokered",
+"_glflarewhite","_glflarered","_glflareyellow","_glflaregreen",
+"_AR","_ARmag","_ARmag_tr",
+"_MMG","_MMGmag","_MMGmag_tr",
+"_HMG","_HMGmount",
+"_RAT","_RATmag",
+"_MAT","_MATmag1","_MATmag2",
+"_HAT","_HATmag1","_HATmag2",
+"_MTR","_MTRmount",
+"_RAA","_RAAmag",
+"_SNrifle","_SNriflemag",
+"_pistol","_pistolmag",
+"_grenade","_smokegrenade","_smokegrenadegreen",
+"_rifle","_riflemag","_riflemag_tr",
+"_carbine","_carbinemag","_carbinemag_tr",
+"_smg","_smgmag","_smgmag_tr",
+"_bagsmall","_bagmedium","_baglarge",
+"_ATmine","_satchel",
+"_medkit","_rifle_attach",
+"_carbine_attach","_smg_attach",
+"_glrifle_attach","_AR_attach",
+"_MMG_attach","_SNrifle_attach"
+,"_APmine", "_nvg",
+"_chemgreen","_chemred","_chemblue","_chemyellow"
+];
+
+
+// ====================================================================================
+
+// If the unitfaction is different from the group leader's faction and the unit is not a vehicle, the latters faction is used
+if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _unit)))) then {_faction = toLower (faction (leader group _unit))};
+
+// DEBUG
+if (f_var_debugMode == 1) then
+{
+	unit sideChat format ["DEBUG (assignGear.sqf): unit faction: %1",_faction];
+};
+
+// ====================================================================================
+
+// ====================================================================================
+
+// GEAR: BLUFOR > NATO
+// The following block of code executes only if the unit is in a NATO slot; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction == "BLU_F") then {
+	#include "f_assignGear_nato.sqf"
+};
+
+
+// ====================================================================================
+
+// GEAR: OPFOR > CSAT
+// The following block of code executes only if the unit is in a CSAT slot; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction == "OPF_F") then {
+	#include "f_assignGear_csat.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: INDEPEDENT > AAF
+// The following block of code executes only if the unit is in a AAF slot; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if(_faction == "IND_F") then {
+	#include "f_assignGear_aaf.sqf";
+};
+
+
+// ====================================================================================
+
+// GEAR: FIA
+// The following block of code executes only if the unit is in a FIA slot (any faction); it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
+	#include "f_assignGear_fia.sqf"
+};
+
+// ====================================================================================
+// GEAR: ACRE
+// The following block of code executes only if the ACRE parameter is set to true; it
+// automatically includes a file which contains the appropriate equipment data.
+_useACRE = "f_param_acre" call BIS_fnc_getParamValue;;
+
+if (_useACRE == 1) then {
+	_this execVM "f\common\fa_ACRE_assignGear.sqf";
+};
+// ====================================================================================
+
+// DEBUG
+
+// ====================================================================================
+
+// ERROR CHECKING
+// If the faction of the unit cannot be defined, the script exits with an error.
+
+if (isNil "_carbine") then { //_carbine should exist unless no faction has been called
+	player globalchat format ["DEBUG (assignGear.sqf): Faction %1 is not defined.",_faction];
+} else {
+ 	if (f_var_debugMode == 1) then	{
+		player sideChat format ["DEBUG (assignGear.sqf): Gear for %1: %1 slot selected.",_unit,_faction,_typeofUnit];
+	};
+};
+
+// ====================================================================================
+
+// SET CUSTOM FREQUENCIES
+// For TvTs, both sides need to have seperated radio channels, for gameplay purposes.
+// This script adds a predetermined value (0.2, 0.4 or 0.6) to each radio frequency, depending on the unit's side.
+_useACRE = "f_param_acre" call BIS_fnc_getParamValue;;
+
+if (_useACRE == 1) then {
+	_setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
+};
+// ====================================================================================
