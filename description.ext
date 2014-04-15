@@ -341,6 +341,9 @@ class CfgFunctions
 			class nearPlayer
 			{
 			};
+			class preMount
+			{
+			};
 		};
 		class cache
 		{
