@@ -335,16 +335,20 @@ class CfgFunctions
 			class drawNameTag
 			{
 			};
-			class mpEndBroadcast
-			{
-			};
-			class mpEndReceiver
-			{
-			};
+
 			class removeBody
 			{
 			};
 			class nearPlayer
+			{
+			};
+		class mpEnd
+		{
+			file = "f\mpEnd";
+			class mpEnd
+			{
+			};
+			class mpEndReceiver
 			{
 			};
 		};
