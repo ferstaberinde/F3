@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_ending","_validEndings"];
+private ["_ending"];
 
 _ending = _this;
 
@@ -38,14 +38,6 @@ if (f_var_debugMode == 1) then
 // been broadcast a sidechat will be displayed and the script will exit (by default
 // allowed values are: 1,2,3,4,5,6).
 
-
-
-_validEndings = [1,2,3,4,5,6];
-if (!(_ending in _validEndings)) then
-{
-	player sideChat format ["DEBUG (f_fnc_mpEndReciever.sqf): _ending = %1 (INVALID)",_ending];
-	exit;
-};
 
 switch (_ending) do
 {
@@ -108,6 +100,12 @@ switch (_ending) do
 
 // Do not allow custom code for ending #6 to continue after this comment.
 	"end6" call BIS_fnc_endMission;
+	};
+
+	default
+	{
+		player sideChat format ["DEBUG (f_fnc_mpEndReciever.sqf): _ending = %1 (INVALID)",_ending];
+		exit;
 	};
 };
 
