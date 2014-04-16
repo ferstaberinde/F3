@@ -13,7 +13,8 @@ private ["_objects","_crew","_vehs","_grps","_units"];
 // Using the arguments passed to the script, we first define some local variables.
 
 _objects = _this select 0;
-_crew = _this select 1;
+_crew = if (count _this > 1) then {_this select 1} else {true};
+_fill = if (count _this > 2) then {_this select 2} else {false};
 
 // ====================================================================================
 
@@ -23,7 +24,7 @@ _vehs = [];
 _grps = [];
 {
  if (_x isKindOf "CAManBase") then {
- 	if !(group _x in _grps) then {_grps set [(count _grps),group _x]};
+ 	if !(group _x in _grps && ({isNull (assignedVehicle _x)} count units group _X) > 0) then {_grps set [(count _grps),group _x]};
  } else {
  	_vehs set [(count _vehs),_x];
  };
@@ -31,80 +32,78 @@ _grps = [];
 
 // ====================================================================================
 
+// DOUBLE CHECK ARRAYS
+// If any of the arrays is empty we don't need to execute the function and exit with a warning message.
+
+if (count _vehs == 0 || count _grps == 0) exitWith {
+	player globalchat format ["f_fnc_preMount DBG: No vehicles and/or groups were parsed! _vehicles: %1,_grps: %2",_vehs,_grps];
+	diag_log format ["f_fnc_preMount DBG: No vehicles and/or groups were parsed! _vehicles: %1,_grps: %2",_vehs,_grps];
+};
+
+// ====================================================================================
+
 // MOUNT UNITS
 // We loop through all vehicles and assign crew & cargo accordingly
 
 {
+	private ["_veh","_grpsT","_emptyPositions"];
 	_veh = _x;
-	_crew = _this select 1;
+	_crew = if (count _this > 1) then {_this select 1} else {true};
 
-	{
-		_units = units _x;
+	// Check if there are any spare seats.
+	_emptyPositions = 0;
+	{_emptyPositions = _emptyPositions + (_veh emptyPositions _x)} forEach ["driver","commander","gunner","cargo"];
+
+	_grpsT = _grps; 			// We need a temporary copy of the groups array
+
+	// As long there are spare seats and groups left
+	while {_emptyPositions > 0 && count _grpsT > 0 && locked _veh < 2} do {
+		private ["_grp","_units","_run"];
+
+		_grp = _grpsT select 0;
+		_units = units _grp;
 		_run = true;
 
-		while {_run} do {
-			_unit = _units select 0;
-
-			if (_crew) then {
-				if ((_veh emptyPositions "Driver") > 0) exitWith {_unit assignAsDriver _veh;_unit moveInDriver _veh;};
-				if ((_veh emptyPositions "Gunner") > 0) exitWith {_unit assignAsGunner _veh; _unit moveInGunner _veh;};
-				if ((_veh emptyPositions "Commander") > 0) exitWith {_unit assignAsCommander _veh; _unit moveInCommander _veh;};
-				_crew = false;
-			};
-
-			if !(_crew) then {
-
-				// To maintain fireteam cohesion we only add units to the cargo if there's enough room for the entire fireteam
-				if (count _units <= _veh emptyPositions "CARGO") then {
-					_unit moveInCargo _veh; _unit assignAsCargo _veh;
-				} else {_run = false;}
-			};
-
-			_units = _units - [_unit];
-			if (count _units == 0) then {_run = false;_grps = _grps - [_x]};
-
-		};
-	} forEach _grps;
-
-} forEach _vehs;
-
-/*
-
-// MOUNT UNITS
-// We loop through all vehicles and assign crew & cargo accordingly
-{
-	_veh = _x;
-	_run = true;
-
-	while {_run} do {
-		_unit = _units select 0;
-		_units = _units - [_unit];
-
-		if (_crew) then {
-			player globalchat format ["%1",_crew];
-			if ((_veh emptyPositions "Driver") > 0) exitWith {_unit assignAsDriver _veh;_unit moveInDriver _veh;};
-			if ((_veh emptyPositions "Gunner") > 0) exitWith {_unit assignAsGunner _veh; _unit moveInGunner _veh;};
-			if ((_veh emptyPositions "Commander") > 0) exitWith {_unit assignAsCommander _veh; _unit moveInCommander _veh;};
-			_crew = false;
-			player globalchat format ["%1",_crew];
+		// If fireteam cohesion should be kept count the available vehicle slots, compared to the units in the group that would need a seat
+		if (!_fill && {{isNull (assignedVehicle _x)} count _units > _emptyPositions}) then {
+			_run = false;
+			_grpsT = _grpsT - [_grp];
 		};
 
+	   	if (_run) then {
 
-		if !(_crew) then {
+	  	 {
+		   	private ["_unit","_cargo"];
+			_unit = _x;
 
-			// To maintain fireteam cohesion we only add units to the cargo if there's enough room for the entire fireteam
-			if ((count units group (_unit)) <= _veh emptyPositions "CARGO") then {
-				{_x moveInCargo _veh; _x assignAsCargo _veh;} forEach (units group _unit); _units = _units - units group _unit;
-			} else {_run = false};
+				if (_crew && {isNull (assignedVehicle _x)}) then {
+						if ((_veh emptyPositions "Driver") > 0 && !(lockedDriver _veh)) exitWith {_unit assignAsDriver _veh;_unit moveInDriver _veh;};
+						if ((_veh emptyPositions "Gunner") > 0 && !(_veh lockedTurret [0])) exitWith {_unit assignAsGunner _veh; _unit moveInGunner _veh;};
+						if ((_veh emptyPositions "Commander") > 0 && !(_veh lockedTurret [1])) exitWith {_unit assignAsCommander _veh; _unit moveInCommander _veh;};
+						_crew = false;
+				};
+
+				_cargo = _veh emptyPositions "Cargo";
+				if (!_crew && {_cargo > 0 && isNull (assignedVehicle _x) && !(_veh lockedCargo (_cargo - 1))}) then {
+					_unit moveInCargo _veh; _unit assignAsCargoIndex [_veh,(_cargo - 1)];
+				};
+
+			} forEach _units;
+			_grpsT = _grpsT - [_grp];
 		};
 
-		if (count units group _unit == 0 ||_veh emptyPositions "CARGO" == 0) then {_run = false};
+		// Check if all units in the group have been assigned a vehicle, if yes, remove the group from the array.
+		if ({isNull (assignedVehicle _x)} count units _grp == 0) then {_grps = _grps - [_grp];};
 
+		// Recalculate the remaining seats on the vehicle
+		_emptyPositions = 0;
+		{_emptyPositions = _emptyPositions + (_veh emptyPositions _x)} forEach ["driver","commander","gunner","cargo"];
 	};
 
 } forEach _vehs;
+
 // ====================================================================================
 
 // OUTPUT
-// We return all units that were *not* put in a cargo seat
-_units
+// We return all groups that weren't fully loaded
+_grps
