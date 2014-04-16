@@ -7,6 +7,6 @@
 // player to choose a loadout and group to join.
 
 sleep 3;
-nul = [player] execVM "f\common\f_JIP_addReinforcementOptionsAction.sqf";
+[player] execVM "f\JIP\f_JIP_addReinforcementOptionsAction.sqf";
 
 // ====================================================================================

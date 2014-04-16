@@ -44,7 +44,7 @@ _loadout = (player getVariable "f_var_JIP_loadout");
 
 [player] joinSilent grpNull;
 [_grp,_joinDistance] execVM "f\JIP\f_JIP_nearTargetGroupCheck.sqf";
-[[_loadout,(_this select 0)],"f_fnc_assignGear",false,true] spawn BIS_fnc_MP;
+[_loadout,player] call f_fnc_assignGear;
 
 // ====================================================================================
 

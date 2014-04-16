@@ -22,15 +22,14 @@ _faction = toLower (faction _unit);
 
 // ====================================================================================
 
-// If we are on a client, the script is terminated and send to the server
-if (local _unit && !isServer) exitWith {
-  [_this,"f_fnc_assignGear",false,true] spawn BIS_fnc_MP;
-};
+// DECIDE IF THE SCRIPT SHOULD RUN
+// Depending on locality the script decides if it should run
+
+if !(local _unit) exitWith {};
 
 // ====================================================================================
 
-// RUN THE REST OF THE SCRIPT ONLY ON THE SERVER
-if (!isServer) exitWith {};
+// DECLARE VARIABLES AND FUNCTIONS 2
 
 private [
 "_glrifle","_glriflemag","_glriflemag_tr","_glmag",
@@ -69,7 +68,7 @@ if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _u
 // DEBUG
 if (f_var_debugMode == 1) then
 {
-	unit sideChat format ["DEBUG (assignGear.sqf): unit faction: %1",_faction];
+	_unit sideChat format ["DEBUG (assignGear.sqf): unit faction: %1",_faction];
 };
 
 // ====================================================================================
