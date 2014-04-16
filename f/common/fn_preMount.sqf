@@ -12,27 +12,38 @@ private ["_objects","_crew","_vehs","_grps","_units"];
 // SET KEY VARIABLES
 // Using the arguments passed to the script, we first define some local variables.
 
-_objects = _this select 0;
-_crew = if (count _this > 1) then {_this select 1} else {true};
-_fill = if (count _this > 2) then {_this select 2} else {false};
+_vehs = _this select 0;
+_grps = _this select 1;
+_crew = if (count _this > 2) then {_this select 2} else {true};
+_fill = if (count _this > 3) then {_this select 3} else {false};
 
 // ====================================================================================
 
 // PROCESS VARIABLES
-// Split the parsed units into vehicles and groups
-_vehs = [];
-_grps = [];
+// We make sure that there are only vehicles in the vehicle array
+// If a soldier-unit is in the array then we check if we can use the vehicle he's in
 {
  if (_x isKindOf "CAManBase") then {
- 	if !(group _x in _grps && ({isNull (assignedVehicle _x)} count units group _X) > 0) then {_grps set [(count _grps),group _x]};
- } else {
- 	_vehs set [(count _vehs),_x];
+ 	if (vehicle _x != _x) then {
+ 		_vehs set [_forEachIndex,vehicle _x];
+ 	} else {
+ 		_vehs = _vehs - [_x];
+ 	};
  };
-} forEach _objects;
+} forEach _vehs;
+
+// We check the passed groups to make sure none of them is empty and they have at least one unit that's not inside a vehicle
+{
+ if (count units _x == 0 || {isNull (assignedVehicle _x)} count units _x == 0) then {
+ 	_grps = _grps - [_grp];
+ };
+} forEach _grps;
+
+player globalchat format ["%1",[_vehs,_grps]];
 
 // ====================================================================================
 
-// DOUBLE CHECK ARRAYS
+// CHECK ARRAY COUNT
 // If any of the arrays is empty we don't need to execute the function and exit with a warning message.
 
 if (count _vehs == 0 || count _grps == 0) exitWith {
@@ -48,7 +59,7 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 {
 	private ["_veh","_grpsT","_emptyPositions"];
 	_veh = _x;
-	_crew = if (count _this > 1) then {_this select 1} else {true};
+	_crew = if (count _this > 2) then {_this select 2} else {true};
 
 	// Check if there are any spare seats.
 	_emptyPositions = 0;
