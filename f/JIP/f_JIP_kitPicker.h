@@ -57,7 +57,7 @@ class KitPicker
             soundCollapse[] = NOSOUND;
 
             maxHistoryDelay = 1.0;
-            class ScrollBar
+            class ComboScrollBar
             {
                 color[] = {1, 1, 1, 0.6};
                 colorActive[] = {1, 1, 1, 1};
