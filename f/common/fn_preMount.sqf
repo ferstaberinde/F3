@@ -39,8 +39,6 @@ _fill = if (count _this > 3) then {_this select 3} else {false};
  };
 } forEach _grps;
 
-player globalchat format ["%1",[_vehs,_grps]];
-
 // ====================================================================================
 
 // CHECK ARRAY COUNT
