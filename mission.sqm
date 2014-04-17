@@ -8042,14 +8042,14 @@ class Mission
 		items=2;
 		class Item0
 		{
-			position[]={10182.545,19.868389,13051.685};
+			position[]={7963.1147,39.532951,11157.285};
 			name="f_insert";
 			text="insert";
 			type="mil_start";
 		};
 		class Item1
 		{
-			position[]={7947.1162,20.266054,10942.567};
+			position[]={7962.9883,28.057743,11088.944};
 			name="f_extract";
 			text="extract";
 			type="mil_end";
