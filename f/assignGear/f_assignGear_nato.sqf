@@ -155,7 +155,17 @@ _APmine2 = "APERSMine_Range_Mag";
 
 // CLOTHES AND UNIFORMS
 
-// Base
+// Define classes. This defines which gear class gets which uniform
+// "medium" vests are used for all classes if they are not assigned a specific uniform
+
+_light = ["sp"];
+_heavy =  ["eng","engm"];
+_divers = ["div"];
+_pilots = ["p"];
+_crews = ["c"];
+
+// Basic clothing
+// The outfit-piece is randomly selected from the array for each unit
 _baseUniform = ["U_B_CombatUniform_mcam"];
 _baseHelmet = ["H_HelmetB"];
 _lightRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];
@@ -979,6 +989,8 @@ switch (_typeofUnit) do
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
 		_unit addWeaponCargoGlobal [_carbine, 2];
 		_unit addMagazineCargoGlobal [_riflemag, 8];
 		_unit addMagazineCargoGlobal [_glriflemag, 8];
@@ -990,6 +1002,7 @@ switch (_typeofUnit) do
 		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
 		_unit addMagazineCargoGlobal [_glmag, 4];
 		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
+		_unit addItemCargoGlobal [_firstaid,4];
 	};
 
 // CARGO: TRUCK - room for 50 weapons and 200 cargo items
@@ -997,6 +1010,8 @@ switch (_typeofUnit) do
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
 		_unit addWeaponCargoGlobal [_carbine, 10];
 		_unit addMagazineCargoGlobal [_riflemag, 40];
 		_unit addMagazineCargoGlobal [_glriflemag, 40];
@@ -1009,6 +1024,7 @@ switch (_typeofUnit) do
 		_unit addMagazineCargoGlobal [_smokegrenadegreen, 4];
 		_unit addMagazineCargoGlobal [_glmag, 12];
 		_unit addMagazineCargoGlobal [_glsmokewhite, 12];
+		_unit addItemCargoGlobal [_firstaid,8];
 	};
 
 // CARGO: IFV - room for 10 weapons and 100 cargo items
@@ -1016,6 +1032,8 @@ switch (_typeofUnit) do
 	{
 		clearWeaponCargoGlobal _unit;
 		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
 		_unit addWeaponCargoGlobal [_carbine, 4];
 		_unit addMagazineCargoGlobal [_riflemag, 20];
 		_unit addMagazineCargoGlobal [_glriflemag, 20];
@@ -1028,6 +1046,7 @@ switch (_typeofUnit) do
 		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
 		_unit addMagazineCargoGlobal [_glmag, 8];
 		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
+		_unit addItemCargoGlobal [_firstaid,6];
 	};
 
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)

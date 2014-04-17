@@ -29,17 +29,10 @@ f_script_briefing = [] execVM "briefing.sqf";
 
 // ====================================================================================
 
-// F3 - Mission Conditions Selector
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-[] execVM "f\common\f_setMissionConditions.sqf";
-
-// ====================================================================================
-
 // F3 - F3 Folk ARPS Group IDs
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_setGroupIDs = [] execVM "f\common\folk_setGroupIDs.sqf";
+f_script_setGroupIDs = [] execVM "f\setGroupID\f_setGroupIDs.sqf";
 
 // ====================================================================================
 
@@ -69,14 +62,6 @@ f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
 // WARNING: DO NOT DISABLE THIS COMPONENT
 
 f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
-
-// ====================================================================================
-
-// F3 - Multiplayer Ending Controller
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-f_endSelected = -1;
-[] execVM "f\common\f_mpEndSetUp.sqf";
 
 // ====================================================================================
 

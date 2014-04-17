@@ -1,12 +1,37 @@
-// F3 - Folk Assign Gear Script
+// F3 - Folk Assign Gear Script (Server-side)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// ====================================================================================
+
+
+
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_faction","_typeofUnit","_unit"];
+
+// ====================================================================================
+
+// DETECT unit FACTION
+// The following code detects what faction the unit's slot belongs to, and stores
+// it in the private variable _faction
+
+_typeofUnit = toLower (_this select 0);
+_unit = _this select 1;
+_faction = toLower (faction _unit);
+
+// ====================================================================================
+
+// DECIDE IF THE SCRIPT SHOULD RUN
+// Depending on locality the script decides if it should run
+
+if !(local _unit) exitWith {};
+
+// ====================================================================================
+
+// DECLARE VARIABLES AND FUNCTIONS 2
+
 private [
-//"_faction",
 "_glrifle","_glriflemag","_glriflemag_tr","_glmag",
 "_glsmokewhite","_glsmokegreen","_glsmokered",
 "_glflarewhite","_glflarered","_glflareyellow","_glflaregreen",
@@ -34,74 +59,67 @@ private [
 "_chemgreen","_chemred","_chemblue","_chemyellow"
 ];
 
+
 // ====================================================================================
-
-// DETECT PLAYER FACTION
-// The following code detects what faction the player's slot belongs to, and stores
-// it in the private variable _faction
-
-_typeofUnit = toLower (_this select 0);
-_unit = _this select 1;
-_faction = toLower (faction _unit);
 
 // If the unitfaction is different from the group leader's faction and the unit is not a vehicle, the latters faction is used
 if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _unit)))) then {_faction = toLower (faction (leader group _unit))};
 
 // DEBUG
-	if (f_var_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (assignGear.sqf): Player faction: %1",_faction];
-	};
+if (f_var_debugMode == 1) then
+{
+	_unit sideChat format ["DEBUG (assignGear.sqf): unit faction: %1",_faction];
+};
+
 // ====================================================================================
 
-// Only the server deals out the gear
-if(isServer) then
-{
 // ====================================================================================
 
 // GEAR: BLUFOR > NATO
-// The following block of code executes only if the player is in a NATO slot; it
+// The following block of code executes only if the unit is in a NATO slot; it
 // automatically includes a file which contains the appropriate equipment data.
+
 
 if (_faction == "blu_f") then {
 #include "folk_assignGear_nato.sqf"
 };
 
-// ====================================================================================
-
-// GEAR: FIA
-// The following block of code executes only if the player is in a FIA slot; it
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction in ["blu_g_f","ind_g_f","opf_g_f"]) then {
-#include "folk_assignGear_fia.sqf"
-};
 
 // ====================================================================================
 
 // GEAR: OPFOR > CSAT
-// The following block of code executes only if the player is in a CSAT slot; it
+// The following block of code executes only if the unit is in a CSAT slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "opf_f") then {
-#include "folk_assignGear_csat.sqf"
+	#include "f_assignGear_csat.sqf"
 };
 
 // ====================================================================================
 
 // GEAR: INDEPEDENT > AAF
-// The following block of code executes only if the player is in a AAF slot; it
+// The following block of code executes only if the unit is in a AAF slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if(_faction == "ind_f") then {
-#include "folk_assignGear_aaf.sqf";
+	#include "f_assignGear_aaf.sqf";
+};
+
+// ====================================================================================
+
+// GEAR: FIA
+// The following block of code executes only if the unit is in a FIA slot (any faction); it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
+	#include "f_assignGear_fia.sqf"
 };
 
 // ====================================================================================
 // GEAR: ACRE
 // The following block of code executes only if the ACRE parameter is set to true; it
 // automatically includes a file which contains the appropriate equipment data.
-_useACRE = paramsArray select 2;
+_useACRE = "f_param_acre" call BIS_fnc_getParamValue;;
 
 if (_useACRE == 1) then {
 	_this execVM "f\common\fa_ACRE_assignGear.sqf";
@@ -122,17 +140,15 @@ if (isNil "_carbine") then { //_carbine should exist unless no faction has been 
 		player sideChat format ["DEBUG (assignGear.sqf): Gear for %1: %1 slot selected.",_unit,_faction,_typeofUnit];
 	};
 };
-// ====================================================================================
-// Gear Block End
-};
+
 // ====================================================================================
 
 // SET CUSTOM FREQUENCIES
 // For TvTs, both sides need to have seperated radio channels, for gameplay purposes.
-// This script adds a predetermined value (0.2, 0.4 or 0.6) to each radio frequency, depending on the player's side.
-_useACRE = paramsArray select 2;
+// This script adds a predetermined value (0.2, 0.4 or 0.6) to each radio frequency, depending on the unit's side.
+_useACRE = "f_param_acre" call BIS_fnc_getParamValue;;
 
 if (_useACRE == 1) then {
-_setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
+	_setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
 };
 // ====================================================================================
