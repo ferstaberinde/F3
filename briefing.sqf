@@ -40,9 +40,9 @@ if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction 
 // The following block of code executes only if the player is in a NATO slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
-if (_unitfaction == "BLU_F") exitwith {
+if (_unitfaction == "blu_f") exitwith {
 
-#include "f\common\f_briefing_nato.sqf"
+#include "f\briefing\f_briefing_nato.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -53,13 +53,13 @@ if (_unitfaction == "BLU_F") exitwith {
 
 // ====================================================================================
 
-// BRIEFING: BLUFOR > FIA
+// BRIEFING: FIA
 // The following block of code executes only if the player is in a FIA slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
-if (_unitfaction == "BLU_G_F") exitwith {
+if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f"]) exitwith {
 
-#include "f\common\f_briefing_fia.sqf"
+#include "f\briefing\f_briefing_fia.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -74,9 +74,9 @@ if (_unitfaction == "BLU_G_F") exitwith {
 // The following block of code executes only if the player is in a CSAT slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
-if (_unitfaction == "OPF_F") exitwith {
+if (_unitfaction == "opf_f") exitwith {
 
-#include "f\common\f_briefing_csat.sqf"
+#include "f\briefing\f_briefing_csat.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -90,9 +90,9 @@ if (_unitfaction == "OPF_F") exitwith {
 // The following block of code executes only if the player is in a AAF
 // slot; it automatically includes a file which contains the appropriate briefing data.
 
-if (_unitfaction == "IND_F") exitwith {
+if (_unitfaction == "ind_f") exitwith {
 
-#include "f\common\f_briefing_aaf.sqf"
+#include "f\briefing\f_briefing_aaf.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then
@@ -107,9 +107,9 @@ if (_unitfaction == "IND_F") exitwith {
 // The following block of code executes only if the player is in a CIVILIAN
 // slot; it automatically includes a file which contains the appropriate briefing data.
 
-if (_unitfaction == "CIV_F") exitwith {
+if (_unitfaction == "civ_f") exitwith {
 
-#include "f\common\f_briefing_civ.sqf"
+#include "f\briefing\f_briefing_civ.sqf"
 
 // DEBUG
 	if (f_var_debugMode == 1) then

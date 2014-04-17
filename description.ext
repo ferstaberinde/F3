@@ -134,7 +134,7 @@ class Params
 		title = "Fog";
 		values[] = {0,1,2};
 		texts[] = {"None","Light","Heavy"};
-		default = 2;
+		default = 0;
 		function = "f_fnc_SetFog";			// This function is called to apply the values
 		isGlobal = 0;						// Execute this only on the server
 		code = "f_param_fog = %1";
@@ -203,9 +203,8 @@ class Params
 
 	class f_param_caching
 	{
-		title = "$STR_f_param_caching";
+		title = "Cache AI outside distance:";
 		values[] = {0,600,800,1000,1500,2000};
-		texts[] = {$STR_f_param_caching_Option0,$STR_f_param_caching_Option1,$STR_f_param_caching_Option2,$STR_f_param_caching_Option3,$STR_f_param_caching_Option4,$STR_f_param_caching_Option5};
 		default = 0;
 		code = "f_param_caching = %1";
 	};
@@ -323,67 +322,39 @@ class CfgFunctions
 				postInit = 1;
 			};
 
-			class SetAISKill
-			{
-			};
-			class localGroupMarker
-			{
-			};
-			class SetLocalFTMemberMarkers
-			{
-			};
-			class GetMarkerColor
-			{
-			};
-			class LocalFTMarkerSync
-			{
-			};
-			class localSpecialistMarker
-			{
-			};
-			class drawNameTag
-			{
-			};
-
-			class removeBody
-			{
-			};
-			class nearPlayer
-			{
-			};
-			class setGroupID
-			{
-			};
-
+			class SetAISKill{};
+			class localGroupMarker{};
+			class SetLocalFTMemberMarkers{};
+			class GetMarkerColor{};
+			class LocalFTMarkerSync{};
+			class localSpecialistMarker{};
+			class drawNameTag{};
+			class removeBody{};
+			class nearPlayer{};
 		};
 		class mpEnd
 		{
 			file = "f\mpEnd";
-			class mpEnd
-			{
-			};
-			class mpEndReceiver
-			{
-			};
+			class mpEnd{};
+			class mpEndReceiver{};
 		};
 		class assignGear
 		{
 			// Defines the functions to preInit the compling of the assignGear function used by units.
 			file = "f\assignGear";
-			class assignGear;
+			class assignGear{};
+		};
+		class setGroupID
+		{
+			file = "f\setGroupID";
+			class setGroupID{};
 		};
 		class missionConditions
 		{
 			file = "f\missionConditions";
-			class SetTime
-			{
-			};
-			class SetFog
-			{
-			};
-			class SetWeather
-			{
-			};
+			class SetTime{};
+			class SetFog{};
+			class SetWeather{};
 		};
 		class cache
 		{
