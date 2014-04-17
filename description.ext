@@ -312,7 +312,7 @@ class CfgFunctions
 {
 	class F // Defines the "owner"
 	{
-		class common // catagory
+		class common // category
 		{
 			file = "f\common";
 			// Defines the function to preInit (the paramArray dosent seem to be constructed at preInit stage).
@@ -331,6 +331,7 @@ class CfgFunctions
 			class drawNameTag{};
 			class removeBody{};
 			class nearPlayer{};
+			class preMount{};
 		};
 		class mpEnd
 		{
