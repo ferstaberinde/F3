@@ -342,6 +342,10 @@ class CfgFunctions
 			class nearPlayer
 			{
 			};
+			class setGroupID
+			{
+			};
+
 		};
 		class mpEnd
 		{
