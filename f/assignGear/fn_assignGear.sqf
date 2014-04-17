@@ -81,7 +81,7 @@ if (f_var_debugMode == 1) then
 
 
 if (_faction == "blu_f") then {
-#include "folk_assignGear_nato.sqf"
+#include "f_assignGear_nato.sqf"
 };
 
 
@@ -122,7 +122,7 @@ if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
 _useACRE = "f_param_acre" call BIS_fnc_getParamValue;;
 
 if (_useACRE == 1) then {
-	_this execVM "f\common\fa_ACRE_assignGear.sqf";
+	_this execVM "f\assignGear\acre\f_ACRE_assignGear.sqf";
 };
 // ====================================================================================
 
@@ -149,6 +149,6 @@ if (isNil "_carbine") then { //_carbine should exist unless no faction has been 
 _useACRE = "f_param_acre" call BIS_fnc_getParamValue;;
 
 if (_useACRE == 1) then {
-	_setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
+	_setFreqsHandle = _this execVM "f\assignGear\acre\f_ACRE_setFrequencies.sqf";
 };
 // ====================================================================================
