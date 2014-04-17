@@ -118,22 +118,38 @@ class Params
 // F3 - Mission Conditions Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-        class f_param_timeOfDay
-        {
-                title = "$STR_f_param_timeOfDay";
-                values[] = {0,1,2,3,4,5,6,7};
-                texts[] = {$STR_f_param_timeOfDay_Option0,$STR_f_param_timeOfDay_Option1,$STR_f_param_timeOfDay_Option2,$STR_f_param_timeOfDay_Option3,$STR_f_param_timeOfDay_Option4,$STR_f_param_timeOfDay_Option5,$STR_f_param_timeOfDay_Option6,$STR_f_param_timeOfDay_Option7};
-                default = 3;
-                code = "f_param_timeOfDay = %1";
-        };
-
 	class f_param_weather
 	{
 		title = "$STR_f_param_weather";
-		values[] = {0,1,2,3,4,5,6,7,8,9,10};
-		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option9,$STR_f_param_weather_Option10};
+		values[] = {0,1,2,3,4,5,6,7,8};
+		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8};
 		default = 0;
+		function = "f_fnc_setWeather";		// This function is called to apply the values
+		isGlobal = 0;						// Execute this only on the server
 		code = "f_param_weather = %1";
+	};
+
+	class f_param_fog
+	{
+		title = "Fog";
+		values[] = {0,1,2};
+		texts[] = {"None","Light","Heavy"};
+		default = 2;
+		function = "f_fnc_SetFog";			// This function is called to apply the values
+		isGlobal = 0;						// Execute this only on the server
+		code = "f_param_fog = %1";
+	};
+
+
+    class f_param_timeOfDay
+	{
+		title = "$STR_f_param_timeOfDay";
+		values[] = {0,1,2,3,4,5,6,7};
+		texts[] = {$STR_f_param_timeOfDay_Option0,$STR_f_param_timeOfDay_Option1,$STR_f_param_timeOfDay_Option2,$STR_f_param_timeOfDay_Option3,$STR_f_param_timeOfDay_Option4,$STR_f_param_timeOfDay_Option5,$STR_f_param_timeOfDay_Option6,$STR_f_param_timeOfDay_Option7};
+		default = 4;
+		function = "f_fnc_setTime";			// This function is called to apply the values
+ 		isGlobal = 0;						// Execute this only on the server
+ 		code = "f_param_timeOfDay = %1";
 	};
 
 // ============================================================================================
@@ -306,9 +322,7 @@ class CfgFunctions
 				preInit = 1;
 				postInit = 1;
 			};
-			class SetWeather
-			{
-			};
+
 			class SetAISKill
 			{
 			};
@@ -357,6 +371,19 @@ class CfgFunctions
 			// Defines the functions to preInit the compling of the assignGear function used by units.
 			file = "f\assignGear";
 			class assignGear;
+		};
+		class missionConditions
+		{
+			file = "f\missionConditions";
+			class SetTime
+			{
+			};
+			class SetFog
+			{
+			};
+			class SetWeather
+			{
+			};
 		};
 		class cache
 		{
