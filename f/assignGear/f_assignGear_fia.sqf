@@ -200,7 +200,7 @@ _unit = _this select 1;					// expecting name of unit; originally passed by usin
 // HANDLE CLOTHES
 // Handle clothes and helmets and such using the include file called next.
 
-#include "f_assignGear_clothes.sqf";
+#include "core\f_assignGear_clothes.sqf";
 
 // ====================================================================================
 
@@ -625,7 +625,7 @@ switch (_typeofUnit) do
 
 // Handle weapon attachments here.
 
-#include "f_assignGear_attach.sqf";
+#include "core\f_assignGear_attach.sqf";
 
 // ====================================================================================
 
