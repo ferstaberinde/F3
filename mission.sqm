@@ -42,8 +42,8 @@ class Mission
 		"A3_Armor_F_Slammer",
 		"A3_Armor_F_APC_Wheeled_03",
 		"A3_Armor_F_T100K",
-		"a3_armor_f_epb_mbt_03",
-		"a3_air_f_epb_heli_light_03",
+		"A3_Armor_F_EPB_MBT_03",
+		"A3_Air_F_EPB_Heli_Light_03",
 		"a3_map_altis"
 	};
 	randomSeed=11823142;
@@ -1119,7 +1119,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_B1_FTL";
-					init="GrpCSAT_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear;";
+					init="GrpCSAT_B1 = group this; nul = [""ftl"",this] call f_fnc_folk_assignGear;";
 					description="CSAT Bravo 1 Fireteam Leader";
 				};
 				class Item1
