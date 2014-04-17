@@ -7581,7 +7581,8 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					init="[synchronizedObjects this,[GrpAAF_ASL,GrpAAF_A1,GrpAAF_A2,GrpAAF_A3],true,false] call f_fnc_preMount;";
+					text="F3_preMount_AAF";
+					init="[synchronizedObjects this,[""GrpAAF_ASL"",""GrpAAF_A1"",""GrpAAF_A2"",""GrpAAF_A3""],true,false] call f_fnc_preMount;";
 					syncId=0;
 					synchronizations[]={6};
 				};
@@ -7601,7 +7602,8 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					init="[synchronizedObjects this,[GrpNATO_ASL,GrpNATO_A1,GrpNATO_A2,GrpNATO_A3],true,false] call f_fnc_preMount;";
+					text="F3_preMount_NATO";
+					init="[synchronizedObjects this,[""GrpNATO_ASL"",""GrpNATO_A1"",""GrpNATO_A2"",""GrpNATO_A3""],true,false] call f_fnc_preMount;";
 					syncId=1;
 					synchronizations[]={7};
 				};
@@ -7621,7 +7623,8 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					init="[synchronizedObjects this,[GrpCSAT_ASL,GrpCSAT_A1,GrpCSAT_A2,GrpCSAT_A3],true,false] call f_fnc_preMount;";
+					text="F3_preMount_CSAT";
+					init="[synchronizedObjects this,[""GrpCSAT_ASL"",""GrpCSAT_A1"",""GrpCSAT_A2"",""GrpCSAT_A3""],true,false] call f_fnc_preMount;";
 					syncId=2;
 					synchronizations[]={8};
 				};
@@ -7641,7 +7644,8 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					init="[synchronizedObjects this,[GrpOFIA_ASL,GrpOFIA_A1,GrpOFIA_A2,GrpOFIA_A3],true,false] call f_fnc_preMount;";
+					text="F3_preMount_OFIA";
+					init="[synchronizedObjects this,[""GrpOFIA_ASL"",""GrpOFIA_A1"",""GrpOFIA_A2"",""GrpOFIA_A3""],true,false] call f_fnc_preMount;";
 					syncId=3;
 					synchronizations[]={10,13};
 				};
@@ -7661,7 +7665,8 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					init="[synchronizedObjects this,[GrpFIA_ASL,GrpFIA_A1,GrpFIA_A2,GrpFIA_A3],true,false] call f_fnc_preMount;";
+					text="F3_preMount_FIA";
+					init="[synchronizedObjects this,[""GrpFIA_ASL"",""GrpFIA_A1"",""GrpFIA_A2"",""GrpFIA_A3""],true,false] call f_fnc_preMount;";
 					syncId=4;
 					synchronizations[]={9,12};
 				};
@@ -7681,7 +7686,8 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					init="[synchronizedObjects this,[GrpIFIA_ASL,GrpIFIA_A1,GrpIFIA_A2,GrpIFIA_A3],true,false] call f_fnc_preMount;";
+					text="F3_preMount_IFIA";
+					init="[synchronizedObjects this,[""GrpIFIA_ASL"",""GrpIFIA_A1"",""GrpIFIA_A2"",""GrpIFIA_A3""],true,false] call f_fnc_preMount;";
 					syncId=5;
 					synchronizations[]={11,14};
 				};
