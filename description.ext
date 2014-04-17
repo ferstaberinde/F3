@@ -335,10 +335,21 @@ class CfgFunctions
 			class drawNameTag
 			{
 			};
+
 			class removeBody
 			{
 			};
 			class nearPlayer
+			{
+			};
+		};
+		class mpEnd
+		{
+			file = "f\mpEnd";
+			class mpEnd
+			{
+			};
+			class mpEndReceiver
 			{
 			};
 		};
@@ -354,7 +365,7 @@ class CfgFunctions
 		{
 			file = "f\spect";
 			class cam_init{};
-		}
+		};
 	};
 };
 
