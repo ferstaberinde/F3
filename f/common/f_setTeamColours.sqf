@@ -15,9 +15,9 @@ private ["_unit","_isFireteam"];
 
 // ====================================================================================
 
-// WAIT UNTIL 2 SECONDS INTO THE MISSION
+// WAIT UNTIL 10 SECONDS AFTER INITIALIZING
 
-waitUntil {time > 2};
+sleep 10;
 
 // ====================================================================================
 
