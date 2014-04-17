@@ -23,6 +23,9 @@ GrpPickInit =
         };
     } forEach allGroups;
 
+     GrpList set [GrpCount, grpNull];
+     _idx = COMBO lbAdd "NONE"; COMBO lbSetValue [_idx, GrpCount + 1];
+
     _sel = player getVariable "GrpPicker_Selection";
     if (!isNil '_sel') then
     {

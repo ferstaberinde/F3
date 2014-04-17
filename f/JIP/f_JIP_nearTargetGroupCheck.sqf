@@ -16,6 +16,10 @@ _joinDistance = _this select 1;
 
 // ====================================================================================
 
+if (isNull _grp) exitWith {
+	[player] joinSilent grpNull;
+};
+
 while {true} do
 {
 
@@ -26,7 +30,7 @@ while {true} do
 // establish a baseline value to compare against.
 
 _alive = {alive _x} count (units _grp);
-if (_alive == 0) exitWith {nul = [player] execVM "f\JIP\f_JIP_addReinforcementOptionsAction.sqf";};
+if (_alive == 0) exitWith {[player] execVM "f\JIP\f_JIP_addReinforcementOptionsAction.sqf";};
 
 // DEBUG
 if (f_var_debugMode == 1) then
