@@ -79,8 +79,9 @@ if (f_var_debugMode == 1) then
 // The following block of code executes only if the unit is in a NATO slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "BLU_F") then {
-	#include "f_assignGear_nato.sqf"
+
+if (_faction == "blu_f") then {
+#include "f_assignGear_nato.sqf"
 };
 
 
@@ -90,7 +91,7 @@ if (_faction == "BLU_F") then {
 // The following block of code executes only if the unit is in a CSAT slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "OPF_F") then {
+if (_faction == "opf_f") then {
 	#include "f_assignGear_csat.sqf"
 };
 
@@ -100,10 +101,9 @@ if (_faction == "OPF_F") then {
 // The following block of code executes only if the unit is in a AAF slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if(_faction == "IND_F") then {
+if(_faction == "ind_f") then {
 	#include "f_assignGear_aaf.sqf";
 };
-
 
 // ====================================================================================
 
@@ -122,7 +122,7 @@ if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
 _useACRE = "f_param_acre" call BIS_fnc_getParamValue;;
 
 if (_useACRE == 1) then {
-	_this execVM "f\common\fa_ACRE_assignGear.sqf";
+	_this execVM "f\assignGear\acre\f_ACRE_assignGear.sqf";
 };
 // ====================================================================================
 
@@ -149,6 +149,6 @@ if (isNil "_carbine") then { //_carbine should exist unless no faction has been 
 _useACRE = "f_param_acre" call BIS_fnc_getParamValue;;
 
 if (_useACRE == 1) then {
-	_setFreqsHandle = _this execVM "f\common\fa_ACRE_setFrequencies.sqf";
+	_setFreqsHandle = _this execVM "f\assignGear\acre\f_ACRE_setFrequencies.sqf";
 };
 // ====================================================================================
