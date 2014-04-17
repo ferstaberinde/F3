@@ -20,7 +20,7 @@ private ["_grps","_pc","_end","_started","_remaining","_counter","_grpsno","_grp
 // Up to 5 variables are passed to the script:
 // 0: = Side (e.g. BLUFOR), or group name(s) as string array (e.g. ["mrGroup1","myGroup2"])
 // 1: = What % of units must be dead before the ending is triggered
-// 2: = What ending will be executed 
+// 2: = What ending will be executed
 // 3: = If only groups with a playable leader slot will be included (uses 1 for 'true', 0 for 'false'; default is 1)
 // 4: = What faction(s) to filter for if the first variable is a Side  (e.g. ["blu_f"])
 // Note: the last two variables are optional, and may not be passed to the script.
@@ -53,11 +53,11 @@ _type = typeName _grpstemp; // Grab the type name
 
 if(_type == "SIDE") then // if the variable is any of the side variables use it to consturct a list of groups in that faction.
 {
-	_temp_grp = []; 
+	_temp_grp = [];
 	{
 		if(_onlyPlayers == 1) then
 		{
-			if((side _x == _grpstemp) && (leader _x in playableUnits)) then 
+			if((side _x == _grpstemp) && (leader _x in playableUnits)) then
 			{
 				_temp_grp = _temp_grp + [_x]; // Add group to array
 
@@ -65,20 +65,20 @@ if(_type == "SIDE") then // if the variable is any of the side variables use it 
 		}
 		else
 		{
-			if((side _x == _grpstemp)) then 
+			if((side _x == _grpstemp)) then
 			{
 				_temp_grp = _temp_grp + [_x]; // Add group to array
 			}
 		}
-	
+
 	} forEach allGroups;
 	if(!isnil "_faction") then
 	{
-		_temp_grp2 = []; 
+		_temp_grp2 = [];
 		{
 			if(faction (leader _x) in _faction) then
 			{
-				_temp_grp2 = _temp_grp2 + [_x]; 
+				_temp_grp2 = _temp_grp2 + [_x];
 			};
 		} forEach _temp_grp;
 		_temp_grp = _temp_grp2;
@@ -99,7 +99,7 @@ else
 		};
 	} foreach _grpstemp;
 	_grpstemp = _temp_grp;
-	
+
 };
 
 // ====================================================================================
@@ -112,7 +112,7 @@ if (f_var_debugMode == 1) then
 // ====================================================================================
 
 // CLEAN OUT EMPTY GROUPS
-// 10 seconds into the mission, we cycle through _grpstemp and only add valid groups 
+// 10 seconds into the mission, we cycle through _grpstemp and only add valid groups
 // to _grps:
 
 sleep 10;
@@ -121,7 +121,7 @@ _counter = 0;
 _grpsno = count _grpstemp;
 _grps = [];
 
-while {_counter < _grpsno} do 
+while {_counter < _grpsno} do
 {
 	_grpsel = _grpstemp select _counter;
 	_alive = {alive _x} count (units _grpsel);
@@ -161,33 +161,33 @@ if (f_var_debugMode == 1) then
 
 for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
 {
-	_remaining = 0;	
+	_remaining = 0;
 	_counter = 0;
 	_grpsno = count _grps;
-	while {_counter < _grpsno} do 
+	while {_counter < _grpsno} do
 	{
 		_grpsel = _grps select _counter;
 		_alive = {alive _x} count (units _grpsel);
 		_remaining = (_remaining  + _alive);
 		_counter = (_counter + 1);
 	};
-	
+
 // DEBUG
 	if (f_var_debugMode == 1) then
 	{
 		player sideChat format ["DEBUG (f\server\f_endOnCasualtiesCap.sqf): _remaining = %1",_remaining];
 	};
-	
-	if (_remaining == 0) then 
+
+	if (_remaining == 0) then
 	{
-		myEnd = [_end] execVM "f\server\f_mpEndBroadcast.sqf";
+		myEnd = [_end] call f_fnc_mpEndBroadcast;
 	};
-	if (((_started - _remaining) / _started) >= (_pc / 100)) then 
+	if (((_started - _remaining) / _started) >= (_pc / 100)) then
 	{
-		
-		myEnd = [_end] execVM "f\server\f_mpEndBroadcast.sqf";
+
+		myEnd = [_end] call f_fnc_mpEndBroadcast;
 	};
-	sleep 6;	
+	sleep 6;
 };
 
 // ====================================================================================
