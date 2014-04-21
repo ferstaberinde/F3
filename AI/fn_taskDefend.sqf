@@ -11,7 +11,7 @@ NOTE
 To avoid perfomance issues the garrisoning troops will just enter the building and stay there, they won't necessarily face in a smart direction
 
 RETURNS
-[mil buildings occupied (array), civ buildings occupied (array), units left (array)]
+units outside buildings (array)
 
 USAGE
 Minimal:
@@ -36,10 +36,10 @@ EXAMPLE
 
 private ["_debug","_game","_count","_milarrayA2","_badarrayA2","_badarrayA3","_milarrayA3",
 "_group","_newGroup","_pos","_radius","_guns","_garrison","_civil",
-"_buildings","_vehicles","_milbuildings","_staticarray","_badarray","_milarray","_units","_static"];
+"_buildings","_vehicles","_milbuildings","_staticarray","_badarray","_milarray","_units","_static","_mkr"];
 
 //Customizable Variables
-_treshold = 3; //Minimum number of available building positions for a civilian building to be considered (for mil. building all spots will always be used)
+_treshold = 2; //Minimum number of available building positions for a civilian building to be considered (for mil. building all spots will always be used)
 
 // ARMA 2 only
 // Military buildings that are garrisoned before civilian buildings
@@ -103,14 +103,14 @@ _group enableAttack false; // Prevent the group leader to issue attack orders to
 if (count _milbuildings > 0 && count _units > 0 && _garrison) then {
 _units = [_units,_milbuildings,0] call ws_fnc_enterbuilding;
 
-if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _milbuildings;};
+	if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _milbuildings;};
 };
 
 
 //Take position in regular buildings
 if (count _buildings > 0 && count _units > 0 && _civil) then {
 _units = [_units,_buildings,_treshold] call ws_fnc_enterbuilding;
-if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _buildings;};
+	if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _buildings;};
 };
 
 
@@ -123,5 +123,5 @@ if (count _units >= 1) then {
 	};
 };
 
-[_milbuildings,_buildings,_units]
+_units
 

@@ -41,7 +41,7 @@ if (typeName _bposarray != typeName []) then {
 	if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.3,0.3];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";} forEach _bposarray;};
 };
 
-_building setVariable ["ws_bpos",_bposarray];
+_building setVariable ["ws_bpos",_bposarray,true];
 
 //["ws_fnc_getBpos DBG1: ",[_building,(_building getVariable "ws_bpos"),_occupied],""] call ws_fnc_debugText;
 

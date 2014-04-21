@@ -118,7 +118,7 @@ for "_x" from 1 to _int do {
 
     if (random 1 > 0.75) then {_u setunitpos "Middle";} else {_u setUnitPos "UP"};
 
-  	_u setVariable ["ws_bpos",_bp];
+  	_u setVariable ["ws_bpos",_bp,true];
 
   	if (_debug) then
   	{_mkr = createMarker [format ["%1-bpos",_u],getPos _u];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorGreen";};
@@ -126,7 +126,7 @@ for "_x" from 1 to _int do {
   	// Remove the building position from the array
 	_bpa set [_i,0];			//Workaround as in http://community.bistudio.com/wiki/Array#Subtraction
 	_bpa = _bpa - [0];
-	_b setVariable ["ws_bpos",_bpa];
+	_b setVariable ["ws_bpos",_bpa,true];
 
 };
 

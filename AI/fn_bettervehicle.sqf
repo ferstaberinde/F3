@@ -76,7 +76,7 @@ if (isNil "_handle") then {
 
 	_unit = _x;
 	_unit allowCrewInImmobile true;
-	_unit setvariable ["ws_better_vehicle",_alloweddamage];
+	_unit setvariable ["ws_better_vehicle",_alloweddamage,true];
 
 	_unit addEventHandler [
 		"Hit",
