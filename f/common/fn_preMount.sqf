@@ -19,6 +19,21 @@ _fill = if (count _this > 3) then {_this select 3} else {false};
 
 // ====================================================================================
 
+// CLEAN THE GROUP ARRAY
+// First we check if there are illegal groups in the array and fix it accordingly
+
+if ({isNil _x} count _grps > 0) then {
+	{
+		if (isNil _x) then {
+			_grps set [_forEachIndex,grpNull];
+		};
+
+	} forEach _grps;
+	_grps = _grps - [grpNull];
+};
+
+// ====================================================================================
+
 // PROCESS VARIABLES
 // We make sure that there are only vehicles in the vehicle array
 // If a soldier-unit is in the array then we check if we can use the vehicle he's in
@@ -32,11 +47,16 @@ _fill = if (count _this > 3) then {_this select 3} else {false};
  };
 } forEach _vehs;
 
+
 // We check the passed groups to make sure none of them is empty and they have at least one unit that's not inside a vehicle
 {
- if (count units _x == 0 || {isNull (assignedVehicle _x)} count units _x == 0) then {
- 	_grps = _grps - [_grp];
- };
+	_grp = call compile format ["%1",_x];
+	_grps set [_forEachIndex,_grp];
+
+	if (count (units _grp) == 0 || {isNull (assignedVehicle _x)} count (units _grp) == 0) then {
+	 	_grps = _grps - [_grp];
+	};
+
 } forEach _grps;
 
 // ====================================================================================
@@ -102,11 +122,12 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 		};
 
 		// Check if all units in the group have been assigned a vehicle, if yes, remove the group from the array.
-		if ({isNull (assignedVehicle _x)} count units _grp == 0) then {_grps = _grps - [_grp];};
+		if ({isNull (assignedVehicle _x)} count units _grp == 0) then {_grps = _grps - [_grp];_grpsT = _grpsT - [_grp];};
 
 		// Recalculate the remaining seats on the vehicle
 		_emptyPositions = 0;
 		{_emptyPositions = _emptyPositions + (_veh emptyPositions _x)} forEach ["driver","commander","gunner","cargo"];
+
 	};
 
 } forEach _vehs;
