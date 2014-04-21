@@ -130,8 +130,8 @@ _MMGmag_tr = "150Rnd_762x51_Box_Tracer";
 _MMG_attach = ["acc_pointer_IR","optic_ACO"];
 
 // Rifleman AT
-_RAT = "launch_NLAW_F";
-_RATmag = "NLAW_F";
+_RAT = "launch_RPG32_F";
+_RATmag = "RPG32_F";
 
 // Mortar
 _MTR = "B_Mk6Mortar_Wpn";
@@ -722,7 +722,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,2];
-		_unit addWeapon "Binocular";
+		_unit addWeapon "Rangefinder";
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
 		["g"] call _backpack;
@@ -742,7 +742,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,2];
-		_unit addWeapon "Binocular";
+		_unit addWeapon "Rangefinder";
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
 		["g"] call _backpack;
@@ -770,7 +770,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,2];
-		_unit addWeapon "Binocular";
+		_unit addWeapon "Rangefinder";
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
 		["g"] call _backpack;
@@ -784,7 +784,6 @@ switch (_typeofUnit) do
 		_unit addweapon _AR;
 		_unit addmagazines [_grenade,1];
 		_unit addmagazines [_mgrenade,1];
-
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
@@ -800,6 +799,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade,2];
 		_unit addmagazines [_mgrenade,2];
 		_unit addmagazines [_smokegrenade,2];
+		_unit addWeapon "Binocular";
 		["aar"] call _backpack;
 	};
 
@@ -835,7 +835,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag,7];
 		_unit addmagazines [_riflemag_tr,2];
 		_unit addweapon _rifle;
-		_unit addWeapon "Binocular";
+		_unit addWeapon "Rangefinder";
 		_unit addmagazines [_grenade,1];
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,2];
@@ -859,7 +859,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag,7];
 		_unit addmagazines [_carbinemag_tr,2];
 		_unit addweapon _rifle;
-		_unit addWeapon "Binocular";
+		_unit addWeapon "Rangefinder";
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_riflemag,2];
 		_unit addmagazines [_grenade,1];
@@ -885,7 +885,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag_tr,2];
 		_unit addweapon _carbine;
 		_unit addmagazines [_smokegrenade,2];
-		_unit addWeapon "Binocular";
+		_unit addWeapon "Rangefinder";
 		_unit addBackpack _MTRmount;
 	};
 
