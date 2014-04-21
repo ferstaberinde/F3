@@ -781,7 +781,6 @@ switch (_typeofUnit) do
 	case "ar":
 	{
 		_unit addmagazines [_ARmag,2];
-		_unit addmagazines [_ARmag_Tr,2];
 		_unit addweapon _AR;
 		_unit addmagazines [_grenade,1];
 		_unit addmagazines [_mgrenade,1];
