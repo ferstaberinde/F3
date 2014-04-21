@@ -130,8 +130,8 @@ _MMGmag_tr = "150Rnd_762x51_Box_Tracer";
 _MMG_attach = ["acc_pointer_IR","optic_ACO"];
 
 // Rifleman AT
-_RAT = "launch_NLAW_F";
-_RATmag = "NLAW_F";
+_RAT = "launch_RPG32_F";
+_RATmag = "RPG32_F";
 
 // Mortar
 _MTR = "B_Mk6Mortar_Wpn";
