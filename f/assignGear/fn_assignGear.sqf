@@ -29,6 +29,13 @@ if !(local _unit) exitWith {};
 
 // ====================================================================================
 
+// SET A PUBLIC VARIABLE
+// A public variable is set on the unit, indicating their type. This is mostly relevant for the F3 respawn component
+
+_unit setVariable ["f_var_assignGear",_typeofUnit,true];
+
+// ====================================================================================
+
 // DECLARE VARIABLES AND FUNCTIONS 2
 
 private [

@@ -32,8 +32,11 @@ _grp = (player getVariable "f_var_JIP_grp");
 // Using a dialog we allow the player to select the loadout s/he requires.
 
 f_var_JIP_state = 2;
-x = createDialog "KitPicker";
-waitUntil {f_var_JIP_state == 3};
+if (f_respawnGearMenu) then {
+	x = createDialog "KitPicker";
+	waitUntil {f_var_JIP_state == 3};
+};
+
 _loadout = (player getVariable "f_var_JIP_loadout");
 
 // ====================================================================================
