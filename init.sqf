@@ -7,15 +7,6 @@ enableSaving [false, false];
 
 // ====================================================================================
 
-// F3 - Respawn INIT
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-f_respawnINIT = player addEventHandler ["respawn", {_this execVM "init_onPlayerRespawn.sqf"}];
-f_respawnRemoveCorpse = true;	// If the player's corpse should be removed straightaway
-f_respawnGearMenu = true;		// If a respawned player should get a menu to select new gear. If set to false he get's the gear initially assigned to him by f_fnc_assignGear
-
-// ====================================================================================
-
 // F3 - Mission Maker Teleport
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -187,8 +178,14 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 
 // ====================================================================================
 
+// F3 - JIP setup
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[] execVM "f\JIP\f_JIP_setup.sqf";
+
+// ====================================================================================
+
 // F3 - AI Unit Caching
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [30] spawn f_fnc_cInit;
-

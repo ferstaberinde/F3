@@ -2,16 +2,6 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// MAKE SURE THE PLAYER INITIALIZES PROPERLY
-
-if (!isDedicated && (player != player)) then
-{
-    waitUntil {player == player};
-};
-
-
-// ====================================================================================
-
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_unit","_textAction"];
