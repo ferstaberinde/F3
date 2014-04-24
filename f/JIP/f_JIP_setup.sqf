@@ -20,8 +20,7 @@ if (isServer) then {
 if (!isDedicated) then {
 
 	// MAKE SURE THE PLAYER INITIALIZES PROPERLY
-	sleep 0.1;
-	waitUntil {player == player};
+	waitUntil {sleep 0.1; !isNull player};
 
 	f_respawnINIT = player addMPEventHandler ["MPRespawn", {_this execVM "init_onPlayerRespawn.sqf"}];
 };
