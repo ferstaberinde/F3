@@ -7,13 +7,6 @@ enableSaving [false, false];
 
 // ====================================================================================
 
-// F3 - Respawn INIT
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-f_respawnINIT = player addEventHandler ["killed", {_this execVM "init_onPlayerRespawn.sqf"}];
-
-// ====================================================================================
-
 // F3 - Mission Maker Teleport
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -185,8 +178,14 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 
 // ====================================================================================
 
+// F3 - JIP setup
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[] execVM "f\JIP\f_JIP_setup.sqf";
+
+// ====================================================================================
+
 // F3 - AI Unit Caching
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [30] spawn f_fnc_cInit;
-

@@ -2,10 +2,6 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-
-
-// ====================================================================================
-
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_faction","_typeofUnit","_unit"];
@@ -26,6 +22,13 @@ _faction = toLower (faction _unit);
 // Depending on locality the script decides if it should run
 
 if !(local _unit) exitWith {};
+
+// ====================================================================================
+
+// SET A PUBLIC VARIABLE
+// A public variable is set on the unit, indicating their type. This is mostly relevant for the F3 respawn component
+
+_unit setVariable ["f_var_assignGear",_typeofUnit,true];
 
 // ====================================================================================
 

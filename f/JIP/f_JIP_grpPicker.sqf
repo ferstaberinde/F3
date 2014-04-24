@@ -14,11 +14,18 @@ GrpPickInit =
     {
         private "_grp";
         _grp = _x;
-        if (side(_grp) == side(player) && (faction (leader _grp) == faction player ) && (alive (leader _grp) ) && (_grp != group(player))) then
+        if (side(_grp) == side(player) && {(faction (leader _grp) == faction player ) && (alive (leader _grp)) && !(_grp == group player)}) then
         {
             GrpList set [GrpCount, _grp];
             private "_idx";
             _idx = COMBO lbAdd str(_grp); COMBO lbSetValue [_idx, GrpCount + 1];
+            GrpCount = GrpCount + 1;
+        };
+
+        if (_grp == group player && {count units _grp > 1}) then {
+            GrpList set [GrpCount, _grp];
+            private "_idx";
+            _idx = COMBO lbAdd ("Keep " + str(_grp)); COMBO lbSetValue [_idx, GrpCount + 1];
             GrpCount = GrpCount + 1;
         };
     } forEach allGroups;
