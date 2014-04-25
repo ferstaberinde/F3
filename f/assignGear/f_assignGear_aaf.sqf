@@ -244,7 +244,11 @@ _unit assignItem _nvg;					// add universal NVG for this faction
 // Include the correct backpack file for the faction
 
 _backpack = {
-	#include "f_assignGear_backpack_aaf.sqf";
+	_typeofBackPack = _this select 0;
+	switch (_typeofBackPack) do
+	{
+		#include "f_assignGear_b_faction";
+	};
 };
 
 // ====================================================================================

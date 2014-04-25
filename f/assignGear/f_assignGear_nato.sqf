@@ -240,9 +240,7 @@ _unit assignItem _nvg;					// add universal NVG for this faction
 // SETUP BACKPACKS
 // Include the correct backpack file for the faction
 
-_backpack = {
-	#include "f_assignGear_backpack_nato.sqf";
-};
+_backpack = f_fnc_assignBackpack_nato;
 
 // ====================================================================================
 
