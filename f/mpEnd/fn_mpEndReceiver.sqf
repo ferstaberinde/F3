@@ -41,6 +41,7 @@ if (f_var_debugMode == 1) then
 switch (_ending) do
 {
 // Ending #1
+	case 1:
 	{
 // Place any custom code for ending #1 after this line:
 
