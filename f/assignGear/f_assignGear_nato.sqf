@@ -243,7 +243,7 @@ _backpack = {
 	_typeofBackPack = _this select 0;
 	switch (_typeofBackPack) do
 	{
-		#include "f_assignGear_nato_b";
+		#include "f_assignGear_nato_b.sqf";
 	};
 };
 
