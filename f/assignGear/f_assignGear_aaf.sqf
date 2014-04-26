@@ -44,8 +44,8 @@ _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
 _scope1 = "optic_ACO_grn";		// ACO
-_scope2 = "optic_MRCO_grn";		// MRCO Scope
-_scope3 = "optic_SOS";			// SOS Scope - 10x
+_scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
+_scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
 // Default setup
 _attachments = [_attach1,_scope1,nil]; // The default attachment set for most units, overwritten in the individual unitType
@@ -59,7 +59,7 @@ _attachments = [_attach1,_scope1,nil]; // The default attachment set for most un
 // WEAPON SELECTION
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
-_rifle = "arifle_Mk20_MRCO_F";
+_rifle = "arifle_Mk20_F";
 _riflemag = "30Rnd_556x45_Stanag";
 _riflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
 
@@ -976,6 +976,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade,3];
 		_unit addmagazines [_mgrenade,3];
 		_unit addmagazines [_smokegrenade,3];
+		_attachments = [_attach1,_scope1,_silencer1];
 		["div"] call _backpack;
 	};
 // LOADOUT: SUBMACHINEGUNNER
