@@ -168,6 +168,9 @@ _crews = ["c"];
 // The outfit-piece is randomly selected from the array for each unit
 _baseUniform = ["U_B_CombatUniform_mcam"];
 _baseHelmet = ["H_HelmetB"];
+_baseGlasses = [];
+
+// Armored vests
 _lightRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];
 _mediumRig = ["V_PlateCarrier1_rgr","V_PlateCarrier2_rgr"]; 	// default for all infantry classes
 _heavyRig = ["V_PlateCarrier3_rgr"];
@@ -178,16 +181,17 @@ _diverHelmet = [];
 _diverRig = ["V_RebreatherB"];
 _diverGlasses = ["G_Diving"];
 
-
 // Pilot
 _pilotUniform = ["U_B_HeliPilotCoveralls"];
 _pilotHelmet = ["H_PilotHelmetHeli_B"];
 _pilotRig = ["V_TacVest_blk"];
+_pilotGlasses = [];
 
 // Crewman
 _crewUniform = ["U_B_CombatUniform_mcam_vest"];
 _crewHelmet = ["H_HelmetCrew_B"];
 _crewRig = ["V_TacVest_blk"];
+_crewGlasses = [];
 
 // ====================================================================================
 

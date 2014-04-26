@@ -171,11 +171,13 @@ _crews = ["c"];
 // Woodland-Hex
 _baseUniform = ["U_O_CombatUniform_ocamo"];
 _baseHelmet = ["H_HelmetO_ocamo"];
+_baseGlasses = [];
 
 // Urban
 //_baseUniform = ["U_O_CombatUniform_oucamo"];
 //_baseHelmet = ["H_HelmetO_oucamo"];
 
+// Armored vests
 _lightRig = ["V_HarnessO_brn"];
 _mediumRig = ["V_HarnessOGL_brn"]; 	// default for all infantry classes
 _heavyRig = ["V_HarnessOGL_brn"];
@@ -190,11 +192,13 @@ _diverGlasses = ["G_Diving"];
 _pilotUniform = ["U_O_PilotCoveralls"];
 _pilotHelmet = ["H_PilotHelmetHeli_O"];
 _pilotRig = ["V_HarnessO_brn"];
+_pilotGlasses = [];
 
 // Crewman
 _crewUniform = ["U_O_SpecopsUniform_ocamo"];
 _crewHelmet = ["H_HelmetCrew_O"];
 _crewRig = ["V_HarnessO_brn"];
+_crewGlasses = [];
 
 // ====================================================================================
 

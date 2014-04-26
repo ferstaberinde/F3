@@ -170,6 +170,7 @@ _crews = ["c"];
 
 _baseUniform = ["U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt"];
 _baseHelmet = ["H_HelmetIA_net","H_HelmetIA_camo","H_HelmetIA"];
+_baseGlasses = [];
 
 // Armored vests
 _lightRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];
@@ -186,11 +187,13 @@ _diverGlasses = ["G_Diving"];
 _pilotUniform = ["U_I_HeliPilotCoveralls"];
 _pilotHelmet = ["H_PilotHelmetHeli_I"];
 _pilotRig = ["V_TacVest_oli"];
+_pilotGlasses = [];
 
 // Crewman
 _crewUniform = ["U_I_CombatUniform"];
 _crewHelmet = ["H_HelmetCrew_I"];
 _crewRig = ["V_TacVest_oli"];
+_crewGlasses = [];
 
 // ====================================================================================
 
@@ -204,7 +207,6 @@ _unit = _this select 1;					// expecting name of unit; originally passed by usin
 
 // HANDLE CLOTHES
 // Handle clothes and helmets and such using the include file called next.
-
 #include "f_assignGear_clothes.sqf";
 
 // ====================================================================================
