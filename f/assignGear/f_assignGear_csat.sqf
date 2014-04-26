@@ -36,48 +36,55 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
+// ATTACHMENTS
 
-// Attachments
 _attach1 = "acc_pointer_IR";	// IR Laser - default attachment for rifles, gl rifles, carbines, ARs and MGs
 _attach2 = "acc_flashlight";	// Flashlight
-_scope1 = "optic_ACO_grn";		// ACO scope - default scope for rifles, gl rifles, carbines, ARs and MGs
+
+_silencer1 = "muzzle_snds_M";	// 5.56 suppressor
+_silencer2 = "muzzle_snds_H";	// 6.5 suppressor
+
+_scope1 = "optic_ACO_grn";		// ACO
 _scope2 = "optic_MRCO_grn";		// MRCO Scope
-_scope3 = "optic_SOS";			// SOS Scope - default for sniper
+_scope3 = "optic_SOS";			// SOS Scope - 10x
+
+// DEFAULT SETUP
+_attachments = [_attach1,_scope1,nil]; // The default attachment set for most units, overwritten in the individual unitType
 
 // nil = no change
 // [] = remove all
-// [_attach1,_scope1] = remove all, add items assigned in _attach1 and _scope1
+// [_attach1,_scope1,_silencer] = remove all, add items assigned in _attach1, _scope1 and _silencer1
+// [nil,_scope2,nil] = keep default attachment and silencer, add _scope2
+
+// ====================================================================================
+
+// WEAPON SELECTION
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
 _rifle = "arifle_Katiba_F";
 _riflemag = "30Rnd_65x39_caseless_green";
 _riflemag_tr = "30Rnd_65x39_caseless_green_mag_Tracer";
-_rifle_attach = [_attach1,_scope1];
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
 _carbine = "arifle_Katiba_C_F";
 _carbinemag = "30Rnd_65x39_caseless_green";
 _carbinemag_tr = "30Rnd_65x39_caseless_green_mag_Tracer";
-_carbine_attach = [_attach1,_scope1];
 
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
 _smg = "SMG_02_F";
 _smgmag = "30Rnd_9x21_Mag";
 _smgmag_tr = "30Rnd_9x21_Mag";
-_smg_attach = nil;
 
 // Diver
 _diverWep = "arifle_SDAR_F";
 _diverMag1 = "30Rnd_556x45_Stanag";
 _diverMag2 = "20Rnd_556x45_UW_mag";
-_diverWep_attach = nil;
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
 _glrifle = "arifle_Katiba_GL_F";
 _glriflemag = "30Rnd_65x39_caseless_green";
 _glriflemag_tr = "30Rnd_65x39_caseless_green_mag_Tracer";
 _glmag = "1Rnd_HE_Grenade_shell";
-_glrifle_attach = [_attach1,_scope1];
 
 // Smoke for FTLs, Squad Leaders, etc
 _glsmokewhite = "1Rnd_Smoke_Grenade_shell";
@@ -127,13 +134,11 @@ _bagmediumdiver =  "B_AssaultPack_blk";	// used by divers
 _AR = "LMG_Mk200_F";
 _ARmag = "200Rnd_65x39_cased_Box";
 _ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
-_AR_attach = [_attach1,_scope1];
 
 // Medium MG
 _MMG = "LMG_Zafir_F";
 _MMGmag = "150Rnd_762x51_Box";
 _MMGmag_tr = "150Rnd_762x51_Box_Tracer";
-_MMG_attach = [_attach1,_scope1];
 
 // Rifleman AT
 _RAT = "launch_RPG32_F";
@@ -1084,9 +1089,18 @@ switch (_typeofUnit) do
 
 // ====================================================================================
 
-// Handle weapon attachments here.
+// Handle weapon attachments
 
-#include "f_assignGear_attach.sqf";
+_wepItems = primaryWeaponItems _unit;
+{
+	// loop trough them and remove them
+	_unit removePrimaryWeaponItem  _x;
+
+} foreach _wepItems;
+{
+	// loop trough the attachments and add them to the weapon
+	_unit addPrimaryWeaponItem _x;
+} foreach _attachments;
 
 // ====================================================================================
 
