@@ -163,6 +163,7 @@ _heavy =  ["eng","engm"];
 _divers = ["div"];
 _pilots = ["p"];
 _crews = ["c"];
+_ghillie = ["sn","sp"];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -193,6 +194,12 @@ _crewUniform = ["U_B_CombatUniform_mcam_vest"];
 _crewHelmet = ["H_HelmetCrew_B"];
 _crewRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];
 _crewGlasses = [];
+
+// Ghillie
+_ghillieUniform = ["U_B_GhillieSuit"];
+_ghillieHelmet = []
+_ghillieRig = ["V_Chestrig_rgr"];
+_ghillieGlasses = [];
 
 // ====================================================================================
 

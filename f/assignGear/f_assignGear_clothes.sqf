@@ -43,6 +43,13 @@ if (_typeOfUnit in _divers) then {
 	_glasses = _diverGlasses;
 };
 
+if (_typeOfUnit in _ghillie) then {
+	_helmet = _ghillieHelmet;
+	_uniform = _ghillieUniform;
+	_rig = _ghillieRig;
+	_glasses = _ghillieGlasses;
+};
+
 // Add uniforms to unit
 if(count _uniform > 0) then
 {

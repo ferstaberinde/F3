@@ -164,6 +164,7 @@ _heavy =  ["eng","engm"];
 _divers = ["div"];
 _pilots = ["p"];
 _crews = ["c"];
+_ghillie = ["sn","sp"];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -199,6 +200,12 @@ _crewUniform = ["U_O_SpecopsUniform_ocamo"];
 _crewHelmet = ["H_HelmetCrew_O"];
 _crewRig = ["V_HarnessO_brn"];
 _crewGlasses = [];
+
+// Ghillie
+_ghillieUniform = ["U_O_GhillieSuit"];
+_ghillieHelmet = []
+_ghillieRig = ["V_Chestrig_khk"];
+_ghillieGlasses = [];
 
 // ====================================================================================
 
