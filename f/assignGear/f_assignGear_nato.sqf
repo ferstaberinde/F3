@@ -37,10 +37,11 @@
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
 // Attachments
-_attach1 = "acc_pointer_IR";			// Default attachment for rifles, gl rifles, carbines, ARs and MGs
-_attach2 = "acc_flashlight";	// Flashlight attachment
-_scope1 = "optic_ACO_grn";				// Default scope for rifles, gl rifles, carbines, ARs and MGs
-_scope2 = "optic_MRCO_grn";				// MRCO Scope
+_attach1 = "acc_pointer_IR";	// IR Laser - default attachment for rifles, gl rifles, carbines, ARs and MGs
+_attach2 = "acc_flashlight";	// Flashlight
+_scope1 = "optic_ACO_grn";		// ACO scope - default scope for rifles, gl rifles, carbines, ARs and MGs
+_scope2 = "optic_MRCO_grn";		// MRCO Scope
+_scope3 = "optic_SOS";			// SOS Scope - default for sniper
 
 // nil = no change
 // [] = remove all
@@ -70,6 +71,11 @@ _diverWep = "arifle_SDAR_F";
 _diverMag1 = "30Rnd_556x45_Stanag";
 _diverMag2 = "20Rnd_556x45_UW_mag";
 _diverWep_attach = nil;
+
+// Sniper
+_sniperWep = "srifle_LRR_F";
+_sniperMag = "7Rnd_408_Mag";
+_sniperWep_attach = [_nil,_scope3];
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
 _glrifle = "arifle_MX_GL_F";
@@ -164,8 +170,9 @@ _APmine2 = "APERSMine_Range_Mag";
 // Define classes. This defines which gear class gets which uniform
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
-_light = ["sp"];
+_light = [];
 _heavy =  ["eng","engm"];
+_ghillie = ["sn","sp"];
 _divers = ["div"];
 _pilots = ["p"];
 _crews = ["c"];
@@ -184,6 +191,11 @@ _diverHelmet = [];
 _diverRig = ["V_RebreatherB"];
 _diverGlasses = ["G_Diving"];
 
+// Ghillie
+_ghillieUniform = ["U_B_GhillieSuit"];
+_ghillieHelmet = [];
+_ghillieRig = ["V_Chestrig_rgr"];
+_ghillieGlasses = [];
 
 // Pilot
 _pilotUniform = ["U_B_HeliPilotCoveralls"];
@@ -862,6 +874,23 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,2];
 		["matag"] call _backpack;
+	};
+
+// LOADOUT: SNIPER
+	case "sn":
+	{
+		_unit addmagazines [_sniperMag,4];
+		_unit addweapon _sniperWep;
+	};
+
+// LOADOUT: SPOTTER
+	case "sp":
+	{
+		_unit addmagazines [_carbineMag,6];
+		_unit addweapon _carbine;
+		_unit addWeapon "Rangefinder";
+		_unit addItem "ItemGPS";
+		_unit assignItem "ItemGPS";
 	};
 
 // LOADOUT: MORTAR GUNNER

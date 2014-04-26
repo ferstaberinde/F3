@@ -8,7 +8,7 @@ removeheadgear _unit;
 removevest _unit;
 
 // First check if the unit type is in any of the arrays for specific uniforms
-if (_typeOfUnit in (_light+_heavy+_pilots+_divers+_crews)) then {
+if (_typeOfUnit in (_light+_heavy+_pilots+_divers+_crews+_ghillie)) then {
 
 	if (_typeOfUnit in _light) then {
 		if(!isnil "_baseUniform" && {count _baseUniform > 0}) then
@@ -92,6 +92,22 @@ if (_typeOfUnit in (_light+_heavy+_pilots+_divers+_crews)) then {
 		if(!isnil "_crewRig" && {count _crewRig > 0}) then
 		{
 		_unit addvest (_crewRig call BIS_fnc_selectRandom);
+		};
+	};
+
+	if (_typeOfUnit in _ghillie) then {
+		player globalchat "ghillie";
+		if(!isnil "_ghillieUniform" && {count _crewUniform > 0}) then
+		{
+		_unit adduniform (_ghillieUniform call BIS_fnc_selectRandom);
+		};
+		if(!isnil "_ghillieHelmet" && {count _crewHelmet > 0}) then
+		{
+		_unit addheadgear (_ghillieHelmet call BIS_fnc_selectRandom);
+		};
+		if(!isnil "_ghillieRig" && {count _crewRig > 0}) then
+		{
+		_unit addvest (_ghillieRig call BIS_fnc_selectRandom);
 		};
 	};
 

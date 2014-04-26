@@ -38,10 +38,11 @@
 
 
 // Attachments
-_attach1 = "acc_pointer_IR";			// Default attachment for rifles, gl rifles, carbines, ARs and MGs
-_attach2 = "acc_flashlight";	// Flashlight attachment
-_scope1 = "optic_ACO_grn";				// Default scope for rifles, gl rifles, carbines, ARs and MGs
-_scope2 = "optic_MRCO_grn";				// MRCO Scope
+_attach1 = "acc_pointer_IR";	// IR Laser - default attachment for rifles, gl rifles, carbines, ARs and MGs
+_attach2 = "acc_flashlight";	// Flashlight
+_scope1 = "optic_ACO_grn";		// ACO scope - default scope for rifles, gl rifles, carbines, ARs and MGs
+_scope2 = "optic_MRCO_grn";		// MRCO Scope
+_scope3 = "optic_SOS";			// SOS Scope - default for sniper
 
 // nil = no change
 // [] = remove all

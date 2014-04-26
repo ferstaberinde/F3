@@ -7,7 +7,7 @@ _wepClass = primaryweapon _unit;
 switch(_wepClass) do
 {
 	// if _wepClass corrosponds to the faction assingned _rifle then..
-	case _rifle: 
+	case _rifle:
 	{
 		// Check if there is a attachment array for this weapon
 		if(!isnil "_rifle_attach") then
@@ -17,7 +17,7 @@ switch(_wepClass) do
 			{
 				// loop trough them and remove them
 				_unit removePrimaryWeaponItem  _x;
-				
+
 			} foreach _wepItems;
 			{
 				// loop trough the attachments and add them to the weapon
@@ -25,88 +25,88 @@ switch(_wepClass) do
 			} foreach _rifle_attach;
 		};
 	};
-	case _carbine: 
+	case _carbine:
 	{
 		if(!isnil "_carbine_attach") then
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				
+
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
 			} foreach _carbine_attach;
 		};
 	};
-	case _glrifle: 
+	case _glrifle:
 	{
 		if(!isnil "_glrifle_attach") then
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				
+
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
 			} foreach _glrifle_attach;
 		};
 	};
-	case _smg: 
+	case _smg:
 	{
 		if(!isnil "_smg_attach") then
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				
+
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
 			} foreach _smg_attach;
 		};
 	};
-	case _AR: 
+	case _AR:
 	{
 		if(!isnil "_AR_attach") then
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				
+
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
 			} foreach _AR_attach;
 		};
 	};
-	case _MMG: 
+	case _MMG:
 	{
 		if(!isnil "_MMG_attach") then
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				
+
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
 			} foreach _MMG_attach;
 		};
 	};
-	case _SNrifle: 
+	case _sniperwep:
 	{
-		if(!isnil "_SNrifle_attach") then
+		if(!isnil "_sniperwep_attach") then
 		{
 			_wepItems = primaryWeaponItems _unit;
 			{
 				_unit removePrimaryWeaponItem  _x;
-				
+
 			} foreach _wepItems;
 			{
 				_unit addPrimaryWeaponItem _x;
-			} foreach _SNrifle_attach;
+			} foreach _sniperwep_attach;
 		};
 	};
 	case _diverWep:
@@ -116,7 +116,7 @@ switch(_wepClass) do
 				_wepItems = primaryWeaponItems _unit;
 				{
 					_unit removePrimaryWeaponItem  _x;
-					
+
 				} foreach _wepItems;
 				{
 					_unit addPrimaryWeaponItem _x;
