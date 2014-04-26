@@ -159,12 +159,13 @@ _APmine2 = "APERSMine_Range_Mag";
 // Define classes. This defines which gear class gets which uniform
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
-_light = ["sp"];
+_light = [];
 _heavy =  ["eng","engm"];
-_divers = ["div"];
-_pilots = ["p"];
-_crews = ["c"];
+_diver = ["div"];
+_pilot = ["p"];
+_crew = ["c"];
 _ghillie = ["sn","sp"];
+_specOp = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -206,6 +207,13 @@ _ghillieUniform = ["U_O_GhillieSuit"];
 _ghillieHelmet = []
 _ghillieRig = ["V_Chestrig_khk"];
 _ghillieGlasses = [];
+
+// Spec Op
+_sfuniform = ["U_O_SpecopsUniform_ocamo"];
+_sfhelmet = ["H_HelmetSpecO_ocamo","H_HelmetSpecO_blk"];
+_sfRig = _mediumRig;
+_sfGlasses = [];
+
 
 // ====================================================================================
 

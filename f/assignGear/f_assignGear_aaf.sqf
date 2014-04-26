@@ -161,10 +161,11 @@ _APmine2 = "APERSMine_Range_Mag";
 
 _light = [];
 _heavy =  ["eng","engm"];
-_divers = ["div"];
-_pilots = ["p"];
-_crews = ["c"];
+_diver = ["div"];
+_pilot = ["p"];
+_crew = ["c"];
 _ghillie = ["sn","sp"];
+_specOp = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -201,6 +202,12 @@ _ghillieUniform = ["U_I_GhillieSuit"];
 _ghillieHelmet = []
 _ghillieRig = ["V_Chestrig_oli"];
 _ghillieGlasses = [];
+
+// Spec Op - no nice stuff for AAF :(
+_sfuniform = _baseUniform;
+_sfhelmet = _baseHelmet;
+_sfRig = _mediumRig;
+_sfGlasses = [];
 
 // ====================================================================================
 
