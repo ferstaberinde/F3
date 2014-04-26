@@ -37,21 +37,27 @@
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
 // Attachments
+_attach1 = "acc_pointer_IR";			// Default attachment for rifles, gl rifles, carbines, ARs and MGs
+_attach2 = "acc_flashlight";	// Flashlight attachment
+_scope1 = "optic_ACO_grn";				// Default scope for rifles, gl rifles, carbines, ARs and MGs
+_scope2 = "optic_MRCO_grn";				// MRCO Scope
+
 // nil = no change
 // [] = remove all
-// ["acc_pointer_IR","optic_ACO_grn"] = remove all, add items.
+// [_attach1,_scope1] = remove all, add items assigned in _attach1 and _scope1
+
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
 _rifle = "arifle_MX_pointer_F";
 _riflemag = "30Rnd_65x39_caseless_mag";
 _riflemag_tr = "30Rnd_65x39_caseless_mag_Tracer";
-_rifle_attach = ["acc_pointer_IR","optic_Aco"];
+_rifle_attach = [_attach1,_scope1];
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
 _carbine = "arifle_MXC_F";
 _carbinemag = "30Rnd_65x39_caseless_mag";
 _carbinemag_tr = "30Rnd_65x39_caseless_mag_Tracer";
-_carbine_attach = ["acc_pointer_IR","optic_Aco"];
+_carbine_attach = [_attach1,_scope1];
 
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
 _smg = "SMG_01_F";
@@ -70,7 +76,7 @@ _glrifle = "arifle_MX_GL_F";
 _glriflemag = "30Rnd_65x39_caseless_mag";
 _glriflemag_tr = "30Rnd_65x39_caseless_mag_Tracer";
 _glmag = "1Rnd_HE_Grenade_shell";
-_glrifle_attach = ["acc_pointer_IR","optic_Aco"];
+_glrifle_attach = [_attach1,_scope1];
 
 // Smoke for FTLs, Squad Leaders, etc
 _glsmokewhite = "1Rnd_Smoke_Grenade_shell";
@@ -120,13 +126,13 @@ _bagmediumdiver =  "B_AssaultPack_blk";	// used by divers
 _AR = "arifle_MX_SW_F";
 _ARmag = "100Rnd_65x39_caseless_mag";
 _ARmag_tr = "100Rnd_65x39_caseless_mag_Tracer";
-_AR_attach = ["acc_pointer_IR","optic_ACO"];
+_AR_attach = [_attach1,_scope1];
 
 // Medium MG
 _MMG = "LMG_Zafir_F";
 _MMGmag = "150Rnd_762x51_Box";
 _MMGmag_tr = "150Rnd_762x51_Box_Tracer";
-_MMG_attach = ["acc_pointer_IR","optic_ACO"];
+_MMG_attach = [_attach1,_scope1];
 
 // Rifleman AT
 _RAT = "launch_NLAW_F";
