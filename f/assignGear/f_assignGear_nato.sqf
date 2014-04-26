@@ -178,7 +178,6 @@ _diverHelmet = [];
 _diverRig = ["V_RebreatherB"];
 _diverGlasses = ["G_Diving"];
 
-
 // Pilot
 _pilotUniform = ["U_B_HeliPilotCoveralls"];
 _pilotHelmet = ["H_PilotHelmetHeli_B"];
@@ -202,7 +201,7 @@ _unit = _this select 1;					// expecting name of unit; originally passed by usin
 // HANDLE CLOTHES
 // Handle clothes and helmets and such using the include file called next.
 
-#include "core\f_assignGear_clothes.sqf";
+#include "f_assignGear_clothes.sqf";
 
 // ====================================================================================
 
@@ -240,7 +239,13 @@ _unit assignItem _nvg;					// add universal NVG for this faction
 // SETUP BACKPACKS
 // Include the correct backpack file for the faction
 
-_backpack = f_fnc_assignBackpack_nato;
+_backpack = {
+	_typeofBackPack = _this select 0;
+	switch (_typeofBackPack) do
+	{
+		#include "f_assignGear_nato_b";
+	};
+};
 
 // ====================================================================================
 
@@ -625,7 +630,7 @@ switch (_typeofUnit) do
 
 // Handle weapon attachments here.
 
-#include "core\f_assignGear_attach.sqf";
+#include "f_assignGear_attach.sqf";
 
 // ====================================================================================
 

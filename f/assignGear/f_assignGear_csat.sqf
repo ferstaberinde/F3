@@ -209,7 +209,7 @@ _unit = _this select 1;					// expecting name of unit; originally passed by usin
 // HANDLE CLOTHES
 // Handle clothes and helmets and such using the include file called next.
 
-#include "core\f_assignGear_clothes.sqf";
+#include "f_assignGear_clothes.sqf";
 
 // ====================================================================================
 
@@ -251,7 +251,7 @@ _backpack = {
 	_typeofBackPack = _this select 0;
 	switch (_typeofBackPack) do
 	{
-		#include "f_assignGear_b_faction";
+		#include "f_assignGear_csat_b";
 	};
 };
 
@@ -638,7 +638,7 @@ switch (_typeofUnit) do
 
 // Handle weapon attachments here.
 
-#include "core\f_assignGear_attach.sqf";
+#include "f_assignGear_attach.sqf";
 
 // ====================================================================================
 
