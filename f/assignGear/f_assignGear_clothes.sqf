@@ -7,122 +7,78 @@ removeUniform _unit;
 removeheadgear _unit;
 removevest _unit;
 
-// First check if the unit type is in any of the arrays for specific uniforms
-if (_typeOfUnit in (_light+_heavy+_pilots+_divers+_crews+_ghillie)) then {
+// Assign default clothes
+_uniform = _baseUniform;
+_helmet = _baseHelmet;
+_rig = _mediumRig;
+_glasses = _baseGlasses;
 
-	if (_typeOfUnit in _light) then {
-		if(!isnil "_baseUniform" && {count _baseUniform > 0}) then
-		{
-		_unit adduniform (_baseUniform call BIS_fnc_selectRandom);
-		};
-		if(!isnil "_baseHelmet" && {count _baseHelmet > 0}) then
-		{
-		_unit addheadgear (_baseHelmet call BIS_fnc_selectRandom);
-		};
-		if(!isnil "_lightrig" && {count _lightrig > 0}) then
-		{
-		_unit addvest (_lightrigrig call BIS_fnc_selectRandom);
-		};
-	};
+// Flip through unit to assign specialized uniforms
 
-	if (_typeOfUnit in _heavy) then {
-		if(!isnil "_baseUniform" && {count _baseUniform > 0}) then
-		{
-		_unit adduniform (_baseUniform call BIS_fnc_selectRandom);
-		};
-		if(!isnil "_baseHelmet" && {count _baseHelmet > 0}) then
-		{
-		_unit addheadgear (_baseHelmet call BIS_fnc_selectRandom);
-		};
-		if(!isnil "_heavyrig" && {count _heavyrig > 0}) then
-		{
-		_unit addvest (_heavyrig call BIS_fnc_selectRandom);
-		};
-	};
+// Light
+if (_typeOfUnit in _light) then {
+	_rig = _lightRig;
+};
 
+// Heavy
+if (_typeOfUnit in _heavy) then {
+	_rig = _heavyRig;
+};
 
+// Pilot
+if (_typeOfUnit in _pilot) then {
+	_helmet = _pilotHelmet;
+	_uniform = _pilotUniform;
+	_rig = _pilotRig;
+	_glasses = _pilotGlasses
+};
 
-	if (_typeOfUnit in _pilots) then {
-			// if there is a pilotuniform defeined add it to the unit
-		if(!isnil "_pilotUniform" && {count _pilotUniform > 0}) then
-		{
-		_unit adduniform (_pilotUniform call BIS_fnc_selectRandom);
-		};
-		// if there is ... etc.
-		if(!isnil "_pilotHelmet" && {count _pilotHelmet > 0}) then
-		{
-		_unit addheadgear (_pilotHelmet call BIS_fnc_selectRandom);
-		};
-		if(!isnil "_pilotRig" && {count _pilotRig > 0}) then
-		{
-		_unit addvest (_pilotRig call BIS_fnc_selectRandom);
-		};
-	};
+// Crew
+if (_typeOfUnit in _crew) then {
+	_helmet = _crewHelmet;
+	_uniform = _crewUniform;
+	_rig = _crewRig;
+	_glasses = _crewGlasses;
+};
 
+// Diver
+if (_typeOfUnit in _diver) then {
+	_helmet = _diverHelmet;
+	_uniform = _diverUniform;
+	_rig = _diverRig;
+	_glasses = _diverGlasses;
+};
 
-	// Then check each to see if it contains the unit
-	if (_typeOfUnit in _divers) then {
-		if(!isnil "_diverUniform" && {count _diverUniform > 0}) then
-			{
-				_unit adduniform (_diverUniform call BIS_fnc_selectRandom);
-			};
-			if(!isnil "_diverHelmet" && {count _diverHelmet > 0}) then
-			{
-				_unit addheadgear (_diverHelmet call BIS_fnc_selectRandom);
-			};
-			if(!isnil "_diverRig" && {count _diverRig > 0}) then
-			{
-				_unit addvest (_diverRig call BIS_fnc_selectRandom);
-			};
-			if(!isnil "_diverGlasses" && {count _diverGlasses > 0}) then
-			{
-				_unit addGoggles (_diverGlasses call BIS_fnc_selectRandom);
-			};
-	};
+// Ghillie
+if (_typeOfUnit in _ghillie) then {
+	_helmet = _ghillieHelmet;
+	_uniform = _ghillieUniform;
+	_rig = _ghillieRig;
+	_glasses = _ghillieGlasses;
+};
 
-	if (_typeOfUnit in _crews) then {
-		if(!isnil "_crewUniform" && {count _crewUniform > 0}) then
-		{
-		_unit adduniform (_crewUniform call BIS_fnc_selectRandom);
-		};
-		if(!isnil "_crewHelmet" && {count _crewHelmet > 0}) then
-		{
-		_unit addheadgear (_crewHelmet call BIS_fnc_selectRandom);
-		};
-		if(!isnil "_crewRig" && {count _crewRig > 0}) then
-		{
-		_unit addvest (_crewRig call BIS_fnc_selectRandom);
-		};
-	};
+// Spec Op
+if (_typeOfUnit in _specOp) then {
+	_helmet = _sfHelmet;
+	_uniform = _sfUniform;
+	_rig = _sfRig;
+	_glasses = _sfGlasses;
+};
 
-	if (_typeOfUnit in _ghillie) then {
-		player globalchat "ghillie";
-		if(!isnil "_ghillieUniform" && {count _crewUniform > 0}) then
-		{
-		_unit adduniform (_ghillieUniform call BIS_fnc_selectRandom);
-		};
-		if(!isnil "_ghillieHelmet" && {count _crewHelmet > 0}) then
-		{
-		_unit addheadgear (_ghillieHelmet call BIS_fnc_selectRandom);
-		};
-		if(!isnil "_ghillieRig" && {count _crewRig > 0}) then
-		{
-		_unit addvest (_ghillieRig call BIS_fnc_selectRandom);
-		};
-	};
-
-// Else, equip the unit with the basic uniform and a medium vest
-} else {
-	if(!isnil "_baseUniform" && {count _baseUniform > 0}) then
-	{
-	_unit adduniform (_baseUniform call BIS_fnc_selectRandom);
-	};
-	if(!isnil "_baseHelmet" && {count _baseHelmet > 0}) then
-	{
-	_unit addheadgear (_baseHelmet call BIS_fnc_selectRandom);
-	};
-	if(!isnil "_mediumrig" && {count _mediumrig > 0}) then
-	{
-	_unit addvest (_mediumrig call BIS_fnc_selectRandom);
-	};
+// Add uniforms to unit
+if(count _uniform > 0) then
+{
+	_unit adduniform (_uniform call BIS_fnc_selectRandom);
+};
+if(count _Helmet > 0) then
+{
+	_unit addheadgear (_helmet call BIS_fnc_selectRandom);
+};
+if(count _rig > 0) then
+{
+	_unit addvest (_rig call BIS_fnc_selectRandom);
+};
+if(count _glasses > 0) then
+{
+	_unit addGoggles (_glasses call BIS_fnc_selectRandom);
 };
