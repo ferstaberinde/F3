@@ -159,11 +159,13 @@ _APmine2 = "APERSMine_Range_Mag";
 // Define classes. This defines which gear class gets which uniform
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
-_light = ["sp"];
+_light = [];
 _heavy =  ["eng","engm"];
-_divers = ["div"];
-_pilots = ["p"];
-_crews = ["c"];
+_diver = ["div"];
+_pilot = ["p"];
+_crew = ["c"];
+_ghillie = ["sn","sp"];
+_specOp = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -171,11 +173,13 @@ _crews = ["c"];
 // Woodland-Hex
 _baseUniform = ["U_O_CombatUniform_ocamo"];
 _baseHelmet = ["H_HelmetO_ocamo"];
+_baseGlasses = [];
 
 // Urban
 //_baseUniform = ["U_O_CombatUniform_oucamo"];
 //_baseHelmet = ["H_HelmetO_oucamo"];
 
+// Armored vests
 _lightRig = ["V_HarnessO_brn"];
 _mediumRig = ["V_HarnessOGL_brn"]; 	// default for all infantry classes
 _heavyRig = ["V_HarnessOGL_brn"];
@@ -190,11 +194,26 @@ _diverGlasses = ["G_Diving"];
 _pilotUniform = ["U_O_PilotCoveralls"];
 _pilotHelmet = ["H_PilotHelmetHeli_O"];
 _pilotRig = ["V_HarnessO_brn"];
+_pilotGlasses = [];
 
 // Crewman
 _crewUniform = ["U_O_SpecopsUniform_ocamo"];
 _crewHelmet = ["H_HelmetCrew_O"];
 _crewRig = ["V_HarnessO_brn"];
+_crewGlasses = [];
+
+// Ghillie
+_ghillieUniform = ["U_O_GhillieSuit"];
+_ghillieHelmet = []
+_ghillieRig = ["V_Chestrig_khk"];
+_ghillieGlasses = [];
+
+// Spec Op
+_sfuniform = ["U_O_SpecopsUniform_ocamo"];
+_sfhelmet = ["H_HelmetSpecO_ocamo","H_HelmetSpecO_blk"];
+_sfRig = _mediumRig;
+_sfGlasses = [];
+
 
 // ====================================================================================
 

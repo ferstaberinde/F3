@@ -159,17 +159,20 @@ _APmine2 = "APERSMine_Range_Mag";
 // Define classes. This defines which gear class gets which uniform
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
-_light = ["sp"];
+_light = [];
 _heavy =  ["eng","engm"];
-_divers = ["div"];
-_pilots = ["p"];
-_crews = ["c"];
+_diver = ["div"];
+_pilot = ["p"];
+_crew = ["c"];
+_ghillie = ["sn","sp"];
+_specOp = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
 
 _baseUniform = ["U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt"];
 _baseHelmet = ["H_HelmetIA_net","H_HelmetIA_camo","H_HelmetIA"];
+_baseGlasses = [];
 
 // Armored vests
 _lightRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];
@@ -186,11 +189,25 @@ _diverGlasses = ["G_Diving"];
 _pilotUniform = ["U_I_HeliPilotCoveralls"];
 _pilotHelmet = ["H_PilotHelmetHeli_I"];
 _pilotRig = ["V_TacVest_oli"];
+_pilotGlasses = [];
 
 // Crewman
 _crewUniform = ["U_I_CombatUniform"];
 _crewHelmet = ["H_HelmetCrew_I"];
 _crewRig = ["V_TacVest_oli"];
+_crewGlasses = [];
+
+// Ghillie
+_ghillieUniform = ["U_I_GhillieSuit"];
+_ghillieHelmet = []
+_ghillieRig = ["V_Chestrig_oli"];
+_ghillieGlasses = [];
+
+// Spec Op - no nice stuff for AAF :(
+_sfuniform = _baseUniform;
+_sfhelmet = _baseHelmet;
+_sfRig = _mediumRig;
+_sfGlasses = [];
 
 // ====================================================================================
 
@@ -204,7 +221,6 @@ _unit = _this select 1;					// expecting name of unit; originally passed by usin
 
 // HANDLE CLOTHES
 // Handle clothes and helmets and such using the include file called next.
-
 #include "f_assignGear_clothes.sqf";
 
 // ====================================================================================
