@@ -32,8 +32,11 @@ _grp = (player getVariable "f_var_JIP_grp");
 // Using a dialog we allow the player to select the loadout s/he requires.
 
 f_var_JIP_state = 2;
-x = createDialog "KitPicker";
-waitUntil {f_var_JIP_state == 3};
+if (f_respawnGearMenu) then {
+	x = createDialog "KitPicker";
+	waitUntil {f_var_JIP_state == 3};
+};
+
 _loadout = (player getVariable "f_var_JIP_loadout");
 
 // ====================================================================================
@@ -41,9 +44,13 @@ _loadout = (player getVariable "f_var_JIP_loadout");
 // IMPLEMENT CHOICES
 // Using the choices made by the player we implement the desired loadout and set the
 // target group for her/him to join.
+// If the player is already in the group, he simply remains there
 
-[player] joinSilent grpNull;
-[_grp,_joinDistance] execVM "f\JIP\f_JIP_nearTargetGroupCheck.sqf";
+if (_grp != group player) then {
+	[player] joinSilent grpNull;
+	[_grp,_joinDistance] execVM "f\JIP\f_JIP_nearTargetGroupCheck.sqf";
+};
+
 [_loadout,player] call f_fnc_assignGear;
 
 // ====================================================================================

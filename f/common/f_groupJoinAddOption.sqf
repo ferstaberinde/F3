@@ -32,11 +32,11 @@ while {true} do {
 		if (alive _nearUnit && group player != _nearGroup && _nearUnit == leader _nearGroup && _nearUnit in playableUnits) then {
 			if (_allowDifferentSide || side player == side _nearGroup) then {
 				_actionString = format["Join group: %1", _nearGroup];
-			
+
 				f_groupJoinAction = player addAction [_actionString, "f\common\f_groupJoinAction.sqf", _nearGroup, 0, false, true, "", "_this == player"];
 
 				// Once player leaves the group leader's vicinity, remove action
-				waitUntil {player distance _nearUnit > _actionDistance};
+				waitUntil {sleep 0.1;player distance _nearUnit > _actionDistance};
 				sleep _actionGraceTime;
 				player removeAction (f_groupJoinAction);
 			};

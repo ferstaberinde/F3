@@ -14,7 +14,7 @@ if (!isServer) exitWith {};
 
 // SET ENDING & BROADCAST
 // The desired ending # is taken from the arguments passed to this script.
-// Using BIS_fnc_MP the function mpEndReceiver is being called on all clients (and server),
+// Using BIS_fnc_MP the function mpEndReceiver is being spawned on all clients (and server),
 // with the passed ending # as parameter
 
 	[_this,"f_fnc_mpEndReceiver",true] spawn BIS_fnc_MP;
