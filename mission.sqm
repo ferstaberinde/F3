@@ -7701,10 +7701,10 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={8545.9697,33.989651,10880.771};
+					position[]={8537.2939,34.606792,10896.431};
 					id=487;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="B_sniper_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -7714,10 +7714,10 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={8546.9902,33.941559,10879.629};
+					position[]={8538.3145,34.623173,10895.288};
 					id=488;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="B_spotter_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitNATO_SN1_SP";
