@@ -143,6 +143,10 @@ _MMGmag_tr = "150Rnd_762x51_Box_Tracer";
 _RAT = "launch_NLAW_F";
 _RATmag = "NLAW_F";
 
+// Sniper
+_SNrifle = "srifle_LRR_LRPS_F";
+_SNrifleMag = "7Rnd_408_Mag";
+
 // Mortar
 _MTR = "B_Mk6Mortar_Wpn";
 _MTRmount = "B_Mk6Mortar_Support";
@@ -208,7 +212,7 @@ _crewGlasses = [];
 
 // Ghillie
 _ghillieUniform = ["U_B_GhillieSuit"];
-_ghillieHelmet = []
+_ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
 
@@ -225,44 +229,50 @@ _sfGlasses = [];
 
 _typeofUnit = toLower (_this select 0);			// Tidy input for SWITCH/CASE statements, expecting something like : r = Rifleman, co = Commanding Officer, rat = Rifleman (AT)
 _unit = _this select 1;					// expecting name of unit; originally passed by using 'this' in unit init
+_isMan = _unit isKindOf "CAManBase";	// We check if we're dealing with a soldier or a vehicle
 
 // ====================================================================================
+
+// This block needs only to be run on an infantry unit
+if (_isMan) then {
 
 // HANDLE CLOTHES
 // Handle clothes and helmets and such using the include file called next.
 
-#include "f_assignGear_clothes.sqf";
+	#include "f_assignGear_clothes.sqf";
 
-// ====================================================================================
+	// ====================================================================================
 
-// PREPARE UNIT FOR GEAR ADDITION
-// The following code removes all existing weapons and backpacks
+	// PREPARE UNIT FOR GEAR ADDITION
+	// The following code removes all existing weapons and backpacks
 
-removeBackpack _unit;
-removeallweapons _unit;
+	removeBackpack _unit;
+	removeallweapons _unit;
 
-// We add a single first aid kit (FAK)
+	// We add a single first aid kit (FAK)
 
-_unit addItem _firstaid;
+	_unit addItem _firstaid;
 
-// The following code removes any pre-added NVGs
+	// The following code removes any pre-added NVGs
 
-if(_nvg in (assignedItems _unit)) then
-{
-_unit unassignItem _nvg;
-_unit removeItem _nvg;
+	if(_nvg in (assignedItems _unit)) then
+	{
+	_unit unassignItem _nvg;
+	_unit removeItem _nvg;
+	};
+	// uncomment to remove nvgoogles
+	_unit addItem _nvg;
+	_unit assignItem _nvg;					// add universal NVG for this faction
+
+	//removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
+	//unit addItem "ItemGPS"; 					// add gps to this faction
+	//_unit assignItem "ItemGPS";
+	//_unit addweapon "ItemMap";
+	//_unit addweapon "ItemCompass";
+	//_unit addweapon "ItemRadio";
+	//_unit addweapon "ItemWatch";
+
 };
-
-_unit addItem _nvg;
-_unit assignItem _nvg;					// add universal NVG for this faction
-
-//removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
-//unit addItem "ItemGPS"; 					// add gps to this faction
-//_unit assignItem "ItemGPS";
-//_unit addweapon "ItemMap";
-//_unit addweapon "ItemCompass";
-//_unit addweapon "ItemRadio";
-//_unit addweapon "ItemWatch";
 
 // ====================================================================================
 
@@ -451,8 +461,11 @@ switch (_typeofUnit) do
 // LOADOUT: SNIPER
 	case "sn":
 	{
-		_unit addmagazines [_sniperMag,4];
-		_unit addweapon _sniperWep;
+		_unit addmagazines [_SNrifleMag,4];
+		_unit addweapon _SNrifle;
+		_unit addmagazines [_pistolmag,4];
+		_unit addweapon _pistol;
+		_attachments = [_scope3];
 	};
 
 // LOADOUT: SPOTTER
@@ -565,7 +578,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade,3];
 		_unit addmagazines [_mgrenade,3];
 		_unit addmagazines [_smokegrenade,3];
-		_attachments =sqf [_attach1,_scope1,_silencer1];
+		_attachments = [_attach1,_scope1,_silencer1];
 		["div"] call _backpack;
 	};
 // LOADOUT: SUBMACHINEGUNNER
@@ -674,6 +687,11 @@ switch (_typeofUnit) do
 
 // END SWITCH FOR DEFINE UNIT TYPE LOADOUTS
 };
+
+// ====================================================================================
+
+// If this isn't run on an infantry unit we can exit
+if !(_isMan) exitWith {};
 
 // ====================================================================================
 

@@ -208,7 +208,7 @@ _crewGlasses = [];
 
 // Ghillie
 _ghillieUniform = ["U_I_GhillieSuit"];
-_ghillieHelmet = []
+_ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_oli"];
 _ghillieGlasses = [];
 
@@ -225,43 +225,50 @@ _sfGlasses = [];
 
 _typeofUnit = toLower (_this select 0);			// Tidy input for SWITCH/CASE statements, expecting something like : r = Rifleman, co = Commanding Officer, rat = Rifleman (AT)
 _unit = _this select 1;					// expecting name of unit; originally passed by using 'this' in unit init
+_isMan = _unit isKindOf "CAManBase";	// We check if we're dealing with a soldier or a vehicle
 
 // ====================================================================================
+
+// This block needs only to be run on an infantry unit
+if (_isMan) then {
 
 // HANDLE CLOTHES
 // Handle clothes and helmets and such using the include file called next.
-#include "f_assignGear_clothes.sqf";
 
-// ====================================================================================
+	#include "f_assignGear_clothes.sqf";
 
-// PREPARE UNIT FOR GEAR ADDITION
-// The following code removes all existing weapons and backpacks
+	// ====================================================================================
 
-removeBackpack _unit;
-removeallweapons _unit;
+	// PREPARE UNIT FOR GEAR ADDITION
+	// The following code removes all existing weapons and backpacks
 
-// We add a single first aid kit (FAK)
+	removeBackpack _unit;
+	removeallweapons _unit;
 
-_unit addItem _firstaid;
+	// We add a single first aid kit (FAK)
 
-// The following code removes any pre-added NVGs
+	_unit addItem _firstaid;
 
-if(_nvg in (assignedItems _unit)) then
-{
-_unit unassignItem _nvg;
-_unit removeItem _nvg;
+	// The following code removes any pre-added NVGs
+
+	if(_nvg in (assignedItems _unit)) then
+	{
+	_unit unassignItem _nvg;
+	_unit removeItem _nvg;
+	};
+	// uncomment to remove nvgoogles
+	_unit addItem _nvg;
+	_unit assignItem _nvg;					// add universal NVG for this faction
+
+	//removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
+	//unit addItem "ItemGPS"; 					// add gps to this faction
+	//_unit assignItem "ItemGPS";
+	//_unit addweapon "ItemMap";
+	//_unit addweapon "ItemCompass";
+	//_unit addweapon "ItemRadio";
+	//_unit addweapon "ItemWatch";
+
 };
-// uncomment to remove nvgoogles
-_unit addItem _nvg;
-_unit assignItem _nvg;					// add universal NVG for this faction
-
-//removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
-//unit addItem "ItemGPS"; 					// add gps to this faction
-//_unit assignItem "ItemGPS";
-//_unit addweapon "ItemMap";
-//_unit addweapon "ItemCompass";
-//_unit addweapon "ItemRadio";
-//_unit addweapon "ItemWatch";
 
 // ====================================================================================
 
@@ -581,10 +588,10 @@ switch (_typeofUnit) do
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_carbine, 2];
+		_unit addWeaponCargoGlobal [_carbine, 1];
 		_unit addMagazineCargoGlobal [_riflemag, 8];
 		_unit addMagazineCargoGlobal [_glriflemag, 8];
-		_unit addMagazineCargoGlobal [_carbinemag, 10];
+		_unit addMagazineCargoGlobal [_carbinemag, 8];
 		_unit addMagazineCargoGlobal [_armag, 5];
 		_unit addMagazineCargoGlobal [_ratmag, 1];
 		_unit addMagazineCargoGlobal [_grenade, 4];
@@ -602,12 +609,7 @@ switch (_typeofUnit) do
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_carbine, 10];
-		_unit addMagazineCargoGlobal [_riflemag, 40];
-		_unit addMagazineCargoGlobal [_glriflemag, 40];
-		_unit addMagazineCargoGlobal [_carbinemag, 40];
-		_unit addMagazineCargoGlobal [_armag, 22];
-		_unit addMagazineCargoGlobal [_ratmag, 6];
+		_unit addWeaponCargoGlobal [_carbine, 4];
 		_unit addMagazineCargoGlobal [_grenade, 12];
 		_unit addmagazineCargoGlobal [_mgrenade,12];
 		_unit addMagazineCargoGlobal [_smokegrenade, 12];
@@ -624,10 +626,10 @@ switch (_typeofUnit) do
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_carbine, 4];
-		_unit addMagazineCargoGlobal [_riflemag, 20];
-		_unit addMagazineCargoGlobal [_glriflemag, 20];
-		_unit addMagazineCargoGlobal [_carbinemag, 20];
+		_unit addWeaponCargoGlobal [_carbine, 2];
+		_unit addMagazineCargoGlobal [_riflemag, 10];
+		_unit addMagazineCargoGlobal [_glriflemag, 10];
+		_unit addMagazineCargoGlobal [_carbinemag, 12];
 		_unit addMagazineCargoGlobal [_armag, 8];
 		_unit addMagazineCargoGlobal [_ratmag, 2];
 		_unit addMagazineCargoGlobal [_grenade, 8];
@@ -655,6 +657,11 @@ switch (_typeofUnit) do
 
 // END SWITCH FOR DEFINE UNIT TYPE LOADOUTS
 };
+
+// ====================================================================================
+
+// If this isn't run on an infantry unit we can exit
+if !(_isMan) exitWith {};
 
 // ====================================================================================
 

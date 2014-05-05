@@ -7596,7 +7596,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8448.3184,26.676458,10932.654};
+					position[]={8450.5586,26.777582,10933.134};
 					id=482;
 					side="LOGIC";
 					vehicle="Logic";
@@ -7701,27 +7701,27 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={8545.9697,33.989651,10880.771};
+					position[]={8537.2939,34.606792,10896.431};
 					id=487;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="B_sniper_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="UnitNATO_SN1_SN";
-					init="GrpNATO_SN1 = group this;  [""sn"",this] call f_fnc_assignGear ";
+					init="GrpNATO_ST1 = group this;  [""sn"",this] call f_fnc_assignGear ";
 					description="NATO Sniper Team 1 Team Leader";
 				};
 				class Item1
 				{
-					position[]={8546.9902,33.941559,10879.629};
+					position[]={8538.3145,34.623173,10895.288};
 					id=488;
 					side="WEST";
-					vehicle="B_soldier_M_F";
+					vehicle="B_spotter_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitNATO_SN1_SP";
-					init="GrpNATO_SN1 = group this;  [""sp"",this] call f_fnc_assignGear ";
+					init="GrpNATO_ST1 = group this;  [""sp"",this] call f_fnc_assignGear ";
 					description="NATO Sniper Team 1 Spotter";
 				};
 			};
