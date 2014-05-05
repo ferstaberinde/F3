@@ -208,7 +208,7 @@ _crewGlasses = [];
 
 // Ghillie
 _ghillieUniform = ["U_B_GhillieSuit"];
-_ghillieHelmet = []
+_ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
 

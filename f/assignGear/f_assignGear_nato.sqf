@@ -143,6 +143,10 @@ _MMGmag_tr = "150Rnd_762x51_Box_Tracer";
 _RAT = "launch_NLAW_F";
 _RATmag = "NLAW_F";
 
+// Sniper
+_SNrifle = "srifle_LRR_LRPS_F";
+_SNrifleMag = "7Rnd_408_Mag";
+
 // Mortar
 _MTR = "B_Mk6Mortar_Wpn";
 _MTRmount = "B_Mk6Mortar_Support";
@@ -208,7 +212,7 @@ _crewGlasses = [];
 
 // Ghillie
 _ghillieUniform = ["U_B_GhillieSuit"];
-_ghillieHelmet = []
+_ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
 
@@ -457,8 +461,11 @@ switch (_typeofUnit) do
 // LOADOUT: SNIPER
 	case "sn":
 	{
-		_unit addmagazines [_sniperMag,4];
-		_unit addweapon _sniperWep;
+		_unit addmagazines [_SNrifleMag,4];
+		_unit addweapon _SNrifle;
+		_unit addmagazines [_pistolmag,4];
+		_unit addweapon _pistol;
+		_attachments = [_scope3];
 	};
 
 // LOADOUT: SPOTTER
@@ -571,7 +578,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade,3];
 		_unit addmagazines [_mgrenade,3];
 		_unit addmagazines [_smokegrenade,3];
-		_attachments =sqf [_attach1,_scope1,_silencer1];
+		_attachments = [_attach1,_scope1,_silencer1];
 		["div"] call _backpack;
 	};
 // LOADOUT: SUBMACHINEGUNNER
