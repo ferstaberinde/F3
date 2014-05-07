@@ -20,7 +20,7 @@ PARAMETERS:
 2. Radius of area to be considered																				 | MANDATORY - int
 3. Side of units to spawn																						 | MANDATORY - side (east, west, resistance)
 4. Number of units.																								 | OPTIONAL - integer - default is No. of available buildings/4
-5. Treshold of building positions that can be occupied in the buildings in the area								 | OPTIONAL - integer between 1 (=100%) and 0, default is set below
+5. threshold of building positions that can be occupied in the buildings in the area								 | OPTIONAL - integer between 1 (=100%) and 0, default is set below
 6. Array of classes to spawn																		           	 | OPTIONAL - array w. strings  - default are classes defined below
 
 EXAMPLE
@@ -40,9 +40,9 @@ _eclasses = ["O_Soldier_lite_F","O_Soldier_F"];
 // INDEPENDENT
 _iclasses = ["I_Soldier_lite_F","I_Soldier_F"];
 
-_treshold = 0.8; // Default percentage of building positions that can be taken in any given building (1=all)
+_threshold = 0.8; // Default percentage of building positions that can be taken in any given building (1=all)
 
-private ["_debug","_area","_radius","_side","_classes","_buildings","_int","_grp","_trsh"];
+private ["_debug","_area","_radius","_side","_classes","_buildings","_int","_grp","_thrsh"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
 _debug = if !(isNil "ws_debug") then {ws_debug} else {false};
@@ -52,7 +52,7 @@ _area = (_this select 0) call ws_fnc_getEPos;
 _radius = _this select 1;
 _side = _this select 2;
 _int = if (count _this > 3) then {_this select 3} else {0};
-_trsh = if (count _this > 4) then {_this select 4} else {_treshold};
+_thrsh = if (count _this > 4) then {_this select 4} else {_threshold};
 _classes = if (count _this > 5) then {_this select 5} else {[]};
 
 //Fault checks
@@ -83,7 +83,7 @@ if (_int == 0) then {
 	_int = round (count _buildings / 4);
 };
 
-if (_trsh <= 0) then {_trsh = 0.1};
+if (_thrsh <= 0) then {_thrsh = 0.1};
 
 // Create a new group
 _grp = createGroup _side;
@@ -123,7 +123,7 @@ for "_x" from 1 to _int do {
 	};
 
 	// Loop until we have a building with enough free building positions
-	while {count _buildings > 0 && {count _bpl == 0 || _bu / count _bpa >= _trsh}} do {
+	while {count _buildings > 0 && {count _bpl == 0 || _bu / count _bpa >= _thrsh}} do {
 		_buildings = _buildings - [_b];
 
 		if (count _buildings == 0) exitWith {};

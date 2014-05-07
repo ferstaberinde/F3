@@ -9,15 +9,15 @@
 // RETURNS
 // Units that haven't been put into a building position
 
-private ["_debug","_units","_building","_treshold","_barray","_bpos","_bposarray","_bposleft","_bUnits","_occupied","_mkr"];
+private ["_debug","_units","_building","_threshold","_barray","_bpos","_bposarray","_bposleft","_bUnits","_occupied","_mkr"];
 _debug = if !(isNil "ws_debug") then {ws_debug} else {false};
 
 _units = _this select 0;
 _barray = _this select 1;
-_treshold = if (count _this > 2) then {_this select 2} else {1};	//Percentage of building positions that can be taken before building is considered "full"
+_threshold = if (count _this > 2) then {_this select 2} else {1};	//Percentage of building positions that can be taken before building is considered "full"
 
 if (typename _barray != "ARRAY") then {_barray = [_this select 1]};
-if (_treshold <= 0) then {_treshold = 0.1};
+if (_threshold <= 0) then {_threshold = 0.1};
 
 // As long we have units and a more than one building we loop through either
 while {count _units != 0 && count _barray != 0} do {
@@ -33,7 +33,7 @@ while {count _units != 0 && count _barray != 0} do {
 
 	// Loop until we find a good building
 	//||
-	while {count _barray > 0 && {count _bposLeft == 0 || (_bUnits / count _bposarray >= _treshold)}} do {
+	while {count _barray > 0 && {count _bposLeft == 0 || (_bUnits / count _bposarray >= _threshold)}} do {
 		player globalchat "loop";
 		_barray = _barray - [_building];
 
@@ -113,7 +113,7 @@ while {count _units != 0 && count _barray != 0} do {
 	};
 
 	// If the building doesn't have any bpos or is filled, it's removed from the building-array
-	if (count _bposleft == 0 || (_bUnits+1)/count _bposarray >= _treshold) then {_barray = _barray - [_building]};
+	if (count _bposleft == 0 || (_bUnits+1)/count _bposarray >= _threshold) then {_barray = _barray - [_building]};
 
 };
 
