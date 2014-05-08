@@ -36,14 +36,14 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-// ATTACHMENTS
+// ATTACHMENTS - PRIMARY
 _attach1 = "acc_pointer_IR";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
 _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
-_scope1 = "optic_ACO_grn";		// ACO
+_scope1 = "optic_Holosight";	// Holosight
 _scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
@@ -53,6 +53,20 @@ _attachments = [_attach1,_scope1]; // The default attachment set for most units,
 // [] = remove all
 // [_attach1,_scope1,_silencer] = remove all, add items assigned in _attach1, _scope1 and _silencer1
 // [_scope2] = add _scope2, remove rest
+// false = keep attachments as they are
+
+// ====================================================================================
+
+// ATTACHMENTS - HANDGUN
+_hg_attach1 = "acc_pointer_IR";		// IR Laser
+_hg_attach2 = "acc_flashlight";		// Flashlight
+
+_hg_silencer1 = "muzzle_snds_acp";	// .45 suppressor
+
+_hg_scope1 = "optic_MRD";			// MRD
+
+// Default setup
+_hg_attachments= []; // The default attachment set for handguns, overwritten in the individual unitType
 
 // ====================================================================================
 
@@ -697,15 +711,22 @@ if !(_isMan) exitWith {};
 
 // Handle weapon attachments
 if (typeName _attachments == typeName []) then {
-	{
-		// loop trough them and remove them
-		_unit removePrimaryWeaponItem  _x;
-	} foreach (primaryWeaponItems _unit);
+	removeAllPrimaryWeaponItems _x;
 	{
 		// loop trough the attachments and add them to the weapon
 		_unit addPrimaryWeaponItem _x;
 	} foreach _attachments;
 };
+
+// Handle handgun attachments
+if (typeName _attachments_scnd == typeName []) then {
+	removeAllHandgunItems _x;
+	{
+		// loop trough the attachments and add them to the weapon
+		_unit addHandgunItem _x;
+	} foreach _attachments_scnd;
+};
+
 
 // ====================================================================================
 
