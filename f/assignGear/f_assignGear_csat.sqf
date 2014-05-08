@@ -58,10 +58,7 @@ _attachments = [_attach1,_scope1]; // The default attachment set for most units,
 // ====================================================================================
 
 // ATTACHMENTS - HANDGUN
-_hg_attach1 = "acc_pointer_IR";		// IR Laser
-_hg_attach2 = "acc_flashlight";		// Flashlight
-
-_hg_silencer1 = "muzzle_snds_acp";	// .45 suppressor
+_hg_silencer1 = "muzzle_snds_L";	// 9mm suppressor
 
 _hg_scope1 = "optic_MRD";			// MRD
 
@@ -700,12 +697,12 @@ if (typeName _attachments == typeName []) then {
 };
 
 // Handle handgun attachments
-if (typeName _attachments_scnd == typeName []) then {
+if (typeName _hg_attachments == typeName []) then {
 	removeAllHandgunItems _x;
 	{
 		// loop trough the attachments and add them to the weapon
 		_unit addHandgunItem _x;
-	} foreach _attachments_scnd;
+	} foreach _hg_attachments;
 };
 
 // ====================================================================================
