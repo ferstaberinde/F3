@@ -36,14 +36,14 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-// ATTACHMENTS
+// ATTACHMENTS - PRIMARY
 _attach1 = "acc_pointer_IR";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
 _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
-_scope1 = "optic_ACO_grn";		// ACO
+_scope1 = "optic_Holosight";	// Holosight
 _scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
@@ -53,11 +53,21 @@ _attachments = [_attach1,_scope1]; // The default attachment set for most units,
 // [] = remove all
 // [_attach1,_scope1,_silencer] = remove all, add items assigned in _attach1, _scope1 and _silencer1
 // [_scope2] = add _scope2, remove rest
+// false = keep attachments as they are
+
+// ====================================================================================
+
+// ATTACHMENTS - HANDGUN
+_hg_silencer1 = "muzzle_snds_acp";	// .45 suppressor
+
+_hg_scope1 = "optic_MRD";			// MRD
+
+// Default setup
+_hg_attachments= []; // The default attachment set for handguns, overwritten in the individual unitType
 
 // ====================================================================================
 
 // WEAPON SELECTION
-
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
 _rifle = "arifle_MX_pointer_F";
@@ -97,8 +107,8 @@ _glflareyellow = "3Rnd_UGL_FlareYellow_F";
 _glflaregreen = "3Rnd_UGL_FlareGreen_F";
 
 // Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
-_pistol = "hgun_P07_F";
-_pistolmag = "16Rnd_9x21_Mag";
+_pistol = "hgun_Pistol_heavy_01_F";
+_pistolmag = "11Rnd_45ACP_Mag";
 
 // Grenades
 _grenade = "HandGrenade";
@@ -710,15 +720,22 @@ if !(_isMan) exitWith {};
 
 // Handle weapon attachments
 if (typeName _attachments == typeName []) then {
-	{
-		// loop trough them and remove them
-		_unit removePrimaryWeaponItem  _x;
-	} foreach (primaryWeaponItems _unit);
+	removeAllPrimaryWeaponItems _x;
 	{
 		// loop trough the attachments and add them to the weapon
 		_unit addPrimaryWeaponItem _x;
 	} foreach _attachments;
 };
+
+// Handle handgun attachments
+if (typeName _hg_attachments == typeName []) then {
+	removeAllHandgunItems _x;
+	{
+		// loop trough the attachments and add them to the weapon
+		_unit addHandgunItem _x;
+	} foreach _hg_attachments;
+};
+
 
 // ====================================================================================
 

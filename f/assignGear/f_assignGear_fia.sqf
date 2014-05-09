@@ -36,7 +36,7 @@
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
-// ATTACHMENTS
+// ATTACHMENTS - PRIMARY
 _attach1 = "acc_pointer_IR";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
@@ -53,6 +53,17 @@ _attachments = [_attach1,_scope1]; // The default attachment set for most units,
 // [] = remove all
 // [_attach1,_scope1,_silencer] = remove all, add items assigned in _attach1, _scope1 and _silencer1
 // [_scope2] = add _scope2, remove rest
+// false = keep attachments as they are
+
+// ====================================================================================
+
+// ATTACHMENTS - HANDGUN
+_hg_silencer1 = "muzzle_snds_L";	// 9mm suppressor
+
+_hg_scope1 = "optic_mrd";			// MRD
+
+// Default setup
+_hg_attachments= []; // The default attachment set for handguns, overwritten in the individual unitType
 
 // ====================================================================================
 
@@ -691,14 +702,20 @@ if !(_isMan) exitWith {};
 
 // Handle weapon attachments
 if (typeName _attachments == typeName []) then {
-	{
-		// loop trough them and remove them
-		_unit removePrimaryWeaponItem  _x;
-	} foreach (primaryWeaponItems _unit);
+	removeAllPrimaryWeaponItems _x;
 	{
 		// loop trough the attachments and add them to the weapon
 		_unit addPrimaryWeaponItem _x;
 	} foreach _attachments;
+};
+
+// Handle handgun attachments
+if (typeName _hg_attachments == typeName []) then {
+	removeAllHandgunItems _x;
+	{
+		// loop trough the attachments and add them to the weapon
+		_unit addHandgunItem _x;
+	} foreach _hg_attachments;
 };
 
 // ====================================================================================
