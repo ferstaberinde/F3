@@ -112,6 +112,11 @@ _medkit = "Medikit";
 // Night Vision Goggles (NVGoggles)
 _nvg = "NVGoggles";
 
+// UAV Terminal
+_uavterminal = "B_UavTerminal";	  // BLUFOR - FIA
+//_uavterminal = "O_UavTerminal"; // OPFOR - FIA
+//_uavterminal = "I_UavTerminal"; // INDP - FIA
+
 // Chemlights
 _chemgreen =  "Chemlight_green";
 _chemred = "Chemlight_red";
@@ -119,10 +124,13 @@ _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
 // Backpacks
-_bagsmall = "B_AssaultPack_rgr";				// carries 160, weighs 20
+_bagsmall = "B_AssaultPack_rgr";			// carries 160, weighs 20
 _bagmedium = "B_FieldPack_khk";				// carries 200, weighs 30
 _baglarge =  "B_Carryall_oli"; 				// carries 320, weighs 60
-_bagmediumdiver =  "B_AssaultPack_blk";			// used by divers
+_bagmediumdiver =  "B_AssaultPack_blk";		// used by divers
+_baguav = "B_UAV_01_backpack_F";			// used by UAV operator - BLUFOR FIA
+//_baguav = "O_UAV_01_backpack_F";			// used by UAV operator - OPFOR FIA
+//_baguav = "I_UAV_01_backpack_F";			// used by UAV operator - INDP FIA
 
 // ====================================================================================
 
@@ -254,20 +262,18 @@ if (_isMan) then {
 
 	if(_nvg in (assignedItems _unit)) then
 	{
-	_unit unassignItem _nvg;
-	_unit removeItem _nvg;
+		_unit unassignItem _nvg;
+		_unit removeItem _nvg;
 	};
 	// uncomment to remove nvgoogles
-	_unit addItem _nvg;
-	_unit assignItem _nvg;					// add universal NVG for this faction
+	_unit linkItem _nvg;					// add universal NVG for this faction
 
 	//removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
-	//unit addItem "ItemGPS"; 					// add gps to this faction
-	//_unit assignItem "ItemGPS";
-	//_unit addweapon "ItemMap";
-	//_unit addweapon "ItemCompass";
-	//_unit addweapon "ItemRadio";
-	//_unit addweapon "ItemWatch";
+	//_unit linkItem "ItemGPS"; 					// add gps to this faction
+	//_unit linkItem "ItemMap";
+	//_unit linkItem "ItemCompass";
+	//_unit linkItem "ItemRadio";
+	//_unit linkItem "ItemWatch";
 
 };
 
@@ -310,8 +316,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,2];
 		_unit addWeapon "Rangefinder";
-		_unit addItem "ItemGPS";
-		_unit assignItem "ItemGPS";
+		_unit linkItem "ItemGPS";
 		["g"] call _backpack;
 	};
 
@@ -330,8 +335,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,2];
 		_unit addWeapon "Rangefinder";
-		_unit addItem "ItemGPS";
-		_unit assignItem "ItemGPS";
+		_unit linkItem "ItemGPS";
 		["g"] call _backpack;
 	};
 
@@ -358,8 +362,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,2];
 		_unit addWeapon "Rangefinder";
-		_unit addItem "ItemGPS";
-		_unit assignItem "ItemGPS";
+		_unit linkItem "ItemGPS";
 		["g"] call _backpack;
 	};
 
@@ -523,6 +526,31 @@ switch (_typeofUnit) do
 		["engm"] call _backpack;
 	};
 
+// LOADOUT: UAV OPERATOR
+	case "uav":
+	{
+		_unit addmagazines [_carbinemag,7];
+		_unit addweapon _carbine;
+		_unit addmagazines [_smokegrenade,2];
+		_unit addmagazines [_grenade,1];
+		_unit addmagazines [_mgrenade,1];
+		_unit linkItem _uavterminal;
+		["uav"] call _backpack;
+	};
+
+// LOADOUT: Diver
+	case "div":
+	{
+		_unit addmagazines [_diverMag1,4];
+		_unit addmagazines [_diverMag2,3];
+		_unit addweapon _diverWep;
+		_unit addmagazines [_grenade,3];
+		_unit addmagazines [_mgrenade,3];
+		_unit addmagazines [_smokegrenade,3];
+		_attachments = [_attach1,_scope1,_silencer1];
+		["div"] call _backpack;
+	};
+
 // LOADOUT: RIFLEMAN
 	case "r":
 	{
@@ -546,18 +574,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,3];
 		["car"] call _backpack;
 	};
-// LOADOUT: Diver
-	case "div":
-	{
-		_unit addmagazines [_diverMag1,4];
-		_unit addmagazines [_diverMag2,3];
-		_unit addweapon _diverWep;
-		_unit addmagazines [_grenade,3];
-		_unit addmagazines [_mgrenade,3];
-		_unit addmagazines [_smokegrenade,3];
-		_attachments = [_attach1,_scope1,_silencer1];
-		["div"] call _backpack;
-	};
+
 // LOADOUT: SUBMACHINEGUNNER
 	case "smg":
 	{

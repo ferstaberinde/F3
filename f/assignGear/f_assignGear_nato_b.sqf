@@ -442,3 +442,9 @@ case "div":
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
 	};
 };
+
+// BACKPACK: UAV
+case "uav":
+{
+	_unit addBackpack _baguav;
+};
