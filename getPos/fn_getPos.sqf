@@ -36,7 +36,7 @@ _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};   //Debug mode.
 
 //Declaring variables
 _count = count _this;
-_posloc = _this select 0;
+_posloc = (_this select 0) call ws_fnc_getEpos;
 _pos = [0,0,0];
 _posradius = 0;
 _mindis = 0;
@@ -54,7 +54,7 @@ if (_count > 5) then {_building = _this select 5;};
 if (_count > 6) then {_water = _this select 6;};
 
 //Interpreting variables
-_pos = _posloc call ws_fnc_getEpos;
+_pos = _posloc;
 
 _posX = (_pos select 0);
 _posY = (_pos select 1);
@@ -76,7 +76,7 @@ switch (typename _posradius) do {
 		_pos = [_newX,_newY,0];
 
 		if (_mindis > 0) then {
-			while {_pos distance _posloc < _mindis} do {
+			while {(_pos distance _posloc) < _mindis} do {
 				_newX = _posX + ((random _posradius) * sin _dir);
 				_newY = _posY + ((random _posradius) * cos _dir);
 				_pos = [_newX,_newY,0];
