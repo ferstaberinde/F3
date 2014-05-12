@@ -46,6 +46,17 @@ respawnTemplates[] = {"f_Spectator"};
 
 // ============================================================================================
 
+// F3 - Start of Notifications block
+
+class cfgNotifications {
+	class UnauthorisedCrew {
+		description="%1";
+		title="Non-authorised crew!";
+	};
+};
+
+// ============================================================================================
+
 // F3 - Start of Params code blocks.
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
@@ -328,6 +339,7 @@ class CfgFunctions
 			class removeBody{};
 			class nearPlayer{};
 			class preMount{};
+			class isAuthorisedCrew {};
 		};
 		class mpEnd
 		{
