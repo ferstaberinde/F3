@@ -2,7 +2,7 @@
 // F3 - SimpleWoundingSystem
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
-
+if (isDedicated) ExitWith {};
 _unit = _this select 0;
 
 /// lets wait a bit.
