@@ -318,7 +318,6 @@ class CfgFunctions
 				postInit = 1;
 			};
 
-			class SetAISKill{};
 			class localGroupMarker{};
 			class SetLocalFTMemberMarkers{};
 			class GetMarkerColor{};
@@ -365,6 +364,11 @@ class CfgFunctions
 		{
 			file = "f\spect";
 			class cam_init{};
+		};
+		class setAISkill
+		{
+			file = "f\setAISKill";
+			class SetAISKill{};
 		};
 	};
 };
