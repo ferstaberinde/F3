@@ -16,7 +16,7 @@ waitUntil {time > 1};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_units","_skill","_skillarray","_superSkill","_highSkill","_mediumSkill","_lowSkill"];
+private ["_units","_superSkill","_highSkill","_mediumSkill","_lowSkill"];
 
 // ====================================================================================
 
@@ -31,7 +31,7 @@ _lowSkill = 0.25;
 // This are the skills a soldier set to _superSkill would have. For all other skill levels the values are rounded using the numbers above.
 // These are recommended levels to avoid "laser" AI snipers. Change them accordingly if you are finding the AI to be too inaccurate or are using AI mods.
 
-f_skillSet = [
+f_var_skillSet = [
 	0.55,		// aimingAccuracy
 	0.6,		// aimingShake
 	0.7,		// aimingSpeed
@@ -50,38 +50,36 @@ f_randomDown = 0.15;
 
 // ====================================================================================
 
-// SET KEY VARIABLES
-
-// We use a common variable containing all men and vehicles
-
-_units = allUnits ;
-if (count _this > 0) then {_units = _this};
-
+// SET DEFAULT VALUES
 // The default skill levels for all sides. They are overriden by any parameters set.
+// Values of > 1 mean that units belonging to that side are not modified by the script
 
-f_skillBlu = _mediumSkill;
-f_skillRes = _mediumSkill;
-f_skillOpf = _mediumSkill;
-f_skillCiv = _mediumSkill;
-_skill = _mediumSkill;
+f_var_skillBlu = 99; // BLUFOR
+f_var_skillRes = 99; // INDEPENDENT
+f_var_skillOpf = 99; // OPFOR
+f_var_skillCiv = 99; // CIVILIAN
 
 // ====================================================================================
 
-// INCLUDE FOLLOW-UP SCRIPT
-// Depending on enabled parameters either the script for A&D or for COOP is included to set the side specific skill levels
+// SET UP SKILL Levels
+// As the skill level are passed as full integers, we interpret each of them to set the correct value
 
-if !(isNil "f_param_AISkill_Friendly" && isNil "f_param_AISkill_Enemy") then {
-	 #include "f_setAISkillCoop.sqf";
-};
-if !(isNil "f_param_AISkill_BLUFOR" && isNil "f_param_AISkill_OPFOR") then {
-	 #include "f_setAISkillAD.sqf";
-};
+#include "f_setAISkillValues.sqf";
 
 // ====================================================================================
 
 // BROADCAST PUBLIC VARIABLES
 // We make the global variables known to all clients
-{publicVariable _x} forEach ["f_skillSet","f_randomUP","f_randomDown","f_skillBLU","f_skillOPF","f_skillRES","f_skillCIV"];
+
+{publicVariable _x} forEach ["f_var_skillSet","f_randomUP","f_randomDown","f_var_skillBLU","f_var_skillOPF","f_var_skillRES","f_var_skillCIV"];
+
+// ====================================================================================
+
+// SET KEY VARIABLES
+// If an array of units was passed, the skill change will apply only to them
+
+_units = allUnits;
+if (count _this > 0) then {_units = _this};
 
 // ====================================================================================
 
@@ -90,18 +88,27 @@ if !(isNil "f_param_AISkill_BLUFOR" && isNil "f_param_AISkill_OPFOR") then {
 // By using the BI function BIS_fnc_MP we ensure that AI is set to the correct level for all connected clients, including the server
 
 {
+
+private ["_skill","_skillarray","_random"];
+_skill = 0;
+_skillArray = [];
+
     if !(_x getVariable ["f_setAISkill",false]) then {
 	// We change the value of skill to the appropiate one depending on the unit's side
 	switch (side _x) do {
-		case west: {_skill = f_skillBLU};
-		case east: {_skill = f_skillOPF};
-		case independent: {_skill = f_skillRES};
-		case civilian: {_skill = f_skillCIV};
+		case west: {_skill = f_var_skillBLU};
+		case blufor: {_skill = f_var_skillBLU};
+		case east: {_skill = f_var_skillOPF};
+		case opfor: {_skill = f_var_skillOPF};
+		case independent: {_skill = f_var_skillRES};
+		case resistance: {_skill = f_var_skillRES};
+		case civilian: {_skill = f_var_skillCIV};
 	};
 
-	_skillArray = [];
+	if (_skill == 99) exitWith {};
+
 	for "_i" from 0 to 9 do {
-		_skilllevel = (f_skillSet select _i) * _skill;
+		_skilllevel = (f_var_skillSet select _i) * _skill;
 		_random =  random f_randomUp - random f_randomDown;
 		_skillArray set [_i, (_skilllevel + _random)];
 	};
@@ -110,14 +117,6 @@ if !(isNil "f_param_AISkill_BLUFOR" && isNil "f_param_AISkill_OPFOR") then {
 	[[_x,_skillArray],"f_fnc_setAISkill"] spawn BIS_fnc_MP;
      };
 
+sleep 0.1; // Very short sleep to avoid lag when modifiyng a lot of AI
+
 } forEach _units;
-
-// DEBUG (SPECIAL)
-// if (f_var_debugMode == 1) then
-// {
-// 	{_x addEventHandler ["hit", {_v=_this select 0; _skillV = skill _v; player sideChat format ["DEBUG (f\common\f_setAISkill.sqf): Skill %1 = %2",_v,_skillV]}];} forEach _localUnits;
-// };
-
-// ====================================================================================
-
-if (true) exitWith {};
