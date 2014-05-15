@@ -50,7 +50,7 @@ if (isNil "_grp") then
 // EXIT FOR EMPTY GROUPS (PART I)
 // If the group is empty, this script exits.
 
-if (isnil "_grp" exitWith {};
+if (isnil "_grp") exitWith {};
 
 // ====================================================================================
 

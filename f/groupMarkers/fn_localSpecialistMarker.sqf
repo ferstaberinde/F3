@@ -46,7 +46,7 @@ if (isNil "_unt") then
 // EXIT FOR DEAD UNITS (PART I)
 // If the unit is dead, this script exits.
 
-if (!alive _unt ) exitWith {};
+if (!alive _unt) exitWith {};
 
 // ====================================================================================
 
