@@ -30,7 +30,7 @@ _mkrt = "";
 // WAIT FOR GROUP TO EXIST IN-MISSION
 // We wait for the group to have members before creating the marker.
 
-if (isNil "_grp") then
+if (isNil "_grp" then
 {
 	call compile format ["
 		waitUntil {
@@ -51,19 +51,7 @@ if (isNil "_grp") then
 // EXIT FOR EMPTY GROUPS (PART I)
 // If the group is empty, this script exits.
 
-if (isnil "_grp") exitWith {};
-
-// ====================================================================================
-
-// SET MARKER SHAPE
-// Depending on the side of the group, we use a different marker shape, defined by the prefix
-
-switch (side _grp) do {
-	case west: {_mkrt = "b_";};
-	case east:{_mkrt = "o_";};
-	case resistance:{_mkrt = "n_";};
-	default {_mkrt = "b_";};
-};
+if (isnil "_grp" exitWith {};
 
 // ====================================================================================
 
@@ -78,7 +66,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal (_mkrt + "hq");
+		_mkrName setMarkerTypeLocal "b_hq";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -88,7 +76,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "inf");
+		_mkrName setMarkerTypeLocal  "b_inf";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -98,7 +86,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "support");
+		_mkrName setMarkerTypeLocal  "b_support";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -108,7 +96,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "motor_inf");
+		_mkrName setMarkerTypeLocal  "b_motor_inf";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -118,7 +106,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "recon");
+		_mkrName setMarkerTypeLocal  "b_recon";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -128,7 +116,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "mortar");
+		_mkrName setMarkerTypeLocal  "b_mortar";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -138,7 +126,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "maint");
+		_mkrName setMarkerTypeLocal  "b_maint";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -148,7 +136,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "mech_inf");
+		_mkrName setMarkerTypeLocal  "b_mech_inf";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -158,7 +146,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "armor");
+		_mkrName setMarkerTypeLocal  "b_armor";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -168,7 +156,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "air");
+		_mkrName setMarkerTypeLocal  "b_air";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -178,7 +166,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "plane");
+		_mkrName setMarkerTypeLocal  "b_plane";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -188,7 +176,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal  (_mkrt + "art");
+		_mkrName setMarkerTypeLocal  "b_art";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.8, 0.8];
 		_mkrName setMarkerTextLocal _mkrText;

@@ -30,7 +30,7 @@ _mkrt = "";
 // WAIT FOR UNIT TO EXIST IN-MISSION
 // We wait for the unit to exist before creating the marker.
 
-if (isNil "_unt") then
+if (isNil "_unt" then
 {
 	call compile format ["
 		waitUntil {
@@ -51,18 +51,6 @@ if (!alive _unt ) exitWith {};
 
 // ====================================================================================
 
-// SET MARKER SHAPE
-// Depending on the side of the unit, we use a different marker shape, defined by the prefix
-
-switch (side _unt) do {
-	case west: {_mkrt = "b_";};
-	case east:{_mkrt = "o_";};
-	case resistance:{_mkrt = "n_";};
-	default {_mkrt = "b_";};
-};
-
-// ====================================================================================
-
 // CREATE MARKER
 // Depending on the value of _mkrType a different type of marker is created.
 
@@ -74,7 +62,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos _unt select 0),(getPos _unt select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal (_mkrt + "med");
+		_mkrName setMarkerTypeLocal "b_med";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.5, 0.5];
 		_mkrName setMarkerTextLocal _mkrText;
@@ -84,7 +72,7 @@ switch (_mkrType) do
 	{
 		_mkr = createMarkerLocal [_mkrName,[(getPos _unt select 0),(getPos _unt select 1)]];
 		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal (_mkrt + "uav");
+		_mkrName setMarkerTypeLocal "b_uav";
 		_mkrName setMarkerColorLocal _mkrColor;
 		_mkrName setMarkerSizeLocal [0.5, 0.5];
 		_mkrName setMarkerTextLocal _mkrText;
