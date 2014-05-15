@@ -364,7 +364,6 @@ class CfgFunctions
 			class removeBody{};
 			class nearPlayer{};
 			class preMount{};
-			class isAuthorisedCrew {};
 		};
 		class mpEnd
 		{
@@ -402,6 +401,11 @@ class CfgFunctions
 		{
 			file = "f\spect";
 			class cam_init{};
+		};
+		class authorisedCrew
+		{
+			file = "f\authorisedCrew";
+			class authorisedCrewCheck {};
 		};
 		#include "f\simplewoundingsystem\config.hpp"
 	};
