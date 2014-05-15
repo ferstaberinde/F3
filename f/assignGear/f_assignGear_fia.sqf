@@ -701,24 +701,10 @@ if !(_isMan) exitWith {};
 // ====================================================================================
 
 // Handle weapon attachments
-if (typeName _attachments == typeName []) then {
-	removeAllPrimaryWeaponItems _x;
-	{
-		// loop trough the attachments and add them to the weapon
-		_unit addPrimaryWeaponItem _x;
-	} foreach _attachments;
-};
-
-// Handle handgun attachments
-if (typeName _hg_attachments == typeName []) then {
-	removeAllHandgunItems _x;
-	{
-		// loop trough the attachments and add them to the weapon
-		_unit addHandgunItem _x;
-	} foreach _hg_attachments;
-};
+#include "f_assignGear_attachments.sqf";
 
 // ====================================================================================
+
 
 // ENSURE UNIT HAS CORRECT WEAPON SELECTED ON SPAWNING
 
