@@ -23,7 +23,6 @@ _mkrType = _this select 1;
 _mkrText = _this select 2;
 _mkrColor = _this select 3;
 _mkrName = format ["mkr_%1",_untName];
-_mkrt = "";
 
 // ====================================================================================
 
