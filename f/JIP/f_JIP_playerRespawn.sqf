@@ -14,35 +14,41 @@ private ["_unit","_corpse"];
 _unit = _this select 0;
 _corpse = _this select 1;
 
-// ===================================================================================
-
-// CHECK FOR FIRST TIME SPAWN
-// If no corpse exists the player is spawned for the first time and does not need a JIP menu
-
-if (isNull _corpse) exitWith {};
-
 // ====================================================================================
 
 // CHECK FOR GLOBAL VARIABLES
 // Check if the global variables have been initialized, if not, do so.
 
+if (isNil "f_var_JIP_FirstMenu") then {f_var_JIP_FirstMenu = false};
 if (isNil "f_var_JIP_GearMenu") then {f_var_JIP_GearMenu = true};
 if (isNil "f_var_JIP_RemoveCorpse") then {f_var_JIP_RemoveCorpse = true};
+
+// ===================================================================================
+
+// CHECK FOR FIRST TIME SPAWN
+// If no corpse exists the player is spawned for the first time and does not need a JIP menu
+
+if (f_var_JIP_FirstMenu && isNull _corpse) exitWith {};
 
 // ====================================================================================
 
 // CHECK FOR GEAR
-// If gear selection is disabled and the unit has already assigned a loadout via f_fnc_assignGear, we use that instead.
+// If gear selection is disabled and the unit has already beeb assigned a loadout via f_fnc_assignGear, it is used instead
 
-if (!f_var_JIP_GearMenu && {!isNil (_unit getVariable "f_var_assignGear")}) then {
-	player setVariable ["f_var_JIP_loadout",(_unit getVariable "f_var_assignGear")];
+if (!f_var_JIP_GearMenu) then {
+	if (!isNil (_unit getVariable "f_var_assignGear")) then {
+		player setVariable ["f_var_JIP_loadout",(_unit getVariable "f_var_assignGear")];
+	};
 };
 
 // ====================================================================================
 
 // ADD JIP MENU TO PLAYER
+// Check if player already has the JIP Menu. If not, add it.
 
+// if (isNil "F3_JIP_reinforcementOptionsAction") then {
 [player] execVM "f\JIP\f_JIP_addReinforcementOptionsAction.sqf";
+//};
 
 // ====================================================================================
 
