@@ -366,6 +366,7 @@ class CfgFunctions
 			file = "f\spect";
 			class cam_init{};
 		};
+		#include "f\simplewoundingsystem\config.hpp"
 	};
 };
 
