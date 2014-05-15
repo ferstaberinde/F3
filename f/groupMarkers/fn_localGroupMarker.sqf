@@ -29,7 +29,7 @@ _mkrName = format ["mkr_%1",_grpName];
 // WAIT FOR GROUP TO EXIST IN-MISSION
 // We wait for the group to have members before creating the marker.
 
-if (isNil "_grp" then
+if (isNil "_grp") then
 {
 	call compile format ["
 		waitUntil {

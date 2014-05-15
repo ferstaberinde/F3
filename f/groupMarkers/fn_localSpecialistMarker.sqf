@@ -29,7 +29,7 @@ _mkrName = format ["mkr_%1",_untName];
 // WAIT FOR UNIT TO EXIST IN-MISSION
 // We wait for the unit to exist before creating the marker.
 
-if (isNil "_unt" then
+if (isNil "_unt") then
 {
 	call compile format ["
 		waitUntil {
