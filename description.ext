@@ -349,9 +349,6 @@ class CfgFunctions
 
 			class SetAISKill{};
 			class localGroupMarker{};
-			class SetLocalFTMemberMarkers{};
-			class GetMarkerColor{};
-			class LocalFTMarkerSync{};
 			class localSpecialistMarker{};
 			class drawNameTag{};
 			class removeBody{};
@@ -395,6 +392,13 @@ class CfgFunctions
 			file = "f\spect";
 			class cam_init{};
 		};
+		class FTMemberMarkers
+		{
+			file = "f\FTMemberMarkers";
+			class SetLocalFTMemberMarkers{};
+			class GetMarkerColor{};
+			class LocalFTMarkerSync{};
+		}
 		#include "f\simplewoundingsystem\config.hpp"
 	};
 };
