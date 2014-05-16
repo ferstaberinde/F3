@@ -9,36 +9,51 @@
 // 		[] call f_fnc_SetLocalFTMemberMarker;
 //
 // ====================================================================================
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
 
-#include "f_waitForJIP.sqf"
+// MAKE SURE THE PLAYER INITIALIZES PROPERLY
+if (!isDedicated && (isNull player)) then
+{
+    waitUntil {sleep 0.1; !isNull player};
+};
 
 // ====================================================================================
-// too small to deserve its own file.
+
+// DEFINE HELPER-FUNCTION
+// Define a small function to set a unit's team color
+
 f_fnc_SetTeamValue =
 {
 	_unit = _this select 0;
 	_color = _this select 1;
 	_unit setvariable ["assignedTeam",_color];
 };
+
+// ====================================================================================
+
+// START DRAWING MARKERS
 // launch the subscript for drawing the marker for each unit.
+
 [] spawn {
-	f_HandlerGroup = [];
+	f_var_HandlerGroup = [];
 	while{alive player} do
 	{
 		{
-			// check if we already are drawing the FT marker and that _x is alive and that _x is a man.
-			if(!(_x in f_HandlerGroup) && alive _x) then
+			// check if we already are drawing the FT marker and that _x is alive
+			if(!(_x in f_var_HandlerGroup) && alive _x) then
 			{
-				[_x] execVM "f\common\f_localFTMemberMarker.sqf";
-				f_HandlerGroup = f_HandlerGroup  + [_x];
+				[_x] execVM "f\FTMemberMarkers\f_localFTMemberMarker.sqf";
+				f_var_HandlerGroup = f_var_HandlerGroup  + [_x];
 			};
 		} forEach units (group player);
 	sleep 5;
 	};
 };
-// if the player is the leader he will take charge of updateing the other units of the colorvalue.
+
+// ====================================================================================
+
+// SYNCHRONIZE TEAM COLORS
+// If the player is the groupleader he will take charge of updateing the other units of the colorvalue.
+
 if(player == leader (group player)) then
 {
 	[group player,player] spawn f_fnc_LocalFTMarkerSync;
