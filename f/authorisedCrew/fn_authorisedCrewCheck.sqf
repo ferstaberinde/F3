@@ -13,12 +13,11 @@ private ["_fromEH","_vehicle","_vehicleRole","_unitToCheck","_restrictedCrew","_
 
 _fromEH = _this select 0;
 _restrictedList= _this select 1;
+_restrictcargo = if (count _this > 2) then {_this select 2} else {false};
 
 _vehicle = _fromEH select 0;
 _vehicleRole = _fromEH select 1;
 _unitToCheck = _fromEH select 2;
-
-_restrictcargo = if (count _this > 3) then {_this select 3} else {false};
 
 _warningMsg = localize "STR_f_UnauthorisedCrew_Warning";
 
