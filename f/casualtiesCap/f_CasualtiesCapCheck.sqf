@@ -158,6 +158,6 @@ if (typeName _end == typeName 0) exitWith {
 };
 
 if (typeName _end == typeName {}) exitWith {
-	call _end;
+	spawn _end;
 };
 
