@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_fromEH","_vehicle","_vehicleRole","_unitToCheck","_restrictedCrew","_warningMsg"];
+private ["_fromEH","_vehicle","_vehicleRole","_unitToCheck","_restrictedCrew","_warningMsg","_restrictcargo"];
 
 // ====================================================================================
 
@@ -17,6 +17,8 @@ _restrictedList= _this select 1;
 _vehicle = _fromEH select 0;
 _vehicleRole = _fromEH select 1;
 _unitToCheck = _fromEH select 2;
+
+_restrictcargo = if (count _this > 3) then {_this select 3} else {false};
 
 _warningMsg = localize "STR_f_UnauthorisedCrew_Warning";
 
@@ -38,7 +40,8 @@ if (f_var_debugMode == 1) then
 // the unit triggering the the event handler is local to another client or entering the vehicle in a cargo slot, we exit the
 // script.
 
-if (!(local _unitToCheck) || _vehicleRole == "CARGO") exitWith {};
+if !(local _unitToCheck) exitWith {};
+if (_vehicleRole == "CARGO" && !_restrictcargo) exitWith {};
 
 // ====================================================================================
 
