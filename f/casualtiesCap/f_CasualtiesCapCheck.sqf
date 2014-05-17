@@ -61,7 +61,7 @@ if(typeName _grpstemp == "SIDE") then // if the variable is any of the side vari
 		}
 		else
 		{
-			if((side _x == _grpstemp)) then
+			if (side _x == _grpstemp) then
 			{
 				_grps set [count _grps,_x]; // Add group to array
 			};
@@ -123,10 +123,9 @@ if (f_var_debugMode == 1) then
 // CHECK IF CASUALTIES CAP HAS BEEN REACHED OR EXCEEDED
 // Every 6 seconds the server will check to see if the number of casualties sustained
 // within the group(s) has reached the percentage specificed in the variable _pc. If
-// the cap has been reached, the ending specified in _end will be triggered, using the
-// Multiplayer Ending Controller component.
+// the cap has been reached, the loop will exit to trigger the ending.
 
-for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
+while {true} do
 {
 	_remaining = 0;
 
