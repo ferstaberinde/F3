@@ -395,6 +395,11 @@ class CfgFunctions
 			file = "f\spect";
 			class cam_init{};
 		};
+		class bodyRemoval
+		{
+			file = "f\removeBody";
+			class removeBody{};
+		};
 		#include "f\simplewoundingsystem\config.hpp"
 	};
 };

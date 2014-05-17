@@ -14,11 +14,11 @@ private ["_body","_wait","_group","_distance","_pos","_nearPlayers","_nearUnits"
 _body = _this;
 _group = group _this;
 
-if (isNil "f_removeBodyDelay") then {f_removeBodyDelay = 20};
-if (isNil "f_removeBodyDistance") then {f_removeBodyDistance = 50};
+if (isNil "f_var_removeBodyDelay") then {f_var_removeBodyDelay = 20};
+if (isNil "f_var_removeBodyDistance") then {f_var_removeBodyDistance = 50};
 
-_wait = f_removeBodyDelay;
-_distance = f_removeBodyDistance;
+_wait = f_var_removeBodyDelay;
+_distance = f_var_removeBodyDistance;
 
 waitUntil  {!isNull _body};
 
@@ -40,8 +40,10 @@ while {_loop} do {
 // ====================================================================================
 
 // REMOVE BODY
-// Remove the body from the game
+// Hide and remove the body from the game
 
+hideBody _body;
+sleep 5;
 deleteVehicle _body;
 
 // ====================================================================================
