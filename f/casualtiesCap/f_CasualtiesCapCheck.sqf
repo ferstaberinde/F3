@@ -101,7 +101,7 @@ else
 sleep 10;
 
 if (count _grps == 0) exitWith {
-	player GlobalChat format ["DEBUG (f\casualtiesCap\f_endOnCasualtiesCap.sqf): No groups found, _grpstemp = %1, _grps = %2",_grpstemp,_grps];
+	player GlobalChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): No groups found, _grpstemp = %1, _grps = %2",_grpstemp,_grps];
 };
 
 // ====================================================================================
@@ -115,7 +115,7 @@ _started = 0;
 // DEBUG
 if (f_var_debugMode == 1) then
 {
-	player sideChat format ["DEBUG (f\casualtiesCap\f_endOnCasualtiesCap.sqf): _started = %1",_started];
+	player sideChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): _started = %1",_started];
 };
 
 // ====================================================================================
@@ -139,7 +139,7 @@ while {true} do
 // DEBUG
 	if (f_var_debugMode == 1) then
 	{
-		player sideChat format ["DEBUG (f\casualtiesCap\f_endOnCasualtiesCap.sqf): _remaining = %1",_remaining];
+		player sideChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): _remaining = %1",_remaining];
 	};
 
 	if (_remaining == 0 || ((_started - _remaining) / _started) >= (_pc / 100)) exitWith {};
@@ -160,4 +160,4 @@ if (typeName _end == typeName {}) exitWith {
 	spawn _end;
 };
 
-player GlobalChat format ["DEBUG (f\casualtiesCap\f_endOnCasualtiesCap.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];
+player GlobalChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];
