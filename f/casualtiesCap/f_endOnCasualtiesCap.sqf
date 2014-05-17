@@ -9,6 +9,13 @@ if !(isServer) exitWith {};
 
 // ====================================================================================
 
+// WAIT FOR THE MISSION TO START
+// A short sleep makes sure the script only starts once the mission is live
+
+sleep 0.1;
+
+// ====================================================================================
+
 // DECLARE PRIVATE VARIABLES
 
 private ["_grps","_pc","_end","_started","_remaining","_grpstemp","_alive","_faction","_temp_grp","_temp_grp2","_type","_onlyPlayers","_grpsno","_counter"];
@@ -20,7 +27,7 @@ private ["_grps","_pc","_end","_started","_remaining","_grpstemp","_alive","_fac
 // Up to 5 variables are passed to the script:
 // 0: = Side (e.g. BLUFOR), or group name(s) as string array (e.g. ["mrGroup1","myGroup2"])
 // 1: = What % of units must be dead before the ending is triggered
-// 2: = What ending will be executed. Set to false to run code.
+// 2: = What ending will be executed. Can also be code.
 
 _grpstemp = _this select 0; // either SIDE or array with group strings
 _pc = _this select 1;
@@ -33,15 +40,6 @@ _end = _this select 2;
 
 _onlyPlayers = if (count _this > 3) then {_this select 3} else {true};
 _faction = if (count _this > 4) then {_this select 4} else {[]};
-
-// ====================================================================================
-
-// SET CUSTOM CODE
-// Set your custom code here
-
-_code = {
-	// Custom code to be executed after casualties cap has been triggered
-};
 
 // ====================================================================================
 
@@ -103,7 +101,7 @@ else
 sleep 10;
 
 if (count _grps == 0) exitWith {
-	player GlobalChat format ["DEBUG (f\casualtiesCap\f_endOnCasualtiesCap.sqf): No groups for _grpstemp found, _grpstemp = %1, _grps = %2",_grpstemp,_grps];
+	player GlobalChat format ["DEBUG (f\casualtiesCap\f_endOnCasualtiesCap.sqf): No groups found, _grpstemp = %1, _grps = %2",_grpstemp,_grps];
 };
 
 // ====================================================================================
@@ -153,10 +151,13 @@ for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
 // ====================================================================================
 
 // END CASCAP
-// Depending on input, either the ending or code is called.
+// Depending on input, either MPEnd or the parsed code itself is called
 
-if (typeName _end == typeName 0) then {
-	[_end] call f_fnc_mpEndBroadcast;
-} else {
-	call _code;
+if (typeName _end == typeName 0) exitWith {
+	[_end] call f_fnc_mpEnd;
 };
+
+if (typeName _end == typeName {}) exitWith {
+	call _end;
+};
+
