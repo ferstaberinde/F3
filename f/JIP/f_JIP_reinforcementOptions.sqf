@@ -35,6 +35,7 @@ if (f_var_JIP_GearMenu) then {
 // cancelled the menu.
 
 player removeAction F3_JIP_reinforcementOptionsAction;
+F3_JIP_reinforcementOptionsAction = nil;
 
 // ====================================================================================
 

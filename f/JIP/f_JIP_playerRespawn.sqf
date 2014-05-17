@@ -46,9 +46,9 @@ if (!f_var_JIP_GearMenu) then {
 // ADD JIP MENU TO PLAYER
 // Check if player already has the JIP Menu. If not, add it.
 
-// if (isNil "F3_JIP_reinforcementOptionsAction") then {
-[player] execVM "f\JIP\f_JIP_addReinforcementOptionsAction.sqf";
-//};
+if (isNil "F3_JIP_reinforcementOptionsAction") then {
+	[player] execVM "f\JIP\f_JIP_addReinforcementOptionsAction.sqf";
+};
 
 // ====================================================================================
 
