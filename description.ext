@@ -350,13 +350,10 @@ class CfgFunctions
 				postInit = 1;
 			};
 
-			class localGroupMarker{};
 			class SetLocalFTMemberMarkers{};
 			class GetMarkerColor{};
 			class LocalFTMarkerSync{};
-			class localSpecialistMarker{};
 			class drawNameTag{};
-			class removeBody{};
 			class nearPlayer{};
 			class preMount{};
 		};
@@ -392,6 +389,11 @@ class CfgFunctions
 			class gCache {};
 			class gUncache {};
 		};
+		class groupMarkers {
+			file = "f\groupMarkers";
+			class localGroupMarker{};
+			class localSpecialistMarker{};
+		};
 		class spect
 		{
 			file = "f\spect";
@@ -401,6 +403,11 @@ class CfgFunctions
 		{
 			file = "f\authorisedCrew";
 			class authorisedCrewCheck {};
+		};
+		class bodyRemoval
+		{
+			file = "f\removeBody";
+			class removeBody{};
 		};
 		class setAISkill
 		{
