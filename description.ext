@@ -341,11 +341,11 @@ class CfgFunctions
 				postInit = 1;
 			};
 
-			class localGroupMarker{};
 			class SetLocalFTMemberMarkers{};
+			class SetAISKill{};
 			class GetMarkerColor{};
 			class LocalFTMarkerSync{};
-			class localSpecialistMarker{};
+
 			class drawNameTag{};
 			class removeBody{};
 			class nearPlayer{};
@@ -382,6 +382,11 @@ class CfgFunctions
 			class cTracker {};
 			class gCache {};
 			class gUncache {};
+		};
+		class groupMarkers {
+			file = "f\groupMarkers";
+			class localGroupMarker{};
+			class localSpecialistMarker{};
 		};
 		class spect
 		{
