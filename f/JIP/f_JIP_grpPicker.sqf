@@ -25,7 +25,7 @@ GrpPickInit =
         if (_grp == group player && {count units _grp > 1}) then {
             GrpList set [GrpCount, _grp];
             private "_idx";
-            _idx = COMBO lbAdd ("Keep " + str(_grp)); COMBO lbSetValue [_idx, GrpCount + 1];
+            _idx = COMBO lbAdd ("Stay in " + str(_grp)); COMBO lbSetValue [_idx, GrpCount + 1];
             GrpCount = GrpCount + 1;
         };
     } forEach allGroups;
