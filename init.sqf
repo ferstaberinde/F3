@@ -123,20 +123,11 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 
 // ====================================================================================
 
-// F3 - AI Skill Selector (Coop)
+// F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_isFriendly = [west,civilian];
-// [] execVM "f\server\f_setAISkill.sqf";
-
-// ====================================================================================
-
-// F3 - AI Skill Selector (A&D)
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// f_isFriendlyToBLU_RES = 1;
-// f_isFriendlyToBLU_CIV = 1;
-// [] execVM "f\server\f_setAISkill.sqf";
+// [] execVM "f\setAISKill\f_setAISkill.sqf";
+// f_var_civAI = independent; // Optional: The civilian AI will use this side's settings
 
 // ====================================================================================
 
