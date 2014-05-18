@@ -20,7 +20,7 @@ if (typename _skillarray == 'SCALAR') then {
 	_skill = _this select 1;
 	_skillArray = [];
 	for '_x' from 0 to 9 do {
-		_skilllevel = (f_skillSet select _x) * _skill;
+		_skilllevel = (f_var_skillSet select _x) * _skill;
 		_random =  random f_randomUp - random f_randomDown;
 		_skillArray set [_x, (_skilllevel + _random)];
 	};

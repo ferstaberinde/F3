@@ -138,24 +138,6 @@
         <Spanish> Niebla </Spanish>
         <French> Brouillard </French>
       </Key>
-      <Key ID="STR_f_param_AISkill_Friendly">
-        <English> AI Skill (Friendly) </English>
-        <Czech> Úroveň AI (Friendly) </Czech>
-        <German> KI Stärke (Freundlich) </German>
-        <Polish> Umiejętności SI (Friendly) </Polish>
-        <Russian> Навык ИИ (Свои) </Russian>
-        <Spanish> Habilidad de la IA (Amistoso): </Spanish>
-        <French> Capacité IA (Alliés) </French>
-      </Key>
-      <Key ID="STR_f_param_AISkill_Enemy">
-        <English> AI Skill (Enemy) </English>
-        <Czech> Úroveň AI (Enemy) </Czech>
-        <German> KI Stärke (Feindlich) </German>
-        <Polish> Umiejętności SI (Enemy) </Polish>
-        <Russian> Навык ИИ (Враги) </Russian>
-        <Spanish> Habilidad de la IA (Enemigo): </Spanish>
-        <French> Capacité IA (Enemies) </French>
-      </Key>
       <Key ID="STR_f_param_AISkill_BLUFOR">
         <English> AI Skill (BLUFOR) </English>
         <Czech> Úroveň AI (BLUFOR) </Czech>
@@ -173,6 +155,15 @@
         <Russian> Навык ИИ (OPFOR) </Russian>
         <Spanish> Habilidad de la IA (OPFOR) </Spanish>
         <French> Capacité IA (OPFOR) </French>
+      </Key>
+       <Key ID="STR_f_param_AISkill_INDP">
+        <English> AI Skill (INDEPNDENT) </English>
+        <Czech> Úroveň AI (INDEPNDENT) </Czech>
+        <German> KI Stärke (INDEPNDENT) </German>
+        <Polish> Umiejętności SI (INDEPNDENT) </Polish>
+        <Russian> Навык ИИ (INDEPNDENT) </Russian>
+        <Spanish> Habilidad de la IA (INDEPNDENT) </Spanish>
+        <French> Capacité IA (INDEPNDENT) </French>
       </Key>
       <Key ID="STR_f_param_AISkill_Option0">
         <English> Super </English>
