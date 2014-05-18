@@ -34,15 +34,8 @@ enableDebugConsole = 1;
 
 respawn = 1;
 respawndelay = 3;
-respawnTemplates[] = {"f_Spectator"};
-
-// ============================================================================================
-
-// F3 - JIP Reinforcement Options
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-#include "f\JIP\f_JIP_kitpicker.h"
-#include "f\JIP\f_JIP_grppicker.h"
+respawnOnStart = 0;
+respawnTemplates[] = {"f_spectator","f_JIP"};
 
 // ============================================================================================
 
@@ -96,56 +89,56 @@ class Params
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT
 
-        class f_param_debugMode
-        {
-                title = "$STR_f_param_debugMode";
-                values[] = {0,1};
-                texts[] = {"Off","On"};
-                default = 0;
-                code = "f_var_debugMode = %1";
-        };
+    class f_param_debugMode
+    {
+            title = "$STR_f_param_debugMode";
+            values[] = {0,1};
+            texts[] = {"Off","On"};
+            default = 0;
+            code = "f_var_debugMode = %1";
+    };
 
 // ============================================================================================
 
 // F3 - Folk Assign Gear Script
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-        class f_param_backpacks
-        {
-                title = "$STR_f_param_backpacks";
-                values[] = {0,1,2};
-                texts[] = {"Off","Light","Heavy"};
-                default = 1;
-                code = "f_param_backpacks = %1";
-        };
+    class f_param_backpacks
+    {
+            title = "$STR_f_param_backpacks";
+            values[] = {0,1,2};
+            texts[] = {"Off","Light","Heavy"};
+            default = 1;
+            code = "f_param_backpacks = %1";
+    };
 
 // ============================================================================================
 
 // F3 - ACRE Support
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
 
-        class f_param_acre
-        {
-                title = "ACRE";
-                values[] = {0,1};
-                texts[] = {"Off","On"};
-                default = 0;
-                code = "f_var_acre = %1";
-        };
+    class f_param_acre
+    {
+            title = "ACRE";
+            values[] = {0,1};
+            texts[] = {"Off","On"};
+            default = 0;
+            code = "f_var_acre = %1";
+    };
 
 // ============================================================================================
 
 // F3 - Mission Timer/Safe Start
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
 
-        class f_param_mission_timer
-        {
-                title = "$STR_f_param_mission_timer";
-                values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
-                texts[] = {"$STR_f_param_mission_timer_off","1","2","3","4","5","6","7","8","9","10","15"};
-                default = 0;
-                code = "f_var_mission_timer = %1";
-        };
+    class f_param_mission_timer
+    {
+            title = "$STR_f_param_mission_timer";
+            values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
+            texts[] = {"$STR_f_param_mission_timer_off","1","2","3","4","5","6","7","8","9","10","15"};
+            default = 0;
+            code = "f_var_mission_timer = %1";
+    };
 
 // ============================================================================================
 
@@ -174,7 +167,6 @@ class Params
 		code = "f_param_fog = %1";
 	};
 
-
     class f_param_timeOfDay
 	{
 		title = "$STR_f_param_timeOfDay";
@@ -185,28 +177,6 @@ class Params
  		isGlobal = 0;						// Execute this only on the server
  		code = "f_param_timeOfDay = %1";
 	};
-
-// ============================================================================================
-
-// F3 - AI Skill Selector (coop)
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-//	class f_param_AISkill_Friendly
-//	{
-//		title = "$STR_f_param_AISkill_Friendly";
-//		values[] = {0,1,2,3};
-//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 1;
-//		code = "f_param_AISkill_Friendly = %1";
-//	};
-//	class f_param_AISkill_Enemy
-//	{
-//		title = "$STR_f_param_AISkill_Enemy";
-//		values[] = {0,1,2,3};
-//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 1;
-//		code = "f_param_AISkill_Enemy = %1";
-//	};
 
 // ============================================================================================
 
@@ -221,6 +191,7 @@ class Params
 //		default = 1;
 //		code = "f_param_AISkill_BLUFOR = %1";
 //	};
+//
 //	class f_param_AISkill_OPFOR
 //	{
 //		title = "$STR_f_param_AISkill_OPFOR";
@@ -228,6 +199,15 @@ class Params
 //		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
 //		default = 1;
 //		code = "f_param_AISkill_OPFOR = %1";
+//	};
+//
+//	class f_param_AISkill_INDP
+//	{
+//		title = "$STR_f_param_AISkill_INDP";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 1;
+//		code = "f_param_AISkill_INDP = %1";
 //	};
 
 // ============================================================================================
@@ -249,24 +229,6 @@ class Params
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
 };
-
-// ============================================================================================
-
-// F3 - Spectator Script
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-class CfgRespawnTemplates
-{
-	// Class used in respawnTemplates entry
-	class f_Spectator
-	{
-		onPlayerRespawn = "f_fnc_cam_init";
-	};
-};
-
-// contains configs for the UI.
-#include "f\spect\config.hpp"
-
 
 // ============================================================================================
 
@@ -339,8 +301,40 @@ class CfgDebriefing
 
 // ============================================================================================
 
-// WARNING: DO NOT REMOVE OR DISABLE THIS BLOC OF CODE, IT IS CRITICAL TO THE ASSIGNGEAR
-// SCRIPTS AND MANY OTHERS.
+// F3 - Respawn Templates
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+class CfgRespawnTemplates
+{
+	// F3 Spectator Script
+	class f_Spectator
+	{
+		onPlayerRespawn = "f_fnc_cam_init";
+	};
+
+	// F3 JIP Menu
+	class f_JIP
+	{
+		onPlayerRespawn = "f\JIP\f_JIP_playerRespawn.sqf";
+	};
+};
+
+// ============================================================================================
+
+// F3 - Menu components
+// DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
+
+// Menu components for the JIP Menu
+#include "f\JIP\f_JIP_kitpicker.h"
+#include "f\JIP\f_JIP_grppicker.h"
+
+// Menu components for the Spectator Script
+#include "f\spect\config.hpp"
+
+// ============================================================================================
+
+// F3 - Functioons
+// DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
 
 class CfgFunctions
 {
@@ -356,7 +350,6 @@ class CfgFunctions
 				postInit = 1;
 			};
 
-			class SetAISKill{};
 			class localGroupMarker{};
 			class SetLocalFTMemberMarkers{};
 			class GetMarkerColor{};
@@ -409,7 +402,13 @@ class CfgFunctions
 			file = "f\authorisedCrew";
 			class authorisedCrewCheck {};
 		};
+		class setAISkill
+		{
+			file = "f\setAISKill";
+			class SetAISKill{};
+		};
 		#include "f\simplewoundingsystem\config.hpp"
+
 	};
 };
 
