@@ -30,11 +30,11 @@ if (f_var_debugMode == 1) then
 
 // PREVENT UNTIS FROM BEING REMOVED
 // All units in the corresponding array are flagged to never be removed
-if (isNil "f_doNotRemoveBodies") then {f_doNotRemoveBodies = []};
+if (isNil "f_var_doNotRemoveBodies") then {f_var_doNotRemoveBodies = []};
 
 {
 	if (!isNil format ["%1",_x]) then {_x setVariable ["f_removeBodyEH",true];};
-} forEach f_doNotRemoveBodies;
+} forEach f_var_doNotRemoveBodies;
 
 // ====================================================================================
 
