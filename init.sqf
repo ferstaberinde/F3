@@ -179,7 +179,9 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // F3 - JIP setup
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\JIP\f_JIP_setup.sqf";
+f_var_JIP_FirstMenu = false;   // Do players connecting for the first time get the JIP menu? - This only works in missions with respawn.
+f_var_JIP_RemoveCorpse = true; // Remove the old corpse of respawning players?
+f_var_JIP_GearMenu = true;     // Can JIP/respawned players select their own gear? False will use gear assigned by F3 Gear Component if possible
 
 // ====================================================================================
 
