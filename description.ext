@@ -350,9 +350,6 @@ class CfgFunctions
 				postInit = 1;
 			};
 
-			class SetLocalFTMemberMarkers{};
-			class GetMarkerColor{};
-			class LocalFTMarkerSync{};
 			class drawNameTag{};
 			class nearPlayer{};
 			class preMount{};
@@ -403,6 +400,13 @@ class CfgFunctions
 		{
 			file = "f\authorisedCrew";
 			class authorisedCrewCheck {};
+		};
+		class FTMemberMarkers
+		{
+			file = "f\FTMemberMarkers";
+			class SetLocalFTMemberMarkers{};
+			class GetMarkerColor{};
+			class LocalFTMarkerSync{};
 		};
 		class bodyRemoval
 		{

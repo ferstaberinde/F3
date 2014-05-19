@@ -2,13 +2,6 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
-
-#include "f_waitForJIP.sqf"
-
-// ====================================================================================
-
 // DECLARE PRIVATE VARIABLES
 
 private ["_unit","_mkrType","_mkrColor","_mkrName","_mkr","_mkrBorder","_pos"];
@@ -24,10 +17,10 @@ _mkrborderName = Format ["mkrB_%1",_unit];
 
 // ====================================================================================
 
-// Creater markers
+// CREATE MARKERS
 
 // this marker is slightly bigger and abused in such a way to make it seem like the next maker has a border
-_pos = getpos _unit;
+_pos = getposATL _unit;
 _mkrBorder = createMarkerLocal [_mkrborderName,_pos];
 _mkrBorder setMarkerShapeLocal "ICON";
 _mkrBorder setMarkerTypeLocal "MIL_TRIANGLE";
@@ -47,11 +40,11 @@ _mkr setMarkerDirLocal (direction _unit);
 
 // ====================================================================================
 
-// We shall run the loop!
+// Run the loop that sets the marker position
 
-while{alive _unit && (_unit in f_HandlerGroup)} do
+while{alive _unit && (_unit in f_var_HandlerGroup)} do
 {
-	_pos = getpos _unit;
+	_pos = getposATL _unit;
 	_dir = (direction _unit);
 	if (alive _unit && {_unit in units group player}) then
 	{
@@ -63,11 +56,12 @@ while{alive _unit && (_unit in f_HandlerGroup)} do
 		// retreives the stored color from the unit.
 		_mkr setMarkerColorLocal (_unit getvariable ["assignedTeam","ColorWhite"]);
 	} else {
-		f_HandlerGroup = f_HandlerGroup - [_unit];
+		f_var_HandlerGroup = f_var_HandlerGroup - [_unit];
 	};
 	sleep 3;
 
 };
+
 // ====================================================================================
 //He's dead jim, lets clean up.
 deleteMarkerLocal _mkrBorder;

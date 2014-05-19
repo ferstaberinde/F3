@@ -27,7 +27,7 @@ waitUntil {
 
 // release unit.
 detach _unit;
-_unit setpos getpos _dragger;
+_unit setPosATL getposATL _dragger;
 _unit switchMove "AinjPpneMstpSnonWrflDb_release";
 sleep 0.1;
 if(_unit getVariable ["revive_down",false]) then
