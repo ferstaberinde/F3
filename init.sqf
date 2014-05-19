@@ -133,7 +133,7 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // f_showGroup_Nametags = true;			// Display unit's group (uses GroupID)
 // f_showDistance_Nametags = true;	// Show distance to player
 // f_showVehicle_Nametags = true;		// Show vehicle player is in
-// [20] execVM "f\common\f_nametags.sqf";
+// [20] execVM "f\nametag\f_nametags.sqf";
 
 // ====================================================================================
 

@@ -358,7 +358,6 @@ class CfgFunctions
 				postInit = 1;
 			};
 
-			class drawNameTag{};
 			class nearPlayer{};
 			class preMount{};
 		};
@@ -431,6 +430,11 @@ class CfgFunctions
 			file = "f\mapClickTeleport";
 			class mapClickTeleportUnit{};
 			class mapClickTeleportGroup{};
+		};
+		class nametag
+		{
+			file = "f\nametag";
+			class drawNameTag{};
 		};
 		#include "f\simplewoundingsystem\config.hpp"
 
