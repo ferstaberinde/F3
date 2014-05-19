@@ -22,7 +22,7 @@ private ["_veh","_vd","_seat","_sleep"];
 // SETUP KEY VARIABLES
 // The sleep governs how often the scripts checks if the player has changed the vehicle
 
-_sleep = 1;
+_sleep = 3;
 
 // ====================================================================================
 
