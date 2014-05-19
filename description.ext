@@ -73,6 +73,14 @@ class cfgNotifications
 		iconPicture = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
 		duration = 10;
 	};
+
+	// Notification for the F3 Authorised Crew Component
+	class MapClickTeleport {
+		title= "Teleport";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
+		duration = 2;
+	};
 };
 
 // ============================================================================================
@@ -417,6 +425,12 @@ class CfgFunctions
 		{
 			file = "f\setAISKill";
 			class SetAISKill{};
+		};
+		class mapClickTeleport
+		{
+			file = "f\mapClickTeleport";
+			class mapClickTeleportUnit{};
+			class mapClickTeleportGroup{};
 		};
 		#include "f\simplewoundingsystem\config.hpp"
 
