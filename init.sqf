@@ -7,11 +7,13 @@ enableSaving [false, false];
 
 // ====================================================================================
 
-// F3 - Mission Maker Teleport
+// F3 - MapClick Teleport
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_missionMakerTeleport = 0;
-// [] execVM "f\common\f_missionMakerTeleport.sqf";
+// f_var_mapClickTeleport_Uses = 0;					// How often the teleport action can be used. 0 = infinite usage.
+// f_var_mapClickTeleport_TimeLimit = 0; 			// If higher than 0 the action will be removed after the given time.
+// f_var_mapClickTeleport_GroupTeleport = false; 	// False: everyone can teleport. True: Only group leaders can teleport and will move their entire group.
+// [] execVM "f\mapClickTeleport\f_mapClickTeleportAction.sqf";
 
 // ====================================================================================
 
