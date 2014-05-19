@@ -92,13 +92,13 @@ if (ws_game_a3) then {
     if ((str(_x buildingpos 0) == "[0,0,0]") || (typeOf _x in _badarray)) then {_buildings = _buildings - [_x]};
 } foreach _buildings;
 
-//Man the statics
-if (_guns) then {
-	[_group, _radius] call ws_fnc_taskCrew;
-};
-
 _units = units _group;
 _group enableAttack false; // Prevent the group leader to issue attack orders to the members, improving their attack from buildings
+
+//Man the statics
+if (_guns) then {
+	_units = [_group, _radius] call ws_fnc_taskCrew;
+};
 
 // Fill bunkers etc
 if (count _milbuildings > 0 && count _units > 0 && _garrison) then {

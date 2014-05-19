@@ -32,9 +32,7 @@ while {count _units != 0 && count _barray != 0} do {
 	_bposleft = _building getVariable ["ws_bPosLeft",_bposarray];
 
 	// Loop until we find a good building
-	//||
 	while {count _barray > 0 && {count _bposLeft == 0 || (_bUnits / count _bposarray >= _threshold)}} do {
-		player globalchat "loop";
 		_barray = _barray - [_building];
 
 		_building = _barray call ws_fnc_selectRandom;

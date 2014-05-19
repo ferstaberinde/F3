@@ -6,18 +6,23 @@ Send a group of units to man empty statics and gunner-less vehicles in a given r
 
 USAGE
 [group, radius] call ws_fnc_taskCrew
+
+RETURNS
+Array of units that didn't take a gunner seat
 */
 
-private ["_group","_radius","_vehicles","_staticarray","_static","_units2","_locked"];
+private ["_group","_radius","_pos","_vehicles","_staticarray","_units2","_locked"];
 
 _group = _this select 0;
 _radius = _this select 1;
+_pos = (_group) call ws_fnc_getEPos;
 
 //Get nearby vehicles to start populating the static weapons
 _vehicles =  [];
 {
-_vehicles = _vehicles + nearestObjects [_pos,[_x],_radius];
+	_vehicles = _vehicles + nearestObjects [_pos,[_x],_radius];
 } forEach ["StaticWeapon","Tank","Car"];
+
 _staticarray = [];
 _units = units _group;
 _units2 = _units - [leader _group];
@@ -35,20 +40,17 @@ _units2 = _units - [leader _group];
 } forEach _vehicles;
 
 //Man the statics
-if (count _staticarray > 0) then {
-while {(count _staticarray > 0) && (count _units > 2)} do {
-			_static = _staticarray select 0;
-			_staticarray = _staticarray - [_static];
-			["ws_taskCrew DBG: ",[_static,count _staticarray],""] call ws_fnc_debugText;
-			_unit = _units2 call ws_fnc_selectRandom;
-			_unit assignasgunner _static;
-			[_unit] ordergetin true;
-			waitUntil {isNil format ["%1",(gunner _static)]};
-			if (gunner _static == _unit) then {
-				_units = _units - [_unit];
-				_units2 = _units2 - [_unit];
-			};
-	};
-};
+{
+	// Make sure it doesn't have a gunner yet
+	if (isNull (gunner _x) && isNUll (_x getVariable ["ws_StaticCrew",objNull])) then {
+		_unit = _units2 call ws_fnc_selectRandom;
+		_unit assignasgunner _x;
+		[_unit] ordergetin true;
+		_units = _units - [_unit];
+		_units2 = _units2 - [_unit];
 
-true
+		_x setVariable ["ws_StaticCrew",_unit,true];
+	};
+} forEach _staticarray;
+
+_units
