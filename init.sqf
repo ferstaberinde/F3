@@ -82,14 +82,8 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Authorised Crew Check
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// VehicleName addEventhandler ["GetIn", {[_this,[UnitName1,UnitName2]] execVM "f\common\f_isAuthorisedCrew.sqf"}];
-
-// ====================================================================================
-
-// F3 - Authorised Crew Type Check
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// VehicleName addEventhandler ["GetIn", {[_this,["UnitType1","UnitType2"]] execVM "f\common\f_isAuthorisedCrewType.sqf"}];
+// VehicleName addEventhandler ["GetIn", {[_this,[UnitName1,UnitName2],false] call f_fnc_authorisedCrewCheck}];
+// VehicleName addEventhandler ["GetIn", {[_this,["UnitClass1","UnitClass2"],false] call f_fnc_authorisedCrewCheck}];
 
 // ====================================================================================
 

@@ -39,11 +39,12 @@ respawnTemplates[] = {"f_spectator","f_JIP"};
 
 // ============================================================================================
 
+
 // F3 - Start of Notifications block.
 
 class cfgNotifications
 {
-	// This is a template you can use for your own notifications
+	// Notification Template
 	class Template
 	{
 		title = ""; // Tile displayed as text on black background. Filled by arguments.
@@ -63,6 +64,14 @@ class cfgNotifications
 		description = "%1";
 		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
 		duration = 15;
+	};
+
+	// Notification for the F3 Authorised Crew Component
+	class UnauthorisedCrew {
+		title= "Non-authorised crew!";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
+		duration = 10;
 	};
 };
 
@@ -341,8 +350,6 @@ class CfgFunctions
 				postInit = 1;
 			};
 
-			class localGroupMarker{};
-			class localSpecialistMarker{};
 			class drawNameTag{};
 			class nearPlayer{};
 			class preMount{};
@@ -389,12 +396,18 @@ class CfgFunctions
 			file = "f\spect";
 			class cam_init{};
 		};
+		class authorisedCrew
+		{
+			file = "f\authorisedCrew";
+			class authorisedCrewCheck {};
+		};
 		class FTMemberMarkers
 		{
 			file = "f\FTMemberMarkers";
 			class SetLocalFTMemberMarkers{};
 			class GetMarkerColor{};
 			class LocalFTMarkerSync{};
+		};
 		class bodyRemoval
 		{
 			file = "f\removeBody";
