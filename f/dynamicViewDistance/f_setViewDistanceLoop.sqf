@@ -2,10 +2,15 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
+// PLAYER-ONLY COMPONENT
+// No need to run this on the server
+
+if (isDedicated) exitWith {};#
+
+// ====================================================================================
 
 // MAKE SURE THE PLAYER INITIALIZES PROPERLY
+
 if (!isDedicated && (isNull player)) then
 {
     waitUntil {sleep 0.1; !isNull player};
