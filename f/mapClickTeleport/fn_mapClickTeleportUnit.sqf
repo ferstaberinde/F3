@@ -29,7 +29,7 @@ onMapSingleClick "f_var_mapClickTeleport_telePos = _pos; f_telePositionSelected 
 waitUntil {f_telePositionSelected};
 
 if (vehicle player != player) then {
-	(vehicle player) setPos f_var_mapClickTeleport_telePos;
+	(vehicle player) setPos (f_var_mapClickTeleport_telePos findEmptyPosition [0,150,typeOf (vehicle player)]);
 } else {
 	player setPos f_var_mapClickTeleport_telePos;
 	if (f_var_mapClickTeleport_GroupTeleport) then {
