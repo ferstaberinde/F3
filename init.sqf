@@ -94,30 +94,17 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Casualties Cap
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [[GroupName or SIDE],100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
+// [[GroupName or SIDE],100,{code}] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // BLUFOR > NATO
-// [BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [BLUFOR,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // OPFOR > CSAT
-// [OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [OPFOR,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // INDEPENDENT > AAF
-// [INDEPENDENT,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
-
-// ====================================================================================
-
-// F3 - Casualties Cap (Advanced)
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// BLUFOR
-// [BLUFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
-
-// OPFOR
-// [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
-
-// INDEPENDENT
-// [INDEPENDENT,100] execVM "f\server\f_casualtiesCapAdv.sqf";
+// [INDEPENDENT,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // ====================================================================================
 
