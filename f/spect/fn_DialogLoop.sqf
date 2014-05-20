@@ -19,11 +19,17 @@ while {true} do
     // restart the dialog and reset the eventhandlers
     createDialog "f_spec_dialog";
     _displayDialog = (findDisplay 9228);
-    _displayDialog displaySetEventHandler["KeyDown", "[""KeyDown"",_this] call f_cam_eventHandler"];
-	_displayDialog displaySetEventHandler["KeyUp", "[""KeyUp"",_this] call f_cam_eventHandler"];
-	call f_cam_reloadModesBox;
+    _displayDialog displaySetEventHandler["KeyDown", "[""KeyDown"",_this] call F_fnc_EventHandler"];
+	_displayDialog displaySetEventHandler["KeyUp", "[""KeyUp"",_this] call F_fnc_EventHandler"];
+	f_cam_listUnits = [];
+	call F_fnc_ReloadModes;
 	ctrlShow [2100,false];
 	_helpWindow = _displayDialog displayCtrl 1310;
+	_mapWindow = _displayDialog displayCtrl 1350;
+	_fullmapWindow = _displayDialog displayCtrl 1360;
+	_mapWindow ctrlShow false;
+	_fullmapWindow  ctrlShow  false;
+	_mapWindow mapCenterOnCamera false;
 	_helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click (or shift-right-click) and drag to the edges of the screen to pan the camera, or use the arrow keys to control the camera.<br /><br />Use the scroll wheel or numpad+/- to zoom in and out.<br /><br />Press H to show and close the help window.<br /><br />Press M for the map.<br /> ");
 	// hide it to stop from being spammed open.
 	ctrlShow [1315, !ctrlVisible 1315];

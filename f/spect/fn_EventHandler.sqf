@@ -15,14 +15,8 @@ switch (_type) do
 
     	if(_args select 1 == 1 && f_cam_mode != 1) then
     	{
-
-    		f_cam_mLeftDown = true;
-            if((_args select 4)) then
-            {
-                f_cam_mShift = true;
-            };
-            f_cam_MouseMoving = true;
-    		f_cam_onMouseMoving = (_args select 0) ctrlAddEventHandler ["MouseMoving", "['MouseMoving',_this] call f_cam_eventHandler"];
+            _button = _args select 1;
+            f_cam_MouseButton set [_button,true];
 
     	};
         if(_args select 1 == 1) then
@@ -38,14 +32,9 @@ switch (_type) do
     {
     	if(_args select 1 == 1 && f_cam_mode != 1) then
     	{
-    		f_cam_mLeftDown = false;
-            f_cam_mShift = false;
-    		(_args select 0) ctrlRemoveEventHandler  ["MouseMoving",f_cam_onMouseMoving];
-    		f_cam_MouseMoving = false;
-    		f_cam_startX = 0;
-    		f_cam_startY = 0;
-    		f_cam_detlaX = 0;
-    		f_cam_detlaY = 0;
+            _button = _args select 1;
+            f_cam_MouseButton set [_button,false];
+             [] spawn f_fnc_HandleCamera;
     	};
         if(_args select 1 == 1) then
         {
@@ -71,21 +60,22 @@ switch (_type) do
     };
     case "MouseMoving":
     {
-    	if(f_cam_mLeftDown && f_cam_startX == -1 && f_cam_startY == -1  ) then
-    	{
-    		f_cam_startX = _args select 1;
-    		f_cam_startY = _args select 2;
-    	};
-    	if(f_cam_mLeftDown && f_cam_startY >= 0) then
-    	{
-    		f_cam_detlaX = _args select 1;
-    		f_cam_detlaY = _args select 2;
-    	};
+        _x = _args select 1;
+        _y = _args select 2;
+        f_cam_mouseCord = [_x,_y];
+        [] spawn f_fnc_HandleCamera;
 
 	};
     case "MouseZChanged":
     {
-        f_cam_zoom = f_cam_zoom - (_args select 1);
+        if(!f_cam_ctrl_down) then
+        {
+            f_cam_zoom = (f_cam_zoom - ((_args select 1)*f_cam_zoom/5)) max 0.1;
+        }
+        else
+        {
+            f_cam_fovZoom = ((f_cam_fovZoom - ((_args select 1)*f_cam_fovZoom/5)) max 0.1) min 1;
+        };
 
     };
 
@@ -93,41 +83,20 @@ switch (_type) do
 // handles dropboxes
     case "LBListSelChanged":
     {
-        if(f_cam_playersOnly) then
+        if(count f_cam_listUnits > (_args select 1)) then
         {
-            if(count f_cam_players > (_args select 1)) then
+            _unit = f_cam_listUnits select (_args select 1);
+            if(!isnil "_unit") then
             {
-                _unit = f_cam_players select (_args select 1);
-                if(!isnil "_unit") then
+                f_cam_camera camSetTarget _unit;
+                f_cam_curTarget = _unit;
+                if(f_cam_toggleCamera) then
                 {
-                    f_cam_camera camSetTarget _unit;
-                    f_cam_curTarget = _unit;
-                    if(f_cam_toggleCamera) then
-                    {
-                      f_cam_curTarget switchCamera "INTERNAL";
-                    };
-                    ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
+                  f_cam_curTarget switchCamera "INTERNAL";
                 };
-            };
-        }
-        else
-        {
-            if(count f_cam_units > (_args select 1)) then
-            {
-                _unit = f_cam_units select (_args select 1);
-                if(!isnil "_unit") then
-                {
-                    f_cam_camera camSetTarget _unit;
-                    f_cam_curTarget = _unit;
-                    if(f_cam_toggleCamera) then
-                    {
-                      f_cam_curTarget switchCamera "INTERNAL";
-                    };
-                    ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
-                };
+                ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
             };
         };
-
     };
     case "LBListSelChanged_modes":
     {
@@ -139,7 +108,9 @@ switch (_type) do
             {
 
                 f_cam_playersOnly = !f_cam_playersOnly;
-                call f_cam_reloadModesBox;
+                f_cam_listUnits = [];
+                lbClear 2100;
+                call F_fnc_ReloadModes;
 
             };
             case f_cam_lb_togglecameraIndex:
@@ -155,25 +126,21 @@ switch (_type) do
                 else
                 {
                     f_cam_mode = 0;
-                    f_cam_camera = "camera" camCreate [position player select 0,position player select 1,2];
                     f_cam_camera cameraEffect ["internal", "BACK"];
                     f_cam_camera camSetTarget f_cam_curTarget;
                 };
-                call f_cam_reloadModesBox;
+                call F_fnc_ReloadModes;
 
+            };
+            case f_cam_lb_toggleTagNameIndex:
+            {
+                f_cam_toggleTagsName = !f_cam_toggleTagsName;
+                call F_fnc_ReloadModes;
             };
             case f_cam_lb_toggleTagsIndex:
             {
                 f_cam_toggleTags = !f_cam_toggleTags;
-                if(f_cam_toggleTags) then
-                {
-                    f_cam_tagsEvent = addMissionEventHandler ["Draw3D", {_this call f_cam_drawTags}];
-                }
-                else
-                {
-                    removeMissionEventHandler ["Draw3D",f_cam_tagsEvent];
-                };
-                call f_cam_reloadModesBox;
+                call F_fnc_ReloadModes;
 
             };
             case f_cam_lb_toggletiWHIndex:
@@ -190,6 +157,7 @@ switch (_type) do
                     camUseNVG false;
                     false setCamUseTi 0;
                 };
+                call F_fnc_ReloadModes;
 
             };
             case f_cam_lb_toggletiBHIndex: // BlackHot
@@ -207,6 +175,7 @@ switch (_type) do
                     camUseNVG false;
                     false setCamUseTi 0;
                 };
+                call F_fnc_ReloadModes;
 
             };
             case f_cam_lb_toggletiNVIndex: // Nightvision
@@ -224,6 +193,7 @@ switch (_type) do
                     camUseNVG false;
                     false setCamUseTi 0;
                 };
+                call F_fnc_ReloadModes;
 
             };
             default
@@ -241,29 +211,6 @@ switch (_type) do
         switch (_key) do
         {
 
-            case 203: // right arrow
-            {
-                f_cam_angle = f_cam_angle + 1;
-                _handled = true;
-            };
-
-            case 205: // left arrow
-            {
-                f_cam_angle = f_cam_angle - 1;
-                _handled = true;
-            };
-
-            case 200: // up arrow
-            {
-                f_cam_height = f_cam_height + 1;
-                _handled = true;
-            };
-            case 208: // down arrow
-            {
-                f_cam_height = f_cam_height - 1;
-                f_cam_height = 0.3 max f_cam_height;
-                _handled = true;
-            };
             case 78: // numpad +
             {
                 f_cam_zoom = f_cam_zoom - 1;
@@ -284,22 +231,78 @@ switch (_type) do
                 ctrlShow [1305, !ctrlVisible 1305];
                  _handled = true;
             };
+            case 42:
+            {
+                f_cam_shift_down = true;
+                [] spawn f_fnc_HandleCamera;
+            };
+            case 29:
+            {
+                f_cam_ctrl_down = true;
+                [] spawn f_fnc_HandleCamera;
+            };
             case 50:
             {
-                ctrlShow [1350, !ctrlVisible 1350];
-                 _handled = true;
+                //_mapWindow = _displayDialog displayCtrl 1350;
+                //_fullmapWindow = _displayDialog displayCtrl 1360;
+                f_cam_mapMode = f_cam_mapMode +1;
+                if(f_cam_mapMode > 2) then
+                {
+                    f_cam_mapMode = 0;
+                };
+                switch (f_cam_mapMode) do
+                {
+                    // no maps
+                    case 0:
+                    {
+                        ctrlShow [2110,true];
+                        ctrlShow [2010,true];
+                        ctrlShow [1350,false];
+                        ctrlShow [1360,false];
+                    };
+
+                    case 1:
+                    {
+                        ctrlShow [2110,true];
+                        ctrlShow [2010,true];
+                        ctrlShow [1350,true];
+                        ctrlShow [1360,false];
+                    };
+                    // big map
+                    case 2:
+                    {
+                        ctrlShow [2110,false];
+                        ctrlShow [2010,false];
+                        ctrlShow [1350,false];
+                        ctrlShow [1360,true];
+                    };
+                };
+                _handled = true;
             };
+            case 1:
+            {
+              //  _handled = true;
+            }
 
         };
         _handled
     };
+
+
     case "KeyUp":
     {
         _key = _args select 1;
         _handled = false;
         switch (_key) do
         {
-
+            case 42:
+            {
+                f_cam_shift_down = false;
+            };
+            case 29:
+            {
+                f_cam_ctrl_down = false;
+            };
             case 203:
             {
                 _handled = true;

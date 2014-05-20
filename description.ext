@@ -300,7 +300,7 @@ class CfgRespawnTemplates
 	// F3 Spectator Script
 	class f_Spectator
 	{
-		onPlayerRespawn = "f_fnc_cam_init";
+		onPlayerRespawn = "f_fnc_CamInit";
 	};
 
 	// F3 JIP Menu
@@ -404,6 +404,7 @@ class CfgFunctions
 			class SetAISKill{};
 		};
 		#include "f\simplewoundingsystem\config.hpp"
+		#include "f\spect\functions.hpp"
 
 	};
 };
