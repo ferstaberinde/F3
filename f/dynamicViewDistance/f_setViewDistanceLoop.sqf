@@ -5,7 +5,7 @@
 // PLAYER-ONLY COMPONENT
 // No need to run this on the server
 
-if (isDedicated) exitWith {};#
+if (isDedicated) exitWith {};
 
 // ====================================================================================
 
