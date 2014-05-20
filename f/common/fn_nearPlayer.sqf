@@ -20,4 +20,4 @@ _players = [];
 
 // Check whether a player is in the given distance - return true if yes
 if (({_x distance _pos < _distance} count _players) > 0) exitWith {true};
-false;
+false
