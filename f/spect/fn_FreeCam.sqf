@@ -27,7 +27,7 @@ while{true} do
 	// first person
 	if(f_cam_mode == 1) then
 	{
-		player setpos (getpos cameraOn);
+//		player setpos (getpos cameraOn);
 		if(vehicle cameraOn != cameraOn) then
 		{
 			_mode = "internal";

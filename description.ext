@@ -388,11 +388,6 @@ class CfgFunctions
 			class localGroupMarker{};
 			class localSpecialistMarker{};
 		};
-		class spect
-		{
-			file = "f\spect";
-			class cam_init{};
-		};
 		class bodyRemoval
 		{
 			file = "f\removeBody";

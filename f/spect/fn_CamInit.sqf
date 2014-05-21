@@ -5,7 +5,7 @@
 _unit = _this select 0;
 _oldUnit = _this select 1;
 _forced = false;
-if(count _this == 5) then
+if(count _this >= 5) then
 {
 	_forced = _this select 4;
 };
@@ -13,7 +13,7 @@ if(count _this == 5) then
 if (typeof _unit != "seagull" && !_forced) ExitWith {};
 
 
-// enable this to show the death animation.
+// disable this to instantly switch to the spectator script.
 waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true]};
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
@@ -27,12 +27,11 @@ if(f_var_acre == 1) then
 };
 // ====================================================================================
 
-// delete seagull away because its ugly
+// Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
 
 _newUnit =  createAgent  ["VirtualMan_F", [0,0,0], [], 0, "FORM"];
 _newUnit enableSimulationGlobal false;
 selectPlayer _newUnit;
-
 deleteVehicle _unit;
 
 
