@@ -64,9 +64,9 @@ F_KEYDOWN_NAMETAG = {
 [] spawn {
 waitUntil {scriptDone f_script_briefing};
 
-_bstr = format ["<br/>You can toggle name tags for friendly units on and off by pressing %1. This will display all player names in a distance of %3 m.<br/><br/>
+_bstr = format ["<br/>Toggle nametags for friendly units by pressing %1. This displays nametags for units within %3 m.<br/><br/>
 
-If you do not have an key bound for %2 this will be 'T' by default. If you want to bind the toggle to a different key bind your %2 key and click
+If you do not have an key bound for %2 this will be 'T' by default. To bind the toggle to a different key bind your %2 key and click
 <execute expression=""
 F_ACTIONKEY_NAMETAGS = (actionKeys F_KEY_NAMETAGS) select 0;
 F_KEYNAME_NAMETAGS = actionKeysNames F_KEY_NAMETAGS;
@@ -76,20 +76,20 @@ hintsilent 'Team switch key rebound!';
 ",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DIST_NAMETAGS];
 
 if (F_SHOWGROUP_NAMETAGS) then {
-_bstr = _bstr + "<br/><br/>Nametags will display the unit's group name next to them. To toggle this behaviour click <execute expression=""
+_bstr = _bstr + "<br/><br/>GROUP NAMES<br/>Nametags display the unit's group name. To toggle this feature click <execute expression=""
 if (F_SHOWGROUP_NAMETAGS) then {hintsilent 'Group display deactivated!';F_SHOWGROUP_NAMETAGS= false} else {F_SHOWGROUP_NAMETAGS = true;hintsilent 'Group display activated!'};""
 >here</execute>."
 };
 
 if (F_SHOWDISTANCE_NAMETAGS) then {
-_bstr = _bstr + "<br/><br/>Nametags will display the unit's relative distance to the player next to their name. To toggle this behaviour click <execute expression=""
+_bstr = _bstr + "<br/><br/>DISTANCE<br/>Nametags display the unit's relative distance to you. To toggle this feature click <execute expression=""
 if (F_SHOWDISTANCE_NAMETAGS) then {hintsilent 'Distance display deactivated!';F_SHOWDISTANCE_NAMETAGS= false} else {F_SHOWDISTANCE_NAMETAGS = true;hintsilent 'Distance display activated!'};""
 >here</execute>."
 };
 
 if (F_SHOWVEHICLE_NAMETAGS) then {
-_bstr = _bstr + "<br/><br/>Nametags will display vehicle of mounted units next to their name. To toggle this behaviour click <execute expression=""
-if (F_SHOWVEHICLE_NAMETAGS) then {hintsilent 'Display of vehicle type deactivated!';F_SHOWVEHICLE_NAMETAGS= false} else {F_SHOWVEHICLE_NAMETAGS = true;hintsilent 'Display of vehicle typ activated!'};""
+_bstr = _bstr + "<br/><br/>VEHICLE TYPES<br/>Nametags display the vehicle type of any mounted units. To toggle this feature click <execute expression=""
+if (F_SHOWVEHICLE_NAMETAGS) then {hintsilent 'Vehicle type display deactivated!';F_SHOWVEHICLE_NAMETAGS= false} else {F_SHOWVEHICLE_NAMETAGS = true;hintsilent 'Vehicle type display activated!'};""
 >here</execute>."
 };
 
