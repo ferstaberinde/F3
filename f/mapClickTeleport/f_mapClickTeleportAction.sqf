@@ -13,7 +13,8 @@ private ["_textAction"];
 // the action and the player is not the leader of his/her group
 
 if (isDedicated) exitWith {};
-if (f_var_mapClickTeleport_GroupTeleport && player != leader group player) exitWith {};
+if (f_var_mapClickTeleport_GroupTeleport && player != leader group player)  exitWith {};
+if (count f_var_mapClickTeleport_Units > 0 && !(player in f_var_mapClickTeleport_Units)) exitWith {};
 
 // ====================================================================================
 
