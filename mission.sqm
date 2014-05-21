@@ -2135,7 +2135,7 @@ class Mission
 					vehicle="I_soldier_UAV_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="UnitAAF_DC_UAV_1";
+					text="UnitAAF_DC_UAV";
 					init="GrpAAF_DC = group this; nul = [""uav"",this] call f_fnc_assignGear ;";
 					description="AAF UAV Operator";
 				};
