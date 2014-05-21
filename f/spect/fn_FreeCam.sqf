@@ -19,9 +19,9 @@ while{true} do
 	if(f_cam_mode == 0) then
 	{
 			_commitTime = ((1.0 - ((speed vehicle f_cam_curTarget)/65))/3) max 0.1;
-			_d = (-(2*(0.3 max f_cam_zoom)));
-			_z = sin(f_cam_angleY)*(2*(0.3 max f_cam_zoom));
-			f_cam_camera camSetRelPos[(sin(f_cam_angleX)*_d)*cos(f_cam_angleY), (cos(f_cam_angleX)*_d)*cos(f_cam_angleY), _z];
+			_delta = (-(2*(0.3 max f_cam_zoom)));
+			_zLevel = sin(f_cam_angleY)*(2*(0.3 max f_cam_zoom));
+			f_cam_camera camSetRelPos[(sin(f_cam_angleX)*_delta)*cos(f_cam_angleY), (cos(f_cam_angleX)*_delta)*cos(f_cam_angleY), _zLevel];
 			f_cam_camera camCommit _commitTime;
 	};
 	// first person

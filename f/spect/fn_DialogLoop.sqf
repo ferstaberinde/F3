@@ -30,7 +30,7 @@ while {true} do
 	_mapWindow ctrlShow false;
 	_fullmapWindow  ctrlShow  false;
 	_mapWindow mapCenterOnCamera false;
-	_helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click (or shift-right-click) and drag to the edges of the screen to pan the camera, or use the arrow keys to control the camera.<br /><br />Use the scroll wheel or numpad+/- to zoom in and out.<br /><br />Press H to show and close the help window.<br /><br />Press M for the map.<br /> ");
+	_helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click to pan the camera<br /><br />Use the scroll wheel or numpad+/- to zoom in and out.<br />Use ctrl + rightclick to fov zoom<br /><br />Press H to show and close the help window.<br /><br />Press M to toggle between no map,minimap and full size map.<br /> ");
 	// hide it to stop from being spammed open.
 	ctrlShow [1315, !ctrlVisible 1315];
 	ctrlShow [1310, !ctrlVisible 1310];

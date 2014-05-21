@@ -131,7 +131,7 @@ _fullmapWindow = _displayDialog displayCtrl 1360;
 _mapWindow ctrlShow false;
 _fullmapWindow  ctrlShow  false;
 _mapWindow mapCenterOnCamera false;
-_helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click (or shift-right-click) and drag to the edges of the screen to pan the camera, or use the arrow keys to control the camera.<br /><br />Use the scroll wheel or numpad+/- to zoom in and out.<br /><br />Press H to show and close the help window.<br /><br />Press M for the map.<br /> ");
+_helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click to pan the camera<br /><br />Use the scroll wheel or numpad+/- to zoom in and out.<br />Use ctrl + rightclick to fov zoom<br /><br />Press H to show and close the help window.<br /><br />Press M to toggle between no map,minimap and full size map.<br /> ");
 // ====================================================================================
 // spawn sub scripts
 [] spawn F_fnc_FreeCam;

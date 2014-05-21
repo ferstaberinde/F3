@@ -317,7 +317,7 @@ class CfgRespawnTemplates
 	// F3 Spectator Script
 	class f_Spectator
 	{
-		onPlayerRespawn = "f_fnc_cam_init";
+		onPlayerRespawn = "f_fnc_CamInit";
 	};
 
 	// F3 JIP Menu
@@ -397,11 +397,6 @@ class CfgFunctions
 			class localGroupMarker{};
 			class localSpecialistMarker{};
 		};
-		class spect
-		{
-			file = "f\spect";
-			class cam_init{};
-		};
 		class authorisedCrew
 		{
 			file = "f\authorisedCrew";
@@ -441,6 +436,7 @@ class CfgFunctions
 			class mountGroups{};
 		};
 		#include "f\simplewoundingsystem\config.hpp"
+		#include "f\spect\functions.hpp"
 
 	};
 };
