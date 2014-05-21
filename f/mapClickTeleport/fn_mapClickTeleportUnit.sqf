@@ -16,6 +16,11 @@ _textSelect = localize "STR_f_mapClickTeleportSelect";
 _textDone = localize "STR_f_mapClickTeleportDone";
 _textAction = localize "STR_f_mapClickTeleportAction";
 
+// SET GLOBAL VARIABLES
+// Make sure that all global variables are set properly
+
+if (isNil "f_var_mapClickTeleport_Uses") then {f_var_mapClickTeleport_Uses = 1};
+
 // ====================================================================================
 
 // TELEPORT FUNCTIONALITY

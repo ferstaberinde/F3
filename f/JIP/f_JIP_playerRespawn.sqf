@@ -53,9 +53,9 @@ if (isNil "F3_JIP_reinforcementOptionsAction") then {
 // ====================================================================================
 
 // REMOVE CORPSE
-// If activated, the old corpse will be sink into the ground and then removed from the game
+// If activated and respawn is allowed, the old corpse will be sink into the ground and is then removed from the game
 
-if (f_var_JIP_RemoveCorpse && !isNull _corpse) then {
+if (typeof _unit != "seagull" && {f_var_JIP_RemoveCorpse && !isNull _corpse}) then {
 	_corpse spawn {
 		hideBody _this;
 		sleep 5;
