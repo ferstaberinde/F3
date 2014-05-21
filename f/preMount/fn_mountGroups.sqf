@@ -1,3 +1,7 @@
+// F3 - Mount Groups Function
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// ====================================================================================
+
 // MAKE SURE THE SCRIPT IS ONLY RUN SERVER-SIDE
 if (!isServer) exitWith {};
 
@@ -12,15 +16,16 @@ private ["_objects","_crew","_vehs","_grps","_units"];
 // SET KEY VARIABLES
 // Using the arguments passed to the script, we first define some local variables.
 
-_vehs = _this select 0;
-_grps = _this select 1;
-_crew = if (count _this > 2) then {_this select 2} else {true};
-_fill = if (count _this > 3) then {_this select 3} else {false};
+_vehs = _this select 0;												// Array of vehicles    (objects)
+_grps = _this select 1;												// Array of group names (as strings)
+_crew = if (count _this > 2) then {_this select 2} else {true};		// Mount into crew positions? (optional - default:true)
+_fill = if (count _this > 3) then {_this select 3} else {false};	// Ignore fireteam cohesion in favor of filling vehicles? (optional - default:false)
 
 // ====================================================================================
 
 // CLEAN THE GROUP ARRAY
-// First we check if there are illegal groups in the array and fix it accordingly
+// First we check if there are illegal groups (non-existent) in the array and fix it by replacing it with a null-group.
+// At the end we remove all null-groups are removed and the array is clean
 
 if ({isNil _x} count _grps > 0) then {
 	{

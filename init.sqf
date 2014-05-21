@@ -7,11 +7,13 @@ enableSaving [false, false];
 
 // ====================================================================================
 
-// F3 - Mission Maker Teleport
+// F3 - MapClick Teleport
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_missionMakerTeleport = 0;
-// [] execVM "f\common\f_missionMakerTeleport.sqf";
+// f_var_mapClickTeleport_Uses = 0;					// How often the teleport action can be used. 0 = infinite usage.
+// f_var_mapClickTeleport_TimeLimit = 0; 			// If higher than 0 the action will be removed after the given time.
+// f_var_mapClickTeleport_GroupTeleport = false; 	// False: everyone can teleport. True: Only group leaders can teleport and will move their entire group.
+// [] execVM "f\mapClickTeleport\f_mapClickTeleportAction.sqf";
 
 // ====================================================================================
 
@@ -71,55 +73,38 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Dynamic View Distance
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_viewDistance_default = 1250;
-// f_viewDistance_tank = 2000;
-// f_viewDistance_rotaryWing = 2500;
-// f_viewDistance_fixedWing = 5000;
-// [] execVM "f\common\f_addSetViewDistanceEHs.sqf";
+//f_var_viewDistance_default = 1250;
+//f_var_viewDistance_tank = 2000;
+//f_var_viewDistance_car = 2000;
+//f_var_viewDistance_rotaryWing = 2500;
+//f_var_viewDistance_fixedWing = 5000;
+//f_var_viewDistance_crewOnly = true;
+//[] execVM "f\dynamicViewDistance\f_setViewDistanceLoop.sqf";
 
 // ====================================================================================
 
 // F3 - Authorised Crew Check
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// VehicleName addEventhandler ["GetIn", {[_this,[UnitName1,UnitName2]] execVM "f\common\f_isAuthorisedCrew.sqf"}];
-
-// ====================================================================================
-
-// F3 - Authorised Crew Type Check
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// VehicleName addEventhandler ["GetIn", {[_this,["UnitType1","UnitType2"]] execVM "f\common\f_isAuthorisedCrewType.sqf"}];
+// VehicleName addEventhandler ["GetIn", {[_this,[UnitName1,UnitName2],false] call f_fnc_authorisedCrewCheck}];
+// VehicleName addEventhandler ["GetIn", {[_this,["UnitClass1","UnitClass2"],false] call f_fnc_authorisedCrewCheck}];
 
 // ====================================================================================
 
 // F3 - Casualties Cap
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [[GroupName or SIDE],100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
+// [[GroupName or SIDE],100,{code}] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // BLUFOR > NATO
-// [BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [BLUFOR,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // OPFOR > CSAT
-// [OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [OPFOR,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // INDEPENDENT > AAF
-// [INDEPENDENT,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
-
-// ====================================================================================
-
-// F3 - Casualties Cap (Advanced)
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// BLUFOR
-// [BLUFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
-
-// OPFOR
-// [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
-
-// INDEPENDENT
-// [INDEPENDENT,100] execVM "f\server\f_casualtiesCapAdv.sqf";
+// [INDEPENDENT,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // ====================================================================================
 
@@ -137,7 +122,7 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // f_showGroup_Nametags = true;			// Display unit's group (uses GroupID)
 // f_showDistance_Nametags = true;	// Show distance to player
 // f_showVehicle_Nametags = true;		// Show vehicle player is in
-// [20] execVM "f\common\f_nametags.sqf";
+// [20] execVM "f\nametag\f_nametags.sqf";
 
 // ====================================================================================
 

@@ -39,11 +39,12 @@ respawnTemplates[] = {"f_spectator","f_JIP"};
 
 // ============================================================================================
 
+
 // F3 - Start of Notifications block.
 
 class cfgNotifications
 {
-	// This is a template you can use for your own notifications
+	// Notification Template
 	class Template
 	{
 		title = ""; // Tile displayed as text on black background. Filled by arguments.
@@ -63,6 +64,22 @@ class cfgNotifications
 		description = "%1";
 		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
 		duration = 15;
+	};
+
+	// Notification for the F3 Authorised Crew Component
+	class UnauthorisedCrew {
+		title= "Non-authorised crew!";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
+		duration = 10;
+	};
+
+	// Notification for the F3 Authorised Crew Component
+	class MapClickTeleport {
+		title= "Teleport";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
+		duration = 2;
 	};
 };
 
@@ -96,9 +113,9 @@ class Params
 
     class f_param_backpacks
     {
-            title = "$STR_f_param_backpacks";
+            title = "$STR_f_param_loadouts";
             values[] = {0,1,2};
-            texts[] = {"Off","Light","Heavy"};
+            texts[] = {"Light","Medium","Heavy"};
             default = 1;
             code = "f_param_backpacks = %1";
     };
@@ -208,7 +225,7 @@ class Params
 
 	class f_param_caching
 	{
-		title = "Cache AI outside distance:";
+		title = "Cache AI outside distance (m)";
 		values[] = {0,600,800,1000,1500,2000};
 		default = 0;
 		code = "f_param_caching = %1";
@@ -300,7 +317,7 @@ class CfgRespawnTemplates
 	// F3 Spectator Script
 	class f_Spectator
 	{
-		onPlayerRespawn = "f_fnc_CamInit";
+		onPlayerRespawn = "f_fnc_cam_init";
 	};
 
 	// F3 JIP Menu
@@ -324,7 +341,7 @@ class CfgRespawnTemplates
 
 // ============================================================================================
 
-// F3 - Functioons
+// F3 - Functions
 // DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
 
 class CfgFunctions
@@ -341,15 +358,7 @@ class CfgFunctions
 				postInit = 1;
 			};
 
-			class SetLocalFTMemberMarkers{};
-			class SetAISKill{};
-			class GetMarkerColor{};
-			class LocalFTMarkerSync{};
-
-			class drawNameTag{};
-			class removeBody{};
 			class nearPlayer{};
-			class preMount{};
 		};
 		class mpEnd
 		{
@@ -388,6 +397,23 @@ class CfgFunctions
 			class localGroupMarker{};
 			class localSpecialistMarker{};
 		};
+		class spect
+		{
+			file = "f\spect";
+			class cam_init{};
+		};
+		class authorisedCrew
+		{
+			file = "f\authorisedCrew";
+			class authorisedCrewCheck {};
+		};
+		class FTMemberMarkers
+		{
+			file = "f\FTMemberMarkers";
+			class SetLocalFTMemberMarkers{};
+			class GetMarkerColor{};
+			class LocalFTMarkerSync{};
+		};
 		class bodyRemoval
 		{
 			file = "f\removeBody";
@@ -398,8 +424,23 @@ class CfgFunctions
 			file = "f\setAISKill";
 			class SetAISKill{};
 		};
+		class mapClickTeleport
+		{
+			file = "f\mapClickTeleport";
+			class mapClickTeleportUnit{};
+			class mapClickTeleportGroup{};
+		};
+		class nametag
+		{
+			file = "f\nametag";
+			class drawNameTag{};
+		};
+		class preMount
+		{
+			file = "f\preMount";
+			class mountGroups{};
+		};
 		#include "f\simplewoundingsystem\config.hpp"
-		#include "f\spect\functions.hpp"
 
 	};
 };

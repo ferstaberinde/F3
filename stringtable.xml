@@ -12,8 +12,8 @@
         <Spanish> Modo Debug </Spanish>
         <French> Mode Debug </French>
       </Key>
-      <Key ID="STR_f_param_backpacks">
-        <English> Backpacks </English>
+      <Key ID="STR_f_param_loadouts">
+        <English> Loadouts </English>
       </Key>
       <Key ID="STR_f_param_timeOfDay">
         <English> Time of Day </English>
