@@ -113,9 +113,9 @@ class Params
 
     class f_param_backpacks
     {
-            title = "$STR_f_param_backpacks";
+            title = "$STR_f_param_loadouts";
             values[] = {0,1,2};
-            texts[] = {"Off","Light","Heavy"};
+            texts[] = {"Light","Medium","Heavy"};
             default = 1;
             code = "f_param_backpacks = %1";
     };
@@ -225,7 +225,7 @@ class Params
 
 	class f_param_caching
 	{
-		title = "Cache AI outside distance:";
+		title = "Cache AI outside distance";
 		values[] = {0,600,800,1000,1500,2000};
 		default = 0;
 		code = "f_param_caching = %1";
@@ -341,7 +341,7 @@ class CfgRespawnTemplates
 
 // ============================================================================================
 
-// F3 - Functioons
+// F3 - Functions
 // DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
 
 class CfgFunctions
