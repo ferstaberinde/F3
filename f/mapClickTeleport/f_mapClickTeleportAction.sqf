@@ -27,7 +27,7 @@ _textAction = localize "STR_f_mapClickTeleportAction";
 // Whilst the player is alive we add the teleport action to the player's action menu.
 // If the player dies we wait until he is alive again and re-add the action.
 
-f_mapClickTeleportAction = player addaction [_textAction,{[] spawn f_fnc_mapClickTeleportUnit},"", 0, false,true,"","_this == player"];
+f_mapClickTeleportAction = player addaction [_textAction,{[] spawn f_fnc_mapClickTeleportUnit},"", 0, false,true,"","_target == player"];
 
 if (f_var_mapClickTeleport_TimeLimit > 0) then {
 	sleep f_var_mapClickTeleport_TimeLimit;
