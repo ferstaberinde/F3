@@ -28,7 +28,7 @@ if (isNil "f_var_JIP_RemoveCorpse") then {f_var_JIP_RemoveCorpse = true};
 // CHECK FOR FIRST TIME SPAWN
 // If no corpse exists the player is spawned for the first time and does not need a JIP menu
 
-if (f_var_JIP_FirstMenu && isNull _corpse) exitWith {};
+if (!f_var_JIP_FirstMenu && isNull _corpse) exitWith {};
 
 // ====================================================================================
 
@@ -36,8 +36,9 @@ if (f_var_JIP_FirstMenu && isNull _corpse) exitWith {};
 // If gear selection is disabled and the unit has already beeb assigned a loadout via f_fnc_assignGear, it is used instead
 
 if (!f_var_JIP_GearMenu) then {
-	if (!isNil (_unit getVariable "f_var_assignGear")) then {
-		player setVariable ["f_var_JIP_loadout",(_unit getVariable "f_var_assignGear")];
+	if (typeName (_unit getVariable "f_var_assignGear") == typeName "") then {
+		_loadout = (_unit getVariable "f_var_assignGear");
+		[_loadout,player] call f_fnc_assignGear;
 	};
 };
 
@@ -58,7 +59,7 @@ if (isNil "F3_JIP_reinforcementOptionsAction") then {
 if (typeof _unit != "seagull" && {f_var_JIP_RemoveCorpse && !isNull _corpse}) then {
 	_corpse spawn {
 		hideBody _this;
-		sleep 5;
+		sleep 60;
 		deleteVehicle _this;
 	};
 };
