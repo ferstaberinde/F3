@@ -417,7 +417,7 @@ class CfgFunctions
 		class setAISkill
 		{
 			file = "f\setAISKill";
-			class SetAISKill{};
+			class setAISKill{};
 		};
 		class mapClickTeleport
 		{
