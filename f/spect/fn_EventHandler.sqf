@@ -275,6 +275,9 @@ switch (_type) do
                         ctrlShow [2010,false];
                         ctrlShow [1350,false];
                         ctrlShow [1360,true];
+                        ctrlMapAnimClear _fullmapWindow;
+                        _fullmapWindow ctrlMapAnimAdd [0, 0.1,getpos player];
+                        ctrlMapAnimCommit _fullmapWindow;
                     };
                 };
                 _handled = true;
