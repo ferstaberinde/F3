@@ -17,13 +17,20 @@ private ["_unit","_isFireteam"];
 
 // ====================================================================================
 
-// WAIT UNTIL 10 SECONDS AFTER INITIALIZING
+// SET CUSTOM VARIABLES
+// These variables govern the behaviour of the script
 
-sleep 10;
+_white = [];
+_red = ["_RAT","_FTL"];
+_blue = ["_AR","_AAR"];
+_yellow = [];
+_green = [];
 
 // ====================================================================================
 
-// SET KEY VARIABLES
+// WAIT UNTIL 10 SECONDS AFTER INITIALIZING
+
+sleep 10;
 
 _unit = player;
 
@@ -32,20 +39,42 @@ _unit = player;
 // CHECK GROUP SIZE
 // If the group isn't a full fireteam, leave teams as default.
 
-if( (count (units (group _unit))) != 4 ) exitWith {};
-
 _isFireteam = ["_FTL", format["%1",(leader (group _unit))]] call BIS_fnc_inString;
 if(!_isFireteam) exitWith {};
 
 // SET TEAM COLOURS
-
 {
-	if((["_AR", format ["%1", vehicle _x]] call BIS_fnc_inString) || (["_AAR", format ["%1", vehicle _x]] call BIS_fnc_inString)) then
+	private ["_unit"];
+	_unit = _x;
+
 	{
-		_x assignTeam "BLUE";
-	}
-	else
+		if ([_x, format ["%1",_unit]] call BIS_fnc_inString) then {
+			_unit assignTeam "RED";
+		};
+	} forEach _red;
+
 	{
-		_x assignTeam "RED";
-	};
+		if ([_x, format ["%1",_unit]] call BIS_fnc_inString) then {
+			_unit assignTeam "blue";
+		};
+	} forEach _blue;
+
+	{
+		if ([_x, format ["%1",_unit]] call BIS_fnc_inString) then {
+			_unit assignTeam "yellow";
+		};
+	} forEach _yellow;
+
+	{
+		if ([_x, format ["%1",_unit]] call BIS_fnc_inString) then {
+			_unit assignTeam "green";
+		};
+	} forEach _green;
+
+	{
+		if ([_x, format ["%1",_unit]] call BIS_fnc_inString) then {
+			_unit assignTeam "white";
+		};
+	} forEach _white;
+
 } foreach units (group _unit);
