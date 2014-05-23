@@ -40,7 +40,7 @@ if(!_isFireteam) exitWith {};
 // SET TEAM COLOURS
 
 {
-	if((["_AR", format ["%1", vehicle _x]] call BIS_fnc_inString) || (["_AAR", format ["%1", vehicle _x]] call BIS_fnc_inString)) then
+	if((["_AR", format ["%1",_x]] call BIS_fnc_inString) || (["_AAR", format ["%1",_x]] call BIS_fnc_inString)) then
 	{
 		_x assignTeam "BLUE";
 	}
