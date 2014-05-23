@@ -1,11 +1,12 @@
 // F3 - Buddy Team Colours
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
+// MAKE SURE THE PLAYER INITIALIZES PROPERLY
 
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
-
-#include "f_waitForJIP.sqf"
+if (!isDedicated && (isNull player)) then
+{
+    waitUntil {sleep 0.1; !isNull player};
+};
 
 // ====================================================================================
 
@@ -47,7 +48,3 @@ if(!_isFireteam) exitWith {};
 		_x assignTeam "RED";
 	};
 } foreach units (group _unit);
-
-// =====================================================================================
-
-if (true) exitWith {};
