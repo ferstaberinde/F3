@@ -15,6 +15,7 @@ f_cam_camera camSetFov 0.7;
 while{true} do
 {
 	// if freemode.
+	player setpos getpos f_cam_camera;
 	f_cam_camera camSetFov f_cam_fovZoom;
 	if(f_cam_mode == 0) then
 	{
