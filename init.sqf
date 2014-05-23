@@ -74,13 +74,13 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Dynamic View Distance
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-//f_var_viewDistance_default = 1250;
-//f_var_viewDistance_tank = 2000;
-//f_var_viewDistance_car = 2000;
-//f_var_viewDistance_rotaryWing = 2500;
-//f_var_viewDistance_fixedWing = 5000;
-//f_var_viewDistance_crewOnly = true;
-//[] execVM "f\dynamicViewDistance\f_setViewDistanceLoop.sqf";
+// f_var_viewDistance_default = 1250;
+// f_var_viewDistance_tank = 2000;
+// f_var_viewDistance_car = 2000;
+// f_var_viewDistance_rotaryWing = 2500;
+// f_var_viewDistance_fixedWing = 5000;
+// f_var_viewDistance_crewOnly = true;
+// [] execVM "f\dynamicViewDistance\f_setViewDistanceLoop.sqf";
 
 // ====================================================================================
 
@@ -120,9 +120,9 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Name Tags
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_showGroup_Nametags = true;			// Display unit's group (uses GroupID)
-// f_showDistance_Nametags = true;	// Show distance to player
-// f_showVehicle_Nametags = true;		// Show vehicle player is in
+// f_showGroup_Nametags = true;				// Display unit's group (uses GroupID)
+// f_showDistance_Nametags = true;			// Show distance to player
+// f_showVehicle_Nametags = true;			// Show vehicle player is in
 // [20] execVM "f\nametag\f_nametags.sqf";
 
 // ====================================================================================
@@ -165,9 +165,9 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // F3 - JIP setup
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_var_JIP_FirstMenu = false;   // Do players connecting for the first time get the JIP menu? - This only works in missions with respawn.
-f_var_JIP_RemoveCorpse = false; // Remove the old corpse of respawning players?
-f_var_JIP_GearMenu = true;     // Can JIP/respawned players select their own gear? False will use gear assigned by F3 Gear Component if possible
+f_var_JIP_FirstMenu = false;		// Do players connecting for the first time get the JIP menu? - This only works in missions with respawn.
+f_var_JIP_RemoveCorpse = false;		// Remove the old corpse of respawning players?
+f_var_JIP_GearMenu = true;			// Can JIP/respawned players select their own gear? False will use gear assigned by F3 Gear Component if possible
 
 // ====================================================================================
 
