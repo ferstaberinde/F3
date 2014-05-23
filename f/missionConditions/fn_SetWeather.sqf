@@ -26,7 +26,7 @@ _MissionHumidity = 0;
 // ====================================================================================
 
 // SELECT MISSION WEATHER
-// Using the value of _timeOfDay, a new date is set.
+// Using the value of _weather, new weather conditions are set.
 
 switch (_weather) do
 {
