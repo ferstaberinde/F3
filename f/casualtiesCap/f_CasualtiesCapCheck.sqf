@@ -157,7 +157,7 @@ if (typeName _end == typeName 0) exitWith {
 };
 
 if (typeName _end == typeName {}) exitWith {
-	spawn _end;
+	[] spawn _end;
 };
 
 player GlobalChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];
