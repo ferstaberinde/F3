@@ -163,7 +163,7 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Join Group Action
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[false] execVM "f\common\f_groupJoinAddOption.sqf";
+[false] execVM "f\groupJoin\f_groupJoinAction.sqf";
 
 // ====================================================================================
 
