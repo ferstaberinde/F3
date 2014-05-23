@@ -13,6 +13,7 @@ enableSaving [false, false];
 // f_var_mapClickTeleport_Uses = 0;					// How often the teleport action can be used. 0 = infinite usage.
 // f_var_mapClickTeleport_TimeLimit = 0; 			// If higher than 0 the action will be removed after the given time.
 // f_var_mapClickTeleport_GroupTeleport = false; 	// False: everyone can teleport. True: Only group leaders can teleport and will move their entire group.
+// f_var_mapClickTeleport_Units = [];				// Restrict map click teleport to these units
 // [] execVM "f\mapClickTeleport\f_mapClickTeleportAction.sqf";
 
 // ====================================================================================
@@ -94,30 +95,17 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Casualties Cap
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [[GroupName or SIDE],100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
+// [[GroupName or SIDE],100,{code}] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // BLUFOR > NATO
-// [BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [BLUFOR,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // OPFOR > CSAT
-// [OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+// [OPFOR,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // INDEPENDENT > AAF
-// [INDEPENDENT,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
-
-// ====================================================================================
-
-// F3 - Casualties Cap (Advanced)
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-// BLUFOR
-// [BLUFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
-
-// OPFOR
-// [OPFOR,100] execVM "f\server\f_casualtiesCapAdv.sqf";
-
-// INDEPENDENT
-// [INDEPENDENT,100] execVM "f\server\f_casualtiesCapAdv.sqf";
+// [INDEPENDENT,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
 // ====================================================================================
 
@@ -178,7 +166,7 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 f_var_JIP_FirstMenu = false;   // Do players connecting for the first time get the JIP menu? - This only works in missions with respawn.
-f_var_JIP_RemoveCorpse = true; // Remove the old corpse of respawning players?
+f_var_JIP_RemoveCorpse = false; // Remove the old corpse of respawning players?
 f_var_JIP_GearMenu = true;     // Can JIP/respawned players select their own gear? False will use gear assigned by F3 Gear Component if possible
 
 // ====================================================================================

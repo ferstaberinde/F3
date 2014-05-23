@@ -17,27 +17,28 @@ _corpse = _this select 1;
 // ====================================================================================
 
 // CHECK FOR GLOBAL VARIABLES
-// Check if the global variables have been initialized, if not, do so.
+// Check if the global variables have been initialized, if not, do so with the default values.
 
 if (isNil "f_var_JIP_FirstMenu") then {f_var_JIP_FirstMenu = false};
 if (isNil "f_var_JIP_GearMenu") then {f_var_JIP_GearMenu = true};
-if (isNil "f_var_JIP_RemoveCorpse") then {f_var_JIP_RemoveCorpse = true};
+if (isNil "f_var_JIP_RemoveCorpse") then {f_var_JIP_RemoveCorpse = false};
 
 // ===================================================================================
 
 // CHECK FOR FIRST TIME SPAWN
-// If no corpse exists the player is spawned for the first time and does not need a JIP menu
+// If no corpse exists the player is spawned for the first time. By default, he won't get the JIP menu in that case.
 
-if (f_var_JIP_FirstMenu && isNull _corpse) exitWith {};
+if (!f_var_JIP_FirstMenu && isNull _corpse) exitWith {};
 
 // ====================================================================================
 
 // CHECK FOR GEAR
-// If gear selection is disabled and the unit has already beeb assigned a loadout via f_fnc_assignGear, it is used instead
+// If gear selection is disabled and the unit uses the loadout assigned by the F3 assign Gear component or it's default loadout.
 
 if (!f_var_JIP_GearMenu) then {
-	if (!isNil (_unit getVariable "f_var_assignGear")) then {
-		player setVariable ["f_var_JIP_loadout",(_unit getVariable "f_var_assignGear")];
+	if (typeName (_unit getVariable "f_var_assignGear") == typeName "") then {
+		_loadout = (_unit getVariable "f_var_assignGear");
+		[_loadout,player] call f_fnc_assignGear;
 	};
 };
 
@@ -53,12 +54,12 @@ if (isNil "F3_JIP_reinforcementOptionsAction") then {
 // ====================================================================================
 
 // REMOVE CORPSE
-// If activated, the old corpse will be sink into the ground and then removed from the game
+// If activated and respawn is allowed, the old corpse will be sink into the ground and is then removed from the game
 
-if (f_var_JIP_RemoveCorpse && !isNull _corpse) then {
+if (typeof _unit != "seagull" && {f_var_JIP_RemoveCorpse && !isNull _corpse}) then {
 	_corpse spawn {
 		hideBody _this;
-		sleep 5;
+		sleep 60;
 		deleteVehicle _this;
 	};
 };

@@ -88,7 +88,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=176;
+		items=139;
 		class Item0
 		{
 			side="WEST";
@@ -2135,7 +2135,7 @@ class Mission
 					vehicle="I_soldier_UAV_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="UnitAAF_DC_UAV_1";
+					text="UnitAAF_DC_UAV";
 					init="GrpAAF_DC = group this; nul = [""uav"",this] call f_fnc_assignGear ;";
 					description="AAF UAV Operator";
 				};
@@ -5959,1654 +5959,6 @@ class Mission
 		};
 		class Item121
 		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8766.8555,35.287228,10573.397};
-					id=377;
-					side="EAST";
-					vehicle="O_G_officer_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitOFIA_CO";
-					init="GrpOFIA_CO = group this; nul = [""co"",this] call f_fnc_assignGear ;";
-					description="FIA Commander";
-				};
-				class Item1
-				{
-					position[]={8769.2168,35.037251,10571.202};
-					id=378;
-					side="EAST";
-					vehicle="O_G_medic_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_CO_M";
-					init="GrpOFIA_CO = group this; nul = [""m"",this] call f_fnc_assignGear ;";
-					description="FIA Medic";
-				};
-			};
-		};
-		class Item122
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8766.8477,36.12122,10557.944};
-					id=379;
-					side="EAST";
-					vehicle="O_G_officer_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitOFIA_DC";
-					init="GrpOFIA_DC = group this; nul = [""dc"",this] call f_fnc_assignGear ;";
-					description="FIA Deputy Commander";
-				};
-				class Item1
-				{
-					position[]={8768.9375,36.19006,10556.069};
-					id=380;
-					side="EAST";
-					vehicle="O_G_medic_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_DC_M";
-					init="GrpOFIA_DC = group this; nul = [""m"",this] call f_fnc_assignGear ;";
-					description="FIA Medic";
-				};
-			};
-		};
-		class Item123
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8789.709,32.715446,10572.906};
-					id=381;
-					side="EAST";
-					vehicle="O_G_Soldier_SL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitOFIA_ASL_SL";
-					init="GrpOFIA_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha Squad Leader";
-				};
-				class Item1
-				{
-					position[]={8792.2207,32.684292,10571.315};
-					id=382;
-					side="EAST";
-					vehicle="O_G_medic_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_ASL_M";
-					init="GrpOFIA_ASL = group this; nul = [""m"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha Medic";
-				};
-			};
-		};
-		class Item124
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8789.6777,34.826759,10557.593};
-					id=383;
-					side="EAST";
-					vehicle="O_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_A1_FTL";
-					init="GrpOFIA_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8792.5527,34.876987,10555.87};
-					id=384;
-					side="EAST";
-					vehicle="O_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_A1_AR";
-					init="GrpOFIA_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8795.6621,34.691532,10555.772};
-					id=385;
-					side="EAST";
-					vehicle="O_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_A1_AAR";
-					init="GrpOFIA_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8798.8496,34.484203,10555.741};
-					id=386;
-					side="EAST";
-					vehicle="O_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_A1_AT";
-					init="GrpOFIA_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item125
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8789.4707,37.073154,10541.827};
-					id=387;
-					side="EAST";
-					vehicle="O_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_A2_FTL";
-					init="GrpOFIA_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8792.2051,37.187218,10539.921};
-					id=388;
-					side="EAST";
-					vehicle="O_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_A2_AR";
-					init="GrpOFIA_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8795.2871,36.970184,10539.823};
-					id=389;
-					side="EAST";
-					vehicle="O_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_A2_AAR";
-					init="GrpOFIA_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8798.5996,36.759735,10539.812};
-					id=390;
-					side="EAST";
-					vehicle="O_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_A2_AT";
-					init="GrpOFIA_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item126
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8789.4238,39.636089,10524.632};
-					id=391;
-					side="EAST";
-					vehicle="O_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_A3_FTL";
-					init="GrpOFIA_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8792.2949,40.148773,10522.698};
-					id=392;
-					side="EAST";
-					vehicle="O_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_A3_AR";
-					init="GrpOFIA_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8795.4941,40.302299,10522.487};
-					id=393;
-					side="EAST";
-					vehicle="O_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_A3_AAR";
-					init="GrpOFIA_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8798.7832,40.238476,10522.406};
-					id=394;
-					side="EAST";
-					vehicle="O_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_A3_AT";
-					init="GrpOFIA_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 3 Rifleman (AT)";
-				};
-			};
-		};
-		class Item127
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8813.6465,33.205429,10572.495};
-					id=395;
-					side="EAST";
-					vehicle="O_G_Soldier_SL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitOFIA_BSL_SL";
-					init="GrpOFIA_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo Squad Leader";
-				};
-				class Item1
-				{
-					position[]={8816.3379,33.478741,10570.929};
-					id=396;
-					side="EAST";
-					vehicle="O_G_medic_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_BSL_M";
-					init="GrpOFIA_BSL = group this; nul = [""m"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo Medic";
-				};
-			};
-		};
-		class Item128
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8813.8223,34.199661,10556.991};
-					id=397;
-					side="EAST";
-					vehicle="O_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_B1_FTL";
-					init="GrpOFIA_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8816.6895,34.381283,10555.366};
-					id=398;
-					side="EAST";
-					vehicle="O_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_B1_AR";
-					init="GrpOFIA_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8819.6777,34.486301,10555.265};
-					id=399;
-					side="EAST";
-					vehicle="O_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_B1_AAR";
-					init="GrpOFIA_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8822.959,34.483593,10555.249};
-					id=400;
-					side="EAST";
-					vehicle="O_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_B1_AT";
-					init="GrpOFIA_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item129
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8813.2324,36.102547,10541.226};
-					id=401;
-					side="EAST";
-					vehicle="O_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_B2_FTL";
-					init="GrpOFIA_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8816.3887,36.183483,10539.464};
-					id=402;
-					side="EAST";
-					vehicle="O_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_B2_AR";
-					init="GrpOFIA_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8819.5332,36.063175,10539.323};
-					id=403;
-					side="EAST";
-					vehicle="O_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_B2_AAR";
-					init="GrpOFIA_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8822.959,35.907196,10539.292};
-					id=404;
-					side="EAST";
-					vehicle="O_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_B2_AT";
-					init="GrpOFIA_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item130
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8813.4824,37.782696,10524.147};
-					id=405;
-					side="EAST";
-					vehicle="O_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_B3_FTL";
-					init="GrpOFIA_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8816.6777,37.706665,10522.515};
-					id=406;
-					side="EAST";
-					vehicle="O_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_B3_AR";
-					init="GrpOFIA_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8819.8457,37.419147,10522.421};
-					id=407;
-					side="EAST";
-					vehicle="O_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_B3_AAR";
-					init="GrpOFIA_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8823.0879,37.320709,10522.308};
-					id=408;
-					side="EAST";
-					vehicle="O_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_B3_AT";
-					init="GrpOFIA_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 3 Rifleman (AT)";
-				};
-			};
-		};
-		class Item131
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8840.2471,33.408573,10571.917};
-					id=409;
-					side="EAST";
-					vehicle="O_G_Soldier_SL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitOFIA_CSL_SL";
-					init="GrpOFIA_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie Squad Leader";
-				};
-				class Item1
-				{
-					position[]={8842.7637,33.430885,10570.249};
-					id=410;
-					side="EAST";
-					vehicle="O_G_medic_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_CSL_M";
-					init="GrpOFIA_CSL = group this; nul = [""m"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie Medic";
-				};
-			};
-		};
-		class Item132
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8840.5215,34.145538,10556.276};
-					id=411;
-					side="EAST";
-					vehicle="O_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_C1_FTL";
-					init="GrpOFIA_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8843.4668,34.085415,10554.679};
-					id=412;
-					side="EAST";
-					vehicle="O_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_C1_AR";
-					init="GrpOFIA_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8846.6387,33.913502,10554.647};
-					id=413;
-					side="EAST";
-					vehicle="O_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_C1_AAR";
-					init="GrpOFIA_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8849.9395,33.757153,10554.597};
-					id=414;
-					side="EAST";
-					vehicle="O_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_C1_AT";
-					init="GrpOFIA_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item133
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8840.1387,35.203102,10540.331};
-					id=415;
-					side="EAST";
-					vehicle="O_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_C2_FTL";
-					init="GrpOFIA_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8843.1191,35.112709,10538.87};
-					id=416;
-					side="EAST";
-					vehicle="O_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_C2_AR";
-					init="GrpOFIA_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8846.209,34.728386,10538.788};
-					id=417;
-					side="EAST";
-					vehicle="O_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_C2_AAR";
-					init="GrpOFIA_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8849.5098,34.355927,10538.761};
-					id=418;
-					side="EAST";
-					vehicle="O_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_C2_AT";
-					init="GrpOFIA_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item134
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8840.4512,36.239849,10523.351};
-					id=419;
-					side="EAST";
-					vehicle="O_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_C3_FTL";
-					init="GrpOFIA_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8843.5488,35.767696,10521.968};
-					id=420;
-					side="EAST";
-					vehicle="O_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_C3_AR";
-					init="GrpOFIA_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8846.5293,35.211826,10521.882};
-					id=421;
-					side="EAST";
-					vehicle="O_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_C3_AAR";
-					init="GrpOFIA_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8849.709,34.618427,10521.862};
-					id=422;
-					side="EAST";
-					vehicle="O_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_C3_AT";
-					init="GrpOFIA_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 3 Rifleman (AT)";
-				};
-			};
-		};
-		class Item135
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8867.9473,32.617123,10571.429};
-					id=423;
-					side="EAST";
-					vehicle="O_G_soldier_AR_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_MMG1_G";
-					init="GrpOFIA_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear ;      ";
-					description="FIA Medium MG Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={8870.5254,32.627094,10569.452};
-					id=424;
-					side="EAST";
-					vehicle="O_G_Soldier_A_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_MMG1_AG";
-					init="GrpOFIA_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear ; ";
-					description="FIA Medium MG Team 1 Assistant Gunner";
-				};
-			};
-		};
-		class Item136
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8867.7324,32.819725,10556.386};
-					id=425;
-					side="EAST";
-					vehicle="O_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_MAT1_G";
-					init="GrpOFIA_MAT1 = group this; nul = [""matg"",this] call f_fnc_assignGear ; ";
-					description="FIA Medium AT Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={8870.1387,32.771339,10554.628};
-					id=426;
-					side="EAST";
-					vehicle="O_G_soldier_A_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					health=0.99000001;
-					text="UnitOFIA_MAT1_AG";
-					init="GrpOFIA_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear ; ";
-					description="FIA Medium AT Team 1 Assistant Gunner";
-				};
-			};
-		};
-		class Item137
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8868.2207,33.112713,10540.104};
-					id=427;
-					side="EAST";
-					vehicle="O_G_engineer_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitOFIA_ENG1_FTL";
-					init="GrpOFIA_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear ;";
-					description="FIA Engineer Team 1 Leader (Demo)";
-				};
-				class Item1
-				{
-					position[]={8870.9277,33.134132,10538.308};
-					id=428;
-					side="EAST";
-					vehicle="O_G_engineer_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_ENG1_A1";
-					init="GrpOFIA_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear ;";
-					description="FIA Engineer Team 1 Assistant (Demo)";
-				};
-				class Item2
-				{
-					position[]={8873.2598,33.113743,10538.218};
-					id=429;
-					side="EAST";
-					vehicle="O_G_engineer_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_ENG1_A2";
-					init="GrpOFIA_ENG1 = group this; nul = [""engm"",this] call f_fnc_assignGear ;";
-					description="FIA Engineer Team 1 Assistant (Mines)";
-				};
-				class Item3
-				{
-					position[]={8875.2383,33.099648,10538.055};
-					id=430;
-					side="EAST";
-					vehicle="O_G_engineer_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitOFIA_ENG1_A3";
-					init="GrpOFIA_ENG1 = group this; nul = [""engm"",this] call f_fnc_assignGear ;";
-					description="FIA Engineer Team 1 Assistant (Mines)";
-				};
-			};
-		};
-		class Item138
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={7933.4111,46.145832,10623.977};
-					id=431;
-					side="GUER";
-					vehicle="I_G_officer_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitIFIA_CO";
-					init="GrpIFIA_CO = group this; nul = [""co"",this] call f_fnc_assignGear ;";
-					description="FIA Commander";
-				};
-				class Item1
-				{
-					position[]={7935.7725,46.068729,10621.781};
-					id=432;
-					side="GUER";
-					vehicle="I_G_medic_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_CO_M";
-					init="GrpIFIA_CO = group this; nul = [""m"",this] call f_fnc_assignGear ;";
-					description="FIA Medic";
-				};
-			};
-		};
-		class Item139
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={7933.4033,45.378891,10608.521};
-					id=433;
-					side="GUER";
-					vehicle="I_G_officer_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitIFIA_DC";
-					init="GrpIFIA_DC = group this; nul = [""dc"",this] call f_fnc_assignGear ;";
-					description="FIA Deputy Commander";
-				};
-				class Item1
-				{
-					position[]={7935.4932,45.212833,10606.646};
-					id=434;
-					side="GUER";
-					vehicle="I_G_medic_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_DC_M";
-					init="GrpIFIA_DC = group this; nul = [""m"",this] call f_fnc_assignGear ;";
-					description="FIA Medic";
-				};
-			};
-		};
-		class Item140
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={7956.2646,44.902306,10623.485};
-					id=435;
-					side="GUER";
-					vehicle="I_G_Soldier_SL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitIFIA_ASL_SL";
-					init="GrpIFIA_ASL = group this; nul = [""dc"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha Squad Leader";
-				};
-				class Item1
-				{
-					position[]={7958.7764,44.472275,10621.895};
-					id=436;
-					side="GUER";
-					vehicle="I_G_medic_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_ASL_M";
-					init="GrpIFIA_ASL = group this; nul = [""m"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha Medic";
-				};
-			};
-		};
-		class Item141
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={7956.2334,44.029945,10608.17};
-					id=437;
-					side="GUER";
-					vehicle="I_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_A1_FTL";
-					init="GrpIFIA_A1 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={7959.1084,43.717106,10606.447};
-					id=438;
-					side="GUER";
-					vehicle="I_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_A1_AR";
-					init="GrpIFIA_A1 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={7962.2178,43.467911,10606.35};
-					id=439;
-					side="GUER";
-					vehicle="I_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_A1_AAR";
-					init="GrpIFIA_A1 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={7965.4053,43.159252,10606.318};
-					id=440;
-					side="GUER";
-					vehicle="I_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_A1_AT";
-					init="GrpIFIA_A1 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item142
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={7956.0264,42.470428,10592.404};
-					id=441;
-					side="GUER";
-					vehicle="I_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_A2_FTL";
-					init="GrpIFIA_A2 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={7958.7607,42.068974,10590.498};
-					id=442;
-					side="GUER";
-					vehicle="I_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_A2_AR";
-					init="GrpIFIA_A2 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={7961.8428,41.992256,10590.4};
-					id=443;
-					side="GUER";
-					vehicle="I_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_A2_AAR";
-					init="GrpIFIA_A2 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={7965.1553,41.906548,10590.391};
-					id=444;
-					side="GUER";
-					vehicle="I_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_A2_AT";
-					init="GrpIFIA_A2 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item143
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={7955.9795,40.742126,10575.209};
-					id=445;
-					side="GUER";
-					vehicle="I_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_A3_FTL";
-					init="GrpIFIA_A3 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={7958.8506,40.443176,10573.275};
-					id=446;
-					side="GUER";
-					vehicle="I_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_A3_AR";
-					init="GrpIFIA_A3 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={7962.0498,40.237717,10573.064};
-					id=447;
-					side="GUER";
-					vehicle="I_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_A3_AAR";
-					init="GrpIFIA_A3 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={7965.3389,40.045212,10572.982};
-					id=448;
-					side="GUER";
-					vehicle="I_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_A3_AT";
-					init="GrpIFIA_A3 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Alpha 3 Rifleman (AT)";
-				};
-			};
-		};
-		class Item144
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={7980.2021,43.16745,10623.074};
-					id=449;
-					side="GUER";
-					vehicle="I_G_Soldier_SL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitIFIA_BSL_SL";
-					init="GrpIFIA_BSL = group this; nul = [""dc"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo Squad Leader";
-				};
-				class Item1
-				{
-					position[]={7982.8936,42.849545,10621.508};
-					id=450;
-					side="GUER";
-					vehicle="I_G_medic_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_BSL_M";
-					init="GrpIFIA_BSL = group this; nul = [""m"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo Medic";
-				};
-			};
-		};
-		class Item145
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={7980.3779,41.823025,10607.568};
-					id=451;
-					side="GUER";
-					vehicle="I_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_B1_FTL";
-					init="GrpIFIA_B1 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={7983.2451,41.187073,10605.943};
-					id=452;
-					side="GUER";
-					vehicle="I_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_B1_AR";
-					init="GrpIFIA_B1 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={7986.2334,40.694122,10605.842};
-					id=453;
-					side="GUER";
-					vehicle="I_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_B1_AAR";
-					init="GrpIFIA_B1 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={7989.5146,40.322227,10605.826};
-					id=454;
-					side="GUER";
-					vehicle="I_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_B1_AT";
-					init="GrpIFIA_B1 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item146
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={7979.7881,40.548656,10591.803};
-					id=455;
-					side="GUER";
-					vehicle="I_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_B2_FTL";
-					init="GrpIFIA_B2 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={7982.9443,40.024677,10590.042};
-					id=456;
-					side="GUER";
-					vehicle="I_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_B2_AR";
-					init="GrpIFIA_B2 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={7986.0889,39.722279,10589.9};
-					id=457;
-					side="GUER";
-					vehicle="I_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_B2_AAR";
-					init="GrpIFIA_B2 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={7989.5146,39.794399,10589.869};
-					id=458;
-					side="GUER";
-					vehicle="I_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_B2_AT";
-					init="GrpIFIA_B2 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item147
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={7980.0381,37.949493,10574.725};
-					id=459;
-					side="GUER";
-					vehicle="I_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_B3_FTL";
-					init="GrpIFIA_B3 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={7983.2334,37.670425,10573.092};
-					id=460;
-					side="GUER";
-					vehicle="I_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_B3_AR";
-					init="GrpIFIA_B3 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={7986.4014,37.547421,10572.998};
-					id=461;
-					side="GUER";
-					vehicle="I_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_B3_AAR";
-					init="GrpIFIA_B3 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={7989.6436,37.183151,10572.885};
-					id=462;
-					side="GUER";
-					vehicle="I_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_B3_AT";
-					init="GrpIFIA_B3 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Bravo 3 Rifleman (AT)";
-				};
-			};
-		};
-		class Item148
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8006.8037,38.76897,10622.496};
-					id=463;
-					side="GUER";
-					vehicle="I_G_Soldier_SL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitIFIA_CSL_SL";
-					init="GrpIFIA_CSL = group this; nul = [""dc"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie Squad Leader";
-				};
-				class Item1
-				{
-					position[]={8009.3193,38.445457,10620.828};
-					id=464;
-					side="GUER";
-					vehicle="I_G_medic_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_CSL_M";
-					init="GrpIFIA_CSL = group this; nul = [""m"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie Medic";
-				};
-			};
-		};
-		class Item149
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8007.0771,38.357174,10606.854};
-					id=465;
-					side="GUER";
-					vehicle="I_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_C1_FTL";
-					init="GrpIFIA_C1 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8010.0225,37.639351,10605.256};
-					id=466;
-					side="GUER";
-					vehicle="I_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_C1_AR";
-					init="GrpIFIA_C1 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8013.1943,36.943932,10605.225};
-					id=467;
-					side="GUER";
-					vehicle="I_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_C1_AAR";
-					init="GrpIFIA_C1 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8016.4951,36.21936,10605.174};
-					id=468;
-					side="GUER";
-					vehicle="I_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_C1_AT";
-					init="GrpIFIA_C1 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item150
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8006.6943,37.477242,10590.908};
-					id=469;
-					side="GUER";
-					vehicle="I_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_C2_FTL";
-					init="GrpIFIA_C2 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8009.6748,36.732639,10589.447};
-					id=470;
-					side="GUER";
-					vehicle="I_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_C2_AR";
-					init="GrpIFIA_C2 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8012.7646,35.698013,10589.365};
-					id=471;
-					side="GUER";
-					vehicle="I_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_C2_AAR";
-					init="GrpIFIA_C2 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8016.0654,34.639957,10589.338};
-					id=472;
-					side="GUER";
-					vehicle="I_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_C2_AT";
-					init="GrpIFIA_C2 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item151
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8007.0078,35.946259,10573.928};
-					id=473;
-					side="GUER";
-					vehicle="I_G_Soldier_TL_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_C3_FTL";
-					init="GrpIFIA_C3 = group this; nul = [""ftl"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={8010.1045,35.079983,10572.545};
-					id=474;
-					side="GUER";
-					vehicle="I_G_soldier_AR_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_C3_AR";
-					init="GrpIFIA_C3 = group this; nul = [""ar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={8013.085,34.262432,10572.459};
-					id=475;
-					side="GUER";
-					vehicle="I_G_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_C3_AAR";
-					init="GrpIFIA_C3 = group this; nul = [""aar"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={8016.2646,33.30603,10572.439};
-					id=476;
-					side="GUER";
-					vehicle="I_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_C3_AT";
-					init="GrpIFIA_C3 = group this; nul = [""rat"",this] call f_fnc_assignGear ;";
-					description="FIA Charlie 3 Rifleman (AT)";
-				};
-			};
-		};
-		class Item152
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8034.5029,33.697071,10622.008};
-					id=477;
-					side="GUER";
-					vehicle="I_G_soldier_AR_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_MMG1_G";
-					init="GrpIFIA_MMG1 = group this; nul = [""mmgg"",this] call f_fnc_assignGear ;      ";
-					description="FIA Medium MG Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={8037.0811,33.074654,10620.031};
-					id=478;
-					side="GUER";
-					vehicle="I_G_Soldier_A_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_MMG1_AG";
-					init="GrpIFIA_MMG1 = group this; nul = [""mmgag"",this] call f_fnc_assignGear ; ";
-					description="FIA Medium MG Team 1 Assistant Gunner";
-				};
-			};
-		};
-		class Item153
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8034.2881,32.878128,10606.963};
-					id=479;
-					side="GUER";
-					vehicle="I_G_Soldier_LAT_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_MAT1_G";
-					init="GrpIFIA_MAT1 = group this; nul = [""matg"",this] call f_fnc_assignGear ; ";
-					description="FIA Medium AT Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={8036.6943,32.278877,10605.205};
-					id=480;
-					side="GUER";
-					vehicle="I_G_soldier_A_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					health=0.99000001;
-					text="UnitIFIA_MAT1_AG";
-					init="GrpIFIA_MAT1 = group this; nul = [""matag"",this] call f_fnc_assignGear ; ";
-					description="FIA Medium AT Team 1 Assistant Gunner";
-				};
-			};
-		};
-		class Item154
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={8034.7764,31.553886,10590.681};
-					id=481;
-					side="GUER";
-					vehicle="I_G_engineer_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitIFIA_ENG1_FTL";
-					init="GrpIFIA_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear ;";
-					description="FIA Engineer Team 1 Leader (Demo)";
-				};
-				class Item1
-				{
-					position[]={8037.4834,30.795589,10588.885};
-					id=482;
-					side="GUER";
-					vehicle="I_G_engineer_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_ENG1_A1";
-					init="GrpIFIA_ENG1 = group this; nul = [""eng"",this] call f_fnc_assignGear ;";
-					description="FIA Engineer Team 1 Assistant (Demo)";
-				};
-				class Item2
-				{
-					position[]={8039.8154,30.285807,10588.795};
-					id=483;
-					side="GUER";
-					vehicle="I_G_engineer_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_ENG1_A2";
-					init="GrpIFIA_ENG1 = group this; nul = [""engm"",this] call f_fnc_assignGear ;";
-					description="FIA Engineer Team 1 Assistant (Mines)";
-				};
-				class Item3
-				{
-					position[]={8041.7939,29.857903,10588.633};
-					id=484;
-					side="GUER";
-					vehicle="I_G_engineer_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitIFIA_ENG1_A3";
-					init="GrpIFIA_ENG1 = group this; nul = [""engm"",this] call f_fnc_assignGear ;";
-					description="FIA Engineer Team 1 Assistant (Mines)";
-				};
-			};
-		};
-		class Item155
-		{
 			side="CIV";
 			class Vehicles
 			{
@@ -7614,7 +5966,7 @@ class Mission
 				class Item0
 				{
 					position[]={7947.4639,22.257385,10889.854};
-					id=485;
+					id=377;
 					side="CIV";
 					vehicle="C_man_polo_1_F";
 					player="PLAY CDG";
@@ -7625,7 +5977,7 @@ class Mission
 				};
 			};
 		};
-		class Item156
+		class Item122
 		{
 			side="CIV";
 			class Vehicles
@@ -7634,7 +5986,7 @@ class Mission
 				class Item0
 				{
 					position[]={7954.6553,23.490887,10889.612};
-					id=486;
+					id=378;
 					side="CIV";
 					vehicle="C_man_polo_2_F";
 					player="PLAY CDG";
@@ -7645,7 +5997,7 @@ class Mission
 				};
 			};
 		};
-		class Item157
+		class Item123
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7654,7 +6006,7 @@ class Mission
 				class Item0
 				{
 					position[]={7950.0752,25.995981,10867.502};
-					id=487;
+					id=379;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7664,7 +6016,7 @@ class Mission
 				};
 			};
 		};
-		class Item158
+		class Item124
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7673,7 +6025,7 @@ class Mission
 				class Item0
 				{
 					position[]={8448.5859,26.714506,10933.794};
-					id=488;
+					id=380;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7683,7 +6035,7 @@ class Mission
 				};
 			};
 		};
-		class Item159
+		class Item125
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7692,7 +6044,7 @@ class Mission
 				class Item0
 				{
 					position[]={8784.1592,32.377594,10888.167};
-					id=489;
+					id=381;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7702,28 +6054,7 @@ class Mission
 				};
 			};
 		};
-		class Item160
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={8789.79,33.672119,10598.578};
-					id=490;
-					side="LOGIC";
-					vehicle="Logic";
-					leader=1;
-					skill=0.60000002;
-					text="F3_preMount_OFIA";
-					init="[synchronizedObjects this,[""GrpOFIA_ASL"",""GrpOFIA_A1"",""GrpOFIA_A2"",""GrpOFIA_A3""],true,false] call f_fnc_mountGroups;";
-					syncId=0;
-					synchronizations[]={3,5};
-				};
-			};
-		};
-		class Item161
+		class Item126
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7732,7 +6063,7 @@ class Mission
 				class Item0
 				{
 					position[]={8491.3604,14.674988,10617.672};
-					id=491;
+					id=382;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7742,61 +6073,7 @@ class Mission
 				};
 			};
 		};
-		class Item162
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={7956.1753,45.519531,10649.233};
-					id=492;
-					side="LOGIC";
-					vehicle="Logic";
-					leader=1;
-					skill=0.60000002;
-					text="F3_preMount_IFIA";
-					init="[synchronizedObjects this,[""GrpIFIA_ASL"",""GrpIFIA_A1"",""GrpIFIA_A2"",""GrpIFIA_A3""],true,false] call f_fnc_mountGroups;";
-					syncId=1;
-					synchronizations[]={4,6};
-				};
-			};
-		};
-		class Item163
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={8537.2939,34.606792,10896.431};
-					id=493;
-					side="WEST";
-					vehicle="B_sniper_F";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="UnitNATO_SN1_SN";
-					init="GrpNATO_ST1 = group this;  [""sn"",this] call f_fnc_assignGear ";
-					description="NATO Sniper Team 1 Team Leader";
-				};
-				class Item1
-				{
-					position[]={8538.3145,34.623173,10895.288};
-					id=494;
-					side="WEST";
-					vehicle="B_spotter_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNATO_SN1_SP";
-					init="GrpNATO_ST1 = group this;  [""sp"",this] call f_fnc_assignGear ";
-					description="NATO Sniper Team 1 Spotter";
-				};
-			};
-		};
-		class Item164
+		class Item127
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7805,7 +6082,7 @@ class Mission
 				class Item0
 				{
 					position[]={8805.4717,31.362656,10887.897};
-					id=495;
+					id=383;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7815,7 +6092,7 @@ class Mission
 				};
 			};
 		};
-		class Item165
+		class Item128
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7824,7 +6101,7 @@ class Mission
 				class Item0
 				{
 					position[]={8832.1523,30.530317,10886.891};
-					id=496;
+					id=384;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7834,7 +6111,7 @@ class Mission
 				};
 			};
 		};
-		class Item166
+		class Item129
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7843,7 +6120,7 @@ class Mission
 				class Item0
 				{
 					position[]={8757.7744,33.216652,10886.893};
-					id=497;
+					id=385;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7853,7 +6130,7 @@ class Mission
 				};
 			};
 		};
-		class Item167
+		class Item130
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7862,7 +6139,7 @@ class Mission
 				class Item0
 				{
 					position[]={8475.9043,29.870577,10933.963};
-					id=498;
+					id=386;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7872,7 +6149,7 @@ class Mission
 				};
 			};
 		};
-		class Item168
+		class Item131
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7881,7 +6158,7 @@ class Mission
 				class Item0
 				{
 					position[]={8497.668,33.35178,10934.12};
-					id=499;
+					id=387;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7891,7 +6168,7 @@ class Mission
 				};
 			};
 		};
-		class Item169
+		class Item132
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7900,7 +6177,7 @@ class Mission
 				class Item0
 				{
 					position[]={8424.251,24.491131,10933.396};
-					id=500;
+					id=388;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7910,7 +6187,7 @@ class Mission
 				};
 			};
 		};
-		class Item170
+		class Item133
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7919,7 +6196,7 @@ class Mission
 				class Item0
 				{
 					position[]={7974.2783,27.342405,10869.536};
-					id=501;
+					id=389;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7929,7 +6206,7 @@ class Mission
 				};
 			};
 		};
-		class Item171
+		class Item134
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7938,7 +6215,7 @@ class Mission
 				class Item0
 				{
 					position[]={8000.1079,25.922478,10870.959};
-					id=502;
+					id=390;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7948,7 +6225,7 @@ class Mission
 				};
 			};
 		};
-		class Item172
+		class Item135
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7957,7 +6234,7 @@ class Mission
 				class Item0
 				{
 					position[]={7927.3682,27.352558,10868.294};
-					id=503;
+					id=391;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7967,7 +6244,7 @@ class Mission
 				};
 			};
 		};
-		class Item173
+		class Item136
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7976,7 +6253,7 @@ class Mission
 				class Item0
 				{
 					position[]={8517.7031,14.12731,10617.561};
-					id=504;
+					id=392;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -7986,7 +6263,7 @@ class Mission
 				};
 			};
 		};
-		class Item174
+		class Item137
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7995,19 +6272,19 @@ class Mission
 				class Item0
 				{
 					position[]={8540.6973,14.009458,10620.237};
-					id=505;
+					id=393;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
 					text="F3_preMount_FIA_2";
 					init="[synchronizedObjects this,[""GrpFIA_CSL"",""GrpFIA_C1"",""GrpFIA_C2"",""GrpFIA_C3""],true,false] call f_fnc_mountGroups;";
-					syncId=2;
-					synchronizations[]={2};
+					syncId=0;
+					synchronizations[]={0};
 				};
 			};
 		};
-		class Item175
+		class Item138
 		{
 			side="LOGIC";
 			class Vehicles
@@ -8016,7 +6293,7 @@ class Mission
 				class Item0
 				{
 					position[]={8468.8135,14.149327,10618.031};
-					id=506;
+					id=394;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -8029,11 +6306,11 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=86;
+		items=72;
 		class Item0
 		{
 			position[]={8448.3682,22.231026,10822.729};
-			id=507;
+			id=395;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			leader=1;
@@ -8043,7 +6320,7 @@ class Mission
 		class Item1
 		{
 			position[]={8789.0449,25.681644,10783.284};
-			id=508;
+			id=396;
 			side="EMPTY";
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
@@ -8052,7 +6329,7 @@ class Mission
 		class Item2
 		{
 			position[]={7949.9307,39.657188,10764.282};
-			id=509;
+			id=397;
 			side="EMPTY";
 			vehicle="I_Heli_Transport_02_F";
 			leader=1;
@@ -8062,7 +6339,7 @@ class Mission
 		class Item3
 		{
 			position[]={8448.1592,21.198637,10799.869};
-			id=510;
+			id=398;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			leader=1;
@@ -8072,7 +6349,7 @@ class Mission
 		class Item4
 		{
 			position[]={8472.4619,25.62302,10822.854};
-			id=511;
+			id=399;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			leader=1;
@@ -8082,7 +6359,7 @@ class Mission
 		class Item5
 		{
 			position[]={8472.7627,24.616396,10800.423};
-			id=512;
+			id=400;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			leader=1;
@@ -8092,7 +6369,7 @@ class Mission
 		class Item6
 		{
 			position[]={8499.2178,28.329477,10823.107};
-			id=513;
+			id=401;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			leader=1;
@@ -8102,7 +6379,7 @@ class Mission
 		class Item7
 		{
 			position[]={8499.0088,27.19895,10800.252};
-			id=514;
+			id=402;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			leader=1;
@@ -8112,7 +6389,7 @@ class Mission
 		class Item8
 		{
 			position[]={8523.3115,30.137499,10823.236};
-			id=515;
+			id=403;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			leader=1;
@@ -8122,7 +6399,7 @@ class Mission
 		class Item9
 		{
 			position[]={8523.6123,29.744282,10800.803};
-			id=516;
+			id=404;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			leader=1;
@@ -8132,7 +6409,7 @@ class Mission
 		class Item10
 		{
 			position[]={8438.5361,18.926207,10776.412};
-			id=517;
+			id=405;
 			side="EMPTY";
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			skill=0.60000002;
@@ -8142,7 +6419,7 @@ class Mission
 		class Item11
 		{
 			position[]={8450.9932,19.721678,10772.795};
-			id=518;
+			id=406;
 			side="EMPTY";
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			skill=0.60000002;
@@ -8152,7 +6429,7 @@ class Mission
 		class Item12
 		{
 			position[]={8466.6533,22.128168,10776.298};
-			id=519;
+			id=407;
 			side="EMPTY";
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			skill=0.60000002;
@@ -8162,7 +6439,7 @@ class Mission
 		class Item13
 		{
 			position[]={8479.1104,23.818899,10772.686};
-			id=520;
+			id=408;
 			side="EMPTY";
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			skill=0.60000002;
@@ -8172,7 +6449,7 @@ class Mission
 		class Item14
 		{
 			position[]={8493.2002,25.658817,10776.811};
-			id=521;
+			id=409;
 			side="EMPTY";
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			skill=0.60000002;
@@ -8182,7 +6459,7 @@ class Mission
 		class Item15
 		{
 			position[]={8505.6572,27.185215,10773.197};
-			id=522;
+			id=410;
 			side="EMPTY";
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			skill=0.60000002;
@@ -8192,7 +6469,7 @@ class Mission
 		class Item16
 		{
 			position[]={8521.3174,28.977724,10776.697};
-			id=523;
+			id=411;
 			side="EMPTY";
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			skill=0.60000002;
@@ -8202,7 +6479,7 @@ class Mission
 		class Item17
 		{
 			position[]={8533.7744,28.381733,10773.084};
-			id=524;
+			id=412;
 			side="EMPTY";
 			vehicle="B_APC_Wheeled_01_cannon_F";
 			skill=0.60000002;
@@ -8212,7 +6489,7 @@ class Mission
 		class Item18
 		{
 			position[]={8425.8682,19.107016,10822.307};
-			id=525;
+			id=413;
 			side="EMPTY";
 			vehicle="B_Heli_Attack_01_F";
 			leader=1;
@@ -8222,7 +6499,7 @@ class Mission
 		class Item19
 		{
 			position[]={7974.2783,39.779701,10764.282};
-			id=526;
+			id=414;
 			side="EMPTY";
 			vehicle="I_Heli_Transport_02_F";
 			leader=1;
@@ -8232,7 +6509,7 @@ class Mission
 		class Item20
 		{
 			position[]={8002.1768,37.100895,10764.661};
-			id=527;
+			id=415;
 			side="EMPTY";
 			vehicle="I_Heli_Transport_02_F";
 			leader=1;
@@ -8242,7 +6519,7 @@ class Mission
 		class Item21
 		{
 			position[]={8026.5244,33.952877,10764.661};
-			id=528;
+			id=416;
 			side="EMPTY";
 			vehicle="I_Heli_Transport_02_F";
 			leader=1;
@@ -8252,7 +6529,7 @@ class Mission
 		class Item22
 		{
 			position[]={8788.1895,24.893557,10757.491};
-			id=529;
+			id=417;
 			side="EMPTY";
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
@@ -8261,7 +6538,7 @@ class Mission
 		class Item23
 		{
 			position[]={8815.1465,28.272205,10783.55};
-			id=530;
+			id=418;
 			side="EMPTY";
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
@@ -8270,7 +6547,7 @@ class Mission
 		class Item24
 		{
 			position[]={8814.291,26.253496,10757.757};
-			id=531;
+			id=419;
 			side="EMPTY";
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
@@ -8279,7 +6556,7 @@ class Mission
 		class Item25
 		{
 			position[]={8840.7832,29.215569,10783.62};
-			id=532;
+			id=420;
 			side="EMPTY";
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
@@ -8288,7 +6565,7 @@ class Mission
 		class Item26
 		{
 			position[]={8839.9277,27.958111,10757.827};
-			id=533;
+			id=421;
 			side="EMPTY";
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
@@ -8297,7 +6574,7 @@ class Mission
 		class Item27
 		{
 			position[]={8866.8809,30.203314,10783.886};
-			id=534;
+			id=422;
 			side="EMPTY";
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
@@ -8306,7 +6583,7 @@ class Mission
 		class Item28
 		{
 			position[]={8866.0254,29.259983,10758.093};
-			id=535;
+			id=423;
 			side="EMPTY";
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
@@ -8315,7 +6592,7 @@ class Mission
 		class Item29
 		{
 			position[]={8781.9473,25.22014,10721.64};
-			id=536;
+			id=424;
 			side="EMPTY";
 			vehicle="O_APC_Wheeled_02_rcws_F";
 			leader=1;
@@ -8326,7 +6603,7 @@ class Mission
 		class Item30
 		{
 			position[]={8792.8066,25.262209,10714.558};
-			id=537;
+			id=425;
 			side="EMPTY";
 			vehicle="O_APC_Wheeled_02_rcws_F";
 			leader=1;
@@ -8337,7 +6614,7 @@ class Mission
 		class Item31
 		{
 			position[]={8808.6055,25.62203,10721.304};
-			id=538;
+			id=426;
 			side="EMPTY";
 			vehicle="O_APC_Wheeled_02_rcws_F";
 			leader=1;
@@ -8348,7 +6625,7 @@ class Mission
 		class Item32
 		{
 			position[]={8819.459,25.832487,10714.222};
-			id=539;
+			id=427;
 			side="EMPTY";
 			vehicle="O_APC_Wheeled_02_rcws_F";
 			leader=1;
@@ -8359,7 +6636,7 @@ class Mission
 		class Item33
 		{
 			position[]={8833.9414,26.245571,10720.753};
-			id=540;
+			id=428;
 			side="EMPTY";
 			vehicle="O_APC_Wheeled_02_rcws_F";
 			leader=1;
@@ -8370,7 +6647,7 @@ class Mission
 		class Item34
 		{
 			position[]={8844.7998,27.057308,10713.671};
-			id=541;
+			id=429;
 			side="EMPTY";
 			vehicle="O_APC_Wheeled_02_rcws_F";
 			leader=1;
@@ -8381,7 +6658,7 @@ class Mission
 		class Item35
 		{
 			position[]={8860.5957,27.738935,10720.413};
-			id=542;
+			id=430;
 			side="EMPTY";
 			vehicle="O_APC_Wheeled_02_rcws_F";
 			leader=1;
@@ -8392,7 +6669,7 @@ class Mission
 		class Item36
 		{
 			position[]={8871.4512,28.152693,10713.331};
-			id=543;
+			id=431;
 			side="EMPTY";
 			vehicle="O_APC_Wheeled_02_rcws_F";
 			leader=1;
@@ -8403,7 +6680,7 @@ class Mission
 		class Item37
 		{
 			position[]={8756.5449,24.576647,10784.448};
-			id=544;
+			id=432;
 			side="EMPTY";
 			vehicle="O_Heli_Attack_02_F";
 			skill=0.60000002;
@@ -8412,7 +6689,7 @@ class Mission
 		class Item38
 		{
 			position[]={8416.9307,16.396641,10777.588};
-			id=545;
+			id=433;
 			side="EMPTY";
 			vehicle="B_MBT_01_cannon_F";
 			skill=0.60000002;
@@ -8421,7 +6698,7 @@ class Mission
 		class Item39
 		{
 			position[]={7942.1846,39.595757,10732.091};
-			id=546;
+			id=434;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
 			leader=1;
@@ -8432,7 +6709,7 @@ class Mission
 		class Item40
 		{
 			position[]={7955.1084,39.345966,10729.411};
-			id=547;
+			id=435;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
 			leader=1;
@@ -8443,7 +6720,7 @@ class Mission
 		class Item41
 		{
 			position[]={7970.0596,38.598431,10731.626};
-			id=548;
+			id=436;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
 			leader=1;
@@ -8454,7 +6731,7 @@ class Mission
 		class Item42
 		{
 			position[]={7983.2041,38.260025,10729.47};
-			id=549;
+			id=437;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
 			leader=1;
@@ -8465,7 +6742,7 @@ class Mission
 		class Item43
 		{
 			position[]={7997.1729,38.341164,10731.716};
-			id=550;
+			id=438;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
 			leader=1;
@@ -8476,7 +6753,7 @@ class Mission
 		class Item44
 		{
 			position[]={8009.4736,36.704266,10729.716};
-			id=551;
+			id=439;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
 			leader=1;
@@ -8487,7 +6764,7 @@ class Mission
 		class Item45
 		{
 			position[]={8025.1084,32.219151,10731.665};
-			id=552;
+			id=440;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
 			leader=1;
@@ -8498,7 +6775,7 @@ class Mission
 		class Item46
 		{
 			position[]={8037.4385,31.284,10729.38};
-			id=553;
+			id=441;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
 			leader=1;
@@ -8509,7 +6786,7 @@ class Mission
 		class Item47
 		{
 			position[]={8764.6074,24.156652,10724.003};
-			id=554;
+			id=442;
 			side="EMPTY";
 			vehicle="O_MBT_02_cannon_F";
 			skill=0.60000002;
@@ -8518,7 +6795,7 @@ class Mission
 		class Item48
 		{
 			position[]={7949.6494,40.644352,10708.679};
-			id=555;
+			id=443;
 			side="EMPTY";
 			vehicle="I_MBT_03_cannon_F";
 			leader=1;
@@ -8528,7 +6805,7 @@ class Mission
 		class Item49
 		{
 			position[]={7922.8633,35.427017,10779.894};
-			id=556;
+			id=444;
 			side="EMPTY";
 			vehicle="I_Heli_light_03_F";
 			leader=1;
@@ -8538,369 +6815,221 @@ class Mission
 		class Item50
 		{
 			position[]={7950.1069,27.283443,10856.785};
-			id=557;
+			id=445;
 			side="EMPTY";
 			vehicle="I_Truck_02_transport_F";
 			skill=0.60000002;
-			text="VehAAF_Tr1";
+			text="VehAAF_TR1";
 			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item51
 		{
 			position[]={7976.4429,29.305141,10856.967};
-			id=558;
+			id=446;
 			side="EMPTY";
 			vehicle="I_Truck_02_transport_F";
 			skill=0.60000002;
-			text="VehAAF_Tr2";
+			text="VehAAF_TR2";
 			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item52
 		{
 			position[]={8000.7954,27.408833,10857.867};
-			id=559;
+			id=447;
 			side="EMPTY";
 			vehicle="I_Truck_02_transport_F";
 			skill=0.60000002;
-			text="VehAAF_Tr3";
+			text="VehAAF_TR3";
 			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item53
 		{
 			position[]={7920.4941,28.96537,10840.768};
-			id=560;
+			id=448;
 			side="EMPTY";
 			vehicle="I_MRAP_03_F";
 			skill=0.60000002;
-			text="VehAAF_Car1";
+			text="VehAAF_CAR1";
 			init="[""v_car"",this] call f_fnc_assignGear";
 		};
 		class Item54
 		{
 			position[]={8415.4541,22.126028,10900.159};
-			id=561;
+			id=449;
 			side="EMPTY";
 			vehicle="B_MRAP_01_F";
 			skill=0.60000002;
-			text="VehNato_Car1";
+			text="VehNato_CAR1";
 			init="[""v_car"",this] call f_fnc_assignGear";
 		};
 		class Item55
 		{
 			position[]={8450.5088,26.644569,10916.959};
-			id=562;
+			id=450;
 			side="EMPTY";
 			vehicle="B_Truck_01_transport_F";
 			skill=0.60000002;
-			text="VehNato_Tr1";
+			text="VehNato_TR1";
 			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item56
 		{
 			position[]={8474.1289,29.160395,10915.582};
-			id=563;
+			id=451;
 			side="EMPTY";
 			vehicle="B_Truck_01_transport_F";
 			skill=0.60000002;
-			text="VehNato_Tr2";
+			text="VehNato_TR2";
 			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item57
 		{
 			position[]={8497.9775,31.999403,10916.728};
-			id=564;
+			id=452;
 			side="EMPTY";
 			vehicle="B_Truck_01_transport_F";
 			skill=0.60000002;
-			text="VehNato_Tr3";
+			text="VehNato_TR3";
 			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item58
 		{
 			position[]={8748.3926,31.220297,10854.311};
-			id=565;
+			id=453;
 			side="EMPTY";
 			vehicle="O_MRAP_02_F";
 			skill=0.60000002;
-			text="VehCSAT_Car1";
+			text="VehCSAT_CAR1";
 			init="[""v_car"",this] call f_fnc_assignGear";
 		};
 		class Item59
 		{
 			position[]={8784.0059,31.022173,10870.899};
-			id=566;
+			id=454;
 			side="EMPTY";
 			vehicle="O_Truck_03_transport_F";
 			skill=0.60000002;
-			text="VehCSAT_Tr1";
+			text="VehCSAT_TR1";
 			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item60
 		{
 			position[]={8806.9375,29.901438,10870.671};
-			id=567;
+			id=455;
 			side="EMPTY";
 			vehicle="O_Truck_03_transport_F";
 			skill=0.60000002;
-			text="VehCSAT_Tr2";
+			text="VehCSAT_TR2";
 			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item61
 		{
 			position[]={8832.8516,30.450958,10871.128};
-			id=568;
+			id=456;
 			side="EMPTY";
 			vehicle="O_Truck_03_transport_F";
 			skill=0.60000002;
-			text="VehCSAT_Tr3";
+			text="VehCSAT_TR3";
 			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item62
 		{
 			position[]={8469.3838,14.576154,10606.44};
-			id=569;
+			id=457;
 			side="EMPTY";
 			vehicle="B_G_Offroad_01_F";
 			skill=0.60000002;
-			text="VehFIA_Car1";
+			text="VehFIA_CAR0";
 			init="[""v_car"",this] call f_fnc_assignGear";
 		};
 		class Item63
 		{
 			position[]={8487.5,14.942591,10609.504};
-			id=570;
+			id=458;
 			side="EMPTY";
 			vehicle="B_G_Offroad_01_F";
 			skill=0.60000002;
-			text="VehFIA_Car2";
+			text="VehFIA_CAR1";
 			init="[""v_car"",this] call f_fnc_assignGear";
 		};
 		class Item64
 		{
 			position[]={8514.4609,14.145928,10609.79};
-			id=571;
+			id=459;
 			side="EMPTY";
 			vehicle="B_G_Offroad_01_F";
 			skill=0.60000002;
-			text="VehFIA_Car3";
+			text="VehFIA_CAR2";
 			init="[""v_car"",this] call f_fnc_assignGear";
 		};
 		class Item65
 		{
 			position[]={8540.4268,14.11809,10606.099};
-			id=572;
+			id=460;
 			side="EMPTY";
 			vehicle="B_G_Offroad_01_F";
 			skill=0.60000002;
-			text="VehFIA_Car4";
+			text="VehFIA_CAR3";
 			init="[""v_car"",this] call f_fnc_assignGear";
 		};
 		class Item66
 		{
-			position[]={8767.8945,35.531475,10588.09};
-			id=573;
+			position[]={8496.6533,14.734678,10608.534};
+			id=461;
 			side="EMPTY";
-			vehicle="O_G_Offroad_01_F";
+			vehicle="B_G_Van_01_transport_F";
 			skill=0.60000002;
-			text="VehOFIA_Car1";
-			init="[""v_car"",this] call f_fnc_assignGear";
+			text="VehFIA_TR1";
+			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item67
 		{
-			position[]={8785.6328,32.92749,10587.379};
-			id=574;
+			position[]={8519.9375,14.11479,10608.343};
+			id=462;
 			side="EMPTY";
-			vehicle="O_G_Offroad_01_F";
+			vehicle="B_G_Van_01_transport_F";
 			skill=0.60000002;
-			text="VehOFIA_Car2";
-			init="[""v_car"",this] call f_fnc_assignGear";
-			syncId=3;
-			synchronizations[]={0};
+			text="VehFIA_TR2";
+			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item68
 		{
-			position[]={8812.5938,32.441277,10587.665};
-			id=575;
+			position[]={8545.6201,14.223547,10606.498};
+			id=463;
 			side="EMPTY";
-			vehicle="O_G_Offroad_01_F";
+			vehicle="B_G_Van_01_transport_F";
 			skill=0.60000002;
-			text="VehOFIA_Car3";
-			init="[""v_car"",this] call f_fnc_assignGear";
+			text="VehFIA_TR3";
+			init="[""v_tr"",this] call f_fnc_assignGear";
 		};
 		class Item69
 		{
-			position[]={8838.5596,32.839325,10583.974};
-			id=576;
+			position[]={7918.5835,29.918686,10826.28};
+			id=464;
 			side="EMPTY";
-			vehicle="O_G_Offroad_01_F";
+			vehicle="I_MRAP_03_F";
 			skill=0.60000002;
-			text="VehOFIA_Car4";
+			text="VehAAF_CAR2";
 			init="[""v_car"",this] call f_fnc_assignGear";
 		};
 		class Item70
 		{
-			position[]={7927.8657,46.039055,10624.656};
-			id=577;
+			position[]={8747.3027,29.745636,10835.602};
+			id=465;
 			side="EMPTY";
-			vehicle="I_G_Offroad_01_armed_F";
+			vehicle="O_MRAP_02_F";
 			skill=0.60000002;
-			text="VehIFIA_Car1";
+			text="VehCSAT_CAR2";
 			init="[""v_car"",this] call f_fnc_assignGear";
 		};
 		class Item71
 		{
-			position[]={7952.5337,45.97842,10638.002};
-			id=578;
-			side="EMPTY";
-			vehicle="I_G_Offroad_01_armed_F";
-			skill=0.60000002;
-			text="VehIFIA_Car2";
-			init="[""v_car"",this] call f_fnc_assignGear";
-			syncId=4;
-			synchronizations[]={1};
-		};
-		class Item72
-		{
-			position[]={7979.4946,43.605087,10638.288};
-			id=579;
-			side="EMPTY";
-			vehicle="I_G_Offroad_01_armed_F";
-			skill=0.60000002;
-			text="VehIFIA_Car3";
-			init="[""v_car"",this] call f_fnc_assignGear";
-		};
-		class Item73
-		{
-			position[]={8005.4604,38.99054,10634.597};
-			id=580;
-			side="EMPTY";
-			vehicle="I_G_Offroad_01_armed_F";
-			skill=0.60000002;
-			text="VehIFIA_Car4";
-			init="[""v_car"",this] call f_fnc_assignGear";
-		};
-		class Item74
-		{
-			position[]={8496.6533,14.734678,10608.534};
-			id=581;
-			side="EMPTY";
-			vehicle="B_G_Van_01_transport_F";
-			skill=0.60000002;
-			text="VehFIA_Tr1";
-			init="[""v_tr"",this] call f_fnc_assignGear";
-		};
-		class Item75
-		{
-			position[]={8519.9375,14.11479,10608.343};
-			id=582;
-			side="EMPTY";
-			vehicle="B_G_Van_01_transport_F";
-			skill=0.60000002;
-			text="VehFIA_Tr2";
-			init="[""v_tr"",this] call f_fnc_assignGear";
-		};
-		class Item76
-		{
-			position[]={8545.6201,14.223547,10606.498};
-			id=583;
-			side="EMPTY";
-			vehicle="B_G_Van_01_transport_F";
-			skill=0.60000002;
-			text="VehFIA_Tr3";
-			init="[""v_tr"",this] call f_fnc_assignGear";
-		};
-		class Item77
-		{
-			position[]={8794.7861,32.190674,10586.409};
-			id=584;
-			side="EMPTY";
-			vehicle="B_G_Van_01_transport_F";
-			skill=0.60000002;
-			text="VehOFIA_Tr1";
-			init="[""v_tr"",this] call f_fnc_assignGear";
-			syncId=5;
-			synchronizations[]={0};
-		};
-		class Item78
-		{
-			position[]={8818.0703,32.926289,10586.218};
-			id=585;
-			side="EMPTY";
-			vehicle="B_G_Van_01_transport_F";
-			skill=0.60000002;
-			text="VehOFIA_Tr2";
-			init="[""v_tr"",this] call f_fnc_assignGear";
-		};
-		class Item79
-		{
-			position[]={8843.7529,32.731731,10584.373};
-			id=586;
-			side="EMPTY";
-			vehicle="B_G_Van_01_transport_F";
-			skill=0.60000002;
-			text="VehOFIA_Tr3";
-			init="[""v_tr"",this] call f_fnc_assignGear";
-		};
-		class Item80
-		{
-			position[]={7961.687,46.043327,10637.032};
-			id=587;
-			side="EMPTY";
-			vehicle="B_G_Van_01_transport_F";
-			skill=0.60000002;
-			text="VehIFIA_Tr1";
-			init="[""v_tr"",this] call f_fnc_assignGear";
-			syncId=6;
-			synchronizations[]={1};
-		};
-		class Item81
-		{
-			position[]={7984.9712,43.019047,10636.841};
-			id=588;
-			side="EMPTY";
-			vehicle="B_G_Van_01_transport_F";
-			skill=0.60000002;
-			text="VehIFIA_Tr2";
-			init="[""v_tr"",this] call f_fnc_assignGear";
-		};
-		class Item82
-		{
-			position[]={8010.6538,37.976051,10634.996};
-			id=589;
-			side="EMPTY";
-			vehicle="B_G_Van_01_transport_F";
-			skill=0.60000002;
-			text="VehIFIA_Tr3";
-			init="[""v_tr"",this] call f_fnc_assignGear";
-		};
-		class Item83
-		{
-			position[]={7918.5835,29.918686,10826.28};
-			id=590;
-			side="EMPTY";
-			vehicle="I_MRAP_03_F";
-			skill=0.60000002;
-			text="VehAAF_Car2";
-			init="[""v_car"",this] call f_fnc_assignGear";
-		};
-		class Item84
-		{
-			position[]={8747.3027,29.745636,10835.602};
-			id=591;
-			side="EMPTY";
-			vehicle="O_MRAP_02_F";
-			skill=0.60000002;
-			text="VehCSAT_Car2";
-			init="[""v_car"",this] call f_fnc_assignGear";
-		};
-		class Item85
-		{
 			position[]={8415.4531,21.373798,10883.677};
-			id=592;
+			id=466;
 			side="EMPTY";
 			vehicle="B_MRAP_01_F";
 			skill=0.60000002;
-			text="VehNato_Car2";
+			text="VehNato_CAR2";
 			init="[""v_car"",this] call f_fnc_assignGear";
 		};
 	};
