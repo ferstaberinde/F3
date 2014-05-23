@@ -38,22 +38,25 @@ switch (typeName _check) do {
 		// If an array was passed loop through it and collect all units
 		{
 			if (typeName _x == "OBJECT") then {_units set [count _units,_x]};
-			if (typeName _x == "GROUP") then {_units set [count _units,units _x]};
+			if (typeName _x == "GROUP") then {_units = _units + units _x};
 		} forEach _check;
 	};
 };
 
-if (count _units == 0) exitWith {player globalchat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): _units array is empty! passed array = %1, units array = %2",_check,_units];}
+player globalchat format ["%1",_units];
+
+if (count _units == 0) exitWith {player globalchat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): _units array is empty! passed array = %1, units array = %2",_check,_units];};
 
 // ====================================================================================
 
 // GET SAFE-ZONE POSITION
 // Get a position for the safe-zone
 
+
 switch (typeName _obj) do {
-	case "STRING": {_obj = getMarkerPos _obj};
+	case "STRING": {_pos = getMarkerPos _obj};
 	case "OBJECT": {_pos = getPosATL _obj};
-	default {_pos = getPosATL _obj};;
+	default {_pos = getPosATL _obj};
 };
 
 // ====================================================================================
@@ -83,7 +86,7 @@ if (f_var_debugMode == 1) then
 // We then check how many of the units are within the required proximity to the
 // objective; if all units qualify then we exit the script.
 
-_safe = {(_x distance _obj < _safeDistance)} count _units;
+_safe = {(_x distance _pos < _safeDistance)} count _units;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -110,7 +113,7 @@ if (typeName _end == typeName 0) exitWith {
 };
 
 if (typeName _end == typeName {}) exitWith {
-	spawn _end;
+	[] spawn _end
 };
 
 player GlobalChat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];
