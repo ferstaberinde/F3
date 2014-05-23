@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_fog","_strenght","_decay","_base"];
+private ["_fog","_strength","_decay","_base"];
 
 // ====================================================================================
 
