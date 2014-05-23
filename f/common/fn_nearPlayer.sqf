@@ -13,7 +13,7 @@ _distance = _this select 1;
 _players = [];
 
 {
-        if (isPlayer _x) then {_players = _players + [_x]};
+   if (isPlayer _x) then {_players = _players + [_x]};
 } forEach playableUnits;
 
 // ====================================================================================

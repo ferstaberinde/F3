@@ -35,7 +35,7 @@ f_script_setGroupIDs = [] execVM "f\setGroupID\f_setGroupIDs.sqf";
 // F3 - Buddy Team Colours
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
+f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
 
 // ====================================================================================
 
@@ -49,7 +49,7 @@ f_script_setTeamColours = [] execVM "f\common\f_setTeamColours.sqf";
 // F3 - F3 Folk ARPS Group Markers
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
+f_script_setGroupMarkers = [] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
 
 // ====================================================================================
 
@@ -137,7 +137,10 @@ f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Group E&E Check
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [GroupName,ObjectName,100,1] execVM "f\server\f_groupEandECheck.sqf";
+// [GroupName,ObjectName,100,1] execVM "f\EandEcheck\f_EandECheckLoop.sqf";
+// [UnitName,ObjectName,100,1] execVM "f\EandEcheck\f_EandECheckLoop.sqf";
+// [[GroupName1,GroupName2],ObjectName,100,1] execVM "f\EandEcheck\f_EandECheckLoop.sqf";
+// [[UnitName1,UnitName2],ObjectName,100,1] execVM "f\EandEcheck\f_EandECheckLoop.sqf";
 
 // ====================================================================================
 

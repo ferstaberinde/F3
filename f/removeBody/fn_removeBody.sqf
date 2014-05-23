@@ -55,4 +55,4 @@ _check = count (units (_group));
 if (_check == 0) then {deleteGroup _group};
 
 
-if (true) exitWith {};
+

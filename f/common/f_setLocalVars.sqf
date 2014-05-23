@@ -2,14 +2,16 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// JIP CHECK
-// Prevents the script executing until the player has synchronised correctly:
+// MAKE SURE THE PLAYER INITIALIZES PROPERLY
+if (!isDedicated && (isNull player)) then
+{
+    waitUntil {sleep 0.1; !isNull player};
+};
 
-#include "f_waitForJIP.sqf"
 waitUntil {!isnil "f_var_debugMode"};
+
 // ====================================================================================
 // DEBUG DEFINES
-
 
 #define SLV_NAME "(f\common\f_setLocalVars.sqf)"
 #define DEBUG_OUTPUT player sidechat
@@ -338,4 +340,4 @@ if (f_var_debugMode == 1) then
 
 // ====================================================================================
 
-if (true) exitWith {};
+
