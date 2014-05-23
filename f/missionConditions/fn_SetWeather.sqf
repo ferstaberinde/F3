@@ -25,7 +25,7 @@ _MissionHumidity = 0;
 
 // ====================================================================================
 
-// SELECT MISSION TIME OF DAY
+// SELECT MISSION WEATHER
 // Using the value of _timeOfDay, a new date is set.
 
 switch (_weather) do
@@ -142,7 +142,7 @@ switch (_weather) do
 
 // ====================================================================================
 
-// SET MISSION CONDITIONS
+// SET MISSION WEATHER
 // Use new values to set
 // mission conditions on server and all clients (including JIP clients).
 
