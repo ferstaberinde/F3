@@ -25,6 +25,9 @@ f_var_JIP_state = 2;
 if (f_var_JIP_GearMenu) then {
 	createDialog "KitPicker";
 	waitUntil {f_var_JIP_state == 3};
+
+	_loadout = (player getVariable "f_var_JIP_loadout");
+	[_loadout,player] call f_fnc_assignGear;
 };
 
 // ====================================================================================
@@ -45,13 +48,10 @@ F3_JIP_reinforcementOptionsAction = nil;
 // If the player is already in the group, he simply remains there
 
 _joinDistance = 10;
-_loadout = (player getVariable "f_var_JIP_loadout");
 
 if (_grp != group player) then {
 	[player] joinSilent grpNull;
 	[_grp,_joinDistance] execVM "f\JIP\f_JIP_nearTargetGroupCheck.sqf";
 };
-
-[_loadout,player] call f_fnc_assignGear;
 
 
