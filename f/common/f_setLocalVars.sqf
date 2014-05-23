@@ -2,11 +2,8 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// MAKE SURE THE PLAYER INITIALIZES PROPERLY
-if (!isDedicated && (isNull player)) then
-{
-    waitUntil {sleep 0.1; !isNull player};
-};
+// Only run this component on the server
+if !(isServer) exitWith {};
 
 waitUntil {!isnil "f_var_debugMode"};
 
@@ -257,8 +254,7 @@ if (f_var_debugMode == 1) then
 // COMMON VARIABLE: f_var_groups
 // We will create an array containing all groups.
 
-f_var_groups = [];
-f_var_groups = f_var_groups_BLU + f_var_groups_RES + f_var_groups_OPF + f_var_groups_CIV;
+f_var_groups = allGroups;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -269,11 +265,31 @@ if (f_var_debugMode == 1) then
 
 // ====================================================================================
 
+// COMMON VARIABLE: f_var_groups_players
+// We will create an array containing all groups with at least one player.
+
+f_var_groups_players = [];
+{
+	_units = units _x;
+	if ({isPlayer _x} count _units >= 1) then {
+		f_var_groups_players set [count f_var_groups_players,_x];
+	};
+} forEach f_var_groups;
+
+// DEBUG
+if (f_var_debugMode == 1) then
+{
+ 	_str_f_var_groups = str f_var_groups;
+ 	DEBUG_OUTPUT format ["DEBUG %2: f_var_groups = %1",_str_f_var_groups, SLV_NAME];
+};
+
+
+// ====================================================================================
+
 // COMMON VARIABLE: f_var_vehicles
 // We will create an array containing all vehicles.
 
-f_var_vehicles = [];
-{if (_x isKindOf "LandVehicle" || _x isKindOf "Air" || _x isKindOf "Ship") then {f_var_vehicles = f_var_vehicles + [_x]}} forEach f_var_units;
+f_var_vehicles = vehicles;
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -343,6 +359,16 @@ if (f_var_debugMode == 1) then
 };
 
 // ====================================================================================
+
+// MAKE VARIABLES PUBLIC
+// All variables are sent to the connecting clients using publicvariable
+
+{publicvariable _x} forEach [
+"f_var_units","f_var_units_BLU","f_var_units_RES","f_var_units_OPF","f_var_units_CIV",
+"f_var_men","f_var_men_BLU","f_var_men_RES","f_var_men_OPF","f_var_men_CIV","f_var_men_players",
+"f_var_groups_BLU","f_var_groups_RES","f_var_groups_OPF","f_var_groups_CIV","f_var_groups","f_var_groups_players",
+"f_var_vehicles","f_var_vehicles_BLU","f_var_vehicles_RES","f_var_vehicles_OPF","f_var_vehicles_CIV"
+];
 
 if (_sleep == 0) exitWith {};
 sleep _sleep;
