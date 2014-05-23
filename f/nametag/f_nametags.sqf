@@ -37,7 +37,6 @@ F_ACTIONKEY_NAMETAGS = (actionKeys F_KEY_NAMETAGS) select 0;
 F_KEYNAME_NAMETAGS = actionKeysNames F_KEY_NAMETAGS;
 if (isNil "F_ACTIONKEY_NAMETAGS") then {F_ACTIONKEY_NAMETAGS = 20; F_KEYNAME_NAMETAGS = 'T';}; // If the user has not bound 'TeamSwitch' to a key we default to 'T' to toggle the tags
 
-waitUntil {isNull (findDisplay 46)}; // some misc functions for toggleing nametags
 F_KEYUP_NAMETAG = {
 	_key = _this select 1;
 	_handeld = false;
@@ -58,6 +57,7 @@ F_KEYDOWN_NAMETAG = {
 	};
 	_handeld;
 };
+
 // ====================================================================================
 
 // ADD BRIEFING SECTION
@@ -108,6 +108,8 @@ hintsilent format ["Press %1 to toggle name tags", F_KEYNAME_NAMETAGS ];
 // After the mission has initialized eventhandlers are added to the register keypresses.
 
 sleep 0.1;
+
+waitUntil {!isNull (findDisplay 46)}; // Make sure the display we need is initialized
 
 (findDisplay 46) displayAddEventHandler   ["keyup", "_this call F_KEYUP_NAMETAG"];
 (findDisplay 46) displayAddEventHandler   ["keydown", "_this call F_KEYDOWN_NAMETAG"];
