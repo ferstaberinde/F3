@@ -10,6 +10,10 @@ if (!isDedicated && (isNull player)) then
 
 waitUntil {!isnil "f_var_debugMode"};
 
+_sleep = _this select 0;
+
+while {true} do {
+
 // ====================================================================================
 // DEBUG DEFINES
 
@@ -340,4 +344,7 @@ if (f_var_debugMode == 1) then
 
 // ====================================================================================
 
+if (_sleep == 0) exitWith {};
+sleep _sleep;
 
+};
