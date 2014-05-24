@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-0-9A
+* Version: 3-1-0 RC1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-1-0 RC1 | 24 MAY 2014 | Patch release - Various improvements (see change history).
 * 3-0-9A    | 12 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-9     | 09 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-8     | 28 DEC 2013 | Patch release - Various improvements (see change history).
@@ -129,10 +130,10 @@ Version | Date | Notes
 ### F3 Credits ###
 
 * Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark
-* Documentation: Fer | Wolfenswan
+* Documentation: Fer | Wolfenswan | Dogface
 * Producers: Fer | Wolfenswan
-* Special Thanks: Zerith | Draakon
-* Special Thanks: Everyone at Folk ARPS
+* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | nolux | Pabstmirror | Snippers | Zerith
+* Special Thanks: Folk ARPS | Basterd ArmA | Black sh33p | Bourbon Warfare | Phantactical | Project Awesome | Team One Tactical | The Company
 
 ### F2 Credits ###
 
@@ -218,6 +219,84 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-1-0 RC1 | 24 MAY 2014
+
+* Restructured folders and files:
+ * Nearly all components now rest within their own sub-folder.
+* Added AI Skill Selector component:
+ * Replaces the old AI Skill Selector (A&D and Coop) component.
+ * Allows the skill levels of all three combatant sides to be set individually via mission parameters.
+* Added F3 Folk ARPS Assign Gear Attachments component:
+ * Works with F3 Folk ARPS Assign Gear Script component.
+* Added F3 Folk ARPS Assign Gear Clothes component:
+ * Works with F3 Folk ARPS Assign Gear Script component.
+* Added F3 Simple Wounding System.
+* Added F3 Premount component:
+ * Mission makers can quickly and easily mount multiple groups in multiple vehicles.
+ * Mission makers can control use of crew seats and group cohesion across vehicles.
+ * Pre-placed modules support easy mounting of squads from pre-placed platoons. 
+* Added Respawn Templates component:
+ * Replaces Respawn INIT component.
+* Added MapClick Teleport component:
+ * Replaces the Mission Maker Teleport component.
+ * Can also be used by players in-game.
+ * Mission makers can restrict usage by number of uses and/or time.
+ * Mission makers can restrict usage to group leaders.
+* Added support for OPFOR and Independent FIA platoons to following components:
+ * Briefing Template component.
+ * F3 Folk ARPS Assign Gear Script component.
+ * F3 Folk ARPS Group IDs component.
+ * F3 Folk ARPS Group Markers component.
+* Updated Authorised Crew Check component:
+ * Now incorporates Authorised Crew Type Check component.
+ * Mission maker can now control access to passenger seats as well.
+* Updated Buddy Team colours component:
+ * Fixed bug with teams that begin in vehicles.
+* Updated Casualties Cap component:
+ * Now incorporates Casualties Cap (Advanced) components.
+* Updated Dynamic View Distance component:
+ * Mission makers can now control view distances for vehicle passengers. 
+* Updated F3 Folk ARPS Assign Gear Script component:
+ * Backpacks parameter renamed to Loadouts.
+ * Added UAV operator loadout to all factions.
+ * Changed default AT for AAF faction to RPG32.
+ * Replaced all binoculars with rangefinders.
+ * Fixed issues with respawn and JIP.
+ * F3 Folk ARPS Assign Gear component is now called using f_fnc_assignGear (omitting the folk).
+ * Uniform types (e.g. light, crew, diver etc.) for each unit type can now assigned in the faction's assignGear file.
+ * Added new uniform types: ghillie suits and special forces (AAF don't have a dedicated AAF loadout, FIA use CTRG).
+ * Backpack loadouts have been moved into their own file.
+ * Attachments are now assigned as local variables, can be assigned as a per-type basis.
+ * Added options for handgun attachments.
+ * Tweaks to improve perfomance when loading vehicles with assignGear.
+* Updated F3 Folk ARPS Group IDs component:
+ * Reworked to tidy up code and bring up to standard.
+* Updated F3 Folk ARPS JIP Reinforcement Options component:
+ * Fixed component for respawn and JIP.
+ * Uses RespawnTemplate instead of a EventHandler.
+ * Added optional removal of old player corpses.
+ * Added optional enforcement of old gear.
+ * Added JIP menu allows joining no group or staying in old group if it still has members.
+* Updated F3 Folk ARPS Platoons component:
+ * Added UAV operator to each CO/DC team for NATO, AAF and CSAT.
+* Updated F3 Spectator Script component:
+ * Full sized map.
+ * FOV Zoom.
+ * Tag names for players.
+ * Completely overhauled camera * now much smoother.
+ * Revamped tags.
+* Updated Mission Conditions Selector component:
+ * All relevant files moved to f/missionConditions.
+ * Split f_setMissionConditions.sqf into three files: fn_setFog, fn_setDate, fn_setWeather.
+ * Updated component to take advantage of BIS improvements in weather system and sychronisation.
+ * Updated component to allow usage of new setFog array.
+ * Updated component to allow smooth time transitions when changing the date.
+* Update Multiplayer Ending Controller component:
+ * Component is now called using ["ending"] call f_fnc_mpEnd and needs only to be called on the server.
+ * Updated to take advantage of Arma 3 improvements.
+ * Component now accepts optional second parameter: true (default) displays "mission completed" type of ending, false "mission failed".
+* Updated Safe Start component.
 
 3-0-9A | 12 FEB 2014
 
