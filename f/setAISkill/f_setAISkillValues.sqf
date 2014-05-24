@@ -135,10 +135,10 @@ if (!isNil "f_var_civAI") then {
 // DEBUG
 if (f_var_debugMode == 1) then
 {
-	player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): f_skillBLU = %1",f_var_skillBlu];
-	player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): f_skillRES = %1",f_var_skillOpf];
-	player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): f_skillOPF = %1",f_var_skillRes];
-	player sideChat format ["DEBUG (f\common\f_setAISkillAD.sqf): f_skillCIV = %1",f_var_skillCiv];
+	player sideChat format ["DEBUG (f\setAISkill\f_setAISkillAD.sqf): f_skillBLU = %1",f_var_skillBlu];
+	player sideChat format ["DEBUG (f\setAISkill\f_setAISkillAD.sqf): f_skillRES = %1",f_var_skillOpf];
+	player sideChat format ["DEBUG (f\setAISkill\f_setAISkillAD.sqf): f_skillOPF = %1",f_var_skillRes];
+	player sideChat format ["DEBUG (f\setAISkill\f_setAISkillAD.sqf): f_skillCIV = %1",f_var_skillCiv];
 };
 
 // ====================================================================================
