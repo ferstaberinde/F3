@@ -26,6 +26,8 @@ _safe = 0;
 _units = [];
 _pos = [];
 
+waitUntil {sleep 0.1;scriptDone f_script_setLocalVars};
+
 // ====================================================================================
 
 // POPULATE UNITS ARRAY
@@ -40,6 +42,17 @@ switch (typeName _check) do {
 			if (typeName _x == "OBJECT") then {_units set [count _units,_x]};
 			if (typeName _x == "GROUP") then {_units = _units + units _x};
 		} forEach _check;
+	};
+	case "side": {
+		switch (_check) do {
+			case west: {_units = f_var_units_BLU};
+			case blufor: {_units = f_var_units_BLU};
+			case east: {_units = f_var_units_OPF};
+			case opfor: {_units = f_var_units_OPF};
+			case resistance: {_units = f_var_units_RES};
+			case independent: {_units = f_var_units_RES};
+			case civilian: {_units = f_var_units_CIV};
+		}
 	};
 };
 
@@ -113,7 +126,7 @@ if (typeName _end == typeName 0) exitWith {
 };
 
 if (typeName _end == typeName {}) exitWith {
-	[] spawn _end
+	[_end,"bis_fnc_spawn",true] call BIS_fnc_MP;
 };
 
 player GlobalChat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];
