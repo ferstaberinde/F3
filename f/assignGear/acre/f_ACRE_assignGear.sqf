@@ -61,7 +61,7 @@ _unit = _this select 1;					// expecting name of unit; originally passed by usin
 // DELETE ALL RADIOS
 // All previously assigned radios must be deleted, in order to set the radio frequencies per side.
 
-_clearRadiosHandle = _this execVM "f\assignGear\acre\fa_ACRE_clearRadios.sqf";
+_clearRadiosHandle = _this execVM "f\assignGear\acre\f_ACRE_clearRadios.sqf";
 
 waitUntil{scriptDone _clearRadiosHandle};
 
