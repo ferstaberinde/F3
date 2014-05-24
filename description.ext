@@ -7,7 +7,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 373;
+	maxPlayers = 395;
 };
 
 // ============================================================================================
@@ -34,15 +34,54 @@ enableDebugConsole = 1;
 
 respawn = 1;
 respawndelay = 3;
-respawnTemplates[] = {"f_Spectator"};
+respawnOnStart = 0;
+respawnTemplates[] = {"f_spectator","f_JIP"};
 
 // ============================================================================================
 
-// F3 - JIP Reinforcement Options
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-#include "f\common\f_JIP_kitpicker.h"
-#include "f\common\f_JIP_grppicker.h"
+// F3 - Start of Notifications block.
+
+class cfgNotifications
+{
+	// Notification Template
+	class Template
+	{
+		title = ""; // Tile displayed as text on black background. Filled by arguments.
+		iconPicture = ""; // Small icon displayed in left part. Colored by "color", filled by arguments.
+		iconText = ""; // Short text displayed over the icon. Colored by "color", filled by arguments.
+		description = ""; // Brief description displayed as structured text. Colored by "color", filled by arguments.
+		color[] = {1,1,1,1}; // Icon and text color
+		duration = 5; // How many seconds will the notification be displayed
+		priority = 0; // Priority; higher number = more important; tasks in queue are selected by priority
+		difficulty[] = {}; // Required difficulty settings. All listed difficulties has to be enabled
+	};
+
+	// Notification for the F3 Safe Start Component
+	class SafeStart
+	{
+		title = "SAFE START";
+		description = "%1";
+		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+		duration = 15;
+	};
+
+	// Notification for the F3 Authorised Crew Component
+	class UnauthorisedCrew {
+		title= "Non-authorised crew!";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
+		duration = 10;
+	};
+
+	// Notification for the F3 Authorised Crew Component
+	class MapClickTeleport {
+		title= "Teleport";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
+		duration = 2;
+	};
+};
 
 // ============================================================================================
 
@@ -56,107 +95,96 @@ class Params
 
 // F3 - Debug Mode
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT OR PLACE ANY OTHER PARAMETERS BEFORE OR AFTER IT
+// WARNING: DO NOT DISABLE THIS COMPONENT
 
-        class f_param_debugMode
-        {
-                title = "$STR_f_param_debugMode";
-                values[] = {0,1};
-                texts[] = {"Off","On"};
-                default = 0;
-                code = "f_var_debugMode = %1";
-        };
+    class f_param_debugMode
+    {
+            title = "$STR_f_param_debugMode";
+            values[] = {0,1};
+            texts[] = {"Off","On"};
+            default = 0;
+            code = "f_var_debugMode = %1";
+    };
 
 // ============================================================================================
 
 // F3 - Folk Assign Gear Script
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT OR PLACE ANY OTHER PARAMETERS BEFORE OR AFTER IT MUST
-// BE REFERENCABLE AS "f_param_backpacks" FOR GEAR SCRIPTS TO WORK CORRECTLY
 
-        class f_param_backpacks
-        {
-                title = "$STR_f_param_backpacks";
-                values[] = {0,1,2};
-                texts[] = {"Off","Light","Heavy"};
-                default = 1;
-                code = "f_param_backpacks = %1";
-        };
+    class f_param_backpacks
+    {
+            title = "$STR_f_param_loadouts";
+            values[] = {0,1,2};
+            texts[] = {"Light","Medium","Heavy"};
+            default = 1;
+            code = "f_param_backpacks = %1";
+    };
 
 // ============================================================================================
 
 // F3 - ACRE Support
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
-// WARNING: DO NOT DISABLE THIS COMPONENT OR CHANGE POSITION IN PARAMS; IT MUST BE REFERENCABLE
-// AS "paramsarray select 2" FOR GEAR SCRIPTS TO WORK CORRECTLY
 
-        class f_param_acre
-        {
-                title = "ACRE";
-                values[] = {0,1};
-                texts[] = {"Off","On"};
-                default = 0;
-                code = "f_var_acre = %1";
-        };
+    class f_param_acre
+    {
+            title = "ACRE";
+            values[] = {0,1};
+            texts[] = {"Off","On"};
+            default = 0;
+            code = "f_var_acre = %1";
+    };
 
 // ============================================================================================
 
 // F3 - Mission Timer/Safe Start
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
 
-        class f_param_mission_timer
-        {
-                title = "$STR_f_param_mission_timer";
-                values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
-                texts[] = {"$STR_f_param_mission_timer_off","1","2","3","4","5","6","7","8","9","10","15"};
-                default = 0;
-                code = "f_var_mission_timer = %1";
-        };
+    class f_param_mission_timer
+    {
+            title = "$STR_f_param_mission_timer";
+            values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
+            texts[] = {"$STR_f_param_mission_timer_off","1","2","3","4","5","6","7","8","9","10","15"};
+            default = 0;
+            code = "f_var_mission_timer = %1";
+    };
 
 // ============================================================================================
 
 // F3 - Mission Conditions Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-        class f_param_timeOfDay
-        {
-                title = "$STR_f_param_timeOfDay";
-                values[] = {0,1,2,3,4,5,6,7};
-                texts[] = {$STR_f_param_timeOfDay_Option0,$STR_f_param_timeOfDay_Option1,$STR_f_param_timeOfDay_Option2,$STR_f_param_timeOfDay_Option3,$STR_f_param_timeOfDay_Option4,$STR_f_param_timeOfDay_Option5,$STR_f_param_timeOfDay_Option6,$STR_f_param_timeOfDay_Option7};
-                default = 3;
-                code = "f_param_timeOfDay = %1";
-        };
-
 	class f_param_weather
 	{
 		title = "$STR_f_param_weather";
-		values[] = {0,1,2,3,4,5,6,7,8,9,10};
-		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option9,$STR_f_param_weather_Option10};
+		values[] = {0,1,2,3,4,5,6,7,8};
+		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8};
 		default = 0;
+		function = "f_fnc_setWeather";		// This function is called to apply the values
+		isGlobal = 0;						// Execute this only on the server
 		code = "f_param_weather = %1";
 	};
 
-// ============================================================================================
+	class f_param_fog
+	{
+		title = "Fog";
+		values[] = {0,1,2};
+		texts[] = {"None","Light","Heavy"};
+		default = 0;
+		function = "f_fnc_SetFog";			// This function is called to apply the values
+		isGlobal = 0;						// Execute this only on the server
+		code = "f_param_fog = %1";
+	};
 
-// F3 - AI Skill Selector (coop)
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-//	class f_param_AISkill_Friendly
-//	{
-//		title = "$STR_f_param_AISkill_Friendly";
-//		values[] = {0,1,2,3};
-//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 1;
-//		code = "f_param_AISkill_Friendly = %1";
-//	};
-//	class f_param_AISkill_Enemy
-//	{
-//		title = "$STR_f_param_AISkill_Enemy";
-//		values[] = {0,1,2,3};
-//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 1;
-//		code = "f_param_AISkill_Enemy = %1";
-//	};
+    class f_param_timeOfDay
+	{
+		title = "$STR_f_param_timeOfDay";
+		values[] = {0,1,2,3,4,5,6,7};
+		texts[] = {$STR_f_param_timeOfDay_Option0,$STR_f_param_timeOfDay_Option1,$STR_f_param_timeOfDay_Option2,$STR_f_param_timeOfDay_Option3,$STR_f_param_timeOfDay_Option4,$STR_f_param_timeOfDay_Option5,$STR_f_param_timeOfDay_Option6,$STR_f_param_timeOfDay_Option7};
+		default = 4;
+		function = "f_fnc_setTime";			// This function is called to apply the values
+ 		isGlobal = 0;						// Execute this only on the server
+ 		code = "f_param_timeOfDay = %1";
+	};
 
 // ============================================================================================
 
@@ -171,6 +199,7 @@ class Params
 //		default = 1;
 //		code = "f_param_AISkill_BLUFOR = %1";
 //	};
+//
 //	class f_param_AISkill_OPFOR
 //	{
 //		title = "$STR_f_param_AISkill_OPFOR";
@@ -178,6 +207,15 @@ class Params
 //		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
 //		default = 1;
 //		code = "f_param_AISkill_OPFOR = %1";
+//	};
+//
+//	class f_param_AISkill_INDP
+//	{
+//		title = "$STR_f_param_AISkill_INDP";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 1;
+//		code = "f_param_AISkill_INDP = %1";
 //	};
 
 // ============================================================================================
@@ -187,9 +225,8 @@ class Params
 
 	class f_param_caching
 	{
-		title = "$STR_f_param_caching";
+		title = "Cache AI outside distance (m)";
 		values[] = {0,600,800,1000,1500,2000};
-		texts[] = {$STR_f_param_caching_Option0,$STR_f_param_caching_Option1,$STR_f_param_caching_Option2,$STR_f_param_caching_Option3,$STR_f_param_caching_Option4,$STR_f_param_caching_Option5};
 		default = 0;
 		code = "f_param_caching = %1";
 	};
@@ -200,24 +237,6 @@ class Params
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
 };
-
-// ============================================================================================
-
-// F3 - Spectator Script
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-class CfgRespawnTemplates
-{
-	// Class used in respawnTemplates entry
-	class f_Spectator
-	{
-		onPlayerRespawn = "f_fnc_cam_init";
-	};
-};
-
-// contains configs for the UI.
-#include "f\spect\config.hpp"
-
 
 // ============================================================================================
 
@@ -290,57 +309,80 @@ class CfgDebriefing
 
 // ============================================================================================
 
-// WARNING: DO NOT REMOVE OR DISABLE THIS BLOC OF CODE, IT IS CRITICAL TO THE ASSIGNGEAR
-// SCRIPTS AND MANY OTHERS.
+// F3 - Respawn Templates
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+class CfgRespawnTemplates
+{
+	// F3 Spectator Script
+	class f_Spectator
+	{
+		onPlayerRespawn = "f_fnc_CamInit";
+	};
+
+	// F3 JIP Menu
+	class f_JIP
+	{
+		onPlayerRespawn = "f\JIP\f_JIP_playerRespawn.sqf";
+	};
+};
+
+// ============================================================================================
+
+// F3 - Menu components
+// DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
+
+// Menu components for the JIP Menu
+#include "f\JIP\f_JIP_kitpicker.h"
+#include "f\JIP\f_JIP_grppicker.h"
+
+// Menu components for the Spectator Script
+#include "f\spect\config.hpp"
+
+// ============================================================================================
+
+// F3 - Functions
+// DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
 
 class CfgFunctions
 {
 	class F // Defines the "owner"
 	{
-		class common // catagory
+		class common // category
 		{
 			file = "f\common";
-			// Defines the function to preInit the compling of the assignGear function used by units.
-			class folk_assignGear
-			{
-
-			};
 			// Defines the function to preInit (the paramArray dosent seem to be constructed at preInit stage).
 			class processParamsArray
 			{
 				preInit = 1;
 				postInit = 1;
 			};
-			class SetWeather
-			{
-			};
-			class SetAISKill
-			{
-			};
-			class localGroupMarker
-			{
-			};
-			class SetLocalFTMemberMarkers
-			{
-			};
-			class GetMarkerColor
-			{
-			};
-			class LocalFTMarkerSync
-			{
-			};
-			class localSpecialistMarker
-			{
-			};
-			class drawNameTag
-			{
-			};
-			class removeBody
-			{
-			};
-			class nearPlayer
-			{
-			};
+
+			class nearPlayer{};
+		};
+		class mpEnd
+		{
+			file = "f\mpEnd";
+			class mpEnd{};
+			class mpEndReceiver{};
+		};
+		class assignGear
+		{
+			// Defines the functions to preInit the compling of the assignGear function used by units.
+			file = "f\assignGear";
+			class assignGear{};
+		};
+		class setGroupID
+		{
+			file = "f\setGroupID";
+			class setGroupID{};
+		};
+		class missionConditions
+		{
+			file = "f\missionConditions";
+			class SetTime{};
+			class SetFog{};
+			class SetWeather{};
 		};
 		class cache
 		{
@@ -350,11 +392,52 @@ class CfgFunctions
 			class gCache {};
 			class gUncache {};
 		};
-		class spect
+		class groupMarkers {
+			file = "f\groupMarkers";
+			class localGroupMarker{};
+			class localSpecialistMarker{};
+		};
+		class authorisedCrew
 		{
-			file = "f\spect";
-			class cam_init{};
-		}
+			file = "f\authorisedCrew";
+			class authorisedCrewCheck {};
+		};
+		class FTMemberMarkers
+		{
+			file = "f\FTMemberMarkers";
+			class SetLocalFTMemberMarkers{};
+			class GetMarkerColor{};
+			class LocalFTMarkerSync{};
+		};
+		class bodyRemoval
+		{
+			file = "f\removeBody";
+			class removeBody{};
+		};
+		class setAISkill
+		{
+			file = "f\setAISKill";
+			class setAISKill{};
+		};
+		class mapClickTeleport
+		{
+			file = "f\mapClickTeleport";
+			class mapClickTeleportUnit{};
+			class mapClickTeleportGroup{};
+		};
+		class nametag
+		{
+			file = "f\nametag";
+			class drawNameTag{};
+		};
+		class preMount
+		{
+			file = "f\preMount";
+			class mountGroups{};
+		};
+		#include "f\simplewoundingsystem\config.hpp"
+		#include "f\spect\functions.hpp"
+
 	};
 };
 

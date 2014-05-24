@@ -13,11 +13,11 @@ _distance = _this select 1;
 _players = [];
 
 {
-        if (isPlayer _x) then {_players = _players + [_x]};
+   if (isPlayer _x) then {_players = _players + [_x]};
 } forEach playableUnits;
 
 // ====================================================================================
 
 // Check whether a player is in the given distance - return true if yes
 if (({_x distance _pos < _distance} count _players) > 0) exitWith {true};
-false;
+false

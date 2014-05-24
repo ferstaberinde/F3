@@ -335,20 +335,20 @@ class SpectMapControl
         coefMax = 1;
     };
     class Waypoint {
-        color[] = {0, 0, 0, 1};
+        color[] = {0, 0, 0, 0};
         size = 24;
         importance = 1;
         coefMin = 1;
         coefMax = 1;
-        icon = "\A3\ui_f\data\map\mapcontrol\waypoint_ca.paa";
+        icon = "";
     };
     class WaypointCompleted {
-        color[] = {0, 0, 0, 1};
+        color[] = {0, 0, 0, 0};
         size = 24;
         importance = 1;
         coefMin = 1;
         coefMax = 1;
-        icon = "\A3\ui_f\data\map\mapcontrol\waypointCompleted_ca.paa";
+        icon = "";
     };
     class power {
         icon = "\A3\ui_f\data\map\mapcontrol\power_CA.paa";
@@ -676,9 +676,9 @@ class f_spec_dialog {
                 arrowEmpty = "";
                 border = "";
             };
-			onMouseButtonDown = "[""MouseButtonDown"",_this] call f_cam_eventHandler";
-			onMouseButtonUp = "[""MouseButtonUp"",_this] call f_cam_eventHandler";
-            onMouseZChanged = "[""MouseZChanged"",_this] call f_cam_eventHandler";
+			onMouseButtonDown = "[""MouseButtonDown"",_this] call F_fnc_EventHandler";
+			onMouseButtonUp = "[""MouseButtonUp"",_this] call F_fnc_EventHandler";
+            onMouseZChanged = "[""MouseZChanged"",_this] call F_fnc_EventHandler";
 		    idc = 123;
             x = SafeZoneX; y = SafeZoneY;
             w = SafeZoneW; h = SafeZoneH;
@@ -706,7 +706,7 @@ class f_spec_dialog {
             y = 0.0310000 * safezoneH + safezoneY;
             w = 0.100 * safezoneW;
             h = 0.3 * safezoneH;
-            onLBSelChanged = "[""LBListSelChanged"",_this] call f_cam_eventHandler";
+            onLBSelChanged = "[""LBListSelChanged"",_this] call F_fnc_EventHandler";
         };
         class SpecModes: spect_RscCombo
         {
@@ -715,7 +715,7 @@ class f_spec_dialog {
             y = 0.0109959 * safezoneH + safezoneY;
             w = 0.100 * safezoneW;
             h = 0.0200 * safezoneH;
-            onLBSelChanged = "[""LBListSelChanged_modes"",_this] call f_cam_eventHandler";
+            onLBSelChanged = "[""LBListSelChanged_modes"",_this] call F_fnc_EventHandler";
         };
         class SpecText: spect_RscText
         {
@@ -753,7 +753,16 @@ class f_spec_dialog {
             y = 0.772714 * safezoneH + safezoneY;
             w = 0.132213 * safezoneW;
             h = 0.21629 * safezoneH;
-            onMouseZChanged = "[""MapZoom"",_this] call f_cam_eventHandler";
+            onMouseZChanged = "[""MapZoom"",_this] call F_fnc_EventHandler;";
+        };
+        class FullSpectMap : SpectMapControl
+        {
+            idc = 1360;
+            x = 0 * safezoneW + safezoneX;
+            y = 0 * safezoneH + safezoneY;
+            w = 1 * safezoneW;
+            h = 1 * safezoneH;
+            
         };
     };
 };
