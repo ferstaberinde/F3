@@ -164,7 +164,7 @@ _MTRmount = "B_Mk6Mortar_Support";
 // Medium AT
 _MAT = "launch_RPG32_F";
 _MATmag1 = "RPG32_F";
-_MATmag2 = "RPG32_F";
+_MATmag2 = "RPG32_HE_F";
 
 // Surface Air
 _SAM = "launch_O_Titan_F";
