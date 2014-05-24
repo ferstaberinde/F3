@@ -116,7 +116,7 @@ switch (f_param_AISkill_INDP) do
 // SELECT CIVILIAN AI SKILLS
 // If the civilian side variable is enabled, their level will be set accordingly
 
-f_var_skillCiv = 99
+f_var_skillCiv = 99;
 if (!isNil "f_var_civAI") then {
 	f_var_skillCiv =
 	switch (f_var_civAI) do {
