@@ -24,12 +24,12 @@ _warningMsg = localize "STR_f_UnauthorisedCrew_Warning";
 // DEBUG
 if (f_var_debugMode == 1) then
 {
-	player sideChat format ["DEBUG (f\common\f_isAuthorisedCrew.sqf): _fromEH = %1",_fromEH];
-	player sideChat format ["DEBUG (f\common\f_isAuthorisedCrew.sqf): _vehicle = %1",_vehicle];
-	player sideChat format ["DEBUG (f\common\f_isAuthorisedCrew.sqf): _vehicleRole = %1",_vehicleRole];
-	player sideChat format ["DEBUG (f\common\f_isAuthorisedCrew.sqf): _unitToCheck = %1",_unitToCheck];
-	player sideChat format ["DEBUG (f\common\f_isAuthorisedCrew.sqf): _restrictedCrew = %1",_restrictedCrew];
-	player sideChat format ["DEBUG (f\common\f_isAuthorisedCrew.sqf): _warningMsg = %1",_warningMsg];
+	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _fromEH = %1",_fromEH];
+	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _vehicle = %1",_vehicle];
+	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _vehicleRole = %1",_vehicleRole];
+	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _unitToCheck = %1",_unitToCheck];
+	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _restrictedCrew = %1",_restrictedCrew];
+	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _warningMsg = %1",_warningMsg];
 };
 
 // ====================================================================================
