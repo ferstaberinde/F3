@@ -233,8 +233,8 @@ _ghillieGlasses = [];
 
 // Spec Op (CTRG)
 _sfuniform = ["U_B_CTRG_1","U_B_CTRG_2","U_B_CTRG_3"];
-_sfhelmet = ["V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG"];
-_sfRig = _mediumRig;
+_sfhelmet = ["H_Cap_khaki_specops_UK","H_HelmetB_light_snakeskin"];
+_sfRig = ["V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG"];
 _sfGlasses = [];
 
 
