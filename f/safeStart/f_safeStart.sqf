@@ -12,6 +12,9 @@ if (!isDedicated && (isNull player)) then
 
 // ====================================================================================
 
+// Make sure the component only starts after the mission has initialized
+sleep 0.1;
+
 //Have the server setup the variables while clients wait for jip
 if(isServer) then
 {
