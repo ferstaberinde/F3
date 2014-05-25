@@ -2124,7 +2124,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitAAF_DC_M";
-					init="GrpAAF_DO = group this; [""m"",this] call f_fnc_assignGear;";
+					init="GrpAAF_DC = group this; [""m"",this] call f_fnc_assignGear;";
 					description="AAF Medic";
 				};
 				class Item2
