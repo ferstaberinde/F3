@@ -88,7 +88,7 @@ else
 		_Tgrp = call compile format ["%1",_x];
 		if(!isnil "_Tgrp") then
 		{
-			_grps set [count _grps,_x];
+			_grps set [count _grps,_Tgrp];
 		};
 	} foreach _grpstemp;
 };
