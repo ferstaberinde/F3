@@ -190,8 +190,8 @@ _APmine2 = "APERSMine_Range_Mag";
 _light = [];
 _heavy =  ["eng","engm"];
 _diver = ["div"];
-_pilot = ["p"];
-_crew = ["c"];
+_pilot = ["pp","pcc","pc"];
+_crew = ["cc","cg","cd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 
@@ -490,8 +490,30 @@ switch (_typeofUnit) do
 		_unit addBackpack _MTRmount;
 	};
 
-// LOADOUT: VEHICLE CREW
-	case "c":
+// LOADOUT: VEHICLE COMMANDER
+	case "vc":
+	{
+		_unit addmagazines [_smgmag,5];
+		_unit addweapon _smg;
+		_unit addmagazines [_smokegrenade,2];
+		_unit addItem "ItemGPS";
+		_unit assignItem "ItemGPS";
+		_unit addWeapon "Rangefinder";
+	};
+
+// LOADOUT: VEHICLE DRIVER
+	case "vd":
+	{
+		_unit addmagazines [_smgmag,5];
+		_unit addweapon _smg;
+		_unit addmagazines [_smokegrenade,2];
+		_unit addItem "ItemGPS";
+		_unit assignItem "ItemGPS";
+		["cc"] call _backpack;
+	};
+
+// LOADOUT: VEHICLE GUNNER
+	case "vg":
 	{
 		_unit addmagazines [_smgmag,5];
 		_unit addweapon _smg;
@@ -500,15 +522,31 @@ switch (_typeofUnit) do
 		_unit assignItem "ItemGPS";
 	};
 
-
 // LOADOUT: AIR VEHICLE PILOTS
-	case "p":
+	case "pp":
 	{
 		_unit addmagazines [_smgmag,5];
 		_unit addweapon _smg;
 		_unit addmagazines [_smokegrenade,2];
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
+	};
+
+// LOADOUT: AIR VEHICLE CREW CHIEF
+	case "pcc":
+	{
+		_unit addmagazines [_smgmag,5];
+		_unit addweapon _smg;
+		_unit addmagazines [_smokegrenade,2];
+		["cc"] call _backpack;
+	};
+
+// LOADOUT: AIR VEHICLE CREW
+	case "pc":
+	{
+		_unit addmagazines [_smgmag,5];
+		_unit addweapon _smg;
+		_unit addmagazines [_smokegrenade,2];
 	};
 
 // LOADOUT: ENGINEER (DEMO)
