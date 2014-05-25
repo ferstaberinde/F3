@@ -63,40 +63,40 @@ while {count _units != 0 && count _barray != 0} do {
 	_building setVariable ["ws_bUnits",_bUnits+1,true];
 
 	// For the unit spawn code to have it enter the building
-	[_unit,_bpos] spawn {
+	[_unit,_bpos,_building] spawn {
 		private ["_unit","_pos","_dir"];
 
 		_unit = _this select 0;
 		_pos = _this select 1;
 
 		_unit setVariable ["ws_bpos",_pos,true];
-
 		_unit doMove _pos;
-		waitUntil {_pos distance (getPosATL _unit) < 10};
+
+		waitUntil {_unit distance _pos < 5};
 		(group _unit) setSpeedMode "Limited";
 		sleep 1;
-		_i = 0;
 
-		// Wait 2 minutes for the unit to get ready
-		for "_i" from 0 to 120 do {
-			if (unitReady _unit) exitWith {sleep 5;};
+		// Wait 30 seconds for the unit to get ready
+		for "_i" from 0 to 30 do {
+			if (unitReady _unit || _unit distance _pos < 1) exitWith {};
 			sleep 1;
 		};
 
 		//Check the distance to the building position and the distance between z-levels (if the unit got stuck)
 		if (((getPosATL _unit) select 2) - (_pos select 2) < 0.2) then {
-			_unit setPosATL _pos;_unit doMove _pos;
+			_unit setPosATL _pos;_unit moveTo _pos;
 
-				// Wait another 2 minutes for the unit to get ready
-				for "_i" from 0 to 120 do {
-					if (unitReady _unit) exitWith {sleep 5;};
+				// Wait another 10 seconds for the unit to get ready
+				for "_i" from 0 to 10 do {
+					if (unitReady _unit || _unit distance _pos < 1) exitWith {};
 					sleep 1;
 				};
 		};
 
 		dostop _unit;
+
 		if (random 1 > 0.75) then {_unit setunitpos "Middle";} else {_unit setUnitPos "Up"};
-		_dir = if (ws_game_A3) then {([_unit,_pos] call BIS_fnc_DirTo) +180} else {random 360};
+		_dir = if (ws_game_A3) then {([_unit,(getPosATL (_this select 2))] call BIS_fnc_DirTo) +180} else {random 360};
 		_unit setDir _dir;
 
 		(group _unit) setSpeedMode "NORMAL";
