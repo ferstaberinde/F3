@@ -11,9 +11,9 @@ if(!isDedicated) then
 		//hintsilent  ["SAFE START\n(s)\n", pv_mission_timer];
 		["SafeStart",[format["Time Remaining: %1 min",pv_mission_timer]]] call bis_fnc_showNotification;
 		if (pv_mission_timer == 0) exitWith {};
- 		sleep 15;
+ 		sleep 60;
 	};
 
 	//Display notification when the mission starts
-	["SafeStart",["Mission starting now!"]] call bis_fnc_showNotification;
+	["SafeStartMissionStarting",["Mission starting now!"]] call bis_fnc_showNotification;
 };
