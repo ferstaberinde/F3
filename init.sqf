@@ -7,6 +7,14 @@ enableSaving [false, false];
 
 // ====================================================================================
 
+// F3 - Disable AI Radio commands
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+enableRadio false;
+player setVariable ["BIS_noCoreConversations",true];
+
+// ====================================================================================
+
 // F3 - MapClick Teleport
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
