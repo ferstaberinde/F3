@@ -178,3 +178,10 @@ f_var_JIP_GearMenu = true;			// Can JIP/respawned players select their own gear?
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [30] spawn f_fnc_cInit;
+
+// ====================================================================================
+
+// F3 - Radio Framework
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[] execVM "f\radios\radio_init.sqf";
