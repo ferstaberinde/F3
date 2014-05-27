@@ -2,9 +2,45 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
+// Only run this for players
+if (isDedicated) exitWith{};
+
+// ====================================================================================
+
+// MAKE SURE THE PLAYER INITIALIZES PROPERLY
+
+if (!isDedicated && (isNull player)) then
+{
+    waitUntil {sleep 0.1; !isNull player};
+};
+
+// ====================================================================================
+
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_textAction"];
+
+// ====================================================================================
+
+// SET UP VARIABLES
+// Make sure all global variables are initialized
+if (isNil "f_var_mapClickTeleport_Uses") then {f_var_mapClickTeleport_Uses = 0};
+if (isNil "f_var_mapClickTeleport_TimeLimit") then {f_var_mapClickTeleport_TimeLimit = 0};
+if (isNil "f_var_mapClickTeleport_GroupTeleport") then {f_var_mapClickTeleport_GroupTeleport = false};
+if (isNil "f_var_mapClickTeleport_Units") then {f_var_mapClickTeleport_Units = []};
+
+
+// Make sure that no non-existing units have been parsed
+{
+	if (isNil _x) then {
+		f_var_mapClickTeleport_Units set [_forEachIndex,objNull];
+	} else {
+		f_var_mapClickTeleport_Units set [_forEachIndex,call compile format ["%1",_x]];
+	};
+} forEach f_var_mapClickTeleport_Units;
+
+// Reduce the array to valid units only
+f_var_mapClickTeleport_Units = f_var_mapClickTeleport_Units - [objNull];
 
 // ====================================================================================
 
@@ -12,7 +48,6 @@ private ["_textAction"];
 // We end the script if it is not running on a server or if only group leaders can use
 // the action and the player is not the leader of his/her group
 
-if (isDedicated) exitWith {};
 if (count f_var_mapClickTeleport_Units > 0 && !(player in f_var_mapClickTeleport_Units)) exitWith {};
 if (f_var_mapClickTeleport_GroupTeleport && player != leader group player)  exitWith {};
 
