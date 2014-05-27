@@ -23,7 +23,7 @@ _men = allUnits - playableUnits;
 if (f_var_debugMode == 1) then
 {
 	_str_men = str _men;
-	player sideChat format ["DEBUG (f\common\f_addRemoveBodyEH.sqf): _men = %1",_str_men];
+	player sideChat format ["DEBUG (f\removeBody\f_addRemoveBodyEH.sqf): _men = %1",_str_men];
 };
 
 // ====================================================================================

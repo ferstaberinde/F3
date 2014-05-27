@@ -451,3 +451,11 @@ case "uav":
 {
 	_unit addBackpack _baguav;
 };
+
+// BACKPACK: CREW CHIEFS & VEHICLE DRIVERS
+case "cc":
+{
+	_unit addBackpack _bagsmall;
+	clearMagazineCargoGlobal (unitBackpack _unit);
+	(unitBackpack _unit) addItemCargoGlobal ["ToolKit",1];
+};

@@ -8,6 +8,15 @@ private ["_unitfaction"];
 
 // ====================================================================================
 
+// MAKE SURE THE PLAYER INITIALIZES PROPERLY
+
+if (!isDedicated && (isNull player)) then
+{
+    waitUntil {sleep 0.1; !isNull player};
+};
+
+// ====================================================================================
+
 // DETECT PLAYER FACTION
 // The following code detects what faction the player's slot belongs to, and stores
 // it in the private variable _unitfaction

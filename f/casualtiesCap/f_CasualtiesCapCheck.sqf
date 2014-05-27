@@ -88,7 +88,7 @@ else
 		_Tgrp = call compile format ["%1",_x];
 		if(!isnil "_Tgrp") then
 		{
-			_grps set [count _grps,_x];
+			_grps set [count _grps,_Tgrp];
 		};
 	} foreach _grpstemp;
 };
@@ -157,7 +157,7 @@ if (typeName _end == typeName 0) exitWith {
 };
 
 if (typeName _end == typeName {}) exitWith {
-	[] spawn _end;
+	[_end,"bis_fnc_spawn",true] call BIS_fnc_MP;
 };
 
 player GlobalChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];

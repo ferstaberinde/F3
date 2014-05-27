@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-1-0 RC1
+* Version: 3-1-0 RC2
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-1-0 RC2 | 28 MAY 2014 | Patch release - Various improvements (see change history).
 * 3-1-0 RC1 | 24 MAY 2014 | Patch release - Various improvements (see change history).
 * 3-0-9A    | 12 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-9     | 09 FEB 2014 | Patch release - Various improvements (see change history).
@@ -219,6 +220,29 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-1-0 RC2 | 28 MAY 2014
+
+* Updated F3 Folk ARPS Platoons component:
+ * Ground vehicle drivers and selected helicopter crew members are now able to repair vehicles.
+ * Ground vehicle commanders have rangefinders.
+ * Fixed AAF DC group assignment.
+* Updated Safe Start component: 
+ * Changed frequency and duration of notifications.
+ * Changed name of parameter variable.
+* Fixed ACRE Support component: script path(s).
+* Fixed Debug Mode component: string paths (several were still referring to f\common)
+* Fixed F3 Folk ARPS Assign Gear Script component: 
+ * Removed blank between assignGear and ; in unit INIT lines.
+ * Removed nul = for unit INIT assignGear call.
+* Fixed F3 Folk ARPS JIP Reinforcement Options component: paths (were still referring to f\common).
+* Fixed F3 Folk ARPS Group Markers component: markers work for JIP players.
+* Fixed Mission Conditions Selector component: issue with overcast implementation.
+* Fixed PreMount component:
+ * Fixed incorrect function calls in modules for CSAT.
+ * Made more robust.
+* Fixed E&E and Casualties Cap components: ensured code spawned happens globally.
+* Fixed SP Editor issues (various).
 
 3-1-0 RC1 | 24 MAY 2014
 
