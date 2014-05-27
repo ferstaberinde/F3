@@ -5,14 +5,14 @@
 // EXIT IF RADIO FRAMEWORK IS DISABLED
 // ====================================================================================
 
-if (f_var_radios != 0) exitWith {};
+if (f_param_radios != 0) exitWith {};
 
 // RUN RELEVANT SCRIPTS, DEPENDING ON SYSTEM IN USE
 // Each radio modification requires a different set of scripts to be used, and so we
 // split into a seperate script file for initialisation of each mod, on both the
 // server and client.
 
-switch (f_var_radios) do {
+switch (f_param_radios) do {
 
   // ACRE
   case 1: {

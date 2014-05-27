@@ -21,7 +21,7 @@ if(!isnil "BIS_fnc_feedback_allowPP") then
 	BIS_fnc_feedback_allowPP = false;
 };
 // if acre is enabled set player to acre channel
-if(f_var_radios == 1) then
+if(f_param_radios == 1) then
 {
 	[true] call acre_api_fnc_setSpectator;
 };
