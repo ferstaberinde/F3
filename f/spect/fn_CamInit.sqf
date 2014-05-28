@@ -42,7 +42,7 @@ f_cam_camera cameraEffect ["internal", "BACK"];
 f_cam_camera camSetTarget _oldUnit;
 f_cam_curTarget = _oldUnit;
 
-cameraEffectEnableHUD true;
+cameraEffectEnableHUD false;
 f_cam_camera camCommit 0;
 showCinemaBorder false;
 f_cam_MouseMoving = false;
