@@ -22,6 +22,7 @@ ArmA 2:
 ArmA 3:
 * If your mission does not have a description.ext you can move the description.ext from ws_fnc\ to your mission root folder.
 * If your mission does have a description.ext open the descripion.ext inside ws_fnc\ and paste the code within the cfgFunctions scope at the bottom of your own description.ext. If the cfgFunctions scope does not exist yet, simply copy the entire scope to the bottom of your description.ext.
+* If you are using F3 see this post for an example: http://www.folkarps.com/forum/viewtopic.php?f=48&t=785#p4792
 
 
 
