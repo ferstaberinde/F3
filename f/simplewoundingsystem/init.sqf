@@ -5,6 +5,36 @@
 if (isDedicated) ExitWith {};
 _unit = _this select 0;
 
+
+// add breifing
+if(isNil "f_wound_breifing") then
+{
+	f_wound_breifing = true;
+};
+if(f_wound_breifing) then
+{
+	[] spawn
+	{
+		waitUntil {scriptDone f_script_briefing};
+		_bstr = format ["OVERVIEW<br/>
+When a player is wounded to the point of being 'incapacitated' they become a casualty. Casualties are prone and unable to move.
+<br/><br/>
+TREATING CASUALTIES<br/>
+Players equipped with at least 1 x FAK can treat a casualty by moving next to them and selecting the relevant action menu option. Treatment uses up 1 x FAK.
+<br/><br/>
+DRAGGING CASUALTIES<br/>
+Players can drag a casualty by moving next to them and selecting the relevant action menu option. Whilst dragging, the player will have an action menu option for releasing the casualty.
+<br/><br/>
+BLEEDING OUT<br/>
+An incapacitated player only has a few minutes before her/his wounds become fatal and they die."];
+		player createDiaryRecord ["Diary", ["Simple Wounding System",_bstr]];
+	};
+};
+
+
+
+
+
 /// lets wait a bit.
 sleep 0.1;
 
@@ -31,29 +61,6 @@ F_UncBlur = ppEffectCreate ["DynamicBlur", 180];
 F_UncToggle = false;
 F_damageValue = 1.1;
 
-if(isNil "f_wound_breifing") then
-{
-	f_wound_breifing = true;
-};
-if(f_wound_breifing) then
-{
-	[] spawn
-	{
-		waitUntil {scriptDone f_script_briefing};
-		_bstr = format ["OVERVIEW<br/>
-When a player is wounded to the point of being 'incapacitated' they become a casualty. Casualties are prone and unable to move.
-<br/><br/>
-TREATING CASUALTIES<br/>
-Players equipped with at least 1 x FAK can treat a casualty by moving next to them and selecting the relevant action menu option. Treatment uses up 1 x FAK.
-<br/><br/>
-DRAGGING CASUALTIES<br/>
-Players can drag a casualty by moving next to them and selecting the relevant action menu option. Whilst dragging, the player will have an action menu option for releasing the casualty.
-<br/><br/>
-BLEEDING OUT<br/>
-An incapacitated player only has a few minutes before her/his wounds become fatal and they die."];
-		player createDiaryRecord ["Diary", ["Simple Wounding System",_bstr]];
-	};
-};
 // Eventhandlers for the player.
 _unit addEventHandler ["killed", {_this call f_fnc_OnDeath}];
 _unit addEventHandler ["HandleDamage",{_this call f_fnc_OnDamage}];
