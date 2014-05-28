@@ -194,7 +194,7 @@ _light = [];
 _heavy =  ["eng","engm"];
 _diver = ["div"];
 _pilot = ["pp","pcc","pc"];
-_crew = ["cc","cg","cd"];
+_crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 
