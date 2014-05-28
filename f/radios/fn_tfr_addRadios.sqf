@@ -43,18 +43,17 @@ if(_typeOfUnit != "NIL") then {
       _rifradio = ["ar","aar","rat","samag","mmgag","hmgag","matag","hatag","mtrag","sp","r","car","smg","gren"];
 
       // Set the list of units that get a shortrange radio
-      _shortrange = ["co", "dc", "m", "samg", "mmgg", "matg", "sn", "mtrg"];
+      _shortrange = ["co", "dc", "ftl", "m", "samg", "mmgg", "matg", "sn", "mtrg"];
 
       // Give out respective radios
 
       if (_typeOfUnit in _rifradio) then {
-
         _unit linkItem _radio3;
 
       } else {
-
-        _unit linkItem _radio2;
-
+        if (_unit in _shortrange) then {
+          _unit linkItem _radio2;
+        };
       };
 
       // Special cases
@@ -62,13 +61,13 @@ if(_typeOfUnit != "NIL") then {
 
       // If unit is leader of group and in the above list, give SR. Else, give them
       // a rifleman's radio.
-      if((_unit == (leader (group _unit))) && (_typeOfUnit in _specialist)) then {
-        _unit linkItem _radio2;
 
-      } else {
-
-        _unit linkItem _radio3
-
+      if (_typeOfUnit in _specialist) then {
+        if (_unit == (leader (group _unit))) then {
+          _unit linkItem _radio2;
+        } else {
+          _unit linkItem _radio3;
+        };
       };
 
       // Give out LR backpacks according to f\radios\tfr_settings.sqf.
