@@ -6,26 +6,33 @@
 // The blocks of code below identifies equipment for this faction
 //
 // Defined loadouts:
-//		co		- commander
-//		dc 		- deputy commander
-//		m 		- medic
-//		ftl		- fire team leader
-//		ar 		- automatic rifleman
-//		aar		- assistant automatic rifleman
-//		rat		- rifleman (AT)
+//		co			- commander
+//		dc 			- deputy commander / squad leader
+//		m 			- medic
+//		ftl			- fire team leader
+//		ar 			- automatic rifleman
+//		aar			- assistant automatic rifleman
+//		rat			- rifleman (AT)
 //		mmgg		- medium mg gunner
 //		mmgag		- medium mg assistant
 //		matg		- medium AT gunner
 //		matag		- medium AT assistant
 //		mtrg		- mortar gunner (deployable)
 //		mtrag		- mortar assistant (deployable)
-//		p		- air vehicle pilots
-//		eng		- engineers
+//		vc			- vehicle commander
+//		vg			- vehicle gunner
+//		vd			- vehicle driver (repair)
+//		pp			- air vehicle pilot / co-pilot
+//		pcc			- air vehicle co-pilot (repair) / crew chief (repair)
+//		pp			- air vehicle crew
+//		eng			- engineer (demo)
+//		engm		- engineer (mines)
+//		uav			- UAV operator
 //		div    		- divers
 //
-//		r 		- rifleman
-//		car		- carabineer
-//		smg		- submachinegunner
+//		r 			- rifleman
+//		car			- carabineer
+//		smg			- submachinegunner
 //		gren		- grenadier
 //
 //		v_car		- car/4x4
