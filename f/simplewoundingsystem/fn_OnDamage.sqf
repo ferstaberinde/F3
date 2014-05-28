@@ -5,7 +5,6 @@ _unit = _this select 0;
 _selection = _this select 1;
 _damage = _this select 2;
 _totalDamage = damage _unit + _damage;
-
 if (f_var_debugMode == 1) then
 {
 	player sidechat format["%1 - '%2' - %3 - %4",_unit,_selection,_damage,_totalDamage];
@@ -21,9 +20,10 @@ if((_selection != "head") &&  _selection != ""  && _selection != "hands" && _tot
 		_unit spawn {_this allowDammage false;sleep 1;_this allowDammage true};
 	};
 };
+
 if(isBleeding _unit && _unit getVariable ["revive_bleeding",false]) then
 {
-	_unit setVariable ["revive_bleeding",true,true];
+	_unit setVariable ["revive_bleeding",true];
 };
 _damage
 
