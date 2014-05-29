@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-1-0 RC2
+* Version: 3-1-0 RC3
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-1-0 RC3 | 29 MAY 2014 | Patch release - Various improvements (see change history).
 * 3-1-0 RC2 | 28 MAY 2014 | Patch release - Various improvements (see change history).
 * 3-1-0 RC1 | 24 MAY 2014 | Patch release - Various improvements (see change history).
 * 3-0-9A    | 12 FEB 2014 | Patch release - Various improvements (see change history).
@@ -220,6 +221,20 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-1-0 RC3 | 29 MAY 2014
+
+* Updated F3 Folk ARPS Platoons component:
+ * Added CO/DC driver (repair) slots (all factions).
+ * Added UAV Operator slots to FIA.
+* Updated MapClick Teleport component: added HALO option.
+* Updated Mission Conditions Selector component:
+ * Night option now features full moon.
+ * Other options adjusted (better dawn/dusk etc.).
+* Fixed ReadMe File Template component: removed ArmA 2 references.
+* Fixed F3 Folk ARPS Assign Gear Script component: incomplete lists of classes in headers.
+* Fixed F3 Spectator Script component: minor issues.
+* Fixed F3 Simple Wounding System component: minor issues.
 
 3-1-0 RC2 | 28 MAY 2014
 

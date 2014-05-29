@@ -6,26 +6,33 @@
 // The blocks of code below identifies equipment for this faction
 //
 // Defined loadouts:
-//		co		- commander
-//		dc 		- deputy commander
-//		m 		- medic
-//		ftl		- fire team leader
-//		ar 		- automatic rifleman
-//		aar		- assistant automatic rifleman
-//		rat		- rifleman (AT)
+//		co			- commander
+//		dc 			- deputy commander / squad leader
+//		m 			- medic
+//		ftl			- fire team leader
+//		ar 			- automatic rifleman
+//		aar			- assistant automatic rifleman
+//		rat			- rifleman (AT)
 //		mmgg		- medium mg gunner
 //		mmgag		- medium mg assistant
 //		matg		- medium AT gunner
 //		matag		- medium AT assistant
 //		mtrg		- mortar gunner (deployable)
 //		mtrag		- mortar assistant (deployable)
-//		p		- air vehicle pilots
-//		eng		- engineers
-// 		div		- divers
+//		vc			- vehicle commander
+//		vg			- vehicle gunner
+//		vd			- vehicle driver (repair)
+//		pp			- air vehicle pilot / co-pilot
+//		pcc			- air vehicle co-pilot (repair) / crew chief (repair)
+//		pp			- air vehicle crew
+//		eng			- engineer (demo)
+//		engm		- engineer (mines)
+//		uav			- UAV operator
+//		div    		- divers
 //
-//		r 		- rifleman
-//		car		- carabineer
-//		smg		- submachinegunner
+//		r 			- rifleman
+//		car			- carabineer
+//		smg			- submachinegunner
 //		gren		- grenadier
 //
 //		v_car		- car/4x4
@@ -191,7 +198,7 @@ _light = [];
 _heavy =  ["eng","engm"];
 _diver = ["div"];
 _pilot = ["pp","pcc","pc"];
-_crew = ["cc","cg","cd"];
+_crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 
@@ -596,8 +603,8 @@ switch (_typeofUnit) do
 // LOADOUT: UAV OPERATOR
 	case "uav":
 	{
-		_unit addmagazines [_carbinemag,7];
-		_unit addweapon _carbine;
+		_unit addmagazines [_smgmag,5];
+		_unit addweapon _smg;
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_grenade,1];
 		_unit addmagazines [_mgrenade,1];

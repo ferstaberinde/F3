@@ -10,5 +10,6 @@ class woundingsystem
 	class OnDeath {};
 	class OnHeal {};
 	class OnDamage{};
+	class SetBleeding{};
 };
 

@@ -23,8 +23,8 @@ _timeOfDay = _this select 0;
 // The default values that together form the in-game date are set.
 
 _year = 2030;
-_month = 5;
-_day = 5;
+_month = 6;
+_day = 16;
 _hour = 0;
 _minute = 0;
 
@@ -38,20 +38,20 @@ switch (_timeOfDay) do
 // Dawn
 	case 0:
 	{
-		_hour = 5;
-		_minute = 30;
+		_hour = 4;
+		_minute = 50;
 	};
 // Early Morning
 	case 1:
 	{
-		_hour = 7;
-		_minute = 30;
+		_hour = 5;
+		_minute = 20;
 	};
 // Morning
 	case 2:
 	{
-		_hour = 10;
-		_minute = 30;
+		_hour = 9;
+		_minute = 20;
 	};
 // Noon
 	case 3:
@@ -62,13 +62,13 @@ switch (_timeOfDay) do
 // Afternoon
 	case 4:
 	{
-		_hour = 14;
+		_hour = 15;
 		_minute = 30;
 	};
 // Evening
 	case 5:
 	{
-		_hour = 17;
+		_hour = 18;
 		_minute = 40;
 	};
 // Dusk

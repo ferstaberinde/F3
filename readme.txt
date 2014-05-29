@@ -41,7 +41,7 @@ This mission is (c)[ CCYY ] [ Insert your name(s) here. ]. All rights reserved.
 03. TERMS OF USE
 ================
 
-This mission (hereafter 'Software') contains files to be used in the PC CD-ROM simulator "Armed Assault 2" (hereafter 'ArmA2'). To use the Software you must agree to the following conditions of use:
+This mission (hereafter 'Software') contains files to be used in the PC simulator ArmA 3. To use the Software you must agree to the following conditions of use:
 
 1. [ Insert your name(s) here. ] (hereafter 'The Author(s)') grant to you a personal, non-exclusive license to use the Software.
 
@@ -61,9 +61,9 @@ The Software is distributed without any warranty; without even the implied warra
 
 To begin using the Software:
 
-1. Move the folder [ Insert name of your mission file here. ] into the following directory:
+1. Move the file [ Insert name of your mission file here. ] into the following directory (assuming you have the Steam version of ArmA 3):
 
-\Program Files\Bohemia Interactive\ArmA 2\MPMissions\
+C:\Program Files (x86)\Steam\steamapps\common\Arma 3\MPMissions
 
 
 

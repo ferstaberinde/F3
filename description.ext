@@ -7,7 +7,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 395;
+	maxPlayers = 405;
 };
 
 // ============================================================================================
@@ -75,7 +75,7 @@ class cfgNotifications
 
 	// Notification for the F3 Authorised Crew Component
 	class UnauthorisedCrew {
-		title= "Non-authorised crew!";
+		title= "NON-AUTHORISED CREW!";
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
 		duration = 10;
@@ -83,7 +83,7 @@ class cfgNotifications
 
 	// Notification for the F3 Authorised Crew Component
 	class MapClickTeleport {
-		title= "Teleport";
+		title= "NOTE";
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
 		duration = 2;

@@ -12,9 +12,8 @@ if(local _dragger) then
 };
 // setup the unit and all that fun stuff.
 _unit attachTo [_dragger, [0, 1.1, 0.092]];
-_dragger playMoveNow "acinpknlmstpsraswrfldnon";
-_unit switchMove "AinjPpneMrunSnonWnonDb_grab";
-_unit playMove "AinjPpneMrunSnonWnonDb";
+_dragger switchMove "acinpknlmstpsraswrfldnon";
+_unit switchMove "AinjPpneMrunSnonWnonDb";
 _unit SetDir 180;
 _unit SetPos (getpos _unit);
 
