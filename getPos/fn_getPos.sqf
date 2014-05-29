@@ -54,7 +54,7 @@ if (_count > 5) then {_building = _this select 5;};
 if (_count > 6) then {_water = _this select 6;};
 
 //Interpreting variables
-_pos = [_posloc] call ws_fnc_getEpos;
+_pos = _posloc call ws_fnc_getEpos;
 
 _posX = (_pos select 0);
 _posY = (_pos select 1);
