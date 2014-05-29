@@ -68,7 +68,7 @@ if (_typeOfUnit in _specOp) then {
 // Add uniforms to unit
 if(count _uniform > 0) then
 {
-	_unit adduniform (_uniform call BIS_fnc_selectRandom);
+	_unit forceAddUniform (_uniform call BIS_fnc_selectRandom);
 };
 if(count _Helmet > 0) then
 {

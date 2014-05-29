@@ -119,6 +119,17 @@ if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
 };
 
 // ====================================================================================
+
+// GEAR: CIVILIAN
+// The following block of code executes only if the unit is in a Civilian slot; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction == "civ_f") then {
+	#include "f_assignGear_fia.sqf"
+};
+
+
+// ====================================================================================
 // GEAR: ACRE
 // The following block of code executes only if the ACRE parameter is set to true; it
 // automatically includes a file which contains the appropriate equipment data.
