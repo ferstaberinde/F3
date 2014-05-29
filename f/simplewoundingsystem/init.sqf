@@ -23,7 +23,7 @@ TREATING CASUALTIES<br/>
 Players equipped with at least 1 x FAK can treat a casualty by moving next to them and selecting the relevant action menu option. Treatment uses up 1 x FAK.
 <br/><br/>
 DRAGGING CASUALTIES<br/>
-Players can drag a casualty by moving next to them and selecting the relevant action menu option. Whilst dragging, the player will have an action menu option for releasing the casualty.
+Players can drag a casualty by moving next to them and selecting the relevant action menu option. Whilst dragging, the player has an action menu option for releasing the casualty.
 <br/><br/>
 BLEEDING OUT<br/>
 An incapacitated player only has a few minutes before her/his wounds become fatal and they die."];
