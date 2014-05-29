@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <!-- This document was created with Syntext Serna Free. -->
-<Project ID="Arma2">
+<Project ID="Arma3">
   <Package ID="Missions">
     <Container ID="">
       <Key ID="STR_f_param_debugMode">
@@ -217,7 +217,16 @@
         <English> Click on the map to set teleport coordinates. </English>
       </Key>
       <Key ID="STR_f_mapClickTeleportDone">
-        <English> You have teleported to your chosen location. </English>
+        <English> You have been moved to the selected location. </English>
+      </Key>
+       <Key ID="STR_f_mapClickHALOAction">
+        <English> HALO </English>
+      </Key>
+      <Key ID="STR_f_mapClickHALOSelect">
+        <English> Click on the map to set HALO coordinates. </English>
+      </Key>
+      <Key ID="STR_f_mapClickHALODone">
+        <English> You have been moved to the selected location. </English>
       </Key>
       <Key ID="STR_f_JIP_reinforcementOptionsAction">
         <English> Select Reinforcement Options</English>

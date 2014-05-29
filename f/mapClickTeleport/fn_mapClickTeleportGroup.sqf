@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_pos","_units","_textDone","_height"];
+private ["_pos","_units","_textDone","_dispersion"];
 
 // ====================================================================================
 
@@ -12,8 +12,10 @@ private ["_pos","_units","_textDone","_height"];
 
 _unit = _this select 0;
 _pos = _this select 1;
-_textDone = localize "STR_f_mapClickTeleportDone";
-_height = if (f_var_mapClickTeleport_Height == 0) then {(_pos select 2)} else {f_var_mapClickTeleport_Height};
+_dispersion = 100; // The maximum dispersion for units when HALO jumping
+
+_string = if (f_var_mapClickTeleport_Height == 0) then {"Teleport"} else {"HALO"};
+f_var_mapClickTeleport_textDone = localize format ["STR_f_mapClick%1Done",_string];
 
 // ====================================================================================
 
@@ -29,10 +31,14 @@ if !(local _unit) exitWith {};
 // Loop through the group's units (excluding the leader) and check if they are local, if true teleport
 // them next to the leader and display a notification for players
 
-_unit setPos [((_pos select 0) + 3 + random 3),((_pos select 1) + 3 + random 3),_height];
+if (f_var_mapClickTeleport_Height == 0) then {
+	_unit setPos [((_pos select 0) + 3 + random 3),((_pos select 1) + 3 + random 3),(_pos select 2)];
+} else {
+	_unit setPos [((_pos select 0) + random _dispersion - random _dispersion),((_pos select 1) + random _dispersion - random _dispersion),(_pos select 2) + random 15 - random 15];
+};
 
 // Display a notification for players
-if (_unit == vehicle player) then {["MapClickTeleport",[_textDone]] call BIS_fnc_showNotification};
+if (_unit == vehicle player) then {["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification};
 
 // HALO - BACKPACK
 // If unit is parajumping, spawn the following code to add a parachute and restore the old backpack after landing

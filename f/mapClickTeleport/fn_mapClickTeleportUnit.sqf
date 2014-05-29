@@ -12,14 +12,6 @@ private ["_textSelect","_textDone"];
 
 f_telePositionSelected = false;
 if (isNil "f_var_mapClickTeleport_Used") then {f_var_mapClickTeleport_Used = 0};
-_textSelect = localize "STR_f_mapClickTeleportSelect";
-_textDone = localize "STR_f_mapClickTeleportDone";
-_textAction = localize "STR_f_mapClickTeleportAction";
-
-// SET GLOBAL VARIABLES
-// Make sure that all global variables are set properly
-
-if (isNil "f_var_mapClickTeleport_Uses") then {f_var_mapClickTeleport_Uses = 1};
 
 // ====================================================================================
 
@@ -28,7 +20,7 @@ if (isNil "f_var_mapClickTeleport_Uses") then {f_var_mapClickTeleport_Uses = 1};
 // or the unit to the new position. If the group needs to be teleported too, set the group's position
 // as well.
 
-["MapClickTeleport",[_textSelect]] call BIS_fnc_showNotification;
+["MapClickTeleport",[f_var_mapClickTeleport_textSelect]] call BIS_fnc_showNotification;
 openMap [true, false];
 onMapSingleClick "f_var_mapClickTeleport_telePos = _pos; f_telePositionSelected = true";
 waitUntil {f_telePositionSelected};
@@ -61,7 +53,7 @@ if (f_var_mapClickTeleport_GroupTeleport) then {
 
 openMap false;
 
-["MapClickTeleport",[_textDone]] call BIS_fnc_showNotification;
+["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification;
 
 // ====================================================================================
 
@@ -95,5 +87,5 @@ player removeAction f_mapClickTeleportAction;
 f_var_mapClickTeleport_Used = f_var_mapClickTeleport_Used + 1;
 
 if (f_var_mapClickTeleport_Uses == 0 || f_var_mapClickTeleport_Used < f_var_mapClickTeleport_Uses) then {
-	f_mapClickTeleportAction = player addaction [_textAction,{[] spawn f_fnc_mapClickTeleportUnit},"", 0, false,true,"","_this == player"];
+	f_mapClickTeleportAction = player addaction [f_var_mapClickTeleport_textAction,{[] spawn f_fnc_mapClickTeleportUnit},"", 0, false,true,"","_this == player"];
 };
