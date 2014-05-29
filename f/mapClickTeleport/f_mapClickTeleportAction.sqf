@@ -28,6 +28,7 @@ if (isNil "f_var_mapClickTeleport_Uses") then {f_var_mapClickTeleport_Uses = 0};
 if (isNil "f_var_mapClickTeleport_TimeLimit") then {f_var_mapClickTeleport_TimeLimit = 0};
 if (isNil "f_var_mapClickTeleport_GroupTeleport") then {f_var_mapClickTeleport_GroupTeleport = false};
 if (isNil "f_var_mapClickTeleport_Units") then {f_var_mapClickTeleport_Units = []};
+if (isNil "f_var_mapClickTeleport_Height") then {f_var_mapClickTeleport_Height = 0};
 
 
 // Make sure that no non-existing units have been parsed
