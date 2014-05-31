@@ -19,16 +19,16 @@
 // 1. location can be String (Markername), Array [x,y,z], Group or Objectname														| MANDATORY
 // 2. radius has to be int > 0 and defines the radius around the position. If set to true it will instead return a position inside a trigger/marker passed in the 1. parameter	| OPTIONAL - default is 0
 // 3. minimal distance from center, has to be int > 0 and > radius		 													| OPTIONAL - default is 0
-// 4. Minimal and maximal angle from center. Array: [minAngle,maxAngle] with both values being integers from 0- 360							| OPTIONAL - default is [0,360]
+// 4. Angle from center. Integer value between 0 and 360						| OPTIONAL - default is (random 360)
 // 5. road (bool) forces pos to be placed on road 																	| OPTIONAL - default is false
 // 6. building allowed (bool) enables the position to be in/on a building														| OPTIONAL - default is false
 // 7. water allowed (bool) enables the position to be on water as well														| OPTIONAL - default is false
 //
 // EXAMPLES
 // ["spawnmarker"] call ws_fnc_getPos; - turns the marker location into a position array
-// ["spawnmarker",0,0,[0,360],true] call ws_fnc_getPos; - gets a position on a road in closest possible distance to the marker location
+// ["spawnmarker",0,0,0,true] call ws_fnc_getPos; - gets a position on a road in closest possible distance to the marker location
 // [church,250] call ws_fnc_getPos; - gets a position in 250m radius to the object named "church"
-// [v1,500,100,[0,180],false,true] call ws_fnc_getPos; - gets a position in 500m radius, 100m minimal distance and a 180° angle to the object named "v1" and also allows position to be on a building
+// [v1,500,100,180,false,true] call ws_fnc_getPos; - gets a position in 500m radius, 100m minimal distance and a 180° angle to the object named "v1" and also allows position to be on a building
 
 private ["_debug","_count","_posloc","_pos","_posradius","_mindis","_dir","_road","_building","_water","_posX","_posY"];
 
