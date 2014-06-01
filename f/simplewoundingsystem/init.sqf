@@ -7,11 +7,11 @@ _unit = _this select 0;
 
 
 // add breifing
-if(isNil "f_wound_breifing") then
+if(isNil "f_wound_briefing") then
 {
-	f_wound_breifing = true;
+	f_wound_briefing = true;
 };
-if(f_wound_breifing) then
+if(f_wound_briefing) then
 {
 	[] spawn
 	{
