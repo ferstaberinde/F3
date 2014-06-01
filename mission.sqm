@@ -5764,7 +5764,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitFIA_CO_D";
-					init="GrpNATO_CO = group this; [""vd"",this] call f_fnc_assignGear;";
+					init="GrpFIA_CO = group this; [""vd"",this] call f_fnc_assignGear;";
 					description="FIA Driver (Repair)";
 				};
 			};
@@ -5823,7 +5823,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitFIA_DC_D";
-					init="GrpNATO_DC = group this; [""vd"",this] call f_fnc_assignGear;";
+					init="GrpFIA_DC = group this; [""vd"",this] call f_fnc_assignGear;";
 					description="FIA Driver (Repair)";
 				};
 			};
