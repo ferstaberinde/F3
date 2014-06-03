@@ -88,7 +88,7 @@ switch (_type) do
             _unit = f_cam_listUnits select (_args select 1);
             if(!isnil "_unit") then
             {
-                f_cam_camera camSetTarget _unit;
+           //     f_cam_camera camSetTarget _unit;
                 f_cam_curTarget = _unit;
                 if(f_cam_toggleCamera) then
                 {
