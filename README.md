@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-1-0 RC3
+* Version: 3-1-0 RC4
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-1-0 RC4 | 03 JUN 2014 | Patch release - Various improvements (see change history).
 * 3-1-0 RC3 | 29 MAY 2014 | Patch release - Various improvements (see change history).
 * 3-1-0 RC2 | 28 MAY 2014 | Patch release - Various improvements (see change history).
 * 3-1-0 RC1 | 24 MAY 2014 | Patch release - Various improvements (see change history).
@@ -221,6 +222,14 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-1-0 RC4 | 03 JUN 2014
+
+* Fixed AI Skill Selector component: removed references to precursor component.
+* Fixed F3 Folk ARPS Platoons component: incorrect group names for some FIA groups.
+* Fixed F3 Folk ARPS Assign Gear Clothing component: incorrect uniforms for FIA drivers.
+* Fixed F3 Simple Wounding System component: typo with variable name.
+* Fixed F3 Spectator Script component: tags and camera issues.
 
 3-1-0 RC3 | 29 MAY 2014
 
