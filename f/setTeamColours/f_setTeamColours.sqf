@@ -13,7 +13,7 @@ if (!isDedicated && (isNull player)) then
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_unit","_isFireteam"];
+private ["_unit","_isFireteam","_white","_red","_blue","_yellow","_green"];
 
 // ====================================================================================
 
