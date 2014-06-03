@@ -30,7 +30,7 @@ if(f_var_acre == 1) then
 // Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
 
 _newUnit =  createAgent  ["VirtualMan_F", [0,0,0], [], 0, "FORM"];
-_newUnit enableSimulationGlobal false;
+
 selectPlayer _newUnit;
 deleteVehicle _unit;
 
@@ -39,10 +39,11 @@ deleteVehicle _unit;
 // create the camera and set it up.
 f_cam_camera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
 f_cam_camera cameraEffect ["internal", "BACK"];
-f_cam_camera camSetTarget _oldUnit;
+f_cam_fakecamera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
+f_cam_camera camSetTarget f_cam_fakecamera;
 f_cam_curTarget = _oldUnit;
 
-cameraEffectEnableHUD false;
+cameraEffectEnableHUD true;
 f_cam_camera camCommit 0;
 showCinemaBorder false;
 f_cam_MouseMoving = false;
