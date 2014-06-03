@@ -12,7 +12,7 @@ private ["_weather","_missionOvercast","_MissionRain","_MissionRainbow","_Missio
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
 _weather = _this select 0;
-_transition = if (count _this > 1) then {_this select 1} else {0};
+_transition = if (count _this > 1) then {_this select 1} else {false};
 
 _MissionOvercast = 0;
 _MissionRain = 0;
@@ -25,22 +25,22 @@ _MissionHumidity = 0;
 
 // ====================================================================================
 
-// SELECT MISSION TIME OF DAY
-// Using the value of _timeOfDay, a new date is set.
+// SELECT MISSION WEATHER
+// Using the value of _weather, new weather conditions are set.
 
 switch (_weather) do
 {
 // Clear (Calm)
 	case 0:
 	{
-		_MissionOvercast = 0.01;
+		_MissionOvercast = 0;
 		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0;
 		_MissionWindGusts = 0;
-		_MissionWaves = 0.1;
-		_MissionHumidity = 0.2;
+		_MissionWaves = 0;
+		_MissionHumidity = 0;
 	};
 // Clear (Light Winds)
 	case 1:
@@ -142,9 +142,11 @@ switch (_weather) do
 
 // ====================================================================================
 
-// SET MISSION CONDITIONS
+// SET MISSION WEATHER
 // Use new values to set
 // mission conditions on server and all clients (including JIP clients).
+
+if (typeName _transition == typeName 0) then {
 
 _transition setOvercast  _MissionOvercast;
 _transition setRain _MissionRain;
@@ -152,6 +154,16 @@ _transition setRainbow _MissionRainbow;
 _transition setWindStr  _MissionWindStr;
 _transition setWindForce _MissionWindGusts;
 _transition setWaves _MissionWaves;
+
+} else {
+	0 setOvercast  _MissionOvercast;
+	0 setRain _MissionRain;
+	0 setRainbow _MissionRainbow;
+	0 setWindStr  _MissionWindStr;
+	0 setWindForce _MissionWindGusts;
+	0 setWaves _MissionWaves;
+	forceWeatherChange;
+};
 
 // ====================================================================================
 

@@ -9,4 +9,7 @@ _paramArray = paramsArray;
 	_paramCode = ( getText (missionConfigFile >> "Params" >> _paramName >> "code"));
 	_code = format[_paramCode, _paramValue];
 	call compile _code;
+	if (isServer) then {
+		publicVariable _paramName;
+	};
 } foreach _paramArray;

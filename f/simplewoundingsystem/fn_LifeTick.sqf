@@ -11,7 +11,8 @@ _unit = _this;
 	while{alive _unit} do
 	{
 		_downed = _unit getVariable ["revive_down",false];
-		if(_downed) then
+		_bleeding = _unit getVariable ["revive_bleeding",false];
+		if(_downed || _bleeding) then
 		{
 			[] call f_fnc_WoundedEffect;
 		};
@@ -25,6 +26,11 @@ while {alive _unit} do
 	_downed = _unit getVariable ["revive_down",false];
 	_bleeding = _unit getVariable ["revive_bleeding",false];
 	_blood = _unit getVariable ["revive_blood",100];
+	if(_bleeding && damage _unit < 0.26) then
+	{
+		// stops units from not being able to first aid.
+		_unit setdamage 0.26;
+	};
     if(_downed || _bleeding) then
     {
     	// blood loss

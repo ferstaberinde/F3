@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_fog","_strenght","_decay","_base"];
+private ["_fog","_strength","_decay","_base"];
 
 // ====================================================================================
 
@@ -15,7 +15,7 @@ _fog = _this select 0;
 _transition = if (count _this > 1) then {_this select 1} else {0};
 
 _strength = 0;	// Value for fog at base level
-_decay = 0; 	// Decay of fog density with altitude. If set to 0 fog strenght is consistent throughout.
+_decay = 0; 	// Decay of fog density with altitude. If set to 0 fog strength is consistent throughout.
 _base = 0; 		// Base altitude of fog (in meters). Up until this height fog does *not* loose density.
 
 // ====================================================================================

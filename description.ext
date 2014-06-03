@@ -7,7 +7,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 373;
+	maxPlayers = 405;
 };
 
 // ============================================================================================
@@ -57,18 +57,25 @@ class cfgNotifications
 		difficulty[] = {}; // Required difficulty settings. All listed difficulties has to be enabled
 	};
 
-	// Notification for the F3 Safe Start Component
+	// Notifications for the F3 Safe Start Component
 	class SafeStart
 	{
 		title = "SAFE START";
 		description = "%1";
 		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
-		duration = 15;
+		duration = 59;
+	};
+	class SafeStartMissionStarting
+	{
+		title = "SAFE START";
+		description = "%1";
+		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+		duration = 5;
 	};
 
 	// Notification for the F3 Authorised Crew Component
 	class UnauthorisedCrew {
-		title= "Non-authorised crew!";
+		title= "NON-AUTHORISED CREW!";
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
 		duration = 10;
@@ -76,7 +83,7 @@ class cfgNotifications
 
 	// Notification for the F3 Authorised Crew Component
 	class MapClickTeleport {
-		title= "Teleport";
+		title= "NOTE";
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
 		duration = 2;
@@ -145,7 +152,7 @@ class Params
             values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
             texts[] = {"$STR_f_param_mission_timer_off","1","2","3","4","5","6","7","8","9","10","15"};
             default = 0;
-            code = "f_var_mission_timer = %1";
+            code = "f_param_mission_timer = %1";
     };
 
 // ============================================================================================
@@ -188,7 +195,7 @@ class Params
 
 // ============================================================================================
 
-// F3 - AI Skill Selector (A&D)
+// F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 //	class f_param_AISkill_BLUFOR

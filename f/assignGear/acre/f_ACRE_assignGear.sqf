@@ -61,9 +61,9 @@ _unit = _this select 1;					// expecting name of unit; originally passed by usin
 // DELETE ALL RADIOS
 // All previously assigned radios must be deleted, in order to set the radio frequencies per side.
 
-_clearRadiosHandle = _this execVM "f\assignGear\acre\fa_ACRE_clearRadios.sqf";
+_clearRadiosHandle = _this execVM "f\assignGear\acre\f_ACRE_clearRadios.sqf";
 
-waitUntil{scriptDone _clearRadiosHandle};
+waitUntil{sleep 0.1;scriptDone _clearRadiosHandle;};
 
 // ====================================================================================
 
@@ -240,6 +240,15 @@ switch (_typeofUnit) do
 		_unit addItem _radio2;
 	};
 
+// LOADOUT: ENGINEER
+	case "engm":
+	{
+		if(leader group _unit == _unit) then {
+				_unit addItem _radio1;
+			};
+		_unit addItem _radio2;
+	};
+
 // LOADOUT: RIFLEMAN
 	case "r":
 	{
@@ -260,6 +269,12 @@ switch (_typeofUnit) do
 
 // LOADOUT: GRENADIER
 	case "gren":
+	{
+		//_unit addItem _radio2;
+	};
+
+// LOADOUT: GRENADIER
+	case "uav":
 	{
 		//_unit addItem _radio2;
 	};
