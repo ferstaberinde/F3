@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_grp","_joinDistance","_alive"];
+private ["_grp","_joinDistance"];
 
 // ====================================================================================
 
@@ -29,8 +29,10 @@ while {true} do
 // We begin by establishing how many units remain alive in the group. We use this to
 // establish a baseline value to compare against.
 
-_alive = {alive _x} count (units _grp);
-if (_alive == 0) exitWith {[player] execVM "f\JIP\f_JIP_addReinforcementOptionsAction.sqf";};
+if ({alive _x} count (units _grp) == 0) exitWith {
+	[player] execVM "f\JIP\f_JIP_addReinforcementOptionsAction.sqf";
+	["JIP",[format ["All members of %1 have died. Please select a new group",_grp]]] call BIS_fnc_showNotification;
+};
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -40,15 +42,23 @@ if (f_var_debugMode == 1) then
 
 // ====================================================================================
 
+sleep 3;
+
 // CHECK PROXIMITY
 // We then check how many of the units are within the required proximity to the
-// objective; if all units qualify then we exit the script.
+// objective; if all units qualify then we exit the loop.
 
-if (((leader _grp) distance player) < _joinDistance) exitWith {[player] joinSilent _grp;};
+	if (((leader _grp) distance player) < _joinDistance) exitWith {
+		[player] joinSilent _grp;
 
-// ====================================================================================
+		["JIP",[format ["You have joined %1",_grp]]] call BIS_fnc_showNotification;
 
-sleep 3;
+		sleep 1;
+
+		// CREATE LOCAL FT MARKERS
+		// After the player has joined his new group, the FT member markers are restored
+		[] spawn f_fnc_SetLocalFTMemberMarkers;
+	};
+
 };
 
-// ====================================================================================
