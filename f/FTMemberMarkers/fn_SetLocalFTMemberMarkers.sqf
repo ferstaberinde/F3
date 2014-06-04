@@ -42,11 +42,13 @@ f_fnc_SetTeamValue =
 			if(!(_x in f_var_HandlerGroup) && alive _x) then
 			{
 				[_x] execVM "f\FTMemberMarkers\f_localFTMemberMarker.sqf";
-				f_var_HandlerGroup = f_var_HandlerGroup  + [_x];
+				f_var_HandlerGroup set [count f_var_HandlerGroup,_x];
 			};
 		} forEach units (group player);
 	sleep 5;
 	};
+
+	f_var_HandlerGroup = [];
 };
 
 // ====================================================================================
