@@ -82,16 +82,13 @@ switch (_mkrType) do
 // ====================================================================================
 
 // UPDATE MARKER POSITION
-// As long as certain conditions are met (the unit is alive) the marker
+// As long as certain conditions are met (the unit exists) the marker
 // position is updated periodically. This only happens locally - so as not to burden
 // the server.
 
-for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
+while {!isNull _unt} do
 {
-	if (alive _unt) then
-	{
 	_mkrName setMarkerPosLocal [(getPos _unt select 0),(getPos  _unt select 1)];
-	};
 	sleep 6;
 };
 

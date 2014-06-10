@@ -104,7 +104,7 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 		if (!_fill && {{isNull assignedVehicle _x} count _units > _emptyPositions}) then {
 			_run = false;
 
-			//Mark the index for deletion
+			//Remove groups that would need to be split up
 			_grpsT = _grpsT - [_grp];
 		};
 

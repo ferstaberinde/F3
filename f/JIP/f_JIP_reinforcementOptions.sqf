@@ -55,11 +55,14 @@ _joinDistance = 10;
 
 if (_grp != group player) then {
 	[player] joinSilent grpNull;
-	[_grp,_joinDistance] execVM "f\JIP\f_JIP_nearTargetGroupCheck.sqf";
 
-	["JIP",[format ["Selection successful. Get within 10m of %1 to link up.",_grp]]] call BIS_fnc_showNotification;
+	if (!isNull _grp) then {
+		[_grp,_joinDistance] execVM "f\JIP\f_JIP_nearTargetGroupCheck.sqf";
+		["JIP",[format ["Selection successful. Get within 10m of %1 to link up.",_grp]]] call BIS_fnc_showNotification;
+	};
+
 } else {
-	[] spawn f_fnc_SetLocalFTMemberMarkers;
+	//[] spawn f_fnc_SetLocalFTMemberMarkers;
 };
 
 

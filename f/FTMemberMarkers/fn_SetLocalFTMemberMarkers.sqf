@@ -10,6 +10,11 @@
 //
 // ====================================================================================
 
+
+// TODO:
+// MAKE SURE THIS CAN RUN ONLY ONE TIME AT THE SAME TIME (setVariable?)
+// CALLED FROM GROUP JOIN
+
 // MAKE SURE THE PLAYER INITIALIZES PROPERLY
 if (!isDedicated && (isNull player)) then
 {
@@ -35,7 +40,7 @@ f_fnc_SetTeamValue =
 
 [] spawn {
 	f_var_HandlerGroup = [];
-	while{alive player} do
+	while{!isNull player} do
 	{
 		{
 			// check if we already are drawing the FT marker and that _x is alive
@@ -48,7 +53,7 @@ f_fnc_SetTeamValue =
 	sleep 5;
 	};
 
-	f_var_HandlerGroup = [];
+	//f_var_HandlerGroup = [];
 };
 
 // ====================================================================================

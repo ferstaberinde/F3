@@ -9,6 +9,10 @@ if(count _this >= 5) then
 {
 	_forced = _this select 4;
 };
+
+// Make sure the unit exists (can happen if players JIP in missions with no respawn)
+if (isNil "_unit") then {_unit = player};
+
 // escape the script if you are not a seagull
 if (typeof _unit != "seagull" && !_forced) ExitWith {};
 
@@ -30,11 +34,11 @@ if(f_var_acre == 1) then
 // Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
 
 _newUnit =  createAgent  ["VirtualMan_F", [0,0,0], [], 0, "FORM"];
+_newUnit hideObjectGlobal true;
+_newUnit enableSimulationGlobal false;
 
 selectPlayer _newUnit;
 deleteVehicle _unit;
-
-
 
 // create the camera and set it up.
 f_cam_camera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];

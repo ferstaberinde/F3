@@ -14,6 +14,9 @@ private ["_unit","_corpse"];
 _unit = _this select 0;
 _corpse = _this select 1;
 
+// Make sure the unit exists (can happen if players JIP in missions with no respawn)
+if (isNil "_unit") then {_unit = player};
+
 // ====================================================================================
 
 // CHECK FOR GLOBAL VARIABLES

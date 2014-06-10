@@ -43,7 +43,10 @@ while {true} do {
 			if (_allowDifferentSide || side player == side _nearGroup) then {
 				_actionString = format["Join group: %1", _nearGroup];
 
-				f_groupJoinAction = player addAction [_actionString, {[player] joinSilent (_this select 3)}, _nearGroup, 0, false, true, "", "_this == player"];
+				f_groupJoinAction = player addAction [_actionString, {
+					[player] joinSilent (_this select 3);
+					["JIP",[format ["You have joined %1.",(_this select 3)]]] call BIS_fnc_showNotification;
+				}, _nearGroup, 0, false, true, "", "_this == player"];
 
 				// Once player leaves the group leader's vicinity, remove action
 				waitUntil {sleep 0.1;player distance _nearUnit > _actionDistance};
