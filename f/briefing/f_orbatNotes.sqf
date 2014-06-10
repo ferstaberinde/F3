@@ -25,9 +25,12 @@ _hiddenGroups = [];
 // Remove groups we don't want to show
 _groups = _groups - _hiddenGroups;
 
-// Loop through the group, print out group ID and leader name
+// Loop through the group, print out group ID, leader name and members
 {
 	_orbatText = _orbatText + format["%1 %2", _x, name leader _x] + "<br />";
+	{
+		_orbatText = _orbatText + format["|- %1", name _x] + "<br />";
+	} forEach (units _x - [leader _x]);
 } forEach _groups;
 
 _veharray = [];
@@ -56,7 +59,7 @@ if (count _veharray > 0) then {
 
 		_orbatText =_orbatText + "<br />";
 		{
-			_orbatText = _orbatText + format["%1",name _x];
+			_orbatText = _orbatText + format["|- %1",name _x];
 			if (driver vehicle _x == _x) then {_orbatText =_orbatText +" (D)"};
 			if (gunner vehicle _x == _x) then {_orbatText =_orbatText +" (G)"};
 			if (commander vehicle _x == _x) then {_orbatText =_orbatText +" (C)"};
