@@ -143,20 +143,6 @@ class Params
 
 // ============================================================================================
 
-// F3 - ACRE Support
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
-
-    class f_param_acre
-    {
-            title = "ACRE";
-            values[] = {0,1};
-            texts[] = {"Off","On"};
-            default = 0;
-            code = "f_var_acre = %1";
-    };
-
-// ============================================================================================
-
 // F3 - Mission Timer/Safe Start
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
 
