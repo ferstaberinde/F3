@@ -24,7 +24,7 @@ _hiddenGroups = [];
 // Remove groups we don't want to show
 _groups = _groups - _hiddenGroups;
 
-// Loop through the group, print out group ID, leader name and members
+// Loop through the group, print out group ID and leader name
 {
 	_orbatText = _orbatText + format["%1 %2", _x, name leader _x] + "<br />";
 } forEach _groups;
