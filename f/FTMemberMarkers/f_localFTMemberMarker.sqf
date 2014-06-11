@@ -64,7 +64,7 @@ while{alive _unit && (_unit in f_var_HandlerGroup)} do
 
 // ====================================================================================
 
-//Clear up obsolete markers
+//He's dead Jim, let's clear up obsolete markers
 deleteMarkerLocal _mkrBorder;
 deleteMarkerLocal _mkr;
 
