@@ -10,6 +10,7 @@ if (!isNull player) then {
 _unit = _this select 0;
 _oldUnit = _this select 1;
 _forced = false;
+
 	if(count _this >= 5) then
 	{
 		_forced = _this select 4;
@@ -17,18 +18,13 @@ _forced = false;
 
 };
 
-player globalchat format ["%1",[_unit,_oldUnit,_forced,typeOf _unit]];
-
 // escape the script if you are not a seagull
-if (typeof _unit != "seagull" && !_forced) ExitWith {player globalchat "exiting"};
+if (typeof _unit != "seagull" && !_forced) ExitWith {};
 
 // disable this to instantly switch to the spectator script.
-
 if (!_forced) then {
 	waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true]};
 };
-
-player globalchat "finished";
 
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
