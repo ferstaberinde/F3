@@ -137,16 +137,16 @@ class Params
 
 // ============================================================================================
 
-// F3 - ACRE Support
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
+// F3 - Radio framework
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-    class f_param_acre
+    class f_param_radios
     {
-            title = "ACRE";
-            values[] = {0,1};
-            texts[] = {"Off","On"};
+            title = "Radio system";
+            values[] = {0,1,2};
+            texts[] = {"Off","ACRE", "TFR"};
             default = 0;
-            code = "f_var_acre = %1";
+            code = "f_var_radios = %1";
     };
 
 // ============================================================================================
@@ -449,6 +449,18 @@ class CfgFunctions
 		{
 			file = "f\preMount";
 			class mountGroups{};
+		};
+		class radios
+		{
+			file = "f\radios";
+			class acre_removeRadios{};
+			class acre_addRadios{};
+			class acre_setRadioFrequencies{};
+			class acre_configureSpectatorChat{};
+			class tfr_removeRadios{};
+			class tfr_addRadios{};
+			class tfr_setRadioFrequencies{};
+			class tfr_configureSpectatorChat{};
 		};
 		#include "f\simplewoundingsystem\config.hpp"
 		#include "f\spect\functions.hpp"
