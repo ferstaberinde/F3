@@ -17,7 +17,6 @@ _hiddenGroups = [];
 {
 	// Add to ORBAT if side matches, group isn't already listed, and group has players
 	if ((side _x == side group player) && !(_x in _groups) && ({isPlayer _x} count units _x) > 0) then {
-	//if ((side _x == side group player) && !(_x in _groups)) then {
 		_groups = _groups + [_x];
 	};
 } forEach allGroups;
@@ -28,9 +27,6 @@ _groups = _groups - _hiddenGroups;
 // Loop through the group, print out group ID, leader name and members
 {
 	_orbatText = _orbatText + format["%1 %2", _x, name leader _x] + "<br />";
-	{
-		_orbatText = _orbatText + format["|- %1", name _x] + "<br />";
-	} forEach (units _x - [leader _x]);
 } forEach _groups;
 
 _veharray = [];
