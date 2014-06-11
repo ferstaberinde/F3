@@ -36,7 +36,7 @@ _sleep = 3;
 // player is in a non-cargo position within an actual vehicle, the appropriate view
 // distance is set.
 
-while {true} do {
+while {!isNull player} do {
 	_veh = vehicle player;
 	_seat = "";
 	_vd = f_var_viewDistance_default;

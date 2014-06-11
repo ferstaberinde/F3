@@ -2,19 +2,30 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
+_unit = cameraOn;
+_oldUnit = playableUnits select 0;
+_forced = true;
+
+if (!isNull player) then {
 _unit = _this select 0;
 _oldUnit = _this select 1;
 _forced = false;
-if(count _this >= 5) then
-{
-	_forced = _this select 4;
+
+	if(count _this >= 5) then
+	{
+		_forced = _this select 4;
+	};
+
 };
+
 // escape the script if you are not a seagull
 if (typeof _unit != "seagull" && !_forced) ExitWith {};
 
-
 // disable this to instantly switch to the spectator script.
-waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true]};
+if (!_forced) then {
+	waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true]};
+};
+
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
 	// disable effects death effects
@@ -30,11 +41,11 @@ if(f_var_acre == 1) then
 // Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
 
 _newUnit =  createAgent  ["VirtualMan_F", [0,0,0], [], 0, "FORM"];
+_newUnit hideObjectGlobal true;
+_newUnit enableSimulationGlobal false;
 
 selectPlayer _newUnit;
 deleteVehicle _unit;
-
-
 
 // create the camera and set it up.
 f_cam_camera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
