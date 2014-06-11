@@ -16,8 +16,8 @@ _hiddenGroups = [];
 
 {
 	// Add to ORBAT if side matches, group isn't already listed, and group has players
-	//if ((side _x == side group player) && !(_x in _groups) && ({isPlayer _x} count units _x) > 0) then {
-	if ((side _x == side group player) && !(_x in _groups)) then {
+	if ((side _x == side group player) && !(_x in _groups) && ({isPlayer _x} count units _x) > 0) then {
+	//if ((side _x == side group player) && !(_x in _groups)) then {
 		_groups = _groups + [_x];
 	};
 } forEach allGroups;
