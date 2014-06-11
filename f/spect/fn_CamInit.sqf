@@ -20,11 +20,27 @@ if(!isnil "BIS_fnc_feedback_allowPP") then
 	// disable effects death effects
 	BIS_fnc_feedback_allowPP = false;
 };
-// if acre is enabled set player to acre channel
-if(f_var_acre == 1) then
-{
-	[true] call acre_api_fnc_setSpectator;
+
+// Set spectator mode for whichever radio system is in use
+switch (f_var_radios) do {
+
+  // No radio system, do nothing
+  case 0: {
+
+  };
+
+  // ACRE
+  case 1: {
+    [true] call acre_api_fnc_setSpectator;
+  };
+
+  // TFR
+  case 2: {
+    [_unit, true] call TFAR_fnc_forceSpectator;
+  };
+
 };
+
 // ====================================================================================
 
 // Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
