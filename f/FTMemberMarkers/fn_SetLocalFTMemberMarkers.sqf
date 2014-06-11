@@ -10,11 +10,6 @@
 //
 // ====================================================================================
 
-
-// TODO:
-// MAKE SURE THIS CAN RUN ONLY ONE TIME AT THE SAME TIME (setVariable?)
-// CALLED FROM GROUP JOIN
-
 // MAKE SURE THE PLAYER INITIALIZES PROPERLY
 if (!isDedicated && (isNull player)) then
 {

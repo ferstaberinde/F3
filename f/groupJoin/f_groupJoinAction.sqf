@@ -46,6 +46,12 @@ while {true} do {
 				f_groupJoinAction = player addAction [_actionString, {
 					[player] joinSilent (_this select 3);
 					["JIP",[format ["You have joined %1.",(_this select 3)]]] call BIS_fnc_showNotification;
+					_unit = player;
+					{
+						if (isPlayer _x) then {
+							[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",_x] spawn BIS_fnc_MP;
+						};
+					} forEach (units (_this select 3) - [_unit]);
 				}, _nearGroup, 0, false, true, "", "_this == player"];
 
 				// Once player leaves the group leader's vicinity, remove action

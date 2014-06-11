@@ -53,11 +53,10 @@ sleep 3;
 
 		["JIP",[format ["You have joined %1",_grp]]] call BIS_fnc_showNotification;
 
-		sleep 1;
+		_unit = player;
+		[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",units (_this select 3) - [_unit]] spawn BIS_fnc_MP;
 
-		// CREATE LOCAL FT MARKERS
-		// After the player has joined his new group, the FT member markers are restored
-		[] spawn f_fnc_SetLocalFTMemberMarkers;
+		sleep 1;
 	};
 
 };
