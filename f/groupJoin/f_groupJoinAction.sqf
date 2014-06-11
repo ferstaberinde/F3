@@ -11,7 +11,6 @@ if (isDedicated) exitWith{};
 // ====================================================================================
 
 // MAKE SURE THE PLAYER INITIALIZES PROPERLY
-
 if (!isDedicated && (isNull player)) then
 {
     waitUntil {sleep 0.1; !isNull player};

@@ -2,6 +2,19 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
+// Only run this for players
+if (isDedicated) exitWith{};
+
+// ====================================================================================
+
+// MAKE SURE THE PLAYER INITIALIZES PROPERLY
+if (!isDedicated && (isNull player)) then
+{
+    waitUntil {sleep 0.1; !isNull player};
+};
+
+// ====================================================================================
+
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_unit","_corpse"];
@@ -14,8 +27,8 @@ private ["_unit","_corpse"];
 _unit = _this select 0;
 _corpse = _this select 1;
 
-// Make sure the unit exists (can happen if players JIP in missions with no respawn)
-if (isNil "_unit") then {_unit = player};
+// Exit if the unit doesn't exist (can occur when JIPing into missions with no respawn)
+if (isNil "_unit") exitWith {};
 
 // ====================================================================================
 
