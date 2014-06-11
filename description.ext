@@ -70,7 +70,7 @@ class cfgNotifications
 		title = "SAFE START";
 		description = "%1";
 		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
-		duration = 5;
+		duration = 3;
 	};
 
 	// Notification for the F3 Authorised Crew Component
@@ -78,7 +78,7 @@ class cfgNotifications
 		title= "NON-AUTHORISED CREW!";
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
-		duration = 10;
+		duration = 3;
 	};
 
 	// Notification for the F3 Authorised Crew Component
@@ -86,7 +86,7 @@ class cfgNotifications
 		title= "NOTE";
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
-		duration = 2;
+		duration = 3;
 	};
 
 	// Notification for the F3 JIP Component
@@ -94,7 +94,7 @@ class cfgNotifications
 		title= "REINFORCEMENTS";
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\flag_ca.paa";
-		duration = 5;
+		duration = 3;
 	};
 };
 
