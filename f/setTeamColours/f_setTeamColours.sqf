@@ -20,9 +20,13 @@ private ["_unit","_isFireteam","_white","_red","_blue","_yellow","_green"];
 // SET CUSTOM VARIABLES
 // These variables govern the behaviour of the script
 
+// Colors will be set for groups of leaders with these suffixes
+_leaders = ["_FTL"];
+
+// Set suffixes for each color
 _white = [];
-_red = ["_RAT","_FTL"];
-_blue = ["_AR","_AAR"];
+_red = ["_AR","_AAR"];
+_blue = ["_AT","_FTL"];
 _yellow = [];
 _green = [];
 
@@ -33,13 +37,17 @@ _green = [];
 sleep 10;
 
 _unit = player;
+_isFireteam = false;
 
 // ====================================================================================
 
 // CHECK GROUP SIZE
 // If the group isn't a full fireteam, leave teams as default.
 
-_isFireteam = ["_FTL", format["%1",(leader (group _unit))]] call BIS_fnc_inString;
+{
+	if ([_x, format["%1",(leader (group _unit))]] call BIS_fnc_inString) exitWith {_isFireteam = true;}
+} forEach _leaders;
+
 if(!_isFireteam) exitWith {};
 
 // SET TEAM COLOURS

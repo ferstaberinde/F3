@@ -3,7 +3,7 @@
 // ==================================================================
 // draw tags
 if(!f_cam_toggleTags) exitWith{};
-_ents = (getpos f_cam_camera) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], 1000];
+_ents = (getpos f_cam_camera) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], 500];
 {
 	if(alive _x && {_x isKindOf "SoldierWB"} && !(_x iskindof "VirtualMan_F")|| {alive _x && (count crew _x) > 0 && !(_x iskindof "VirtualMan_F")}) then
 	{
