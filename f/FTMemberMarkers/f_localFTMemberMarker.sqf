@@ -63,7 +63,8 @@ while{alive _unit && (_unit in f_var_HandlerGroup)} do
 };
 
 // ====================================================================================
-//He's dead jim, lets clean up.
+
+//He's dead Jim, let's clear up obsolete markers
 deleteMarkerLocal _mkrBorder;
 deleteMarkerLocal _mkr;
 

@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-1-0 RC4
+* Version: 3-1-0 RC5
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,10 +29,11 @@
 
 Version | Date | Notes
 
-* 3-1-0 RC4 | 03 JUN 2014 | Patch release - Various improvements (see change history).
-* 3-1-0 RC3 | 29 MAY 2014 | Patch release - Various improvements (see change history).
-* 3-1-0 RC2 | 28 MAY 2014 | Patch release - Various improvements (see change history).
-* 3-1-0 RC1 | 24 MAY 2014 | Patch release - Various improvements (see change history).
+* 3-1-0 RC5 | 11 JUN 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC4 | 03 JUN 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC3 | 29 MAY 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC2 | 28 MAY 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC1 | 24 MAY 2014 | Internal release - Various improvements (see change history).
 * 3-0-9A    | 12 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-9     | 09 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-8     | 28 DEC 2013 | Patch release - Various improvements (see change history).
@@ -222,6 +223,30 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-1-0 RC5 | 11 JUN 2014
+
+* Added Radio Systems Support component (replaces ACRE support component):
+ * Supports ACRE and TFR systems via single mission parameter.
+ * All radios cleared to avoid duplication of radio items.
+ * Optional: radio frequencies split based on unit's side.
+ * Spectator chat correctly handled for all players.
+ * Radios assigned based on assignGear calls (from unit init).
+ * ACRE only: vehicles filled with radios, depending on size.
+ * New component works separately from the F3 Folk ARPS Assign Gear Script component  for locality purposes.
+* Updated Fireteam Member Markers component:
+ * Team colours are now assigned in arrays at top of script (easier to modify, same functionality).
+* Updated Join Group Action component: new notifications.
+* Updated ORBAT Notes component: 
+ * ORBAT lists vehicles, crew and any loaded elements.
+ * ORBAT lists individual medics (under their element leader).
+* Fixed F3 Spectator Script component:
+ * Fixed issues for players joining into spectator mode during a no-respawn mission.
+ * Fixed various tags and camera issues.
+* Fixed several components for use with JIP/respawn:
+ * Fireteam Member Markers component.
+ * F3 Folk ARPS Group Markers component (specifically for specialist markers).
+ * Join Group Action component.
 
 3-1-0 RC4 | 03 JUN 2014
 

@@ -13,7 +13,22 @@ if (!isDedicated && (isNull player)) then
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_unit","_isFireteam"];
+private ["_unit","_isFireteam","_white","_red","_blue","_yellow","_green"];
+
+// ====================================================================================
+
+// SET CUSTOM VARIABLES
+// These variables govern the behaviour of the script
+
+// Colors will be set for groups of leaders with these suffixes
+_leaders = ["_FTL"];
+
+// Set suffixes for each color
+_white = [];
+_red = ["_AR","_AAR"];
+_blue = ["_AT","_FTL"];
+_yellow = [];
+_green = [];
 
 // ====================================================================================
 
@@ -21,31 +36,53 @@ private ["_unit","_isFireteam"];
 
 sleep 10;
 
-// ====================================================================================
-
-// SET KEY VARIABLES
-
 _unit = player;
+_isFireteam = false;
 
 // ====================================================================================
 
 // CHECK GROUP SIZE
 // If the group isn't a full fireteam, leave teams as default.
 
-if( (count (units (group _unit))) != 4 ) exitWith {};
+{
+	if ([_x, format["%1",(leader (group _unit))]] call BIS_fnc_inString) exitWith {_isFireteam = true;}
+} forEach _leaders;
 
-_isFireteam = ["_FTL", format["%1",(leader (group _unit))]] call BIS_fnc_inString;
 if(!_isFireteam) exitWith {};
 
 // SET TEAM COLOURS
-
 {
-	if((["_AR", format ["%1",_x]] call BIS_fnc_inString) || (["_AAR", format ["%1",_x]] call BIS_fnc_inString)) then
+	private ["_unit"];
+	_unit = _x;
+
 	{
-		_x assignTeam "BLUE";
-	}
-	else
+		if ([_x, format ["%1",_unit]] call BIS_fnc_inString) then {
+			_unit assignTeam "RED";
+		};
+	} forEach _red;
+
 	{
-		_x assignTeam "RED";
-	};
+		if ([_x, format ["%1",_unit]] call BIS_fnc_inString) then {
+			_unit assignTeam "blue";
+		};
+	} forEach _blue;
+
+	{
+		if ([_x, format ["%1",_unit]] call BIS_fnc_inString) then {
+			_unit assignTeam "yellow";
+		};
+	} forEach _yellow;
+
+	{
+		if ([_x, format ["%1",_unit]] call BIS_fnc_inString) then {
+			_unit assignTeam "green";
+		};
+	} forEach _green;
+
+	{
+		if ([_x, format ["%1",_unit]] call BIS_fnc_inString) then {
+			_unit assignTeam "white";
+		};
+	} forEach _white;
+
 } foreach units (group _unit);
