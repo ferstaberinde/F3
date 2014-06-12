@@ -44,7 +44,7 @@ if(!f_radios_settings_acre_disableFrequencySplit) then {
   _lrFreq = 0;
   for "_x" from 1 to 100 do {
     // Starting from 30MHz, add frequency with offset to list
-    _lrFreq = ((30) + _x) + _selectedOffset;
+    _lrFreq = ((36) + _x) + _selectedOffset;
     _lrFrequencies set [_x - 1, _lrFreq];
   };
 

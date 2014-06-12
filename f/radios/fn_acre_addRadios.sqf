@@ -27,8 +27,8 @@ if(_typeOfUnit != "NIL") then {
       // Set the list of units that get a 148
       _longRange = ["co", "dc", "m", "mmgg", "matg", "sn", "mtrg", "c", "p", "eng", "engm", "uav", "div"];
 
-      // If unit is leader of group and in the above list, add a 148
-      if((_unit == (leader (group _unit))) && (_typeOfUnit in _longRange)) then {
+      // If unit is in the above list, add a 148
+      if(_typeOfUnit in _longRange) then {
 
         _unit addItem "ACRE_PRC148";
 

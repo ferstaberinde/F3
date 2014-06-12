@@ -67,7 +67,7 @@ private [
 // This variable simply tracks the progress of the gear assignation process, for other
 // scripts to reference.
 
-f_var_assignGear_done = true;
+_unit setVariable ["f_var_assignGear_done",false,true];
 
 // ====================================================================================
 
@@ -129,9 +129,7 @@ if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
 // This variable simply tracks the progress of the gear assignation process, for other
 // scripts to reference.
 
-f_var_assignGear_done = true;
-
-// ====================================================================================
+_unit setVariable ["f_var_assignGear_done",true,true];
 
 // DEBUG
 
@@ -148,4 +146,4 @@ if (isNil "_carbine") then { //_carbine should exist unless no faction has been 
 	};
 };
 
-
+// ====================================================================================

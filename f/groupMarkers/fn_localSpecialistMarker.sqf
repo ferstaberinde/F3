@@ -86,17 +86,32 @@ switch (_mkrType) do
 // position is updated periodically. This only happens locally - so as not to burden
 // the server.
 
-for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
+while {alive _unt} do
 {
-	if (alive _unt) then
-	{
 	_mkrName setMarkerPosLocal [(getPos _unt select 0),(getPos  _unt select 1)];
-	};
 	sleep 6;
 };
 
 // ====================================================================================
 
+// RESET MARKER FOR RESPAWNING UNITS
+// If respawn is enabled we need to reset the marker should the unit die
 
+// Sleep for the set respawn delay plus a small grace period
+sleep (getNumber (missionconfigfile >> "RespawnDelay")) + 3;
 
+// Re-compile the unit variable using the initially passed string
+call compile format ["
+		waitUntil {
+		sleep 0.1;
+		!isnil '%1'
+		};
+		_unt = %1;
+
+	",_untName];
+
+// Check again if the unit is alive, if yes restart the marker function
+if (alive _unt) exitWith {
+	[_untName, _mkrType, _mkrText, _mkrColor] spawn f_fnc_localSpecialistMarker;
+};
 

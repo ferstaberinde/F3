@@ -49,7 +49,6 @@ if(_typeOfUnit != "NIL") then {
 
       if (_typeOfUnit in _rifradio) then {
         _unit linkItem _radio3;
-
       } else {
         if (_unit in _shortrange) then {
           _unit linkItem _radio2;

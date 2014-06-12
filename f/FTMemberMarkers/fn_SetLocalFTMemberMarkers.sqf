@@ -35,18 +35,20 @@ f_fnc_SetTeamValue =
 
 [] spawn {
 	f_var_HandlerGroup = [];
-	while{alive player} do
+	while{!isNull player} do
 	{
 		{
 			// check if we already are drawing the FT marker and that _x is alive
 			if(!(_x in f_var_HandlerGroup) && alive _x) then
 			{
 				[_x] execVM "f\FTMemberMarkers\f_localFTMemberMarker.sqf";
-				f_var_HandlerGroup = f_var_HandlerGroup  + [_x];
+				f_var_HandlerGroup set [count f_var_HandlerGroup,_x];
 			};
 		} forEach units (group player);
 	sleep 5;
 	};
+
+	//f_var_HandlerGroup = [];
 };
 
 // ====================================================================================

@@ -12,8 +12,8 @@ _vanillaRadio = "itemRadio";
 // ====================================================================================
 
 // REMOVE ALL RADIOS
-// Check for all items if they are a TFR radio. They shouldn't have a longrange
-// backpack: it's disabled by the init.sqf if the radio param is set to TFR.
+// Check all items, removing any TFR radios, using the TFR API call to distinguish 
+// between radios and normal items.
 
 { _isRadio = _x call TFAR_fnc_isRadio; if(_isRadio) then {_unit unlinkItem _x}; } foreach items _unit;
 { _isRadio = _x call TFAR_fnc_isRadio; if(_isRadio) then {_unit unlinkItem _x}; } foreach assignedItems _unit;

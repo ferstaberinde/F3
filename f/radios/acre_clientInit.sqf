@@ -24,8 +24,7 @@ if(alive player) then {
   [] call f_fnc_acre_setRadioFrequencies;
 
   // Wait for gear assignation to take place
-  waitUntil{!isNil "f_var_assignGear_done"};
-  waitUntil{f_var_assignGear_done};
+  waitUntil{(player getVariable ["f_var_assignGear_done", false])};
 
   // Add radios to each unit
   [] call f_fnc_acre_addRadios;
