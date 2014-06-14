@@ -8,7 +8,7 @@
 _briefing ="
 <br/>
 ADMIN SECTION<br/>
-This briefing section can only be seen by the current host.
+This briefing section can only be seen by the current admin.
 <br/><br/>
 ";
 
@@ -34,9 +34,8 @@ while {true} do {
 // ====================================================================================
 
 _briefing = _briefing + "
-<br/>
 ENDINGS<br/>
-These endings are available. Click on the highlighted title to execute.<br/><br/>
+These endings are available. To trigger an ending click on its link.<br/><br/>
 ";
 
 {
