@@ -8,7 +8,7 @@
 _briefing ="
 <br/>
 ADMIN SECTION<br/>
-This briefing section can only be see by the current host.
+This briefing section can only be seen by the current host.
 <br/><br/>
 ";
 
