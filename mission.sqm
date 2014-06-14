@@ -69,13 +69,11 @@ class Mission
 	{
 		briefingName="F3";
 		overviewText="*** Insert mission description here. ***";
-		startWeather=0.84999996;
+		startWeather=0;
 		startWind=0;
 		forecastWeather=1;
 		forecastWind=0;
 		forecastWaves=0;
-		rainForced=1;
-		lightningsForced=1;
 		wavesForced=1;
 		windForced=1;
 		year=2035;
