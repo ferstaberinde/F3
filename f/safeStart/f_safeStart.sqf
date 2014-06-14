@@ -12,17 +12,20 @@ if (!isDedicated && (isNull player)) then
 
 // ====================================================================================
 
+// Make sure the component only starts after the mission has initialized
+sleep 0.1;
+
 //Have the server setup the variables while clients wait for jip
 if(isServer) then
 {
-	pv_mission_timer = f_var_mission_timer;
+	pv_mission_timer = f_param_mission_timer;
 	publicVariable "pv_mission_timer";
 };
 
 // ====================================================================================
 
-//wait until server has initialized pv_mission_timer OR f_var_mission_timer was not set
-waituntil {sleep 3; ((!isNil "pv_mission_timer") || (f_var_mission_timer == 0));};
+//wait until server has initialized pv_mission_timer OR f_param_mission_timer was not set
+waituntil {sleep 3; ((!isNil "pv_mission_timer") || (f_param_mission_timer == 0));};
 
 // ====================================================================================
 

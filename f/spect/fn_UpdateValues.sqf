@@ -45,9 +45,16 @@ while {true} do
 		};
 	} foreach _tempArr;
 	{
+		_index = _x GetVariable ["f_spect_listBoxIndex",-1];
+		if(_index >= 0 && alive _x && {lbText [_listBox,_index] != name _x}) then
+		{
+			// there is no lbSetText, so just punt it out of the list and fix it up there..
+			lbDelete [_listBox,_index];
+			f_cam_listUnits = f_cam_listUnits - [_x];
+			[] call f_cam_checkIndex;
+		};
 		if(!alive _x) then
 		{
-			_index = _x GetVariable ["f_spect_listBoxIndex",-1];
 			if(_index >= 0) then
 			{
 				lbDelete [_listBox,_index];

@@ -185,18 +185,16 @@ switch (_mkrType) do
 // ====================================================================================
 
 // UPDATE MARKER POSITION
-// As long as certain conditions are met (the group leader is alive) the marker
+// As long as certain conditions are met (the group exists) the marker
 // position is updated periodically. This only happens locally - so as not to burden
 // the server.
 
-for [{_i=0}, {_i<=10000}, {_i=_i+1}] do
+while {{!isNull _x} count units _grp > 0} do
 {
-	if ({alive _x} count units _grp > 0) then
-	{
 	_mkrName setMarkerPosLocal [(getPos leader _grp select 0),(getPos leader _grp select 1)];
-	};
 	sleep 6;
 };
+
 
 // ====================================================================================
 

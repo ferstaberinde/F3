@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-1-0 RC1
+* Version: 3-1-0 RC5
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,7 +29,11 @@
 
 Version | Date | Notes
 
-* 3-1-0 RC1 | 24 MAY 2014 | Patch release - Various improvements (see change history).
+* 3-1-0 RC5 | 11 JUN 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC4 | 03 JUN 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC3 | 29 MAY 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC2 | 28 MAY 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC1 | 24 MAY 2014 | Internal release - Various improvements (see change history).
 * 3-0-9A    | 12 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-9     | 09 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-8     | 28 DEC 2013 | Patch release - Various improvements (see change history).
@@ -219,6 +223,75 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-1-0 RC5 | 11 JUN 2014
+
+* Added Radio Systems Support component (replaces ACRE support component):
+ * Supports ACRE and TFR systems via single mission parameter.
+ * All radios cleared to avoid duplication of radio items.
+ * Optional: radio frequencies split based on unit's side.
+ * Spectator chat correctly handled for all players.
+ * Radios assigned based on assignGear calls (from unit init).
+ * ACRE only: vehicles filled with radios, depending on size.
+ * New component works separately from the F3 Folk ARPS Assign Gear Script component  for locality purposes.
+* Updated Fireteam Member Markers component:
+ * Team colours are now assigned in arrays at top of script (easier to modify, same functionality).
+* Updated Join Group Action component: new notifications.
+* Updated ORBAT Notes component: 
+ * ORBAT lists vehicles, crew and any loaded elements.
+ * ORBAT lists individual medics (under their element leader).
+* Fixed F3 Spectator Script component:
+ * Fixed issues for players joining into spectator mode during a no-respawn mission.
+ * Fixed various tags and camera issues.
+* Fixed several components for use with JIP/respawn:
+ * Fireteam Member Markers component.
+ * F3 Folk ARPS Group Markers component (specifically for specialist markers).
+ * Join Group Action component.
+
+3-1-0 RC4 | 03 JUN 2014
+
+* Fixed AI Skill Selector component: removed references to precursor component.
+* Fixed F3 Folk ARPS Platoons component: incorrect group names for some FIA groups.
+* Fixed F3 Folk ARPS Assign Gear Clothing component: incorrect uniforms for FIA drivers.
+* Fixed F3 Simple Wounding System component: typo with variable name.
+* Fixed F3 Spectator Script component: tags and camera issues.
+
+3-1-0 RC3 | 29 MAY 2014
+
+* Updated F3 Folk ARPS Platoons component:
+ * Added CO/DC driver (repair) slots (all factions).
+ * Added UAV Operator slots to FIA.
+* Updated MapClick Teleport component: added HALO option.
+* Updated Mission Conditions Selector component:
+ * Night option now features full moon.
+ * Other options adjusted (better dawn/dusk etc.).
+* Fixed ReadMe File Template component: removed ArmA 2 references.
+* Fixed F3 Folk ARPS Assign Gear Script component: incomplete lists of classes in headers.
+* Fixed F3 Spectator Script component: minor issues.
+* Fixed F3 Simple Wounding System component: minor issues.
+
+3-1-0 RC2 | 28 MAY 2014
+
+* Updated F3 Folk ARPS Platoons component:
+ * Ground vehicle drivers and selected helicopter crew members are now able to repair vehicles.
+ * Ground vehicle commanders have rangefinders.
+ * Fixed AAF DC group assignment.
+* Updated Safe Start component: 
+ * Changed frequency and duration of notifications.
+ * Changed name of parameter variable.
+* Fixed ACRE Support component: script path(s).
+* Fixed Debug Mode component: string paths (several were still referring to f\common)
+* Fixed F3 Folk ARPS Assign Gear Script component: 
+ * Removed blank between assignGear and ; in unit INIT lines.
+ * Removed nul = for unit INIT assignGear call.
+* Fixed F3 Folk ARPS JIP Reinforcement Options component: paths (were still referring to f\common).
+* Fixed F3 Folk ARPS Group Markers component: markers work for JIP players.
+* Fixed Mission Conditions Selector component: issue with overcast implementation.
+* Fixed PreMount component:
+ * Fixed incorrect function calls in modules for CSAT.
+ * Made more robust.
+* Fixed E&E and Casualties Cap components: ensured code spawned happens globally.
+* Fixed SP Editor issues (various).
 
 3-1-0 RC1 | 24 MAY 2014
 

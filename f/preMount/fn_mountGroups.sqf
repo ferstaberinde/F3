@@ -59,10 +59,11 @@ if ({isNil _x} count _grps > 0) then {
 	_grps set [_forEachIndex,_grp];
 
 	if (count (units _grp) == 0 || {isNull (assignedVehicle _x)} count (units _grp) == 0) then {
-	 	_grps = _grps - [_grp];
+	 	_grps set [_forEachIndex,grpNull];
 	};
 
 } forEach _grps;
+_grps = _grps - [grpNull];
 
 // ====================================================================================
 
@@ -89,9 +90,8 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 	_emptyPositions = _emptyPositions - (count crew _veh); 		// Substract number of crew already present in the vehicle
 	_vehicleRoles = (typeOf _veh) call bis_fnc_vehicleRoles;	// All available roles for the vehicle
 
-	// Temporary group
+	// Temporary group array
 	_grpsT = _grps;
-
 	// As long there are spare seats and groups left
 	while {_emptyPositions > 0 && count _grpsT > 0 && locked _veh < 2} do {
 		private ["_grp","_units","_run"];
@@ -101,8 +101,10 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 		_run = true;
 
 		// If fireteam cohesion should be kept count the available vehicle slots, compared to the units in the group that would need a seat
-		if (!_fill && {{vehicle _unit == _unit} count _units > _emptyPositions}) then {
+		if (!_fill && {{isNull assignedVehicle _x} count _units > _emptyPositions}) then {
 			_run = false;
+
+			//Remove groups that would need to be split up
 			_grpsT = _grpsT - [_grp];
 		};
 
@@ -115,22 +117,22 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 			   	_path = _x select 1;
 
 			   	// If the slot is not a cargo slot and crew should be slotted
-				if (_crew && {_slot != "CARGO" && vehicle _unit == _unit}) then{
+				if (_crew && {_slot != "CARGO" && isNull assignedVehicle _unit}) then{
 					if (_slot == "Driver" && (_veh emptyPositions "Driver") > 0 && !(lockedDriver _veh)) exitWith {_unit assignAsDriver _veh;_unit moveInDriver _veh;};
 					if (_slot == "Turret" && !(_veh lockedTurret _path) && isNull (_veh TurretUnit _path)) exitWith {_unit assignAsTurret [_veh,_path];_unit moveInTurret [_veh,_path];};
 
 					_crew = false;
 				};
 
-			   	if (_slot == "CARGO" && vehicle _unit == _unit && !(_veh lockedCargo (_path select 0))) then {
+			   	if (_slot == "CARGO" && isNull assignedVehicle _unit && !(_veh lockedCargo (_path select 0))) then {
 					_unit moveInCargo _veh; _unit assignAsCargoIndex [_veh,(_path select 0)];
 				};
 
-				// Set the vehicle role to a null-value so we can remove it later
+				// Set the used vehicle role to a null-value so we can remove it later
 				_vehicleRoles set [_forEachIndex,objNull];
 
-				// If the unit was assigned, remove it so we can use the next unit. If it wasn't, use it again to find a useable role
-				if (vehicle _unit == _veh) then {
+				// If the unit was assigned, remove it so we can use the next unit. If it wasn't, use it again to find a useable seat
+				if (!isNull (assignedVehicle _unit)) then {
 					_units = _units - [_unit];
 				};
 
@@ -141,16 +143,19 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 
 		    // Remove used vehicle roles and groups
 		    _vehicleRoles = _vehicleROles - [objNull];
-			_grpsT = _grpsT - [_grp];
+
+		    // Remove the processed group from the temporary array
+		    _grpsT = _grpsT - [_grp]
 		};
 
-		// Check if all units in the group have been assigned a vehicle, if yes, remove the group from the array.
-		if ({vehicle _unit != _unit} count units _grp == 0) then {_grps = _grps - [_grp];_grpsT = _grpsT - [_grp];};
+		// Check if all units in the group have been assigned a vehicle, remove group from both group arrays
+		if ({isNull assignedVehicle _x} count (units _grp) == 0) then {_grpsT = _grpsT - [_grp];_grps = _grps - [_grp]};
+
+		if (count _grpsT == 0) exitWith {};
 
 		// Recalculate the remaining seats on the vehicle
 		_emptyPositions = [typeOf _veh,true] call BIS_fnc_crewCount; // Count all available slots(this includes co-pilot, commander, main-gunner etc.)
 		_emptyPositions = _emptyPositions - (count crew _veh); // Substract number of crew already present in the vehicle
-
 	};
 
 } forEach _vehs;

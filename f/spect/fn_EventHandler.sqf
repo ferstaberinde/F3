@@ -88,7 +88,6 @@ switch (_type) do
             _unit = f_cam_listUnits select (_args select 1);
             if(!isnil "_unit") then
             {
-                f_cam_camera camSetTarget _unit;
                 f_cam_curTarget = _unit;
                 if(f_cam_toggleCamera) then
                 {
@@ -127,7 +126,6 @@ switch (_type) do
                 {
                     f_cam_mode = 0;
                     f_cam_camera cameraEffect ["internal", "BACK"];
-                    f_cam_camera camSetTarget f_cam_curTarget;
                 };
                 call F_fnc_ReloadModes;
 
@@ -244,7 +242,6 @@ switch (_type) do
             case 50:
             {
                 //_mapWindow = _displayDialog displayCtrl 1350;
-                //_fullmapWindow = _displayDialog displayCtrl 1360;
                 f_cam_mapMode = f_cam_mapMode +1;
                 if(f_cam_mapMode > 2) then
                 {
@@ -275,8 +272,10 @@ switch (_type) do
                         ctrlShow [2010,false];
                         ctrlShow [1350,false];
                         ctrlShow [1360,true];
+                        _displayDialog = (findDisplay 9228);
+                        _fullmapWindow = _displayDialog displayCtrl 1360;
                         ctrlMapAnimClear _fullmapWindow;
-                        _fullmapWindow ctrlMapAnimAdd [0, 0.1,getpos player];
+                        _fullmapWindow ctrlMapAnimAdd [0.001, 0.1,getpos f_cam_camera];
                         ctrlMapAnimCommit _fullmapWindow;
                     };
                 };
