@@ -51,6 +51,7 @@ if(_bool && alive _unit) then
 }
 else
 {
+	if(!(_unit getVariable ["revive_down",false])) exitWith {};
 	_unit setVariable ["revive_down",false,true];
 
 	// if the unit is not in a vehicle, play pretty animation otherwise just reset to thier default animation
