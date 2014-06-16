@@ -33,7 +33,7 @@ if(_typeOfUnit != "NIL") then {
         _unit addItem "ACRE_PRC148";
 
         // If unit is in the list of units that receive an extra long-range radio, add another 148
-        if(_unit in f_radios_settings_acre_extraRadios) then {
+        if(_typeOfUnit in f_radios_settings_acre_extraRadios) then {
           _unit addItem "ACRE_PRC148";
         };
 
