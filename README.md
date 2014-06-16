@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-1-0 RC5
+* Version: 3-1-0 RC6
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-1-0 RC6 | 16 JUN 2014 | Internal release - Various improvements (see change history).
 * 3-1-0 RC5 | 11 JUN 2014 | Internal release - Various improvements (see change history).
 * 3-1-0 RC4 | 03 JUN 2014 | Internal release - Various improvements (see change history).
 * 3-1-0 RC3 | 29 MAY 2014 | Internal release - Various improvements (see change history).
@@ -133,11 +134,11 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick
 * Documentation: Fer | Wolfenswan | Dogface
 * Producers: Fer | Wolfenswan
-* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | nolux | Pabstmirror | Snippers | Zerith
-* Special Thanks: Folk ARPS | Basterd ArmA | Black sh33p | Bourbon Warfare | Phantactical | Project Awesome | Team One Tactical | The Company
+* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Snippers | Zerith
+* Special thanks to everyone at: Folk ARPS | Basterd ArmA | Black sh33p | Bourbon Warfare | Phantactical | Pointfire | Project Awesome | Team One Tactical | The Company
 
 ### F2 Credits ###
 
@@ -223,6 +224,23 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-1-0 RC6 | 16 JUN 2014
+
+* Added Admin Briefing component:
+ * Lists endings and allows admin to invoke them by clicking a link.
+* Updated E&E Check component:
+ * Allows passing of side instead of array.
+ * Groups/units are now passed as an array of strings to prevent script-errors.
+ * Optional boolean (last parameter): toggle if to check playable units only (default: true).
+* Updated the F3 Simple Wounding System component:
+ * Made the release action created on yourself so its always around.
+ * Tweaked SetDowned.
+ * Added longer delay before system starts to allow for desync'd players..
+* Updated F3 Spectator Script component:
+ * Modified the freecam to use correct height in follow-mode.
+* Fixed typo in AI Skill Selector component.
+* Fixed error in Radio Systems Support component.
 
 3-1-0 RC5 | 11 JUN 2014
 
