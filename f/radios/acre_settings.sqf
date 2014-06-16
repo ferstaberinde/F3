@@ -12,6 +12,6 @@ f_radios_settings_acre_disableRadios = FALSE;
 // TRUE = Disable frequency seperation across sides
 f_radios_settings_acre_disableFrequencySplit = FALSE;
 
-// Unit types you want to give 2 long-range radios
-// E.G: ["co", "m"] would give the CO and all medics 2 long-range radios
+// Unit types you want to give an extra long-range radio
+// E.G: ["co", "m"] would give the CO and all medics an extra long-range radios
 f_radios_settings_acre_extraRadios = [""];

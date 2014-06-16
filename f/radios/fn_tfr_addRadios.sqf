@@ -50,7 +50,7 @@ if(_typeOfUnit != "NIL") then {
       if (_typeOfUnit in _rifradio) then {
         _unit linkItem _radio3;
       } else {
-        if (_unit in _shortrange) then {
+        if (_typeOfUnit in _shortrange) then {
           _unit linkItem _radio2;
         };
       };
@@ -79,7 +79,7 @@ if(_typeOfUnit != "NIL") then {
         };
       } else {
         // If unit is in the list of units that receive a long-range radio, do so.
-        if(_unit in f_radios_settings_tfr_backpackRadios) then {
+        if(_typeOfUnit in f_radios_settings_tfr_backpackRadios) then {
           _backpackItems = backpackItems player;
           removeBackpack _unit;
           _unit addBackpack _radio1;
