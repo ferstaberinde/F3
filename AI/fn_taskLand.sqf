@@ -57,7 +57,7 @@ _pilot = driver _helo;
 _grp = group _pilot;
 
 // Create an invisible helipad at location
-_hp = "Land_HelipadEmpty_F" createVehicle _pos;
+_hp = "Land_HelipadEmpty_F" createVehicle (_pos findEmptyPosition [0,100,typeOf _helo]);
 
 // Get helicopter to move towards the position
 _helo doMove _pos;

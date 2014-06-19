@@ -17,6 +17,7 @@ class WS
 			class selectRandom {};
 			class gameCheck {preInit=1;};
 			class collectMarkers {};
+			class collectObjects {};
 			class collectBuildings {};
 			class loadVehicle {};
 			class checkHC {};
