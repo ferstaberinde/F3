@@ -157,13 +157,13 @@
         <French> Capacité IA (OPFOR) </French>
       </Key>
        <Key ID="STR_f_param_AISkill_INDP">
-        <English> AI Skill (INDEPNDENT) </English>
-        <Czech> Úroveň AI (INDEPNDENT) </Czech>
-        <German> KI Stärke (INDEPNDENT) </German>
-        <Polish> Umiejętności SI (INDEPNDENT) </Polish>
-        <Russian> Навык ИИ (INDEPNDENT) </Russian>
-        <Spanish> Habilidad de la IA (INDEPNDENT) </Spanish>
-        <French> Capacité IA (INDEPNDENT) </French>
+        <English> AI Skill (INDEPENDENT) </English>
+        <Czech> Úroveň AI (INDEPENDENT) </Czech>
+        <German> KI Stärke (INDEPENDENT) </German>
+        <Polish> Umiejętności SI (INDEPENDENT) </Polish>
+        <Russian> Навык ИИ (INDEPENDENT) </Russian>
+        <Spanish> Habilidad de la IA (INDEPENDENT) </Spanish>
+        <French> Capacité IA (INDEPENDENT) </French>
       </Key>
       <Key ID="STR_f_param_AISkill_Option0">
         <English> Super </English>

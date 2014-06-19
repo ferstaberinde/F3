@@ -7,8 +7,9 @@
                         _x allowDamage true;
                         _x enableSimulation true;
         };
+
         _x hideObject false;
-        if (vehicle _x != _x) then {(vehicle _x) hideObject false};
+        //if (vehicle _x != _x) then {(vehicle _x) hideObject false};
 
 sleep 0.1;
 } forEach units _this;

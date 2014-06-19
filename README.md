@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-1-0 RC3
+* Version: 3-1-0
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,9 +29,13 @@
 
 Version | Date | Notes
 
-* 3-1-0 RC3 | 29 MAY 2014 | Patch release - Various improvements (see change history).
-* 3-1-0 RC2 | 28 MAY 2014 | Patch release - Various improvements (see change history).
-* 3-1-0 RC1 | 24 MAY 2014 | Patch release - Various improvements (see change history).
+* 3-1-0     | 17 JUN 2014 | Patch release - Various improvements (see change history).
+* 3-1-0 RC6 | 16 JUN 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC5 | 11 JUN 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC4 | 03 JUN 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC3 | 29 MAY 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC2 | 28 MAY 2014 | Internal release - Various improvements (see change history).
+* 3-1-0 RC1 | 24 MAY 2014 | Internal release - Various improvements (see change history).
 * 3-0-9A    | 12 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-9     | 09 FEB 2014 | Patch release - Various improvements (see change history).
 * 3-0-8     | 28 DEC 2013 | Patch release - Various improvements (see change history).
@@ -131,11 +135,11 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick
 * Documentation: Fer | Wolfenswan | Dogface
 * Producers: Fer | Wolfenswan
-* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | nolux | Pabstmirror | Snippers | Zerith
-* Special Thanks: Folk ARPS | Basterd ArmA | Black sh33p | Bourbon Warfare | Phantactical | Project Awesome | Team One Tactical | The Company
+* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Snippers | Zerith
+* Special thanks to everyone at: Folk ARPS | Basterd ArmA | Black sh33p | Bourbon Warfare | Phantactical | Pointfire | Project Awesome | Team One Tactical | The Company
 
 ### F2 Credits ###
 
@@ -221,6 +225,59 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-1-0 | 17 JUN 2014
+
+* Please change history for internal releases v3-1-0 RC1 through v3-1-0 RC6.
+
+3-1-0 RC6 | 16 JUN 2014
+
+* Added Admin Briefing component:
+ * Lists endings and allows admin to invoke them by clicking a link.
+* Updated E&E Check component:
+ * Allows passing of side instead of array.
+ * Groups/units are now passed as an array of strings to prevent script-errors.
+ * Optional boolean (last parameter): toggle if to check playable units only (default: true).
+* Updated the F3 Simple Wounding System component:
+ * Made the release action created on yourself so its always around.
+ * Tweaked SetDowned.
+ * Added longer delay before system starts to allow for desync'd players..
+* Updated F3 Spectator Script component:
+ * Modified the freecam to use correct height in follow-mode.
+* Fixed typo in AI Skill Selector component.
+* Fixed error in Radio Systems Support component.
+
+3-1-0 RC5 | 11 JUN 2014
+
+* Added Radio Systems Support component (replaces ACRE support component):
+ * Supports ACRE and TFR systems via single mission parameter.
+ * All radios cleared to avoid duplication of radio items.
+ * Optional: radio frequencies split based on unit's side.
+ * Spectator chat correctly handled for all players.
+ * Radios assigned based on assignGear calls (from unit init).
+ * ACRE only: vehicles filled with radios, depending on size.
+ * New component works separately from the F3 Folk ARPS Assign Gear Script component  for locality purposes.
+* Updated Fireteam Member Markers component:
+ * Team colours are now assigned in arrays at top of script (easier to modify, same functionality).
+* Updated Join Group Action component: new notifications.
+* Updated ORBAT Notes component: 
+ * ORBAT lists vehicles, crew and any loaded elements.
+ * ORBAT lists individual medics (under their element leader).
+* Fixed F3 Spectator Script component:
+ * Fixed issues for players joining into spectator mode during a no-respawn mission.
+ * Fixed various tags and camera issues.
+* Fixed several components for use with JIP/respawn:
+ * Fireteam Member Markers component.
+ * F3 Folk ARPS Group Markers component (specifically for specialist markers).
+ * Join Group Action component.
+
+3-1-0 RC4 | 03 JUN 2014
+
+* Fixed AI Skill Selector component: removed references to precursor component.
+* Fixed F3 Folk ARPS Platoons component: incorrect group names for some FIA groups.
+* Fixed F3 Folk ARPS Assign Gear Clothing component: incorrect uniforms for FIA drivers.
+* Fixed F3 Simple Wounding System component: typo with variable name.
+* Fixed F3 Spectator Script component: tags and camera issues.
 
 3-1-0 RC3 | 29 MAY 2014
 
