@@ -24,7 +24,7 @@
 //		vd			- vehicle driver (repair)
 //		pp			- air vehicle pilot / co-pilot
 //		pcc			- air vehicle co-pilot (repair) / crew chief (repair)
-//		pp			- air vehicle crew
+//		pc			- air vehicle crew
 //		eng			- engineer (demo)
 //		engm		- engineer (mines)
 //		uav			- UAV operator
