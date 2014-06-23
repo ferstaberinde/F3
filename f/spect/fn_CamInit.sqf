@@ -171,5 +171,4 @@ _helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click to pan the 
 // ====================================================================================
 // spawn sub scripts
 [] spawn F_fnc_FreeCam;
-//[] spawn F_fnc_DialogLoop;
 [] spawn F_fnc_UpdateValues;
