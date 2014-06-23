@@ -206,9 +206,9 @@ switch (_type) do
     {
         _key = _args select 1;
         _handled = false;
+        if(!isNull (findDisplay 49)) exitWith {if(_key == 1) then {true}};
         switch (_key) do
         {
-
             case 78: // numpad +
             {
                 f_cam_zoom = f_cam_zoom - 1;
@@ -218,6 +218,12 @@ switch (_type) do
             {
                 f_cam_zoom = f_cam_zoom + 1;
                 f_cam_zoom = 0.3 max f_cam_zoom;
+                _handled = true;
+            };
+            case 22:
+            {
+                f_cam_hideUI = !f_cam_hideUI;
+                [] spawn f_fnc_ToggleGUI;
                 _handled = true;
             };
             // H
@@ -293,6 +299,7 @@ switch (_type) do
 
     case "KeyUp":
     {
+        if(!isNull (findDisplay 49)) exitWith {};
         _key = _args select 1;
         _handled = false;
         switch (_key) do
@@ -309,12 +316,14 @@ switch (_type) do
             {
                 _handled = true;
             };
-
             case 205:
             {
                 _handled = true;
             };
-
+            case 24:
+            {
+                _handled = true;
+            };
             case 200:
             {
                 _handled = true;

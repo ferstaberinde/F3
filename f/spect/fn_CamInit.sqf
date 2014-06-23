@@ -93,7 +93,8 @@ F_fnc_GetIcon = compile preprocessFileLineNumbers "f\spect\fn_getIcon.sqf";*/
 
 // ====================================================================================
 // set inital values.
-
+#include "macros.hpp"
+f_cam_controls = [F_CAM_TOPBAR,F_CAM_HELPFRAME,F_CAM_HELPBACK,F_CAM_MOUSEHANDLER,F_CAM_UNITBUTTON,F_CAM_UNITLIST,F_CAM_MODESCOMBO,F_CAM_MODESCOMBO,F_CAM_SPECTEXT,F_CAM_SPECHELP,F_CAM_HELPCANCEL,F_CAM_HELPCANCEL,F_CAM_MINIMAP,F_CAM_FULLMAP];
 f_cam_units = allunits;
 f_cam_players = call F_fnc_GetPlayers;
 f_cam_startX = 0;
@@ -101,7 +102,7 @@ f_cam_startY = 0;
 f_cam_detlaX = 0;
 f_cam_detlaY = 0;
 f_cam_zoom = 0;
-f_cam_hideUI = 0;
+f_cam_hideUI = false;
 f_cam_map_zoom = 0.5;
 f_cam_mode = 0;
 f_cam_toggleCamera = false;
@@ -170,5 +171,5 @@ _helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click to pan the 
 // ====================================================================================
 // spawn sub scripts
 [] spawn F_fnc_FreeCam;
-[] spawn F_fnc_DialogLoop;
+//[] spawn F_fnc_DialogLoop;
 [] spawn F_fnc_UpdateValues;
