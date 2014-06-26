@@ -14,21 +14,20 @@ PARAMETERS
 1. Marker name (string) - must be name all other markers are based on.
 
 EXAMPLE
-["mkrCache"] call ws_fnc_collectMarkers - returns an array with all markers named mkrCache, mkrCache_1, mkrCache_2, mkrCache_n
+["mkrCache","mkrHouse"] call ws_fnc_collectMarkers - returns an array with all markers named mkrCache and mkrHouse ["mkrCache","mkrCache_1","mkrCache_2","mkrHouse_Defend","mkrHouse_Hold"]
 */
 
-private ["_markers","_done"];
+private ["_arr"];
 
-_markers = [_this select 0];
-_done = false;
-_i = 0;
+_arr = [];
 
-//Start the loop
-while {!_done} do {
-	_i = _i + 1;						//increment index
-	_mkr = format ["%1_%2",(_markers select 0),_i];	//and form a string that should correspond with a marker name
-	if (str(getMarkerPos _mkr) == "[0,0,0]" || _i > 500) exitWith {_done = true};  //if the marker doesn't exist (has position [0,0,0]) or for some reason we've been looping too long it exits
-	_markers = _markers + [_mkr];		//if it doesn't exit the marker must exist and we add it to the array
-};
+{
+	_marker = _x;
+	{
+	    if ([_marker, _x] call BIS_fnc_inString) then {
+	       _arr set [count _arr,_x];
+	    };
+	} forEach allMapMarkers;
+} forEach _this;
 
-_markers
+_arr

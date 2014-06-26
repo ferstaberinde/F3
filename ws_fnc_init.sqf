@@ -41,6 +41,7 @@ if !(ws_game_a3) then {
 	ws_fnc_selectRandom = compile preprocessfile "ws_fnc\tools\fn_selectRandom.sqf";
 	ws_fnc_collectMarkers =  compile preprocessfile "ws_fnc\tools\fn_collectMarkers.sqf";
 	ws_fnc_collectObjects =  compile preprocessfile "ws_fnc\tools\fn_collectObjects.sqf";
+	ws_fnc_collectObjectsNum =  compile preprocessfile "ws_fnc\tools\fn_collectObjectsNum.sqf";
 	ws_fnc_collectBuildings =  compile preprocessfile "ws_fnc\tools\fn_collectBuildings.sqf";
 	ws_fnc_loadVehicle = compile preprocessfile "ws_fnc\tools\fn_loadVehicle.sqf";
 	ws_fnc_listPlayers = compile preprocessfile "ws_fnc\tools\fn_listPlayers.sqf";

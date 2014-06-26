@@ -1,7 +1,7 @@
 /*ws_fnc_createLightning
 
 FEATURE
-Creates a CAS run at the given location
+Creates a ZEUS lighting at the given location
 
 USAGE
 position call ws_fnc_createLightning
@@ -18,7 +18,7 @@ private ["_pos","_dummy"];
 _pos = _this call ws_fnc_getEPos;
 
 _dummy = "LaserTargetCBase" createVehicle _pos;
-_dummy enableSimulation false; _dummy hideObject true;
+_dummy enableSimulationGlobal false; _dummy hideObjectGlobal true;
 
 [_dummy,nil,true] call BIS_fnc_moduleLightning;
 

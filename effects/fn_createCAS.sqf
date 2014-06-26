@@ -25,7 +25,7 @@ _type = if (count _this > 2) then {(_this select 2)} else {0};
 _class = if (count _this > 3) then {(_this select 3)} else {"B_Plane_CAS_01_F"};
 
 _dummy = "LaserTargetCBase" createVehicle _pos;
-_dummy enableSimulation false; _dummy hideObject true;
+_dummy enableSimulationGlobal false; _dummy hideObjectGlobal true;
 _dummy setVariable ["vehicle",_class];
 _dummy setVariable ["type",_type];
 _dummy setDir _dir;

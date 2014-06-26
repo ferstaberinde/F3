@@ -2,36 +2,35 @@
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 
 FEATURE
-Collects all existing objects based on the parsed original
+Collects all existing objects that contain the strings parsed.
+
+NOTE
+This command can be taxing in missions with a lot of objects. Use collectObjectsNum alternatively.
 
 USAGE
-[object] call ws_fnc_collectObjects
+["Name1","Name2"] call ws_fnc_collectObjects
 
 RETURNS
-Array of all existing objects following the name
+Array of all existing objects that share the name
 
 PARAMETERS
-1. Object - must be name all other objects are based on.
+String - must be part of all object names that should be collected
 
 EXAMPLE
-[Cache] call ws_fnc_collectMarkers - returns an array with all objects named Cache, Cache_1, Cache_2... Cache_n
+["Cache","Church"] call ws_fnc_collectObjects - returns an array with all objects with "Cache" and "Church" in their name: [Cache,Cache_1,Cache_2,Church_Attack,Church_Hold]
 */
 
-private ["_arr","_done"];
+private ["_arr"];
 
-_arr = [_this select 0];
-_done = false;
-_i = 0;
+_arr = [];
 
-//Start the loop
-while {!_done} do {
-	_i = _i + 1;
-	_obj = format ["%1_%2",(_arr select 0),_i];	//and form a string that should correspond with a marker name
-
-	if (isNil _obj || _i > 500) exitWith {_done = true};
-
-	// If the object exists, add it to the array
-	call compile format ["_arr set [_i,%1]",_obj];
-};
+{
+	_obj = _x;
+	{
+	    if ([_obj, format ["%1",_x]] call BIS_fnc_inString) then {
+	       _arr set [count _arr,_x];
+	    };
+	} forEach allMissionObjects "ALL";
+} forEach _this;
 
 _arr
