@@ -20,21 +20,29 @@ EXAMPLE
 private ["_arr","_done"];
 
 _arr = [];
-_done = false;
-_i = 0;
 
 //Start the loop
-{
-	while {!_done} do {
-		_i = _i + 1;
-		_obj = format ["%1_%2",_x,_i];	//and form a string that should correspond with an object name
+_i = 0;
+_done = false;
 
-		if (isNil _obj || _i > 500) exitWith {_done = true};
+{
+	while {true} do {
+		_obj = "";
+
+		if (_i > 0) then {
+			_obj = format ["%1_%2",_x,_i];
+		} else {
+			_obj = format ["%1",_x];
+		};
+			//and form a string that should correspond with an object name
+		player globalchat format ["%1 - %2 - %3",_obj, _i, isNil _obj];
+
+		if (isNil _obj || _i > 500) exitWith {_i = 0;};
 
 		// If the object exists, add it to the array
-		call compile format ["_arr set [_i,%1]",_obj];
+		call compile format ["_arr set [count _arr,%1]",_obj];
+		_i = _i + 1;
 	};
-	_done = false;
 } forEach _this;
 
 _arr
