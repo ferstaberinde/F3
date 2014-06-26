@@ -34,8 +34,6 @@ _done = false;
 		} else {
 			_obj = format ["%1",_x];
 		};
-			//and form a string that should correspond with an object name
-		player globalchat format ["%1 - %2 - %3",_obj, _i, isNil _obj];
 
 		if (isNil _obj || _i > 500) exitWith {_i = 0;};
 
