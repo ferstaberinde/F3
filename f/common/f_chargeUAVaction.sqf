@@ -23,7 +23,15 @@ _code = {
 	"BIS_fnc_spawn",true]spawn BIS_fnc_MP;
 
 	// Cursortarget might have changed, so we use nearestObject instead
-	(nearestObject [_unit,'UAV_01_base_F']) setFuel 1;
+	_uav = (nearestObject [_unit,'UAV_01_base_F']);
+
+	// Make sure the uav is local, if it isn't bounce the setFuel command to all clients and server
+	if (local _uav) then {
+		_uav setFuel 1;
+	} else {
+		[[[_uav],{if (local (_this select 0)) then {(_this select 0) setFuel 1}}],"BIS_fnc_spawn",true] spawn BIS_fnc_MP;
+	};
+
 };
 
 _this addMagazines ["Laserbatteries",4];
