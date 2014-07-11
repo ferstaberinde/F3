@@ -3,21 +3,34 @@
 // ====================================================================================
 
 // LOOP THROUGH THE PASSED UNITS
-// We loop through the units of the passed group and disable Simulation for all of them but the leaders (to make sure that e.g. patrols still work)
+// We loop through the units of the passed group and disable Simulation for those that are not vehicle drivers and are standing still
 {
-        if(_x != leader _this && !("Driver" in assignedVehicleRole _x)) then {
-                _x enableSimulation false;
-                _x allowDamage false;
-        } else {
-                _x allowDamage true;
-                _x enableSimulation true;
-        };
 
-        // All unit's are hidden, and if the unit is inside a vehicle, the vehicle is hidden as well
-        _x hideObject true;
-        //if (vehicle _x != _x) then {(vehicle _x) hideObject true}
+	// Disable simulation based on aggressiveness
+	switch (f_var_cachingAggressiveness) do {
+		case 1: {
+			if (!("Driver" in assignedVehicleRole _x) && (_x != leader _this)) then {
+                _x enableSimulationGlobal false;
+       	 	};
+		};
+		case 2: {
+			if !("Driver" in assignedVehicleRole _x) then {
+        		if ((_x != leader _this) || (_x == leader _this && speed _x == 0)) then {
+                	_x enableSimulationGlobal false;
+           		};
+       	 	};
+		};
+		case 3: {_x enableSimulationGlobal false;};
+	};
+
+        // All unit's are hidden
+        _x hideObjectGlobal true;
+
+        if (f_var_cachingAggressiveness == 3) then {
+          if (vehicle _x != _x) then {(vehicle _x) hideObjectGlobal true};
+    	};
 
 sleep 0.1;
 } forEach units _this;
 
-true;
+true
