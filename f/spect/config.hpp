@@ -632,18 +632,11 @@ class f_spec_dialog {
     enableSimulation = 1;
 	fadein = 0;
 	fadeout = 0;
+    onUnload = "[] spawn f_fnc_OnUnload";
 	class controlsBackground {
         class SpecTopBar: spect_IGUIBack
         {
             idc = 2201;
-            x = 0 * safezoneW + safezoneX;
-            y = 0 * safezoneH + safezoneY;
-            w = safezoneW;
-            h = safezoneH/20;
-        };
-        class SpecWindow: spect_IGUIBack
-        {
-            idc = 2500;
             x = 0 * safezoneW + safezoneX;
             y = 0 * safezoneH + safezoneY;
             w = safezoneW;
@@ -762,7 +755,7 @@ class f_spec_dialog {
             y = 0 * safezoneH + safezoneY;
             w = 1 * safezoneW;
             h = 1 * safezoneH;
-            
+
         };
     };
 };

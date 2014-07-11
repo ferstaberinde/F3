@@ -120,8 +120,6 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 				if (_crew && {_slot != "CARGO" && isNull assignedVehicle _unit}) then{
 					if (_slot == "Driver" && (_veh emptyPositions "Driver") > 0 && !(lockedDriver _veh)) exitWith {_unit assignAsDriver _veh;_unit moveInDriver _veh;};
 					if (_slot == "Turret" && !(_veh lockedTurret _path) && isNull (_veh TurretUnit _path)) exitWith {_unit assignAsTurret [_veh,_path];_unit moveInTurret [_veh,_path];};
-
-					_crew = false;
 				};
 
 			   	if (_slot == "CARGO" && isNull assignedVehicle _unit && !(_veh lockedCargo (_path select 0))) then {
