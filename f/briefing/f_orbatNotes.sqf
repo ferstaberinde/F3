@@ -16,7 +16,7 @@ _hiddenGroups = [];
 
 {
 	// Add to ORBAT if side matches, group isn't already listed, and group has players
-	if ((side _x == side group player) && !(_x in _groups) && ({isPlayer _x} count units _x) > 0) then {
+	if ((side _x == side group player) && !(_x in _groups) && ({_x in playableUnits} count units _x) > 0) then {
 	//if ((side _x == side group player) && !(_x in _groups)) then {
 		_groups = _groups + [_x];
 	};
@@ -27,7 +27,14 @@ _groups = _groups - _hiddenGroups;
 
 // Loop through the group, print out group ID, leader name and medics if present
 {
-	_orbatText = _orbatText + format["%1 %2", _x, name leader _x] + "<br />";
+	// Highlight the player's group with a different color
+	_color = "#FFFFFF";
+	if (_x == group player) then {
+		_color = "#FF0000";
+	};
+
+	_orbatText = _orbatText + format ["<font color='%3'>%1 %2</font>", _x, name leader _x,_color] + "<br />";
+
 	{
 		if (_x getVariable ["f_var_assignGear",""] == "m" && {_x != leader group _x}) then {
 			_orbatText = _orbatText + format["|- %1 [M]",name _x] + "<br />";
