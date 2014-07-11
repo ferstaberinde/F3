@@ -20,7 +20,7 @@ _code = {
 
 	// Play the animation over the network
 	[[[_unit,_move],{(_this select 0) playMove (_this select 1)}],
-	"BIS_fnc_spawn"]spawn BIS_fnc_MP;
+	"BIS_fnc_spawn",true]spawn BIS_fnc_MP;
 
 	// Cursortarget might have changed, so we use nearestObject instead
 	(nearestObject [_unit,'UAV_01_base_F']) setFuel 1;
