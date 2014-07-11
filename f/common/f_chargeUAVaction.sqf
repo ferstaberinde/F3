@@ -22,13 +22,8 @@ _code = {
 	[[[_unit,_move],{(_this select 0) playMove (_this select 1)}],
 	"BIS_fnc_spawn"]spawn BIS_fnc_MP;
 
-	// Failsafe to make sure we're charging the UAV
-	if (cursorTarget isKindOf 'UAV_01_base_F') then {
-		cursorTarget setFuel 1;
-	} else {
-		nearestObject [_unit,'UAV_01_base_F'];
-	};
-
+	// Cursortarget might have changed, so we use nearestObject instead
+	(nearestObject [_unit,'UAV_01_base_F']) setFuel 1;
 };
 
 _this addMagazines ["Laserbatteries",4];
