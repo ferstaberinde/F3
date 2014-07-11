@@ -131,6 +131,18 @@ if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
 
 _unit setVariable ["f_var_assignGear_done",true,true];
 
+// ====================================================================================
+
+// SET UAV RECHARGING
+
+// If the unit is a uav operater, add the action that enables recharging of darters
+
+if (_typeofUnit == "uav") then {
+	_unit execVm "f\common\f_chargeUAVaction.sqf";
+};
+
+// ====================================================================================
+
 // DEBUG
 
 // ====================================================================================
