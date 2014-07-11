@@ -28,12 +28,12 @@ _groups = _groups - _hiddenGroups;
 // Loop through the group, print out group ID, leader name and medics if present
 {
 	// Highlight the player's group with a different color
-	_color = '#FFFFFF';
+	_color = "#FFFFFF";
 	if (_x == group player) then {
-		_color = '#FF0000';
+		_color = "#FF0000";
 	};
 
-	_orbatText = _orbatText + format ["<font color=%3>%1 %2</font>", _x, name leader _x,_color] + "<br />";
+	_orbatText = _orbatText + format ["<font color='%3'>%1 %2</font>", _x, name leader _x,_color] + "<br />";
 
 	{
 		if (_x getVariable ["f_var_assignGear",""] == "m" && {_x != leader group _x}) then {
