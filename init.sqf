@@ -197,3 +197,8 @@ f_var_cachingAggressiveness = 2;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\radios\radio_init.sqf";
+
+// F3 - Medical Framework
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[] execVM "f\medical\medical_init.sqf";
