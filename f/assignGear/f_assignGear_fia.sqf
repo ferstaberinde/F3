@@ -24,7 +24,7 @@
 //		vd			- vehicle driver (repair)
 //		pp			- air vehicle pilot / co-pilot
 //		pcc			- air vehicle co-pilot (repair) / crew chief (repair)
-//		pp			- air vehicle crew
+//		pc			- air vehicle crew
 //		eng			- engineer (demo)
 //		engm		- engineer (mines)
 //		uav			- UAV operator
@@ -456,9 +456,9 @@ switch (_typeofUnit) do
 		["matg"] call _backpack;
 		_unit addmagazines [_carbinemag,7];
 		_unit addmagazines [_carbinemag_tr,2];
+		_unit addmagazines [_smokegrenade,2];
 		_unit addweapon _carbine;
 		_unit addweapon _MAT;
-		_unit addmagazines [_MATMag1,1];
 	};
 
 // LOADOUT: MEDIUM AT ASSISTANT GUNNER
