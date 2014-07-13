@@ -24,9 +24,15 @@ private ["_code"];
 
 // ====================================================================================
 
-// SETUP CODE
+// ADD BATTERIES
 
-// The code that is executed when the "recharge UAV" action fires
+_this addMagazines ["Laserbatteries",4];
+
+// ====================================================================================
+
+// SETUP CODE
+// The following code is executed when the "recharge UAV" action fires
+
 _code = {
 	private ["_unit","_move","_uav"];
 	_unit = _this select 0;
@@ -61,11 +67,8 @@ _code = {
 // ====================================================================================
 
 // SETUP ACTION
-
-// Add batteries to the unit
-_this addMagazines ["Laserbatteries",4];
-
 // Add the action to recharge the UAV
+
 f_action_rechargeUAV = _this addAction [
 "Recharge UAV",	// Name
  _code,			// Code to execute

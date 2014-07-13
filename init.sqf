@@ -174,9 +174,13 @@ f_script_setLocalVars = [0] execVM "f\common\f_setLocalVars.sqf";
 // F3 - UAV recharging
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
+// TODO REMOVE
+
+/*
 if (player getVariable ["f_var_assignGear",""] in ["uav"]) then {
 	player execVm "f\common\f_chargeUAVaction.sqf";
 };
+*/
 
 // ====================================================================================
 

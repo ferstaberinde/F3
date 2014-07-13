@@ -31,12 +31,13 @@ class Mission
 		"A3_Soft_F_EPC_Truck_03",
 		"A3_Soft_F_Gamma_Offroad",
 		"A3_Soft_F_Truck",
-		"a3_uav_f_characters_f_gamma"
+		"a3_uav_f_characters_f_gamma",
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
-		"a3_characters_f_beta",
+		"a3_characters_f",
 		"A3_Characters_F_Gamma",
 		"a3_uav_f_characters_f_gamma",
 		"A3_Characters_F_OPFOR",
@@ -130,7 +131,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNATO_CO_UAV";
-					init="GrpNATO_CO = group this; [""uav"",this] call f_fnc_assignGear;";
+					init="GrpNATO_CO = group this; [""uav"",this] call f_fnc_assignGear; nul = this execVm ""f\common\f_chargeUAVaction.sqf"";";
 					description="NATO UAV Operator";
 				};
 				class Item3
@@ -190,7 +191,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNATO_DC_UAV";
-					init="GrpNATO_DC = group this; [""uav"",this] call f_fnc_assignGear;";
+					init="GrpNATO_DC = group this; [""uav"",this] call f_fnc_assignGear; nul = this execVm ""f\common\f_chargeUAVaction.sqf"";";
 					description="NATO UAV Operator";
 				};
 				class Item3
@@ -878,7 +879,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_CO_UAV";
-					init="GrpCSAT_CO = group this; [""uav"",this] call f_fnc_assignGear;";
+					init="GrpCSAT_CO = group this; [""uav"",this] call f_fnc_assignGear; nul = this execVm ""f\common\f_chargeUAVaction.sqf"";";
 					description="CSAT UAV Operator";
 				};
 				class Item3
@@ -940,7 +941,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitCSAT_DC_UAV";
-					init="GrpCSAT_DC = group this; [""uav"",this] call f_fnc_assignGear;";
+					init="GrpCSAT_DC = group this; [""uav"",this] call f_fnc_assignGear; nul = this execVm ""f\common\f_chargeUAVaction.sqf"";";
 					description="CSAT UAV Operator";
 				};
 				class Item3
@@ -2137,7 +2138,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitAAF_CO_UAV";
-					init="GrpAAF_CO = group this; [""uav"",this] call f_fnc_assignGear;";
+					init="GrpAAF_CO = group this; [""uav"",this] call f_fnc_assignGear; nul = this execVm ""f\common\f_chargeUAVaction.sqf"";";
 					description="AAF UAV Operator";
 				};
 				class Item3
@@ -2194,7 +2195,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitAAF_DC_UAV";
-					init="GrpAAF_DC = group this; [""uav"",this] call f_fnc_assignGear;";
+					init="GrpAAF_DC = group this; [""uav"",this] call f_fnc_assignGear; nul = this execVm ""f\common\f_chargeUAVaction.sqf"";";
 					description="AAF UAV Operator";
 				};
 				class Item3
@@ -5750,7 +5751,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitFIA_CO_UAV";
-					init="GrpFIA_CO = group this; [""uav"",this] call f_fnc_assignGear;";
+					init="GrpFIA_CO = group this; [""uav"",this] call f_fnc_assignGear; nul = this execVm ""f\common\f_chargeUAVaction.sqf"";";
 					description="FIA UAV Operator";
 				};
 				class Item3
@@ -5809,7 +5810,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitFIA_DC_UAV";
-					init="GrpFIA_DC = group this; [""uav"",this] call f_fnc_assignGear;";
+					init="GrpFIA_DC = group this; [""uav"",this] call f_fnc_assignGear; nul = this execVm ""f\common\f_chargeUAVaction.sqf"";";
 					description="FIA UAV Operator";
 				};
 				class Item3
