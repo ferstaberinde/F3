@@ -4,6 +4,7 @@ if !(local _this) exitWith {};
 // If the action has already been added, exit
 if (!isNil "f_action_rechargeUAV") exitWith {};
 
+// The code that is executed when the "recharge UAV" action fires
 _code = {
 	_unit = _this select 0;
 
@@ -22,17 +23,28 @@ _code = {
 	[[[_unit,_move],{(_this select 0) playMove (_this select 1)}],
 	"BIS_fnc_spawn",true]spawn BIS_fnc_MP;
 
-	// Cursortarget might have changed, so we use nearestObject instead
+	// Cursortarget might have changed, thus using nearestObject is safer
 	_uav = (nearestObject [_unit,'UAV_01_base_F']);
 
 	// Make sure the uav is local, if it isn't bounce the setFuel command to all clients and server
 	if (local _uav) then {
 		_uav setFuel 1;
 	} else {
-		[[[_uav],{if (local (_this select 0)) then {(_this select 0) setFuel 1}}],"BIS_fnc_spawn",true] spawn BIS_fnc_MP;
+		[[_uav,{if (local _this) then {_this setFuel 1}}],"BIS_fnc_spawn",true] spawn BIS_fnc_MP;
 	};
 
 };
 
 _this addMagazines ["Laserbatteries",4];
-f_action_rechargeUAV = _this addAction ["Recharge UAV", _code,nil,1.5,true,true,"","cursorTarget isKindOf 'UAV_01_base_F' && {{_x == 'Laserbatteries'} count magazines _this > 0 && fuel cursorTarget  < 1 && _this distance cursorTarget < 2}"];
+
+// Add the action to recharge the UAV
+f_action_rechargeUAV = _this addAction [
+"Recharge UAV",	// Name
+ _code,			// Code to execute
+ nil,
+ 1.5,			// Priority
+ true,
+ true,
+ "",
+ // Condition for action to show:
+ "cursorTarget isKindOf 'UAV_01_base_F' && {{_x == 'Laserbatteries'} count magazines _this > 0 && fuel cursorTarget  < 1 && _this distance cursorTarget < 2}"];
