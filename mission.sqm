@@ -31,12 +31,13 @@ class Mission
 		"A3_Soft_F_EPC_Truck_03",
 		"A3_Soft_F_Gamma_Offroad",
 		"A3_Soft_F_Truck",
-		"a3_uav_f_characters_f_gamma"
+		"a3_uav_f_characters_f_gamma",
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
-		"a3_characters_f_beta",
+		"a3_characters_f",
 		"A3_Characters_F_Gamma",
 		"a3_uav_f_characters_f_gamma",
 		"A3_Characters_F_OPFOR",

@@ -13,29 +13,39 @@ waitUntil{!isNil "f_var_medical"};
 // If any radio system selected
 call {
     
-  // Default Arma Healing
-  if (f_var_medical == 0) exitWith {
+	// Default Arma Healing
+	if (f_var_medical == 0) exitWith {
 
-    
+		// If script is being run on the server
+		if (hasInterface) then {
 
-    };
+			[] execVM "f\medical\SWS_clientInit.sqf";
 
-  };
+		};
+	};
 
-  // F3 Simple Wounding System
-  if (f_var_medical == 1) exitWith {
-    
-    
+	// F3 Simple Wounding System
+	if (f_var_medical == 1) exitWith {
 
-  };
+		// If script is being run on a client
+		if (hasInterface) then {
 
-  // Authentic Gameplay Modification
-  if (f_var_medical == 2) exitWith {
-    
-    
+			[] execVM "f\medical\SWS_clientInit.sqf";
+			[player] execVM "f\simplewoundingsystem\init.sqf";
 
-  };
+		};
+	};
 
+	// Authentic Gameplay Modification
+	if (f_var_medical == 2) exitWith {
+
+		// If script is being run on a client
+		if (hasInterface) then {
+
+			[] execVM "f\medical\AGM_clientInit.sqf";
+
+		};
+	};
 };
 
 // ====================================================================================
