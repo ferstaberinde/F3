@@ -1,11 +1,34 @@
+// F3 - UAV Recharging Action
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// ====================================================================================
+
+// MAKE SURE THE PLAYER INITIALIZES PROPERLY
+if (!isDedicated && (isNull player)) then
+{
+    waitUntil {sleep 0.1; !isNull player};
+};
+
+// ====================================================================================
+
 // Do not execute this script anywhere but where the unit is local
 if !(local _this) exitWith {};
 
 // If the action has already been added, exit
 if (!isNil "f_action_rechargeUAV") exitWith {};
 
+// ====================================================================================
+
+// DECLARE VARIABLES
+
+private ["_code"];
+
+// ====================================================================================
+
+// SETUP CODE
+
 // The code that is executed when the "recharge UAV" action fires
 _code = {
+	private ["_unit","_move","_uav"];
 	_unit = _this select 0;
 
 	// Remove one battery
@@ -35,6 +58,11 @@ _code = {
 
 };
 
+// ====================================================================================
+
+// SETUP ACTION
+
+// Add batteries to the unit
 _this addMagazines ["Laserbatteries",4];
 
 // Add the action to recharge the UAV
@@ -47,4 +75,4 @@ f_action_rechargeUAV = _this addAction [
  true,
  "",
  // Condition for action to show:
- "cursorTarget isKindOf 'UAV_01_base_F' && {{_x == 'Laserbatteries'} count magazines _this > 0 && fuel cursorTarget  < 1 && _this distance cursorTarget < 2}"];
+ "cursorTarget isKindOf 'UAV_01_base_F' && {{_x == 'Laserbatteries'} count magazines _this > 0 && fuel cursorTarget  < 1 && _this distance cursorTarget < 2 && isTouchingGround cursorTarget}"];
