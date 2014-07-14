@@ -270,6 +270,10 @@ if (_isMan) then {
 	removeBackpack _unit;
 	removeallweapons _unit;
 
+	// We add a single first aid kit (FAK)
+
+	_unit addItem _firstaid;
+
 	// The following code removes any pre-added NVGs
 
 	if(_nvg in (assignedItems _unit)) then
@@ -357,6 +361,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag,7];
 		_unit addweapon _carbine;
 		_unit addmagazines [_smokegrenade,4];
+		{_unit addItem _firstaid} forEach [1,2,3,4];
 		["m"] call _backpack;
 	};
 

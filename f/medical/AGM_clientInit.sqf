@@ -9,10 +9,15 @@ private ["_typeOfUnit"];
 
 _typeOfUnit = player getVariable "f_var_assignGear";
 
+// Remove pre-assigned medical items
+player removeItems "FirstAidKit";
+player removeItems "Medikit";
+
 player addItem "AGM_EarBuds";
 {player addItem "AGM_Bandage"} forEach [1,2,3,4,5];
 
 if (_typeOfUnit == "m") then {
+
 	{player addItem "AGM_Epipen"} forEach [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 	player addItem "AGM_Bloodbag";
 
