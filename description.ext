@@ -144,7 +144,7 @@ class Params
     {
             title = "Radio System";
             values[] = {0,1,2};
-            texts[] = {"Off","ACRE", "TFR"};
+            texts[] = {"Off","ACRE","TFR"};
             default = 0;
             code = "f_var_radios = %1";
     };
@@ -159,7 +159,7 @@ class Params
     {
             title = "Medical System";
             values[] = {0,1,2};
-            texts[] = {"Off","SWS", "AGM"};
+            texts[] = {"Off","SWS","AGM"};
             default = 0;
             code = "f_var_medical = %1";
     };
