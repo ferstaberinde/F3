@@ -15,7 +15,8 @@ if((_selection != "head") &&  _selection != ""  && _selection != "hands" && _tot
 {
 	if(!(_unit getVariable ["revive_down",false])) then
 	{
-		[[_unit,true], "f_fnc_SetDowned", true] spawn BIS_fnc_MP;
+		// [[_unit,true], "f_fnc_SetDowned", [_unit]] spawn BIS_fnc_MP;
+		[_unit,true] spawn f_fnc_SetDowned;
 		_damage = 0;
 		_unit spawn {_this allowDammage false;sleep 1;_this allowDammage true};
 	};

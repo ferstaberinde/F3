@@ -45,7 +45,8 @@ while {alive _unit} do
 	// value of blood where you will be downed
 	if(_blood < 45 && !_downed) then
 	{
-		[[_unit,true], "f_fnc_SetDowned", true] spawn BIS_fnc_MP;
+	//	[[_unit,true], "f_fnc_SetDowned", [_unit]] spawn BIS_fnc_MP;
+		[_unit,true] spawn f_fnc_SetDowned;
 	};
 	if(_blood <= 0) then
 	{
