@@ -242,7 +242,7 @@ _ghillieGlasses = [];
 // Spec Op
 _sfuniform = ["U_O_SpecopsUniform_ocamo"];
 _sfhelmet = ["H_HelmetSpecO_ocamo","H_HelmetSpecO_blk"];
-_sfRig = _mediumRig;
+_sfRig = ["V_PlateCarrier1_blk"];
 _sfGlasses = [];
 
 
