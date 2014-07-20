@@ -275,6 +275,18 @@ case "mmgag":
 	};
 };
 
+// BACKPACK: HEAVY MG GUNNER (HMGG)
+case "hmgg":
+{
+	_unit addBackpack _baghmgg;
+};
+
+// BACKPACK: HEAVY MG ASSISTANT GUNNER (HMGAG)
+case "hmgag":
+{
+	_unit addBackpack _baghmgag;
+};
+
 // BACKPACK: MAT GUNNER (MATG)
 case "matg":
 {
@@ -347,6 +359,30 @@ case "matag":
 		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 3];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 3];
 	};
+};
+
+// BACKPACK: HEAVY AT GUNNER (HATG)
+case "hatg":
+{
+	_unit addBackpack _baghatg;
+};
+
+// BACKPACK: HEAVY AT ASSISTANT GUNNER (HATAG)
+case "hatag":
+{
+	_unit addBackpack _baghatag;
+};
+
+// BACKPACK: MORTAR GUNNER (MTRG)
+case "mtrg":
+{
+	_unit addBackpack _bagmtrg;
+};
+
+// BACKPACK: MORTAR ASSISTANT GUNNER (MTRAG)
+case "mtrag":
+{
+	_unit addBackpack _bagmtrag;
 };
 
 // BACKPACK: ENGINEER (DEMO)

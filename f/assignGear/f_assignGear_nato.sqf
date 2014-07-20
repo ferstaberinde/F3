@@ -17,6 +17,10 @@
 //		mmgag		- medium mg assistant
 //		matg		- medium AT gunner
 //		matag		- medium AT assistant
+//		hmgg		- heavy mg gunner (deployable)
+//		hmgag		- heavy mg assistant (deployable)
+//		hatg		- heavy AT gunner (deployable)
+//		hatag		- heavy AT assistant (deployable)
 //		mtrg		- mortar gunner (deployable)
 //		mtrag		- mortar assistant (deployable)
 //		vc			- vehicle commander
@@ -145,6 +149,12 @@ _bagmedium = "B_FieldPack_khk";			// carries 240, weighs 30
 _baglarge =  "B_Carryall_mcamo"; 		// carries 320, weighs 40
 _bagmediumdiver =  "B_AssaultPack_blk";	// used by divers
 _baguav = "B_UAV_01_backpack_F";		// used by UAV operator
+_baghmgg = "B_HMG_01_weapon_F";				// used by Heavy MG gunner
+_baghmgag = "B_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghatg = "B_AT_01_weapon_F";				// used by Heavy AT gunner
+_baghatag = "B_HMG_01_support_F";			// used by Heavy AT assistant gunner
+_bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
+_bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
 
 // ====================================================================================
 
@@ -167,10 +177,6 @@ _RATmag = "NLAW_F";
 // Sniper
 _SNrifle = "srifle_LRR_LRPS_F";
 _SNrifleMag = "7Rnd_408_Mag";
-
-// Mortar
-_MTR = "B_Mk6Mortar_Wpn";
-_MTRmount = "B_Mk6Mortar_Support";
 
 // Medium AT
 _MAT = "launch_NLAW_F";
@@ -448,6 +454,31 @@ switch (_typeofUnit) do
 		["mmgag"] call _backpack;
 	};
 
+// LOADOUT: HEAVY MG GUNNER
+	case "hmgg":
+	{
+		_unit addmagazines [_carbinemag,7];
+		_unit addmagazines [_carbinemag_tr,2];
+		_unit addweapon _carbine;
+		_unit addmagazines [_grenade,1];
+		_unit addmagazines [_mgrenade,1];
+		_unit addmagazines [_smokegrenade,1];
+		["hmgg"] call _backpack;
+	};
+
+// LOADOUT: HEAVY MG ASSISTANT GUNNER
+	case "hmgag":
+	{
+		_unit addmagazines [_carbinemag,7];
+		_unit addmagazines [_carbinemag_tr,2];
+		_unit addweapon _carbine;
+		_unit addWeapon "Rangefinder";
+		_unit addmagazines [_grenade,1];
+		_unit addmagazines [_mgrenade,1];
+		_unit addmagazines [_smokegrenade,1];
+		["hmgag"] call _backpack;
+	};
+
 // LOADOUT: MEDIUM AT GUNNER
 	case "matg":
 	{
@@ -474,6 +505,56 @@ switch (_typeofUnit) do
 		["matag"] call _backpack;
 	};
 
+// LOADOUT: HEAVY AT GUNNER
+	case "hatg":
+	{
+		_unit addmagazines [_carbinemag,7];
+		_unit addmagazines [_carbinemag_tr,2];
+		_unit addweapon _carbine;
+		_unit addmagazines [_grenade,1];
+		_unit addmagazines [_mgrenade,1];
+		_unit addmagazines [_smokegrenade,1];
+		["hatg"] call _backpack;
+	};
+
+// LOADOUT: HEAVY AT ASSISTANT GUNNER
+	case "hatag":
+	{
+		_unit addmagazines [_carbinemag,7];
+		_unit addmagazines [_carbinemag_tr,2];
+		_unit addweapon _carbine;
+		_unit addWeapon "Rangefinder";
+		_unit addmagazines [_grenade,1];
+		_unit addmagazines [_mgrenade,1];
+		_unit addmagazines [_smokegrenade,1];
+		["hatag"] call _backpack;
+	};
+
+// LOADOUT: MORTAR GUNNER
+	case "mtrg":
+	{
+		_unit addmagazines [_carbinemag,7];
+		_unit addmagazines [_carbinemag_tr,2];
+		_unit addweapon _carbine;
+		_unit addmagazines [_grenade,1];
+		_unit addmagazines [_mgrenade,1];
+		_unit addmagazines [_smokegrenade,1];
+		["mtrg"] call _backpack;
+	};
+
+// LOADOUT: MORTAR ASSISTANT GUNNER
+	case "mtrag":
+	{
+		_unit addmagazines [_carbinemag,7];
+		_unit addmagazines [_carbinemag_tr,2];
+		_unit addweapon _carbine;
+		_unit addmagazines [_grenade,1];
+		_unit addmagazines [_mgrenade,1];
+		_unit addmagazines [_smokegrenade,1];
+		_unit addWeapon "Rangefinder";
+		["mtrag"] call _backpack;
+	};
+
 // LOADOUT: SNIPER
 	case "sn":
 	{
@@ -492,27 +573,6 @@ switch (_typeofUnit) do
 		_unit addWeapon "Rangefinder";
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
-	};
-
-// LOADOUT: MORTAR GUNNER
-	case "mtrg":
-	{
-		_unit addmagazines [_carbinemag,7];
-		_unit addmagazines [_carbinemag_tr,2];
-		_unit addweapon _carbine;
-		_unit addmagazines [_smokegrenade,2];
-		_unit addBackpack _MTR;
-	};
-
-// LOADOUT: MORTAR ASSISTANT GUNNER
-	case "mtrag":
-	{
-		_unit addmagazines [_carbinemag,7];
-		_unit addmagazines [_carbinemag_tr,2];
-		_unit addweapon _carbine;
-		_unit addmagazines [_smokegrenade,2];
-		_unit addWeapon "Rangefinder";
-		_unit addBackpack _MTRmount;
 	};
 
 // LOADOUT: VEHICLE COMMANDER
