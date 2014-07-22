@@ -7,7 +7,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 405;
+	maxPlayers = 453;
 };
 
 // ============================================================================================
@@ -150,7 +150,6 @@ class Params
     };
 
 // ============================================================================================
-
 
 // F3 - Medical System Support
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
