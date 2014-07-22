@@ -10,31 +10,26 @@
 waitUntil{!isNil "f_var_medical"};
 
 // Check which system to use
-call {
-    
+call
+{
 	// If 0 do nothing (Default Arma Healing)
 
 	// F3 Simple Wounding System
-	if (f_var_medical == 1) exitWith {
-
+	if (f_var_medical == 1) exitWith
+	{
 		// If script is being run on a client
-		if (hasInterface) then {
-
+		if (hasInterface) then
+		{
 			[player] execVM "f\simplewoundingsystem\init.sqf";
-
 		};
 	};
-
 	// Authentic Gameplay Modification
-	if (f_var_medical == 2) exitWith {
-
+	if (f_var_medical == 2) exitWith
+	{
 		// If script is being run on a client
-		if (hasInterface) then {
-
+		if (hasInterface) then
+		{
 			[] execVM "f\medical\AGM_clientInit.sqf";
-
 		};
 	};
 };
-
-// ====================================================================================

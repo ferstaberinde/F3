@@ -5,7 +5,7 @@
 // Wait for gear assignation to take place
 waitUntil{(player getVariable ["f_var_assignGear_done", false])};
 
-private ["_typeOfUnit"];
+private "_typeOfUnit";
 
 _typeOfUnit = player getVariable "f_var_assignGear";
 
@@ -13,11 +13,12 @@ _typeOfUnit = player getVariable "f_var_assignGear";
 player removeItems "FirstAidKit";
 player removeItems "Medikit";
 
+// Add basic items to all units
 player addItem "AGM_EarBuds";
 {player addItem "AGM_Bandage"} forEach [1,2,3,4,5];
 
-if (_typeOfUnit == "m") then {
-
+if (_typeOfUnit == "m") then
+{
 	{player addItem "AGM_Epipen"} forEach [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 	player addItem "AGM_Bloodbag";
 
