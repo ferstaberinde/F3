@@ -151,6 +151,20 @@ class Params
 
 // ============================================================================================
 
+// F3 - Simple Wounding System
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+//    class f_param_simplewoundingsystem
+//    {
+//            title = "Simple Wounding System";
+//            values[] = {0,1};
+//            texts[] = {"Disabled","Enabled"};
+//            default = 1;
+//            code = "f_var_simplewoundingsystem = %1";
+//    };
+
+// ============================================================================================
+
 // F3 - Mission Timer/Safe Start
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
 

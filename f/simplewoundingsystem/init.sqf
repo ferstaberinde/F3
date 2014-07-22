@@ -5,6 +5,11 @@
 if (isDedicated) ExitWith {};
 _unit = _this select 0;
 
+// Wait for parameter to be initialised
+waitUntil{!isNil "f_var_simplewoundingsystem"};
+
+// Exit if SWS has been disabled via mission parameter
+if (f_var_simplewoundingsystem == 0) ExitWith {hint "WARNING: Simple Wounding System has been disabled";};
 
 // add breifing
 if(isNil "f_wound_briefing") then
@@ -16,7 +21,7 @@ if(f_wound_briefing) then
 	[] spawn
 	{
 		waitUntil {scriptDone f_script_briefing};
-		_bstr = format ["OVERVIEW<br/>
+		_bstr = format ["<br/>OVERVIEW<br/>
 When a player is wounded to the point of being 'incapacitated' they become a casualty. Casualties are prone and unable to move.
 <br/><br/>
 TREATING CASUALTIES<br/>
