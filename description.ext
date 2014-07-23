@@ -158,7 +158,7 @@ class Params
     {
             title = "Medical System";
             values[] = {0,1,2};
-            texts[] = {"Off","SWS","AGM"};
+            texts[] = {"Off","F3 Simple Wounding System","AGM"};
             default = 1;
             code = "f_var_medical = %1";
     };
