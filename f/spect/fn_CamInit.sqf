@@ -32,6 +32,17 @@ if(!isnil "BIS_fnc_feedback_allowPP") then
 	BIS_fnc_feedback_allowPP = false;
 };
 
+// Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
+
+_newUnit =  createAgent  ["VirtualMan_F", [0,0,0], [], 0, "FORM"];
+_newUnit hideObjectGlobal true;
+_newUnit enableSimulationGlobal false;
+
+selectPlayer _newUnit;
+deleteVehicle _unit;
+
+// ====================================================================================
+
 // Set spectator mode for whichever radio system is in use
 switch (f_var_radios) do {
 
@@ -47,21 +58,12 @@ switch (f_var_radios) do {
 
   // TFR
   case 2: {
-    [_unit, true] call TFAR_fnc_forceSpectator;
+    [_newUnit, true] call TFAR_fnc_forceSpectator;
   };
 
 };
 
 // ====================================================================================
-
-// Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
-
-_newUnit =  createAgent  ["VirtualMan_F", [0,0,0], [], 0, "FORM"];
-_newUnit hideObjectGlobal true;
-_newUnit enableSimulationGlobal false;
-
-selectPlayer _newUnit;
-deleteVehicle _unit;
 
 // create the camera and set it up.
 f_cam_camera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
@@ -74,6 +76,7 @@ cameraEffectEnableHUD true;
 f_cam_camera camCommit 0;
 showCinemaBorder false;
 f_cam_MouseMoving = false;
+
 // ====================================================================================
 _listBox = 2100;
 lbClear _listBox;
