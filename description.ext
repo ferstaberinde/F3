@@ -144,24 +144,24 @@ class Params
     {
             title = "Radio System";
             values[] = {0,1,2};
-            texts[] = {"Off","ACRE", "TFR"};
+            texts[] = {"Off","ACRE","TFR"};
             default = 0;
             code = "f_var_radios = %1";
     };
 
 // ============================================================================================
 
-// F3 - Simple Wounding System
+// F3 - Medical System Support
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-//    class f_param_simplewoundingsystem
-//    {
-//            title = "Simple Wounding System";
-//            values[] = {0,1};
-//            texts[] = {"Disabled","Enabled"};
-//            default = 1;
-//            code = "f_var_simplewoundingsystem = %1";
-//    };
+    class f_param_medical
+    {
+            title = "Medical System";
+            values[] = {0,1,2};
+            texts[] = {"Off","SWS","AGM"};
+            default = 1;
+            code = "f_var_medical = %1";
+    };
 
 // ============================================================================================
 

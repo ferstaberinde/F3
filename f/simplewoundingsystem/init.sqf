@@ -5,12 +5,6 @@
 if (isDedicated) ExitWith {};
 _unit = _this select 0;
 
-// Wait for parameter to be initialised
-waitUntil{!isNil "f_var_simplewoundingsystem"};
-
-// Exit if SWS has been disabled via mission parameter
-if (f_var_simplewoundingsystem == 0) ExitWith {hint "WARNING: Simple Wounding System has been disabled";};
-
 // add breifing
 if(isNil "f_wound_briefing") then
 {
