@@ -178,7 +178,7 @@ f_var_JIP_GearMenu = true;			// Can JIP/respawned players select their own gear?
 
 [30] spawn f_fnc_cInit;
 
-// CACHING AGGRESSIVENESS
+// Note: Caching aggressiveness is set using the f_var_cachingAggressiveness variable; possible values:
 // 1 - cache only non-leaders and non-drivers
 // 2 - cache all non-moving units, always exclude vehicle drivers
 // 3 - cache all units, incl. group leaders and vehicle drivers
@@ -186,14 +186,16 @@ f_var_cachingAggressiveness = 2;
 
 // ====================================================================================
 
-// F3 - Radio Framework
+// F3 - Radio Systems Support
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\radios\radio_init.sqf";
 
 // ====================================================================================
 
-// F3 - Medical System Support
+// F3 - Medical Systems Support
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\medical\medical_init.sqf";
+
+// ====================================================================================
