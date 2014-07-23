@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-1-0
+* Version: 3-1-1 RC1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-1-1 RC1 | 23 JUL 2014 | Internal release - Various improvements (see change history).
 * 3-1-0     | 17 JUN 2014 | Patch release - Various improvements (see change history).
 * 3-1-0 RC6 | 16 JUN 2014 | Internal release - Various improvements (see change history).
 * 3-1-0 RC5 | 11 JUN 2014 | Internal release - Various improvements (see change history).
@@ -135,7 +136,7 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux
 * Documentation: Fer | Wolfenswan | Dogface
 * Producers: Fer | Wolfenswan
 * Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Snippers | Zerith
@@ -161,7 +162,7 @@ Version | Date | Notes
 
 ## 03. COPYRIGHT STATEMENT ##
 
-F3 is composed of many components. Each component is (c) 2007/2008/2009/2010/2011/2012/2013 its respective contributor(s). All rights reserved.
+F3 is composed of many components. Each component is (c) 2007/2008/2009/2010/2011/2012/2013/2014 its respective contributor(s). All rights reserved.
 
 
 
@@ -225,6 +226,49 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-1-1 RC1 | 23 JUL 2014
+
+* Added Medical Systems Support component:
+ * Incorporates F3 Simple Wounding System
+ * Adds support for AGM medical supplies.
+* Updated AI Caching component:
+ * Workaround for vehicles being frozen if moving and cached at the same time.
+ * Caching completely run server side using global commands.
+ * New variable to set aggressiveness of caching.
+* Updated F3 Folk ARPS Platoons component:
+ * Added Heavy MG attachment.
+ * Added Heavy AT attachment.
+ * Added Mortar attachment.
+ * Added Medium SAM attachment.
+ * Added Heavy SAM attachment.
+ * Added Sniper Team attachment.
+ * Attachments are now led by the spotter.
+* Updated F3 Folk ARPS Assign Gear component:
+ * Tweaked MAT loadouts (gunner now starts with rocket in tube).
+ * Added support for unit types in new attachments.
+* Updated F3 Folk ARPS Assign Gear Clothing component:
+ * Component allows units to wear uniforms from any side or faction.
+ * Added new FIA uniforms, made various other tweaks.
+ * Changed CSAT small bag to correct camo.
+* Updated F3 Folk ARPS Group IDs component: added support for unit types in new attachments.
+* Updated F3 Folk ARPS Group Markers component: added support for unit types in new attachments.
+* Updated F3 Spectator Script:
+ * Revised code to reduce load on CPU.
+ * Virtual men no longer have visible name tags.
+* Updated F3 Simple Wounding System: once activated, can be enabled/disabled via mission parameter.
+* Updated Name Tags component: 
+ * Height above unit determined by stance.
+ * Offset for passenger name tags fixed.
+* Updated ORBAT Notes component:
+ * Now lists all groups with playable units (not just player groups).
+ * Highlights player group (highlight colour determined by side).
+* Updated Radio Systems Support component: minor tweaks.
+* Fixed Mission Conditions component:
+ * Lightning set correctly.
+ * All Intel values in editor set to manual/0.
+* Fixed PreMount component:
+ * Fixed issue where component would not slot turrets properly for vehicles with multiple turrets.
 
 3-1-0 | 17 JUN 2014
 
