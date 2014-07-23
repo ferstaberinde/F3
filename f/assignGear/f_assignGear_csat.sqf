@@ -140,7 +140,7 @@ _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
 // Backpacks
-_bagsmall = "B_AssaultPack_dgtl";			// carries 120, weighs 20
+_bagsmall = "B_AssaultPack_ocamo";			// carries 120, weighs 20
 _bagmedium = "B_FieldPack_ocamo";			// carries 200, weighs 30
 _baglarge =  "B_Carryall_ocamo"; 			// carries 320, weighs 40
 _bagmediumdiver =  "B_AssaultPack_blk";		// used by divers
