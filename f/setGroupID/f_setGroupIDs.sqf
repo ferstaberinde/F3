@@ -30,11 +30,12 @@ _groups = [
 ["GrpNATO_C3","NATO C3 -"],
 
 ["GrpNATO_MMG1","NATO MMG1 -"],
+["GrpNATO_HMG1","NATO HMG1 -"],
 ["GrpNATO_MAT1","NATO MAT1 -"],
 ["GrpNATO_HAT1","NATO HAT1 -"],
-["GrpNATO_HMG1","NATO HMG1 -"],
 ["GrpNATO_MTR1","NATO MTR1 -"],
-
+["GrpNATO_MSAM1","NATO MSAM1 -"],
+["GrpNATO_HSAM1","NATO HSAM1 -"],
 ["GrpNATO_ST1","NATO ST1 -"],
 ["GrpNATO_DT1","NATO DT1 -"],
 ["GrpNATO_ENG1","NATO ENG1 -"],
@@ -83,11 +84,12 @@ _groups = [
 ["GrpFIA_C3","FIA C3 -"],
 
 ["GrpFIA_MMG1","FIA MMG1 -"],
+["GrpFIA_HMG1","FIA HMG1 -"],
 ["GrpFIA_MAT1","FIA MAT1 -"],
 ["GrpFIA_HAT1","FIA HAT1 -"],
-["GrpFIA_HMG1","FIA HMG1 -"],
 ["GrpFIA_MTR1","FIA MTR1 -"],
-
+["GrpFIA_MSAM1","FIA MSAM1 -"],
+["GrpFIA_HSAM1","FIA HSAM1 -"],
 ["GrpFIA_ST1","FIA ST1 -"],
 ["GrpFIA_DT1","FIA DT1 -"],
 ["GrpFIA_ENG1","FIA ENG1 -"],
@@ -136,11 +138,12 @@ _groups = [
 ["GrpCSAT_C3","CSAT C3 -"],
 
 ["GrpCSAT_MMG1","CSAT MMG1 -"],
+["GrpCSAT_HMG1","CSAT HMG1 -"],
 ["GrpCSAT_MAT1","CSAT MAT1 -"],
 ["GrpCSAT_HAT1","CSAT HAT1 -"],
-["GrpCSAT_HMG1","CSAT HMG1 -"],
 ["GrpCSAT_MTR1","CSAT MTR1 -"],
-
+["GrpCSAT_MSAM1","CSAT MSAM1 -"],
+["GrpCSAT_HSAM1","CSAT HSAM1 -"],
 ["GrpCSAT_ST1","CSAT ST1 -"],
 ["GrpCSAT_DT1","CSAT DT1 -"],
 ["GrpCSAT_ENG1","CSAT ENG1 -"],
@@ -189,11 +192,12 @@ _groups = [
 ["GrpOFIA_C3","FIA O C3 -"],
 
 ["GrpOFIA_MMG1","FIA O MMG1 -"],
+["GrpOFIA_HMG1","FIA O HMG1 -"],
 ["GrpOFIA_MAT1","FIA O MAT1 -"],
 ["GrpOFIA_HAT1","FIA O HAT1 -"],
-["GrpOFIA_HMG1","FIA O HMG1 -"],
 ["GrpOFIA_MTR1","FIA O MTR1 -"],
-
+["GrpOFIA_MSAM1","FIA O MSAM1 -"],
+["GrpOFIA_HSAM1","FIA O HSAM1 -"],
 ["GrpOFIA_ST1","FIA O ST1 -"],
 ["GrpOFIA_DT1","FIA O DT1 -"],
 ["GrpOFIA_ENG1","FIA O ENG1 -"],
@@ -242,11 +246,12 @@ _groups = [
 ["GrpAAF_C3","AAF C3 -"],
 
 ["GrpAAF_MMG1","AAF MMG1 -"],
+["GrpAAF_HMG1","AAF HMG1 -"],
 ["GrpAAF_MAT1","AAF MAT1 -"],
 ["GrpAAF_HAT1","AAF HAT1 -"],
-["GrpAAF_HMG1","AAF HMG1 -"],
 ["GrpAAF_MTR1","AAF MTR1 -"],
-
+["GrpAAF_MSAM1","AAF MSAM1 -"],
+["GrpAAF_HSAM1","AAF HSAM1 -"],
 ["GrpAAF_ST1","AAF ST1 -"],
 ["GrpAAF_DT1","AAF DT1 -"],
 ["GrpAAF_ENG1","AAF ENG1 -"],
@@ -296,11 +301,12 @@ _groups = [
 ["GrpIFIA_C3","FIA I C3 -"],
 
 ["GrpIFIA_MMG1","FIA I MMG1 -"],
+["GrpIFIA_HMG1","FIA I HMG1 -"],
 ["GrpIFIA_MAT1","FIA I MAT1 -"],
 ["GrpIFIA_HAT1","FIA I HAT1 -"],
-["GrpIFIA_HMG1","FIA I HMG1 -"],
 ["GrpIFIA_MTR1","FIA I MTR1 -"],
-
+["GrpIFIA_MSAM1","FIA I MSAM1 -"],
+["GrpIFIA_HSAM1","FIA I HSAM1 -"],
 ["GrpIFIA_ST1","FIA I ST1 -"],
 ["GrpIFIA_DT1","FIA I DT1 -"],
 ["GrpIFIA_ENG1","FIA I ENG1 -"],
