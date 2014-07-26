@@ -154,7 +154,6 @@ _transition setRainbow _MissionRainbow;
 _transition setWindStr  _MissionWindStr;
 _transition setWindForce _MissionWindGusts;
 _transition setWaves _MissionWaves;
-_transition setLightnings _MissionLightnings;
 
 } else {
 	0 setOvercast  _MissionOvercast;
@@ -163,7 +162,6 @@ _transition setLightnings _MissionLightnings;
 	0 setWindStr  _MissionWindStr;
 	0 setWindForce _MissionWindGusts;
 	0 setWaves _MissionWaves;
-	0 setLightnings _MissionLightnings;
 	forceWeatherChange;
 };
 
