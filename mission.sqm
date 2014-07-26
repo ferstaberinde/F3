@@ -31,13 +31,12 @@ class Mission
 		"A3_Soft_F_EPC_Truck_03",
 		"A3_Soft_F_Gamma_Offroad",
 		"A3_Soft_F_Truck",
-		"a3_uav_f_characters_f_gamma",
-		"a3_characters_f"
+		"a3_uav_f_characters_f_gamma"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
-		"a3_characters_f",
+		"a3_characters_f_beta",
 		"A3_Characters_F_Gamma",
 		"a3_uav_f_characters_f_gamma",
 		"A3_Characters_F_OPFOR",
@@ -70,10 +69,9 @@ class Mission
 	{
 		briefingName="F3";
 		overviewText="*** Insert mission description here. ***";
-		resistanceWest=0;
 		startWeather=0;
 		startWind=0;
-		forecastWeather=0;
+		forecastWeather=1;
 		forecastWind=0;
 		forecastWaves=0;
 		wavesForced=1;
@@ -81,10 +79,10 @@ class Mission
 		year=2035;
 		month=7;
 		day=6;
-		hour=8;
+		hour=5;
 		minute=15;
-		startFogDecay=0;
-		forecastFogDecay=0;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
 	};
 	class Groups
 	{
