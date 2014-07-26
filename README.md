@@ -4,7 +4,7 @@
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
-* Description: MP mission framework for Armed Assault 3.
+* Description: MP mission framework for Arma 3.
 
 
 
@@ -149,7 +149,7 @@ Version | Date | Notes
 * Documentation: Fer | Messiah2 | Xiathorn
 * Producers: Fer
 * Special Thanks: Dancingcuban | Firebird | Stranglove | Ferrard Carson | Bodge
-* Special Thanks: Everyone at ShackTactical | Everyone at Folk | Everyone at ARPS | Everyone at Folk ARPS
+* Special thanks to everyone at: ShackTactical | Folk | ARPS | Folk ARPS
 
 ### BAS f Credits ###
 
@@ -158,7 +158,7 @@ Version | Date | Notes
 * Documentation: Fer | Kegetys | Serclaes | Messiah2
 * Producers: Fer
 * Special Thanks: Dux | kevb0 | Tigershark | Dslyecxi | Rhodite | Opteryx | henk | bluedingo | broileri | Fullforce | Tyger
-* Special Thanks: Everyone at TimeZone Warriors <TZW> | Everyone at ShackTactical
+* Special thanks to everyone at: TimeZone Warriors | ShackTactical
 
 
 ## 03. COPYRIGHT STATEMENT ##
@@ -169,7 +169,7 @@ F3 is composed of many components. Each component is (c) 2007/2008/2009/2010/201
 
 ## 04. TERMS OF USE ##
 
-F3 (hereafter 'Software') contains files to be used in the PC CD-ROM simulators "Armed Assault 3" (hereafter referred to as 'ArmA 3'). To use the Software you must agree to the following conditions of use:
+F3 (hereafter 'Software') contains files to be used in the PC CD-ROM simulators "Arma 3". To use the Software you must agree to the following conditions of use:
 
 1. The term 'Software' specifically excludes the file 'mission.sqm'.
 
@@ -207,8 +207,8 @@ The online manual can be found at:
 
 To begin using the Software, move the F3.Altis folder into one of the following directories:
 
-* \My Documents\Arma 3 Alpha\MPMissions\
-* \My Documents\Arma 3 Alpha Other Profiles\YourPlayerName\MPMissions\
+* \My Documents\Arma 3\MPMissions\
+* \My Documents\Arma 3 Other Profiles\YourPlayerName\MPMissions\
 
 Access the online manual (see SUPPORT INFORMATION above) and follow the instructions contained therein.
 
@@ -216,7 +216,7 @@ Access the online manual (see SUPPORT INFORMATION above) and follow the instruct
 
 ## 09. NOTES ##
 
-We hope you will enjoy making and updating missions for ArmA 3 with F3!
+We hope you will enjoy making and updating missions for Arma 3 with F3!
 
 Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
@@ -257,7 +257,6 @@ Version | Date
 * Updated F3 Spectator Script:
  * Revised code to reduce load on CPU.
  * Virtual men no longer have visible name tags.
-* Updated F3 Simple Wounding System: once activated, can be enabled/disabled via mission parameter.
 * Updated Name Tags component: 
  * Height above unit determined by stance.
  * Offset for passenger name tags fixed.
