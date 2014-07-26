@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-1-1 RC1
+* Version: 3-1-1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-1-1     | 26 JUL 2014 | Patch release - Various improvements (see change history).
 * 3-1-1 RC1 | 23 JUL 2014 | Internal release - Various improvements (see change history).
 * 3-1-0     | 17 JUN 2014 | Patch release - Various improvements (see change history).
 * 3-1-0 RC6 | 16 JUN 2014 | Internal release - Various improvements (see change history).
@@ -137,7 +138,7 @@ Version | Date | Notes
 ### F3 Credits ###
 
 * Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux
-* Documentation: Fer | Wolfenswan | Dogface
+* Documentation: Fer | Wolfenswan | Dogface | Cam
 * Producers: Fer | Wolfenswan
 * Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Snippers | Zerith
 * Special thanks to everyone at: Folk ARPS | Basterd ArmA | Black sh33p | Bourbon Warfare | Phantactical | Pointfire | Project Awesome | Team One Tactical | The Company
@@ -227,7 +228,7 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-1-1 RC1 | 23 JUL 2014
+3-1-1 | 26 JUL 2014
 
 * Added Medical Systems Support component:
  * Incorporates F3 Simple Wounding System
@@ -263,12 +264,18 @@ Version | Date
 * Updated ORBAT Notes component:
  * Now lists all groups with playable units (not just player groups).
  * Highlights player group (highlight colour determined by side).
-* Updated Radio Systems Support component: minor tweaks.
+* Updated Radio Systems Support component:
+ * Improved support for spectators in TFR.
+ * Other minor tweaks.
 * Fixed Mission Conditions component:
  * Lightning set correctly.
  * All Intel values in editor set to manual/0.
 * Fixed PreMount component:
  * Fixed issue where component would not slot turrets properly for vehicles with multiple turrets.
+
+3-1-1 RC1 | 23 JUL 2014
+
+* Please see change history for release v3-1-1.
 
 3-1-0 | 17 JUN 2014
 
