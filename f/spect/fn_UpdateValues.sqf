@@ -11,6 +11,9 @@ f_cam_checkIndex =
 };
 while {true} do
 {
+	ctrlMapAnimClear ((findDisplay 9228) displayCtrl 1350);
+	((findDisplay 9228) displayCtrl 1350) ctrlMapAnimAdd [0.3, f_cam_map_zoom,visiblePosition (camTarget f_cam_camera)];
+	ctrlMapAnimCommit ((findDisplay 9228) displayCtrl 1350);
     f_cam_units = allunits;
 	f_cam_players = call F_fnc_GetPlayers;
 	f_cam_units = f_cam_units - f_cam_players;

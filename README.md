@@ -1,10 +1,10 @@
 # F3 README #
 
-* Version: 3-1-0 RC6
+* Version: 3-1-1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
-* Description: MP mission framework for Armed Assault 3.
+* Description: MP mission framework for Arma 3.
 
 
 
@@ -29,6 +29,9 @@
 
 Version | Date | Notes
 
+* 3-1-1     | 26 JUL 2014 | Patch release - Various improvements (see change history).
+* 3-1-1 RC1 | 23 JUL 2014 | Internal release - Various improvements (see change history).
+* 3-1-0     | 17 JUN 2014 | Patch release - Various improvements (see change history).
 * 3-1-0 RC6 | 16 JUN 2014 | Internal release - Various improvements (see change history).
 * 3-1-0 RC5 | 11 JUN 2014 | Internal release - Various improvements (see change history).
 * 3-1-0 RC4 | 03 JUN 2014 | Internal release - Various improvements (see change history).
@@ -134,8 +137,8 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick
-* Documentation: Fer | Wolfenswan | Dogface
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux
+* Documentation: Fer | Wolfenswan | Dogface | Cam
 * Producers: Fer | Wolfenswan
 * Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Snippers | Zerith
 * Special thanks to everyone at: Folk ARPS | Basterd ArmA | Black sh33p | Bourbon Warfare | Phantactical | Pointfire | Project Awesome | Team One Tactical | The Company
@@ -146,7 +149,7 @@ Version | Date | Notes
 * Documentation: Fer | Messiah2 | Xiathorn
 * Producers: Fer
 * Special Thanks: Dancingcuban | Firebird | Stranglove | Ferrard Carson | Bodge
-* Special Thanks: Everyone at ShackTactical | Everyone at Folk | Everyone at ARPS | Everyone at Folk ARPS
+* Special thanks to everyone at: ShackTactical | Folk | ARPS | Folk ARPS
 
 ### BAS f Credits ###
 
@@ -155,18 +158,18 @@ Version | Date | Notes
 * Documentation: Fer | Kegetys | Serclaes | Messiah2
 * Producers: Fer
 * Special Thanks: Dux | kevb0 | Tigershark | Dslyecxi | Rhodite | Opteryx | henk | bluedingo | broileri | Fullforce | Tyger
-* Special Thanks: Everyone at TimeZone Warriors <TZW> | Everyone at ShackTactical
+* Special thanks to everyone at: TimeZone Warriors | ShackTactical
 
 
 ## 03. COPYRIGHT STATEMENT ##
 
-F3 is composed of many components. Each component is (c) 2007/2008/2009/2010/2011/2012/2013 its respective contributor(s). All rights reserved.
+F3 is composed of many components. Each component is (c) 2007/2008/2009/2010/2011/2012/2013/2014 its respective contributor(s). All rights reserved.
 
 
 
 ## 04. TERMS OF USE ##
 
-F3 (hereafter 'Software') contains files to be used in the PC CD-ROM simulators "Armed Assault 3" (hereafter referred to as 'ArmA 3'). To use the Software you must agree to the following conditions of use:
+F3 (hereafter 'Software') contains files to be used in the PC CD-ROM simulators "Arma 3". To use the Software you must agree to the following conditions of use:
 
 1. The term 'Software' specifically excludes the file 'mission.sqm'.
 
@@ -204,8 +207,8 @@ The online manual can be found at:
 
 To begin using the Software, move the F3.Altis folder into one of the following directories:
 
-* \My Documents\Arma 3 Alpha\MPMissions\
-* \My Documents\Arma 3 Alpha Other Profiles\YourPlayerName\MPMissions\
+* \My Documents\Arma 3\MPMissions\
+* \My Documents\Arma 3 Other Profiles\YourPlayerName\MPMissions\
 
 Access the online manual (see SUPPORT INFORMATION above) and follow the instructions contained therein.
 
@@ -213,7 +216,7 @@ Access the online manual (see SUPPORT INFORMATION above) and follow the instruct
 
 ## 09. NOTES ##
 
-We hope you will enjoy making and updating missions for ArmA 3 with F3!
+We hope you will enjoy making and updating missions for Arma 3 with F3!
 
 Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
@@ -224,6 +227,58 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-1-1 | 26 JUL 2014
+
+* Added Medical Systems Support component:
+ * Incorporates F3 Simple Wounding System
+ * Adds support for AGM medical supplies.
+* Updated AI Caching component:
+ * Workaround for vehicles being frozen if moving and cached at the same time.
+ * Caching completely run server side using global commands.
+ * New variable to set aggressiveness of caching.
+* Updated F3 Folk ARPS Platoons component:
+ * Added Heavy MG attachment.
+ * Added Heavy AT attachment.
+ * Added Mortar attachment.
+ * Added Medium SAM attachment.
+ * Added Heavy SAM attachment.
+ * Added Sniper Team attachment.
+ * Attachments are now led by the spotter.
+* Updated F3 Folk ARPS Assign Gear component:
+ * Tweaked MAT loadouts (gunner now starts with rocket in tube).
+ * Added support for unit types in new attachments.
+* Updated F3 Folk ARPS Assign Gear Clothing component:
+ * Component allows units to wear uniforms from any side or faction.
+ * Added new FIA uniforms, made various other tweaks.
+ * Changed CSAT small bag to correct camo.
+* Updated F3 Folk ARPS Group IDs component: added support for unit types in new attachments.
+* Updated F3 Folk ARPS Group Markers component: added support for unit types in new attachments.
+* Updated F3 Spectator Script:
+ * Revised code to reduce load on CPU.
+ * Virtual men no longer have visible name tags.
+* Updated Name Tags component: 
+ * Height above unit determined by stance.
+ * Offset for passenger name tags fixed.
+* Updated ORBAT Notes component:
+ * Now lists all groups with playable units (not just player groups).
+ * Highlights player group (highlight colour determined by side).
+* Updated Radio Systems Support component:
+ * Improved support for spectators in TFR.
+ * Other minor tweaks.
+* Fixed Mission Conditions component:
+ * Lightning set correctly.
+ * All Intel values in editor set to manual/0.
+* Fixed PreMount component:
+ * Fixed issue where component would not slot turrets properly for vehicles with multiple turrets.
+
+3-1-1 RC1 | 23 JUL 2014
+
+* Please see change history for release v3-1-1.
+
+3-1-0 | 17 JUN 2014
+
+* Please change history for internal releases v3-1-0 RC1 through v3-1-0 RC6.
 
 3-1-0 RC6 | 16 JUN 2014
 

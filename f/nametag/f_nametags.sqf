@@ -15,7 +15,9 @@ if (!isDedicated && (isNull player)) then
 
 // MODIFYABLE
 f_size_Nametags = 0.04; // The size the names are displayed in
-f_height_Nametags = 0; // The height of the name tags for infantry (0 = hovering over unit, -1 = about belt height)
+f_height_standing_Nametags = 2;
+f_height_crouch_Nametags = 1.5;
+f_height_prone_Nametags = 0.9;
 f_vheight_Nametags = 0; // The height of the name tags for units in vehicles (0 = hovering over vehicle)
 
 f_color_Nametags =  [1,1,1,0.9]; // The color for infantry and units in vehicle cargo (in [red,green, blue, opacity])
@@ -130,7 +132,7 @@ addMissionEventHandler ["Draw3D", {
 		// Start looping through all entities
 		{
 			// Only display units of players side
-			if(side _x == side player && _x != player) then
+			if(side _x == side player && _x != player && !(player iskindof "VirtualMan_F")) then
 			{
 
 				// If the entity is Infantry
@@ -173,7 +175,7 @@ addMissionEventHandler ["Draw3D", {
 						_pos = visiblePosition _x;
 
 						// If the unit is sitting in the driver position or is the driver
-						if(_pos distance (visiblePosition (driver _veh)) > 0.1 || driver _veh == _x) then
+						if(_pos distance (visiblePosition (driver _veh)) > 0.1 && driver _veh == _x) then
 						{
 
 							// If it's the driver calculate the cargo slots
