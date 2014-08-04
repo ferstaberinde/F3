@@ -210,3 +210,10 @@ f_var_cachingAggressiveness = 2;
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 [] execVM "f\radios\radio_init.sqf";
+
+// ====================================================================================
+
+// F3 - UAV Charging
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+//["uav"] execVM "f\common\f_chargeUAV.sqf";
