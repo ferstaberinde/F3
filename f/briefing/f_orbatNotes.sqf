@@ -7,10 +7,9 @@ waitUntil {scriptDone f_script_setGroupIDs};
 
 // Define needed variables
 private ["_orbatText", "_groups", "_precompileGroups"];
-_orbatText = "<br />NOTE<br />
-The ORBAT below is only accurate at mission start.<br />
+_orbatText = "<br />NOTE: The ORBAT below is only accurate at mission start.<br />
 <br />
-GROUPS<br />";
+GROUP LEADERS + MEDICS<br /><br />";
 _groups = [];
 _hiddenGroups = [];
 
@@ -27,10 +26,15 @@ _groups = _groups - _hiddenGroups;
 
 // Loop through the group, print out group ID, leader name and medics if present
 {
-	// Highlight the player's group with a different color
+	// Highlight the player's group with a different color (based on the player's side)
 	_color = "#FFFFFF";
 	if (_x == group player) then {
-		_color = "#FF0000";
+		_color = switch (side player) do {
+			 case west: {"#0080FF"};
+			 case east: {"#B40404"};
+			 case independent: {"#298A08"};
+			 default {"#8904B1"};
+ 		};
 	};
 
 	_orbatText = _orbatText + format ["<font color='%3'>%1 %2</font>", _x, name leader _x,_color] + "<br />";
@@ -57,7 +61,7 @@ _veharray = [];
 
 if (count _veharray > 0) then {
 
-_orbatText = _orbatText + "<br />VEHICLES<br />";
+_orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 
 	{
 		_orbatText = _orbatText + "<br />" + format["%1 ",getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayname")];
