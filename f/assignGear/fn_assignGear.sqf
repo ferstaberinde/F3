@@ -93,6 +93,9 @@ if (_faction == "blu_f") then {
 #include "f_assignGear_nato.sqf"
 };
 
+if (_faction == "BWA3_Faction") then {
+#include "f_assignGear_bundeswehr.sqf";
+};
 
 // ====================================================================================
 

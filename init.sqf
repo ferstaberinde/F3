@@ -10,7 +10,7 @@ enableSaving [false, false];
 // F3 - Mute Orders and Reports
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-enableSentences false;
+enableSentences true;
 
 // ====================================================================================
 
@@ -72,10 +72,10 @@ f_script_setLocalVars = [0] execVM "f\common\f_setLocalVars.sqf";
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_removeBodyDelay = 180;
-// f_var_removeBodyDistance = 500;
-// f_var_doNotRemoveBodies = [];
-// [] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
+f_var_removeBodyDelay = 540;
+f_var_removeBodyDistance = 750;
+f_var_doNotRemoveBodies = [];
+[] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
 
 // ====================================================================================
 
@@ -169,7 +169,7 @@ f_script_setLocalVars = [0] execVM "f\common\f_setLocalVars.sqf";
 
 f_var_JIP_FirstMenu = false;		// Do players connecting for the first time get the JIP menu? - This only works in missions with respawn.
 f_var_JIP_RemoveCorpse = false;		// Remove the old corpse of respawning players?
-f_var_JIP_GearMenu = true;			// Can JIP/respawned players select their own gear? False will use gear assigned by F3 Gear Component if possible
+f_var_JIP_GearMenu = false;			// Can JIP/respawned players select their own gear? False will use gear assigned by F3 Gear Component if possible
 
 // ====================================================================================
 
@@ -199,3 +199,5 @@ f_var_cachingAggressiveness = 2;
 [] execVM "f\medical\medical_init.sqf";
 
 // ====================================================================================
+
+// PA - PA Script calls
