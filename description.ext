@@ -5,9 +5,19 @@
 
 class Header
 {
-	gameType = Coop;
-	minPlayers = 1;
-	maxPlayers = 453;
+	// Available gameTypes:
+	// Coop:	|	Coop Mission: The meat and bread PA mission.
+	// DM		|	Death Match
+	// TDM		|	Team Death Match
+	// CTF		|	Capture The Flag (or, nuke)
+	// SC		|	Sector Control (Think insurgency - the red/green squares)
+	// RPG		|	Skyrim
+	// Sandbox	|	Free Game type, think Dark Ripoff
+	// Seize	|	Seize a location
+	// Defend	|	Defend a location
+	gameType = ***;
+	minPlayers = ***;
+	maxPlayers = ***;
 };
 
 // ============================================================================================
@@ -16,9 +26,9 @@ class Header
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 onLoadName = "*** Insert mission name here. ***";
-onLoadMission = "Made with the F3 Mission Development Framework";
+onLoadMission = "Made with the F3_PA Mission Development Framework";
 author = "*** Insert mission author name here. ***";
-loadScreen = "logo.paa";
+loadScreen = "project.paa";
 
 // ============================================================================================
 
@@ -31,11 +41,17 @@ enableDebugConsole = 1;
 
 // F3 - Respawn Settings
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// 1	|	Respawn as Bird (for normal mission, no reinforcements).
+// 2	|	Respawn on death location without gear, used in special missions.
+// 3	|	Respawn at base marker (used when reinforcements are an option).
+// 4	|	Respawn either in group if an AI slot is filled or as seagull.
+// If 3 is chosen, place down makers with the following names as necessary:
+// respawn_west, respawn_guerilla, respawn_east, respawn_civillian.
 
 respawn = 1;
 respawndelay = 3;
 respawnOnStart = 0;
-respawnTemplates[] = {"f_spectator","f_JIP"};
+respawnTemplates[] = {"f_JIP"};	// add in "f_spectator" when not using respawn.
 
 // ============================================================================================
 
@@ -145,22 +161,8 @@ class Params
             title = "Radio System";
             values[] = {0,1,2};
             texts[] = {"Off","ACRE","TFR"};
-            default = 0;
+            default = 2;
             code = "f_var_radios = %1";
-    };
-
-// ============================================================================================
-
-// F3 - Medical Systems Support
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-    class f_param_medical
-    {
-            title = "Medical System";
-            values[] = {0,1,2};
-            texts[] = {"Arma 3 Default","F3 Simple Wounding System","Authentic Gameplay Mod"};
-            default = 0;
-            code = "f_var_medical = %1";
     };
 
 // ============================================================================================
@@ -181,7 +183,7 @@ class Params
 
 // F3 - Mission Conditions Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
+/*
 	class f_param_weather
 	{
 		title = "$STR_f_param_weather";
@@ -214,7 +216,7 @@ class Params
  		isGlobal = 0;						// Execute this only on the server
  		code = "f_param_timeOfDay = %1";
 	};
-
+*/
 // ============================================================================================
 
 // F3 - AI Skill Selector
@@ -274,11 +276,11 @@ class Params
 
 class CfgDebriefing
 {
-	class End1
+	cclass End1
 	{
-		title = "Ending #1";
+		title = "MISSION WIN";
 		subtitle = "";
-		description = "*** Insert debriefing #1 here. ***";
+		description = "Please post to the AAR thread!";
 		// pictureBackground = "";
 		// picture = "";
 		// pictureColor[] = {0.0,0.3,0.6,1};
@@ -286,9 +288,9 @@ class CfgDebriefing
 
 	class End2
 	{
-		title = "Ending #2";
+		title = "MISSION LOSS";
 		subtitle = "";
-		description = "*** Insert debriefing #2 here. ***";
+		description = "Please post to the AAR thread!";
 		// pictureBackground = "";
 		// picture = "";
 		// pictureColor[] = {0.0,0.3,0.6,1};
@@ -296,9 +298,9 @@ class CfgDebriefing
 
 	class End3
 	{
-		title = "Ending #3";
-		subtitle = "";
-		description = "*** Insert debriefing #3 here. ***";
+		title = "MISSION FAILED";
+		subtitle = "Managed to extract";
+		description = "Please post to the AAR thread!";
 		// pictureBackground = "";
 		// picture = "";
 		// pictureColor[] = {0.0,0.3,0.6,1};
@@ -426,11 +428,6 @@ class CfgFunctions
 			class localGroupMarker{};
 			class localSpecialistMarker{};
 		};
-		class authorisedCrew
-		{
-			file = "f\authorisedCrew";
-			class authorisedCrewCheck {};
-		};
 		class FTMemberMarkers
 		{
 			file = "f\FTMemberMarkers";
@@ -454,16 +451,6 @@ class CfgFunctions
 			class mapClickTeleportUnit{};
 			class mapClickTeleportGroup{};
 		};
-		class nametag
-		{
-			file = "f\nametag";
-			class drawNameTag{};
-		};
-		class preMount
-		{
-			file = "f\preMount";
-			class mountGroups{};
-		};
 		class radios
 		{
 			file = "f\radios";
@@ -476,7 +463,6 @@ class CfgFunctions
 			class tfr_setRadioFrequencies{};
 			class tfr_configureSpectatorChat{};
 		};
-		#include "f\simplewoundingsystem\config.hpp"
 		#include "f\spect\functions.hpp"
 
 	};

@@ -53,7 +53,7 @@ if (serverCommandAvailable "#kick") then {
 
 // ====================================================================================
 
-// BRIEFING: BLUFOR > NATO
+// BRIEFING: BLUFOR > NATO & BW
 // The following block of code executes only if the player is in a NATO slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
@@ -67,6 +67,18 @@ if (_unitfaction == "blu_f") exitwith {
 	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
 	};
 };
+
+if (_unitfaction == "bwa3_faction") exitwith {
+
+#include "f\briefing\f_briefing_nato.sqf"
+
+// DEBUG
+	if (f_var_debugMode == 1) then
+	{
+	player sideChat format [ "DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
+	};
+};
+
 
 // ====================================================================================
 

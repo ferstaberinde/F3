@@ -1,0 +1,165 @@
+#=======================================#
+#	Standard PA platoon composition		#
+#=======================================#
+
+#=======================================#
+#			High Command				#
+#=======================================#
+
+> Mission Maker, giving instructions during briefing.
+> In game chat triggered by script (depends on mission).
+
+#=======================================#
+#			Platoon Command				#
+#=======================================#
+case 0
+
+> CO
+> XO		NOTE: Needs specialist marker?
+> PltMED	NOTE: specialist case 0
+
+CO is in overall active command during mission. 
+	He commands the platoon as well as air and armored assets.
+	He can delegate some of his tasks to others in his squad.
+
+XO is second in command. He takes over if CO is down. 
+	CO can also delegate divisions to him, e.g. XO coordinates air or armored assets
+	while CO manages infantry and supply operations.
+
+PltMED is the platoon medic, he can be attached to a squad if they lose their medic.
+	Otherwise oversees the dispersion of medical supplies among squads and sets up 
+	field hospitals if the situation demands it. Directs all MEDEVAC assets.
+
+Other units can be attached if the mission demands it, like UN Observers, (Forward) Air Controllers, etc.
+
+#=======================================#
+#			Infantry Platoon			#
+#=======================================#
+case 1
+
+Callsigns:
+	> Alpha (1,2,3)
+	> Bravo (1,2,3)
+	> Charlie (1,2,3)
+	> Delta	(1,2,3)		
+		NOTE: Delta is if dictated the specialist squad.
+
+A squad is made up out of:
+
+	Squad Lead, callsign (Alpha / Bravo / Charlie/ Delta) Actual.
+		> Squad Leader
+		> Squad Medic
+		> Other squad-tier units such as engineers if the squads are motorized.
+
+	3 Fireteams, callsign (Alpha / Bravo / Charlie / Delta) (1,2,3).
+		> FTL
+		> Automatic Rifleman
+		> Assisting Automatic Rifleman
+		> LAT / Rifleman / Other
+
+#=======================================#
+#			Weapon Teams				#
+#=======================================#
+case 2,3,4,5
+
+Callsigns:
+	> (M/H)MG Team (1,2,3,4)
+	> Mortar Team (1,2,3,4)
+	> AA Team (1,2)
+ 	> Sniper Team (1,2,3,4)
+	> Diver Team (1)
+
+Weapon teams are generally attached at squad level but carry their own callsigns. Generally directed by a Squad Leader but Platoon Command can command them directly if the situation calls for it.
+Sniper teams are almost never attached at squad level as are Diver teams.
+
+#=======================================#
+#			Armor Division				#
+#=======================================#
+case 7
+
+Callsigns:
+	> Tango
+	> Whisky
+	> Zulu
+
+One armored squad is made up of three individual armored vehicles.
+They are (T / W / Z) (1,2,3).
+
+They can either be attached individually to infantry squads or operate on their own as armored division.
+	> If they are attached to a squad they fall under the SL command. IFV's will almost always be directly attached to a squad.
+	> If they act as a division, the order of command follows 1, 2, 3.
+	i.e. Tango 1 is in command, Tango 2 second, Tango 3 third.
+
+If all three divisions are on the field they are commanded by Tango 1,  then Whisky 1, then Zulu 1, then Tango 2 etc.
+
+#=======================================#
+#			Air Division				#
+#=======================================#
+case 8 (possible new case for CAS Plane?)
+
+Subsections: Transport / CAS Helicopter / CAS plane
+
+All air vehicles fall directly under Platoon Command: they are individually managed by Platoon Command.
+	> CO can delegate them to XO. PltMED manages any MEDEVAC assets.
+	> When bulk inserting infantry and armor, dropping off a lot of units in little time on 1 LZ, transport helicopters can form their own squad, commanded by (F / G / H) 1. 
+	This is only to make sure the insertion goes as smooth as possible and to prevent collision accidents.
+	> CAS assets can be directed on the field by a Forward Air Controller. In this case the FAC falls under Platoon Command but has the freedom
+	to direct CAS as he sees fit. Otherwise directed by Platoon Command.
+	> Pilot manages the vehicle i.e. has the controls. Gunner/Copilot does comms and consolidates with FAC.
+
+General setup:
+	> 4 transport choppers 	(adjusted as mission sees fit)
+	> 3 CAS choppers		(suggested maximum of 3)
+	> 1 CAS plane			(suggested maximum of 1)
+
+#	Transport
+
+Callsigns:
+	> Super		(BLACKHAWK)
+	> Star		(LITTLEBIRD)
+	> Cobra		(VENOM)
+	> Dustoff
+	> Big Bird	(CHINOOK)
+	> Pelican	(CHINOOK)
+	> Bandaid	(MEDEVAC)	NOTE: Commanded directly by PltMED.
+
+All transport air vehicles of the same kind fall under the same callsign.
+	> For example if there are 4 Blackhawks and 2 Littlebirds they will go Super (1,2,3,4) and Star (1,2).
+	> Pilots can fly Transport at the start of the mission and then switch to a CAS role. In this case their transport callsign will retire and they will pick up their CAS callsign. (This should be managed by disconnecting and reconnecting in the right slot)
+
+# CAS Helicopter
+
+Callsigns:
+	> Reaper	(APACHE)
+	> Knight	(VENOM)
+	> Scout		(PAWNEE)
+	> Sword	
+
+All CAS Choppers of the same kind fall under the same callsign.
+	> For example if there are 2 Apache's and one Pawnee they will go Reaper (1,2) and Scout 1.
+	> Pilots can fly Transport at the start of the mission and then switch to a CAS role. In this case their transport callsign will retire and they will pick up their CAS callsign. (This should be managed by disconnecting and reconnecting in the right slot)
+# CAS Plane
+
+Callsigns:
+
+	> Pavement 	(A-10)
+	> Baron
+	> Raptor
+	> Phoenix
+	> Thunderbird
+
+Every CAS plane has it's own callsign.
+	> Even if multiple of the same type they will operate under different callsigns.
+	> Pilots can fly Transport at the start of the mission and then switch to a CAS role. In this case their transport callsign will retire and they will pick up their CAS callsign. (This should be managed by disconnecting and reconnecting in the right slot)
+
+# Note: Transport Planes inherit callsigns from Transport choppers but each will have it's own callsign.
+
+#=======================================#
+#	 			AUXILLARY				#
+#=======================================#
+case 6
+
+Some missions call for AUXILLARY teams, such as a logistics and repair team.
+These teams are commanded at Platoon level. One team can be assigned multiple jobs such as both repairing vehicles in the field or supplying squads with munitions.
+Often work closely with Air assets such as transport helicopters and MEDEVAC choppers but they manage their own vehicles as well (REFUEL / REARM / MEDEVAC / MUNITIONS / UAV)
+Even though they will all be grouped into one team and managed by one team leader they will not necessarily always be together in the field as one team e.g. some technicians might be sent out to repair downed choppers.

@@ -6,30 +6,74 @@
 // Each medical modification requires a different set of scripts to be used, and so we
 // split into a separate script file for initialisation of each mod.
 
-// Wait for parameter to be initialised
-waitUntil{!isNil "f_var_medical"};
 
-// Check which system to use
-call
+// Define Medical Items
+
+// Medical Items
+
+_defib = "x39_defibrillator";
+_bandage = "x39_bandage";
+_morphine = "x39_morphine";
+_epi = "x39_epinephrine";
+_tourniquet = "x39_tourniquet";
+_blood = "x39_bloodbag";
+_med1 = "x39_medikit";
+_med2 = "x39_medikit2";
+_med3 = "x39_medikit3";
+_med4 = "x39_medikit4";
+_med5 = "x39_medikit5";
+_earplug = "x39_earplug";
+
+// =====================================================================================
+
+// Only run in game time
+sleep 0.01;
+
+if(alive player) then {
+
+// =====================================================================================
+
+// Remove pre-assigned medical items
+player removeItems "FirstAidKit";
+player removeItems "Medikit";
+
+// Add basic items to all units
+	{_unit addItemToBackpack _epi} forEach [1,2,3];
+	{_unit addItemToBackpack _med1} forEach [1];
+	{_unit addItem _bandage} forEach [1,2,3,4,5];
+	{_unit addItemToBackpack _tourniquet};
+	{_unit addItem _morphine} forEach [1,2,3,4,5];
+
+// Add specialist items to medics
+
+if (_typeOfUnit == "m") then
 {
-	// If 0 do nothing (Default Arma Healing)
 
-	// F3 Simple Wounding System
-	if (f_var_medical == 1) exitWith
-	{
-		// If script is being run on a client
-		if (hasInterface) then
-		{
-			[player] execVM "f\simplewoundingsystem\init.sqf";
-		};
+	// BACKPACK: LIGHT
+	if (f_param_backpacks <= 1) then {
+		_unit additem _defib;
+		(unitBackpack player) addItemCargoGlobal [_bandage, 12];
+		(unitBackpack player) addItemCargoGlobal [_tourniquet, 3];
+		(unitBackpack player) addItemCargoGlobal [_morphine, 12];
+		(unitBackpack player) addItemCargoGlobal [_epi, 12];
+		(unitBackpack player) addItemCargoGlobal [_blood, 4];
+		(unitBackpack player) addItemCargoGlobal [_med5, 3];
 	};
-	// Authentic Gameplay Modification
-	if (f_var_medical == 2) exitWith
-	{
-		// If script is being run on a client
-		if (hasInterface) then
-		{
-			[] execVM "f\medical\AGM_clientInit.sqf";
-		};
+	// BACKPACK: HEAVY
+	if (f_param_backpacks == 2) then {
+
+		_unit additem _defib;
+		(unitBackpack player) addItemCargoGlobal [_bandage, 20];
+		(unitBackpack player) addItemCargoGlobal [_tourniquet, 3];
+		(unitBackpack player) addItemCargoGlobal [_morphine, 20];
+		(unitBackpack player) addItemCargoGlobal [_epi, 16];
+		(unitBackpack player) addItemCargoGlobal [_blood, 8];
+		(unitBackpack player) addItemCargoGlobal [_med5, 6];
+
 	};
+};
+
+
+// =====================================================================================
+
 };
