@@ -26,13 +26,18 @@ _earplug = "x39_earplug";
 
 // =====================================================================================
 
-if(alive player) then {
+// Wait for gear assignation to take place
+waitUntil{(player getVariable ["f_var_assignGear_done", false])};
 
-// =====================================================================================
+private "_typeOfUnit";
+
+_typeOfUnit = player getVariable "f_var_assignGear";
 
 // Remove pre-assigned medical items
 player removeItems "FirstAidKit";
 player removeItems "Medikit";
+
+// =====================================================================================
 
 // Add basic items to all units
 	{_unit addItemToBackpack _epi} forEach [1,2,3];
@@ -72,5 +77,3 @@ if (_typeOfUnit == "m") then
 
 
 // =====================================================================================
-
-};
