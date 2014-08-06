@@ -117,8 +117,8 @@ _smokegrenade = "SmokeShell";
 _smokegrenadegreen = "SmokeShellGreen";
 
 // misc medical items.
-_firstaid = "x39_bandage";
-_medkit = "x39_medikit";
+_firstaid = "FirstAidKit";
+_medkit = "Medikit";
 
 // Night Vision Goggles (NVGoggles)
 _nvg = "NVGoggles";
@@ -132,27 +132,20 @@ _chemred = "Chemlight_red";
 _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
-// Medical Items
-
-_defib = "x39_defibrillator";
-_bandage = "x39_bandage";
-_morphine = "x39_morphine";
-_epi = "x39_epinephrine";
-_tourniquet = "x39_tourniquet";
-_blood = "x39_bloodbag";
-_med1 = "x39_medikit";
-_med2 = "x39_medikit2";
-_med3 = "x39_medikit3";
-_med4 = "x39_medikit4";
-_med5 = "x39_medikit5";
-_earplug = "x39_earplug";
-
 // Backpacks
-_bagsmall = "B_Carryall_mcamo";		// carries 120, weighs 20
-_bagmedium = "B_Carryall_mcamo";			// carries 240, weighs 30
-_baglarge =  "B_Carryall_mcamo"; 		// carries 320, weighs 40
-_bagmediumdiver =  "B_AssaultPack_blk";	// used by divers
-_baguav = "B_UAV_01_backpack_F";		// used by UAV operator
+_bagsmall = "B_AssaultPack_mcamo";			// carries 120, weighs 20
+_bagmedium = "B_FieldPack_khk";				// carries 240, weighs 30
+_baglarge =  "B_Carryall_mcamo"; 			// carries 320, weighs 40
+_bagmediumdiver =  "B_AssaultPack_blk";		// used by divers
+_baguav = "B_UAV_01_backpack_F";			// used by UAV operator
+_baghmgg = "B_HMG_01_weapon_F";				// used by Heavy MG gunner
+_baghmgag = "B_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghatg = "B_AT_01_weapon_F";				// used by Heavy AT gunner
+_baghatag = "B_HMG_01_support_F";			// used by Heavy AT assistant gunner
+_bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
+_bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
+_baghsamg = "B_AA_01_weapon_F";				// used by Heavy SAM gunner
+_baghsamag = "B_HMG_01_support_F";			// used by Heavy SAM assistant gunner
 
 // ====================================================================================
 
