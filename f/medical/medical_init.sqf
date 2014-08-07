@@ -40,11 +40,11 @@ player removeItems "Medikit";
 // =====================================================================================
 
 // Add basic items to all units
-	{_unit addItemToBackpack _epi} forEach [1,2,3];
-	{_unit addItemToBackpack _med1} forEach [1];
-	{_unit addItem _bandage} forEach [1,2,3,4,5];
-	{_unit addItemToBackpack _tourniquet};
-	{_unit addItem _morphine} forEach [1,2,3,4,5];
+	{player addItemToBackpack _epi} forEach [1,2,3];
+	{player addItemToBackpack _med1} forEach [1];
+	{player addItem _bandage} forEach [1,2,3,4,5];
+	{player addItemToBackpack _tourniquet};
+	{player addItem _morphine} forEach [1,2,3,4,5];
 
 // Add specialist items to medics
 
@@ -53,7 +53,7 @@ if (_typeOfUnit == "m") then
 
 	// BACKPACK: LIGHT
 	if (f_param_backpacks <= 1) then {
-		_unit additem _defib;
+		player additem _defib;
 		(unitBackpack player) addItemCargoGlobal [_bandage, 12];
 		(unitBackpack player) addItemCargoGlobal [_tourniquet, 3];
 		(unitBackpack player) addItemCargoGlobal [_morphine, 12];
@@ -64,7 +64,7 @@ if (_typeOfUnit == "m") then
 	// BACKPACK: HEAVY
 	if (f_param_backpacks == 2) then {
 
-		_unit additem _defib;
+		player additem _defib;
 		(unitBackpack player) addItemCargoGlobal [_bandage, 20];
 		(unitBackpack player) addItemCargoGlobal [_tourniquet, 3];
 		(unitBackpack player) addItemCargoGlobal [_morphine, 20];
