@@ -304,7 +304,7 @@ _backpack = {
 	_typeofBackPack = _this select 0;
 	switch (_typeofBackPack) do
 	{
-		#include "f_assignGear_mas_usa_rang_wood_b.sqf";
+		#include "f_assignGear_nato_hlc_b.sqf";
 	};
 };
 
