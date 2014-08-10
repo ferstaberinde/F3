@@ -107,6 +107,13 @@ switch (_type) do
             {
 
                 f_cam_playersOnly = !f_cam_playersOnly;
+                {
+                    _mrk = _x GetVariable ["f_spect_markerTracker",nil];
+                    if(!isnil "_mrk") then
+                    {
+                        deleteMarkerLocal _mrk;
+                    };
+                } foreach f_cam_listUnits;
                 f_cam_listUnits = [];
                 lbClear 2100;
                 call F_fnc_ReloadModes;
