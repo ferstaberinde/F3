@@ -48,7 +48,21 @@ while {true} do
 
 				_mrk = createMarkerLocal [_markerName,getpos _x];
 				_mrk setMarkerShapeLocal "ICON";
-				_mrk setMarkerTypeLocal "MIL_TRIANGLE";
+				if(vehicle _x == _x) then
+				{
+					_mrk setMarkerTypeLocal "MIL_TRIANGLE";
+				}
+				else
+				{
+					if(crew (vehicle _x) select 0 == _x ) then
+					{
+						_mrk setMarkerTypeLocal "MIL_BOX";
+					};
+				};
+				if(isPlayer _x) then
+				{
+					_mrk setMarkerTextLocal name _x;
+				};
 				_mrk setMarkerColorLocal ([side _x,true] call BIS_fnc_sideColor);
 				_mrk setMarkerSizeLocal [0.45, 0.45];
 				_mrk setMarkerDirLocal (direction _x);
@@ -64,6 +78,17 @@ while {true} do
 		{
 			_mrk setMarkerPosLocal getpos _x;
 			_mrk setMarkerDirLocal (direction _x);
+			if(vehicle _x == _x) then
+			{
+				_mrk setMarkerTypeLocal "MIL_TRIANGLE";
+			}
+			else
+			{
+				if(crew (vehicle _x) select 0 == _x ) then
+				{
+					_mrk setMarkerTypeLocal "MIL_BOX";
+				};
+			};
 		};
 		if(_index >= 0 && alive _x && {lbText [_listBox,_index] != name _x}) then
 		{
