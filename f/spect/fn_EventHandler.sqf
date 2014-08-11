@@ -88,6 +88,7 @@ switch (_type) do
             _unit = f_cam_listUnits select (_args select 1);
             if(!isnil "_unit") then
             {
+                if(typeName _unit == "GROUP") then {_unit = leader _unit};
                 f_cam_curTarget = _unit;
                 if(f_cam_toggleCamera) then
                 {
@@ -103,51 +104,6 @@ switch (_type) do
         _index =  (_args select 1);
         switch (_index) do
         {
-            case f_cam_lb_toggleplayersIndex:
-            {
-
-                f_cam_playersOnly = !f_cam_playersOnly;
-                {
-                    _mrk = _x GetVariable ["f_spect_markerTracker",nil];
-                    if(!isnil "_mrk") then
-                    {
-                        deleteMarkerLocal _mrk;
-                    };
-                } foreach f_cam_listUnits;
-                f_cam_listUnits = [];
-                lbClear 2100;
-                call F_fnc_ReloadModes;
-
-            };
-            case f_cam_lb_togglecameraIndex:
-            {
-
-                f_cam_toggleCamera = !f_cam_toggleCamera;
-                if(f_cam_toggleCamera) then
-                {
-                    f_cam_mode = 1; //(view)
-                    f_cam_camera cameraEffect ["terminate", "BACK"];
-                    f_cam_curTarget switchCamera "internal";
-                }
-                else
-                {
-                    f_cam_mode = 0;
-                    f_cam_camera cameraEffect ["internal", "BACK"];
-                };
-                call F_fnc_ReloadModes;
-
-            };
-            case f_cam_lb_toggleTagNameIndex:
-            {
-                f_cam_toggleTagsName = !f_cam_toggleTagsName;
-                call F_fnc_ReloadModes;
-            };
-            case f_cam_lb_toggleTagsIndex:
-            {
-                f_cam_toggleTags = !f_cam_toggleTags;
-                call F_fnc_ReloadModes;
-
-            };
             case f_cam_lb_toggletiWHIndex:
             {
                 f_cam_tiWHOn = !f_cam_tiWHOn;
@@ -200,10 +156,6 @@ switch (_type) do
                 };
                 call F_fnc_ReloadModes;
 
-            };
-            default
-            {
-                 /* STATEMENT */
             };
         };
     };

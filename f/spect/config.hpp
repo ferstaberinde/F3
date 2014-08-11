@@ -11,7 +11,7 @@
         colorSelect2[] = {0, 0, 0, 1};
         colorSelectBackground[] = {0.95, 0.95, 0.95, 1};
         colorSelectBackground2[] = {1, 1, 1, 0.5};
-        colorBackground[] = {0, 0, 0, 0.3};
+        colorBackground[] = {0, 0, 0, 1};
         soundSelect[] = {"", 0.1, 1};
         arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
         arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
@@ -25,12 +25,12 @@
             arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
             border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
         };
-        style = 16;
+        style = 528;
         font = "PuristaMedium";
         sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 50) * 1)";
         shadow = 0;
         colorShadow[] = {0, 0, 0, 0.5};
-        color[] = {1, 1, 1, 1};
+        color[] = {1, 1, 1, 0.1};
         colorDisabled[] = {1, 1, 1, 0.25};
         period = 1.2;
         maxHistoryDelay = 1;
@@ -85,7 +85,7 @@ class SpectMapControl
     fontInfo = "PuristaMedium";
     fontLabel = "PuristaMedium";
     fontLevel = "TahomaB";
-    fontNames = "EtelkaNarrowMediumPro";
+    fontNames = "PuristaLight";
     fontUnits = "TahomaB";
     h = "SafeZoneH - 1.5 *                  (           (           ((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
     idc = 51;
@@ -403,7 +403,7 @@ class SpectMapControl
     colorText[] = {1,1,1,1};
     color[] = {1,1,1,1};
     colorBackground[] = {0,0,0,1};
-    font = "PuristaMedium";
+    font = "PuristaLight";
     h = 0.039216;
     offsetPressedX = 0.002;
     offsetPressedY = 0.002;
@@ -425,21 +425,21 @@ class SpectMapControl
   class RscButton {
     access = 0;
     borderSize = 0;
-    colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])",0.7};
-    colorBackgroundActive[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])",1};
-    colorBackgroundDisabled[] = {0.95,0.95,0.95,1};
-    colorBorder[] = {0,0,0,1};
-    colorDisabled[] = {0.4,0.4,0.4,1};
-    colorFocused[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])",1};
-    colorShadow[] = {0,0,0,1};
-    colorText[] = {1,1,1,1};
-    font = "PuristaMedium";
+    colorBackground[] = {1,1,1,0.5};
+    colorBackgroundActive[] = {1,1,1,1};
+    colorBackgroundDisabled[] = {1,1,1,0.7};
+    colorBorder[] = {1,1,1,1};
+    colorDisabled[] = {1,1,1,0.7};
+    colorFocused[] = {1,1,1,1};
+    colorShadow[] = {1,1,1,1};
+    colorText[] = {0,0,0,1};
+    font = "PuristaLight";
     h = 0.039216;
     offsetPressedX = 0.002;
     offsetPressedY = 0.002;
     offsetX = 0.003;
     offsetY = 0.003;
-    shadow = 2;
+    shadow = 0;
     sizeEx = "(         (           (           ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
     soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1};
@@ -496,7 +496,7 @@ class SpectMapControl
         style = 0;
         shadow = 1;
         colorShadow[] = {0, 0, 0, 0.5};
-        font = "PuristaMedium";
+        font = "PuristaLight";
         SizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
         linespacing = 1;
     };
@@ -542,42 +542,42 @@ class spect_RscList
     access = 0;
     rowHeight = 0;
     rowWidth = 0;
-    arrowEmpty = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_ca.paa";
-    arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
+    arrowEmpty = "";
+    arrowFull = "";
     color[] = {1,1,1,1};
     colorActive[] = {1,0,0,0.8};
-    colorBackground[] = {0,0,0,0.8};
+    colorBackground[] = {0,0,0,0};
     colorDisabled[] = {1,1,1,0.25};
-    colorScrollbar[] = {1,0,0,0.8};
-    colorSelect[] = {0,0,0,0.8};
+    colorScrollbar[] = {1,0,0,0};
+    colorSelect[] = {1,1,1,0.8};
     colorSelectBackground[] = {1,1,1,0.7};
     colorText[] = {1,1,1,1};
-    font = "PuristaMedium";
+    font = "TahomaB";
     h = 0.035;
     maxHistoryDelay = 1;
-    shadow = 0;
-    sizeEx = "(         (           (           ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+    shadow = 1;
+    sizeEx = "(         (           (           ((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
     soundCollapse[] = {"\A3\ui_f\data\sound\RscCombo\soundCollapse",0.1,1};
     soundExpand[] = {"\A3\ui_f\data\sound\RscCombo\soundExpand",0.1,1};
     soundSelect[] = {"\A3\ui_f\data\sound\RscCombo\soundSelect",0.1,1};
   //  style = "0x10 + 0x200";
     type = 5;
      //   type = 5;
-        style = 0;
+    style = 528;
     w = 0.12;
     wholeHeight = 0.45;
     x = 0;
     y = 0;
     class ListScrollBar
     {
-        arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
-        arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-        border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-        color[] = {1,1,1,0.6};
-        colorActive[] = {1,1,1,1};
-        colorDisabled[] = {1,1,1,0.3};
+        arrowEmpty = "";
+        arrowFull = "";
+        border = "";
+        color[] = {1,1,1,0};
+        colorActive[] = {1,1,1,0};
+        colorDisabled[] = {1,1,1,0.1};
         shadow = 0;
-        thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+        thumb = "";
     };
     autoScrollSpeed = 0;
     autoScrollDelay = 0;
@@ -588,13 +588,13 @@ class spect_RscList
 class spect_RscCombo
 {
     access = 0;
-    arrowEmpty = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_ca.paa";
-    arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
+    arrowEmpty = "";
+    arrowFull = "";
     color[] = {1,1,1,1};
     colorActive[] = {1,0,0,1};
     colorBackground[] = {0,0,0,1};
     colorDisabled[] = {1,1,1,0.25};
-    colorScrollbar[] = {1,0,0,1};
+    colorScrollbar[] = {1,0,0,0};
     colorSelect[] = {0,0,0,1};
     colorSelectBackground[] = {1,1,1,0.7};
     colorText[] = {1,1,1,1};
@@ -614,12 +614,12 @@ class spect_RscCombo
     y = 0;
     class ComboScrollBar
     {
-        arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
-        arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-        border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-        color[] = {1,1,1,0.6};
-        colorActive[] = {1,1,1,1};
-        colorDisabled[] = {1,1,1,0.3};
+        arrowEmpty = "";
+        arrowFull = "";
+        border = "";
+        color[] = {1,1,1,0.0};
+        colorActive[] = {1,1,1,0.0};
+        colorDisabled[] = {1,1,1,0.0};
         shadow = 0;
         thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
     };
@@ -634,30 +634,6 @@ class f_spec_dialog {
 	fadeout = 0;
     onUnload = "[] spawn f_fnc_OnUnload";
 	class controlsBackground {
-        class SpecTopBar: spect_IGUIBack
-        {
-            idc = 2201;
-            x = 0 * safezoneW + safezoneX;
-            y = 0 * safezoneH + safezoneY;
-            w = safezoneW;
-            h = safezoneH/20;
-        };
-        class SpectFrame: spect_RscFrame
-        {
-            idc = 1300;
-            x = 0.332501 * safezoneW + safezoneX;
-            y = 0.265089 * safezoneH + safezoneY;
-            w = 0.334998 * safezoneW;
-            h = 0.432237 * safezoneH;
-        };
-        class SpectGround: spect_IGUIBack
-        {
-            idc = 1305;
-            x = 0.332501 * safezoneW + safezoneX;
-            y = 0.265089 * safezoneH + safezoneY;
-            w = 0.334998 * safezoneW;
-            h = 0.432237 * safezoneH;
-        };
 		class mouseHandler: spect_RscControlsGroup {
             class ListScrollBar
             {
@@ -682,39 +658,73 @@ class f_spec_dialog {
 
 //            x = 0.00640556 * safezoneW + safezoneX;
 //            y = 0.0109959 * safezoneH + safezoneY;
-        class SpectUnitButton : spect_Button
+        class FilterAIButton: RscButton
         {
-            idc = 2110;
-            x = 0.00640556 * safezoneW + safezoneX;
-            y = 0.0110000 * safezoneH + safezoneY;
-            w = 0.100 * safezoneW;
-            h = 0.0200 * safezoneH;
-            text = "Units";
-            action = "ctrlShow [2100, !ctrlVisible 2100]";
+            idc = 2111;
+            x = 0.005 * safezoneW + safezoneX;
+            y = 0 * safezoneH + safezoneY;
+            w = 0.04 * safezoneW;
+            h = 0.02 * safezoneH;
+            text = "Filter AI";
+            sizeEx = "(         (           (           ((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
+            action = "f_cam_playersOnly = !f_cam_playersOnly;f_cam_listUnits = [];lbClear 2100;";
+        };
+        class TagsButton: RscButton
+        {
+            idc = 2111;
+            x = 0.045 * safezoneW + safezoneX;
+            y = 0 * safezoneH + safezoneY;
+            w = 0.04 * safezoneW;
+            h = 0.02 * safezoneH;
+            text = "Tags";
+            sizeEx = "(         (           (           ((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
+            action = "f_cam_toggleTags = !f_cam_toggleTags;";
+        };
+        class TagsNameButton: RscButton
+        {
+            idc = 2111;
+            x = 0.085 * safezoneW + safezoneX;
+            y = 0 * safezoneH + safezoneY;
+            w = 0.04 * safezoneW;
+            h = 0.02 * safezoneH;
+            text = "Tags Names";
+            sizeEx = "(         (           (           ((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
+            action = "f_cam_toggleTagsName = !f_cam_toggleTagsName;";
+        };
+        class FirstPersonButton: RscButton
+        {
+            idc = 2111;
+            x = 0.125 * safezoneW + safezoneX;
+            y = 0 * safezoneH + safezoneY;
+            w = 0.05 * safezoneW;
+            h = 0.02 * safezoneH;
+            text = "First Person";
+            sizeEx = "(         (           (           ((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
+            action = "[] call f_cam_ToggleFPCamera;";
         };
         class SpecUnitBox: spect_RscList
         {
             idc = 2100;
-            x = 0.00640556 * safezoneW + safezoneX;
-            y = 0.0310000 * safezoneH + safezoneY;
-            w = 0.100 * safezoneW;
-            h = 0.3 * safezoneH;
+            x = 0 * safezoneW + safezoneX;
+            y = 0.03 * safezoneH + safezoneY;
+            w = 0.1 * safezoneW;
+            h = 0.9 * safezoneH;
             onLBSelChanged = "[""LBListSelChanged"",_this] call F_fnc_EventHandler";
         };
         class SpecModes: spect_RscCombo
         {
             idc = 2101;
-            x = 0.883417 * safezoneW + safezoneX;
-            y = 0.0109959 * safezoneH + safezoneY;
-            w = 0.100 * safezoneW;
-            h = 0.0200 * safezoneH;
+            x = 0.175 * safezoneW + safezoneX;
+            y = 0.002 * safezoneH + safezoneY;
+            w = 0.07 * safezoneW;
+            h = 0.02 * safezoneH;
             onLBSelChanged = "[""LBListSelChanged_modes"",_this] call F_fnc_EventHandler";
         };
         class SpecText: spect_RscText
         {
             idc = 1000;
             text = "Spectating:Unknown"; //--- ToDo: Localize;
-            x = 0.460336 * safezoneW + safezoneX;
+            x = 0.430336 * safezoneW + safezoneX;
             y = 0.00159198 * safezoneH + safezoneY;
             w = 0.800 * safezoneW;
             h = 0.0200 * safezoneH;

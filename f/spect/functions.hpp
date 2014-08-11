@@ -13,4 +13,5 @@ class fspectator
 	class HandleCamera{};
 	class ToggleGUI{};
 	class OnMapClick{};
+	class DrawMarkers{};
 };

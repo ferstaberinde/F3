@@ -113,14 +113,22 @@ f_cam_shift_down = false;
 // ====================================================================================
 
 f_cam_listUnits = [];
-// marker for current target
-f_spect_locMarker = createMarkerLocal ["f_spect_locMarker",getpos f_cam_curTarget];
-f_spect_locMarker setMarkerShapeLocal "ICON";
-f_spect_locMarker setMarkerTypeLocal "MIL_TRIANGLE";
-f_spect_locMarker setMarkerColorLocal "ColorYellow";
-f_spect_locMarker setMarkerSizeLocal [0.45, 0.45];
-f_spect_locMarker setMarkerDirLocal (direction f_cam_curTarget);
 
+f_cam_ToggleFPCamera = {
+    f_cam_toggleCamera = !f_cam_toggleCamera;
+    if(f_cam_toggleCamera) then
+    {
+        f_cam_mode = 1; //(view)
+        f_cam_camera cameraEffect ["terminate", "BACK"];
+        f_cam_curTarget switchCamera "internal";
+    }
+    else
+    {
+        f_cam_mode = 0;
+        f_cam_camera cameraEffect ["internal", "BACK"];
+    };
+    call F_fnc_ReloadModes;
+};
 // set camera mode (default)
 f_cam_cameraMode = 0;
 
@@ -137,7 +145,7 @@ _displayDialog displaySetEventHandler["KeyUp", "[""KeyUp"",_this] call F_fnc_Eve
 _mouseDialog = _displayDialog displayCtrl 123;
 f_cam_onMouseMoving = _mouseDialog ctrlAddEventHandler ["MouseMoving", "['MouseMoving',_this] call F_fnc_EventHandler"];
 call f_fnc_ReloadModes;
-ctrlShow [2100,false];
+
 _helpWindow = _displayDialog displayCtrl 1310;
 _mapWindow = _displayDialog displayCtrl 1350;
 _fullmapWindow = _displayDialog displayCtrl 1360;
