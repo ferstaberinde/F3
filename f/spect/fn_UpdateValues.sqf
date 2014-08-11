@@ -43,16 +43,58 @@ while {true} do
 				f_cam_listUnits = f_cam_listUnits + [_x];
 				_index = lbAdd [_listBox,name _x];
 				_x SetVariable ["f_spect_listBoxIndex",_index];
+				_markerName = format["%1_%2",random 1000,str(side _x)];
+				_x setVariable ["f_spect_markerTracker",_markerName];
+
+				_mrk = createMarkerLocal [_markerName,getpos _x];
+				_mrk setMarkerShapeLocal "ICON";
+				if(vehicle _x == _x) then
+				{
+					_mrk setMarkerTypeLocal "MIL_TRIANGLE";
+				}
+				else
+				{
+					if(crew (vehicle _x) select 0 == _x ) then
+					{
+						_mrk setMarkerTypeLocal "MIL_BOX";
+					};
+				};
+				if(isPlayer _x) then
+				{
+					_mrk setMarkerTextLocal name _x;
+				};
+				_mrk setMarkerColorLocal ([side _x,true] call BIS_fnc_sideColor);
+				_mrk setMarkerSizeLocal [0.45, 0.45];
+				_mrk setMarkerDirLocal (direction _x);
+
 				lbSetColor [_listBox,_index,[side _x,false] call BIS_fnc_sideColor];
 			};
 		};
 	} foreach _tempArr;
 	{
 		_index = _x GetVariable ["f_spect_listBoxIndex",-1];
+		_mrk = _x GetVariable ["f_spect_markerTracker",nil];
+		if(!isnil "_mrk") then
+		{
+			_mrk setMarkerPosLocal getpos _x;
+			_mrk setMarkerDirLocal (direction _x);
+			if(vehicle _x == _x) then
+			{
+				_mrk setMarkerTypeLocal "MIL_TRIANGLE";
+			}
+			else
+			{
+				if(crew (vehicle _x) select 0 == _x ) then
+				{
+					_mrk setMarkerTypeLocal "MIL_BOX";
+				};
+			};
+		};
 		if(_index >= 0 && alive _x && {lbText [_listBox,_index] != name _x}) then
 		{
 			// there is no lbSetText, so just punt it out of the list and fix it up there..
 			lbDelete [_listBox,_index];
+			deleteMarkerLocal _mrk;
 			f_cam_listUnits = f_cam_listUnits - [_x];
 			[] call f_cam_checkIndex;
 		};
@@ -61,6 +103,7 @@ while {true} do
 			if(_index >= 0) then
 			{
 				lbDelete [_listBox,_index];
+				deleteMarkerLocal _mrk;
 				f_cam_listUnits = f_cam_listUnits - [_x];
 				[] call f_cam_checkIndex;
 			};

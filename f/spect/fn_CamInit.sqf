@@ -45,12 +45,6 @@ deleteVehicle _unit;
 
 // Set spectator mode for whichever radio system is in use
 switch (f_var_radios) do {
-
-  // No radio system, do nothing
-  case 0: {
-
-  };
-
   // ACRE
   case 1: {
     [true] call acre_api_fnc_setSpectator;
@@ -81,20 +75,6 @@ f_cam_MouseMoving = false;
 _listBox = 2100;
 lbClear _listBox;
 
-// compile functions
-/*
-F_fnc_EventHandler = compile preprocessFileLineNumbers "f\spect\fn_eventHandler.sqf";
-F_fnc_GetPlayers = compile preprocessFileLineNumbers "f\spect\fn_getPlayers.sqf";
-f_cam_freeCam = compile preprocessFileLineNumbers "f\spect\fn_freeCam.sqf";
-f_cam_dialogLoop = compile preprocessFileLineNumbers "f\spect\fn_dialogLoop.sqf";
-f_cam_updateValues = compile preprocessFileLineNumbers "f\spect\fn_updateValues.sqf";
-f_cam_drawTags = compile preprocessFileLineNumbers "f\spect\fn_drawTags.sqf";
-F_fnc_GetIcon = compile preprocessFileLineNumbers "f\spect\fn_getIcon.sqf";*/
-
-// function to refresh the modes box.
-//F_fnc_ReloadModes = compile preprocessFileLineNumbers "f\spect\fn_ReloadModes.sqf";
-
-// ====================================================================================
 // set inital values.
 #include "macros.hpp"
 f_cam_controls = [F_CAM_TOPBAR,F_CAM_HELPFRAME,F_CAM_HELPBACK,F_CAM_MOUSEHANDLER,F_CAM_UNITBUTTON,F_CAM_UNITLIST,F_CAM_MODESCOMBO,F_CAM_MODESCOMBO,F_CAM_SPECTEXT,F_CAM_SPECHELP,F_CAM_HELPCANCEL,F_CAM_HELPCANCEL,F_CAM_MINIMAP,F_CAM_FULLMAP];
@@ -165,7 +145,7 @@ _mapWindow ctrlShow false;
 _fullmapWindow ctrlShow false;
 _fullmapWindow mapCenterOnCamera false;
 _mapWindow mapCenterOnCamera false;
-
+["f_spect_mapclick", "onMapSingleClick", {_pos call F_fnc_OnMapClick}] call BIS_fnc_addStackedEventHandler;
 
 
 
