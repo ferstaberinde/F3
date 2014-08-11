@@ -14,7 +14,7 @@ if (!isDedicated && (isNull player)) then
 if !(local _this) exitWith {};
 
 // If the action has already been added, exit
-if (!isNil "f_action_rechargeUAV") exitWith {};
+if (!isNil "f_action_chargeUAV") exitWith {};
 
 // ====================================================================================
 
@@ -26,9 +26,9 @@ private ["_code"];
 
 // ADD BRIEFING ENTRY
 
-player createDiaryRecord ["diary", ["Charging UAV","
+player createDiaryRecord ["diary", ["Charge UAV","
 <br/>
-In order to charge your UAV it needs to be landed and the engine turned off. When facing it you will be able to select the 'recharge UAV' action, which sets the UAV's fuel to 100% and uses up one of your batteries.
+To charge your UAV it needs to be landed and the engine turned off. The 'Charge UAV' action will appear when facing it. This sets the UAV's fuel to 100% and uses up one of your batteries.
 "]];
 
 // ====================================================================================
@@ -72,8 +72,8 @@ _code = {
 // SETUP ACTION
 // Add the action to recharge the UAV
 
-f_action_rechargeUAV = _this addAction [
-"Recharge UAV",	// Name
+f_action_chargeUAV = _this addAction [
+"Charge UAV",	// Name
  _code,			// Code to execute
  nil,
  1.5,			// Priority
