@@ -12,8 +12,7 @@ _centerY = safezoneY + safeZoneH/2;
 
 f_cam_camera camSetFov 0.7;
 // simple..
-while{true} do
-{
+waitUntil {
 
 	// if freemode.
 	f_cam_camera camSetFov f_cam_fovZoom;
@@ -48,4 +47,48 @@ while{true} do
 			cameraon switchCamera "internal";
 		};
 	};
+	if(f_cam_mode == 3 && true in f_cam_freecam_buttons || true in f_cam_MouseButton  ) then
+	{
+
+
+		_currPos = getposASL f_cam_freecamera;
+		_mX = 0;
+		_mY = 0;
+		_mZ = 0;
+		if(f_cam_freecam_buttons select 0) then // W
+		{
+			_mY = 0.8;
+		};
+		if(f_cam_freecam_buttons select 1) then // S
+		{
+			_mY = -0.8;
+		};
+		if(f_cam_freecam_buttons select 2) then // A
+		{
+			_mX = -0.8;
+		};
+
+		if(f_cam_freecam_buttons select 3) then // D
+		{
+			_mX = 0.8;
+		};
+		if(f_cam_freecam_buttons select 4) then // Q
+		{
+			_mZ = 0.5;
+		};
+		if(f_cam_freecam_buttons select 5) then // Z
+		{
+			_mZ = -0.5;
+		};
+
+		_rX = (f_cam_angleX + 360) % 360;
+
+		_x = (_currPos select 0) + (_mX * (cos f_cam_angleX)) + (_mY * (sin f_cam_angleX));
+		_y = (_currPos select 1) - (_mX * (sin f_cam_angleX)) + (_mY * (cos f_cam_angleX));
+		_z = (_currPos select 2) + _mZ;
+		f_cam_freecamera setPosASL [_x,_y,_z max (getTerrainHeightASL [_x,_y])];
+		f_cam_freecamera setDir f_cam_angleX;
+		[f_cam_freecamera,f_cam_angleY,0] call BIS_fnc_setPitchBank;
+	};
+	false
 };

@@ -89,12 +89,22 @@ switch (_type) do
             if(!isnil "_unit") then
             {
                 if(typeName _unit == "GROUP") then {_unit = leader _unit};
-                f_cam_curTarget = _unit;
-                if(f_cam_toggleCamera) then
+                if(f_cam_mode == 0 || f_cam_mode == 1) then
                 {
-                  f_cam_curTarget switchCamera "INTERNAL";
+                    f_cam_curTarget = _unit;
+                    if(f_cam_toggleCamera) then
+                    {
+                      f_cam_curTarget switchCamera "INTERNAL";
+                    };
+                    ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
                 };
-                ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
+                if(f_cam_mode == 3) then
+                {
+                    _pos = getpos _unit;
+                    _x = _pos select 0;
+                    _y = _pos select 1;
+                    f_cam_freecamera setPosASL [_x,_y,((getposASL f_cam_freecamera) select 2 ) max ((getTerrainHeightASL [_x,_y])+1)];
+                };
             };
         };
     };
@@ -139,6 +149,15 @@ switch (_type) do
                 call F_fnc_ReloadModes;
 
             };
+            case f_cam_lb_toggleNormal:
+            {
+                    false setCamUseTi 0;
+                    camUseNVG false;
+                    f_cam_tiWHOn = false;
+                    f_cam_tiBHOn = false;
+                    f_cam_nvOn = false;
+                call F_fnc_ReloadModes;
+            };
             case f_cam_lb_toggletiNVIndex: // Nightvision
             {
                 f_cam_nvOn = !f_cam_nvOn;
@@ -165,7 +184,7 @@ switch (_type) do
     {
         _key = _args select 1;
         _handled = false;
-        if(!isNull (findDisplay 49)) exitWith {if(_key == 1) then {true}};
+       // if(!isNull (findDisplay 49)) exitWith {if(_key == 1) then {true}};
         switch (_key) do
         {
             case 78: // numpad +
@@ -185,6 +204,54 @@ switch (_type) do
                 [] spawn f_fnc_ToggleGUI;
                 _handled = true;
             };
+            // Freecam movement keys
+            case 17:
+            {
+                f_cam_freecam_buttons set [0,true];
+            };
+            case 31:
+            {
+                f_cam_freecam_buttons set [1,true];
+            };
+            case 30:
+            {
+                f_cam_freecam_buttons set [2,true];
+            };
+            case 32:
+            {
+                f_cam_freecam_buttons set [3,true];
+            };
+            case 16:
+            {
+                f_cam_freecam_buttons set [4,true];
+            };
+            case 44:
+            {
+                f_cam_freecam_buttons set [5,true];
+            };
+            case 57:
+            {
+                f_cam_freecamOn = !f_cam_freecamOn;
+                if(f_cam_freecamOn) then
+                {
+                    f_cam_angleY = 10;
+                    [f_cam_freecamera,f_cam_angleY,0] call BIS_fnc_setPitchBank;
+                    f_cam_freecamera cameraEffect ["internal", "BACK"];
+                    f_cam_mode = 3;
+                    f_cam_freecamera setPosASL getPosASL f_cam_camera;
+                    cameraEffectEnableHUD true;
+                    showCinemaBorder false;
+                }
+                else
+                {
+                    f_cam_angleY = 45;
+                    f_cam_camera cameraEffect ["internal", "BACK"];
+                    f_cam_mode = 0;
+                    cameraEffectEnableHUD true;
+                    showCinemaBorder false;
+                };
+            };
+
             // H
             case 35:
             {
@@ -299,7 +366,40 @@ switch (_type) do
             {
                 _handled = true;
             };
-
+            case 57:
+            {
+                _handled = true;
+            };
+            case 17:
+            {
+                f_cam_freecam_buttons set [0,false];
+                _handled = true;
+            };
+            case 31:
+            {
+                f_cam_freecam_buttons set [1,false];
+                _handled = true;
+            };
+            case 30:
+            {
+                f_cam_freecam_buttons set [2,false];
+                _handled = true;
+            };
+            case 32:
+            {
+                f_cam_freecam_buttons set [3,false];
+                _handled = true;
+            };
+            case 16:
+            {
+                f_cam_freecam_buttons set [4,false];
+                _handled = true;
+            };
+            case 44:
+            {
+                f_cam_freecam_buttons set [5,false];
+                _handled = true;
+            };
         };
         _handled
     };

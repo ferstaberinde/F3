@@ -65,19 +65,35 @@ f_cam_camera cameraEffect ["internal", "BACK"];
 f_cam_fakecamera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
 f_cam_camera camSetTarget f_cam_fakecamera;
 f_cam_curTarget = _oldUnit;
-
+f_cam_freecamera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
 cameraEffectEnableHUD true;
-f_cam_camera camCommit 0;
 showCinemaBorder false;
+f_cam_camera camCommit 0;
 f_cam_MouseMoving = false;
 
+
+// enable all factions but your owns groupMarkers.
+_oldUnit spawn {
+  _factions = [];
+  {
+    if(!(faction (leader _x) in _factions)) then
+    {
+      _factions = _factions + [faction (leader _x)];
+    };
+  } foreach allGroups;
+  _factions = _factions - [faction _this];
+  {
+      player sidechat _x;
+      [toLower _x] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
+  } foreach _factions;
+};
 // ====================================================================================
 _listBox = 2100;
 lbClear _listBox;
 
 // set inital values.
 #include "macros.hpp"
-f_cam_controls = [F_CAM_TOPBAR,F_CAM_HELPFRAME,F_CAM_HELPBACK,F_CAM_MOUSEHANDLER,F_CAM_UNITBUTTON,F_CAM_UNITLIST,F_CAM_MODESCOMBO,F_CAM_MODESCOMBO,F_CAM_SPECTEXT,F_CAM_SPECHELP,F_CAM_HELPCANCEL,F_CAM_HELPCANCEL,F_CAM_MINIMAP,F_CAM_FULLMAP];
+f_cam_controls = [F_CAM_HELPFRAME,F_CAM_HELPBACK,F_CAM_MOUSEHANDLER,F_CAM_UNITLIST,F_CAM_MODESCOMBO,F_CAM_SPECTEXT,F_CAM_SPECHELP,F_CAM_HELPCANCEL,F_CAM_HELPCANCEL,F_CAM_MINIMAP,F_CAM_FULLMAP,F_CAM_BUTTIONFILTER,F_CAM_BUTTIONTAGS,F_CAM_BUTTIONTAGSNAME,F_CAM_BUTTIONFIRSTPERSON];
 f_cam_units = allunits;
 f_cam_players = call F_fnc_GetPlayers;
 f_cam_startX = 0;
@@ -97,6 +113,7 @@ f_cam_tiBHOn = false;
 f_cam_tiWHOn = false;
 f_cam_tagsEvent = -1;
 f_cam_mShift = false;
+f_cam_freecamOn = false;
 f_cam_toggleTagsName = false;
 f_cam_mapMode = 0;
 f_cam_MouseButton = [false,false];
@@ -105,11 +122,12 @@ f_cam_mouseDeltaX = 0.5;
 f_cam_mouseDeltaY = 0.5;
 f_cam_mouseLastX = 0.5;
 f_cam_mouseLastY = 0.5;
+f_cam_angleYcached  = 0;
 f_cam_angleX = 0;
 f_cam_angleY = 60;
 f_cam_ctrl_down = false;
 f_cam_shift_down = false;
-
+f_cam_freecam_buttons = [false,false,false,false,false,false];
 // ====================================================================================
 
 f_cam_listUnits = [];

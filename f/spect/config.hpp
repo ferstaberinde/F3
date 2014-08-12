@@ -671,7 +671,7 @@ class f_spec_dialog {
         };
         class TagsButton: RscButton
         {
-            idc = 2111;
+            idc = 2112;
             x = 0.045 * safezoneW + safezoneX;
             y = 0 * safezoneH + safezoneY;
             w = 0.04 * safezoneW;
@@ -682,7 +682,7 @@ class f_spec_dialog {
         };
         class TagsNameButton: RscButton
         {
-            idc = 2111;
+            idc = 2113;
             x = 0.085 * safezoneW + safezoneX;
             y = 0 * safezoneH + safezoneY;
             w = 0.04 * safezoneW;
@@ -693,7 +693,7 @@ class f_spec_dialog {
         };
         class FirstPersonButton: RscButton
         {
-            idc = 2111;
+            idc = 2114;
             x = 0.125 * safezoneW + safezoneX;
             y = 0 * safezoneH + safezoneY;
             w = 0.05 * safezoneW;

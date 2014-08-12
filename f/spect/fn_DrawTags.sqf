@@ -13,7 +13,7 @@ _ents = (getpos f_cam_camera) nearEntities [["CAManBase","LandVehicle","Helicopt
 		_color = [side _x] call BIS_fnc_sideColor;
 		_color = [_color select 0,_color select 1,_color select 2,0.6];
 		_str = "";
-		if(f_cam_toggleTagsName && alive _x) then
+		if(f_cam_toggleTagsName && alive _x && isPlayer _x) then
 		{
 			_str = name _x;
 		};
