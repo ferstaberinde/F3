@@ -13,7 +13,7 @@ overviewPicture = ""; // Add a .paa picture to the mission folder to display a p
 class Header
 {
 	// Available gameTypes:
-	// Coop:	|	Coop Mission: The meat and bread PA mission.
+	// Coop:	|	Coop Mission: The meat and bread PA missions
 	// DM		|	Death Match
 	// TDM		|	Team Death Match
 	// CTF		|	Capture The Flag (or, nuke)
