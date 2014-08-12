@@ -6,6 +6,7 @@
 // ============================================================================================
 
 // PA - Mission Selection Screen
+
 overviewText = "The nuke is still out there!"; // Add a short description to the server-mission browser.
 overviewPicture = ""; // Add a .paa picture to the mission folder to display a picture in the server-mission browser.
 
