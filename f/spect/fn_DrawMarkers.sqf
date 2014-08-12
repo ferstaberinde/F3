@@ -19,7 +19,7 @@ switch(f_cam_mode) do
 	};
 };
 
-_fullmapWindow drawIcon ["\A3\ui_f\data\GUI\Rsc\RscDisplayMissionEditor\iconCamera_ca.paa", [0,0,0,1],getpos cameraOn ,20,20,getDir cameraOn,"",0];
+_fullmapWindow drawIcon ["\A3\ui_f\data\GUI\Rsc\RscDisplayMissionEditor\iconCamera_ca.paa", [0,0,0,1],getpos _camera ,20,20,getDir _camera,"",0];
 {
 	if(typeName _x == "Object") then
 	{
