@@ -48,7 +48,7 @@ _scope2 = "optic_Hamr";			// Hamr Scope - 1x - 4x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
 // Default setup
-_attachments = [_attach2,_scope2]; // The default attachment set for most units, overwritten in the individual unitType
+_attachments = [_attach2,_scope1]; // The default attachment set for most units, overwritten in the individual unitType
 
 // [] = remove all
 // [_attach1,_scope1,_silencer] = remove all, add items assigned in _attach1, _scope1 and _silencer1
@@ -76,8 +76,8 @@ _riflemag_tr = "29rnd_300BLK_STANAG_T";
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
 _carbine = "hlc_rifle_Colt727";
-_riflemag = "hlc_30rnd_556x45_EPR";
-_riflemag_tr = "hlc_30rnd_556x45_EPR";
+_carbinemag = "30Rnd_556x45_Stanag";
+_carbinemag_tr = "30Rnd_556x45_Stanag";
 
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
 _smg = "hlc_rifle_hk53";
@@ -91,8 +91,8 @@ _diverMag2 = "20Rnd_556x45_UW_mag";
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
 _glrifle = "hlc_rifle_Colt727_GL";
-_glriflemag = "hlc_30rnd_556x45_EPR";
-_glriflemag_tr = "hlc_30rnd_556x45_EPR";
+_glriflemag = "30Rnd_556x45_Stanag";
+_glriflemag_tr = "30Rnd_556x45_Stanag";
 _glmag = "1Rnd_HE_Grenade_shell";
 
 // Smoke for FTLs, Squad Leaders, etc
@@ -152,9 +152,9 @@ _baghsamag = "B_HMG_01_support_F";			// used by Heavy SAM assistant gunner
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = "BWA3_MG4";
-_ARmag = "BWA3_200Rnd_556x45";
-_ARmag_tr = "BWA3_200Rnd_556x45";
+_AR = "STI_M249_PIP";
+_ARmag = "sti_100Rnd_556x45";
+_ARmag_tr = "sti_100Rnd_556x45";
 
 // Medium MG
 _MMG = "hlc_lmg_M60E4";
@@ -162,8 +162,8 @@ _MMGmag = "hlc_100Rnd_762x51_B_M60E4";
 _MMGmag_tr = "hlc_100Rnd_762x51_T_M60E4";
 
 // Rifleman AT
-_RAT = "launch_NLAW_F";
-_RATmag = "NLAW_F";
+_RAT = "AT4";
+_RATmag = "AT4_HEAT";
 
 // Sniper
 _SNrifle = "hlc_rifle_psg1";
@@ -174,9 +174,9 @@ _MTR = "B_Mk6Mortar_Wpn";
 _MTRmount = "B_Mk6Mortar_Support";
 
 // Medium AT
-_MAT = "launch_NLAW_F";
-_MATmag1 = "NLAW_F";
-_MATmag2 = "NLAW_F";
+_MAT = "Trixie_SMAW";
+_MATmag1 = "Trixie_SMAW_HEDP";
+_MATmag2 = "Trixie_SMAW_HEAA";
 
 // Surface Air
 _SAM = "BWA3_Fliegerfaust";

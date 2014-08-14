@@ -14,7 +14,11 @@ private ["_faction","_typeofUnit","_unit"];
 
 _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
-_faction = toLower (faction _unit);
+_faction = _this select 2;
+
+if (isNil "_faction") then {
+	_faction = toLower (faction _unit);
+};
 
 // ====================================================================================
 
@@ -124,7 +128,17 @@ if(_faction == "ind_f") then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
-	#include "f_assignGear_fia.sqf"
+	#include "f_assignGear_fia.sqf";
+};
+
+// ====================================================================================
+
+// GEAR: Crates / Ammoboxes
+// The following block of code executes only if the unit is a ammobox or in the same faction; it
+// it automatically includes a file which contains the appropriate equipment data.
+
+if (_faction == "DEFAULT") then {
+	#include "f_assignGear_crates.sqf";
 };
 
 // ====================================================================================
