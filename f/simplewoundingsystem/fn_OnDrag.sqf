@@ -33,7 +33,6 @@ if(local _unit) then
 // lets wait a while.
 waitUntil {
 	sleep 0.1;
-	if(local _dude)
 	_dude =  _dragger getVariable ["revive_dragging",nil];
 	( isNil "_dude" || !alive _dragger)
 };

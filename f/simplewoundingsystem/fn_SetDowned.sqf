@@ -13,7 +13,7 @@ if(_bool && alive _unit) then
 	if(_unit getVariable ["revive_down",false]) exitWith {};
 
 	// The ai is a bit too triggerhappy so lets set the units as captive
-	_unit setVariable ["revive_down",true,true];
+	_unit setVariable ["revive_down",true];
 	_unit setCaptive 1;
 
 
@@ -45,13 +45,13 @@ if(_bool && alive _unit) then
 		_unit switchmove (_anim select 0);
 		_veh = vehicle _unit;
 		// add pull out wounded to vehicle TODO:MOVE TO SPAWN TO EVERYONE
-		_veh addAction  ["Pull out wounded", {[_this, "f_fnc_EjectWounded", true,false] spawn BIS_fnc_MP;}, nil, 5, false, true, "", "_target distance _this < 5 && [_target] call f_fnc_HasWounded"];
+		_veh addAction  ["Pull out wounded", {[_this, "f_fnc_EjectWounded", true,true] spawn BIS_fnc_MP;}, nil, 5, false, true, "", "_target distance _this < 5 && [_target] call f_fnc_HasWounded"];
 	};
 }
 else
 {
 	if(!(_unit getVariable ["revive_down",false])) exitWith {};
-	_unit setVariable ["revive_down",false,true];
+	_unit setVariable ["revive_down",false];
 
 	// if the unit is not in a vehicle, play pretty animation otherwise just reset to thier default animation
 	if(vehicle _unit == _unit) then
