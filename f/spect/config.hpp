@@ -628,10 +628,14 @@ class spect_RscCombo
 
 class f_spec_dialog {
 	idd = 9228;
-	movingEnable = 0;
+	movingEnable = 1;
     enableSimulation = 1;
+    enableDisplay = 1;
 	fadein = 0;
 	fadeout = 0;
+    duration = 2147483647;
+    onKeyDown = "[""KeyDown"",_this] call F_fnc_EventHandler";
+    onKeyUp= "[""KeyUp"",_this] call F_fnc_EventHandler";
     onUnload = "[] spawn f_fnc_OnUnload";
 	class controlsBackground {
 		class mouseHandler: spect_RscControlsGroup {
@@ -648,6 +652,7 @@ class f_spec_dialog {
 			onMouseButtonDown = "[""MouseButtonDown"",_this] call F_fnc_EventHandler";
 			onMouseButtonUp = "[""MouseButtonUp"",_this] call F_fnc_EventHandler";
             onMouseZChanged = "[""MouseZChanged"",_this] call F_fnc_EventHandler";
+            onMouseMoving = "['MouseMoving',_this] call F_fnc_EventHandler";
 		    idc = 123;
             x = SafeZoneX; y = SafeZoneY;
             w = SafeZoneW; h = SafeZoneH;
@@ -655,9 +660,6 @@ class f_spec_dialog {
 		};
 	};
     class controls {
-
-//            x = 0.00640556 * safezoneW + safezoneX;
-//            y = 0.0109959 * safezoneH + safezoneY;
         class FilterAIButton: RscButton
         {
             idc = 2111;
@@ -751,20 +753,26 @@ class f_spec_dialog {
         };
         class SpectMap : SpectMapControl
         {
+            type = 100;
             idc = 1350;
             x = 0.00640556 * safezoneW + safezoneX;
             y = 0.772714 * safezoneH + safezoneY;
             w = 0.132213 * safezoneW;
             h = 0.21629 * safezoneH;
             onMouseZChanged = "[""MapZoom"",_this] call F_fnc_EventHandler;";
+            onMouseButtonClick = "_this call F_fnc_OnMapClick";
+            onDraw = "_this call F_fnc_DrawMarkers";
         };
         class FullSpectMap : SpectMapControl
         {
             idc = 1360;
+            type = 100;
             x = 0 * safezoneW + safezoneX;
             y = 0 * safezoneH + safezoneY;
             w = 1 * safezoneW;
             h = 1 * safezoneH;
+            onDraw = "_this call F_fnc_DrawMarkers";
+            onMouseButtonClick = "_this call F_fnc_OnMapClick";
 
         };
     };

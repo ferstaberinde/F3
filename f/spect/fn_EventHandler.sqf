@@ -184,7 +184,7 @@ switch (_type) do
     {
         _key = _args select 1;
         _handled = false;
-       // if(!isNull (findDisplay 49)) exitWith {if(_key == 1) then {true}};
+        if(!isNull (findDisplay 49)) exitWith {if(_key == 1) then {true}};
         switch (_key) do
         {
             case 78: // numpad +
@@ -198,38 +198,57 @@ switch (_type) do
                 f_cam_zoom = 0.3 max f_cam_zoom;
                 _handled = true;
             };
-            case 22:
+            case 20: // T
+            {
+                f_cam_tracerOn = !f_cam_tracerOn;
+                if(f_cam_tracerOn) then
+                {
+                    systemChat "Tracers on map activated.";
+                }
+                else
+                {
+                    systemChat "Tracers on map deactivated.";
+                };
+                _handled = true;
+            };
+            case 22: // U
             {
                 f_cam_hideUI = !f_cam_hideUI;
                 [] spawn f_fnc_ToggleGUI;
                 _handled = true;
             };
             // Freecam movement keys
-            case 17:
+            case 17: // W
             {
                 f_cam_freecam_buttons set [0,true];
+                _handled = true;
             };
-            case 31:
+            case 31: // S
             {
                 f_cam_freecam_buttons set [1,true];
+                _handled = true;
             };
-            case 30:
+            case 30: // A
             {
                 f_cam_freecam_buttons set [2,true];
+                _handled = true;
             };
-            case 32:
+            case 32: // D
             {
                 f_cam_freecam_buttons set [3,true];
+                _handled = true;
             };
-            case 16:
+            case 16: // Q
             {
                 f_cam_freecam_buttons set [4,true];
+                _handled = true;
             };
-            case 44:
+            case 44: // Z
             {
                 f_cam_freecam_buttons set [5,true];
+                _handled = true;
             };
-            case 57:
+            case 57: // SPACE
             {
                 f_cam_freecamOn = !f_cam_freecamOn;
                 if(f_cam_freecamOn) then
@@ -244,16 +263,17 @@ switch (_type) do
                 }
                 else
                 {
+                    f_cam_freecamera cameraEffect ["Terminate","BACK"];
                     f_cam_angleY = 45;
                     f_cam_camera cameraEffect ["internal", "BACK"];
                     f_cam_mode = 0;
                     cameraEffectEnableHUD true;
                     showCinemaBorder false;
                 };
+                 _handled = true;
             };
 
-            // H
-            case 35:
+            case 35: //  H
             {
                 ctrlShow [1315, !ctrlVisible 1315];
                 ctrlShow [1310, !ctrlVisible 1310];
@@ -261,19 +281,20 @@ switch (_type) do
                 ctrlShow [1305, !ctrlVisible 1305];
                  _handled = true;
             };
-            case 42:
+            case 42: // SHIFT
             {
                 f_cam_shift_down = true;
                 [] spawn f_fnc_HandleCamera;
+                 _handled = true;
             };
-            case 29:
+            case 29: // CTRL
             {
                 f_cam_ctrl_down = true;
                 [] spawn f_fnc_HandleCamera;
+                 _handled = true;
             };
-            case 50:
+            case 50: // M
             {
-                //_mapWindow = _displayDialog displayCtrl 1350;
                 f_cam_mapMode = f_cam_mapMode +1;
                 if(f_cam_mapMode > 2) then
                 {
@@ -307,17 +328,13 @@ switch (_type) do
                         _displayDialog = (findDisplay 9228);
                         _fullmapWindow = _displayDialog displayCtrl 1360;
                         ctrlMapAnimClear _fullmapWindow;
-                        _fullmapWindow ctrlMapAnimAdd [0.001, 0.1,getpos f_cam_camera];
+
+                        _fullmapWindow ctrlMapAnimAdd [0.001, 0.1,getpos ([] call f_cam_GetCurrentCam)];
                         ctrlMapAnimCommit _fullmapWindow;
                     };
                 };
                 _handled = true;
             };
-            case 1:
-            {
-              //  _handled = true;
-            }
-
         };
         _handled
     };
@@ -333,10 +350,12 @@ switch (_type) do
             case 42:
             {
                 f_cam_shift_down = false;
+                _handled = true;
             };
             case 29:
             {
                 f_cam_ctrl_down = false;
+                _handled = true;
             };
             case 203:
             {
@@ -347,6 +366,10 @@ switch (_type) do
                 _handled = true;
             };
             case 24:
+            {
+                _handled = true;
+            };
+            case 28:
             {
                 _handled = true;
             };

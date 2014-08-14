@@ -34,9 +34,9 @@ if(!isnil "BIS_fnc_feedback_allowPP") then
 
 // Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
 
-_newUnit =  createAgent  ["VirtualMan_F", [0,0,0], [], 0, "FORM"];
-_newUnit hideObjectGlobal true;
-_newUnit enableSimulationGlobal false;
+_newUnit =  createAgent  ["VirtualCurator_F", [0,0,0], [], 0, "FORM"];
+_newUnit hideObject true;
+_newUnit enableSimulation false;
 
 selectPlayer _newUnit;
 deleteVehicle _unit;
@@ -59,18 +59,6 @@ switch (f_var_radios) do {
 
 // ====================================================================================
 
-// create the camera and set it up.
-f_cam_camera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
-f_cam_camera cameraEffect ["internal", "BACK"];
-f_cam_fakecamera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
-f_cam_camera camSetTarget f_cam_fakecamera;
-f_cam_curTarget = _oldUnit;
-f_cam_freecamera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
-cameraEffectEnableHUD true;
-showCinemaBorder false;
-f_cam_camera camCommit 0;
-f_cam_MouseMoving = false;
-
 
 // enable all factions but your owns groupMarkers.
 _oldUnit spawn {
@@ -83,7 +71,6 @@ _oldUnit spawn {
   } foreach allGroups;
   _factions = _factions - [faction _this];
   {
-      player sidechat _x;
       [toLower _x] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
   } foreach _factions;
 };
@@ -124,6 +111,7 @@ f_cam_mouseLastX = 0.5;
 f_cam_mouseLastY = 0.5;
 f_cam_angleYcached  = 0;
 f_cam_angleX = 0;
+f_cam_tracerOn = false;
 f_cam_angleY = 60;
 f_cam_ctrl_down = false;
 f_cam_shift_down = false;
@@ -147,37 +135,86 @@ f_cam_ToggleFPCamera = {
     };
     call F_fnc_ReloadModes;
 };
+f_cam_GetCurrentCam = {
+  _camera = f_cam_camera;
+  switch(f_cam_mode) do
+  {
+    case 0:
+    {
+        _camera = f_cam_camera; // Standard
+    };
+    case 1:
+    {
+      _camera = cameraOn; // FP
+    };
+    case 3:
+    {
+      _camera = f_cam_freecamera; // freecam
+    };
+  };
+  _camera
+};
 // set camera mode (default)
 f_cam_cameraMode = 0;
 
-// ====================================================================================
+// =============================================================================
 
-disableSerialization;
 // create the UI
 createDialog "f_spec_dialog";
 // add keyboard events
-_displayDialog = (findDisplay 9228);
-_displayDialog displaySetEventHandler["KeyDown", "[""KeyDown"",_this] call F_fnc_EventHandler"];
-_displayDialog displaySetEventHandler["KeyUp", "[""KeyUp"",_this] call F_fnc_EventHandler"];
- ["f_spect_tags", "onEachFrame", {_this call F_fnc_DrawTags}] call BIS_fnc_addStackedEventHandler;
-_mouseDialog = _displayDialog displayCtrl 123;
-f_cam_onMouseMoving = _mouseDialog ctrlAddEventHandler ["MouseMoving", "['MouseMoving',_this] call F_fnc_EventHandler"];
-call f_fnc_ReloadModes;
 
-_helpWindow = _displayDialog displayCtrl 1310;
-_mapWindow = _displayDialog displayCtrl 1350;
-_fullmapWindow = _displayDialog displayCtrl 1360;
-_mapWindow ctrlShow false;
-_fullmapWindow ctrlShow false;
-_fullmapWindow mapCenterOnCamera false;
-_mapWindow mapCenterOnCamera false;
-["f_spect_mapclick", "onMapSingleClick", {_pos call F_fnc_OnMapClick}] call BIS_fnc_addStackedEventHandler;
+// hide minimap
+((findDisplay 9228) displayCtrl 1350) ctrlShow false;
+((findDisplay 9228) displayCtrl 1350) mapCenterOnCamera false;
+
+// hide big map
+((findDisplay 9228) displayCtrl 1360) ctrlShow false;
+((findDisplay 9228) displayCtrl 1360) mapCenterOnCamera false;
+
+f_cam_helptext = "<br />Hold right-click to pan the camera<br />Use the scroll wheel or numpad+/- to zoom in and out.<br />Use ctrl + rightclick to fov zoom<br /><br />Press H to show and close the help window.<br />Press M to toggle between no map,minimap and full size map.<br />T for switching on tracers on the map<br/>Space to switch to freecam ";
 
 
 
 
-_helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click to pan the camera<br /><br />Use the scroll wheel or numpad+/- to zoom in and out.<br />Use ctrl + rightclick to fov zoom<br /><br />Press H to show and close the help window.<br /><br />Press M to toggle between no map,minimap and full size map.<br /> ");
+
+
+
+
+
+
+((findDisplay 9228) displayCtrl 1310) ctrlSetStructuredText parseText (f_cam_helptext);
+
+
+
+
+
+
+// create the camera and set it up.
+f_cam_camera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
+
+f_cam_fakecamera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
+
+f_cam_curTarget = _oldUnit;
+f_cam_freecamera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
+f_cam_camera camCommit 0;
+f_cam_fakecamera camCommit 0;
+f_cam_camera cameraEffect ["internal","back"];
+f_cam_camera camSetTarget f_cam_fakecamera;
+f_cam_MouseMoving = false;
+cameraEffectEnableHUD true;
+showCinemaBorder false;
+f_cam_fired = [];
+{
+  _x addEventHandler ["fired",{f_cam_fired = f_cam_fired - [objNull];f_cam_fired = f_cam_fired + [_this select 6]}]
+
+} foreach (allunits + vehicles);
+
 // ====================================================================================
 // spawn sub scripts
+call f_fnc_ReloadModes;
 [] spawn F_fnc_FreeCam;
 [] spawn F_fnc_UpdateValues;
+
+
+ ["f_spect_tags", "onEachFrame", {_this call F_fnc_DrawTags}] call BIS_fnc_addStackedEventHandler;
+

@@ -6,11 +6,10 @@
 f_cam_angle = 360;
 f_cam_zoom = 3;
 f_cam_height = 3;
-f_cam_fovZoom = 0.7;
+f_cam_fovZoom = 1.2;
 _centerX = safeZoneX + safeZoneW/2;
 _centerY = safezoneY + safeZoneH/2;
-
-f_cam_camera camSetFov 0.7;
+f_cam_camera camSetFov 1.2;
 // simple..
 waitUntil {
 
@@ -18,7 +17,6 @@ waitUntil {
 	f_cam_camera camSetFov f_cam_fovZoom;
 	if(f_cam_mode == 0) then
 	{
-			cameraEffectEnableHUD true;
 			_commitTime = ((1.0 - ((speed vehicle f_cam_curTarget)/65))/3) max 0.1;
 			_delta = (-(2*(0.3 max f_cam_zoom)));
 			_zLevel = sin(f_cam_angleY)*(2*(0.3 max f_cam_zoom));
@@ -47,7 +45,7 @@ waitUntil {
 			cameraon switchCamera "internal";
 		};
 	};
-	if(f_cam_mode == 3 && true in f_cam_freecam_buttons || true in f_cam_MouseButton  ) then
+	if(f_cam_mode == 3) then
 	{
 
 
@@ -55,22 +53,52 @@ waitUntil {
 		_mX = 0;
 		_mY = 0;
 		_mZ = 0;
+		_accel = 0.8;
+		_accelshift = 1.6;
 		if(f_cam_freecam_buttons select 0) then // W
 		{
-			_mY = 0.8;
+			if(f_cam_shift_down) then
+			{
+				_mY = _accelshift;
+			}
+			else
+			{
+				_mY = _accel;
+			};
 		};
 		if(f_cam_freecam_buttons select 1) then // S
 		{
-			_mY = -0.8;
+			if(f_cam_shift_down) then
+			{
+				_mY = -_accelshift;
+			}
+			else
+			{
+				_mY = -_accel;
+			};
 		};
 		if(f_cam_freecam_buttons select 2) then // A
 		{
-			_mX = -0.8;
+			if(f_cam_shift_down) then
+			{
+				_mX = -_accelshift;
+			}
+			else
+			{
+				_mX = -_accel;
+			};
 		};
 
 		if(f_cam_freecam_buttons select 3) then // D
 		{
-			_mX = 0.8;
+			if(f_cam_shift_down) then
+			{
+				_mX = _accelshift;
+			}
+			else
+			{
+				_mX = _accel;
+			};
 		};
 		if(f_cam_freecam_buttons select 4) then // Q
 		{
