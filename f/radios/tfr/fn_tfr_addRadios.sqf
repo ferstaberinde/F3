@@ -87,10 +87,6 @@ if(_typeOfUnit != "NIL") then {
         };
       };
 
-  } else {
-
-    // Do not assign any radios
-
   };
 
 };
