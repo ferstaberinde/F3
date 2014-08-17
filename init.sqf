@@ -29,7 +29,7 @@ enableSentences false;
 // F3 - Briefing
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_briefing = [] execVM "briefing.sqf";
+f_script_briefing = [] call compile pre "briefing.sqf";
 
 // ====================================================================================
 

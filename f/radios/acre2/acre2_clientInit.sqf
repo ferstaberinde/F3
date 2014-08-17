@@ -78,9 +78,4 @@ switch (side _unit) do {
       f_radios_settings_acre2_language_indfor call acre_api_fnc_babelSetSpeakingLanguage;
     };
 };
-// ====================================================================================
-// Set channels acording to side.
-_ret = ["ACRE_PRC148", str (side _unit) ] call acre_api_fnc_setDefaultChannels;
-_ret = ["ACRE_PRC343", str (side _unit) ] call acre_api_fnc_setDefaultChannels;
-_ret = ["ItemRadio", str (side _unit) ] call acre_api_fnc_setDefaultChannels;
 systemChat "DONE";
