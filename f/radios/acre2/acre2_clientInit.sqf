@@ -38,15 +38,22 @@ if(_typeOfUnit != "NIL") then {
   // If radios are enabled in the settings
   if(!f_radios_settings_acre2_disableRadios) then {
       // Everyone gets a short-range radio by default
-      _unit linkItem "ACRE_PRC343";
-
-      // Set the list of units that get a 148
-      _longRange = ["co", "dc", "m", "mmgg", "matg", "mtrg", "sn","vc", "pp", "eng", "engm", "uav", "div"];
+      if(isnil "f_radios_settings_acre2_shortRange") then
+      {
+        _unit linkItem f_radios_settings_acre2_standardSHRadio;
+      }
+      else
+      {
+        if(_typeOfUnit in f_radios_settings_acre2_shortRange) then
+        {
+          _unit linkItem f_radios_settings_acre2_standardSHRadio;
+        };
+      };
 
       // If unit is in the above list, add a 148
-      if(_typeOfUnit in _longRange) then {
+      if(_typeOfUnit in f_radios_settings_acre2_longRange) then {
 
-        _unit addItem "ACRE_PRC148";
+        _unit addItem f_radios_settings_acre2_standardLRRadio;
 
         // If unit is in the list of units that receive an extra long-range radio, add another 148
         if(_typeOfUnit in f_radios_settings_acre2_extraRadios) then {
