@@ -128,7 +128,7 @@
         _channels = HASHLIST_CREATELIST(["frequencyTX"]);
         for "_i" from 0 to 15 do {
                 _channel = HASHLIST_CREATEHASH(_channels);
-                HASH_SET(_channel,"frequencyTX",(2401.5+(_modifer)));
+                HASH_SET(_channel,"frequencyTX",(2401+(_i*2))*(_modifer));
                 HASHLIST_PUSH(_channels, _channel);
         };
         HASH_SET(_presetData,"channels",_channels);
