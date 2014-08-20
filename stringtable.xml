@@ -1,0 +1,264 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<!-- This document was created with Syntext Serna Free. -->
+<Project ID="Arma3">
+  <Package ID="Missions">
+    <Container ID="">
+      <Key ID="STR_f_param_debugMode">
+        <English> Debug Mode </English>
+        <Czech> Debug mód </Czech>
+        <German> Debug-Modus </German>
+        <Polish> Debug Mode </Polish>
+        <Russian> Режим отладки </Russian>
+        <Spanish> Modo Debug </Spanish>
+        <French> Mode Debug </French>
+      </Key>
+      <Key ID="STR_f_param_loadouts">
+        <English> Loadouts </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfDay">
+        <English> Time of Day </English>
+	<French> Heure de la journée </French>
+      </Key>
+      <Key ID="STR_f_param_timeOfDay_Option0">
+        <English> Dawn </English>
+        <Czech> Svítání </Czech>
+        <German> Morgendämmerung </German>
+        <Polish> Swit </Polish>
+        <Russian> Рассвет </Russian>
+        <Spanish> Amanecer </Spanish>
+        <French> Aube </French>
+      </Key>
+      <Key ID="STR_f_param_timeOfDay_Option1">
+        <English> Early Morning </English>
+        <German> Früher Morgen </German>
+        <Polish> Wczesny Ranek </Polish>
+        <Russian> Раннее утро </Russian>
+        <French> Matin </French>
+      </Key>
+      <Key ID="STR_f_param_timeOfDay_Option2">
+        <English> Morning </English>
+        <German> Morgen </German>
+        <Polish> Ranek </Polish>
+        <Russian> Утро </Russian>
+        <French> Matinée </French>
+      </Key>
+      <Key ID="STR_f_param_timeOfDay_Option3">
+        <English> Noon </English>
+        <Czech> Poledne </Czech>
+        <German> Mittag </German>
+        <Polish> Poludnie </Polish>
+        <Russian> Полдень </Russian>
+        <Spanish> Mediodía </Spanish>
+        <French> Midi </French>
+      </Key>
+      <Key ID="STR_f_param_timeOfDay_Option4">
+        <English> Afternoon </English>
+        <German> Nachmittag </German>
+        <Polish> Popołudnie </Polish>
+        <Russian> Середина дня </Russian>
+        <French> Après-midi </French>
+      </Key>
+      <Key ID="STR_f_param_timeOfDay_Option5">
+        <English> Evening </English>
+        <German> Abend </German>
+        <Polish> Wieczór </Polish>
+        <Russian> Вечер </Russian>
+        <French> Soirée </French>
+      </Key>
+      <Key ID="STR_f_param_timeOfDay_Option6">
+        <English> Dusk </English>
+        <Czech> Soumrak </Czech>
+        <German> Abenddämmerung </German>
+        <Polish> Zmierzch </Polish>
+        <Russian> Сумерки </Russian>
+        <Spanish> Atardecer </Spanish>
+        <French> Soir </French>
+      </Key>
+      <Key ID="STR_f_param_timeOfDay_Option7">
+        <English> Night </English>
+        <Czech> Noc </Czech>
+        <German> Nacht </German>
+        <Polish> Noc </Polish>
+        <Russian> Ночь </Russian>
+        <Spanish> Noche </Spanish>
+        <French> Nuit </French>
+      </Key>
+      <Key ID="STR_f_param_weather">
+        <English> Weather </English>
+	<French> Météo </English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option0">
+        <English> Clear (Calm)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option1">
+        <English> Clear (Light Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option2">
+        <English> Clear (Strong Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option3">
+        <English> Overcast (Calm)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option4">
+        <English> Overcast (Light Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option5">
+        <English> Overcast (Strong Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option6">
+        <English> Rain (Light Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option7">
+        <English> Rain (Strong Winds)</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option8">
+        <English> Storm </English>
+        <Czech> Boure </Czech>
+        <German> Gewitter </German>
+        <Polish> Burza </Polish>
+        <Russian> Гроза </Russian>
+        <Spanish> Tormenta </Spanish>
+        <French> Averse </French>
+      </Key>
+      <Key ID="STR_f_param_weather_Option9">
+        <English> Light Fog </English>
+        <Czech> Slabá mlha </Czech>
+        <German> Leichter Nebel </German>
+        <Polish> Lekka Mgla </Polish>
+        <Russian> Туман </Russian>
+        <Spanish> Bruma </Spanish>
+        <French> Brume </French>
+      </Key>
+      <Key ID="STR_f_param_weather_Option10">
+        <English> Heavy Fog </English>
+        <Czech> Hustá mlha </Czech>
+        <German> Dichter Nebel </German>
+        <Polish> Ciezka Mgla </Polish>
+        <Russian> Густой туман </Russian>
+        <Spanish> Niebla </Spanish>
+        <French> Brouillard </French>
+      </Key>
+      <Key ID="STR_f_param_AISkill_BLUFOR">
+        <English> AI Skill (BLUFOR) </English>
+        <Czech> Úroveň AI (BLUFOR) </Czech>
+        <German> KI Stärke (BLUFOR) </German>
+        <Polish> Umiejętności SI (BLUFOR): </Polish>
+        <Russian> Навык ИИ (BLUFOR) </Russian>
+        <Spanish> Habilidad de la IA (BLUFOR): </Spanish>
+        <French> Capacité IA (BLUFOR) </French>
+      </Key>
+      <Key ID="STR_f_param_AISkill_OPFOR">
+        <English> AI Skill (OPFOR) </English>
+        <Czech> Úroveň AI (OPFOR) </Czech>
+        <German> KI Stärke (OPFOR) </German>
+        <Polish> Umiejętności SI (OPFOR) </Polish>
+        <Russian> Навык ИИ (OPFOR) </Russian>
+        <Spanish> Habilidad de la IA (OPFOR) </Spanish>
+        <French> Capacité IA (OPFOR) </French>
+      </Key>
+       <Key ID="STR_f_param_AISkill_INDP">
+        <English> AI Skill (INDEPENDENT) </English>
+        <Czech> Úroveň AI (INDEPENDENT) </Czech>
+        <German> KI Stärke (INDEPENDENT) </German>
+        <Polish> Umiejętności SI (INDEPENDENT) </Polish>
+        <Russian> Навык ИИ (INDEPENDENT) </Russian>
+        <Spanish> Habilidad de la IA (INDEPENDENT) </Spanish>
+        <French> Capacité IA (INDEPENDENT) </French>
+      </Key>
+      <Key ID="STR_f_param_AISkill_Option0">
+        <English> Super </English>
+        <Czech> Super </Czech>
+        <German> Super </German>
+        <Polish> Super </Polish>
+        <Russian> Супер </Russian>
+        <Spanish> Súper </Spanish>
+        <French> Super </French>
+      </Key>
+      <Key ID="STR_f_param_AISkill_Option1">
+        <English> High </English>
+        <Czech> Vysoká </Czech>
+        <German> Stark </German>
+        <Polish> Wysoka </Polish>
+        <Russian> Высокий </Russian>
+        <Spanish> Alta </Spanish>
+        <French> Élevé </French>
+      </Key>
+      <Key ID="STR_f_param_AISkill_Option2">
+        <English> Medium </English>
+        <Czech> Střední </Czech>
+        <German> Mittel </German>
+        <Polish> Średnia </Polish>
+        <Russian> Средний </Russian>
+        <Spanish> Media </Spanish>
+        <French> Moyen </French>
+      </Key>
+      <Key ID="STR_f_param_AISkill_Option3">
+        <English> Low </English>
+        <Czech> Střední </Czech>
+        <German> Schwach </German>
+        <Polish> Niska </Polish>
+        <Russian> Низкий </Russian>
+        <Spanish> Baja </Spanish>
+        <French> Bas </French>
+      </Key>
+      <Key ID="STR_f_UnauthorisedCrew_Warning">
+        <English> You are not authorised to crew this vehicle! </English>
+        <Czech> Nejsi oprávněný k nastoupení do tohoto vozidla! </Czech>
+        <German> Sie sind nicht zur Benutzung dieses Fahrzeugs autorisiert! </German>
+        <Polish> Jesteś nieupoważniony do prowadzenia tego pojazdu! </Polish>
+        <Russian> Вы не уполномочены управлять этой техникой! </Russian>
+        <Spanish> ¡No estás autorizado a utilizar este vehículo! </Spanish>
+        <French> Vous n’êtes pas autorisé à acceder à ce véhicule! </French>
+      </Key>
+      <Key ID="STR_f_mapClickTeleportAction">
+        <English> Teleport </English>
+      </Key>
+      <Key ID="STR_f_mapClickTeleportSelect">
+        <English> Click on the map to set teleport coordinates. </English>
+      </Key>
+      <Key ID="STR_f_mapClickTeleportDone">
+        <English> You have been moved to the selected location. </English>
+      </Key>
+       <Key ID="STR_f_mapClickHALOAction">
+        <English> HALO </English>
+      </Key>
+      <Key ID="STR_f_mapClickHALOSelect">
+        <English> Click on the map to set HALO coordinates. </English>
+      </Key>
+      <Key ID="STR_f_mapClickHALODone">
+        <English> You have been moved to the selected location. </English>
+      </Key>
+      <Key ID="STR_f_JIP_reinforcementOptionsAction">
+        <English> Select Reinforcement Options</English>
+      </Key>
+      <Key ID="STR_f_param_mission_timer">
+        <English> Safe Start (mins) </English>
+      </Key>
+      <Key ID="STR_f_param_mission_timer_off">
+        <English> Off </English>
+      </Key>
+      <Key ID="STR_f_param_caching">
+        <English> AI Caching</English>
+      </Key>
+      <Key ID="STR_f_param_caching_Option0">
+        <English> Off </English>
+        <German> Aus </German>
+      </Key>
+       <Key ID="STR_f_param_caching_Option1">
+        <English> Outside 600m </English>
+      </Key>
+      <Key ID="STR_f_param_caching_Option2">
+        <English> Outside 800m </English>
+      </Key>
+      <Key ID="STR_f_param_caching_Option3">
+        <English> Outside 1000m </English>
+      </Key>
+       <Key ID="STR_f_param_caching_Option4">
+        <English> Outside 1500m </English>
+      </Key>
+       <Key ID="STR_f_param_caching_Option5">
+        <English> Outside 2000m </English>
+      </Key>
+    </Container>
+  </Package>
+</Project>
