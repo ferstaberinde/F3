@@ -4,17 +4,24 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_faction","_typeofUnit","_unit"];
+private ["_faction","_typeofUnit","_unit","_countPassed"];
 
 // ====================================================================================
 
 // DETECT unit FACTION
 // The following code detects what faction the unit's slot belongs to, and stores
-// it in the private variable _faction
+// it in the private variable _faction. It can also be passed as an optional parameter.
 
 _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
-_faction = toLower (faction _unit);
+
+_countPassed = count _this;
+if (_countPassed > 2) then
+	{
+		_faction = _this select 2;
+	} else {
+		_faction = toLower (faction _unit);
+	};
 
 // ====================================================================================
 
@@ -82,17 +89,13 @@ if (f_var_debugMode == 1) then
 
 // ====================================================================================
 
-// ====================================================================================
-
 // GEAR: BLUFOR > NATO
 // The following block of code executes only if the unit is in a NATO slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
-
 if (_faction == "blu_f") then {
 #include "f_assignGear_nato.sqf"
 };
-
 
 // ====================================================================================
 
@@ -121,7 +124,7 @@ if(_faction == "ind_f") then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
-	#include "f_assignGear_fia.sqf"
+	#include "f_assignGear_fia.sqf";
 };
 
 // ====================================================================================
