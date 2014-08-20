@@ -1,9 +1,11 @@
 // F3 - ACRE2 Init
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
+
+// precompile functions
 f_acre2_presetSetup = compile preprocessFileLineNumbers "f\radios\acre2\acre2_setupPresets.sqf";
 f_acre2_clientInit = compile preprocessFileLineNumbers "f\radios\acre2\acre2_clientInit.sqf";
-
+f_fnc_GiveSideRadio = compile preprocessFileLineNumbers "f\radios\acre2\fn_giveSideRadio.sqf";
 
 
 
@@ -17,7 +19,6 @@ if (!isDedicated && (isNull player)) then
 #include "acre2_settings.sqf"
 
 
-systemChat str (side player); // debug
 // setup presets
 _presetSetup = [] call f_acre2_presetSetup;
 
