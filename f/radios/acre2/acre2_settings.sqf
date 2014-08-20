@@ -38,7 +38,17 @@ f_radios_settings_acre2_language_blufor = ["english"];
 f_radios_settings_acre2_language_opfor = ["english"];
 f_radios_settings_acre2_language_indfor = ["greek"];
 
+// radio freq offset
+f_radios_settings_acre2_offset_blufor = 0.0225;
+f_radios_settings_acre2_offset_opfor = 0.0425;
+f_radios_settings_acre2_offset_indfor = 0.0825;
 // Correspond
 f_radios_settings_acre2_groups_blufor = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
 f_radios_settings_acre2_groups_opfor = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
 f_radios_settings_acre2_groups_indfor = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
+
+
+f_radios_setting_acre_override_blufor = [];
+f_radios_setting_acre_override_opfor = [];
+f_radios_setting_acre_override_indfor = [];
+
