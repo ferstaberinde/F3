@@ -943,7 +943,6 @@ switch (_typeofUnit) do
 		if (true) exitwith {player globalchat format ["DEBUG (f\assignGear\folk_assignGear.sqf): Unit = %1. Gear template %2 does not exist, used Rifleman instead.",_unit,_typeofunit]};
    };
 
-
 // ====================================================================================
 
 // END SWITCH FOR DEFINE UNIT TYPE LOADOUTS
@@ -955,16 +954,11 @@ switch (_typeofUnit) do
 
 if (faction _unit == "DEFAULT") then
 	{
-
-	// Wait for parameter to be initialised
-	waitUntil{!isNil "f_var_medical"};
-
 	// Authentic Gameplay Modification
 	if (f_var_medical == 2) exitWith
 		{
 			[_unit] execVM "f\medical\AGM_coverter.sqf";
 		};
-
 	};
 
 // ====================================================================================
