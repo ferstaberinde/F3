@@ -33,7 +33,7 @@ _unit removeItems "Medikit";
 _cntBandages = _cntFAK * 5;
 _unit addItemCargoGlobal ["AGM_Bandage", _cntBandages];
 
-if (_cntFAK <= 10 ) then // Fireteam sized cargo
+if (_cntFAK <= 10 && _cntMediKit == 0 ) then // Fireteam sized cargo
 	{
 		//Do nothing
 	};
