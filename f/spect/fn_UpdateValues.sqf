@@ -37,7 +37,7 @@ while {true} do
 		_tempArr = f_cam_units;
 	};
 	{
-		if(!(_x in f_cam_listUnits) && {alive _x} count units _x) <= 0 ) then
+		if(!(_x in f_cam_listUnits) && ({alive _x} count units _x) > 0 ) then
 		{
 			_text = toString(toArray(groupID _x) - [45]);
 			_index = lbAdd [_listBox,_text];

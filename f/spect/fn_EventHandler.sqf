@@ -241,10 +241,10 @@ switch (_type) do
             case 49: // N
             {
                 _index = (lbCurSel 2101)+1;
-                if(_index > (lbSize 2101 )) then { _index = 0};
+                if(_index >= (lbSize 2101 )) then { _index = 0};
                 lbSetCurSel [2101,_index];
                 _handled = true;
-            }
+            };
             case 16: // Q
             {
                 f_cam_freecam_buttons set [4,true];
@@ -383,7 +383,7 @@ switch (_type) do
             case 49:
             {
                 _handled = true;
-            }
+            };
             case 200:
             {
                 _handled = true;

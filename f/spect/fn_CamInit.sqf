@@ -212,6 +212,7 @@ f_cam_fired = [];
 // ====================================================================================
 // spawn sub scripts
 call f_fnc_ReloadModes;
+lbSetCurSel [2101,0];
 [] spawn F_fnc_FreeCam;
 [] spawn F_fnc_UpdateValues;
 

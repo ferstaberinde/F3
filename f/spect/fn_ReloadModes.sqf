@@ -22,7 +22,7 @@ else
 // blackhot
 if(f_cam_tiBHOn) then
 {
-	f_cam_lb_toggletiBHIndex = lbAdd[_listBox," [TI - Blackhot]"];
+	f_cam_lb_toggletiBHIndex = lbAdd[_listBox,"[TI - Blackhot]"];
 
 }
 else
