@@ -42,7 +42,7 @@ f_radios_settings_acre2_languages = [["english","English"],["farsi","Farsi"],["g
 // defines the language that a player can speak.
 // can define multiple
 f_radios_settings_acre2_language_blufor = ["english"];
-f_radios_settings_acre2_language_opfor = ["english"];
+f_radios_settings_acre2_language_opfor = ["farsi"];
 f_radios_settings_acre2_language_indfor = ["greek"];
 
 // radio frequency offset for each side

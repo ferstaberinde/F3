@@ -113,19 +113,19 @@
         {
                 case blufor:
                 {
-                        _offset = 0.01;
+                        _offset = f_radios_settings_acre2_offset_blufor;
                 };
                 case opfor:
                 {
-                        _offset = 0.03;
+                        _offset = f_radios_settings_acre2_offset_opfor;
                 };
                 case independent:
                 {
-                        _offset = 0.07;
+                        _offset = f_radios_settings_acre2_offset_indfor;
                 };
                 default
                 {
-                        _offset = 0.09;
+                        _offset = f_radios_settings_acre2_offset_indfor;
                 };
         };
 
