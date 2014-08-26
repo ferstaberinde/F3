@@ -49,7 +49,7 @@ if (_cntFAK <= 50 || _cntMediKit == 1) then // Squad sized cargo
 if (_cntFAK > 50 || _cntMediKit > 1) then // Platoon sized Cargo
 	{
 		// Add items for 4 medics
-		_unit addItemCargoGlobal ["AGM_Bandage", 15];
-		_unit addItemCargoGlobal ["AGM_Morphine", 15];
-		_unit addItemCargoGlobal ["AGM_Bloodbag", 5];
+		_unit addItemCargoGlobal ["AGM_Bandage", 45];
+		_unit addItemCargoGlobal ["AGM_Morphine", 45];
+		_unit addItemCargoGlobal ["AGM_Bloodbag", 15];
 	};
