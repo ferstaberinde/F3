@@ -94,7 +94,7 @@ if (f_var_debugMode == 1) then
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "blu_f") then {
-#include "f_assignGear_nato.sqf"
+	#include "f_assignGear_nato.sqf"
 };
 
 // ====================================================================================
