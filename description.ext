@@ -483,3 +483,9 @@ class CfgFunctions
 };
 
 // ============================================================================================
+
+// F3 - Custom Insignia
+
+class CfgUnitInsignia {
+	#include "f\assignGear\insignia\define.hpp"
+};
