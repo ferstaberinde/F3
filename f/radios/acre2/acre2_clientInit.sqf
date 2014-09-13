@@ -85,4 +85,3 @@ switch (side _unit) do {
       [f_radios_settings_acre2_language_indfor select 0] call acre_api_fnc_babelSetSpeakingLanguage;
     };
 };
-systemChat "DONE";
