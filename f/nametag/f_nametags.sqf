@@ -132,7 +132,7 @@ addMissionEventHandler ["Draw3D", {
 		// Start looping through all entities
 		{
 			// Only display units of players side
-			if(side _x == side player && _x != player) then
+			if(side _x == side player && _x != player && !(player iskindof "VirtualMan_F")) then
 			{
 
 				// If the entity is Infantry
@@ -175,7 +175,7 @@ addMissionEventHandler ["Draw3D", {
 						_pos = visiblePosition _x;
 
 						// If the unit is sitting in the driver position or is the driver
-						if(_pos distance (visiblePosition (driver _veh)) > 0.1 || driver _veh == _x) then
+						if(_pos distance (visiblePosition (driver _veh)) > 0.1 && driver _veh == _x) then
 						{
 
 							// If it's the driver calculate the cargo slots

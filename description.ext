@@ -7,7 +7,7 @@ class Header
 {
 	gameType = Coop;
 	minPlayers = 1;
-	maxPlayers = 405;
+	maxPlayers = 453;
 };
 
 // ============================================================================================
@@ -144,9 +144,23 @@ class Params
     {
             title = "Radio System";
             values[] = {0,1,2};
-            texts[] = {"Off","ACRE", "TFR"};
+            texts[] = {"Off","ACRE","TFR"};
             default = 0;
             code = "f_var_radios = %1";
+    };
+
+// ============================================================================================
+
+// F3 - Medical Systems Support
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+    class f_param_medical
+    {
+            title = "Medical System";
+            values[] = {0,1,2};
+            texts[] = {"Arma 3 Default","F3 Simple Wounding System","Authentic Gameplay Mod"};
+            default = 0;
+            code = "f_var_medical = %1";
     };
 
 // ============================================================================================

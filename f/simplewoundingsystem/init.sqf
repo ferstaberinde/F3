@@ -5,7 +5,6 @@
 if (isDedicated) ExitWith {};
 _unit = _this select 0;
 
-
 // add breifing
 if(isNil "f_wound_briefing") then
 {
@@ -16,7 +15,7 @@ if(f_wound_briefing) then
 	[] spawn
 	{
 		waitUntil {scriptDone f_script_briefing};
-		_bstr = format ["OVERVIEW<br/>
+		_bstr = format ["<br/>OVERVIEW<br/>
 When a player is wounded to the point of being 'incapacitated' they become a casualty. Casualties are prone and unable to move.
 <br/><br/>
 TREATING CASUALTIES<br/>

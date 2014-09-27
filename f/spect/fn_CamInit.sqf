@@ -32,6 +32,17 @@ if(!isnil "BIS_fnc_feedback_allowPP") then
 	BIS_fnc_feedback_allowPP = false;
 };
 
+// Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
+
+_newUnit =  createAgent  ["VirtualMan_F", [0,0,0], [], 0, "FORM"];
+_newUnit hideObjectGlobal true;
+_newUnit enableSimulationGlobal false;
+
+selectPlayer _newUnit;
+deleteVehicle _unit;
+
+// ====================================================================================
+
 // Set spectator mode for whichever radio system is in use
 switch (f_var_radios) do {
 
@@ -47,21 +58,12 @@ switch (f_var_radios) do {
 
   // TFR
   case 2: {
-    [_unit, true] call TFAR_fnc_forceSpectator;
+    [_newUnit, true] call TFAR_fnc_forceSpectator;
   };
 
 };
 
 // ====================================================================================
-
-// Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
-
-_newUnit =  createAgent  ["VirtualMan_F", [0,0,0], [], 0, "FORM"];
-_newUnit hideObjectGlobal true;
-_newUnit enableSimulationGlobal false;
-
-selectPlayer _newUnit;
-deleteVehicle _unit;
 
 // create the camera and set it up.
 f_cam_camera = "camera" camCreate [position _oldUnit select 0,position _oldUnit select 1,3];
@@ -74,6 +76,7 @@ cameraEffectEnableHUD true;
 f_cam_camera camCommit 0;
 showCinemaBorder false;
 f_cam_MouseMoving = false;
+
 // ====================================================================================
 _listBox = 2100;
 lbClear _listBox;
@@ -93,7 +96,8 @@ F_fnc_GetIcon = compile preprocessFileLineNumbers "f\spect\fn_getIcon.sqf";*/
 
 // ====================================================================================
 // set inital values.
-
+#include "macros.hpp"
+f_cam_controls = [F_CAM_TOPBAR,F_CAM_HELPFRAME,F_CAM_HELPBACK,F_CAM_MOUSEHANDLER,F_CAM_UNITBUTTON,F_CAM_UNITLIST,F_CAM_MODESCOMBO,F_CAM_MODESCOMBO,F_CAM_SPECTEXT,F_CAM_SPECHELP,F_CAM_HELPCANCEL,F_CAM_HELPCANCEL,F_CAM_MINIMAP,F_CAM_FULLMAP];
 f_cam_units = allunits;
 f_cam_players = call F_fnc_GetPlayers;
 f_cam_startX = 0;
@@ -101,7 +105,7 @@ f_cam_startY = 0;
 f_cam_detlaX = 0;
 f_cam_detlaY = 0;
 f_cam_zoom = 0;
-f_cam_hideUI = 0;
+f_cam_hideUI = false;
 f_cam_map_zoom = 0.5;
 f_cam_mode = 0;
 f_cam_toggleCamera = false;
@@ -170,5 +174,4 @@ _helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click to pan the 
 // ====================================================================================
 // spawn sub scripts
 [] spawn F_fnc_FreeCam;
-[] spawn F_fnc_DialogLoop;
 [] spawn F_fnc_UpdateValues;

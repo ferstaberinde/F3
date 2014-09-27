@@ -25,7 +25,7 @@ if(_typeOfUnit != "NIL") then {
       _unit linkItem "ACRE_PRC343";
 
       // Set the list of units that get a 148
-      _longRange = ["co", "dc", "m", "mmgg", "matg", "sn", "mtrg", "c", "p", "eng", "engm", "uav", "div"];
+      _longRange = ["co", "dc", "m", "mmgg", "matg", "mtrg", "sn","vc", "pp", "eng", "engm", "uav", "div"];
 
       // If unit is in the above list, add a 148
       if(_typeOfUnit in _longRange) then {
