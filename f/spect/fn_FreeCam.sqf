@@ -17,6 +17,7 @@ waitUntil {
 	f_cam_camera camSetFov f_cam_fovZoom;
 	if(f_cam_mode == 0) then
 	{
+			cameraEffectEnableHUD true;
 			_commitTime = ((1.0 - ((speed vehicle f_cam_curTarget)/65))/3) max 0.1;
 			_delta = (-(2*(0.3 max f_cam_zoom)));
 			_zLevel = sin(f_cam_angleY)*(2*(0.3 max f_cam_zoom));
@@ -47,7 +48,7 @@ waitUntil {
 	};
 	if(f_cam_mode == 3) then
 	{
-
+		cameraEffectEnableHUD true;
 
 		_currPos = getposASL f_cam_freecamera;
 		_mX = 0;
