@@ -3,7 +3,7 @@
 // ====================================================================================
 _unit = _this select 0;
 _dragger = _this select 1;
-_dragger setVariable ["revive_dragging",_unit];
+_dragger setVariable ["revive_dragging",_unit,true];
 
 // the dragger gets a release option.
 if(local _dragger) then
@@ -37,7 +37,7 @@ waitUntil {
 	( isNil "_dude" || !alive _dragger)
 };
 
-_dragger setVariable ["revive_dragging",nil];
+_dragger setVariable ["revive_dragging",nil,true];
 // release unit.
 detach _unit;
 _unit setPosATL getposATL _dragger;
