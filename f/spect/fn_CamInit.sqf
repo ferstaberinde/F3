@@ -117,6 +117,7 @@ f_cam_angleY = 60;
 f_cam_ctrl_down = false;
 f_cam_shift_down = false;
 f_cam_freecam_buttons = [false,false,false,false,false,false];
+f_cam_forcedExit = false;
 // ====================================================================================
 
 f_cam_listUnits = [];
@@ -206,7 +207,8 @@ cameraEffectEnableHUD true;
 showCinemaBorder false;
 f_cam_fired = [];
 {
-  _x addEventHandler ["fired",{f_cam_fired = f_cam_fired - [objNull];f_cam_fired = f_cam_fired + [_this select 6]}]
+  _event = _x addEventHandler ["fired",{f_cam_fired = f_cam_fired - [objNull];f_cam_fired = f_cam_fired + [_this select 6]}];
+  _x setVariable ["f_cam_fired_eventid",_x];
 
 } foreach (allunits + vehicles);
 
@@ -214,8 +216,8 @@ f_cam_fired = [];
 // spawn sub scripts
 call f_fnc_ReloadModes;
 lbSetCurSel [2101,0];
-[] spawn F_fnc_FreeCam;
-[] spawn F_fnc_UpdateValues;
+f_cam_freeCam_script = [] spawn F_fnc_FreeCam;
+f_cam_updatevalues_script = [] spawn F_fnc_UpdateValues;
 
 
  ["f_spect_tags", "onEachFrame", {_this call F_fnc_DrawTags}] call BIS_fnc_addStackedEventHandler;

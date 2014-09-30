@@ -4,7 +4,7 @@
 // draw tags
 if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 {
-	if({isPlayer _x} count units _x >= 0) then
+	if({isPlayer _x} count units _x > 0) then
 	{
 		_visPos = visiblePositionASL leader _x;
 		if(!(surfaceIsWater _visPos)) then {_visPos = ASLtoATL (_visPos)};

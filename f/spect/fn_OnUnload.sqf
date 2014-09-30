@@ -1,5 +1,6 @@
 disableSerialization;
 sleep 1;
+if (f_cam_forcedExit) ExitWith {};
 createDialog "f_spec_dialog";
 _displayDialog = (findDisplay 9228);
 _displayDialog displaySetEventHandler["KeyDown", "[""KeyDown"",_this] call F_fnc_EventHandler"];

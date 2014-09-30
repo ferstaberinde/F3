@@ -14,4 +14,5 @@ class fspectator
 	class ToggleGUI{};
 	class OnMapClick{};
 	class DrawMarkers{};
+	class ForceExit{};
 };
