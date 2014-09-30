@@ -1,7 +1,6 @@
 // F3 - Spectator Script
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
-
 // inital
 f_cam_angle = 360;
 f_cam_zoom = 3;
@@ -11,6 +10,7 @@ _centerX = safeZoneX + safeZoneW/2;
 _centerY = safezoneY + safeZoneH/2;
 f_cam_camera camSetFov 1.2;
 // simple..
+// ====================================================================================
 waitUntil {
 
 	// if freemode.
@@ -121,3 +121,4 @@ waitUntil {
 	};
 	false
 };
+// ====================================================================================

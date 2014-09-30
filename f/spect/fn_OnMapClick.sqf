@@ -5,7 +5,7 @@ if(f_cam_mapMode == 2) then
     {
         _chosen = nil;
         _dist = 99999;
-        _ents = _pos nearEntities [["SoldierWB","AllVehicles"],10];
+        _ents = _pos nearEntities [["CAManBase","AllVehicles"],10];
 
 
         {

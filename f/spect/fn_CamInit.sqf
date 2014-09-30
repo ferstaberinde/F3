@@ -60,7 +60,8 @@ switch (f_var_radios) do {
 // ====================================================================================
 
 
-// enable all factions but your owns groupMarkers.
+// enable all factions but your owns groupMarkers. // DISABLED.
+/*
 _oldUnit spawn {
   _factions = [];
   {
@@ -73,7 +74,7 @@ _oldUnit spawn {
   {
       [toLower _x] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
   } foreach _factions;
-};
+};*/
 // ====================================================================================
 _listBox = 2100;
 lbClear _listBox;
