@@ -277,39 +277,32 @@ _isMan = _unit isKindOf "CAManBase";	// We check if we're dealing with a soldier
 // This block needs only to be run on an infantry unit
 if (_isMan) then {
 
-// HANDLE CLOTHES
-// Handle clothes and helmets and such using the include file called next.
+		// PREPARE UNIT FOR GEAR ADDITION
+	// The following code removes all existing weapons, items, magazines and backpacks
+
+	removeBackpack _unit;
+	removeAllWeapons _unit;
+	removeAllItemsWithMagazines _unit;
+
+	// ====================================================================================
+
+	// HANDLE CLOTHES
+	// Handle clothes and helmets and such using the include file called next.
 
 	#include "f_assignGear_clothes.sqf";
 
 	// ====================================================================================
 
-	// PREPARE UNIT FOR GEAR ADDITION
-	// The following code removes all existing weapons and backpacks
+	// ADD UNIVERSAL ITEMS
+	// Add items universal to all units of this faction
 
-	removeBackpack _unit;
-	removeallweapons _unit;
-
-	// We add a single first aid kit (FAK)
-
-	_unit addItem _firstaid;
-
-	// The following code removes any pre-added NVGs
-
-	if(_nvg in (assignedItems _unit)) then
-	{
-		_unit unassignItem _nvg;
-		_unit removeItem _nvg;
-	};
-	// uncomment to remove nvgoogles
-	_unit linkItem _nvg;					// add universal NVG for this faction
-
-	//removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
-	//_unit linkItem "ItemGPS"; 					// add gps to this faction
-	//_unit linkItem "ItemMap";
-	//_unit linkItem "ItemCompass";
-	//_unit linkItem "ItemRadio";
-	//_unit linkItem "ItemWatch";
+	_unit linkItem _nvg;			// Add and equip the faction's nvg
+	_unit addItem _firstaid;		// Add a single first aid kit (FAK)
+	_unit linkItem "ItemMap";		// Add and equip the map
+	_unit linkItem "ItemCompass";	// Add and equip a compass
+	_unit linkItem "ItemRadio";		// Add and equip A3's default radio
+	_unit linkItem "ItemWatch";		// Add and equip a watch
+	//_unit linkItem "ItemGPS"; 	// Add and equip a GPS
 
 };
 
