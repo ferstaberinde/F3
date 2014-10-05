@@ -54,6 +54,9 @@ switch (f_var_radios) do {
   case 2: {
     [_newUnit, true] call TFAR_fnc_forceSpectator;
   };
+  case 3: {
+	[true] call acre_api_fnc_setSpectator;
+  };
 
 };
 
