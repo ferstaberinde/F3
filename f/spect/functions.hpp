@@ -12,4 +12,7 @@ class fspectator
 	class UpdateValues{};
 	class HandleCamera{};
 	class ToggleGUI{};
+	class OnMapClick{};
+	class DrawMarkers{};
+	class ForceExit{};
 };

@@ -88,12 +88,23 @@ switch (_type) do
             _unit = f_cam_listUnits select (_args select 1);
             if(!isnil "_unit") then
             {
-                f_cam_curTarget = _unit;
-                if(f_cam_toggleCamera) then
+                if(typeName _unit == "GROUP") then {_unit = leader _unit};
+                if(f_cam_mode == 0 || f_cam_mode == 1) then
                 {
-                  f_cam_curTarget switchCamera "INTERNAL";
+                    f_cam_curTarget = _unit;
+                    if(f_cam_toggleCamera) then
+                    {
+                      f_cam_curTarget switchCamera "INTERNAL";
+                    };
+                    ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
                 };
-                ctrlSetText [1000,format ["Spectating:%1", name f_cam_curTarget]];
+                if(f_cam_mode == 3) then
+                {
+                    _pos = getpos _unit;
+                    _x = _pos select 0;
+                    _y = _pos select 1;
+                    f_cam_freecamera setPosASL [_x,_y,((getposASL f_cam_freecamera) select 2 ) max ((getTerrainHeightASL [_x,_y])+1)];
+                };
             };
         };
     };
@@ -103,44 +114,6 @@ switch (_type) do
         _index =  (_args select 1);
         switch (_index) do
         {
-            case f_cam_lb_toggleplayersIndex:
-            {
-
-                f_cam_playersOnly = !f_cam_playersOnly;
-                f_cam_listUnits = [];
-                lbClear 2100;
-                call F_fnc_ReloadModes;
-
-            };
-            case f_cam_lb_togglecameraIndex:
-            {
-
-                f_cam_toggleCamera = !f_cam_toggleCamera;
-                if(f_cam_toggleCamera) then
-                {
-                    f_cam_mode = 1; //(view)
-                    f_cam_camera cameraEffect ["terminate", "BACK"];
-                    f_cam_curTarget switchCamera "internal";
-                }
-                else
-                {
-                    f_cam_mode = 0;
-                    f_cam_camera cameraEffect ["internal", "BACK"];
-                };
-                call F_fnc_ReloadModes;
-
-            };
-            case f_cam_lb_toggleTagNameIndex:
-            {
-                f_cam_toggleTagsName = !f_cam_toggleTagsName;
-                call F_fnc_ReloadModes;
-            };
-            case f_cam_lb_toggleTagsIndex:
-            {
-                f_cam_toggleTags = !f_cam_toggleTags;
-                call F_fnc_ReloadModes;
-
-            };
             case f_cam_lb_toggletiWHIndex:
             {
                 f_cam_tiWHOn = !f_cam_tiWHOn;
@@ -176,6 +149,15 @@ switch (_type) do
                 call F_fnc_ReloadModes;
 
             };
+            case f_cam_lb_toggleNormal:
+            {
+                    false setCamUseTi 0;
+                    camUseNVG false;
+                    f_cam_tiWHOn = false;
+                    f_cam_tiBHOn = false;
+                    f_cam_nvOn = false;
+                call F_fnc_ReloadModes;
+            };
             case f_cam_lb_toggletiNVIndex: // Nightvision
             {
                 f_cam_nvOn = !f_cam_nvOn;
@@ -193,10 +175,6 @@ switch (_type) do
                 };
                 call F_fnc_ReloadModes;
 
-            };
-            default
-            {
-                 /* STATEMENT */
             };
         };
     };
@@ -220,14 +198,89 @@ switch (_type) do
                 f_cam_zoom = 0.3 max f_cam_zoom;
                 _handled = true;
             };
-            case 22:
+            case 20: // T
+            {
+                f_cam_tracerOn = !f_cam_tracerOn;
+                if(f_cam_tracerOn) then
+                {
+                    systemChat "Tracers on map activated.";
+                }
+                else
+                {
+                    systemChat "Tracers on map deactivated.";
+                };
+                _handled = true;
+            };
+            case 22: // U
             {
                 f_cam_hideUI = !f_cam_hideUI;
                 [] spawn f_fnc_ToggleGUI;
                 _handled = true;
             };
-            // H
-            case 35:
+            // Freecam movement keys
+            case 17: // W
+            {
+                f_cam_freecam_buttons set [0,true];
+                _handled = true;
+            };
+            case 31: // S
+            {
+                f_cam_freecam_buttons set [1,true];
+                _handled = true;
+            };
+            case 30: // A
+            {
+                f_cam_freecam_buttons set [2,true];
+                _handled = true;
+            };
+            case 32: // D
+            {
+                f_cam_freecam_buttons set [3,true];
+                _handled = true;
+            };
+            case 49: // N
+            {
+                _index = (lbCurSel 2101)+1;
+                if(_index >= (lbSize 2101 )) then { _index = 0};
+                lbSetCurSel [2101,_index];
+                _handled = true;
+            };
+            case 16: // Q
+            {
+                f_cam_freecam_buttons set [4,true];
+                _handled = true;
+            };
+            case 44: // Z
+            {
+                f_cam_freecam_buttons set [5,true];
+                _handled = true;
+            };
+            case 57: // SPACE
+            {
+                f_cam_freecamOn = !f_cam_freecamOn;
+                if(f_cam_freecamOn) then
+                {
+                    f_cam_angleY = 10;
+                    [f_cam_freecamera,f_cam_angleY,0] call BIS_fnc_setPitchBank;
+                    f_cam_freecamera cameraEffect ["internal", "BACK"];
+                    f_cam_mode = 3;
+                    f_cam_freecamera setPosASL getPosASL f_cam_camera;
+                    cameraEffectEnableHUD true;
+                    showCinemaBorder false;
+                }
+                else
+                {
+                    f_cam_freecamera cameraEffect ["Terminate","BACK"];
+                    f_cam_angleY = 45;
+                    f_cam_camera cameraEffect ["internal", "BACK"];
+                    f_cam_mode = 0;
+                    cameraEffectEnableHUD true;
+                    showCinemaBorder false;
+                };
+                 _handled = true;
+            };
+
+            case 35: //  H
             {
                 ctrlShow [1315, !ctrlVisible 1315];
                 ctrlShow [1310, !ctrlVisible 1310];
@@ -235,19 +288,20 @@ switch (_type) do
                 ctrlShow [1305, !ctrlVisible 1305];
                  _handled = true;
             };
-            case 42:
+            case 42: // SHIFT
             {
                 f_cam_shift_down = true;
                 [] spawn f_fnc_HandleCamera;
+                 _handled = true;
             };
-            case 29:
+            case 29: // CTRL
             {
                 f_cam_ctrl_down = true;
                 [] spawn f_fnc_HandleCamera;
+                 _handled = true;
             };
-            case 50:
+            case 50: // M
             {
-                //_mapWindow = _displayDialog displayCtrl 1350;
                 f_cam_mapMode = f_cam_mapMode +1;
                 if(f_cam_mapMode > 2) then
                 {
@@ -281,17 +335,13 @@ switch (_type) do
                         _displayDialog = (findDisplay 9228);
                         _fullmapWindow = _displayDialog displayCtrl 1360;
                         ctrlMapAnimClear _fullmapWindow;
-                        _fullmapWindow ctrlMapAnimAdd [0.001, 0.1,getpos f_cam_camera];
+
+                        _fullmapWindow ctrlMapAnimAdd [0.001, 0.1,getpos ([] call f_cam_GetCurrentCam)];
                         ctrlMapAnimCommit _fullmapWindow;
                     };
                 };
                 _handled = true;
             };
-            case 1:
-            {
-              //  _handled = true;
-            }
-
         };
         _handled
     };
@@ -307,10 +357,12 @@ switch (_type) do
             case 42:
             {
                 f_cam_shift_down = false;
+                _handled = true;
             };
             case 29:
             {
                 f_cam_ctrl_down = false;
+                _handled = true;
             };
             case 203:
             {
@@ -321,6 +373,14 @@ switch (_type) do
                 _handled = true;
             };
             case 24:
+            {
+                _handled = true;
+            };
+            case 28:
+            {
+                _handled = true;
+            };
+            case 49:
             {
                 _handled = true;
             };
@@ -340,7 +400,40 @@ switch (_type) do
             {
                 _handled = true;
             };
-
+            case 57:
+            {
+                _handled = true;
+            };
+            case 17:
+            {
+                f_cam_freecam_buttons set [0,false];
+                _handled = true;
+            };
+            case 31:
+            {
+                f_cam_freecam_buttons set [1,false];
+                _handled = true;
+            };
+            case 30:
+            {
+                f_cam_freecam_buttons set [2,false];
+                _handled = true;
+            };
+            case 32:
+            {
+                f_cam_freecam_buttons set [3,false];
+                _handled = true;
+            };
+            case 16:
+            {
+                f_cam_freecam_buttons set [4,false];
+                _handled = true;
+            };
+            case 44:
+            {
+                f_cam_freecam_buttons set [5,false];
+                _handled = true;
+            };
         };
         _handled
     };

@@ -1,5 +1,6 @@
 disableSerialization;
 sleep 1;
+if (f_cam_forcedExit) ExitWith {};
 createDialog "f_spec_dialog";
 _displayDialog = (findDisplay 9228);
 _displayDialog displaySetEventHandler["KeyDown", "[""KeyDown"",_this] call F_fnc_EventHandler"];
@@ -8,7 +9,6 @@ _displayDialog displaySetEventHandler["KeyUp", "[""KeyUp"",_this] call F_fnc_Eve
 _mouseDialog = _displayDialog displayCtrl 123;
 f_cam_onMouseMoving = _mouseDialog ctrlAddEventHandler ["MouseMoving", "['MouseMoving',_this] call F_fnc_EventHandler"];
 call f_fnc_ReloadModes;
-ctrlShow [2100,false];
 _helpWindow = _displayDialog displayCtrl 1310;
 _mapWindow = _displayDialog displayCtrl 1350;
 _fullmapWindow = _displayDialog displayCtrl 1360;
