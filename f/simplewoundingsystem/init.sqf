@@ -38,8 +38,8 @@ An incapacitated player only has a few minutes before her/his wounds become fata
 sleep 5;
 
 // default variables.
-_unit setVariable ["revive_down",false,true];
-_unit setVariable ["revive_bleeding",false,true];
+_unit setVariable ["revive_down",false];
+_unit setVariable ["revive_bleeding",false];
 _unit setVariable ["revive_blood",100]; // other player dont need know this
 _unit setVariable ["revive_dragging",nil];
 
@@ -50,7 +50,11 @@ _unit spawn f_fnc_LifeTick;
 
 // Handleheal needs to be one the player you heal.
 {
+	_x setVariable ["revive_down",false];
+	_x setVariable ["revive_bleeding",false];
 	_x addEventHandler ["HandleHeal",{_this call f_fnc_OnHeal}];
+		// Drag Action.
+	_addIndex = _x addAction [format ["Drag %1", name _unit],{[_this, "f_fnc_OnDrag", [_this select 0,_this select 1],false] spawn BIS_fnc_MP;}, nil, 6, false, true, "", "_var = _this getVariable ['revive_dragging',nil];_target distance _this < 2 && isNil '_var' && _target getVariable['revive_down',false] && !(_this getVariable ['revive_down',false])"];
 } foreach playableUnits;
 
 // defines the PP effects for the downed effect.
