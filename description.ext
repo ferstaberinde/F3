@@ -375,6 +375,9 @@ class CfgRespawnTemplates
 
 class CfgFunctions
 {
+	//ws_fnc
+	#include "ws_fnc\config.hpp"
+
 	class F // Defines the "owner"
 	{
 		class common // category
