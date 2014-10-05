@@ -19,7 +19,7 @@
 // 1. location can be String (Markername), Array [x,y,z], Group or Objectname														| MANDATORY
 // 2. radius has to be int > 0 and defines the radius around the position. If set to true it will instead return a position inside a trigger/marker passed in the 1. parameter	| OPTIONAL - default is 0
 // 3. minimal distance from center, has to be int > 0 and > radius		 													| OPTIONAL - default is 0
-// 4. Angle from center. Integer value between 0 and 360						| OPTIONAL - default is (random 360)
+// 4. Angle from center. Number between 0 and 360						| OPTIONAL - default is (random 360)
 // 5. road (bool) forces pos to be placed on road 																	| OPTIONAL - default is false
 // 6. building allowed (bool) enables the position to be in/on a building														| OPTIONAL - default is false
 // 7. water allowed (bool) enables the position to be on water as well														| OPTIONAL - default is false

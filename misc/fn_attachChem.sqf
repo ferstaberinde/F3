@@ -16,7 +16,7 @@ Full:
 PARAMETERS
 1. Object to attach chem to (object)				| MANDATORY
 2. Color of chemlight (string)						| MANDATORY	- can be "red","green","blue" or "yellow"
-3. Duration of light (integer)						| OPTIONAL - default is 0 (infinite)
+3. Duration of light (number)						| OPTIONAL - default is 0 (infinite)
 4. Offset for attach from center (array in [x,y,z])	| OPTIONAL - default is [0,0,0]
 5. MemoryPoint to attach to (string					| OPTIONAL - see http://resources.bisimulations.com/wiki/Named_Selection and https://community.bistudio.com/wiki/ArmA:_Selection_Translations for memory points. Not all work.
 

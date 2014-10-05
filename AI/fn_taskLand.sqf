@@ -22,7 +22,7 @@ PARAMETERS
 1. The helicopter                              | MANDATORY
 2. The position to land on                     | MANDATORY - can be marker, object or positional array
 3. The position to move to after landing       | MANDATORY - can be marker, object or positional array
-4. The max. time to wait after touching ground | OPTIONAL - should be integer (default: 15s)
+4. The max. time to wait after touching ground | OPTIONAL - any number (default: 15s)
 
 EXAMPLE
 [VehAAF_H,"mkrLand",airport] spawn ws_fnc_taskLand; - would cause the helicopter named "VehAAF_H" to take off, fly towards the marker named "mkrLand" and extract towards the object named "airport".

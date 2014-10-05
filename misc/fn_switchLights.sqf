@@ -11,7 +11,7 @@
 // PARAMETERS
 // 1. Switch can be "ON" or "OFF"								| MANDATORY
 // 2. Center can be markername, object or positional array		| MANDATORY
-// 3. Radius has to be integer		| MANDATORY
+// 3. Radius has to be number		| MANDATORY
 //
 // EXAMPLES
 // ["OFF",church,1000] call ws_fnc_switchLights; - turn off all lights in 1k radius around the object named "church"

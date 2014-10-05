@@ -10,7 +10,7 @@
 //
 // PARAMETERS
 // 1.side, object or array of objects			| MANDATORY
-// 2. damage until the crew bails (any integer from 0.1 to 1)	| OPTIONAL - default is 0.8
+// 2. damage until the crew bails (any number from 0.1 to 1)	| OPTIONAL - default is 0.8
 //
 // USAGE WITH F2:
 // Use f_var_vehicles or f_var_vehicles_BLU or f_var_vehicles_RES or f_var_vehicles_OPF as first parameter
