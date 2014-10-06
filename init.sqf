@@ -150,6 +150,13 @@ f_script_setLocalVars = [0] execVM "f\common\f_setLocalVars.sqf";
 
 // ====================================================================================
 
+// F3 - LOADOUT Notes
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[] execVM "f\briefing\f_loadoutNotes.sqf";
+
+// ====================================================================================
+
 // F3 - Join Group Action
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
