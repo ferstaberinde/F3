@@ -4,9 +4,11 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_text","_stuff","_weps","_items","_fnc_wepMags","_w","_wepMags","_magArr","_s","_mags","_magarr","_bp","_maxload"];
+private ["_text","_stuff","_weps","_items","_fnc_wepMags","_wepMags","_magArr","_s","_mags","_bp","_maxload"];
 
+// Local function to set the proper magazine count.
 _fnc_wepMags = {
+		private ["_w","_magarr"];
 		_w = _this select 0;
 
 		//Get possible magazines for weapon
@@ -72,9 +74,14 @@ if (count _weps > 0) then {
 	{
 		_text = _text + format["<br/>%1",getText (configFile >> "CfgWeapons" >> _x >> "displayname")];
 
-		//Get possible magazines for weapon
-		//_wepMags = getArray (configFile >> "CfgWeapons" >> _x >> "magazines");
+		//Add magazines for weapon
   		[_x] call _fnc_wepMags;
+
+  		// Check if weapon has an underslung grenade launcher
+		if ({_x in ["GL_3GL_F","EGLM","UGL_F"]} count (getArray (configFile >> "CfgWeapons" >> _x >> "muzzles")) > 0) then {
+			_text = _text + "<br/> |- UGL";
+			["UGL_F"] call _fnc_wepMags;
+		};
 
 		// List weapon attachments
 		// Get attached items
