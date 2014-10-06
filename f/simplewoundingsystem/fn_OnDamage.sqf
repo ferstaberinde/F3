@@ -13,7 +13,7 @@ if (f_var_debugMode == 1) then
 // if selection is not head or hands or "" check if we can save him.
 if((_selection != "head") &&  _selection != ""  && _selection != "hands" && _totalDamage > 1) then
 {
-	if(!(_unit getVariable ["revive_down",false])) then
+	if(!(_unit getVariable ["f_wound_down",false])) then
 	{
 		 [[_unit,true], "f_fnc_SetDowned", true] spawn BIS_fnc_MP;
 
@@ -22,9 +22,9 @@ if((_selection != "head") &&  _selection != ""  && _selection != "hands" && _tot
 	};
 };
 
-if(isBleeding _unit && _unit getVariable ["revive_bleeding",false]) then
+if(isBleeding _unit && _unit getVariable ["f_wound_bleeding",false]) then
 {
-	_unit setVariable ["revive_bleeding",true];
+	_unit setVariable ["f_wound_bleeding",true];
 };
 _damage
 

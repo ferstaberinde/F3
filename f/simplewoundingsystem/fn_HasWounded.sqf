@@ -4,7 +4,7 @@
 _veh = _this select 0;
 _ret = false;
 {
-	if(_x getVariable ["revive_down",false]) then
+	if(_x getVariable ["f_wound_down",false]) then
 	{
 		_ret = true;
 	};
