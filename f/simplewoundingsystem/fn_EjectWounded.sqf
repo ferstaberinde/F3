@@ -5,7 +5,7 @@ _veh = _this select 0;
 _caller = _this select 1;
 
 {
-	if(_x getVariable ["revive_down",false]) then
+	if(_x getVariable ["f_wound_down",false]) then
 	{
 		_x action["eject",_veh];
 		sleep 0.2
