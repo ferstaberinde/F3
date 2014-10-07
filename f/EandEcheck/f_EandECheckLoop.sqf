@@ -23,6 +23,7 @@ _obj = _this select 1;
 _safeDistance = _this select 2;
 _end = _this select 3;
 _playersonly = if (count _this > 4) then {_this select 4} else {true};
+_alive = {alive _x} count _units;
 _safe = 0;
 _units = [];
 _pos = [];
@@ -138,12 +139,14 @@ sleep 3;
 // END E&E Check
 // Depending on input, either MPEnd or the parsed code itself is called
 
-if (typeName _end == typeName 0) exitWith {
-	[_end] call f_fnc_mpEnd;
-};
+if (_alive > 0) then {
+	if (typeName _end == typeName 0) exitWith {
+		[_end] call f_fnc_mpEnd;
+	};
 
-if (typeName _end == typeName {}) exitWith {
-	[_end,"bis_fnc_spawn",true] call BIS_fnc_MP;
+	if (typeName _end == typeName {}) exitWith {
+		[_end,"bis_fnc_spawn",true] call BIS_fnc_MP;
+	};
 };
 
 player GlobalChat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];
