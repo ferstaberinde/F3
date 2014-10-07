@@ -6,7 +6,7 @@ _mode = [_this,1,true,[true,[],side]] call bis_fnc_param;
 _objects = [];
 switch (typeName _mode) do {
 	case "ARRAY": {_objects = _mode};
-
+	case "OBJECT": {_addons = [_mode]};
 	case side: {
 		_getGlobalVars = [0] execVM "f\common\f_setLocalVars.sqf";
 		waitUntil {scriptDone _getGlobalVars};
