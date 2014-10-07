@@ -23,7 +23,6 @@ _obj = _this select 1;
 _safeDistance = _this select 2;
 _end = _this select 3;
 _playersonly = if (count _this > 4) then {_this select 4} else {true};
-_alive = {alive _x} count _units;
 _safe = 0;
 _units = [];
 _pos = [];
@@ -103,7 +102,7 @@ while {true} do
 // establish a baseline value to compare against.
 
 _alive = {alive _x} count _units;
-if (_alive == 0) exitWith {};
+if (_alive == 0) exitWith {_safe = 0};
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -139,7 +138,7 @@ sleep 3;
 // END E&E Check
 // Depending on input, either MPEnd or the parsed code itself is called
 
-if (_alive > 0) then {
+if (_safe > 0) then {
 	if (typeName _end == typeName 0) exitWith {
 		[_end] call f_fnc_mpEnd;
 	};
