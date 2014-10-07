@@ -3,7 +3,7 @@ if (!isServer) exitWith {};
 private ["_unit","_addons","_objects","_curator"];
 
 _unit = [_this,0,objNull,[objNull]] call bis_fnc_param;
-_addons = [_this,1,true,[objNull,true,[]]] call bis_fnc_param;
+_addons = [_this,1,true,["",true,[]]] call bis_fnc_param;
 _objects = [_this,2,true,[objNull,true,[]]] call bis_fnc_param;
 _announce = [_this,3,false,[false]] call bis_fnc_param;
 
