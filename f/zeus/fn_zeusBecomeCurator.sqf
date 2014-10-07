@@ -1,5 +1,1 @@
-_center = createCenter sideLogic;
-_group = createGroup _center;
-_pos = getpos player;
-_curator = _group createUnit ["ModuleCurator_F",_pos , [], 0, ""];
-_curator setVariable ["owner","#adminLogged"]; //Find how to integrate array of units etc.
+[player,"f_fnc_createCurator",false] call BIS_fnc_MP;

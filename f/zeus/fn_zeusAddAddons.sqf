@@ -1,0 +1,1 @@
+f_var_curator addCuratorAddons _this;
