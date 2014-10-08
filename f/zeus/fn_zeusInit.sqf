@@ -35,7 +35,6 @@ if (isNil "f_var_sideCenter") then {
 	f_var_sideCenter = createCenter sideLogic;
 	publicVariable "f_var_sideCenter";
 };
-
 // Create the curator module and set it up properly
 _curator = (createGroup f_var_sideCenter) createUnit ["ModuleCurator_F",[0,0,0] , [], 0, ""];
 _curator setVariable ["Addons",3];

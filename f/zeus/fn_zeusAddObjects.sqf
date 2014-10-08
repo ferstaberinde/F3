@@ -19,7 +19,7 @@ if !(isServer) exitWith {};
 // Using variables passed to the script instance, we will create some local variables:
 
 _curator = [_this,0,objNull,[objNull]] call bis_fnc_param;
-_mode = [_this,1,true,[true,[],side]] call bis_fnc_param;
+_mode = [_this,1,true,[true,west,objNull,[]]] call bis_fnc_param;
 
 // ====================================================================================
 
@@ -43,7 +43,7 @@ switch (typeName _mode) do {
 			case civilian: {f_var_units_CIV};
 		};
 	};
-	case "BOOL" {_objects = (vehicles+allUnits)};
+	case "BOOL": {_objects = (vehicles+allUnits)};
 };
 
 // Add all selected objects to curator lists

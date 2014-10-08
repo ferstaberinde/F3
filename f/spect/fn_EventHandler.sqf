@@ -184,6 +184,11 @@ switch (_type) do
     {
         _key = _args select 1;
         _handled = false;
+        _zeusKey = -1;
+        if( count (actionKeys "curatorInterface") > 0 ) then
+        {
+            _zeusKey = (actionKeys "curatorInterface") select 0;
+        };
         if(!isNull (findDisplay 49)) exitWith {if(_key == 1) then {true}};
         switch (_key) do
         {
@@ -191,6 +196,42 @@ switch (_type) do
             {
                 f_cam_zoom = f_cam_zoom - 1;
                 _handled = true;
+            };
+            case _zeusKey:
+            {
+                if(serverCommandAvailable "#kick" || !isNil "f_cam_curator_inited" ) then
+                {
+                    [] spawn {
+                        _done = false;
+                        waitUntil {sleep 0.1;!isNull (findDisplay 312)}; // wait until open
+                        while {!_done} do
+                        {
+                            waitUntil {sleep 0.1;isNull (findDisplay 312)}; // then wait until its not open
+                            if(isnil "bis_fnc_moduleRemoteControl_unit") then // check if someone is being remote controled
+                            {
+                                [player,player,player,0,true] spawn F_fnc_CamInit; // if not retoggle
+                                _done = true;
+                            }; // restart spectator once exit.
+                        };
+                    };
+                    [] call F_fnc_ForceExit;
+                    if(isNil "f_cam_curator_inited") then
+                    {
+                        [[player,true,true],"F_fnc_zeusInit",false] call BIS_fnc_MP;
+                        f_cam_curator_inited = true;
+                    };
+                    ["F_ScreenSetup",false] call BIS_fnc_blackOut;
+                    [] spawn {
+                        sleep 1;
+                        ["F_ScreenSetup"] call BIS_fnc_blackIn;
+                        openCuratorInterface;
+                    };
+                    _handled = true;
+                }
+                else
+                {
+                    _handled = true;
+                };
             };
             case 74: // numpad -
             {

@@ -480,7 +480,8 @@ class CfgFunctions
 			class zeusAddAddons{};
 			class zeusAddObjects{};
 		};
-		class acre		{
+		class acre
+		{
 			file = "f\radios\acre";
 			class acre_removeRadios{};
 			class acre_addRadios{};
