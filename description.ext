@@ -57,6 +57,15 @@ class cfgNotifications
 		difficulty[] = {}; // Required difficulty settings. All listed difficulties has to be enabled
 	};
 
+	// A generic warning notification
+	class Alert
+	{
+		title = "ALERT";
+		description = "%1";
+		iconPicture="\A3\ui_f\data\map\markers\military\warning_ca.paa";
+		duration = 3;
+	};
+
 	// Notifications for the F3 Safe Start Component
 	class SafeStart
 	{
@@ -81,7 +90,7 @@ class cfgNotifications
 		duration = 3;
 	};
 
-	// Notification for the F3 Authorised Crew Component
+	// Notification for the F3 Mapclick Teleport component
 	class MapClickTeleport {
 		title= "NOTE";
 		description= "%1";
@@ -464,8 +473,14 @@ class CfgFunctions
 			file = "f\preMount";
 			class mountGroups{};
 		};
-		class acre
+		class zeus
 		{
+			file = "f\zeus";
+			class zeusInit{};
+			class zeusAddAddons{};
+			class zeusAddObjects{};
+		};
+		class acre		{
 			file = "f\radios\acre";
 			class acre_removeRadios{};
 			class acre_addRadios{};

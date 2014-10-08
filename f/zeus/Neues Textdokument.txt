@@ -1,0 +1,13 @@
+[] call f_fnc_createZeus;
+
+params:
+- Unit or array of units (get ZEUS powers)
+- Bool or side: adds all units or units of side X
+- Units: Bool or side:
+  True: Can create everything
+  Side: Can create everything of one side
+- Gamemaster: Bool
+  True: All Modules
+  False: Only Remote Controle
+
+  
