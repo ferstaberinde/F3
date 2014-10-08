@@ -102,7 +102,7 @@ while {true} do
 // establish a baseline value to compare against.
 
 _alive = {alive _x} count _units;
-if (_alive == 0) exitWith {};
+if (_alive == 0) exitWith {_safe = 0};
 
 // DEBUG
 if (f_var_debugMode == 1) then
@@ -138,12 +138,14 @@ sleep 3;
 // END E&E Check
 // Depending on input, either MPEnd or the parsed code itself is called
 
-if (typeName _end == typeName 0) exitWith {
-	[_end] call f_fnc_mpEnd;
-};
+if (_safe > 0) then {
+	if (typeName _end == typeName 0) exitWith {
+		[_end] call f_fnc_mpEnd;
+	};
 
-if (typeName _end == typeName {}) exitWith {
-	[_end,"bis_fnc_spawn",true] call BIS_fnc_MP;
+	if (typeName _end == typeName {}) exitWith {
+		[_end,"bis_fnc_spawn",true] call BIS_fnc_MP;
+	};
 };
 
 player GlobalChat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];
