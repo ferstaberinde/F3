@@ -936,7 +936,7 @@ switch (_typeofUnit) do
 
 // If this is an ammobox, check medical component settings and if needed run converter script.
 
-if (faction _unit == "DEFAULT") then
+if (!_isMan) then
 	{
 	// Authentic Gameplay Modification
 	if (f_var_medical == 2) exitWith
