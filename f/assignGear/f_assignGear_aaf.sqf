@@ -941,7 +941,7 @@ if (!_isMan) then
 	// Authentic Gameplay Modification
 	if (f_var_medical == 2) exitWith
 		{
-			[_unit] execVM "f\medical\AGM_coverter.sqf";
+			[_unit] execVM "f\medical\AGM_converter.sqf";
 		};
 	};
 
