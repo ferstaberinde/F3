@@ -49,6 +49,10 @@
 //		v_tr		- truck
 //		v_ifv		- ifv
 //
+//		crate_small	- small ammocrate
+//		crate_med	- medium ammocrate
+//		crate_large	- large ammocrate
+//
 // ====================================================================================
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
@@ -858,6 +862,69 @@ switch (_typeofUnit) do
 		_unit addItemCargoGlobal [_firstaid,6];
 	};
 
+// CRATE: Small, ammo for 1 fireteam
+	case "crate_small":
+{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
+		_unit addMagazineCargoGlobal [_riflemag, 5];
+		_unit addMagazineCargoGlobal [_glriflemag, 5];
+		_unit addMagazineCargoGlobal [_armag, 5];
+		_unit addMagazineCargoGlobal [_carbinemag, 5];
+		_unit addMagazineCargoGlobal [_glmag, 5];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
+		_unit addMagazineCargoGlobal [_ratmag, 2];
+		_unit addMagazineCargoGlobal [_grenade, 8];
+		_unit addMagazineCargoGlobal [_mgrenade, 8];
+		_unit addMagazineCargoGlobal [_smokegrenade, 8];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
+		_unit addItemCargoGlobal [_firstaid, 6];
+};
+
+// CRATE: Medium, ammo for 1 squad
+	case "crate_med":
+{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
+		_unit addMagazineCargoGlobal [_riflemag, 15];
+		_unit addMagazineCargoGlobal [_glriflemag, 20];
+		_unit addMagazineCargoGlobal [_armag, 15];
+		_unit addMagazineCargoGlobal [_carbinemag, 20];
+		_unit addMagazineCargoGlobal [_glmag, 20];
+		_unit addMagazineCargoGlobal [_glsmokewhite,16];
+		_unit addMagazineCargoGlobal [_ratmag, 6];
+		_unit addMagazineCargoGlobal [_grenade, 25];
+		_unit addMagazineCargoGlobal [_mgrenade, 25];
+		_unit addMagazineCargoGlobal [_smokegrenade, 25];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 6];
+		_unit addItemCargoGlobal [_firstaid, 25];
+};
+
+// CRATE: Large, ammo for 1 platoon
+	case "crate_large":
+{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
+		_unit addMagazineCargoGlobal [_riflemag, 45];
+		_unit addMagazineCargoGlobal [_glriflemag, 60];
+		_unit addMagazineCargoGlobal [_armag, 45];
+		_unit addMagazineCargoGlobal [_carbinemag, 60];
+		_unit addMagazineCargoGlobal [_glmag, 60];
+		_unit addMagazineCargoGlobal [_glsmokewhite,50];
+		_unit addMagazineCargoGlobal [_ratmag, 20];
+		_unit addMagazineCargoGlobal [_grenade, 75];
+		_unit addMagazineCargoGlobal [_mgrenade, 75];
+		_unit addMagazineCargoGlobal [_smokegrenade, 75];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 20];
+		_unit addItemCargoGlobal [_firstaid, 75];
+};
+
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)
    default
    {
@@ -876,6 +943,18 @@ switch (_typeofUnit) do
 };
 
 // ====================================================================================
+// If this is an ammobox, check medical component settings and if needed run converter script.
+
+if (!_isMan) then
+	{
+	// Authentic Gameplay Modification
+	if (f_var_medical == 2) exitWith
+		{
+			[_unit] execVM "f\medical\AGM_converter.sqf";
+		};
+	};
+
+// ====================================================================================
 
 // If this isn't run on an infantry unit we can exit
 if !(_isMan) exitWith {};
@@ -886,7 +965,6 @@ if !(_isMan) exitWith {};
 #include "f_assignGear_attachments.sqf";
 
 // ====================================================================================
-
 
 // ENSURE UNIT HAS CORRECT WEAPON SELECTED ON SPAWNING
 

@@ -10,16 +10,21 @@ private ["_faction","_typeofUnit","_unit"];
 
 // DETECT unit FACTION
 // The following code detects what faction the unit's slot belongs to, and stores
-// it in the private variable _faction
+// it in the private variable _faction. It can also be passed as an optional parameter.
 
 _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
+
 _faction = toLower (faction _unit);
+if(count _this > 2) then
+{
+  _faction = _this select 2;
+};
 
 // ====================================================================================
 
 // INSIGNIA
-// This block will give units insignia on their uniforms. 
+// This block will give units insignia on their uniforms.
 [_unit,_typeofUnit] spawn {
 	#include "f_assignInsignia.sqf"
 };

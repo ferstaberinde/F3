@@ -122,7 +122,7 @@ case "aar":
 // BACKPACK: RIFLEMAN AT (RAT)
 case "rat":
 {
-	// NO BACKPACK (STILL ADD SMALL FOR ROCKETS)
+	// NO BACKPACK
 	if (f_param_backpacks == 0) then {
 		_unit addBackpack _bagsmall;
 		clearMagazineCargoGlobal (unitBackpack _unit);
@@ -135,6 +135,7 @@ case "rat":
 		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_RATmag, 1];
 
 	};
 	// BACKPACK: HEAVY
@@ -142,7 +143,7 @@ case "rat":
 		_unit addBackpack _bagmedium;
 		clearMagazineCargoGlobal (unitBackpack _unit);
 		(unitBackpack _unit) addMagazineCargoGlobal [_riflemag, 4];
-		(unitBackpack _unit) addMagazineCargoGlobal [_RATmag, 1];
+		(unitBackpack _unit) addMagazineCargoGlobal [_RATmag, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
@@ -290,7 +291,7 @@ case "hmgag":
 // BACKPACK: MAT GUNNER (MATG)
 case "matg":
 {
-	// NO BACKPACK (STILL ADD SMALL FOR ROCKETS)
+	// NO BACKPACK
 	if (f_param_backpacks == 0) then {
 		_unit addBackpack _bagsmall;
 		clearMagazineCargoGlobal (unitBackpack _unit);
@@ -328,7 +329,7 @@ case "matg":
 // BACKPACK: MAT ASSISTANT (MATAG)
 case "matag":
     {
-	// NO BACKPACK (STILL ADD SMALL FOR ROCKETS)
+	// NO BACKPACK
 	if (f_param_backpacks == 0) then {
 		_unit addBackpack _bagsmall;
 		clearMagazineCargoGlobal (unitBackpack _unit);
@@ -416,7 +417,7 @@ case "hsamag":
 // BACKPACK: ENGINEER (DEMO)
 case "eng":
 {
-	// NO BACKPACK (STILL ADD SMALL FOR TOOLKIT)
+	// NO BACKPACK
 	if (f_param_backpacks == 0) then {
 		_unit addBackpack _bagsmall;
 		clearMagazineCargoGlobal (unitBackpack _unit);
@@ -441,7 +442,7 @@ case "eng":
 // BACKPACK: ENGINEER (MINES)
 case "engm":
 {
-	// NO BACKPACK (STILL ADD SMALL FOR TOOLKIT)
+	// NO BACKPACK
 	if (f_param_backpacks == 0) then {
 		_unit addBackpack _bagsmall;
 		clearMagazineCargoGlobal (unitBackpack _unit);
