@@ -33,13 +33,16 @@ if(!isnil "BIS_fnc_feedback_allowPP") then
 };
 
 // Create a Virtual Agent to act as our player to make sure we get to keep Draw3D and numbers stuff
+if(isNil "f_cam_VirtualCreated") then
+{
+  _newUnit =  createAgent  ["VirtualCurator_F", [0,0,0], [], 0, "FORM"];
+  _newUnit hideObject true;
+  _newUnit enableSimulation false;
 
-_newUnit =  createAgent  ["VirtualCurator_F", [0,0,0], [], 0, "FORM"];
-_newUnit hideObject true;
-_newUnit enableSimulation false;
-
-selectPlayer _newUnit;
-deleteVehicle _unit;
+  selectPlayer _newUnit;
+  deleteVehicle _unit;
+  f_cam_VirtualCreated = true;
+};
 
 // ====================================================================================
 
@@ -211,7 +214,7 @@ showCinemaBorder false;
 f_cam_fired = [];
 {
   _event = _x addEventHandler ["fired",{f_cam_fired = f_cam_fired - [objNull];f_cam_fired = f_cam_fired + [_this select 6]}];
-  _x setVariable ["f_cam_fired_eventid",_x];
+  _x setVariable ["f_cam_fired_eventid",_event];
 
 } foreach (allunits + vehicles);
 
