@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_faction","_typeofUnit","_unit","_countPassed"];
+private ["_faction","_typeofUnit","_unit"];
 
 // ====================================================================================
 
@@ -15,13 +15,11 @@ private ["_faction","_typeofUnit","_unit","_countPassed"];
 _typeofUnit = toLower (_this select 0);
 _unit = _this select 1;
 
-_countPassed = count _this;
-if (_countPassed > 2) then
-	{
-		_faction = _this select 2;
-	} else {
-		_faction = toLower (faction _unit);
-	};
+_faction = toLower (faction _unit);
+if(count _this > 2) then
+{
+  _faction = _this select 2;
+};
 
 // ====================================================================================
 
