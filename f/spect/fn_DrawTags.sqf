@@ -6,8 +6,7 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 {
 	if({isPlayer _x} count units _x > 0) then
 	{
-		_visPos = visiblePositionASL leader _x;
-		if(!(surfaceIsWater _visPos)) then {_visPos = ASLtoATL (_visPos)};
+		_visPos = getPosVisual leader _x;
 		_color = [side _x] call BIS_fnc_sideColor;
 		_color = [_color select 0,_color select 1,_color select 2,0.3];
 		_str = (toString(toArray(groupID _x) - [45]));
@@ -18,8 +17,7 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 		{
 			if(vehicle _x == _x || vehicle _x != _x && (crew vehicle _x) select 0 == _x) then
 			{
-				_visPos = visiblePositionASL _x;
-				if(!(surfaceIsWater _visPos)) then {_visPos = ASLtoATL (_visPos)};
+				_visPos = getPosVisual _x;
 				_color = [side _x] call BIS_fnc_sideColor;
 				_color = [_color select 0,_color select 1,_color select 2,0.6];
 				_str = "";
