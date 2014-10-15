@@ -175,7 +175,7 @@ addMissionEventHandler ["Draw3D", {
 						_pos = visiblePosition _x;
 
 						// If the unit is sitting in the driver position or is the driver
-						if (_pos distance (getPosATLVisual (driver _veh)) <= 0.1 && driver _veh == _x) then
+						if (_pos distance (getPosATLVisual (driver _veh)) <= 0.1 || driver _veh == _x) then
 						{
 
 							// If it's the driver calculate the cargo slots
