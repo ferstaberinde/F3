@@ -19,6 +19,7 @@ f_height_standing_Nametags = 2;
 f_height_crouch_Nametags = 1.5;
 f_height_prone_Nametags = 0.9;
 f_vheight_Nametags = 0; // The height of the name tags for units in vehicles (0 = hovering over vehicle)
+F_SHADOW_NAMETAGS = 2; // The shadow for the name tags (0 - 2)
 
 f_color_Nametags =  [1,1,1,0.9]; // The color for infantry and units in vehicle cargo (in [red,green, blue, opacity])
 f_color2_Nametags = [0.5,0.1,0.2,0.9]; // The color for units in driver, gunner and other vehicle positions positions
