@@ -64,6 +64,7 @@ class cfgNotifications
 		description = "%1";
 		iconPicture="\A3\ui_f\data\map\markers\military\warning_ca.paa";
 		duration = 3;
+		priority = 9;
 	};
 
 	// Notifications for the F3 Safe Start Component
@@ -73,6 +74,7 @@ class cfgNotifications
 		description = "%1";
 		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
 		duration = 59;
+		priority = 0;
 	};
 	class SafeStartMissionStarting
 	{
@@ -80,6 +82,7 @@ class cfgNotifications
 		description = "%1";
 		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
 		duration = 3;
+		priority = 1;
 	};
 
 	// Notification for the F3 Authorised Crew Component
@@ -88,6 +91,7 @@ class cfgNotifications
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
 		duration = 3;
+		priority = 5;
 	};
 
 	// Notification for the F3 Mapclick Teleport component
@@ -96,6 +100,7 @@ class cfgNotifications
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
 		duration = 3;
+		priority = 5;
 	};
 
 	// Notification for the F3 JIP Component
@@ -104,6 +109,7 @@ class cfgNotifications
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\flag_ca.paa";
 		duration = 3;
+		priority = 5;
 	};
 };
 
