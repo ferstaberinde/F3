@@ -15,4 +15,5 @@ class fspectator
 	class OnMapClick{};
 	class DrawMarkers{};
 	class ForceExit{};
+	class HandleMenu{};
 };

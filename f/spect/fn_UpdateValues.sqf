@@ -19,6 +19,7 @@ while {true} do
 	ctrlMapAnimClear ((findDisplay 9228) displayCtrl 1350);
 	((findDisplay 9228) displayCtrl 1350) ctrlMapAnimAdd [0.3, f_cam_map_zoom,visiblePosition (camTarget f_cam_camera)];
 	ctrlMapAnimCommit ((findDisplay 9228) displayCtrl 1350);
+	ctrlSetFocus ((findDisplay 9228) displayCtrl 1315);
 	// ====================================================================================
 	// update string.
 	if(alive f_cam_curTarget) then
@@ -31,9 +32,9 @@ while {true} do
 	};
 	// ====================================================================================
 	// fetch units
-
-    f_cam_units = allGroups;
-	f_cam_players = call F_fnc_GetPlayers;
+	_groupArr = call F_fnc_GetPlayers;
+    f_cam_units = ((_groupArr select 0) + (_groupArr select 1));
+	f_cam_players = _groupArr select 0;
 
 
 	// ====================================================================================
@@ -56,19 +57,19 @@ while {true} do
 			_text = toString(toArray(groupID _x) - [45]);
 			_index = lbAdd [_listBox,_text];
 			_x SetVariable ["f_spect_listBoxIndex",_index];
-			f_cam_listUnits = f_cam_listUnits + [_x];
+			f_cam_listUnits pushBack _x;
 			lbSetColor [_listBox,_index,[side _x,false] call BIS_fnc_sideColor];
 			{
 				if(alive _x) then
 					{
 						if(!(_x in f_cam_listUnits) && !(_x iskindof "VirtualMan_F")) then
 						{
-							f_cam_listUnits = f_cam_listUnits + [_x];
+							 f_cam_listUnits pushBack _x;
 							_text = "	" + name _x;
-							if(!isPlayer _x) then
-							{
-								_text = "	"+ "*AI*";
-							};
+		//					if(!isPlayer _x) then
+		//					{
+		//						_text = "	"+ "*AI*";
+		//					};
 							_index = lbAdd [_listBox,_text];
 							_x SetVariable ["f_spect_listBoxIndex",_index];
 						};
@@ -101,10 +102,10 @@ while {true} do
 		else
 		{
 			_val = lbText [_listBox,_index] != "	" + name _x;
-			if(!isPlayer _x) then
-			{
-				_val = lbText [_listBox,_index] != "	"+ "*AI*";
-			};
+		//	if(!isPlayer _x) then
+		//	{
+		//		_val = lbText [_listBox,_index] != "	"+ "*AI*";
+		//	};
 			if(_index >= 0 && alive _x && _val ) then
 			{
 				// there is no lbSetText, so just punt it out of the list and fix it up there..
