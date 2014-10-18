@@ -85,9 +85,6 @@ _unit setVariable ["f_var_assignGear_done",false,true];
 
 // ====================================================================================
 
-// If the unitfaction is different from the group leader's faction and the unit is not a vehicle, the latters faction is used
-if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _unit)))) then {_faction = toLower (faction (leader group _unit))};
-
 // DEBUG
 if (f_var_debugMode == 1) then
 {
