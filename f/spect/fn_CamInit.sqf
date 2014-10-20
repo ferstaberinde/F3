@@ -113,7 +113,7 @@ f_cam_tiWHOn = false;
 f_cam_tagsEvent = -1;
 f_cam_mShift = false;
 f_cam_freecamOn = false;
-f_cam_toggleTagsName = false;
+f_cam_toggleTagsName = true;
 f_cam_mapMode = 0;
 f_cam_MouseButton = [false,false];
 f_cam_mouseCord = [0.5,0.5];
@@ -223,7 +223,7 @@ cameraEffectEnableHUD true;
 showCinemaBorder false;
 f_cam_fired = [];
 {
-  _event = _x addEventHandler ["fired",{f_cam_fired = f_cam_fired - [objNull];f_cam_fired pushBack _this select 6}];
+  _event = _x addEventHandler ["fired",{f_cam_fired = f_cam_fired - [objNull];f_cam_fired pushBack (_this select 6)}];
   _x setVariable ["f_cam_fired_eventid",_event];
 
 } foreach (allunits + vehicles);
