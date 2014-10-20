@@ -34,7 +34,10 @@ class Mission
 		"a3_uav_f_characters_f_gamma",
 		"a3_characters_f",
 		"A3_Modules_F",
-		"A3_Characters_F_Bootcamp"
+		"A3_Characters_F_Bootcamp",
+		"a3_soft_f_offroad_01",
+		"A3_Weapons_F_Beta_Ammoboxes",
+		"a3_weapons_f_ammoboxes"
 	};
 	addOnsAuto[]=
 	{
@@ -45,7 +48,6 @@ class Mission
 		"A3_Characters_F_INDEP",
 		"A3_Characters_F_Civil",
 		"A3_Modules_F",
-		"A3_Characters_F_Bootcamp",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Air_F_Heli_Light_02",
 		"A3_Air_F_Beta_Heli_Transport_02",
@@ -65,7 +67,10 @@ class Mission
 		"A3_Soft_F_MRAP_02",
 		"A3_Soft_F_EPC_Truck_03",
 		"A3_Soft_F_Gamma_Offroad",
+		"a3_soft_f_offroad_01",
 		"A3_Soft_F_Truck",
+		"A3_Weapons_F_Beta_Ammoboxes",
+		"a3_weapons_f_ammoboxes",
 		"a3_map_altis"
 	};
 	randomSeed=11823142;
@@ -1851,7 +1856,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={7949.1221,29.366238,10844.427};
+					position[]={7949.1221,29.715984,10842.361};
 					id=114;
 					side="GUER";
 					vehicle="I_Soldier_SL_F";
@@ -7472,7 +7477,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=72;
+		items=84;
 		class Item0
 		{
 			position[]={8448.3682,22.231026,10822.729};
@@ -8197,6 +8202,126 @@ class Mission
 			skill=0.60000002;
 			text="VehNato_CAR2";
 			init="[""v_car"",this] call f_fnc_assignGear";
+		};
+		class Item72
+		{
+			position[]={7950.4136,29.481449,10844.431};
+			id=541;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateAAF_A";
+			init="[""crate_med"",this,""ind_f""] call f_fnc_assignGear";
+		};
+		class Item73
+		{
+			position[]={7974.4873,30.879944,10845.227};
+			id=542;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateAAF_B";
+			init="[""crate_med"",this,""ind_f""] call f_fnc_assignGear";
+		};
+		class Item74
+		{
+			position[]={8001.2588,28.71224,10846.022};
+			id=543;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateAAF_C";
+			init="[""crate_med"",this,""ind_f""] call f_fnc_assignGear";
+		};
+		class Item75
+		{
+			position[]={8447.0859,26.315557,10905.152};
+			id=544;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateNATO_A";
+			init="[""crate_med"",this,""blu_f""] call f_fnc_assignGear";
+		};
+		class Item76
+		{
+			position[]={8473.4082,28.11548,10903.206};
+			id=545;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateNATO_B";
+			init="[""crate_med"",this,""blu_f""] call f_fnc_assignGear";
+		};
+		class Item77
+		{
+			position[]={8499.1055,30.978458,10903.36};
+			id=546;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateNATO_C";
+			init="[""crate_med"",this,""blu_f""] call f_fnc_assignGear";
+		};
+		class Item78
+		{
+			position[]={8780.6621,30.029301,10856.711};
+			id=547;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateCSAT_A";
+			init="[""crate_med"",this,""opf_f""] call f_fnc_assignGear";
+		};
+		class Item79
+		{
+			position[]={8807.5283,29.153267,10857.236};
+			id=548;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateCSAT_B";
+			init="[""crate_med"",this,""opf_f""] call f_fnc_assignGear";
+		};
+		class Item80
+		{
+			position[]={8833.4336,30.382462,10856.357};
+			id=549;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateCSAT_C";
+			init="[""crate_med"",this,""opf_f""] call f_fnc_assignGear";
+		};
+		class Item81
+		{
+			position[]={8493.3037,15.032626,10595.038};
+			id=550;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateFIA_A";
+			init="[""crate_med"",this,""blu_g_f""] call f_fnc_assignGear";
+		};
+		class Item82
+		{
+			position[]={8518.583,14.177423,10595.452};
+			id=551;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateFIA_B";
+			init="[""crate_med"",this,""blu_g_f""] call f_fnc_assignGear";
+		};
+		class Item83
+		{
+			position[]={8541.5146,14.258378,10594.207};
+			id=552;
+			side="EMPTY";
+			vehicle="I_supplyCrate_F";
+			skill=0.60000002;
+			text="CrateFIA_C";
+			init="[""crate_med"",this,""blu_g_f""] call f_fnc_assignGear";
 		};
 	};
 	class Markers
