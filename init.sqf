@@ -64,9 +64,8 @@ f_script_setGroupMarkers = [] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf"
 // F3 - F3 Common Local Variables
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT
-
 if(isServer) then {
-	f_script_setLocalVars = [0] execVM "f\common\f_setLocalVars.sqf";
+	f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 };
 
 // ====================================================================================
