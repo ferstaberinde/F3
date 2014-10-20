@@ -8238,7 +8238,7 @@ class Mission
 			position[]={8447.0859,26.315557,10905.152};
 			id=544;
 			side="EMPTY";
-			vehicle="I_supplyCrate_F";
+			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="CrateNATO_A";
 			init="[""crate_med"",this,""blu_f""] call f_fnc_assignGear";
@@ -8248,7 +8248,7 @@ class Mission
 			position[]={8473.4082,28.11548,10903.206};
 			id=545;
 			side="EMPTY";
-			vehicle="I_supplyCrate_F";
+			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="CrateNATO_B";
 			init="[""crate_med"",this,""blu_f""] call f_fnc_assignGear";
@@ -8258,7 +8258,7 @@ class Mission
 			position[]={8499.1055,30.978458,10903.36};
 			id=546;
 			side="EMPTY";
-			vehicle="I_supplyCrate_F";
+			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="CrateNATO_C";
 			init="[""crate_med"",this,""blu_f""] call f_fnc_assignGear";
@@ -8268,7 +8268,7 @@ class Mission
 			position[]={8780.6621,30.029301,10856.711};
 			id=547;
 			side="EMPTY";
-			vehicle="I_supplyCrate_F";
+			vehicle="O_supplyCrate_F";
 			skill=0.60000002;
 			text="CrateCSAT_A";
 			init="[""crate_med"",this,""opf_f""] call f_fnc_assignGear";
@@ -8278,7 +8278,7 @@ class Mission
 			position[]={8807.5283,29.153267,10857.236};
 			id=548;
 			side="EMPTY";
-			vehicle="I_supplyCrate_F";
+			vehicle="O_supplyCrate_F";
 			skill=0.60000002;
 			text="CrateCSAT_B";
 			init="[""crate_med"",this,""opf_f""] call f_fnc_assignGear";
@@ -8288,7 +8288,7 @@ class Mission
 			position[]={8833.4336,30.382462,10856.357};
 			id=549;
 			side="EMPTY";
-			vehicle="I_supplyCrate_F";
+			vehicle="O_supplyCrate_F";
 			skill=0.60000002;
 			text="CrateCSAT_C";
 			init="[""crate_med"",this,""opf_f""] call f_fnc_assignGear";
@@ -8298,7 +8298,7 @@ class Mission
 			position[]={8493.3037,15.032626,10595.038};
 			id=550;
 			side="EMPTY";
-			vehicle="I_supplyCrate_F";
+			vehicle="IG_supplyCrate_F";
 			skill=0.60000002;
 			text="CrateFIA_A";
 			init="[""crate_med"",this,""blu_g_f""] call f_fnc_assignGear";
@@ -8308,7 +8308,7 @@ class Mission
 			position[]={8518.583,14.177423,10595.452};
 			id=551;
 			side="EMPTY";
-			vehicle="I_supplyCrate_F";
+			vehicle="IG_supplyCrate_F";
 			skill=0.60000002;
 			text="CrateFIA_B";
 			init="[""crate_med"",this,""blu_g_f""] call f_fnc_assignGear";
@@ -8318,7 +8318,7 @@ class Mission
 			position[]={8541.5146,14.258378,10594.207};
 			id=552;
 			side="EMPTY";
-			vehicle="I_supplyCrate_F";
+			vehicle="IG_supplyCrate_F";
 			skill=0.60000002;
 			text="CrateFIA_C";
 			init="[""crate_med"",this,""blu_g_f""] call f_fnc_assignGear";
