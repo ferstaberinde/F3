@@ -19,13 +19,13 @@ if !(isServer) exitWith {};
 // Using variables passed to the script instance, we will create some local variables:
 
 _curator = [_this,0,objNull,[objNull]] call bis_fnc_param;
-_mode = [_this,1,false,["",true,[]]] call bis_fnc_param;
+_mode = [_this,1,[],["",true,[]]] call bis_fnc_param;
 
 // ====================================================================================
 
 // Decide which addons to add based on passed mode
 _addons = [""];
-_curator setVariable ["Addons",2];
+_curator setVariable ["Addons",0];
 
 switch (typeName _mode) do {
 	case "ARRAY": {_addons = _mode};

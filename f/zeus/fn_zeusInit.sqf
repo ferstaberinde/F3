@@ -26,8 +26,8 @@ private ["_unit","_addons","_objects","_curator","_createModule"];
 // Using variables passed to the script instance, we will create some local variables:
 
 _unit = [_this,0,objNull,[objNull]] call bis_fnc_param;
-_addons = [_this,1,[]],["",true,[]]] call bis_fnc_param;
-_objects = [_this,2,[]],[objNull,true,[],west]] call bis_fnc_param;
+_addons = [_this,1,[],["",true,[]]] call bis_fnc_param;
+_objects = [_this,2,[],[objNull,true,[],west]] call bis_fnc_param;
 _announce = [_this,3,false,[true]] call bis_fnc_param;
 
 // ====================================================================================

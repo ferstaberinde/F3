@@ -80,6 +80,13 @@ if (isNil 'f_curator_%1') then {hintsilent 'Assign ZEUS first!'} else {[[f_curat
 |- <execute expression=""
 if (isNil 'f_curator_%1') then {hintsilent 'Assign ZEUS first!'} else {[[f_curator_%1,playableUnits],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; hintsilent 'Added playable units to f_curator_%1'};"">Add players and playable units to ZEUS object list</execute>.<br/>
 |- <execute expression=""
+if (isNil 'f_curator_%1') then {hintsilent 'Assign ZEUS first!'} else {
+	_leaders = [];
+	{
+		_leaders pushBack (leader _x);
+	} forEach allGroups;
+	[[f_curator_%1,_leaders],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; hintsilent 'Given control over all group leaders to f_curator_%1'};"">Give ZEUS control over all group leaders</execute>.<br/>
+|- <execute expression=""
 if (isNil 'f_curator_%1') then {hintsilent 'Assign ZEUS first!'} else {[[f_curator_%1,true],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; hintsilent 'Given control over all units to f_curator_%1'};"">Give ZEUS control over all objects</execute>.<br/>
 (CAUTION: CAN CAUSE SIGNIFICANT DESYNC/LAG)<br/>
 |- <execute expression=""

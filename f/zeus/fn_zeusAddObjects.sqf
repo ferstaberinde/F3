@@ -45,7 +45,7 @@ switch (typeName _mode) do {
 	};
 	case "BOOL": {
 		 if (_mode) then {
-		 	_objects = (vehicles+allUnits)
+		 	_objects = (vehicles+allUnits);
 
 		 	//Safety check: To prevent unnecessary stress compare the length of the new _objects array to the existing curator objects. If they are identical, reset _objects to an empty array
 		 	if (count _objects != count (curatorEditableObjects _curator)) then {
