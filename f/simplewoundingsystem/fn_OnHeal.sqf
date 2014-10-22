@@ -8,11 +8,6 @@ _ret = true;
 [_unit,_healer] spawn {
 	_unit = _this select 0;
 	_healer = _this select 1;
-	_t = 0;
-	waitUntil {uiSleep 0.1;_t = _t + 0.5;(animationState _healer) == "ainvpknlmstpslaywrfldnon_medic" || _t > 5};
-	_t = 0;
-	waitUntil {uiSleep 0.1;_t = _t + 0.5;(animationState _healer) != "ainvpknlmstpslaywrfldnon_medic" || _t > 5};
-	if ((time - _t) > 5) ExitWith {}; // adding a timeout is smart! waituntils are infinite, and can possible presist
 	// if unit is bleeding, stop bleeding
 	if(_unit getVariable ["f_wound_bleeding",false]) then
 	{
