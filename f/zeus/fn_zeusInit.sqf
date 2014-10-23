@@ -60,7 +60,7 @@ if (isNil 'f_curator_%1') then {
 
 if (_createModule) then {
 	_curator = (createGroup f_var_sideCenter) createUnit ["ModuleCurator_F",[0,0,0] , [], 0, ""];
-	_curator setVariable ["owner",format["%1",_unit]];
+	_curator setVariable ["owner",format["%1",_unit],true];
 	call compile format ["f_curator_%1 = _curator; publicVariable 'f_curator_%1'",name _unit];
 };
 
