@@ -211,3 +211,6 @@ f_wound_extraFAK = 2;
 [] execVM "f\medical\medical_init.sqf";
 
 // ====================================================================================
+// F3 - Simple Weapon Resting
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+[] spawn f_fnc_RestInit;

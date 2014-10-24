@@ -504,7 +504,7 @@ class CfgFunctions
 		};
 		#include "f\simplewoundingsystem\config.hpp"
 		#include "f\spect\functions.hpp"
-
+		#include "f\swr\functions.hpp"
 	};
 };
 
@@ -515,4 +515,12 @@ class CfgFunctions
 
 class CfgUnitInsignia {
 	#include "f\assignGear\insignia\define.hpp"
+};
+
+// ============================================================================================
+
+
+class RscTitles
+{
+	#include "f\swr\titles.hpp"
 };
