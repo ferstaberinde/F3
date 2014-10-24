@@ -188,7 +188,7 @@ class Params
             title = "$STR_f_param_mission_timer";
             values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
             texts[] = {"$STR_f_param_mission_timer_off","1","2","3","4","5","6","7","8","9","10","15"};
-            default = 0;
+            default = 1;
             code = "f_param_mission_timer = %1";
     };
 
@@ -235,32 +235,33 @@ class Params
 // F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-//	class f_param_AISkill_BLUFOR
-//	{
-//		title = "$STR_f_param_AISkill_BLUFOR";
-//		values[] = {0,1,2,3};
-//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 1;
-//		code = "f_param_AISkill_BLUFOR = %1";
-//	};
-//
-//	class f_param_AISkill_OPFOR
-//	{
-//		title = "$STR_f_param_AISkill_OPFOR";
-//		values[] = {0,1,2,3};
-//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 1;
-//		code = "f_param_AISkill_OPFOR = %1";
-//	};
-//
-//	class f_param_AISkill_INDP
-//	{
-//		title = "$STR_f_param_AISkill_INDP";
-//		values[] = {0,1,2,3};
-//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 1;
-//		code = "f_param_AISkill_INDP = %1";
-//	};
+
+class f_param_AISkill_BLUFOR
+{
+	title = "$STR_f_param_AISkill_BLUFOR";
+	values[] = {0,1,2,3};
+	texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+	default = 1;
+	code = "f_param_AISkill_BLUFOR = %1";
+};
+
+class f_param_AISkill_OPFOR
+{
+	title = "$STR_f_param_AISkill_OPFOR";
+	values[] = {0,1,2,3};
+	texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+	default = 1;
+	code = "f_param_AISkill_OPFOR = %1";
+};
+
+class f_param_AISkill_INDP
+{
+	title = "$STR_f_param_AISkill_INDP";
+	values[] = {0,1,2,3};
+	texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+	default = 1;
+	code = "f_param_AISkill_INDP = %1";
+};
 
 // ============================================================================================
 
@@ -390,6 +391,9 @@ class CfgRespawnTemplates
 
 class CfgFunctions
 {
+	//ws_fnc
+	#include "ws_fnc\config.hpp"
+
 	class F // Defines the "owner"
 	{
 		class common // category
@@ -507,7 +511,6 @@ class CfgFunctions
 
 	};
 };
-
 
 // ============================================================================================
 

@@ -73,10 +73,10 @@ if(isServer) then {
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_removeBodyDelay = 180;
-// f_var_removeBodyDistance = 500;
-// f_var_doNotRemoveBodies = [];
-// [] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
+f_var_removeBodyDelay = 180;
+f_var_removeBodyDistance = 500;
+f_var_doNotRemoveBodies = [];
+[] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
 
 // ====================================================================================
 
@@ -121,18 +121,18 @@ if(isServer) then {
 // F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [] execVM "f\setAISKill\f_setAISkill.sqf";
-// f_var_civAI = independent; // Optional: The civilian AI will use this side's settings
+[] execVM "f\setAISKill\f_setAISkill.sqf";
+f_var_civAI = independent; // Optional: The civilian AI will use this side's settings
 
 // ====================================================================================
 
 // F3 - Name Tags
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_showGroup_Nametags = true;				// Display unit's group (uses GroupID)
-// f_showDistance_Nametags = true;			// Show distance to player
-// f_showVehicle_Nametags = true;			// Show vehicle player is in
-// [20] execVM "f\nametag\f_nametags.sqf";
+f_showGroup_Nametags = true;				// Display unit's group (uses GroupID)
+f_showDistance_Nametags = true;			// Show distance to player
+f_showVehicle_Nametags = false;			// Show vehicle player is in
+[20] execVM "f\nametag\f_nametags.sqf";
 
 // ====================================================================================
 
