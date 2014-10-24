@@ -88,6 +88,30 @@ class AAF_Medic_Badge
 	author = "F3 Framework";
 	texture = "f\assignGear\insignia\AAF_Medic.paa";
 };
+class AAF_J1_Badge
+{
+	displayName = "AAF J1";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\AAF_J1.paa";
+};
+class AAF_J2_Badge
+{
+	displayName = "AAF J2";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\AAF_J2.paa";
+};
+class AAF_J3_Badge
+{
+	displayName = "AAF J3";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\AAF_J3.paa";
+};
+class AAF_JSL_Badge
+{
+	displayName = "AAF JSL";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\AAF_JSL.paa";
+};
 class CSAT_A1_Badge
 {
 	displayName = "CSAT A1";
@@ -178,95 +202,143 @@ class CSAT_Medic_Badge
 	author = "F3 Framework";
 	texture = "f\assignGear\insignia\CSAT_Medic.paa";
 };
-class CSAT_urban_A1_Badge
+class CSAT_J1_Badge
 {
-	displayName = "CSAT urban A1";
+	displayName = "CSAT J1";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_A1.paa";
+	texture = "f\assignGear\insignia\CSAT_J1.paa";
 };
-class CSAT_urban_A2_Badge
+class CSAT_J2_Badge
 {
-	displayName = "CSAT urban A2";
+	displayName = "CSAT J2";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_A2.paa";
+	texture = "f\assignGear\insignia\CSAT_J2.paa";
 };
-class CSAT_urban_A3_Badge
+class CSAT_J3_Badge
 {
-	displayName = "CSAT urban A3";
+	displayName = "CSAT J3";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_A3.paa";
+	texture = "f\assignGear\insignia\CSAT_J3.paa";
 };
-class CSAT_urban_ASL_Badge
+class CSAT_JSL_Badge
 {
-	displayName = "CSAT urban ASL";
+	displayName = "CSAT JSL";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_ASL.paa";
+	texture = "f\assignGear\insignia\CSAT_JSL.paa";
 };
-class CSAT_urban_B1_Badge
+class CSAT_Urban_J1_Badge
 {
-	displayName = "CSAT urban B1";
+	displayName = "CSAT Urban J1";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_B1.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_J1.paa";
 };
-class CSAT_urban_B2_Badge
+class CSAT_Urban_J2_Badge
 {
-	displayName = "CSAT urban B2";
+	displayName = "CSAT Urban J2";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_B2.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_J2.paa";
 };
-class CSAT_urban_B3_Badge
+class CSAT_Urban_J3_Badge
 {
-	displayName = "CSAT urban B3";
+	displayName = "CSAT Urban J3";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_B3.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_J3.paa";
 };
-class CSAT_urban_BSL_Badge
+class CSAT_Urban_JSL_Badge
 {
-	displayName = "CSAT urban BSL";
+	displayName = "CSAT Urban JSL";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_BSL.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_JSL.paa";
 };
-class CSAT_urban_C1_Badge
+class CSAT_Urban_A1_Badge
 {
-	displayName = "CSAT urban C1";
+	displayName = "CSAT Urban A1";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_C1.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_A1.paa";
 };
-class CSAT_urban_C2_Badge
+class CSAT_Urban_A2_Badge
 {
-	displayName = "CSAT urban C2";
+	displayName = "CSAT Urban A2";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_C2.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_A2.paa";
 };
-class CSAT_urban_C3_Badge
+class CSAT_Urban_A3_Badge
 {
-	displayName = "CSAT urban C3";
+	displayName = "CSAT Urban A3";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_C3.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_A3.paa";
 };
-class CSAT_urban_CO_Badge
+class CSAT_Urban_ASL_Badge
 {
-	displayName = "CSAT urban CO";
+	displayName = "CSAT Urban ASL";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_CO.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_ASL.paa";
 };
-class CSAT_urban_CSL_Badge
+class CSAT_Urban_B1_Badge
 {
-	displayName = "CSAT urban CSL";
+	displayName = "CSAT Urban B1";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_CSL.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_B1.paa";
 };
-class CSAT_urban_DC_Badge
+class CSAT_Urban_B2_Badge
 {
-	displayName = "CSAT urban DC";
+	displayName = "CSAT Urban B2";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_DC.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_B2.paa";
 };
-class CSAT_urban_Medic_Badge
+class CSAT_Urban_B3_Badge
 {
-	displayName = "CSAT urban Medic";
+	displayName = "CSAT Urban B3";
 	author = "F3 Framework";
-	texture = "f\assignGear\insignia\CSAT_urban_Medic.paa";
+	texture = "f\assignGear\insignia\CSAT_Urban_B3.paa";
+};
+class CSAT_Urban_BSL_Badge
+{
+	displayName = "CSAT Urban BSL";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\CSAT_Urban_BSL.paa";
+};
+class CSAT_Urban_C1_Badge
+{
+	displayName = "CSAT Urban C1";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\CSAT_Urban_C1.paa";
+};
+class CSAT_Urban_C2_Badge
+{
+	displayName = "CSAT Urban C2";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\CSAT_Urban_C2.paa";
+};
+class CSAT_Urban_C3_Badge
+{
+	displayName = "CSAT Urban C3";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\CSAT_Urban_C3.paa";
+};
+class CSAT_Urban_CO_Badge
+{
+	displayName = "CSAT Urban CO";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\CSAT_Urban_CO.paa";
+};
+class CSAT_Urban_CSL_Badge
+{
+	displayName = "CSAT Urban CSL";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\CSAT_Urban_CSL.paa";
+};
+class CSAT_Urban_DC_Badge
+{
+	displayName = "CSAT Urban DC";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\CSAT_Urban_DC.paa";
+};
+class CSAT_Urban_Medic_Badge
+{
+	displayName = "CSAT Urban Medic";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\CSAT_Urban_Medic.paa";
 };
 class NATO_A1_Badge
 {
@@ -357,4 +429,28 @@ class NATO_Medic_Badge
 	displayName = "NATO Medic";
 	author = "F3 Framework";
 	texture = "f\assignGear\insignia\NATO_Medic.paa";
+};
+class NATO_J1_Badge
+{
+	displayName = "NATO J1";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\NATO_J1.paa";
+};
+class NATO_J2_Badge
+{
+	displayName = "NATO J2";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\NATO_J2.paa";
+};
+class NATO_J3_Badge
+{
+	displayName = "NATO J3";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\NATO_J3.paa";
+};
+class NATO_JSL_Badge
+{
+	displayName = "NATO JSL";
+	author = "F3 Framework";
+	texture = "f\assignGear\insignia\NATO_JSL.paa";
 };
