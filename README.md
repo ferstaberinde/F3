@@ -11,6 +11,5 @@
 ** Safe Start default set to 1 minute
 
 ## Versions ##
-* F3 3-1-2
-* ws_fnc 05/10/2014
-
+* F3 3-2-0 RC1
+* ws_fnc 20/10/2014
