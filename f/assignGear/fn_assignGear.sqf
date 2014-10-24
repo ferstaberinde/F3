@@ -39,6 +39,13 @@ if !(local _unit) exitWith {};
 
 // ====================================================================================
 
+// Prevent BIS Randomisation System
+// BIS created a system for randomisation unit loadouts, that may overwrite the changes made by this script, this will fix such system.
+
+_unit setVariable ["BIS_enableRandomization", false];
+
+// ====================================================================================
+
 // SET A PUBLIC VARIABLE
 // A public variable is set on the unit, indicating their type. This is mostly relevant for the F3 respawn component
 
