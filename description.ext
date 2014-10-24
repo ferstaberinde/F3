@@ -57,13 +57,24 @@ class cfgNotifications
 		difficulty[] = {}; // Required difficulty settings. All listed difficulties has to be enabled
 	};
 
+	// A generic warning notification
+	class Alert
+	{
+		title = "ALERT";
+		description = "%1";
+		iconPicture="\A3\ui_f\data\map\markers\military\warning_ca.paa";
+		duration = 3;
+		priority = 9;
+	};
+
 	// Notifications for the F3 Safe Start Component
 	class SafeStart
 	{
 		title = "SAFE START";
 		description = "%1";
 		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
-		duration = 59;
+		duration = 10;
+		priority = 0;
 	};
 	class SafeStartMissionStarting
 	{
@@ -71,6 +82,7 @@ class cfgNotifications
 		description = "%1";
 		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
 		duration = 3;
+		priority = 1;
 	};
 
 	// Notification for the F3 Authorised Crew Component
@@ -79,14 +91,16 @@ class cfgNotifications
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\warning_ca.paa";
 		duration = 3;
+		priority = 5;
 	};
 
-	// Notification for the F3 Authorised Crew Component
+	// Notification for the F3 Mapclick Teleport component
 	class MapClickTeleport {
 		title= "NOTE";
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
 		duration = 3;
+		priority = 5;
 	};
 
 	// Notification for the F3 JIP Component
@@ -95,6 +109,7 @@ class cfgNotifications
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\flag_ca.paa";
 		duration = 3;
+		priority = 5;
 	};
 };
 
@@ -143,8 +158,8 @@ class Params
     class f_param_radios
     {
             title = "Radio System";
-            values[] = {0,1,2};
-            texts[] = {"Off","ACRE","TFR"};
+            values[] = {0,1,2,3};
+            texts[] = {"Off","ACRE","TFR","ACRE2"};
             default = 0;
             code = "f_var_radios = %1";
     };
@@ -468,13 +483,24 @@ class CfgFunctions
 			file = "f\preMount";
 			class mountGroups{};
 		};
-		class radios
+		class zeus
 		{
-			file = "f\radios";
+			file = "f\zeus";
+			class zeusInit{};
+			class zeusAddAddons{};
+			class zeusAddObjects{};
+		};
+		class acre
+		{
+			file = "f\radios\acre";
 			class acre_removeRadios{};
 			class acre_addRadios{};
 			class acre_setRadioFrequencies{};
 			class acre_configureSpectatorChat{};
+		};
+		class tfr
+		{
+			file = "f\radios\tfr";
 			class tfr_removeRadios{};
 			class tfr_addRadios{};
 			class tfr_setRadioFrequencies{};
@@ -487,3 +513,9 @@ class CfgFunctions
 };
 
 // ============================================================================================
+
+// F3 - Custom Insignia
+
+class CfgUnitInsignia {
+	#include "f\assignGear\insignia\define.hpp"
+};

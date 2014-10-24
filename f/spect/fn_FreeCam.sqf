@@ -1,19 +1,17 @@
 // F3 - Spectator Script
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
-
 // inital
 f_cam_angle = 360;
 f_cam_zoom = 3;
 f_cam_height = 3;
-f_cam_fovZoom = 0.7;
+f_cam_fovZoom = 1.2;
 _centerX = safeZoneX + safeZoneW/2;
 _centerY = safezoneY + safeZoneH/2;
-
-f_cam_camera camSetFov 0.7;
+f_cam_camera camSetFov 1.2;
 // simple..
-while{true} do
-{
+// ====================================================================================
+waitUntil {
 
 	// if freemode.
 	f_cam_camera camSetFov f_cam_fovZoom;
@@ -48,4 +46,79 @@ while{true} do
 			cameraon switchCamera "internal";
 		};
 	};
+	if(f_cam_mode == 3) then
+	{
+		cameraEffectEnableHUD true;
+
+		_currPos = getposASL f_cam_freecamera;
+		_mX = 0;
+		_mY = 0;
+		_mZ = 0;
+		_accel = 0.8;
+		_accelshift = 2;
+		if(f_cam_freecam_buttons select 0) then // W
+		{
+			if(f_cam_shift_down) then
+			{
+				_mY = _accelshift;
+			}
+			else
+			{
+				_mY = _accel;
+			};
+		};
+		if(f_cam_freecam_buttons select 1) then // S
+		{
+			if(f_cam_shift_down) then
+			{
+				_mY = -_accelshift;
+			}
+			else
+			{
+				_mY = -_accel;
+			};
+		};
+		if(f_cam_freecam_buttons select 2) then // A
+		{
+			if(f_cam_shift_down) then
+			{
+				_mX = -_accelshift;
+			}
+			else
+			{
+				_mX = -_accel;
+			};
+		};
+
+		if(f_cam_freecam_buttons select 3) then // D
+		{
+			if(f_cam_shift_down) then
+			{
+				_mX = _accelshift;
+			}
+			else
+			{
+				_mX = _accel;
+			};
+		};
+		if(f_cam_freecam_buttons select 4) then // Q
+		{
+			_mZ = 0.5;
+		};
+		if(f_cam_freecam_buttons select 5) then // Z
+		{
+			_mZ = -0.5;
+		};
+
+		_rX = (f_cam_angleX + 360) % 360;
+
+		_x = (_currPos select 0) + (_mX * (cos f_cam_angleX)) + (_mY * (sin f_cam_angleX));
+		_y = (_currPos select 1) - (_mX * (sin f_cam_angleX)) + (_mY * (cos f_cam_angleX));
+		_z = (_currPos select 2) + _mZ;
+		f_cam_freecamera setPosASL [_x,_y,_z max (getTerrainHeightASL [_x,_y])];
+		f_cam_freecamera setDir f_cam_angleX;
+		[f_cam_freecamera,f_cam_angleY,0] call BIS_fnc_setPitchBank;
+	};
+	false
 };
+// ====================================================================================
