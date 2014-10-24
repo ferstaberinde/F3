@@ -64,8 +64,9 @@ f_script_setGroupMarkers = [] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf"
 // F3 - F3 Common Local Variables
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // WARNING: DO NOT DISABLE THIS COMPONENT
-
-f_script_setLocalVars = [0] execVM "f\common\f_setLocalVars.sqf";
+if(isServer) then {
+	f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
+};
 
 // ====================================================================================
 
@@ -150,6 +151,13 @@ f_script_setLocalVars = [0] execVM "f\common\f_setLocalVars.sqf";
 
 // ====================================================================================
 
+// F3 - Loadout Notes
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+[] execVM "f\briefing\f_loadoutNotes.sqf";
+
+// ====================================================================================
+
 // F3 - Join Group Action
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -195,6 +203,10 @@ f_var_cachingAggressiveness = 2;
 
 // F3 - Medical Systems Support
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+// SWS Config Settings
+// How many extra FirstAidKits (FAKS) each player should receive when using the F3 Simple Wounding System:
+f_wound_extraFAK = 2;
 
 [] execVM "f\medical\medical_init.sqf";
 

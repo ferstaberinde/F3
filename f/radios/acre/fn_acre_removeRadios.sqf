@@ -24,10 +24,5 @@ if([_unit] call acre_api_fnc_hasRadio) then {
   // Remove initialised radios
   {_unit unlinkItem _x;}foreach acre_sys_radio_currentRadioList;
 
-} else {
-
-  // If player doesn't have a radio, do nothing
-
 };
-
 // ====================================================================================

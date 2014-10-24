@@ -49,6 +49,10 @@
 //		v_tr		- truck
 //		v_ifv		- ifv
 //
+//		crate_small	- small ammocrate
+//		crate_med	- medium ammocrate
+//		crate_large	- large ammocrate
+//
 // ====================================================================================
 
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
@@ -278,39 +282,32 @@ _isMan = _unit isKindOf "CAManBase";	// We check if we're dealing with a soldier
 // This block needs only to be run on an infantry unit
 if (_isMan) then {
 
-// HANDLE CLOTHES
-// Handle clothes and helmets and such using the include file called next.
+		// PREPARE UNIT FOR GEAR ADDITION
+	// The following code removes all existing weapons, items, magazines and backpacks
+
+	removeBackpack _unit;
+	removeAllWeapons _unit;
+	removeAllItemsWithMagazines _unit;
+
+	// ====================================================================================
+
+	// HANDLE CLOTHES
+	// Handle clothes and helmets and such using the include file called next.
 
 	#include "f_assignGear_clothes.sqf";
 
 	// ====================================================================================
 
-	// PREPARE UNIT FOR GEAR ADDITION
-	// The following code removes all existing weapons and backpacks
+	// ADD UNIVERSAL ITEMS
+	// Add items universal to all units of this faction
 
-	removeBackpack _unit;
-	removeallweapons _unit;
-
-	// We add a single first aid kit (FAK)
-
-	_unit addItem _firstaid;
-
-	// The following code removes any pre-added NVGs
-
-		if(_nvg in (assignedItems _unit)) then
-	{
-		_unit unassignItem _nvg;
-		_unit removeItem _nvg;
-	};
-	// uncomment to remove nvgoogles
-	_unit linkItem _nvg;					// add universal NVG for this faction
-
-	//removeAllItems _unit;						// remove default items: map, compass, watch, radio (and GPS for team/squad leaders)
-	//_unit linkItem "ItemGPS"; 					// add gps to this faction
-	//_unit linkItem "ItemMap";
-	//_unit linkItem "ItemCompass";
-	//_unit linkItem "ItemRadio";
-	//_unit linkItem "ItemWatch";
+	_unit linkItem _nvg;			// Add and equip the faction's nvg
+	_unit addItem _firstaid;		// Add a single first aid kit (FAK)
+	_unit linkItem "ItemMap";		// Add and equip the map
+	_unit linkItem "ItemCompass";	// Add and equip a compass
+	_unit linkItem "ItemRadio";		// Add and equip A3's default radio
+	_unit linkItem "ItemWatch";		// Add and equip a watch
+	//_unit linkItem "ItemGPS"; 	// Add and equip a GPS
 
 };
 
@@ -383,6 +380,7 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		_unit addmagazines [_smokegrenade,4];
 		{_unit addItem _firstaid} forEach [1,2,3,4];
+		_unit linkItem "ItemGPS";
 		["m"] call _backpack;
 	};
 
@@ -736,6 +734,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit linkItem _uavterminal;
 		["uav"] call _backpack;
+		_unit addMagazines ["Laserbatteries",4];	// Batteries added for the F3 UAV Recharging component
 	};
 
 // LOADOUT: Diver
@@ -865,6 +864,69 @@ switch (_typeofUnit) do
 		_unit addItemCargoGlobal [_firstaid,6];
 	};
 
+// CRATE: Small, ammo for 1 fireteam
+	case "crate_small":
+{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
+		_unit addMagazineCargoGlobal [_riflemag, 5];
+		_unit addMagazineCargoGlobal [_glriflemag, 5];
+		_unit addMagazineCargoGlobal [_armag, 5];
+		_unit addMagazineCargoGlobal [_carbinemag, 5];
+		_unit addMagazineCargoGlobal [_glmag, 5];
+		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
+		_unit addMagazineCargoGlobal [_ratmag, 2];
+		_unit addMagazineCargoGlobal [_grenade, 8];
+		_unit addMagazineCargoGlobal [_mgrenade, 8];
+		_unit addMagazineCargoGlobal [_smokegrenade, 8];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 2];
+		_unit addItemCargoGlobal [_firstaid, 6];
+};
+
+// CRATE: Medium, ammo for 1 squad
+	case "crate_med":
+{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
+		_unit addMagazineCargoGlobal [_riflemag, 15];
+		_unit addMagazineCargoGlobal [_glriflemag, 20];
+		_unit addMagazineCargoGlobal [_armag, 15];
+		_unit addMagazineCargoGlobal [_carbinemag, 20];
+		_unit addMagazineCargoGlobal [_glmag, 20];
+		_unit addMagazineCargoGlobal [_glsmokewhite,16];
+		_unit addMagazineCargoGlobal [_ratmag, 6];
+		_unit addMagazineCargoGlobal [_grenade, 25];
+		_unit addMagazineCargoGlobal [_mgrenade, 25];
+		_unit addMagazineCargoGlobal [_smokegrenade, 25];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 6];
+		_unit addItemCargoGlobal [_firstaid, 25];
+};
+
+// CRATE: Large, ammo for 1 platoon
+	case "crate_large":
+{
+		clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
+		_unit addMagazineCargoGlobal [_riflemag, 45];
+		_unit addMagazineCargoGlobal [_glriflemag, 60];
+		_unit addMagazineCargoGlobal [_armag, 45];
+		_unit addMagazineCargoGlobal [_carbinemag, 60];
+		_unit addMagazineCargoGlobal [_glmag, 60];
+		_unit addMagazineCargoGlobal [_glsmokewhite,50];
+		_unit addMagazineCargoGlobal [_ratmag, 20];
+		_unit addMagazineCargoGlobal [_grenade, 75];
+		_unit addMagazineCargoGlobal [_mgrenade, 75];
+		_unit addMagazineCargoGlobal [_smokegrenade, 75];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen, 20];
+		_unit addItemCargoGlobal [_firstaid, 75];
+};
+
 // LOADOUT: DEFAULT/UNDEFINED (use RIFLEMAN)
    default
    {
@@ -884,6 +946,19 @@ switch (_typeofUnit) do
 
 // ====================================================================================
 
+// If this is an ammobox, check medical component settings and if needed run converter script.
+
+if (!_isMan) then
+	{
+	// Authentic Gameplay Modification
+	if (f_var_medical == 2) exitWith
+		{
+			[_unit] execVM "f\medical\AGM_converter.sqf";
+		};
+	};
+
+// ====================================================================================
+
 // If this isn't run on an infantry unit we can exit
 if !(_isMan) exitWith {};
 
@@ -893,7 +968,6 @@ if !(_isMan) exitWith {};
 #include "f_assignGear_attachments.sqf";
 
 // ====================================================================================
-
 
 // ENSURE UNIT HAS CORRECT WEAPON SELECTED ON SPAWNING
 

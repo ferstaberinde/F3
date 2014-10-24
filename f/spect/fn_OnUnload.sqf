@@ -1,14 +1,13 @@
 disableSerialization;
 sleep 1;
+if (f_cam_forcedExit) ExitWith {};
 createDialog "f_spec_dialog";
+
 _displayDialog = (findDisplay 9228);
-_displayDialog displaySetEventHandler["KeyDown", "[""KeyDown"",_this] call F_fnc_EventHandler"];
-_displayDialog displaySetEventHandler["KeyUp", "[""KeyUp"",_this] call F_fnc_EventHandler"];
-["f_spect_tags", "onEachFrame", {_this call F_fnc_DrawTags}] call BIS_fnc_addStackedEventHandler;
-_mouseDialog = _displayDialog displayCtrl 123;
-f_cam_onMouseMoving = _mouseDialog ctrlAddEventHandler ["MouseMoving", "['MouseMoving',_this] call F_fnc_EventHandler"];
 call f_fnc_ReloadModes;
-ctrlShow [2100,false];
+ctrlSetText [2112,(f_cam_sideNames select f_cam_sideButton)];
+if(f_cam_playersOnly) then { ctrlSetText [2111,"Players only"];}
+else { ctrlSetText [2111,"All units"];};
 _helpWindow = _displayDialog displayCtrl 1310;
 _mapWindow = _displayDialog displayCtrl 1350;
 _fullmapWindow = _displayDialog displayCtrl 1360;
@@ -16,7 +15,7 @@ _mapWindow ctrlShow false;
 _fullmapWindow ctrlShow false;
 _fullmapWindow mapCenterOnCamera false;
 _mapWindow mapCenterOnCamera false;
-_helpWindow ctrlSetStructuredText parseText ("<br />Hold right-click to pan the camera<br /><br />Use the scroll wheel or numpad+/- to zoom in and out.<br />Use ctrl + rightclick to fov zoom<br /><br />Press H to show and close the help window.<br /><br />Press M to toggle between no map,minimap and full size map.<br /> ");
+_helpWindow ctrlSetStructuredText parseText (f_cam_helptext);
 // hide it to stop from being spammed open.
 ctrlShow [1315, !ctrlVisible 1315];
 ctrlShow [1310, !ctrlVisible 1310];
