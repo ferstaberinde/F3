@@ -6,9 +6,10 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 {
 	_drawUnits = [];
 	_drawGroup = false;
-	_drawGroups = [];
+	_isPlayerGroup = false;
 	{
 		_distToCam = (call f_cam_GetCurrentCam) distance _x;
+		if(isPlayer _x) then {_isPlayerGroup = true};
 		if(_distToCam < 200) then
 		{
 			_drawUnits pushBack _x;
@@ -22,13 +23,18 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 	if(_drawGroup) then {
 		_visPos = getPosVisual leader _x;
 		_color = [side _x] call BIS_fnc_sideColor;
-		_color = [_color select 0,_color select 1,_color select 2,0.7];
+		if(_isPlayerGroup) then {
+			_color = [_color select 0,_color select 1,_color select 2,0.7];
+		}
+		else {
+			_color = [_color select 0,_color select 1,_color select 2,0.4];
+		};
 		_str = _x getVariable ["f_cam_nicename",""];
 		if(_str == "") then {
 			_str = (toString(toArray(groupID (_x)) - [45]));
 			_x setVariable ["f_cam_nicename",_str];
 		};
-		drawIcon3D ["\A3\ui_f\data\map\markers\nato\b_inf.paa", _color,[_visPos select 0,_visPos select 1,(_visPos select 2) +30], 1, 1, 0,_str, 2, 0.02, "TahomaB"];
+		drawIcon3D ["\A3\ui_f\data\map\markers\nato\b_inf.paa", _color,[_visPos select 0,_visPos select 1,(_visPos select 2) +30], 1, 1, 0,_str, 2, 0.02];
 	};
 
 	{
@@ -43,7 +49,7 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 			{
 				_str = name _x;
 			};
-			drawIcon3D [_icon, _color,[_visPos select 0,_visPos select 1,(_visPos select 2) +3], 0.7, 0.7, 0,_str, 1, 0.02, "TahomaB"];
+			drawIcon3D [_icon, _color,[_visPos select 0,_visPos select 1,(_visPos select 2) +3], 0.7, 0.7, 0,_str, 1, 0.02];
 		};
 	} foreach _drawUnits;
 
