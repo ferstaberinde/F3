@@ -9,13 +9,6 @@ if !(isServer) exitWith {};
 
 // ====================================================================================
 
-// WAIT FOR MISSION TO INITIALIZE
-// Make sure the script only runs once the mission has begun
-
-sleep 0.1;
-
-// ====================================================================================
-
 // DECLARE VARIABLES
 
 private ["_unit","_addons","_objects","_curator","_createModule"];
@@ -81,11 +74,6 @@ _curator setCuratorWaypointCost 0;
 if (_announce) then {
 	[["Alert",[format ["%1 has become curator!",name _unit]]],"BIS_fnc_showNotification",true] call BIS_fnc_MP;
 };
-
-// ====================================================================================
-
-// ADD AI SKILL SELECTOR EVENT-HANDLER
-[_curator] call f_fnc_zeusAISkillSelectorEH;
 
 // ====================================================================================
 

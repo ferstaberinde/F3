@@ -74,9 +74,14 @@ These endings are available. To trigger an ending click on its link.<br/><br/>
 _briefing = _briefing + format["
 ZEUS SUPPORT<br/>
 <execute expression=""
-if !(isNil 'f_curator_%1') then {hintsilent 'ZEUS already assigned!'} else {[[player],'f_fnc_zeusInit',false] spawn BIS_fnc_MP;hintsilent 'Curator module created as f_curator_%1'};"">Assign ZEUS to host</execute>.<br/>
+if !(isNil 'f_curator_%1') then {hintsilent 'ZEUS already assigned!'} else {
+	[[player],'f_fnc_zeusInit',false] spawn BIS_fnc_MP; hintsilent 'Curator module created as f_curator_%1';
+};"">Assign ZEUS to host</execute>.<br/>
 |- <execute expression=""
-if (isNil 'f_curator_%1') then {hintsilent 'Assign ZEUS first!'} else {[[f_curator_%1,true],'f_fnc_zeusAddAddons',false] spawn BIS_fnc_MP; hintsilent 'Given all powers to f_curator_%1'};"">Give ZEUS access to all powers</execute>.<br/>
+if (isNil 'f_curator_%1') then {hintsilent 'Assign ZEUS first!'} else {f_curator_%1 addEventHandler ['CuratorObjectPlaced',{[[crew (_this select 1),'f\setAISKill\f_setAISkill.sqf'],'Bis_fnc_ExecVM',false] spawn BIS_fnc_MP;}];
+	hintsilent 'Enabled F3 AI Skill Support for f_curator_%1'};"">Enable F3 AI Skill Support for created units</execute>.<br/>
+|- <execute expression=""
+if (isNil 'f_curator_%1') then {hintsilent 'Assign ZEUS first!'} else {[[f_curator_%1,true],'f_fnc_zeusAddAddons',false] spawn BIS_fnc_MP; hintsilent 'Given access to all addons to f_curator_%1'};"">Give ZEUS access to all addons</execute>.<br/>
 |- <execute expression=""
 if (isNil 'f_curator_%1') then {hintsilent 'Assign ZEUS first!'} else {[[f_curator_%1,playableUnits],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; hintsilent 'Added playable units to f_curator_%1'};"">Add players and playable units to ZEUS object list</execute>.<br/>
 |- <execute expression=""
