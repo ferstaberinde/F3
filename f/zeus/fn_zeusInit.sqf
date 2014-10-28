@@ -82,5 +82,12 @@ if (_announce) then {
 	[["Alert",[format ["%1 has become curator!",name _unit]]],"BIS_fnc_showNotification",true] call BIS_fnc_MP;
 };
 
+// ====================================================================================
+
+// ADD AI SKILL SELECTOR EVENT-HANDLER
+[_curator] call f_fnc_zeusAISkillSelectorEH;
+
+// ====================================================================================
+
 // Return the newly created curator
 _curator
