@@ -24,6 +24,20 @@ _groupLeaders = [_this,2,false] call bis_fnc_param;
 
 // ====================================================================================
 
+// RESOLVE CURATOR VARIABLE
+// If the passed unit is not in the list of all curators, check whether the curator is assigned to it
+
+if !(_curator in allCurators) then {
+	_curator = getAssignedCuratorLogic _curator;
+};
+
+// If curator is null or not the correct logic exit with an error message.
+if (isNull _curator || typeOf _curator != "ModuleCurator_F") exitWith {
+	player GlobalChat format ["DEBUG (f\zeus\fn_zeusAddAddons.sqf): Could not resolve curator properly, is either null or not the correct type. IsNull = %1, _curator type : %2 (should be ModuleCurator_F)",isNull _curator,typeOf _curator];
+};
+
+// ====================================================================================
+
 // Decide which objects to add based on passed mode
 
 _objects = [];
@@ -48,8 +62,8 @@ switch (typeName _mode) do {
 		 if (_mode) then {
 		 	_objects = (vehicles+allUnits);
 
-		 	//Safety check: To prevent unnecessary stress compare the length of the new _objects array to the existing curator objects. If they are identical, reset _objects to an empty array
-		 	if (count _objects == count (curatorEditableObjects _curator)) then {
+		 	//To prevent unnecessary stress on the network compare the the new _objects array to the existing curator objects. If they are identical, reset _objects to an empty array
+		 	if (_objects isEqualTo (curatorEditableObjects _curator)) then {
 		 		_objects = [];
 		 	};
 
