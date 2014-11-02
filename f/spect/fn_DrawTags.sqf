@@ -22,7 +22,7 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 
 	if(_drawGroup) then {
 		_visPos = getPosATLVisual leader _x;
-		if(surfaceIsWater _visPos) then  {_visPos = getPosASLVisual leader _x;}
+		if(surfaceIsWater _visPos) then  {_visPos = getPosASLVisual leader _x;};
 		_color = [side _x] call BIS_fnc_sideColor;
 		if(_isPlayerGroup) then {
 			_color = [_color select 0,_color select 1,_color select 2,0.7];
@@ -42,7 +42,7 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 		if(vehicle _x == _x && alive _x || vehicle _x != _x && (crew vehicle _x) select 0 == _x && alive _x) then
 		{
 			_visPos = getPosATLVisual _x;
-			if(surfaceIsWater _visPos) then  {_visPos = getPosASLVisual _x;}
+			if(surfaceIsWater _visPos) then  {_visPos = getPosASLVisual _x;};
 			_color = [side _x] call BIS_fnc_sideColor;
 			_color = [_color select 0,_color select 1,_color select 2,0.6];
 			_str = "";
