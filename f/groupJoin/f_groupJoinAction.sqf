@@ -41,7 +41,6 @@ while {true} do {
 
 				f_groupJoinAction = player addAction [_actionString, {
 					[player] joinSilent (_this select 3);
-					[] execVM "f\setTeamColours\f_setTeamColours.sqf";
 					["JIP",[format ["You have joined %1.",(_this select 3)]]] call BIS_fnc_showNotification;
 					_unit = player;
 					{
