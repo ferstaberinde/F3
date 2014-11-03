@@ -30,9 +30,16 @@ _announce = [_this,3,false] call bis_fnc_param;
 // Exit if no unit was passed
 if (isNull _unit) exitWith {};
 
+// Exit if no unit was passed
+if !(isNull (getAssignedCuratorLogic _unit)) exitWith {
+	diag_log format ["DEBUG (f\zeus\fn_zeusInit.sqf): ZEUS already assigned to %1.",_unit];
+	systemchat format ["DEBUG (f\zeus\fn_zeusInit.sqf): ZEUS already assigned to %1.",_unit];
+};
+
 // Exit if the unit is not a player
 if !(isPlayer _unit) exitWith {
-	player GlobalChat format ["DEBUG (f\zeus\fn_zeusInit.sqf): Did not assign ZEUS to %1 because it is not under control of a player.",_unit];
+	diag_log format ["DEBUG (f\zeus\fn_zeusInit.sqf): Did not assign ZEUS to %1 because it is not under control of a player.",_unit];
+	systemchat format ["DEBUG (f\zeus\fn_zeusInit.sqf): Did not assign ZEUS to %1 because it is not under control of a player.",_unit];
 };
 
 // Make sure a side logic exists, if not create it
@@ -41,25 +48,11 @@ if (isNil "f_var_sideCenter") then {
 	publicVariable "f_var_sideCenter";
 };
 
-// Check if a logic is already assigned to the unit, if not create the curator module
-_curator = objNull;
-_createModule = false;
+// Create a new curator logic
+_curator = (createGroup f_var_sideCenter) createUnit ["ModuleCurator_F",[0,0,0] , [], 0, ""];
 
-if (isNull (getAssignedCuratorLogic _unit)) then {
-	_createModule = true;
-} else {
-	_curator = (getAssignedCuratorLogic _unit);
-};
-
-
-if (_createModule) then {
-	_curator = (createGroup f_var_sideCenter) createUnit ["ModuleCurator_F",[0,0,0] , [], 0, ""];
-	_curator setVariable ["owner",format["%1",_unit],true];
-	//_unit setVariable ['f_var_curator',_curator,true];
-
-	// Assign the passed unit as curator
-	_unit assignCurator _curator;
-};
+// Assign the passed unit as curator
+_unit assignCurator _curator;
 
 //Add desired addons
 [_curator,_addons] spawn f_fnc_zeusAddAddons;
