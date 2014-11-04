@@ -39,6 +39,13 @@ if !(local _unit) exitWith {};
 
 // ====================================================================================
 
+// Prevent BIS Randomisation System
+// BIS created a system for randomisation unit loadouts, that may overwrite the changes made by this script, this will fix such system.
+
+_unit setVariable ["BIS_enableRandomization", false];
+
+// ====================================================================================
+
 // SET A PUBLIC VARIABLE
 // A public variable is set on the unit, indicating their type. This is mostly relevant for the F3 respawn component
 
@@ -84,9 +91,6 @@ private [
 _unit setVariable ["f_var_assignGear_done",false,true];
 
 // ====================================================================================
-
-// If the unitfaction is different from the group leader's faction and the unit is not a vehicle, the latters faction is used
-if ((_unit isKindOF "CAManBase")&&(_faction != toLower (faction (leader group _unit)))) then {_faction = toLower (faction (leader group _unit))};
 
 // DEBUG
 if (f_var_debugMode == 1) then

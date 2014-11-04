@@ -281,6 +281,7 @@ if (_isMan) then {
 	removeBackpack _unit;
 	removeAllWeapons _unit;
 	removeAllItemsWithMagazines _unit;
+	removeAllAssignedItems _unit;
 
 	// ====================================================================================
 
@@ -374,6 +375,7 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		_unit addmagazines [_smokegrenade,4];
 		{_unit addItem _firstaid} forEach [1,2,3,4];
+		_unit linkItem "ItemGPS";
 		["m"] call _backpack;
 	};
 

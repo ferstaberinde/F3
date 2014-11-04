@@ -42,11 +42,6 @@ while {alive _unit} do
 		// blood regens.
 		_unit setVariable ["f_wound_blood",_blood + 0.6 min 100];
 	};
-	// value of blood where you will be downed
-	if(_blood < 45 && !_downed) then
-	{
-		[[_unit,true], "f_fnc_SetDowned", true] spawn BIS_fnc_MP;
-	};
 	if(_blood <= 0) then
 	{
 		_unit setdamage 1;

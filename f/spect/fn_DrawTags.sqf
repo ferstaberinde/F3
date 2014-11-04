@@ -4,32 +4,56 @@
 // draw tags
 if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 {
-	if({isPlayer _x} count units _x > 0) then
+	_drawUnits = [];
+	_drawGroup = false;
+	_isPlayerGroup = false;
 	{
-		_visPos = visiblePositionASL leader _x;
-		if(!(surfaceIsWater _visPos)) then {_visPos = ASLtoATL (_visPos)};
-		_color = [side _x] call BIS_fnc_sideColor;
-		_color = [_color select 0,_color select 1,_color select 2,0.3];
-		_str = (toString(toArray(groupID _x) - [45]));
-		drawIcon3D ["\A3\ui_f\data\map\markers\nato\b_inf.paa", _color,[_visPos select 0,_visPos select 1,(_visPos select 2) +100], 1, 1, 0,_str, 2, 0.02, "TahomaB"];
-	};
-	{
-		if(alive _x && {_x isKindOf "CAManBase"} && !(_x iskindof "VirtualMan_F") && (call f_cam_GetCurrentCam) distance _x < 1000) then
+		_distToCam = (call f_cam_GetCurrentCam) distance _x;
+		if(isPlayer _x) then {_isPlayerGroup = true};
+		if(_distToCam < 200) then
 		{
-			if(vehicle _x == _x || vehicle _x != _x && (crew vehicle _x) select 0 == _x) then
-			{
-				_visPos = visiblePositionASL _x;
-				if(!(surfaceIsWater _visPos)) then {_visPos = ASLtoATL (_visPos)};
-				_color = [side _x] call BIS_fnc_sideColor;
-				_color = [_color select 0,_color select 1,_color select 2,0.6];
-				_str = "";
-				if(f_cam_toggleTagsName && alive _x && isPlayer _x) then
-				{
-					_str = name _x;
-				};
-				drawIcon3D [gettext (configfile >> "CfgVehicles" >> typeOf (vehicle _x) >> "icon"), _color,[_visPos select 0,_visPos select 1,(_visPos select 2) +2.2], 0.5, 0.5, 0,_str, 1, 0.04, "TahomaB"];
-			};
+			_drawUnits pushBack _x;
+		}
+		else
+		{
+			_drawGroup = true;
 		};
 	} foreach units _x;
-} forEach allGroups;
 
+	if(_drawGroup) then {
+		_visPos = getPosATLVisual leader _x;
+		if(surfaceIsWater _visPos) then  {_visPos = getPosASLVisual leader _x;};
+		_color = [side _x] call BIS_fnc_sideColor;
+		if(_isPlayerGroup) then {
+			_color = [_color select 0,_color select 1,_color select 2,0.7];
+		}
+		else {
+			_color = [_color select 0,_color select 1,_color select 2,0.4];
+		};
+		_str = _x getVariable ["f_cam_nicename",""];
+		if(_str == "") then {
+			_str = (toString(toArray(groupID (_x)) - [45]));
+			_x setVariable ["f_cam_nicename",_str];
+		};
+		drawIcon3D ["\A3\ui_f\data\map\markers\nato\b_inf.paa", _color,[_visPos select 0,_visPos select 1,(_visPos select 2) +30], 1, 1, 0,_str, 2, 0.02];
+	};
+
+	{
+		if(vehicle _x == _x && alive _x || vehicle _x != _x && (crew vehicle _x) select 0 == _x && alive _x) then
+		{
+			_visPos = getPosATLVisual _x;
+			if(surfaceIsWater _visPos) then  {_visPos = getPosASLVisual _x;};
+			_color = [side _x] call BIS_fnc_sideColor;
+			_color = [_color select 0,_color select 1,_color select 2,0.6];
+			_str = "";
+			_icon = "\A3\ui_f\data\map\markers\military\dot_CA.paa";
+			if(isPlayer _x) then
+			{
+				_str = name _x;
+			};
+			drawIcon3D [_icon, _color,[_visPos select 0,_visPos select 1,(_visPos select 2) +3], 0.7, 0.7, 0,_str, 1, 0.02];
+		};
+	} foreach _drawUnits;
+
+
+} forEach allGroups;

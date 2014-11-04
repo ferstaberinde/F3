@@ -35,7 +35,7 @@ _unit addItemCargoGlobal ["AGM_Bandage", _cntBandages];
 
 if (_cntFAK <= 10 && _cntMediKit == 0 ) then // Fireteam sized cargo
 	{
-		//Do nothing
+		// Do nothing
 	};
 
 if (_cntFAK <= 50 || _cntMediKit == 1) then // Squad sized cargo
@@ -43,6 +43,7 @@ if (_cntFAK <= 50 || _cntMediKit == 1) then // Squad sized cargo
 		// Add items for 1 medic
 		_unit addItemCargoGlobal ["AGM_Bandage", 15];
 		_unit addItemCargoGlobal ["AGM_Morphine", 15];
+		_unit addItemCargoGlobal ["AGM_Epipen", 15];
 		_unit addItemCargoGlobal ["AGM_Bloodbag", 5];
 	};
 
@@ -51,5 +52,6 @@ if (_cntFAK > 50 || _cntMediKit > 1) then // Platoon sized Cargo
 		// Add items for 4 medics
 		_unit addItemCargoGlobal ["AGM_Bandage", 45];
 		_unit addItemCargoGlobal ["AGM_Morphine", 45];
+		_unit addItemCargoGlobal ["AGM_Epipen", 45];
 		_unit addItemCargoGlobal ["AGM_Bloodbag", 15];
 	};

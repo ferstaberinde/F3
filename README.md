@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-1-2
+* Version: 3-2-0 RC1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-2-0 RC1 | 24 OCT 2014 | Internal release - Various improvements (see change history).
 * 3-1-2     | 12 SEP 2014 | Patch release - Bug fix (see change history).
 * 3-1-1     | 26 JUL 2014 | Patch release - Various improvements (see change history).
 * 3-1-1 RC1 | 23 JUL 2014 | Internal release - Various improvements (see change history).
@@ -138,10 +139,10 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux
-* Documentation: Fer | Wolfenswan | Dogface | Cam
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers
+* Documentation: Fer | Wolfenswan | Dogface | Cam | Head | cptnnick | Snippers
 * Producers: Fer | Wolfenswan
-* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Snippers | Zerith
+* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Zerith
 * Special thanks to everyone at: Folk ARPS | Basterd ArmA | Black sh33p | Bourbon Warfare | Phantactical | Pointfire | Project Awesome | Team One Tactical | The Company
 
 ### F2 Credits ###
@@ -228,6 +229,52 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-2-0 RC1 | 24 OCT 2014
+
+* Added Insignia component.
+ * Includes insignia for NATO, AAF, CSAT and CSAT urban uniforms.
+* Added Loadout Notes component.
+ * Displays loadout section in the briefing, with player weapons and items at mission start.
+* Added UAV Recharging component:
+ * Allows recharging of backpack-carried UAVs using laserdesignator batteries.
+* Added Zeus Support component:
+ * Adds functions to give hosts easier access to Zeus using the debug console.
+ * Can be invoked from Admin briefing and F3 Spectator Script.
+* Updated F3 Common Local Variables
+ * Removed optional looping (bloat).
+ * Removed automatic broadcasting to reduce impact on network.
+* Updated F3 Spectator Script:
+ * New UI.
+ * Freecam.
+ * Revised unit list with groups.
+ * Map Markers.
+ * Clicking on the map does things.
+ * Camera Marker.
+ * Tracers on map.
+ * Minor edit to LocalGroupMarkers allowing you define faction (used to show other factions group markers for everyone, old style still compatible).
+* Updated Folk ARPS Assign Gear Script component:
+ * Added support for faction-specific crates.
+ * Added GPS for medics.
+ * Improved order of execution to avoid locality issues.
+ * Improved comments in the script files.
+ * Disables BI gear randomization by default to prevent overriding of F3 gear randomisation.
+* Updated Medical Systems Support (F3 Simple Wounding System):
+ * Extra FAKs added to player loadouts (controlled via variable in init.sqf file).
+ * Reduced network traffic.
+ * Various bug fixes.
+* Updated Name Tags component:
+ * Fixed driver position not properly displaying seat values.
+ * Added new variable f_nametags_shadows to govern the outline of the displayed nametags (default is 2).
+* Updated Radio Systems Support component:
+ * Added support for ACRE2.
+* Updated Safe Start component:
+ * Now sleeps for 60 real seconds (instead of in-game seconds).
+ * Runs almost exclusively server-side and broadcasts notifications and disabled safety to all clients.
+ * Now disables player vehicle weapons as well.
+ * Reduced duration of "X minutes remaining" note to 10 seconds.
+* Fixed E&E Check component:
+ * Component would activate ending/code even if all tracked units were killed.
 
 3-1-2 | 12 SEP 2014
 

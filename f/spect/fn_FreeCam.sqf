@@ -55,7 +55,7 @@ waitUntil {
 		_mY = 0;
 		_mZ = 0;
 		_accel = 0.8;
-		_accelshift = 1.6;
+		_accelshift = 2;
 		if(f_cam_freecam_buttons select 0) then // W
 		{
 			if(f_cam_shift_down) then

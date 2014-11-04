@@ -35,15 +35,6 @@ _briefing = _briefing + "<br/><br/>";
 
 // ====================================================================================
 
-// ADD SECTION TO BECOME CURATOR
-
-_briefing = _briefing + "
-ACTIVE CURATOR<br/>
-By clicking <execute expression=""[[player],'f_fnc_zeusInit',false] spawn BIS_fnc_MP;"">here</execute> you will be able to activate the curator (or 'ZEUS') mode with all powers enabled and control over all units.<br/><br/>
-";
-
-// ====================================================================================
-
 // ENDINGS
 // This block of code collects all valid endings and formats them properly
 
@@ -75,6 +66,43 @@ These endings are available. To trigger an ending click on its link.<br/><br/>
 	%3<br/><br/>"
 	,_x select 0,_x select 1,_x select 2];
 } forEach _endings;
+
+// ====================================================================================
+
+// ADD ZEUS SUPPORT SECTION
+
+_briefing = _briefing + "
+ZEUS SUPPORT<br/>
+<execute expression=""
+if !(isNull (getAssignedCuratorLogic player)) then {hintsilent 'ZEUS already assigned!'} else {
+	[[player],'f_fnc_zeusInit',false] spawn BIS_fnc_MP; hintsilent 'Curator assigned.';
+};"">Assign ZEUS to host</execute>.<br/>
+
+|- <execute expression=""
+if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {(getAssignedCuratorLogic player) addEventHandler ['CuratorObjectPlaced',{[[crew (_this select 1),'f\setAISKill\f_setAISkill.sqf'],'Bis_fnc_ExecVM',false] spawn BIS_fnc_MP;}];
+	hintsilent 'Enabled F3 AI Skill Support for ZEUS'};"">Enable F3 AI Skill Support for created units</execute>.<br/>
+
+|- <execute expression=""
+if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {[[player,true],'f_fnc_zeusAddAddons',false] spawn BIS_fnc_MP; hintsilent 'Given access to all addons.'};"">Give ZEUS access to all addons</execute>.<br/>
+
+|- <execute expression=""
+if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {[[player,playableUnits],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; hintsilent 'Added playable units.'};"">Add players and playable units to ZEUS object list</execute>.<br/>
+
+|- <execute expression=""
+if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {
+	[[player,true,true],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; hintsilent 'Assigned control over all group leaders and empty vehicles.'};"">Give ZEUS control over all group leaders and empty vehicles</execute>.<br/>
+
+|- <execute expression=""
+if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {[[player,true],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; hintsilent 'Given control over all units.'};"">Gain control over all objects</execute>.<br/>
+(CAUTION: CAN CAUSE SIGNIFICANT DESYNC/LAG)<br/>
+
+|- <execute expression=""
+if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {(getAssignedCuratorLogic player) removeCuratorEditableObjects [allDead,true]; hintsilent 'Removed dead units.'};"">Remove all dead units from ZEUS</execute>.<br/>
+
+|- <execute expression=""
+if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {[[player,false],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; [[player,false],'f_fnc_zeusAddAddons',false] spawn BIS_fnc_MP; hintsilent 'Removed powers and units.'};"">Remove all powers and objects from ZEUS</execute>.<br/>
+<br/>
+";
 
 // ====================================================================================
 
