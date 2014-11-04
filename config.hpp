@@ -66,6 +66,7 @@ class WS
 			class taskCrew {};
 			class taskAmbush {};
 			class taskLand {};
+			class taskConvoy {};
 			class addWaypoint {};
 			class setAIMode {};
 		};

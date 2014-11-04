@@ -21,6 +21,10 @@ private ["_arr"];
 
 _arr = [];
 
+if (typeName _this != typeName []) then {
+	_this = [_this];
+};
+
 {
 	_marker = _x;
 	{

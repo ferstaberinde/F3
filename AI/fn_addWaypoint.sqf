@@ -46,6 +46,9 @@ _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};  //Debug mode. 
 //Declaring variables
 _count = count _this;
 _grp = _this select 0;
+_marray = [_this,2,[]] call BIS_fnc_Param;
+_behaviour = [_this,3,[]] call BIS_fnc_Param;
+_code = [_this,4,""] call BIS_fnc_Param;
 
 //Array of all legal possible modes. See http://community.bistudio.com/wiki/setWaypointType
 _modes = ["move","destroy","getin","sad","join","leader","getout","cycle","load","unload","tr unload","hold","sentry","guard","talk","scripted","support","getin nearest","dismiss","defend","garrison","patrol","ambush"];
@@ -53,18 +56,13 @@ _modifier = 0;
 _compl = 0;
 _road = false;
 _mode = "move";
-_marray = [];
-_behaviour = ["AWARE","YELLOW","NORMAL"];
-_code = "";
 
 //Interpreting variables
 //Setting up the array for the movepos
-if (_count > 2) then {_marray = _this select 2;};
 if (count _marray > 0) then {_mode = _marray select 0;};
 if (count _marray > 1) then {_modifier = _marray select 1;};
 if (count _marray > 2) then {_compl = _marray select 2;};
 if (count _marray > 3) then {_road = _marray select 3;};
-if (_count > 3) then {_behaviour = _this select 3;if (count _behaviour < 3) then {_behaviour = ["AWARE","YELLOW","NORMAL"];};};
 if (_count > 4) then {_code = _this select 4};
 
 _pos = if !(_road) then {(_this select 1) call ws_fnc_getEPos;} else {[(_this select 1),150,5] call ws_fnc_NearestRoadPos};
@@ -119,11 +117,12 @@ switch (_mode) do {
 };
 
 //Setting behaviour etc for waypoint
-_wp setWaypointBehaviour (_behaviour select 0);
-_wp setWaypointCombatMode (_behaviour select 1);
-_wp setWaypointSpeed (_behaviour select 2);
-_wp setWaypointCompletionRadius _compl;
-
+if (count _behaviour > 0) then {
+	_wp setWaypointBehaviour (_behaviour select 0);
+	_wp setWaypointCombatMode (_behaviour select 1);
+	_wp setWaypointSpeed (_behaviour select 2);
+	_wp setWaypointCompletionRadius _compl;
+};
 
 //_grp setCurrentWaypoint _wp;
 
