@@ -1,6 +1,6 @@
 /* ws_fnc_taskConvoy
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
-Thanks to Norrin's convoy script for inspiration and guidance. Check it out here:
+Thanks to Norrin's convoy script for inspiration and guidance: http://forums.bistudio.com/showthread.php?152279-norrin-s-ArmA2-scripts-ported-to-ArmA3
 
 FEATURE
 The passed vehicles will follow the given route to it's destination, where they will disembark and take sentry waypoints.
