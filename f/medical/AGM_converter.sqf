@@ -9,7 +9,7 @@ private ["_unit","_itemCargoList","_cntFAK","_cntMediKit","_cntBandages"];
 
 // DETECT CRATE TYPE
 
-_unit = toLower (_this select 0);
+_unit = _this select 0;
 
 // ====================================================================================
 
