@@ -1,15 +1,14 @@
 ws_fnc for ArmA2:CO and ArmA3
 ==
 Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
-Last update: 05.10.14
+Last update: 04.11.14
 
 **INTRODUCTION**
 
-This is a collection of various functions that I wrote and am writing for my Arma 3 missions.
+This is a collection of various functions I have written and am writing for my Arma 3 missions.
 None of them are revolutionary but all of them have been designed with efficiency and performance in mind.
 The idea is to reduce the need for repetitive scripting as much as possible while avoiding the need for third-party scripts and the problems that come with that. 
 I've also tried and comment everything as best as possible to make understanding the code easier.
-
 
 
 **SETUP**

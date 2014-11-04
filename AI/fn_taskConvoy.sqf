@@ -1,5 +1,4 @@
 /* ws_fnc_taskConvoy
-Latest: 28.02.2014
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 Thanks to Norrin's convoy script for inspiration and guidance. Check it out here:
 
