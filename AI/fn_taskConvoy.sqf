@@ -41,8 +41,6 @@ _convoy = _leadv call ws_fnc_collectObjectsNum;
 _waypoints = _marker call ws_fnc_collectMarkers;
 _run = true;
 
-//["taskConvoy",[_leadv,_waypoints],""] call ws_fnc_debugText;
-
 // Check if the convoy is in a condition to move at all
 if (({!canMove _x || !alive _x || (!isNull (_x findNearestEnemy (getPosATL _x)))} count _convoy) > 0) then {_run = false;};
 
@@ -57,8 +55,6 @@ while {_run} do {
 	{
 		_wp =  (_waypoints select 0);
 		_veh = _x;
-
-		//["taskConvoy",[_wp,_waypoints],""] call ws_fnc_debugText;
 
 		// Set the destination for the leading vehicle
 		if (_veh == _leadv) then {
