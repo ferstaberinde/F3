@@ -25,6 +25,10 @@ _arr = [];
 _i = 0;
 _done = false;
 
+if (typeName _this != typeName []) then {
+	_this = [_this];
+};
+
 {
 	while {true} do {
 		_obj = "";
