@@ -5,7 +5,6 @@ class fspectator
 	class OnUnload{};
 	class DrawTags{};
 	class EventHandler{};
-	class GetIcon{};
 	class FreeCam{};
 	class GetPlayers{};
 	class ReloadModes{};
