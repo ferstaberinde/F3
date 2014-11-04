@@ -130,7 +130,6 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 				// If the unit was assigned, remove it so we can use the next unit. If it wasn't, use it again to find a useable seat
 				if (!isNull (assignedVehicle _unit)) then {
 					_units = _units - [_unit];
-					diag_log format ["removed %1 new array: %2",_unit,_units];
 				};
 
 				// If no units are left, exit
