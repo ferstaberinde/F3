@@ -8,12 +8,11 @@ _forced = [_this, 4, false,[false]] call BIS_fnc_param;
 
 // if they are jip, these are null
 if(isNull _unit ) then {_unit = cameraOn};
-if(isNull _oldUnit ) then {_oldUnit = (playableUnits select 0)};
+
 // escape the script if you are not a seagull unless forced
 if (typeof _unit != "seagull" && !_forced) ExitWith {};
 // disable this to instantly switch to the spectator script.
-_t = 0;
-waituntil {uiSleep 0.1;_t = _t + 0.1;missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || _t > 5};
+waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit)};
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
 	// disable effects death effects
@@ -34,6 +33,9 @@ if(isNil "f_cam_VirtualCreated") then
   deleteVehicle _unit;
   f_cam_VirtualCreated = true;
 };
+
+if(isNull _oldUnit ) then {_oldUnit = (playableUnits select 0)};
+
 // ====================================================================================
 
 // Set spectator mode for whichever radio system is in use
