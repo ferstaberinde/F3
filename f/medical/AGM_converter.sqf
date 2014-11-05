@@ -24,9 +24,9 @@ _cntMediKit = {_x == "MediKit"} count _itemCargoList;
 // REMOVE ALL VANILLA ITEMS
 
 {
-if (_x == "FirstAidKit" || {_x == "Medikit"}) then {
-	_itemCargoList = _itemCargoList - [_x];
-	};
+	if (_x == "FirstAidKit" || {_x == "Medikit"}) then {
+		_itemCargoList = _itemCargoList - [_x];
+		};
 } forEach _itemCargoList;
 
 clearItemCargoGlobal _unit;
