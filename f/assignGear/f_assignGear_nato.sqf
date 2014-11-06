@@ -281,6 +281,7 @@ if (_isMan) then {
 	removeBackpack _unit;
 	removeAllWeapons _unit;
 	removeAllItemsWithMagazines _unit;
+	removeAllAssignedItems _unit;
 
 	// ====================================================================================
 
