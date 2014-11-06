@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-2-0 RC1
+* Version: 3-2-0 RC2
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-2-0 RC2 | 06 NOV 2014 | Internal release - Various improvements (see change history).
 * 3-2-0 RC1 | 24 OCT 2014 | Internal release - Various improvements (see change history).
 * 3-1-2     | 12 SEP 2014 | Patch release - Bug fix (see change history).
 * 3-1-1     | 26 JUL 2014 | Patch release - Various improvements (see change history).
@@ -230,7 +231,7 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-2-0 RC1 | 24 OCT 2014
+3-2-0 RC2 | 06 NOV 2014
 
 * Added Insignia component.
  * Includes insignia for NATO, AAF, CSAT and CSAT urban uniforms.
@@ -249,11 +250,14 @@ Version | Date
  * Freecam.
  * Revised unit list with groups.
  * Map Markers.
- * Clicking on the map does things.
+ * Now with context map clicking: in freecam you are moved above the select unit, in chase/first person camera selects the unit as the observed unit.
  * Camera Marker.
  * Tracers on map.
  * Minor edit to LocalGroupMarkers allowing you define faction (used to show other factions group markers for everyone, old style still compatible).
+* Updated Fireteam Member Markers component:
+ * Fireteam member markers re-colour after joining a new group using the Join Group Action component.
 * Updated Folk ARPS Assign Gear Script component:
+ * Faction can now be forced using an optional third parameter.
  * Added support for faction-specific crates.
  * Added GPS for medics.
  * Improved order of execution to avoid locality issues.
@@ -275,6 +279,10 @@ Version | Date
  * Reduced duration of "X minutes remaining" note to 10 seconds.
 * Fixed E&E Check component:
  * Component would activate ending/code even if all tracked units were killed.
+
+3-2-0 RC1 | 24 OCT 2014
+
+* Please see change history for release v3-2-0.
 
 3-1-2 | 12 SEP 2014
 
