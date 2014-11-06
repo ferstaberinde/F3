@@ -24,12 +24,9 @@ private ["_nearUnit", "_nearGroup", "_actionDistance", "_actionGraceTime", "_all
 _actionDistance = 2.5;
 // How many seconds the action is shown for when you leave group leader's range
 _actionGraceTime = 3;
+
 // Check if script caller wants to enable joining of groups on different sides, default to false
-if (count _this > 0) then {
-	_allowDifferentSide = _this select 0;
-} else {
-	_allowDifferentSide = false;
-};
+_allowDifferentSide = [_this,0,false] call bis_fnc_param;
 
 // If nearest unit is leader of a different group with playable units in it, add option to join that group
 while {true} do {

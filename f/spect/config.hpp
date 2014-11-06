@@ -1,58 +1,58 @@
-    #define BACKGROUND_COLOR {0.059,0.059,0.059,1}
-    #define PRIMARYCOLOR {0.918,0.655,0.141,1}
-    class spect_RscListBox {
-        access = 0;
-        type = 5;
-        w = 0.4;
-        h = 0.4;
-        rowHeight = 0;
-        rowWidth = 0;
-        colorText[] = {1, 1, 1, 1};
-        colorScrollbar[] = {1, 0, 0, 0};
-        colorSelect[] = {0, 0, 0, 1};
-        colorSelect2[] = {0, 0, 0, 1};
-        colorSelectBackground[] = {0.95, 0.95, 0.95, 1};
-        colorSelectBackground2[] = {1, 1, 1, 0.5};
-        colorBackground[] = {0, 0, 0, 1};
-        soundSelect[] = {"", 0.1, 1};
-        arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
-        arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
-        class ListScrollBar {
-            color[] = {1, 1, 1, 0.6};
-            colorActive[] = {1, 1, 1, 1};
-            colorDisabled[] = {1, 1, 1, 0.3};
-            shadow = 0;
-            thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
-            arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-            arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
-            border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-        };
-        style = 528;
-        font = "PuristaMedium";
-        sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 50) * 1)";
+#define BACKGROUND_COLOR {0.059,0.059,0.059,1}
+#define PRIMARYCOLOR {0.918,0.655,0.141,1}
+class RscSpectListBox {
+    access = 0;
+    type = 5;
+    w = 0.4;
+    h = 0.4;
+    rowHeight = 0;
+    rowWidth = 0;
+    colorText[] = {1, 1, 1, 1};
+    colorScrollbar[] = {1, 0, 0, 0};
+    colorSelect[] = {0, 0, 0, 1};
+    colorSelect2[] = {0, 0, 0, 1};
+    colorSelectBackground[] = {0.95, 0.95, 0.95, 1};
+    colorSelectBackground2[] = {1, 1, 1, 0.5};
+    colorBackground[] = {0, 0, 0, 1};
+    soundSelect[] = {"", 0.1, 1};
+    arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+    arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+    class ListScrollBar {
+        color[] = {1, 1, 1, 0.6};
+        colorActive[] = {1, 1, 1, 1};
+        colorDisabled[] = {1, 1, 1, 0.3};
         shadow = 0;
-        colorShadow[] = {0, 0, 0, 0.5};
-        color[] = {1, 1, 1, 0.1};
-        colorDisabled[] = {1, 1, 1, 0.25};
-        period = 1.2;
-        maxHistoryDelay = 1;
-        autoScrollSpeed = -1;
-        autoScrollDelay = 5;
-        autoScrollRewind = 0;
+        thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+        arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+        arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+        border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
     };
-    class spect_RscFrame {
-        type = 0;
-        idc = -1;
-        style = 64;
-        shadow = 2;
-        colorBackground[] = {0, 0, 0, 0};
-        colorText[] = PRIMARYCOLOR;
-        font = "PuristaMedium";
-        sizeEx = 0.02;
-        text = "";
+    style = 528;
+    font = "PuristaMedium";
+    sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 50) * 1)";
+    shadow = 0;
+    colorShadow[] = {0, 0, 0, 0.5};
+    color[] = {1, 1, 1, 0.1};
+    colorDisabled[] = {1, 1, 1, 0.25};
+    period = 1.2;
+    maxHistoryDelay = 1;
+    autoScrollSpeed = -1;
+    autoScrollDelay = 5;
+    autoScrollRewind = 0;
+};
+class RscSpectFrame {
+    type = 0;
+    idc = -1;
+    style = 64;
+    shadow = 2;
+    colorBackground[] = {0, 0, 0, 0};
+    colorText[] = PRIMARYCOLOR;
+    font = "PuristaMedium";
+    sizeEx = 0.02;
+    text = "";
 
-    };
-class SpectMapControl
+};
+class RscSpectMapControl
 {
     access = 0;
     alphaFadeEndScale = 2;
@@ -393,7 +393,7 @@ class SpectMapControl
         color[] = {1, 1, 1, 1};
     };
 };
-class RscPic
+class RscSpectPic
 {
     idc = -1;
     type = 0;
@@ -411,7 +411,7 @@ class RscPic
     text = "#(argb,8,8,3)color(0.918,0.655,0.141,1)";
     lineSpacing = 1; //required for multi-line style
 };
-  class RscButton {
+class RscSpectButton {
     access = 0;
     borderSize = 0.001 * safezoneW;
     colorBorder[] = PRIMARYCOLOR;
@@ -431,10 +431,10 @@ class RscPic
     offsetY = 0;
     shadow = 0;
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-    soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
-    soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1};
-    soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
-    soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1};
+    soundClick[] = {"\A3\ui_f\data\sound\RscSpectButton\soundClick",0.09,1};
+    soundEnter[] = {"\A3\ui_f\data\sound\RscSpectButton\soundEnter",0.09,1};
+    soundEscape[] = {"\A3\ui_f\data\sound\RscSpectButton\soundEscape",0.09,1};
+    soundPush[] = {"\A3\ui_f\data\sound\RscSpectButton\soundPush",0.09,1};
     style = 0x02 + 160;
     text = "";
     type = 1;
@@ -445,8 +445,8 @@ class RscPic
     w = 0.095589;
     x = 0;
     y = 0;
-  };
-  class spect_RscStructuredText {
+    };
+    class RscSpectStructuredText {
     access = 0;
     h = 0.035;
     idc = -1;
@@ -460,65 +460,62 @@ class RscPic
     w = 0.1;
     x = 0;
     y = 0;
-  };
-  class spect_IGUIBack {
-        type = 0;
-        idc = 124;
-        style = 128;
-        text = "";
-        colorText[] = {0, 0, 0, 0};
-        font = "PuristaMedium";
-        sizeEx = 0;
-        shadow = 0;
-        x = 0.1;
-        y = 0.1;
-        w = 0.1;
-        h = 0.1;
-        colorbackground[] = {"(profilenamespace getvariable ['IGUI_BCG_RGB_R',0])", "(profilenamespace getvariable ['IGUI_BCG_RGB_G',1])", "(profilenamespace getvariable ['IGUI_BCG_RGB_B',1])", "(profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8])"};
+};
+class RscSpectIGUIBack {
+    type = 0;
+    idc = 124;
+    style = 128;
+    text = "";
+    colorText[] = {0, 0, 0, 0};
+    font = "PuristaMedium";
+    sizeEx = 0;
+    shadow = 0;
+    x = 0.1;
+    y = 0.1;
+    w = 0.1;
+    h = 0.1;
+    colorbackground[] = {"(profilenamespace getvariable ['IGUI_BCG_RGB_R',0])", "(profilenamespace getvariable ['IGUI_BCG_RGB_G',1])", "(profilenamespace getvariable ['IGUI_BCG_RGB_B',1])", "(profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8])"};
+};
+class RscSpectText {
+    access = 0;
+    type = 0;
+    idc = -1;
+    colorBackground[] = {0, 0, 0, 0};
+    colorText[] = {1, 1, 1, 1};
+    text = "";
+    fixedWidth = 0;
+    x = 0;
+    y = 0;
+    h = 0.037;
+    w = 0.3;
+    style = 0;
+    shadow = 1;
+    colorShadow[] = {0, 0, 0, 0.5};
+    font = "PuristaLight";
+    SizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+    linespacing = 1;
+};
+class RscSpectControlsGroup {
+    type = 15;
+    idc = -1;
+    style = 0;
+    x = 0;
+    y = 0;
+    w = 1;
+    h = 1;
+    class VScrollbar  {
+    	color[] = {1,1,1,1 };
+    	width = 0.021000;
+    	autoScrollSpeed = -1;
+    	autoScrollDelay = 5;
+    	autoScrollRewind = 0;
     };
-    class spect_RscText {
-        access = 0;
-        type = 0;
-        idc = -1;
-        colorBackground[] = {0, 0, 0, 0};
-        colorText[] = {1, 1, 1, 1};
-        text = "";
-        fixedWidth = 0;
-        x = 0;
-        y = 0;
-        h = 0.037;
-        w = 0.3;
-        style = 0;
-        shadow = 1;
-        colorShadow[] = {0, 0, 0, 0.5};
-        font = "PuristaLight";
-        SizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-        linespacing = 1;
+    class HScrollbar {
+    	color[] = {1, 1, 1, 1};
+    	height = 0.028;
     };
-class spect_RscControlsGroup {
-	type = 15;
-	idc = -1;
-	style = 0;
-	x = 0;
-	y = 0;
-	w = 1;
-	h = 1;
-
-	class VScrollbar  {
-		color[] = {1,1,1,1 };
-		width = 0.021000;
-		autoScrollSpeed = -1;
-		autoScrollDelay = 5;
-		autoScrollRewind = 0;
-	};
-
-	class HScrollbar {
-		color[] = {1, 1, 1, 1};
-		height = 0.028;
-	};
-
-class ListScrollBar  {
-     arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+    class ListScrollBar  {
+        arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
         arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
         border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
         color[] = {1,1,1,0.6};
@@ -526,13 +523,12 @@ class ListScrollBar  {
         colorDisabled[] = {1,1,1,0.3};
         shadow = 0;
         thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
-	};
-
-	class Controls {};
+    };
+    class Controls {};
 };
 
 
-class spect_RscList
+class RscSpectList
 {
     access = 0;
     rowHeight = 0;
@@ -580,7 +576,7 @@ class spect_RscList
 
 };
 
-class spect_RscCombo
+class RscSpectCombo
 {
     access = 0;
     arrowEmpty = "#(argb,8,8,3)color(0.918,0.655,0.141,1)";
@@ -634,7 +630,7 @@ class f_spec_dialog {
     onKeyUp= "[""KeyUp"",_this] call F_fnc_EventHandler";
     onUnload = "[] spawn f_fnc_OnUnload";
 	class controlsBackground {
-		class mouseHandler: spect_RscControlsGroup {
+		class mouseHandler: RscSpectControlsGroup {
             class ListScrollBar
             {
                 color[] = {1,1,1,0.6};
@@ -654,7 +650,7 @@ class f_spec_dialog {
             w = SafeZoneW; h = SafeZoneH;
 		    colorBackground[] = {0.2, 0.0, 0.0, 0.0};
 		};
-        class Devider: RscPic
+        class Devider: RscSpectPic
         {
             idc = 4302;
             x = 0.00293747 * safezoneW + safezoneX;
@@ -662,7 +658,7 @@ class f_spec_dialog {
             w = 0.180469 * safezoneW;
             h = 0.022 * safezoneH;
         };
-        class SpectStrText: spect_RscStructuredText
+        class SpectStrText: RscSpectStructuredText
         {
             idc = 1310;
             x = 0.341317 * safezoneW + safezoneX;
@@ -672,7 +668,7 @@ class f_spec_dialog {
             text = "";
            // text = "<br /> Use the mouse or the WASD to control the camera, H to show and close the help window.<br /> Press M for the map.<br /> ";
         };
-        class SpecFrame: spect_RscFrame
+        class SpecFrame: RscSpectFrame
         {
             idc = 1300;
             x = 0.341317 * safezoneW + safezoneX;
@@ -683,7 +679,7 @@ class f_spec_dialog {
         };
 	};
     class controls {
-        class SpectButtonExit: RscButton
+        class SpectButtonExit: RscSpectButton
         {
             idc = 1315;
             x = 0.6 * safezoneW + safezoneX;
@@ -693,7 +689,7 @@ class f_spec_dialog {
             text = "Okay";
             action = "ctrlShow [1315, !ctrlVisible 1315];ctrlShow [1310, !ctrlVisible 1310];ctrlShow [1300, !ctrlVisible 1300];";
         };
-        class FilterAIButton: RscButton
+        class FilterAIButton: RscSpectButton
         {
             idc = 2111;
             x = 0.00046248 * safezoneW + safezoneX;
@@ -705,7 +701,7 @@ class f_spec_dialog {
             sizeEx = "(         (           (           ((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
             onButtonClick = "[_this select 0,0] call f_fnc_HandleMenu";
         };
-        class SideFilterButton: RscButton
+        class SideFilterButton: RscSpectButton
         {
             idc = 2112;
             x = 0.0425375 * safezoneW + safezoneX;
@@ -717,7 +713,7 @@ class f_spec_dialog {
             sizeEx = "(((((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
             onButtonClick = "[_this select 0,1] call f_fnc_HandleMenu";
         };
-        class TagsNameButton: RscButton
+        class TagsNameButton: RscSpectButton
         {
             idc = 2113;
             x = 0.0846125 * safezoneW + safezoneX;
@@ -729,7 +725,7 @@ class f_spec_dialog {
             sizeEx = "(((((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
             onButtonClick = "[_this select 0,2] call f_fnc_HandleMenu";
         };
-        class FirstPersonButton: RscButton
+        class FirstPersonButton: RscSpectButton
         {
             idc = 2114;
             x = 0.12679 * safezoneW + safezoneX;
@@ -739,9 +735,9 @@ class f_spec_dialog {
             text = "First Person";
             tooltip = "Switch between First Person or Third person";
             sizeEx = "(((((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
-            action = "[] call f_cam_ToggleFPCamera;";
+            onButtonClick = "[_this select 0,3] call f_fnc_HandleMenu";
         };
-        class SpecUnitBox: spect_RscList
+        class SpecUnitBox: RscSpectList
         {
             idc = 2100;
             x = 0 * safezoneW + safezoneX;
@@ -750,7 +746,7 @@ class f_spec_dialog {
             h = 0.9 * safezoneH;
             onLBSelChanged = "[""LBListSelChanged"",_this] call F_fnc_EventHandler";
         };
-        class SpecModes: spect_RscCombo
+        class SpecModes: RscSpectCombo
         {
             idc = 2101;
             x = 0.178999 * safezoneW + safezoneX;
@@ -760,7 +756,7 @@ class f_spec_dialog {
             sizeEx = "(((((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
             onLBSelChanged = "[""LBListSelChanged_modes"",_this] call F_fnc_EventHandler";
         };
-        class SpecText: spect_RscText
+        class SpecText: RscSpectText
         {
             idc = 1000;
             text = "Spectating:Unknown"; //--- ToDo: Localize;
@@ -769,7 +765,7 @@ class f_spec_dialog {
             w = 0.800 * safezoneW;
             h = 0.0200 * safezoneH;
         };
-        class SpectMap : SpectMapControl
+        class SpectMap : RscSpectMapControl
         {
             type = 100;
             idc = 1350;
@@ -781,7 +777,7 @@ class f_spec_dialog {
             onMouseButtonClick = "_this call F_fnc_OnMapClick";
             onDraw = "_this call F_fnc_DrawMarkers";
         };
-        class FullSpectMap : SpectMapControl
+        class FullSpectMap : RscSpectMapControl
         {
             idc = 1360;
             type = 100;
