@@ -12,7 +12,7 @@ if(isNull _unit ) then {_unit = cameraOn};
 // escape the script if you are not a seagull unless forced
 if (typeof _unit != "seagull" && !_forced) ExitWith {};
 // disable this to instantly switch to the spectator script.
-waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit)};
+waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit) || typeof _unit == "seagull"};
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
 	// disable effects death effects
