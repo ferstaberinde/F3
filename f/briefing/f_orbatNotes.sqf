@@ -69,18 +69,11 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 		_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier");
 		_freeSlots = _x emptyPositions "cargo";
 
-		player globalchat format ["%1",_maxSlots];
-
+		// Workaround for http://feedback.arma3.com/view.php?id=21602
 		if (_maxSlots != 0) then {
-
-			PLAYEr globalchat format ["[%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
-
 			if (_maxSlots-_freeSlots < 0) then {
-				player globalchat "2";
 				_maxSlots = _maxSlots -(_maxSlots-_freeSlots);
 			};
-
-			PLAYEr globalchat format ["[%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
 			_orbatText = _orbatText + format ["[%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
 		};
 

@@ -185,6 +185,7 @@ addMissionEventHandler ["Draw3D", {
 								_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier");
 								_freeSlots = _veh emptyPositions "cargo";
 
+								// Workaround for http://feedback.arma3.com/view.php?id=21602
 								if (_maxSlots != 0) then {
 
 									if (_maxSlots-_freeSlots < 0) then {
