@@ -2,6 +2,13 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
+// Prevent BIS Randomisation System
+// BIS created a system for randomisation unit loadouts, that may overwrite the changes made by this script, this will fix such system.
+
+_unit setVariable ["BIS_enableRandomization", false];
+
+// ====================================================================================
+
 // lets strip him down to the basic
 removeUniform _unit;
 removeHeadgear _unit;
