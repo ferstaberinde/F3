@@ -14,7 +14,7 @@ I've also tried and comment everything as best as possible to make understanding
 **SETUP & DOCUMENTANTION**
 
 Installation-guides and further documentation can be found on the wiki:  
-github.com/Wolfenswan/ws_fnc/wiki
+https://github.com/Wolfenswan/ws_fnc/wiki
 
 * All major functions are documented in themselves. To see how they work open their .sqf with a text editor or their pages on github. 
 
