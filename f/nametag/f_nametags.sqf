@@ -187,6 +187,10 @@ addMissionEventHandler ["Draw3D", {
 
 								if (_maxSlots != 0) then {
 
+									if (_maxSlots-_freeSlots < 0) then {
+										_maxSlots = _maxSlots -(_maxSlots-_freeSlots);
+									};
+
 									_suffix = _suffix + format [" (%1/%2)",(_maxSlots-_freeSlots),_maxSlots];
 
 									[_x,_pos,_suffix] call f_fnc_drawNameTag;

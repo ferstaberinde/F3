@@ -6,7 +6,7 @@
 waitUntil {scriptDone f_script_setGroupIDs};
 
 // Define needed variables
-private ["_orbatText", "_groups", "_precompileGroups"];
+private ["_orbatText", "_groups", "_precompileGroups","_maxSlots","_freeSlots"];
 _orbatText = "<br />NOTE: The ORBAT below is only accurate at mission start.<br />
 <br />
 GROUP LEADERS + MEDICS<br /><br />";
@@ -66,8 +66,22 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 	{
 		_orbatText = _orbatText + "<br />" + format["%1 ",getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayname")];
 
-		if (getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier") > 0) then {
-			_orbatText = _orbatText + format ["[%1/%2]",getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier") - (_x emptyPositions "CARGO"),getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier")];
+		_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier");
+		_freeSlots = _x emptyPositions "cargo";
+
+		player globalchat format ["%1",_maxSlots];
+
+		if (_maxSlots != 0) then {
+
+			PLAYEr globalchat format ["[%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
+
+			if (_maxSlots-_freeSlots < 0) then {
+				player globalchat "2";
+				_maxSlots = _maxSlots -(_maxSlots-_freeSlots);
+			};
+
+			PLAYEr globalchat format ["[%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
+			_orbatText = _orbatText + format ["[%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
 		};
 
 		_orbatText =_orbatText + "<br />";
