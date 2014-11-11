@@ -24,44 +24,33 @@ _fill = if (count _this > 3) then {_this select 3} else {false};	// Ignore firet
 // ====================================================================================
 
 // CLEAN THE GROUP ARRAY
-// First we check if there are illegal groups (non-existent) in the array and fix it by replacing it with a null-group.
-// At the end we remove all null-groups are removed and the array is clean
+// First we check if there are illegal groups (non-existent) in the array and remove them.
 
 if ({isNil _x} count _grps > 0) then {
 	{
 		if (isNil _x) then {
-			_grps deleteAt _forEachIndex;
+			_grps set [_forEachIndex,grpNull];
 		};
-
 	} forEach _grps;
 };
 
+_grps = _grps - [grpNull];
+
 // ====================================================================================
 
-// PROCESS VARIABLES
-// We make sure that there are only vehicles in the vehicle array
-// If a soldier-unit is in the array then we check if we can use the vehicle he's in
-{
- if (_x isKindOf "CAManBase") then {
- 	if (vehicle _x != _x) then {
- 		_vehs set [_forEachIndex,vehicle _x];
- 	} else {
- 		_vehs deleteAt _forEachIndex;
- 	};
- };
-} forEach _vehs;
-
-
-// We check the passed groups to make sure none of them is empty and they have at least one unit that's not inside a vehicle
+// PROCESS GROUPS
+// Check the passed groups to make sure none of them is empty and they have at least one unit that's not inside a vehicle
 {
 	_grp = call compile format ["%1",_x];
 	_grps set [_forEachIndex,_grp];
 
 	if (count (units _grp) == 0 || {isNull (assignedVehicle _x)} count (units _grp) == 0) then {
-	 	_grps deleteAt _forEachIndex;
+		_grps set [_forEachIndex,grpNull];
 	};
 
 } forEach _grps;
+
+_grps = _grps - [grpNull];
 
 // ====================================================================================
 
