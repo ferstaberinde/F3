@@ -54,6 +54,21 @@ _grps = _grps - [grpNull];
 
 // ====================================================================================
 
+// PROCESS VEHICLES
+// We make sure that there are only vehicles in the vehicle array
+// If a soldier-unit is in the array then we check if we can use the vehicle he's in
+{
+ if (_x isKindOf "CAManBase") then {
+     if (vehicle _x != _x) then {
+         _vehs set [_forEachIndex,vehicle _x];
+     } else {
+         _vehs = _vehs - [_x];
+     };
+ };
+} forEach _vehs;
+
+// ====================================================================================
+
 // CHECK ARRAY COUNT
 // If any of the arrays is empty we don't need to execute the function and exit with a warning message.
 
