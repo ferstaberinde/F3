@@ -1,5 +1,5 @@
 /* ws_fnc_loadVehicle
-Latest: 05.06.2014
+Latest: 12.11.2014
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 Based on my work for the F3 preMount component
 
