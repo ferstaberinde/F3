@@ -8,6 +8,8 @@ FEATURE
 Tracks all currently present AI-only groups and caches/uncaches them according to distance to parameters
 */
 
+private ["_range","_sleep","_groups","_debug"];
+
 _range = _this select 0;
 _sleep = _this select 1;
 
@@ -15,11 +17,12 @@ _debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
 
 _groups = allGroups;
 
+// BEGIN THE TRACKING LOOP
 While {count _groups > 0} do {
         {
                 _groups = allGroups;
 
-                if (_debug) then{ ["ws_fnc_cache DBG: Tracking ",[count _groups]," groups"] call ws_fnc_debugtext;};
+               if (_debug) then{ ["ws_fnc_cache DBG: Tracking ",[count _groups]," groups"] call ws_fnc_debugtext;};
 
                 if (isnull _x) then {
                         _groups = _groups - [_x];
@@ -35,21 +38,21 @@ While {count _groups > 0} do {
 
                                         if (_debug) then {["ws_fnc_cache DBG: Checking group: ",[_x],""] call ws_fnc_debugtext;};
 
-                                        if ([_x, _range] call ws_fnc_nearPlayer) then {
+                                        if ([leader _x, _range] call ws_fnc_nearPlayer) then {
 
-                                                if (_debug) then {["ws_fnc_cache DBG: Decaching: ",[_x],""] call ws_fnc_debugtext;};
+                                               if (_debug) then {["ws_fnc_cache DBG: Caching: ",[_x],""] call ws_fnc_debugtext;};
 
                                                 _x setvariable ["ws_cached", false];
-                                                _x spawn ws_fnc_gUncache;
+                                                [_x,"ws_fnc_gUncache", false,false] spawn BIS_fnc_MP;
 
                                         };
                                 } else {
-                                        if !([_x, _range * 1.1] call ws_fnc_nearPlayer) then {
+                                        if !([leader _x, _range * 1.1] call ws_fnc_nearPlayer) then {
 
-                                                if (_debug) then {["ws_fnc_cache DBG: Caching: ",[_x],""] call ws_fnc_debugtext;};
+                                                if (_debug) then {player globalchat format ["ws_fnc_cache DBG: Caching: %1",_x]};
 
                                                 _x setvariable ["ws_cached", true];
-                                               _x spawn ws_fnc_gCache;
+                                                [_x,"ws_fnc_gCache",false,false] spawn BIS_fnc_MP;
                                         };
                                 };
 
