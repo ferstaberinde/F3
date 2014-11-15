@@ -257,6 +257,9 @@ Version | Date
  * Minor edit to LocalGroupMarkers allowing you define faction (used to show other factions group markers for everyone, old style still compatible).
 * Updated Fireteam Member Markers component:
  * Fireteam member markers re-colour after joining a new group using the Join Group Action component.
+* Updated F3 Folk ARPS Platoons component:
+ * Changed NATO and CSAT TH1 and TH2 helicopters to Huron and Taru.
+ * Added TH1 element for FIA (civilian M-900).
 * Updated Folk ARPS Assign Gear Script component:
  * Faction can now be forced using an optional third parameter.
  * Added support for faction-specific crates.
