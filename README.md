@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-2-0 RC2
+* Version: 3-2-0
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-2-0     | 15 NOV 2014 | Patch release - Various improvements (see change history).
 * 3-2-0 RC2 | 06 NOV 2014 | Internal release - Various improvements (see change history).
 * 3-2-0 RC1 | 24 OCT 2014 | Internal release - Various improvements (see change history).
 * 3-1-2     | 12 SEP 2014 | Patch release - Bug fix (see change history).
@@ -172,7 +173,7 @@ F3 is composed of many components. Each component is (c) 2007/2008/2009/2010/201
 
 ## 04. TERMS OF USE ##
 
-F3 (hereafter 'Software') contains files to be used in the PC CD-ROM simulators "Arma 3". To use the Software you must agree to the following conditions of use:
+F3 (hereafter 'Software') contains files to be used in the PC simulator "Arma 3". To use the Software you must agree to the following conditions of use:
 
 1. The term 'Software' specifically excludes the file 'mission.sqm'.
 
@@ -231,7 +232,7 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-2-0 RC2 | 06 NOV 2014
+3-2-0 | 15 NOV 2014
 
 * Added Insignia component.
  * Includes insignia for NATO, AAF, CSAT and CSAT urban uniforms.
@@ -279,6 +280,10 @@ Version | Date
  * Reduced duration of "X minutes remaining" note to 10 seconds.
 * Fixed E&E Check component:
  * Component would activate ending/code even if all tracked units were killed.
+
+3-2-0 RC2 | 06 NOV 2014
+
+* Please see change history for release v3-2-0.
 
 3-2-0 RC1 | 24 OCT 2014
 
