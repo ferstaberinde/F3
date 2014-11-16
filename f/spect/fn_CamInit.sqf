@@ -2,22 +2,31 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 // params
+_this spawn {
 _unit = [_this, 0, player,[objNull]] call BIS_fnc_param;
-_oldUnit = [_this, 1, player,[objNull]] call BIS_fnc_param;
+_oldUnit = [_this, 1, objNull,[objNull]] call BIS_fnc_param;
 _forced = [_this, 4, false,[false]] call BIS_fnc_param;
-
+_isJIP = false;
 // if they are jip, these are null
-if(isNull _unit ) then {_unit = cameraOn};
-
+if(isNull _unit ) then {_unit = cameraOn;_isJIP=true;};
 // escape the script if you are not a seagull unless forced
-if (typeof _unit != "seagull" && !_forced) ExitWith {};
+if (typeof _unit != "seagull" && !_forced || !hasInterface) ExitWith {};
 // disable this to instantly switch to the spectator script.
-waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit)};
+waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit) || _isJIP};
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
 	// disable effects death effects
 	BIS_fnc_feedback_allowPP = false;
 };
+
+if(_isJIP) then
+{
+  ["F_ScreenSetup",false] call BIS_fnc_blackOut;
+  systemChat "Initilizing Spectator Script";
+  uiSleep 3;
+  ["F_ScreenSetup"] call BIS_fnc_blackIn;
+};
+
 // Create a Virtual Agent to act as our player to make sure we get to keep Draw3D
 if(isNil "f_cam_VirtualCreated") then
 {
@@ -201,3 +210,5 @@ lbSetCurSel [2101,0];
 f_cam_freeCam_script = [] spawn F_fnc_FreeCam;
 f_cam_updatevalues_script = [] spawn F_fnc_UpdateValues;
  ["f_spect_tags", "onEachFrame", {_this call F_fnc_DrawTags}] call BIS_fnc_addStackedEventHandler;
+
+};

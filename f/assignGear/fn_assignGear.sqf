@@ -29,20 +29,12 @@ if(count _this > 2) then
 	#include "f_assignInsignia.sqf"
 };
 
-
 // ====================================================================================
 
 // DECIDE IF THE SCRIPT SHOULD RUN
 // Depending on locality the script decides if it should run
 
 if !(local _unit) exitWith {};
-
-// ====================================================================================
-
-// Prevent BIS Randomisation System
-// BIS created a system for randomisation unit loadouts, that may overwrite the changes made by this script, this will fix such system.
-
-_unit setVariable ["BIS_enableRandomization", false];
 
 // ====================================================================================
 

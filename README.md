@@ -14,5 +14,5 @@
   * Pre-placed a ZEUS player configured to support F3 AI Skill Selector
 
 ## Versions ##
-* F3 3-2-0 RC2
+* F3 3-2-0
 * ws_fnc 04/11/2014

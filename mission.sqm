@@ -41,7 +41,8 @@ class Mission
 		"A3_Air_F_Heli_Heli_Transport_03",
 		"A3_Air_F_Heli_Heli_Transport_04",
 		"A3_Data_F_Curator_Virtual",
-		"A3_Modules_F_Curator_Curator"
+		"A3_Modules_F_Curator_Curator",
+		"A3_Air_F_Heli_Heli_Light_01"
 	};
 	addOnsAuto[]=
 	{
@@ -79,6 +80,7 @@ class Mission
 		"A3_Soft_F_Truck",
 		"A3_Weapons_F_Beta_Ammoboxes",
 		"a3_weapons_f_ammoboxes",
+		"A3_Air_F_Heli_Heli_Light_01",
 		"a3_map_altis"
 	};
 	randomSeed=11823142;
@@ -7460,11 +7462,46 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
+				items=2;
+				class Item0
+				{
+					position[]={8570.1328,24.131172,10484.383};
+					id=467;
+					side="WEST";
+					vehicle="B_G_engineer_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					text="UnitFIA_TH1_P";
+					init="GrpFIA_TH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehFIA_TH1;";
+					description="FIA Transport Helo 1 Pilot";
+				};
+				class Item1
+				{
+					position[]={8572.7314,24.582022,10482.604};
+					id=468;
+					side="WEST";
+					vehicle="B_G_engineer_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="UnitFIA_TH1_CP";
+					init="GrpFIA_TH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehFIA_TH1,[0]];";
+					description="FIA Transport Helo 1 Co-Pilot (Repair)";
+				};
+			};
+		};
+		class Item167
+		{
+			side="WEST";
+			class Vehicles
+			{
 				items=4;
 				class Item0
 				{
-					position[]={8570.1113,24.405354,10482.501};
-					id=467;
+					position[]={8571.0127,25.363968,10471.766};
+					id=469;
 					side="WEST";
 					vehicle="B_G_Soldier_F";
 					player="PLAY CDG";
@@ -7475,8 +7512,8 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={8572.6719,24.819132,10480.985};
-					id=468;
+					position[]={8573.5732,25.479992,10470.25};
+					id=470;
 					side="WEST";
 					vehicle="B_G_Soldier_F";
 					player="PLAY CDG";
@@ -7486,8 +7523,8 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={8575.7959,24.833235,10480.946};
-					id=469;
+					position[]={8576.6973,25.551481,10470.211};
+					id=471;
 					side="WEST";
 					vehicle="B_G_Soldier_F";
 					player="PLAY CDG";
@@ -7497,8 +7534,8 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={8579.1689,24.881664,10480.992};
-					id=470;
+					position[]={8580.0703,25.629137,10470.257};
+					id=472;
 					side="WEST";
 					vehicle="B_G_Soldier_F";
 					player="PLAY CDG";
@@ -7577,13 +7614,13 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=84;
+		items=85;
 		class Item0
 		{
 			position[]={8448.3682,22.231026,10822.729};
 			id=473;
 			side="EMPTY";
-			vehicle="B_Heli_Transport_03_unarmed_F";
+			vehicle="B_Heli_Transport_03_F";
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_TH1";
@@ -7612,7 +7649,7 @@ class Mission
 			position[]={8448.5879,20.898321,10794.722};
 			id=476;
 			side="EMPTY";
-			vehicle="B_Heli_Transport_03_unarmed_F";
+			vehicle="B_Heli_Transport_03_F";
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_TH2";
@@ -8422,6 +8459,16 @@ class Mission
 			skill=0.60000002;
 			text="CrateFIA_C";
 			init="[""crate_med"",this,""blu_g_f""] call f_fnc_assignGear";
+		};
+		class Item84
+		{
+			position[]={8577.502,24.787222,10481.465};
+			id=557;
+			side="EMPTY";
+			vehicle="C_Heli_Light_01_civil_F";
+			leader=1;
+			skill=0.60000002;
+			text="VehFIA_TH1";
 		};
 	};
 	class Markers
