@@ -1,5 +1,5 @@
 /* ws_fnc_loadVehicle
-Latest: 05.06.2014
+Latest: 12.11.2014
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 Based on my work for the F3 preMount component
 
@@ -53,22 +53,6 @@ if ({isNil _x} count _grps > 0) then {
 	_grps = _grps - [grpNull];
 };
 
-// ====================================================================================
-
-// PROCESS VARIABLES
-// We make sure that there are only vehicles in the vehicle array
-// If a soldier-unit is in the array then we check if we can use the vehicle he's in
-{
- if (_x isKindOf "CAManBase") then {
- 	if (vehicle _x != _x) then {
- 		_vehs set [_forEachIndex,vehicle _x];
- 	} else {
- 		_vehs = _vehs - [_x];
- 	};
- };
-} forEach _vehs;
-
-
 // We check the passed groups to make sure none of them is empty and they have at least one unit that's not inside a vehicle
 {
 	_grp = call compile format ["%1",_x];
@@ -109,7 +93,9 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 	// Temporary group array
 	_grpsT = _grps;
 	// As long there are spare seats and groups left
+
 	while {_emptyPositions > 0 && count _grpsT > 0 && locked _veh < 2} do {
+
 		private ["_grp","_units","_run"];
 
 		_grp = _grpsT select 0;
@@ -118,17 +104,18 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 
 		// If fireteam cohesion should be kept count the available vehicle slots, compared to the units in the group that would need a seat
 		if (!_fill && {{isNull assignedVehicle _x} count _units > _emptyPositions}) then {
+
 			_run = false;
 
-			//Mark the index for deletion
+			//Remove groups that would need to be split up
 			_grpsT = _grpsT - [_grp];
 		};
 
 	   	if (_run) then {
+
 	   		// Loop through all vehicle roles and place the units in them accordingly
 		   	{
 			   	_unit = _units select 0;
-
 			   	_slot = _x select 0;
 			   	_path = _x select 1;
 
@@ -136,16 +123,11 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 				if (_crew && {_slot != "CARGO" && isNull assignedVehicle _unit}) then{
 					if (_slot == "Driver" && (_veh emptyPositions "Driver") > 0 && !(lockedDriver _veh)) exitWith {_unit assignAsDriver _veh;_unit moveInDriver _veh;};
 					if (_slot == "Turret" && !(_veh lockedTurret _path) && isNull (_veh TurretUnit _path)) exitWith {_unit assignAsTurret [_veh,_path];_unit moveInTurret [_veh,_path];};
-
-					_crew = false;
 				};
 
 			   	if (_slot == "CARGO" && isNull assignedVehicle _unit && !(_veh lockedCargo (_path select 0))) then {
-					_unit moveInCargo _veh; _unit assignAsCargoIndex [_veh,(_path select 0)];
+					_unit assignAsCargo _veh; _unit moveInCargo _veh;
 				};
-
-				// Set the used vehicle role to a null-value so we can remove it later
-				_vehicleRoles set [_forEachIndex,objNull];
 
 				// If the unit was assigned, remove it so we can use the next unit. If it wasn't, use it again to find a useable seat
 				if (!isNull (assignedVehicle _unit)) then {
@@ -157,11 +139,8 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 
 		    } forEach _vehicleRoles;
 
-		    // Remove used vehicle roles and groups
-		    _vehicleRoles = _vehicleROles - [objNull];
-
 		    // Remove the processed group from the temporary array
-		    _grpsT = _grpsT - [_grp]
+		    _grpsT = _grpsT - [_grp];
 		};
 
 		// Check if all units in the group have been assigned a vehicle, remove group from both group arrays

@@ -8,18 +8,22 @@ FEATURE
 Caches groups.
 
 USAGE
-[min caching distance,sleep] call ws_fnc_cInit;
+[min caching distance,agressiveness,sleep] call ws_fnc_cInit;
 
 To exclude a group from being cached:
-a) In unit init: (group this) setVariable ["ws_cacheExcl",true,true];
+a) In unit init: (group this) setVariable ["ws_cacheExcl",true];
 b) Anywhere: Groupname setVariable ["ws_cacheExcl",true,true];
 
 NOTE
 It's recommended to wait up until a minute into the mission before launching the caching script to make sure that all AI have settled
 
 PARAMETERS
-1. Distance to players for units to be de-cached 							| OPTIONAL - default is 1500
-2. Amount of seconds between distance-checks to player units	| OPTIONAL - default is 5 seconds
+1. Distance to players for units to be de-cached 				| OPTIONAL - default is 1000
+2. Agressiveness of the caching									| OPTIONAL - default is 2
+	1 - cache only non-leaders and non-drivers
+	2 - cache all non-moving units, always exclude vehicle drivers
+	3 - cache all units, incl. group leaders and vehicle drivers
+3. Amount of seconds between distance-checks to player units	| OPTIONAL - default is 5 seconds
 
 RETURNS
 true
@@ -44,8 +48,10 @@ waituntil {!isnil "bis_fnc_init"};
 } forEach allGroups;
 
 // Define parameters
-_range = if (count _this > 0) then [{_this select 0},{1500}];
-_sleep = if (count _this > 1) then [{_this select 1},{6}];
+_range = if (count _this > 0) then [{_this select 0},{1000}];
+ws_var_cachingAggressiveness = if (count _this > 1) then [{_this select 1},{2}];
+_sleep = if (count _this > 2) then [{_this select 2},{6}];
+
 
 [_range, _sleep] spawn ws_fnc_cTracker;
 
