@@ -108,7 +108,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=169;
+		items=170;
 		class Item0
 		{
 			side="WEST";
@@ -7545,7 +7545,7 @@ class Mission
 				};
 			};
 		};
-		class Item167
+		class Item168
 		{
 			side="LOGIC";
 			class Vehicles
@@ -7564,7 +7564,7 @@ class Mission
 				};
 			};
 		};
-		class Item168
+		class Item169
 		{
 			side="LOGIC";
 			class Vehicles
