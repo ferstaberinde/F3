@@ -46,13 +46,13 @@ if(_typeOfUnit != "NIL") then {
       // Everyone gets a short-range radio by default
       if(isnil "f_radios_settings_acre2_shortRange") then
       {
-        _unit linkItem f_radios_settings_acre2_standardSHRadio;
+        _unit addItem f_radios_settings_acre2_standardSHRadio;
       }
       else
       {
         if(_typeOfUnit in f_radios_settings_acre2_shortRange) then
         {
-          _unit linkItem f_radios_settings_acre2_standardSHRadio;
+          _unit addItem f_radios_settings_acre2_standardSHRadio;
         };
       };
 
