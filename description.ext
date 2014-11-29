@@ -35,7 +35,7 @@ enableDebugConsole = 1;
 respawn = 1;
 respawndelay = 3;
 respawnOnStart = 0;
-respawnTemplates[] = {"f_spectator","f_JIP"};
+respawnTemplates[] = {"Seagull","f_spectator","f_JIP"};
 
 // ============================================================================================
 
