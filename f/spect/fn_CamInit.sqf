@@ -12,12 +12,6 @@ if(isNull _unit ) then {_unit = cameraOn;_isJIP=true;};
 // escape the script if you are not a seagull unless forced
 if (typeof _unit != "seagull" && !_forced || !hasInterface) ExitWith {};
 // disable this to instantly switch to the spectator script.
-waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit) || _isJIP};
-if(!isnil "BIS_fnc_feedback_allowPP") then
-{
-	// disable effects death effects
-	BIS_fnc_feedback_allowPP = false;
-};
 
 if(_isJIP) then
 {
@@ -27,6 +21,11 @@ if(_isJIP) then
   ["F_ScreenSetup"] call BIS_fnc_blackIn;
 };
 
+if(!isnil "BIS_fnc_feedback_allowPP") then
+{
+  // disable effects death effects
+  BIS_fnc_feedback_allowPP = false;
+};
 // Create a Virtual Agent to act as our player to make sure we get to keep Draw3D
 if(isNil "f_cam_VirtualCreated") then
 {
