@@ -13,12 +13,17 @@ if(!alive player) exitWith {[true] call acre_api_fnc_setSpectator;};
 
 _unit = player;
 
+// Wait for gear assignation to take place
+waitUntil{(player getVariable ["f_var_assignGear_done", false])};
 
 // REMOVE ALL RADIOS
 // Wait for ACRE2 to initialise any radios the unit has in their inventory, and then
 // remove them to ensure that duplicate radios aren't added by accident.
 
-// Make sure player has a radio in their inventory
+// Remove any already assigned radios
+_unit unlinkItem "ItemRadio";
+
+// Make sure the player doesn't have a radio in their inventory
 if([_unit] call acre_api_fnc_hasRadio) then {
 
   // Wait for radios to get initialised by ACRE
@@ -28,10 +33,6 @@ if([_unit] call acre_api_fnc_hasRadio) then {
   {_unit unlinkItem _x;}foreach ([] call acre_api_fnc_getCurrentRadioList);
 
 };
-// Wait for gear assignation to take place
-waitUntil{(player getVariable ["f_var_assignGear_done", false])};
-
-_typeOfUnit = _unit getVariable ["f_var_assignGear", "NIL"];
 
 // ====================================================================================
 
