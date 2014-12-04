@@ -15,7 +15,7 @@ _unit = player;
 
 // Wait for gear assignation to take place
 waitUntil{(player getVariable ["f_var_assignGear_done", false])};
-
+_typeOfUnit = _unit getVariable ["f_var_assignGear", "NIL"];
 // REMOVE ALL RADIOS
 // Wait for ACRE2 to initialise any radios the unit has in their inventory, and then
 // remove them to ensure that duplicate radios aren't added by accident.
