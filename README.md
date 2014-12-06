@@ -236,7 +236,7 @@ Version | Date
 3-2-1 | 06 DEC 2014
 
 * Updated Radio Systems Support component:
- * Switched linkItem to additem for ACRE2.
+ * Switched linkItem to addItem for ACRE2.
 * Fixed F3 Spectator Script component: 
  * Fixed incompatiblity with most recent Arma 3 update.
 
