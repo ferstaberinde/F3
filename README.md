@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-2-0
+* Version: 3-2-1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-2-1     | 06 DEC 2014 | Patch release - Bug fix (see change history).
 * 3-2-0     | 15 NOV 2014 | Patch release - Various improvements (see change history).
 * 3-2-0 RC2 | 06 NOV 2014 | Internal release - Various improvements (see change history).
 * 3-2-0 RC1 | 24 OCT 2014 | Internal release - Various improvements (see change history).
@@ -231,6 +232,13 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-2-1 | 06 DEC 2014
+
+* Updated Radio Systems Support component:
+ * Switched linkItem to addItem for ACRE2.
+* Fixed F3 Spectator Script component: 
+ * Fixed incompatiblity with most recent Arma 3 update.
 
 3-2-0 | 15 NOV 2014
 
