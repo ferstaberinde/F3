@@ -15,8 +15,8 @@ if (typeof _unit != "seagull" && !_forced || !hasInterface) ExitWith {};
 waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit) || _isJIP};
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
-	// disable effects death effects
-	BIS_fnc_feedback_allowPP = false;
+  // disable effects death effects
+  BIS_fnc_feedback_allowPP = false;
 };
 
 if(_isJIP) then
