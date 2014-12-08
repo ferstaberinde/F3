@@ -7,6 +7,12 @@ _ret = ["ACRE_PRC148", str (side player) ] call acre_api_fnc_setDefaultChannels;
 _ret = ["ACRE_PRC343", str (side player) ] call acre_api_fnc_setDefaultChannels;
 _ret = ["ItemRadio", str (side player) ] call acre_api_fnc_setDefaultChannels;
 
+
+// define our languages (need to be the same order for everyone)
+{
+  _x call acre_api_fnc_babelAddLanguageType;
+} foreach f_radios_settings_acre2_languages;
+
 // if dead, set spectator and exit
 if(!alive player) exitWith {[true] call acre_api_fnc_setSpectator;};
 
