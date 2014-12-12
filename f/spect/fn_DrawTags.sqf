@@ -19,16 +19,21 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 			_drawGroup = true;
 		};
 	} foreach units _x;
-
+	_color = switch (side _x) do {
+	    case blufor: {f_cam_blufor_color};
+	    case opfor: {f_cam_opfor_color};
+	    case independent: {f_cam_indep_color};
+	    case civilian: {f_cam_civ_color};
+	    default {f_cam_empty_color};
+	};
 	if(_drawGroup) then {
 		_visPos = getPosATLVisual leader _x;
 		if(surfaceIsWater _visPos) then  {_visPos = getPosASLVisual leader _x;};
-		_color = [side _x] call BIS_fnc_sideColor;
 		if(_isPlayerGroup) then {
-			_color = [_color select 0,_color select 1,_color select 2,0.7];
+			_color set [2,0.7];
 		}
 		else {
-			_color = [_color select 0,_color select 1,_color select 2,0.4];
+			_color set [2,0.4];
 		};
 		_str = _x getVariable ["f_cam_nicename",""];
 		if(_str == "") then {
@@ -43,8 +48,7 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 		{
 			_visPos = getPosATLVisual _x;
 			if(surfaceIsWater _visPos) then  {_visPos = getPosASLVisual _x;};
-			_color = [side _x] call BIS_fnc_sideColor;
-			_color = [_color select 0,_color select 1,_color select 2,0.6];
+			_color set [2,0.6];
 			_str = "";
 			_icon = "\A3\ui_f\data\map\markers\military\dot_CA.paa";
 			if(isPlayer _x) then
