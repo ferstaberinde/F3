@@ -135,7 +135,7 @@
 
         for "_i" from 0 to 15 do {
                 _channel = HASHLIST_CREATEHASH(_channels);
-                HASH_SET(_channel,"frequencyTX",(2401+(_i))+(_offset/2));
+                HASH_SET(_channel,"frequencyTX",(2400+(_i))+(_offset));
                 HASHLIST_PUSH(_channels, _channel);
         };
         HASH_SET(_presetData,"channels",_channels);
