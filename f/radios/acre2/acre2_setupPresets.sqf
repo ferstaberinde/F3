@@ -38,7 +38,7 @@
                 _channel = HASHLIST_CREATEHASH(_channels);
 
                 // append the offset to the frequency
-                _frequency = _offset+((_i)*0.26);
+                _frequency = 30+((_i)+_offset);
 
                 // Set the frequency
                 HASH_SET(_channel,"frequencyTX",_frequency);
