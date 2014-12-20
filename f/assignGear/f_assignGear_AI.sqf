@@ -9,9 +9,16 @@ if (isServer) exitWith {};
 
 // ====================================================================================
 
+// WAIT FOR COMMON VARIABLES
+// Make sure the common F3 variables are known
+
+waitUntil {scriptDone f_script_setLocalVars};
+
+// ====================================================================================
+
 // DECLARE PRIVATE VARIABLES
 
-private ["_unit","_faction","_unitFactions","_unitClasses"];
+private ["_units","_unit","_faction","_unitFactions","_unitClasses"];
 
 // ====================================================================================
 
@@ -57,6 +64,9 @@ _unitClasses = [
 
 // ====================================================================================
 
+// Interpret parameters
+_units = _this;
+
 // LOOP THROUGH AI UNITS AND ASSIGN GEAR
 
 {
@@ -87,4 +97,4 @@ _unitClasses = [
 				_x setvariable ["f_var_assignGear_done", true,true];
 			};
 	};
-} foreach allUnits;
+} foreach _units;
