@@ -5,20 +5,13 @@
 // SERVER CHECK
 // Make sure that the script is only run on the server
 
-if (isServer) exitWith {};
-
-// ====================================================================================
-
-// WAIT FOR COMMON VARIABLES
-// Make sure the common F3 variables are known
-
-waitUntil {scriptDone f_script_setLocalVars};
+if !(isServer) exitWith {};
 
 // ====================================================================================
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_units","_unit","_faction","_unitFactions","_unitClasses"];
+private ["_units","_unit","_faction","_known","_unitFactions","_unitClasses"];
 
 // ====================================================================================
 
@@ -65,32 +58,35 @@ _unitClasses = [
 // ====================================================================================
 
 // Interpret parameters
-_units = _this;
+_units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVars};f_var_men},{_this}];
 
 // LOOP THROUGH AI UNITS AND ASSIGN GEAR
-
 {
 
 	sleep 0.1;
 	_unit = _x;
 
 	// Check if the unit was already touched by the F3 Assign Gear Component
-	if (!(_unit getvariable ["f_var_assignGear_done", false]) && {_unit isKindOf "Man"}) then {
-
+	if (!(_unit getvariable ["f_var_assignGear_done", false]) && {!(_unit in playableUnits) && (_unit isKindOf "Man")}) then {
 
 			_faction = toLower (faction _unit);
+
 			// If the unit's faction is allowed, proceed
 			if (_faction in _unitFactions) then {
+				_known = false;
 				{
-					// If the unit's classname corresponds to a class in the array, set it's gear accordingly
-					if [toLower (_x select 0),toLower (typeOf _unit)] call BIS_fnc_inString exitWith {
-						[[_unitClasses select 1, _unit], "f_fnc_assignGear", _unit] call BIS_fnc_MP;
+					_known = [toLower (_x select 0),toLower (typeOf _unit)] call BIS_fnc_inString;
+
+					// If the unit's classname corresponds to a class in the assignment array, set it's gear accordingly
+					if (_known) exitWith {
+						[[_x select 1, _unit], "f_fnc_assignGear", _unit] call BIS_fnc_MP;
 					};
-
-					// Otherwise set the default rifleman equipment
-					[["r", _unit], "f_fnc_assignGear", _unit] call BIS_fnc_MP;
-
 				} forEach _unitClasses;
+
+				// If the class isn't in the assignment array, set the default gear
+				if (!_known) then {
+					[["r", _unit], "f_fnc_assignGear", _unit] call BIS_fnc_MP;
+				};
 
 			} else {
 				// If the faction is not allowed, set the assignGear variable to true to ignore the unit from now on

@@ -130,7 +130,7 @@ if(isServer) then {
 // F3 - Assign Gear AI
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_men execVM "f\assignGear\f_assignGear_AI.sqf";
+[] execVM "f\assignGear\f_assignGear_AI.sqf";
 
 // ====================================================================================
 
