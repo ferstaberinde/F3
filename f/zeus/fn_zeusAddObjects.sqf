@@ -1,4 +1,4 @@
-// // F3 Zeus Support - Add Objects
+// F3 Zeus Support - Add Objects
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
