@@ -18,11 +18,6 @@ RETURNS
 Units that weren't loaded. If all units were loaded an empty array is returned
 */
 
-// MAKE SURE THE SCRIPT IS ONLY RUN SERVER-SIDE
-if (!isServer) exitWith {};
-
-// ====================================================================================
-
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_objects","_crew","_vehs","_grps","_units"];
