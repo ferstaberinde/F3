@@ -101,9 +101,9 @@ if ({isNull _x} count _art > 1 || str _target == "[0,0,0]" || count (getArtiller
 				_targetpos = [_targetpos,_dispersion] call ws_fnc_getPos;
 			};
 
-			if (!(canFire _artPiece) || !(alive _artPiece) || !(_targetPos inRangeOfArtillery [[_artPiece],_ammo]))  exitWith {
+			if (!(canFire _artPiece) || !(alive _artPiece) || !(_targetPos inRangeOfArtillery [[_artPiece],_ammo]) || count (getArtilleryAmmo [_artPiece]) == 0 )  exitWith {
 				if (ws_debug) then {
-				["ws_fnc_taskArtilleryFire DBG: Artillery forced to stop firing! --- ",[!(canFire _artPiece), !(alive _artPiece), !(_targetPos inRangeOfArtillery [[_artPiece],_ammo])],": Artillery can't fire? | Artillery dead? | Target too close?"] call ws_fnc_debugtext;
+				["ws_fnc_taskArtilleryFire DBG: Artillery forced to stop firing! --- ",[!(canFire _artPiece), !(alive _artPiece), !(_targetPos inRangeOfArtillery [[_artPiece],_ammo]), count (getArtilleryAmmo [_artPiece]) == 0],": Artillery can't fire? | Artillery dead? | Target too close? | No more ammo?"] call ws_fnc_debugtext;
 				};
 			};
 
