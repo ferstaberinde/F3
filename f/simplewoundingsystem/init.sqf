@@ -45,6 +45,7 @@ _unit setVariable ["f_wound_down",false];
 _unit setVariable ["f_wound_bleeding",false];
 _unit setVariable ["f_wound_blood",100]; // other player dont need know this
 _unit setVariable ["f_wound_dragging",nil];
+
 f_wound_healAnimations = ["ainvpknlmstpslaywpstdnon_medic","ainvpknlmstpslaywrfldnon_medic","ainvpknlmstpslaywnondnon_medic","ainvppnemstpslaywnondnon_medic","AinvPpneMstpSlayWnonDnon_medic","AinvPpneMstpSlayWpstDnon_medic","AinvPpneMstpSlayWrflDnon_medic",""];
 
 /// Lifeticker, manages bleeding and blood values.

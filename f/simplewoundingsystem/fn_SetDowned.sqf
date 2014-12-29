@@ -30,7 +30,7 @@ if(_bool && alive _unit) then
 	};
 
 	// Just a safety switch to ensure that the unit is wounded enough to have the firstaid option
-	if(damage _unit < 0.25) then {_unit setdamage 0.26};
+	if(damage _unit < 0.251) { _unit setDamage 0.251};
 
 
 
@@ -44,14 +44,14 @@ if(_bool && alive _unit) then
 		_anim = getArray (configfile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "interpolateTo");
 		_unit switchmove (_anim select 0);
 		_veh = vehicle _unit;
-		_veh addAction  ["Pull out wounded", {[_this, "f_fnc_EjectWounded", true,true] spawn BIS_fnc_MP;}, nil, 5, false, true, "", "_target distance _this < 5 && [_target] call f_fnc_HasWounded"];
+		_veh addAction  ["Pull out wounded", {[_this, "f_fnc_EjectWounded", true] spawn BIS_fnc_MP;}, nil, 5, false, true, "", "_target distance _this < 5 && [_target] call f_fnc_HasWounded"];
 	};
 }
 else
 {
 	if(!(_unit getVariable ["f_wound_down",false])) exitWith {};
-	_unit setVariable ["f_wound_down",false];
 
+	_unit setVariable ["f_wound_down",false];
 	// if the unit is not in a vehicle, play pretty animation otherwise just reset to thier default animation
 	if(vehicle _unit == _unit) then
 	{
@@ -67,8 +67,8 @@ else
 	if(_dragIndex >= 0) then {_unit removeAction _dragIndex};
 	_unit setVariable ["f_wound_dragIndex",-1];
 
-	// give the unit back his magazines if hes local and a player.
-	if(local _unit && isPlayer _unit) then
+	// give the unit back his magazines if hes local
+	if(local _unit) then
 	{
 		_mags = _unit getVariable ["f_wound_down_mags",magazines _unit];
 		{
