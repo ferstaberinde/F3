@@ -6,7 +6,7 @@
 waitUntil {scriptDone f_script_setGroupIDs};
 
 // Define needed variables
-private ["_orbatText", "_groups", "_precompileGroups"];
+private ["_orbatText", "_groups", "_precompileGroups","_maxSlots","_freeSlots"];
 _orbatText = "<br />NOTE: The ORBAT below is only accurate at mission start.<br />
 <br />
 GROUP LEADERS + MEDICS<br /><br />";
@@ -66,8 +66,15 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 	{
 		_orbatText = _orbatText + "<br />" + format["%1 ",getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayname")];
 
-		if (getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier") > 0) then {
-			_orbatText = _orbatText + format ["[%1/%2]",getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier") - (_x emptyPositions "CARGO"),getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier")];
+		_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier");
+		_freeSlots = _x emptyPositions "cargo";
+
+		// Workaround for http://feedback.arma3.com/view.php?id=21602
+		if (_maxSlots != 0) then {
+			if (_maxSlots-_freeSlots < 0) then {
+				_maxSlots = _maxSlots -(_maxSlots-_freeSlots);
+			};
+			_orbatText = _orbatText + format ["[%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
 		};
 
 		_orbatText =_orbatText + "<br />";
