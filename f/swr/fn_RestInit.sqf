@@ -12,8 +12,9 @@
 
 	f_rest_ballstart_third = "Sign_Sphere10cm_F" createVehicleLocal [0,0,0];
 	f_rest_ballend_third = "Sign_Sphere10cm_F" createVehicleLocal [0,0,0];
-	
+
 	f_rest_deployed = false;
+	f_rest_layer = ["f_rest_layer"] call BIS_fnc_rscLayer;
 // ====================================================================================
 	// Wait until f_var_debugMode is set
 	waitUntil {!isnil "f_var_debugMode"};
@@ -30,11 +31,12 @@
 
 		hideObject f_rest_ballstart_third;
 		hideObject f_rest_ballend_third;
-		
+	};
+
 // ====================================================================================
 // Wait a bit then attach the Keydown eventhandler and setup the overlay
 sleep 0.1;
 waitUntil {!isNull findDisplay 46};
 (findDisplay 46) displayAddEventHandler ["KeyDown",{_this call F_fnc_RestKeyDown;}];
-hint "SWR inited";
-4342 cutRsc ["f_rest_overlay","PLAIN"];
+player addEventHandler ["killed",{f_rest_layer cutText ["", "PLAIN"];}]; // remove the layer.
+systemChat "SWR running";

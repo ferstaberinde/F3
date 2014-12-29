@@ -4,12 +4,13 @@
 // Runs while you are deployed
 
 f_rest_deployed = true;
+f_rest_layer cutRsc ["f_rest_overlay","PLAIN"]; // draw overlay
 while{sleep 0.1;[] call f_fnc_restCanDeploy} do
 {
 	uiNamespace getVariable ['f_resting_overlay_id',0] displayCtrl 3883 ctrlSetTextColor [1,1,1,0.3];
 	if(stance player == "PRONE") then
 	{
-		player setUnitRecoilCoefficient 0.65;
+		player setUnitRecoilCoefficient 0.65; // harder to control prone ;)
 	}
 	else
 	{
@@ -18,5 +19,5 @@ while{sleep 0.1;[] call f_fnc_restCanDeploy} do
 };
 player setUnitRecoilCoefficient 1;
 uiNamespace getVariable ['f_resting_overlay_id',0] displayCtrl 3883 ctrlSetTextColor [1,1,1,0];
-player sidechat "stopped resting";
+f_rest_layer cutText ["", "PLAIN"]; // remove overlay
 f_rest_deployed = false;
