@@ -18,11 +18,6 @@ RETURNS
 Units that weren't loaded. If all units were loaded an empty array is returned
 */
 
-// MAKE SURE THE SCRIPT IS ONLY RUN SERVER-SIDE
-if (!isServer) exitWith {};
-
-// ====================================================================================
-
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_objects","_crew","_vehs","_grps","_units"];
@@ -64,6 +59,21 @@ if ({isNil _x} count _grps > 0) then {
 
 } forEach _grps;
 _grps = _grps - [grpNull];
+
+// ====================================================================================
+
+// PROCESS VEHICLES
+// We make sure that there are only vehicles in the vehicle array
+// If a soldier-unit is in the array then we check if we can use the vehicle he's in
+{
+ if (_x isKindOf "CAManBase") then {
+     if (vehicle _x != _x) then {
+         _vehs set [_forEachIndex,vehicle _x];
+     } else {
+         _vehs = _vehs - [_x];
+     };
+ };
+} forEach _vehs;
 
 // ====================================================================================
 

@@ -15,15 +15,15 @@ Disables Simulation and AI behaviour on all units but the group leader (or vehic
         // Disable simulation based on aggressiveness
         switch (ws_var_cachingAggressiveness) do {
                 case 1: {
-                        if (!("Driver" in assignedVehicleRole _x) && (_x != leader _this)) then {
+                        if (!("Driver" == (assignedVehicleRole _x) select 0) && (_x != leader _this)) then {
                 _x enableSimulationGlobal false;
                 };
                 };
                 case 2: {
-                        if !("Driver" in assignedVehicleRole _x) then {
-                        if ((_x != leader _this) || (_x == leader _this && speed _x == 0)) then {
-                        _x enableSimulationGlobal false;
-                        };
+                        if !("Driver" == (assignedVehicleRole _x) select 0) then {
+                            if ((_x != leader _this) || (_x == leader _this && speed _x == 0)) then {
+                                _x enableSimulationGlobal false;
+                            };
                 };
                 };
                 case 3: {_x enableSimulationGlobal false;};
