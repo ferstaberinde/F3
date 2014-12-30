@@ -6,20 +6,24 @@ _this spawn {
 _unit = [_this, 0, player,[objNull]] call BIS_fnc_param;
 _oldUnit = [_this, 1, objNull,[objNull]] call BIS_fnc_param;
 _forced = [_this, 4, false,[false]] call BIS_fnc_param;
-_isJIP = false;
+if(isNil "f_cam_isJIP") then { f_cam_isJIP = false; };
 // if they are jip, these are null
-if(isNull _unit ) then {_unit = cameraOn;_isJIP=true;};
+if(isNull _unit ) then {_unit = cameraOn;f_cam_isJIP=true;};
 // escape the script if you are not a seagull unless forced
 if (typeof _unit != "seagull" && !_forced || !hasInterface) ExitWith {};
 // disable this to instantly switch to the spectator script.
-waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit) || _isJIP};
+waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit) || f_cam_isJIP || _forced };
+
+
+// ====================================================================================
+
 if(!isnil "BIS_fnc_feedback_allowPP") then
 {
   // disable effects death effects
   BIS_fnc_feedback_allowPP = false;
 };
 
-if(_isJIP) then
+if(f_cam_isJIP) then
 {
   ["F_ScreenSetup",false] call BIS_fnc_blackOut;
   systemChat "Initilizing Spectator Script";
@@ -32,18 +36,18 @@ if(isNil "f_cam_VirtualCreated") then
 {
   createCenter sideLogic;
   _newGrp = createGroup sideLogic;
-  _newUnit = _newGrp createUnit ["VirtualCurator_F", [0,0,0], [], 0, "FORM"];
+  _newUnit = _newGrp createUnit ["VirtualCurator_F", [0,0,5], [], 0, "FORM"];
   _newUnit allowDamage false;
   _newUnit hideObject true;
   _newUnit enableSimulation false;
-
+  _newUnit setpos [0,0,5];
   selectPlayer _newUnit;
   waituntil{player == _newUnit};
   deleteVehicle _unit;
   f_cam_VirtualCreated = true;
 };
 
-if(isNull _oldUnit ) then {_oldUnit = (playableUnits select 0)};
+if(isNull _oldUnit ) then {if(count playableUnits > 0) then {_oldUnit = (playableUnits select 0)} else {_oldUnit = (allUnits select 0)};};
 
 // ====================================================================================
 
@@ -126,6 +130,15 @@ f_cam_forcedExit = false;
 // 0 = ALL, 1 = BLUFOR , 2 = OPFOR, 3 = INDFOR , 4 = Civ
 f_cam_sideButton = 0;
 f_cam_sideNames = ["All Sides","Blufor","Opfor","Indfor","Civ"];
+
+// ====================================================================================
+// Colors
+
+f_cam_blufor_color = [BLUFOR] call bis_fnc_sideColor;
+f_cam_opfor_color = [OPFOR] call bis_fnc_sideColor;
+f_cam_indep_color = [independent] call bis_fnc_sideColor;
+f_cam_civ_color = [civilian] call bis_fnc_sideColor;
+f_cam_empty_color = [sideUnknown] call bis_fnc_sideColor;
 
 // ====================================================================================
 
