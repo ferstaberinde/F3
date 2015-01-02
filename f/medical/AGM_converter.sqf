@@ -3,7 +3,7 @@
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
-private ["_unit","_itemCargoList","_cntFAK","_cntMediKit","_cntBandages"];
+private ["_unit","_itemCargoList","_cntFAK","_cntMediKit"];
 
 // ====================================================================================
 
@@ -38,12 +38,12 @@ clearItemCargoGlobal _unit;
 
 // ADD BACK AGM ITEMS FOR REMOVED VANILLA ITEMS
 
-_cntBandages = _cntFAK * 5;
-_unit addItemCargoGlobal ["AGM_Bandage", _cntBandages];
+_unit addItemCargoGlobal ["AGM_Bandage", (_cntFAK * 5)];
 
 if (_cntFAK <= 25 && _cntMediKit == 0 ) then // Fireteam sized cargo
 	{
-		// Do nothing
+		_unit addItemCargoGlobal ["AGM_Bandage", 5];
+		_unit addItemCargoGlobal ["AGM_Morphine", 5];
 	};
 
 if (_cntFAK <= 25 && {_cntMediKit == 1}) then // Squad sized cargo
