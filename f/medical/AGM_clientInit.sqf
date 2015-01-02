@@ -12,6 +12,10 @@ _typeOfUnit = player getVariable "f_var_assignGear";
 // Remove pre-assigned medical items
 player removeItems "FirstAidKit";
 player removeItems "Medikit";
+player removeItems "AGM_Bandage";
+player removeItems "AGM_Morphine";
+player removeItems "AGM_Epipen";
+player removeItems "AGM_Bloodbag";
 
 // Add basic items to all units
 player addItem "AGM_EarBuds";
