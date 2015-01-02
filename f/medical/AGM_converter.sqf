@@ -30,6 +30,7 @@ _cntMediKit = {_x == "MediKit"} count _itemCargoList;
 } forEach _itemCargoList;
 
 clearItemCargoGlobal _unit;
+
 {
 	_unit addItemCargoGlobal [_x,1];
 } forEach _itemCargoList;
