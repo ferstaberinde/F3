@@ -67,7 +67,7 @@ _curator setCuratorWaypointCost 0;
 // Add F3 AI Skill Selector if activated
 if({!isNil _x} count ["f_param_AISkill_BLUFOR","f_param_AISkill_INDP","f_param_AISkill_OPFOR"] > 0) then
 {
-	_curator addEventHandler ['CuratorObjectPlaced',{[[crew (_this select 1),'f\setAISKill\f_setAISkill.sqf'],'Bis_fnc_ExecVM',false] spawn BIS_fnc_MP;}];
+	_curator addEventHandler ['CuratorObjectPlaced',{(crew (_this select 1)) execVM 'f\setAISKill\f_setAISkill.sqf'}];
 };
 
 // If announce is set to true, the new curator will be announced to all players
