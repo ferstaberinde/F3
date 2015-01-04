@@ -73,8 +73,8 @@ if(isServer) then {
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_var_removeBodyDelay = 180;
-f_var_removeBodyDistance = 500;
+f_var_removeBodyDelay = 120;
+f_var_removeBodyDistance = 200;
 f_var_doNotRemoveBodies = [];
 [] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
 
