@@ -54,10 +54,10 @@ f_randomDown = 0.15;
 // The default skill levels for all sides. They are overriden by any parameters set.
 // Values of > 1 mean that units belonging to that side are not modified by the script
 
-if (isNil "f_var_skillBlu") then {f_var_skillBlu = 99;}: // BLUFOR
+if (isNil "f_var_skillBlu") then {f_var_skillBlu = 99;}; // BLUFOR
 if (isNil "f_var_skillRes") then {f_var_skillRes = 99;}; // INDEPENDENT
-if (isNil "f_var_skillOpf") then {f_var_skillOpf = 99;}: // OPFOR
-if (isNil "f_var_skillCiv") then {f_var_skillCiv = 99;}: // CIVILIAN
+if (isNil "f_var_skillOpf") then {f_var_skillOpf = 99;}; // OPFOR
+if (isNil "f_var_skillCiv") then {f_var_skillCiv = 99;}; // CIVILIAN
 
 // ====================================================================================
 
