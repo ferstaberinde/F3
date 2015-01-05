@@ -30,7 +30,7 @@ if(_bool && alive _unit) then
 	};
 
 	// Just a safety switch to ensure that the unit is wounded enough to have the firstaid option
-	if(damage _unit < 0.251) { _unit setDamage 0.251};
+	if(damage _unit < 0.251) then { _unit setDamage 0.251};
 
 
 
