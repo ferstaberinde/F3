@@ -75,7 +75,7 @@ _briefing = _briefing + "
 ZEUS SUPPORT<br/>
 <execute expression=""
 if !(isNull (getAssignedCuratorLogic player)) then {hintsilent 'ZEUS already assigned!'} else {
-	[[player,true,playableUnits],'f_fnc_zeusInit',false] spawn BIS_fnc_MP; hintsilent 'Curator assigned.';
+	[[player,true,[]],'f_fnc_zeusInit',false] spawn BIS_fnc_MP; hintsilent 'Curator assigned.';
 };"">Assign ZEUS to host</execute>.<br/>
 
 |- <execute expression=""
