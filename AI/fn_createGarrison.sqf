@@ -32,17 +32,22 @@ RETURNS
 array of created units
 */
 
+// DECLARE VARIABLES
+private ["_garrisonNATO","_garrisonCSAT","_garrisonAAF","_garrisonFIA","_garrisonCIV","_threshold","_debug","_area","_radius","_side","_classes","_buildings","_int","_grp","_thrsh","_casses"];
+
 // Default classes (Arma 3)
-// BLUFOR
-ws_var_garrisonWest = ["B_Soldier_lite_F","B_Soldier_F"];
-// OPFOR
-ws_var_garrisonEast = ["O_Soldier_lite_F","O_Soldier_F"];
-// INDEPENDENT
-ws_var_garrisonIndp = ["I_Soldier_lite_F","I_Soldier_F"];
+// NATO
+_garrisonNATO = ["B_Soldier_lite_F","B_Soldier_F"];
+// CSAT
+_garrisonCSAT = ["O_Soldier_lite_F","O_Soldier_F"];
+// AAF
+_garrisonAAF = ["I_Soldier_lite_F","I_Soldier_F"];
+// FIA
+_garrisonFIA = ["B_G_Soldier_lite_F","B_G_Soldier_F"];
+// CIVILIAN
+_garrisonCIV = [""];
 
 _threshold = 0.8; // Default percentage of building positions that can be taken in any given building (1=all)
-
-private ["_debug","_area","_radius","_side","_classes","_buildings","_int","_grp","_thrsh"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
 _debug = if !(isNil "ws_debug") then {ws_debug} else {false};
@@ -56,7 +61,7 @@ _thrsh = if (count _this > 4) then {_this select 4} else {_threshold};
 _classes = if (count _this > 5) then {_this select 5} else {[]};
 
 //Fault checks
-//Checking the variables we have enough against what we should have
+//Checking the variables we have against what we should have
 {[_x,["SIDE"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_side];
 {[_x,["SCALAR"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_int,_radius];
 {[_x,["ARRAY"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_classes,_area];
@@ -64,12 +69,13 @@ _classes = if (count _this > 5) then {_this select 5} else {[]};
 // If default classes are being used, select the corresponding array
 if (count _classes == 0) then {
 	switch (_side) do {
-		case west: {_classes = ws_var_garrisonWest};
-		case blufor: {_classes = ws_var_garrisonWest};
-		case east: {_classes = ws_var_garrisonEast};
-		case opfor: {_classes = ws_var_garrisonEast};
-		case resistance: {_classes = ws_var_garrisonIndp};
-		case independent: {_classes = ws_var_garrisonIndp};
+		case west: {_classes = _garrisonNATO};
+		case blufor: {_classes = _garrisonNATO};
+		case east: {_classes = _garrisonCSAT};
+		case opfor: {_classes = _garrisonCSAT};
+		case resistance: {_classes = _garrisonAAF};
+		case independent: {_classes = _garrisonAAF};
+		case civilian: {_casses = _garrisonCIV};
 	};
 };
 
@@ -88,6 +94,9 @@ if (_thrsh <= 0) then {_thrsh = 0.1};
 // Create a new group
 _grp = createGroup _side;
 
+// Give the group a hold waypoint as otherwise ASR_AI might call them outside
+[_grp,_area,["hold"]] call ws_fnc_addWaypoint;
+
 for "_x" from 1 to _int do {
 	private ["_b","_bpa","_bpl","_bu","_i","_u","_dir"];
 
@@ -95,18 +104,6 @@ for "_x" from 1 to _int do {
 	_bpa = _b getVariable "ws_bPos";
 	_bpl = _b getVariable ["ws_bPosLeft",_bpa];
 	_bu = _b getVariable ["ws_bUnits",0];
-
-	// Check if the array with bpos is valid
-	// (Removed as it's prob not needed)
-	/*
-	while {typeName _bpa != typeName [] && {count _buildings > 0}} do {
-		_buildings = _buildings - [_b];
-		_b = _buildings call ws_fnc_selectRandom;
-		_bpa = _b getVariable ["ws_bPos",false];
-		_bpl = _b getVariable ["ws_bPosLeft",_bpa];
-		_bu = _b getVariable ["ws_bUnits",0];
-	};
-	*/
 
 	// Loop until we get a building that has building positions at all
 	// Mostly a safety, not sure if there even are any buildings with no building positions in the game
@@ -165,7 +162,11 @@ for "_x" from 1 to _int do {
 
 };
 
-_grp enableAttack false; // Prevent the group leader to issue attack orders to the members, improving their attack from buildings
+// Prevent the group leader to issue attack orders to the members, improving their attack from buildings
+_grp enableAttack false;
+
+// Set the group's attack mode and stance
+[_grp,"AWARE","YELLOW"] call ws_fnc_setAIMode;
 
 // Return created unis
 (units _grp)
