@@ -75,7 +75,7 @@ if (count _classes == 0) then {
 		case opfor: {_classes = _garrisonCSAT};
 		case resistance: {_classes = _garrisonAAF};
 		case independent: {_classes = _garrisonAAF};
-		case civilian: {_casses = _garrisonCIV};
+		case civilian: {_classes = _garrisonCIV};
 	};
 };
 
