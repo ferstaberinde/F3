@@ -134,6 +134,6 @@ _grp setCurrentWaypoint _wp;
 deleteVehicle _hp;
 
 // Re-Enable normal pilot behaviour
-_pilot enableai "AUTOTARGET"; _pilot enableai "TARGET"; _pilot allowFleeing 1;
+_pilot enableai "AUTOTARGET"; _pilot enableai "TARGET";
 
 true
