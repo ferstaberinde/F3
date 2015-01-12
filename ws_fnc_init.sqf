@@ -46,6 +46,7 @@ if !(ws_game_a3) then {
 	ws_fnc_loadVehicle = compile preprocessfile "ws_fnc\tools\fn_loadVehicle.sqf";
 	ws_fnc_listPlayers = compile preprocessfile "ws_fnc\tools\fn_listPlayers.sqf";
 	ws_fnc_nearPlayer = compile preprocessfile "ws_fnc\tools\fn_nearPlayer.sqf";
+	ws_fnc_setGVar = compile preprocessfile "ws_fnc\tools\ws_fnc_setGVar";
 
 	//Misc Functions
 	ws_fnc_switchLights = compile preprocessfile "ws_fnc\misc\fn_switchLights.sqf";
