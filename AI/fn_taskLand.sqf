@@ -45,8 +45,6 @@ _pos = (_this select 1) call ws_fnc_getEpos;
 _wait = if (count _this > 2) then [{_this select 2},{15}];
 _extract = if (count _this > 3) then [{_this select 3},{getPosATL _helo}];
 
-systemChat format ["%1",_extract];
-
 {[_x,["OBJECT"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_helo];
 {[_x,["SCALAR"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_wait];
 {[_x,["ARRAY"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_pos];

@@ -17,12 +17,11 @@ PARAMETERS
 3. Whether to pub-var the variable after it was set		| OPTIONAL - bool (default: false)
 4. Whether to set the variable even if it is not nil	| OPTIONAL - bool (default: false)
 
-
 RETURNS
 nothing
 */
 
-private ["_badarray","_var","_val","_pub","_force","_debug"];
+private ["_var","_val","_pub","_force","_debug"];
 
 _var = _this select 0;
 _val = _this select 1;
