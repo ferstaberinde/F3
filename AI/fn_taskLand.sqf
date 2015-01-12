@@ -1,5 +1,4 @@
 /* ws_fnc_taskLand
-Latest: 28.02.2014
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 Based on a script made by Head
 
@@ -21,11 +20,11 @@ Full:
 PARAMETERS
 1. The helicopter                              | MANDATORY
 2. The position to land on                     | MANDATORY - can be marker, object or positional array
-3. The position to move to after landing       | MANDATORY - can be marker, object or positional array
-4. The max. time to wait after touching ground | OPTIONAL - any number (default: 15s)
+3. The max. time to wait after touching ground | OPTIONAL - any number (default: 15s)
+4. The position to move to after landing       | OPTIONAL - can be marker, object or positional array (default: helo starting position)
 
 EXAMPLE
-[VehAAF_H,"mkrLand",airport] spawn ws_fnc_taskLand; - would cause the helicopter named "VehAAF_H" to take off, fly towards the marker named "mkrLand" and extract towards the object named "airport".
+[VehAAF_H,"mkrLand"] spawn ws_fnc_taskLand; - would cause the helicopter named "VehAAF_H" to take off, fly towards the marker named "mkrLand" and move back to it's starting spot
 
 nul = [vehicle (leader group this),position this,"mkrExtract"] spawn ws_fnc_taskLand; - in the on Act. Field of a WP would cause the helicopter to land at the WP's center and then move to the marker named "mkrExtract". I'd suggest to give the WP an activation radius of at least 200.
 
@@ -33,9 +32,9 @@ TODO
 Use BIS_fnc_findSafePos to avoid slopes
 */
 
-if !(ws_game_a3) exitWith {["ws_fnc_taskLand DBG:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
+if !(ws_game_a3) exitWith {["ws_fnc_taskLand:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
-private ["_debug","_helo","_pos","_wait","_pilot","_grp","_hp","_wp"];
+private ["_debug","_helo","_pos","_wait","_extract","_pilot","_grp","_hp","_wp"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
 _debug = false;  if !(isNil "ws_debug") then {_debug = ws_debug};
@@ -43,29 +42,33 @@ _debug = false;  if !(isNil "ws_debug") then {_debug = ws_debug};
 // Parse parameters
 _helo = _this select 0;
 _pos = (_this select 1) call ws_fnc_getEpos;
-_extract = (_this select 2) call ws_fnc_getEPos;
-_wait = if (count _this > 3) then {_this select 3} else {15};
+_wait = if (count _this > 2) then [{_this select 2},{15}];
+_extract = if (count _this > 3) then [{_this select 3},{getPosATL _helo}];
+
+systemChat format ["%1",_extract];
 
 {[_x,["OBJECT"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_helo];
 {[_x,["SCALAR"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_wait];
-{[_x,["ARRAY"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_pos,_extract];
+{[_x,["ARRAY"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_pos];
 
-if !(_helo isKindOf "Helicopter") exitWith {["ws_fnc_taskLand DBG:",[_helo]," must be a helicopter!"] call ws_fnc_debugtext};
+if !(_helo isKindOf "Helicopter") exitWith {["ws_fnc_taskLand:",[_helo]," must be a helicopter!"] call ws_fnc_debugtext};
 
 // Set other variables
 _pilot = driver _helo;
 _grp = group _pilot;
 
-// Create an invisible helipad at location
-_hp = "Land_HelipadEmpty_F" createVehicle (_pos findEmptyPosition [0,100,typeOf _helo]);
-
 // Get helicopter to move towards the position
 _helo doMove _pos;
 
 // Wait until the helo is within 150 m of the landing zone
-while {(getPosATL _helo) distance _pos > 150} do {
+while {canMove _helo  && (alive _helo ) && (getPosATL _helo) distance _pos > 150} do {
     sleep 1;
-    if (_debug) then {["ws_fnc_taskLand DBG: Waiting for ",[_helo]," to be in distance"] call ws_fnc_debugtext};
+    if (_debug) then {["ws_fnc_taskLand: Waiting for ",[_helo]," to be in distance"] call ws_fnc_debugtext};
+};
+
+//If helo has been downed exit script, otherwise begin landing
+if (!canMove _helo || !alive _helo || !alive _pilot) exitWith {
+    if (_debug) then {["ws_fnc_taskLand: Helo or Pilot: ",[_helo,_pilot]," dead or immobile, exiting"] call ws_fnc_debugtext};
 };
 
 // Set up helicopter
@@ -75,28 +78,34 @@ while {(getPosATL _helo) distance _pos > 150} do {
 _pilot setBehaviour "CARELESS";
 _pilot allowFleeing 0;
 
+// Create an invisible helipad at location
+_hp = "Land_HelipadEmpty_F" createVehicle (_pos findEmptyPosition [0,100,typeOf _helo]);
+
 // Begin landing
-while { ( (alive _helo ) && !(unitReady _helo ) ) } do
+while {canMove _helo  && alive _helo && !(unitReady _helo)} do
 {
    sleep 1;
-   if (_debug) then {["ws_fnc_taskLand DBG: Waiting for ",[_helo]," to be ready"] call ws_fnc_debugtext};
+   if (_debug) then {["ws_fnc_taskLand: Waiting for ",[_helo]," to be ready"] call ws_fnc_debugtext};
 };
 
 //If helo has been downed exit script, otherwise begin landing
-if !(alive _helo ) exitWith {};
+if (!canMove _helo || !alive _helo || !alive _pilot) exitWith {
+    if (_debug) then {["ws_fnc_taskLand: Helo or Pilot: ",[_helo,_pilot]," dead or immobile, exiting"] call ws_fnc_debugtext};
+};
 
-_helo land "GET OUT";
-if (_debug) then {["ws_fnc_taskLand DBG:",[_helo]," landing."] call ws_fnc_debugtext};
+_helo land "GET IN";
+
+if (_debug) then {["ws_fnc_taskLand:",[_helo]," landing."] call ws_fnc_debugtext};
 
 waituntil {isTouchingGround  _helo};
-if (_debug) then {["ws_fnc_taskLand DBG:",[_helo]," touched ground."] call ws_fnc_debugtext};
+if (_debug) then {["ws_fnc_taskLand:",[_helo]," touched ground."] call ws_fnc_debugtext};
 
 // Prevent helo from taking off
 //_pilot disableAI "move";
 
 // If cargo is onboard wait until all are out
 if (count (assignedCargo _helo) > 0) then {
-    if (_debug) then {["ws_fnc_taskLand DBG:",[_helo]," waiting for cargo to get out."] call ws_fnc_debugtext};
+    if (_debug) then {["ws_fnc_taskLand:",[_helo]," waiting for cargo to get out."] call ws_fnc_debugtext};
 
     {
         doGetOut  _x;
@@ -109,7 +118,7 @@ if (count (assignedCargo _helo) > 0) then {
 
 // Otherwise wait until the designated time or all seats are filled
 } else {
-    if (_debug) then {["ws_fnc_taskLand DBG:",[_helo,_wait]," waiting designated time."] call ws_fnc_debugtext};
+    if (_debug) then {["ws_fnc_taskLand:",[_helo,_wait]," waiting designated time."] call ws_fnc_debugtext};
     for "_i" from 1 to _wait do {
         if (_helo  emptyPositions "Cargo" == 0) exitWith {};
         sleep 1;
@@ -117,10 +126,10 @@ if (count (assignedCargo _helo) > 0) then {
 };
 
 // Take off
-if (_debug) then {["ws_fnc_taskLand DBG:",[_helo]," taking off."] call ws_fnc_debugtext};
+if (_debug) then {["ws_fnc_taskLand:",[_helo]," taking off."] call ws_fnc_debugtext};
 
 _helo land "NONE";
-_wp = [_grp,_extract] call ws_fnc_addWayPoint;
+_wp = [_grp,_extract,["TR UNLOAD"]] call ws_fnc_addWayPoint;
 _grp setCurrentWaypoint _wp;
 deleteVehicle _hp;
 
