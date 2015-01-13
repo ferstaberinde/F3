@@ -64,23 +64,20 @@ if (count _veharray > 0) then {
 _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 
 	{
-		 // Filter all characters which might break the diary entry (such as the & in Orca Black & White)
-		_vehName = [getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayname"),"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_- "] call BIS_fnc_filterString;
+		_orbatText = _orbatText + "<br />" + format["%1 ",getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayname")];
 
-		_orbatText = _orbatText + "<br />" + format["%1 ",_vehName];
-
-		count allTurrets [_x, true] - count allTurrets _x;
-
-		// Workaround for http://feedback.arma3.com/view.php?id=21602
-		_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier") + (count allTurrets [_x, true] - count allTurrets _x);
+		_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier");
 		_freeSlots = _x emptyPositions "cargo";
 
-		if (_maxSlots > 0) then {
+		// Workaround for http://feedback.arma3.com/view.php?id=21602
+		if (_maxSlots != 0) then {
+			if (_maxSlots-_freeSlots < 0) then {
+				_maxSlots = _maxSlots -(_maxSlots-_freeSlots);
+			};
 			_orbatText = _orbatText + format ["[%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
 		};
 
-		_orbatText = _orbatText  + "<br />";
-
+		_orbatText =_orbatText + "<br />";
 		{
 			if ((assignedVehicleRole _x select 0) != "CARGO") then {
 				_orbatText = _orbatText + format["|- %1",name _x];
