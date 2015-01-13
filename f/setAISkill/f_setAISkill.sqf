@@ -36,8 +36,8 @@ f_var_skillSet = [
 	0.6,		// aimingShake
 	0.7,		// aimingSpeed
 	2,			// endurance
-	0.6,		// spotDistance
-	0.6,		// spotTime
+	0.65,		// spotDistance
+	0.65,		// spotTime
 	1.2,		// courage
 	2,			// reloadSpeed
 	2,			// commanding
