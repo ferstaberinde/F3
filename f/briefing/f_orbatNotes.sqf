@@ -9,7 +9,7 @@ waitUntil {scriptDone f_script_setGroupIDs};
 private ["_orbatText", "_groups", "_precompileGroups","_maxSlots","_freeSlots"];
 _orbatText = "<br />NOTE: The ORBAT below is only accurate at mission start.<br />
 <br />
-GROUP LEADERS + MEDICS<br /><br />";
+<font size='18'>GROUP LEADERS + MEDICS</font><br /><br />";
 _groups = [];
 _hiddenGroups = [];
 
