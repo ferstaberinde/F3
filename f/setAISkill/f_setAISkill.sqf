@@ -25,28 +25,27 @@ private ["_units","_superSkill","_highSkill","_mediumSkill","_lowSkill"];
 
 _superSkill = 1.00;
 _highSkill = 0.75;
-_mediumSkill = 0.50;
-_lowSkill = 0.25;
+_mediumSkill = 0.55;
+_lowSkill = 0.35;
 
-// This are the skills a soldier set to _superSkill would have. For all other skill levels the values are rounded using the numbers above.
+// This are the minimal skills a soldier set to _superSkill would have. For all other skill levels the values are rounded using the numbers above.
 // These are recommended levels to avoid "laser" AI snipers. Change them accordingly if you are finding the AI to be too inaccurate or are using AI mods.
 
 f_var_skillSet = [
 	0.55,		// aimingAccuracy
 	0.6,		// aimingShake
 	0.7,		// aimingSpeed
-	1,			// endurance
-	0.5,		// spotDistance
-	0.7,		// spotTime
-	1,			// courage
-	1,			// reloadSpeed
-	1,			// commanding
-	1			// general
+	2,			// endurance
+	0.6,		// spotDistance
+	0.6,		// spotTime
+	1.2,		// courage
+	2,			// reloadSpeed
+	2,			// commanding
+	1.2			// general
 ];
 
-// These are the ranges in which skills can differ between two soldiers on the same skill level.
-f_randomUp = 0.15;
-f_randomDown = 0.15;
+// The final skill will be +/- this range
+f_var_skillRandom = 0.15;
 
 // ====================================================================================
 
@@ -71,7 +70,7 @@ f_var_skillCiv = 99; // CIVILIAN
 // BROADCAST PUBLIC VARIABLES
 // We make the global variables known to all clients
 
-{publicVariable _x} forEach ["f_var_skillSet","f_randomUP","f_randomDown","f_var_skillBLU","f_var_skillOPF","f_var_skillRES","f_var_skillCIV"];
+{publicVariable _x} forEach ["f_var_skillRandom","f_var_skillBLU","f_var_skillOPF","f_var_skillRES","f_var_skillCIV"];
 
 // ====================================================================================
 
@@ -94,27 +93,29 @@ _skill = 0;
 _skillArray = [];
 
     if !(_x getVariable ["f_setAISkill",false]) then {
-	// We change the value of skill to the appropiate one depending on the unit's side
-	switch (side _x) do {
-		case west: {_skill = f_var_skillBLU};
-		case blufor: {_skill = f_var_skillBLU};
-		case east: {_skill = f_var_skillOPF};
-		case opfor: {_skill = f_var_skillOPF};
-		case independent: {_skill = f_var_skillRES};
-		case resistance: {_skill = f_var_skillRES};
-		case civilian: {_skill = f_var_skillCIV};
-	};
+		// We change the value of skill to the appropiate one depending on the unit's side
+		switch (side _x) do {
+			case west: {_skill = f_var_skillBLU};
+			case blufor: {_skill = f_var_skillBLU};
+			case east: {_skill = f_var_skillOPF};
+			case opfor: {_skill = f_var_skillOPF};
+			case independent: {_skill = f_var_skillRES};
+			case resistance: {_skill = f_var_skillRES};
+			case civilian: {_skill = f_var_skillCIV};
+		};
 
-	if (_skill == 99) exitWith {};
+		// If skill is 99 it is not configured in the params and the unit will be ignored
+		if (_skill == 99) exitWith {
+			_x setVariable ["f_setAISkill",true];
+		};
 
-	for "_i" from 0 to 9 do {
-		_skilllevel = (f_var_skillSet select _i) * _skill;
-		_random =  random f_randomUp - random f_randomDown;
-		_skillArray set [_i, (_skilllevel + _random)];
-	};
+		for "_i" from 0 to 9 do {
+			_skilllevel = (f_var_skillSet select _i) * _skill;
+			_skillArray pushBack (_skilllevel + random f_var_skillRandom - random f_var_skillRandom);
+		};
 
-	// We run the function that sets the skills on all clients
-	[[_x,_skillArray],"f_fnc_setAISkill"] spawn BIS_fnc_MP;
+		// We run the function that sets the skills on all clients
+		[[_x,_skillArray],"f_fnc_setAISkill"] spawn BIS_fnc_MP;
      };
 
 sleep 0.1; // Very short sleep to avoid lag when modifiyng a lot of AI
