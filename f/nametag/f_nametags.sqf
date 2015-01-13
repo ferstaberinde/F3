@@ -182,16 +182,19 @@ addMissionEventHandler ["Draw3D", {
 							// If it's the driver calculate the cargo slots
 							if(driver _veh == _x) then
 							{
-								// Workaround for http://feedback.arma3.com/view.php?id=21602
-								_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier") + (count allTurrets [_veh, true] - count allTurrets _veh);
+								_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _veh >> "transportSoldier");
 								_freeSlots = _veh emptyPositions "cargo";
 
-								if (_maxSlots > 0) then {
+								// Workaround for http://feedback.arma3.com/view.php?id=21602
+								if (_maxSlots != 0) then {
 
-								_suffix = _suffix + format [" (%1/%2)",(_maxSlots-_freeSlots),_maxSlots];
+									if (_maxSlots-_freeSlots < 0) then {
+										_maxSlots = _maxSlots -(_maxSlots-_freeSlots);
+									};
 
-								[_x,_pos,_suffix] call f_fnc_drawNameTag;
+									_suffix = _suffix + format [" (%1/%2)",(_maxSlots-_freeSlots),_maxSlots];
 
+									[_x,_pos,_suffix] call f_fnc_drawNameTag;
 								} else {
 									[_x,_pos,_suffix] call f_fnc_drawNameTag;
 								};
