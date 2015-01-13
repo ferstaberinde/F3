@@ -33,8 +33,8 @@ _lowSkill = 0.35;
 
 f_var_skillSet = [
 	0.55,		// aimingAccuracy
-	0.6,		// aimingShake
-	0.7,		// aimingSpeed
+	0.65,		// aimingShake
+	0.65,		// aimingSpeed
 	2,			// endurance
 	0.65,		// spotDistance
 	0.65,		// spotTime
