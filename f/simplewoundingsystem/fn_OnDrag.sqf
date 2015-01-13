@@ -34,14 +34,20 @@ if(local _unit) then
 waitUntil {
 	sleep 0.1;
 	_dude =  _dragger getVariable ["f_wound_dragging",nil];
-	( isNil "_dude" || !alive _dragger)
+	( isNil "_dude" || !alive _dragger || (_dragger	getVariable ["f_wound_down",false]))
 };
+
 
 _dragger setVariable ["f_wound_dragging",nil,true];
 // release unit.
 detach _unit;
 _unit setPosATL getposATL _dragger;
-_unit switchMove "AinjPpneMstpSnonWrflDb_release";
+
+if(!(_dragger getVariable ["f_wound_down",false])) then
+{
+	_unit switchMove "AinjPpneMstpSnonWrflDb_release";
+};
+
 sleep 0.1;
 if(_unit getVariable ["f_wound_down",false]) then
 {
@@ -51,6 +57,7 @@ else
 {
 	_unit switchMove "amovppnemstpsraswrfldnon";
 };
+
 if(_dragger getVariable ["f_wound_down",false]) then
 {
 	_dragger switchMove "acts_InjuredLookingRifle02";
