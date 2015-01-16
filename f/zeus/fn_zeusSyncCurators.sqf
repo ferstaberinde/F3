@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES
 
-private ["_curator"];
+private ["_curator","_target"];
 
 // ====================================================================================
 
@@ -19,6 +19,7 @@ if !(isServer) exitWith {};
 // Using variables passed to the script instance, we will create some local variables:
 
 _curator = [_this,0,objNull] call bis_fnc_param;
+_target = [_this,1,objNull] call bis_fnc_param;
 
 // ====================================================================================
 
@@ -31,13 +32,29 @@ if !(_curator in allCurators) then {
 
 // If _curator is null or not the correct logic exit with an error message.
 if (isNull _curator || typeOf _curator != "ModuleCurator_F") exitWith {
-	player GlobalChat format ["DEBUG (f\zeus\fn_zeusSyncCurators.sqf): Could not resolve curator properly, is either null or not the correct logic. IsNull = %1, _curator type: %2",isNull _curator,typeOf _curator];
+	systemchat format ["F3 DEBUG (f\zeus\fn_zeusSyncCurators.sqf): Could not resolve curator properly, is either null or not the correct logic. IsNull = %1, _curator type: %2",isNull _curator,typeOf _curator];
 };
 
 // ====================================================================================
 
+// RESOLVE CURATOR VARIABLE
+// If the passed unit is not in the list of all curators, check whether the curator is assigned to it
+
+if !(_target in allCurators) then {
+	_target = getAssignedCuratorLogic _target;
+};
+
+// If _curator is null or not the correct logic exit with an error message.
+if (isNull _target || typeOf _target != "ModuleCurator_F") exitWith {
+	systemchat format ["F3 DEBUG (f\zeus\fn_zeusSyncCurators.sqf): Could not resolve curator properly, is either null or not the correct logic. IsNull = %1, _curator type: %2",isNull _target,typeOf _target];
+};
+
+
+// ====================================================================================
+
 // Add existing units from other curators to the selected curators list and set up the EHs
-{
-	_curator addCuratorEditableObjects [curatorEditableObjects _x,true];
-	_x addEventHandler ['CuratorObjectPlaced',{_curator addCuratorEditableObjects [(_this select 1),true];}];
-} forEach allCurators - [_curator];
+_curator addCuratorEditableObjects [curatorEditableObjects _target,true];
+_target addCuratorEditableObjects [curatorEditableObjects _curator,true];
+
+_curator addEventHandler ['CuratorObjectPlaced',{_target addCuratorEditableObjects [(_this select 1),true];}];
+_target addEventHandler ['CuratorObjectPlaced',{_curator addCuratorEditableObjects [(_this select 1),true];}];
