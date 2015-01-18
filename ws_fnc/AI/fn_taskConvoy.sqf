@@ -45,7 +45,7 @@ if (({!canMove _x || !alive _x || (!isNull (_x findNearestEnemy (getPosATL _x)))
 
 // Setup convoy mode
 {
-	[(group (driver _x)),"SAFE"] call ws_fnc_setAIMode;
+	[(group (driver _x)),"SAFE","LIMITED"] call ws_fnc_setAIMode;
 } forEach _convoy;
 
 // As long as the convoy isn't threatened, keep it moving
@@ -114,9 +114,9 @@ while {_run} do {
 		};
 
 		// If the vehicle is way over limit, reset velocity
-		if (speed _veh > _speedLimit *1.5) then {
+		/*if (speed _veh > _speedLimit *1.5) then {
 			_veh setVelocity [(11 * (sin _dir)), (11 * (cos _dir)), velocity _veh select 2];
-		};
+		};*/
 
 		// If for some reason the vehicle is halted, reset speed limit to the original value
 		if (speed _veh < 0.1) then {
@@ -138,8 +138,8 @@ doStop _veh;
 		if (_veh getCargoIndex _x != -1 && _x == leader group _x) then {
 			(group _x) leaveVehicle _veh;
 		} else {
-			// If the vehicle is a "soft" one and doesn't have a gunner, let the crew dismount too
-			if (_veh isKindOf "Car" && !("Gunner" in ((typeOf _veh) call bis_fnc_vehicleRoles))) then {
+			// If the vehicle is a "soft" one and can't shoot, let the crew dismount too
+			if (_veh isKindOf "Car" && !canFire _veh) then {
 				(group driver _veh) leaveVehicle _veh;
 			};
 		};
