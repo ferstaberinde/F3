@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-2-2
+* Version: 3-2-1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
