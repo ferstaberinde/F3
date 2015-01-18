@@ -256,6 +256,7 @@ Version | Date
  * Tweaked default skill levels: medium and low slightly better.
  * Tweaked default skillSet: non-aiming skills higher by default.
  * Merged randomUp and randomDown into one variable.
+ * Added new optional variable: f_var_skillSetGlobal - false (default) sets skill only where AI is local
 * Fixed AI Caching component:
  * Infantry would not disable simulation properly on aggressiveness 1 and 2.
 * Fixed ORBAT Notes and Name Tags components:
