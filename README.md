@@ -236,13 +236,6 @@ Version | Date
 
 3-2-2 | XX JAN 2015
 
-* Updated Radio Systems Support component:
- * Switched linkItem to addItem for ACRE2.
-* Fixed F3 Spectator Script component: 
- * Fixed incompatiblity with most recent Arma 3 update.
-
-3-2-1 | 06 DEC 2014
-
 * New: F3 Assign Gear AI component:
  * loops through present AI and equips them with corresponding F3 gear
 
@@ -276,6 +269,14 @@ Version | Date
 
 * Fixed: F3 Caching component:
  * infantry would not disable simulation properly on aggressiveness 1 & 2
+
+3-2-1 | 06 DEC 2014
+
+* Updated Radio Systems Support component:
+ * Switched linkItem to addItem for ACRE2.
+
+* Fixed F3 Spectator Script component: 
+ * Fixed incompatiblity with most recent Arma 3 update.
 
 3-2-0 | 15 NOV 2014
 
