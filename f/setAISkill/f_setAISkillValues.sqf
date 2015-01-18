@@ -1,5 +1,6 @@
-// F3 - AI Skill Selector (A&D)
+// F3 - Set AI Skill Values
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
 // ====================================================================================
 
 // CHECK ACTIVATED PARAMETERS
@@ -14,100 +15,109 @@ if (isNil "f_param_AISkill_INDP") then {f_param_AISkill_INDP = 99};
 // SELECT BLUFOR AI SKILLS
 // Using the value of f_param_AISkill_BLUFOR, a value for _skillSideBLUFOR is set.
 
-f_var_skillBlu =
-switch (f_param_AISkill_BLUFOR) do
+if (isNil "f_var_skillBlu") then
 {
-// Super
-	case 0:
+f_var_skillBlu =
+	switch (f_param_AISkill_BLUFOR) do
 	{
-		_superSkill;
-	};
-// High
-	case 1:
-	{
-		_highSkill;
-	};
-// Medium
-	case 2:
-	{
-		_mediumSkill;
-	};
-// Low
-	case 3:
-	{
-		_lowSkill;
-	};
-// Default
-    default {
-    	99;
+	// Super
+		case 0:
+		{
+			_superSkill;
+		};
+	// High
+		case 1:
+		{
+			_highSkill;
+		};
+	// Medium
+		case 2:
+		{
+			_mediumSkill;
+		};
+	// Low
+		case 3:
+		{
+			_lowSkill;
+		};
+	// Default
+	    default {
+	    	99;
+		};
 	};
 };
+
 
 // ====================================================================================
 
 // SELECT OPFOR AI SKILLS
 // Using the value of f_param_AISkill_OPFOR, a value for _skillSideOPFOR is set.
 
-f_var_skillOpf =
-switch (f_param_AISkill_OPFOR) do
+if (isNil "f_var_skillOpf") then
 {
-// Super
-	case 0:
+	f_var_skillOpf =
+	switch (f_param_AISkill_OPFOR) do
 	{
-		_superSkill;
-	};
-// High
-	case 1:
-	{
-		_highSkill;
-	};
-// Medium
-	case 2:
-	{
-		_mediumSkill;
-	};
-// Low
-	case 3:
-	{
-		_lowSkill;
-	};
-// Default
-    default {
-    	99;
+	// Super
+		case 0:
+		{
+			_superSkill;
+		};
+	// High
+		case 1:
+		{
+			_highSkill;
+		};
+	// Medium
+		case 2:
+		{
+			_mediumSkill;
+		};
+	// Low
+		case 3:
+		{
+			_lowSkill;
+		};
+	// Default
+	    default {
+	    	99;
+		};
 	};
 };
-
 // ====================================================================================
 
 // SELECT INDEPENDENT AI SKILLS
 // Using the value of f_param_AISkill_INDP, a value for _skillSideOPFOR is set.
 
-f_var_skillRes =
-switch (f_param_AISkill_INDP) do
+if (isNil "f_var_skillRes") then
 {
-// Super
-	case 0:
+	f_var_skillRes =
+	switch (f_param_AISkill_INDP) do
 	{
-		 _superSkill;
-	};
-// High
-	case 1:
-	{
-		 _highSkill;
-	};
-// Medium
-	case 2:
-	{
-		_mediumSkill;
-	};
-// Low
-	case 3:
-	{
-		_lowSkill;
-	};
-// Default
-    default {
-    	99;
+	// Super
+		case 0:
+		{
+			 _superSkill;
+		};
+	// High
+		case 1:
+		{
+			 _highSkill;
+		};
+	// Medium
+		case 2:
+		{
+			_mediumSkill;
+		};
+	// Low
+		case 3:
+		{
+			_lowSkill;
+		};
+	// Default
+	    default {
+	    	99;
+		};
 	};
 };
 

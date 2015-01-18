@@ -49,14 +49,10 @@ f_var_skillRandom = 0.15;
 
 // ====================================================================================
 
-// SET DEFAULT VALUES
-// The default skill levels for all sides. They are overriden by any parameters set.
-// Values of > 1 mean that units belonging to that side are not modified by the script
+// BROADCAST PUBLIC VARIABLES
+// Make the relevant global variables known to all clients
 
-if (isNil "f_var_skillBlu") then {f_var_skillBlu = 99;}; // BLUFOR
-if (isNil "f_var_skillRes") then {f_var_skillRes = 99;}; // INDEPENDENT
-if (isNil "f_var_skillOpf") then {f_var_skillOpf = 99;}; // OPFOR
-if (isNil "f_var_skillCiv") then {f_var_skillCiv = 99;}; // CIVILIAN
+{publicVariable _x} forEach ["f_var_skillRandom","f_var_skillSet"];
 
 // ====================================================================================
 
@@ -67,18 +63,10 @@ if (isNil "f_var_skillCiv") then {f_var_skillCiv = 99;}; // CIVILIAN
 
 // ====================================================================================
 
-// BROADCAST PUBLIC VARIABLES
-// We make the global variables known to all clients
-
-{publicVariable _x} forEach ["f_var_skillRandom","f_var_skillBLU","f_var_skillOPF","f_var_skillRES","f_var_skillCIV"];
-
-// ====================================================================================
-
 // SET KEY VARIABLES
 // If an array of units was passed, the skill change will apply only to them
 
-_units = allUnits;
-if (count _this > 0) then {_units = _this};
+_units = if (count _this > 0) then [{_this},{allUnits}];
 
 // ====================================================================================
 
@@ -114,8 +102,12 @@ _skillArray = [];
 			_skillArray pushBack (_skilllevel + random f_var_skillRandom - random f_var_skillRandom);
 		};
 
-		// We run the function that sets the skills on all clients
-		[[_x,_skillArray],"f_fnc_setAISkill"] spawn BIS_fnc_MP;
+		// We run the function that sets the skills on all clients or only locally
+		if (f_var_skillSetGlobal) then {
+			[[_x,_skillArray],"f_fnc_setAISkill",true] spawn BIS_fnc_MP;
+		} else {
+			[[_x,_skillArray],"f_fnc_setAISkill",_x] spawn BIS_fnc_MP;
+		};
      };
 
 sleep 0.1; // Very short sleep to avoid lag when modifiyng a lot of AI
