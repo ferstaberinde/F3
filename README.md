@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 3-2-2		| XX JAN 2015 | Patch release - Bug fixes, improvements and one new component (see change history)
+* 3-2-2		| XX JAN 2015 | Patch release - Various improvements (see change history).
 * 3-2-1     | 06 DEC 2014 | Patch release - Bug fix (see change history).
 * 3-2-0     | 15 NOV 2014 | Patch release - Various improvements (see change history).
 * 3-2-0 RC2 | 06 NOV 2014 | Internal release - Various improvements (see change history).
@@ -236,45 +236,35 @@ Version | Date
 
 3-2-2 | XX JAN 2015
 
-* New: F3 Assign Gear AI component:
- * loops through present AI and equips them with corresponding F3 gear
-
-* Updated: F3 Briefing component
- * increased font size of headlines for better readability
-
-*Updated: F3 Assign Gear component:
- * loadout setting can now be over-written on a per unit-type basis (see WIKI for details)
- * optional faction-input is now always lowered
-
-* Updated: F3 ORBAT & Nametag components:
- * Fixed issue where # of cargo seats in a vehicle would not be calculated correctly
-
-* Updated: F3 Spectator component: 
- * Lessened performance impact of tags
- * fixed issues with JIP players
- * fixed TFR spectators no longer sound as if they are under water 
-
-* Updated: F3 Radio component:
- * ACRE2: Improved frequency assignment
-
-* Updated: F3 Medical component:
- * SWS: various fixes
- * AGM: improved item-converter
- * AGM: rebalanced item assignment
-
-* Updated: F3 SetAISkill component:
- * tweaked default skill levels: medium & low slightly better
- * tweaked default skillSet: non-aiming skills higher by default
- * merged randomUp & randomDown into one variable
-
-* Fixed: F3 Caching component:
- * infantry would not disable simulation properly on aggressiveness 1 & 2
+* Added F3 Assign Gear AI component:
+ * Loops through present AI and re-equips them with corresponding F3 gear.
+* Updated F3 Briefing Template component:
+ * Increased font size of headlines for better readability.
+* Updated: F3 Folk ARPS Assign Gear Script component:
+ * Loadout setting can now be over-written on a per unit-type basis.
+ * Optional faction input is now always lowered.
+* Updated F3 Spectator Script component: 
+ * Rediced performance impact of tags.
+ * Fixed issues with JIP players.
+ * Fixed issue where TFR spectators sound as if they are underwater.
+* Updated Radio Systems Support component:
+ * ACRE2: Improved frequency assignment.
+* Updated Medical Systems Support component:
+ * SWS: various fixes.
+ * AGM: improved item-converter and re-balanced item assignment.
+* Updated AI Skill Selector component:
+ * Tweaked default skill levels: medium and low slightly better.
+ * Tweaked default skillSet: non-aiming skills higher by default.
+ * Merged randomUp and randomDown into one variable.
+* Fixed AI Caching component:
+ * Infantry would not disable simulation properly on aggressiveness 1 and 2.
+* Fixed ORBAT Notes and Name Tags components:
+ * Fixed issue where the number of cargo seats in a vehicle would not be calculated correctly.
 
 3-2-1 | 06 DEC 2014
 
 * Updated Radio Systems Support component:
  * Switched linkItem to addItem for ACRE2.
-
 * Fixed F3 Spectator Script component: 
  * Fixed incompatiblity with most recent Arma 3 update.
 
