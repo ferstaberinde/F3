@@ -240,7 +240,7 @@ Version | Date
  * Loops through present AI and re-equips them with corresponding F3 gear.
 * Updated F3 Briefing Template component:
  * Increased font size of headlines for better readability.
-* Updated: F3 Folk ARPS Assign Gear Script component:
+* Updated F3 Folk ARPS Assign Gear Script component:
  * Loadout setting can now be over-written on a per unit-type basis.
  * Optional faction input is now always lowered.
 * Updated F3 Spectator Script component: 
