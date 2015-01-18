@@ -89,7 +89,7 @@ class Mission
 	class Intel
 	{
 		briefingName="F3 FA";
-		overviewText="F3 3-2-2 DEV - WS_fnc 17/01/2015";
+		overviewText="F3 3-2-2 - WS_fnc 17/01/2015";
 		resistanceWest=0;
 		startWeather=0.84999996;
 		startWind=0;
