@@ -7,6 +7,9 @@ _ret = ["ACRE_PRC148", str (side player) ] call acre_api_fnc_setDefaultChannels;
 _ret = ["ACRE_PRC343", str (side player) ] call acre_api_fnc_setDefaultChannels;
 _ret = ["ItemRadio", str (side player) ] call acre_api_fnc_setDefaultChannels;
 
+
+
+
 // if dead, set spectator and exit
 if(!alive player) exitWith {[true] call acre_api_fnc_setSpectator;};
 

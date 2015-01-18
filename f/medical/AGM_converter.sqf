@@ -3,7 +3,7 @@
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
-private ["_unit","_itemCargoList","_cntFAK","_cntMediKit","_cntBandages"];
+private ["_unit","_itemCargoList","_cntFAK","_cntMediKit"];
 
 // ====================================================================================
 
@@ -30,6 +30,7 @@ _cntMediKit = {_x == "MediKit"} count _itemCargoList;
 } forEach _itemCargoList;
 
 clearItemCargoGlobal _unit;
+
 {
 	_unit addItemCargoGlobal [_x,1];
 } forEach _itemCargoList;
@@ -38,28 +39,28 @@ clearItemCargoGlobal _unit;
 
 // ADD BACK AGM ITEMS FOR REMOVED VANILLA ITEMS
 
-_cntBandages = _cntFAK * 5;
-_unit addItemCargoGlobal ["AGM_Bandage", _cntBandages];
+_unit addItemCargoGlobal ["AGM_Bandage", (_cntFAK * 5)];
 
 if (_cntFAK <= 25 && _cntMediKit == 0 ) then // Fireteam sized cargo
 	{
-		// Do nothing
+		_unit addItemCargoGlobal ["AGM_Bandage", 10];
+		_unit addItemCargoGlobal ["AGM_Morphine", 5];
 	};
 
 if (_cntFAK <= 25 && {_cntMediKit == 1}) then // Squad sized cargo
 	{
 		// Add items for 1 medic
 		_unit addItemCargoGlobal ["AGM_Bandage", 15];
-		_unit addItemCargoGlobal ["AGM_Morphine", 15];
-		_unit addItemCargoGlobal ["AGM_Epipen", 15];
-		_unit addItemCargoGlobal ["AGM_Bloodbag", 5];
+		_unit addItemCargoGlobal ["AGM_Morphine", 10];
+		_unit addItemCargoGlobal ["AGM_Epipen", 10];
+		_unit addItemCargoGlobal ["AGM_Bloodbag", 3];
 	};
 
 if (_cntFAK > 50 || {_cntMediKit > 1}) then // Platoon sized Cargo
 	{
 		// Add items for 4 medics
 		_unit addItemCargoGlobal ["AGM_Bandage", 45];
-		_unit addItemCargoGlobal ["AGM_Morphine", 45];
-		_unit addItemCargoGlobal ["AGM_Epipen", 45];
-		_unit addItemCargoGlobal ["AGM_Bloodbag", 15];
+		_unit addItemCargoGlobal ["AGM_Morphine", 30];
+		_unit addItemCargoGlobal ["AGM_Epipen", 30];
+		_unit addItemCargoGlobal ["AGM_Bloodbag", 9];
 	};

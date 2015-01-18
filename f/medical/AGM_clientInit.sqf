@@ -10,28 +10,28 @@ private "_typeOfUnit";
 _typeOfUnit = player getVariable "f_var_assignGear";
 
 // Remove pre-assigned medical items
-player removeItems "FirstAidKit";
-player removeItems "Medikit";
+{player removeItems _x} forEach ["FirstAidKit","Medikit","AGM_Bandage","AGM_Morphine","AGM_Epipen","AGM_Bloodbag"];
 
 // Add basic items to all units
 player addItem "AGM_EarBuds";
 {player addItem "AGM_Bandage"} forEach [1,2,3,4,5];
+player addItem "AGM_Morphine";
 
 if (_typeOfUnit == "m") then
 {
-	{player addItem "AGM_Epipen"} forEach [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-	player addItem "AGM_Bloodbag";
 
 	// BACKPACK: LIGHT
 	if (f_param_backpacks <= 1) then {
-		(unitBackpack player) addItemCargoGlobal ["AGM_Bandage", 15];
-		(unitBackpack player) addItemCargoGlobal ["AGM_Morphine", 15];
-		(unitBackpack player) addItemCargoGlobal ["AGM_Bloodbag", 4];
+		(unitBackpack player) addItemCargoGlobal ["AGM_Bandage",  15];
+		(unitBackpack player) addItemCargoGlobal ["AGM_Morphine", 10];
+		(unitBackpack player) addItemCargoGlobal ["AGM_Epipen",   10];
+		(unitBackpack player) addItemCargoGlobal ["AGM_Bloodbag", 2];
 	};
 	// BACKPACK: HEAVY
 	if (f_param_backpacks == 2) then {
-		(unitBackpack player) addItemCargoGlobal ["AGM_Bandage", 17];
-		(unitBackpack player) addItemCargoGlobal ["AGM_Morphine", 18];
-		(unitBackpack player) addItemCargoGlobal ["AGM_Bloodbag", 5];
+		(unitBackpack player) addItemCargoGlobal ["AGM_Bandage", 25];
+		(unitBackpack player) addItemCargoGlobal ["AGM_Morphine", 15];
+		(unitBackpack player) addItemCargoGlobal ["AGM_Epipen",   15];
+		(unitBackpack player) addItemCargoGlobal ["AGM_Bloodbag", 4];
 	};
 };

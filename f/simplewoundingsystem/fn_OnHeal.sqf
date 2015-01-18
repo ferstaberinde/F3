@@ -8,6 +8,8 @@ _ret = true;
 [_unit,_healer] spawn {
 	_unit = _this select 0;
 	_healer = _this select 1;
+	waitUntil {(["medic",animationstate _healer] call bis_fnc_inString)};
+	waitUntil {!(["medic",animationstate _healer] call bis_fnc_inString)};
 	// if unit is bleeding, stop bleeding
 	if(_unit getVariable ["f_wound_bleeding",false]) then
 	{

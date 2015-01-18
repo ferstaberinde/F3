@@ -363,7 +363,11 @@ class CfgRespawnTemplates
 	{
 		onPlayerRespawn = "f_fnc_CamInit";
 	};
-
+  	//Overwrite Vanilla Seagull
+    class Seagull
+    {
+        onPlayerRespawn = "";
+    };
 	// F3 JIP Menu
 	class f_JIP
 	{

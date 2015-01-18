@@ -14,7 +14,7 @@ _customText = "";
 
 _briefing ="
 <br/>
-ADMIN SECTION<br/>
+<font size='18'>ADMIN SECTION</font><br/>
 This briefing section can only be seen by the current admin.
 <br/><br/>
 ";
@@ -26,7 +26,7 @@ This briefing section can only be seen by the current admin.
 
 _briefing ="
 <br/>
-MISSION-MAKER NOTES<br/>
+<font size='18'>MISSION-MAKER NOTES</font><br/>
 Notes and messages made by the mission-maker.
 ";
 
