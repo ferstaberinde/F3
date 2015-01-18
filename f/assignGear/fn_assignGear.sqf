@@ -1,4 +1,4 @@
-// F3 - Folk Assign Gear Script (Server-side)
+// F3 - Folk ARPS Assign Gear Script (Server-side)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
