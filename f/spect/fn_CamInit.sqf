@@ -32,6 +32,7 @@ if(f_cam_isJIP) then
 };
 
 // Create a Virtual Agent to act as our player to make sure we get to keep Draw3D
+private "_newUnit";
 if(isNil "f_cam_VirtualCreated") then
 {
   createCenter sideLogic;
