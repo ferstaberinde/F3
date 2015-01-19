@@ -45,6 +45,7 @@ f_var_skillBlu =
 	    	99;
 		};
 	};
+	publicVariable "f_var_skillBlu";
 };
 
 
@@ -83,6 +84,7 @@ if (isNil "f_var_skillOpf") then
 	    	99;
 		};
 	};
+	publicVariable "f_var_skillOpf";
 };
 // ====================================================================================
 
@@ -119,6 +121,7 @@ if (isNil "f_var_skillRes") then
 	    	99;
 		};
 	};
+	publicVariable "f_var_skillRes";
 };
 
 // ====================================================================================
@@ -139,6 +142,7 @@ if (!isNil "f_var_civAI") then {
 		default {99};
 	};
 };
+publicVariable "f_var_skillCiv";
 
 // ====================================================================================
 
