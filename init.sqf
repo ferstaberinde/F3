@@ -121,7 +121,6 @@ if(isServer) then {
 // F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_skillSetGlobal = false; 	// When false, AI-skill is only set where AI is local (less network traffic)
 // f_var_civAI = independent; 		// Optional: The civilian AI will use this side's settings
 // [] execVM "f\setAISKill\f_setAISkill.sqf";
 
