@@ -223,14 +223,7 @@ case "KeyDown":
                 ["F_ScreenSetup",false] call BIS_fnc_blackOut;
                 if(isNull (getAssignedCuratorLogic player)) then
                 {
-                    [[player,true,playableUnits],'f_fnc_zeusInit',false] spawn BIS_fnc_MP;
-                    if({!isNil _x} count ["f_param_AISkill_BLUFOR","f_param_AISkill_INDP","f_param_AISkill_OPFOR"] > 0) then
-                    {
-                        [] spawn {
-                            waitUntil {!isNull (getAssignedCuratorLogic player)};
-                            (getAssignedCuratorLogic player) addEventHandler ['CuratorObjectPlaced',{[[crew (_this select 1),'f\setAISKill\f_setAISkill.sqf'],'Bis_fnc_ExecVM',false] spawn BIS_fnc_MP;}];
-                        };
-                    };
+                    [[player,true,[playableUnits]],'f_fnc_zeusInit',false] spawn BIS_fnc_MP;
                 };
                 [] spawn {
                     waitUntil {!isNull (getAssignedCuratorLogic player)};
