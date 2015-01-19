@@ -7609,7 +7609,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="this addEventHandler ['CuratorObjectPlaced',{[[crew (_this select 1),'f\setAISKill\f_setAISkill.sqf'],'Bis_fnc_ExecVM',false] spawn BIS_fnc_MP;  }]; ";
+					init="this addEventHandler ['CuratorObjectPlaced',{{[[_x],""f_fnc_setAISkill"",_x,false,true] spawn BIS_fnc_MP;} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
 				};
 			};
 		};
@@ -7675,7 +7675,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="this addEventHandler ['CuratorObjectPlaced',{[[crew (_this select 1),'f\setAISKill\f_setAISkill.sqf'],'Bis_fnc_ExecVM',false] spawn BIS_fnc_MP;  }]; ";
+					init="this addEventHandler ['CuratorObjectPlaced',{{[[_x],""f_fnc_setAISkill"",_x,false,true] spawn BIS_fnc_MP;} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
 				};
 			};
 		};
@@ -7741,7 +7741,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="this addEventHandler ['CuratorObjectPlaced',{[[crew (_this select 1),'f\setAISKill\f_setAISkill.sqf'],'Bis_fnc_ExecVM',false] spawn BIS_fnc_MP;  }];";
+					init="this addEventHandler ['CuratorObjectPlaced',{{[[_x],""f_fnc_setAISkill"",_x,false,true] spawn BIS_fnc_MP;} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
 				};
 			};
 		};
@@ -7807,7 +7807,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-					init="this addEventHandler ['CuratorObjectPlaced',{[[crew (_this select 1),'f\setAISKill\f_setAISkill.sqf'],'Bis_fnc_ExecVM',false] spawn BIS_fnc_MP;  }]; ";
+					init="this addEventHandler ['CuratorObjectPlaced',{{[[_x],""f_fnc_setAISkill"",_x,false,true] spawn BIS_fnc_MP;} forEach crew(_this select 1)}]; this addCuratorEditableObjects [playableUnits,true];";
 				};
 			};
 		};

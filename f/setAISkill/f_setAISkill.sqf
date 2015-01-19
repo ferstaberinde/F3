@@ -10,7 +10,7 @@ if !(isServer) exitWith {};
 
 // WAIT UNTIL THE MISSION HAS STARTED
 
-waitUntil {time > 1};
+sleep 0.1;
 
 // ====================================================================================
 
@@ -102,11 +102,12 @@ _skillArray = [];
 			_skillArray pushBack (_skilllevel + random f_var_skillRandom - random f_var_skillRandom);
 		};
 
-		// We run the function that sets the skills on all clients or only locally
-		if (f_var_skillSetGlobal) then {
-			[[_x,_skillArray],"f_fnc_setAISkill",true] spawn BIS_fnc_MP;
-		} else {
-			[[_x,_skillArray],"f_fnc_setAISkill",_x] spawn BIS_fnc_MP;
+		// Call the function to set the skills where the unit is local and mark it as processed for the server
+		[[_x,_skillArray],"f_fnc_setAISkill",_x,false,true] spawn BIS_fnc_MP;
+
+		// If the unit is not local to the server, register it's skill server-side as well
+		if !(local _x) then {
+			[_x,_skillArray] call f_fnc_setAISkill;
 		};
      };
 
