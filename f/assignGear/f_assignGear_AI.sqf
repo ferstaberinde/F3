@@ -79,13 +79,13 @@ _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVar
 
 					// If the unit's classname corresponds to a class in the assignment array, set it's gear accordingly
 					if (_known) exitWith {
-						[[_x select 1, _unit], "f_fnc_assignGear", _unit] call BIS_fnc_MP;
+						[[_x select 1, _unit], "f_fnc_assignGear", _unit,false,true] call BIS_fnc_MP;
 					};
 				} forEach _unitClasses;
 
-				// If the class isn't in the assignment array, set the default gear
+				// If the class is not in the _unitClasses array
 				if (!_known) then {
-					[["r", _unit], "f_fnc_assignGear", _unit] call BIS_fnc_MP;
+					// [["r", _unit], "f_fnc_assignGear", _unit,false,true] call BIS_fnc_MP;
 				};
 
 			} else {

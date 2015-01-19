@@ -64,6 +64,11 @@ _unit assignCurator _curator;
 _curator setCuratorWaypointCost 0;
 {_curator setCuratorCoef [_x,0];} forEach ["place","edit","delete","destroy","group","synchronize"];
 
+// Check if F3 AI Skill Selector is active and assign corresponding event-handler
+if({!isNil _x} count ["f_param_AISkill_BLUFOR","f_param_AISkill_INDP","f_param_AISkill_OPFOR"] > 0) then {
+    _curator addEventHandler ['CuratorObjectPlaced',{{[[_x],"f_fnc_setAISkill",_x,false,true] spawn BIS_fnc_MP;} forEach crew(_this select 1)}];
+};
+
 // If announce is set to true, the new curator will be announced to all players
 if (_announce) then {
 	[["Alert",[format ["%1 has become curator!",name _unit]]],"BIS_fnc_showNotification",true] call BIS_fnc_MP;
