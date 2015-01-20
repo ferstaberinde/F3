@@ -21,7 +21,7 @@ PARAMETERS
 
 if !(ws_game_a3) exitWith {["ws_fnc_taskAmbush DBG:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
-private ["_debug","_grp","_pos","_nPos","_killzone","_radius","_mindis","_wp","_mkr"];
+private ["_count","_grp","_killzone","_radius","_mindis","_pos","_nPos","_wp","_npos","_trg","_Pos","_debug","_mkr"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
 _debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
@@ -40,7 +40,6 @@ _nPos = [_pos, _radius, _mindis, 10] call BIS_fnc_findOverwatch;
 
 // Get group to move to overwatch position
 _wp = _grp addWaypoint [_npos,0];
-_grp setCurrentWaypoint _wp;
 
 // Set group to go stealth at overwatch position
 _wp = [_grp,_nPos,["HOLD",0,10],["STEALTH","BLUE","NORMAL"]] call ws_fnc_addWaypoint;
