@@ -96,7 +96,7 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 	_grpsT = _grps;
 	// As long there are spare seats and groups left
 
-	while {_emptyPositions > 0 && count _grpsT > 0 && locked _veh < 2} do {
+	while {_emptyPositions > 0 && count _grpsT > 0 && locked _veh != 2} do {
 
 		private ["_grp","_units","_run"];
 
