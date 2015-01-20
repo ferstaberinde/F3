@@ -59,7 +59,7 @@ switch (f_var_radios) do {
   };
   // TFR
   case 2: {
-    [_newUnit, true] call TFAR_fnc_forceSpectator;
+    [player, true] call TFAR_fnc_forceSpectator;
   };
   case 3: {
     [true] call acre_api_fnc_setSpectator;
