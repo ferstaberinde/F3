@@ -13,10 +13,10 @@ Full:
 [group,trigger, radius, minimal distance] call ws_fnc_taskAmbush;
 
 PARAMETERS
-1. The ambush group                                                                | MANDATORY
-2. The killzone as indicated by a trigger                                          | MANDATORY - trigger, it's radius designates the killzone. Condition needs to be "Convoy Side - present", rest does not matter
-"3. The radius in which to find a spot overlooking the ambush site                 | OPTIONAL (default: 300)
-4. The minimal distance the overwatch has to be from the ambush location           | OPTIONAL (default: 100)
+1. The ambush group                                                         | MANDATORY
+2. The killzone as indicated by a trigger                                   | MANDATORY - trigger, it's radius designates the killzone. Condition needs to be "Convoy Side - present", countdown/timeout optional, rest does not matter
+3. The radius in which to find a spot overlooking the ambush site          | OPTIONAL (default: 300)
+4. The minimal distance the overwatch has to be from the ambush location    | OPTIONAL (default: 100)
 */
 
 if !(ws_game_a3) exitWith {["ws_fnc_taskAmbush DBG:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
@@ -24,13 +24,13 @@ if !(ws_game_a3) exitWith {["ws_fnc_taskAmbush DBG:",[]," Must be ARMA 3!"] call
 private ["_debug","_grp","_pos","_nPos","_killzone","_radius","_mindis","_wp","_mkr"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
-_debug = if !(isNil "ws_debug") then {ws_debug} else {false};
+_debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
 
 _count = count _this;
 _grp = _this select 0;
 _killzone = _this select 1;
-_radius = if (_count > 2) then {_this select 2} else {300};
-_mindis = if (_count > 3) then {_this select 3} else {100};
+_radius = if (_count > 2) then [{_this select 2},{300}];
+_mindis = if (_count > 3) then [{_this select 3},{100}];
 
 if (_mindis > _radius) then {_radius = _mindis * 4};
 
@@ -64,7 +64,7 @@ _trg synchronizeTrigger [_wp];
 if (_debug) then {
     _mkr = createMarker [format ["%1-pos",_pos],_pos];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_ambush";_mkr setMarkerColor "ColorRed"; _mkr setMarkerText format ["Ambush %1",_grp];
     _mkr = createMarker [format ["%1-npos",_npos],_npos];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_flag";_mkr setMarkerColor "ColorRed"; _mkr setMarkerText format ["Overwatch %1",_grp];
-    _mkr = createMarker [format ["%1-kpos",_pos],_pos];_mkr setMarkerShape "ELLIPSE"; _mkr setMarkerSize _killzone; _mkr setMarkerBrush "SOLIDBORDER";_mkr setMarkerColor "ColorRed";
+    _mkr = createMarker [format ["%1-kpos",_pos],_pos];_mkr setMarkerShape "ELLIPSE"; _mkr setMarkerSize [(triggerArea _killzone select 0),(triggerArea _killzone select 1)]; _mkr setMarkerDir (triggerArea _killzone select 2); _mkr setMarkerBrush "SOLIDBORDER";_mkr setMarkerColor "ColorRed";
 };
 
 true
