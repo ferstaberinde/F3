@@ -136,8 +136,7 @@ while {_run} do {
 // Once the convoy has reached the destination have all groups which aren't crew disembark
 {
 _veh = _x;
-doStop _veh;
-
+_veh doMove (getPosATL _veh);
 
 	{
 		// If the unit's in a cargo index and a group leader, order the whole group out
