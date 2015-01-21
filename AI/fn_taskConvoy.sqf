@@ -93,7 +93,6 @@ while {_run} do {
 
 		// If the vehicle in front is going under the speed limit and it's a bit too close, limit the vehicle's speed as well
 		if (!isNull _vfront && {_veh distance _vfront < 25}) then {
-
 				if (speed _vfront < _speedLimit) then {
 					_veh limitSpeed (speed _vfront);
 				};
@@ -103,8 +102,7 @@ while {_run} do {
 		};
 
 		if (!isNull _vback && {_veh distance _vback > 50}) then {
-
-				if (_veh distance _vback <= 100) then {
+				if (_veh distance _vback <= 150) then {
 					if (((sin _dir) * (velocity _veh select 0)) > 3) then {_veh setVelocity [(velocity _veh select 0) - (1 * (sin _dir)), (velocity _veh select 1), velocity _veh select 2]};
 					if (((cos _dir) * (velocity _veh select 1)) > 3) then {_veh setVelocity [(velocity _veh select 0), (velocity _veh select 1) - (1 * (cos _dir)), velocity _veh select 2]};
 				} else {
@@ -121,6 +119,7 @@ while {_run} do {
 		// If for some reason the vehicle is halted, reset speed limit to the original value
 		if (speed _veh < 0.1) then {
 			_veh limitSpeed _speedLimit;
+			_veh doMove (getMarkerPos _wp);
 		};
 
 	} forEach _convoy;
