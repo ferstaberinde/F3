@@ -124,7 +124,12 @@ while {_run} do {
 
 	} forEach _convoy;
 
-	if (({!canMove _x || !alive _x || (!isNull (_x findNearestEnemy (getPosATL _x)))} count _convoy) > 0) then {_run = false;};
+	// If convoy was engaged exit the loop and set the convoy to combat mode
+	if (({!canMove _x || !alive _x || (!isNull (_x findNearestEnemy (getPosATL _x)))} count _convoy) > 0) exitWith {
+		_run = false;
+		{[(group (driver _x)),"COMBAT","NORMAL"] call ws_fnc_setAIMode;} forEach _convoy;
+	};
+
 	uisleep 0.5;
 };
 
@@ -133,7 +138,9 @@ while {_run} do {
 _veh = _x;
 doStop _veh;
 
+
 	{
+		// If the unit's in a cargo index and a group leader, order the whole group out
 		if (_veh getCargoIndex _x != -1 && _x == leader group _x) then {
 			(group _x) leaveVehicle _veh;
 		} else {
@@ -144,12 +151,18 @@ doStop _veh;
 		};
 
 		// Give the dismounted groups a new waypoint nearby and set them into a combat-ready mode
-		if (isNull (assignedVehicle _x) && _x == leader group _x) then {
-			[group _x,[_veh,50,10] call ws_fnc_getPos,["SENTRY"]] call ws_fnc_addWaypoint;
+		if (isNull (assignedVehicle _x) && _x == leader group _x) exitWith {
+			[group _x,_veh,["SENTRY",5]] call ws_fnc_addWaypoint;
 			[(group _x),"AWARE","DIAMOND","YELLOW"] call ws_fnc_setAIMode;
 		};
 
+		// If the unit is the vehicle driver, give it a sentry WP
+		if (_x == driver _veh) exitWith {
+			[(group (driver _x)),_veh,["SENTRY",5]] call ws_fnc_addWaypoint;
+		};
+
 	} forEach crew _veh;
+
 } forEach _convoy;
 
 true
