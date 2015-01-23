@@ -256,7 +256,12 @@ Version | Date
  * Tweaked default skill levels: medium and low slightly better.
  * Tweaked default skillSet: non-aiming skills higher by default.
  * Merged randomUp and randomDown into one variable.
- * Added new optional variable: f_var_skillSetGlobal - false (default) sets skill only where AI is local
+ * Improved impact on network traffic: only sets skill where unit is local
+ * fn_setAISkill can now be called with only the unit as argument
+* Updated F3 PreMount component
+  * Only ignores vehicles if locked state is exactly 2
+* Updated F3 Zeus Support
+  * fn_zeusInit automatically detects if F3 AI Skill Selector component is active and uses it on new units
 * Fixed AI Caching component:
  * Infantry would not disable simulation properly on aggressiveness 1 and 2.
 * Fixed ORBAT Notes and Name Tags components:
