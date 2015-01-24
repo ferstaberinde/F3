@@ -133,31 +133,31 @@ while {_run} do {
 	uisleep 0.5;
 };
 
-// Once the convoy has reached the destination have all groups which aren't crew disembark
+// Once the convoy has reached the destination or is being engaged have all groups which aren't crew disembark
 {
 _veh = _x;
 _veh doMove (getPosATL _veh);
 
 	{
-		// If the unit's in a cargo index and a group leader, order the whole group out
-		if (_veh getCargoIndex _x != -1 && _x == leader group _x) then {
-				(group _x) leaveVehicle _veh;
-		} else {
-			// If the vehicle is a "soft" one and can't shoot, let the crew dismount too
-			if (_veh isKindOf "Car" && !canFire _veh) then {
+
+		// If the unit is the vehicle driver, check if it's a combat vehicle
+		if (_x == driver _veh) then {
+
+			// If yes, only give it a sentry WP
+			if (canFire _veh) then {
+				[(group _x),_veh,["SENTRY",5]] spawn ws_fnc_addWaypoint;
+			} else {
+				// If the vehicle can't shoot, let the crew dismount too
 				(group driver _veh) leaveVehicle _veh;
+				[(group _x),_veh,["SENTRY",15]] spawn ws_fnc_addWaypoint;
 			};
 		};
 
-		// Give the dismounted groups a new waypoint nearby and set them into a combat-ready mode
-		if (isNull (assignedVehicle _x) && _x == leader group _x) then {
-			[group _x,_veh,["SENTRY",5]] call ws_fnc_addWaypoint;
+		// If the unit's in a cargo index and a group leader, order the whole group out
+		if (_veh getCargoIndex _x != -1 && _x == leader group _x) then {
+			(group _x) leaveVehicle _veh;
+			[group _x,_veh,["SENTRY",50]] spawn ws_fnc_addWaypoint;
 			[(group _x),"AWARE","DIAMOND","YELLOW"] call ws_fnc_setAIMode;
-		};
-
-		// If the unit is the vehicle driver, give it a sentry WP
-		if (_x == driver _veh) then {
-			[(group (driver _x)),_veh,["SENTRY",5]] call ws_fnc_addWaypoint;
 		};
 
 	} forEach crew _veh;
