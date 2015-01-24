@@ -33,6 +33,9 @@ _leadv = [_this,0,objNull] call BIS_fnc_param;
 _marker = [_this,1,""] call BIS_fnc_param;
 _speedLimit = [_this,2,15] call BIS_fnc_param;
 
+// What waypoint-type the final/combat waypoint will be. Sentry or Hold work best
+_finalwp = "SENTRY";
+
 // Exit the script if any of the required variables is invalid
 if (isNull _leadv || _marker == "" || !local _leadV) exitWith {};
 
@@ -92,7 +95,7 @@ while {_run} do {
 		_veh limitSpeed _speedLimit;
 
 		// If the vehicle in front is going under the speed limit and it's a bit too close, limit the vehicle's speed as well
-		if (!isNull _vfront && {_veh distance _vfront < 25}) then {
+		if (!isNull _vfront && {_veh distance _vfront < 15}) then {
 				if (speed _vfront < _speedLimit) then {
 					_veh limitSpeed (speed _vfront);
 				};
@@ -139,24 +142,23 @@ _veh = _x;
 _veh doMove (getPosATL _veh);
 
 	{
-
 		// If the unit is the vehicle driver, check if it's a combat vehicle
 		if (_x == driver _veh) then {
 
 			// If yes, only give it a sentry WP
 			if (canFire _veh) then {
-				[(group _x),_veh,["SENTRY",5]] spawn ws_fnc_addWaypoint;
+				[(group _x),_veh,[_finalwp,5]] call ws_fnc_addWaypoint;
 			} else {
 				// If the vehicle can't shoot, let the crew dismount too
 				(group driver _veh) leaveVehicle _veh;
-				[(group _x),_veh,["SENTRY",15]] spawn ws_fnc_addWaypoint;
+				[(group _x),_veh,[_finalwp,15]] call ws_fnc_addWaypoint;
 			};
 		};
 
 		// If the unit's in a cargo index and a group leader, order the whole group out
 		if (_veh getCargoIndex _x != -1 && _x == leader group _x) then {
 			(group _x) leaveVehicle _veh;
-			[group _x,_veh,["SENTRY",50]] spawn ws_fnc_addWaypoint;
+			[group _x,_veh,[_finalwp,50]] call ws_fnc_addWaypoint;
 			[(group _x),"AWARE","DIAMOND","YELLOW"] call ws_fnc_setAIMode;
 		};
 
