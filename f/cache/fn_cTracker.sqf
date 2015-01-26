@@ -61,5 +61,8 @@ While {f_var_cacheRun} do {
 
 // If the caching loop is terminated, uncache all cached groups
 {
-        if (_x getvariable ["f_cached", false]) then {_x spawn f_fnc_gUncache;};
+        if (_x getvariable ["f_cached", false]) then {
+                _x spawn f_fnc_gUncache;
+                _x setvariable ["f_cached", false];
+        };
 } forEach allGroups;

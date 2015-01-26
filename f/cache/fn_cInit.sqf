@@ -54,7 +54,7 @@ if (f_var_debugMode == 1) then {
 	// Giving the tracker a head start
 	sleep (f_var_cacheSleep * 1.1);
 
-		while {true} do {
+		while {f_var_cacheRun} do {
 			_str1 = "f_fnc_cache DBG:<br/>";
 			_str2 = format["Total groups: %1<br/>",count allGroups];
 			_str3 = format ["Cached groups:%1<br/>",{_x getvariable "f_cached"} count allGroups];
@@ -68,6 +68,3 @@ if (f_var_debugMode == 1) then {
 		};
 	};
 };
-
-
-true
