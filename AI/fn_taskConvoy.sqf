@@ -1,6 +1,7 @@
 /* ws_fnc_taskConvoy
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 Thanks to Norrin's convoy script for inspiration and guidance: http://forums.bistudio.com/showthread.php?152279-norrin-s-ArmA2-scripts-ported-to-ArmA3
+You can find a video tutorial here: http://youtu.be/_aELNA7j__c
 
 FEATURE
 The passed vehicles will follow the given route to it's destination, where they will disembark and take sentry waypoints.
@@ -12,6 +13,7 @@ true once convoy has reached the destination or made contact
 USAGE
 Place an ungrouped selection of vehicles. All trailing vehicles should share the name of the leading vehicle followed by _n, where n is an incrementing number (e.g.: veh, veh_1, veh_2).
 Place markers indicating the convoy route, ideally on roads. All markers should share the name of the first marker followed by _n, where n is an incrementing number (e.g.: mkr, mkr_1, mkr_2).
+You can change which waypoint type the units will be assigned on dismounting below as _finalWP
 
 Minimal:
 [leadingVehicle,"firstMarker"] spawn ws_fnc_taskConvoy
