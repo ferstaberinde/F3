@@ -13,7 +13,6 @@ _debug = if (f_var_debugMode == 1) then [{true},{false}];
 // ====================================================================================
 
 // BEGIN THE TRACKING LOOP
-f_var_cacheRun = true;
 While {f_var_cacheRun} do {
         {
                 _groups = allGroups;
