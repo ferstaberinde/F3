@@ -14,7 +14,7 @@ _debug = if (f_var_debugMode == 1) then [{true},{false}];
 
 // BEGIN THE TRACKING LOOP
 f_var_cacheRun = true;
-While {count _groups > 0 && f_var_cacheRun} do {
+While {f_var_cacheRun} do {
         {
                 _groups = allGroups;
 
@@ -48,7 +48,7 @@ While {count _groups > 0 && f_var_cacheRun} do {
                                                 if (_debug) then {player globalchat format ["f_fnc_cache DBG: Caching: %1",_x]};
 
                                                 _x setvariable ["f_cached", true];
-                                                _x spawn f_fnc_gCache;
+                                                [_x] spawn f_fnc_gCache;
                                         };
                                 };
 
@@ -59,3 +59,8 @@ While {count _groups > 0 && f_var_cacheRun} do {
 
         sleep f_var_cacheSleep;
 };
+
+// If the caching loop is terminated, uncache all cached groups
+{
+        if (_x getvariable ["f_cached", false]) then {_x spawn f_fnc_gUncache;};
+} forEach allGroups;
