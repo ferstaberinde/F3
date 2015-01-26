@@ -40,18 +40,18 @@ f_cInit = true;
 
 // Define parameters
 _range = f_param_caching;	// The range outside of which to cache units
-_sleep = 6; 				// The time to sleep between checking
+f_var_cacheSleep = 6; 				// The time to sleep between checking
 
-[_range, _sleep] spawn f_fnc_cTracker;
+[_range] spawn f_fnc_cTracker;
 
 // Start the debug tracker
 if (f_var_debugMode == 1) then {
-	player globalchat format ["f_fnc_cInit DBG: Starting to track %1 groups, %2 range, %3 sleep",count allGroups,_range,_sleep];
+	player globalchat format ["f_fnc_cInit DBG: Starting to track %1 groups, %2 range, %3 sleep",count allGroups,_range,f_var_cacheSleep];
 
-	[_sleep] spawn {
+	[] spawn {
 
 	// Giving the tracker a head start
-	sleep (_this select 0 * 1.1);
+	sleep (f_var_cacheSleep * 1.1);
 
 		while {true} do {
 			_str1 = "f_fnc_cache DBG:<br/>";
