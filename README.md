@@ -262,10 +262,15 @@ Version | Date
   * Only ignores vehicles if locked state is exactly 2
 * Updated F3 Zeus Support
   * fn_zeusInit automatically detects if F3 AI Skill Selector component is active and uses it on new units
+* Updated AI Caching component:
+ * New variables f_var_cacheRun & f_var_cacheSleep to easier control component behavior during runtime
+ * Can now pass aggressiveness directly to f_fnc_gCache as optional param to override global value
 * Fixed AI Caching component:
  * Infantry would not disable simulation properly on aggressiveness 1 and 2.
 * Fixed ORBAT Notes and Name Tags components:
  * Fixed issue where the number of cargo seats in a vehicle would not be calculated correctly.
+* Fixed F3 Mission Conditions Selector:
+ * Default overcast values would occasionally cause rain.
 
 3-2-1 | 06 DEC 2014
 
