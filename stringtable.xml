@@ -7,23 +7,25 @@
         <English> Debug Mode </English>
         <Czech> Debug mód </Czech>
         <German> Debug-Modus </German>
-        <Polish> Debug Mode </Polish>
+        <Polish> Tryb Debugu </Polish>
         <Russian> Режим отладки </Russian>
         <Spanish> Modo Debug </Spanish>
         <French> Mode Debug </French>
       </Key>
       <Key ID="STR_f_param_loadouts">
         <English> Loadouts </English>
+        <Polish> Wyposażenie </Polish>
       </Key>
       <Key ID="STR_f_param_timeOfDay">
         <English> Time of Day </English>
+        <Polish> Pora Dnia </Polish>
 	<French> Heure de la journée </French>
       </Key>
       <Key ID="STR_f_param_timeOfDay_Option0">
         <English> Dawn </English>
         <Czech> Svítání </Czech>
         <German> Morgendämmerung </German>
-        <Polish> Swit </Polish>
+        <Polish> Świt </Polish>
         <Russian> Рассвет </Russian>
         <Spanish> Amanecer </Spanish>
         <French> Aube </French>
@@ -46,7 +48,7 @@
         <English> Noon </English>
         <Czech> Poledne </Czech>
         <German> Mittag </German>
-        <Polish> Poludnie </Polish>
+        <Polish> Południe </Polish>
         <Russian> Полдень </Russian>
         <Spanish> Mediodía </Spanish>
         <French> Midi </French>
@@ -86,30 +88,39 @@
       <Key ID="STR_f_param_weather">
         <English> Weather </English>
 	<French> Météo </English>
+	<Polish> Pogoda </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option0">
         <English> Clear (Calm)</English>
+        <Polish> Bezchmurnie (Bezwietrznie) </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option1">
         <English> Clear (Light Winds)</English>
+        <Polish> Bezchmurnie (Lekki Wiatr)</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option2">
         <English> Clear (Strong Winds)</English>
+        <Polish> Bezchmurnie (Silny Wiatr) </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option3">
         <English> Overcast (Calm)</English>
+        <Polish> Pochmurnie (Bezwietrznie) </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option4">
         <English> Overcast (Light Winds)</English>
+        <Polish> Pochmurnie (Lekki Wiatr) </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option5">
         <English> Overcast (Strong Winds)</English>
+        <Polish> Pochmurnie (Silny Wiatr) </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option6">
         <English> Rain (Light Winds)</English>
+        <Polish> Deszcz (Lekki Wiatr) </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option7">
         <English> Rain (Strong Winds)</English>
+        <Polish> Deszcz (Silny Wiatr) </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option8">
         <English> Storm </English>
@@ -124,7 +135,7 @@
         <English> Light Fog </English>
         <Czech> Slabá mlha </Czech>
         <German> Leichter Nebel </German>
-        <Polish> Lekka Mgla </Polish>
+        <Polish> Lekka Mgła </Polish>
         <Russian> Туман </Russian>
         <Spanish> Bruma </Spanish>
         <French> Brume </French>
@@ -133,7 +144,7 @@
         <English> Heavy Fog </English>
         <Czech> Hustá mlha </Czech>
         <German> Dichter Nebel </German>
-        <Polish> Ciezka Mgla </Polish>
+        <Polish> Cieżka Mgła </Polish>
         <Russian> Густой туман </Russian>
         <Spanish> Niebla </Spanish>
         <French> Brouillard </French>
@@ -212,52 +223,68 @@
       </Key>
       <Key ID="STR_f_mapClickTeleportAction">
         <English> Teleport </English>
+        <Polish> Teleportacja </Polish>
       </Key>
       <Key ID="STR_f_mapClickTeleportSelect">
         <English> Click on the map to set teleport coordinates. </English>
+        <Polish> Kliknij na mapie aby wybrać współrzędne do teleportacji </Polish>
       </Key>
       <Key ID="STR_f_mapClickTeleportDone">
         <English> You have been moved to the selected location. </English>
+        <Polish> Zostałeś przeniesiony do wybranej lokacji </Polish>
       </Key>
        <Key ID="STR_f_mapClickHALOAction">
         <English> HALO </English>
+        <Polish> HALO </Polish>
       </Key>
       <Key ID="STR_f_mapClickHALOSelect">
         <English> Click on the map to set HALO coordinates. </English>
+        <Polish> Kliknij na mapie aby wybrać miejsce do HALO </Polish>
       </Key>
       <Key ID="STR_f_mapClickHALODone">
         <English> You have been moved to the selected location. </English>
+        <Polish> Zostałeś przeniesiony do wybranej lokacji </Polish>
       </Key>
       <Key ID="STR_f_JIP_reinforcementOptionsAction">
         <English> Select Reinforcement Options</English>
+        <Polish> Wybierz opcje wsparcia</Polish>
       </Key>
       <Key ID="STR_f_param_mission_timer">
         <English> Safe Start (mins) </English>
+        <Polish> Bezpieczny Start (min) </Polish>
       </Key>
       <Key ID="STR_f_param_mission_timer_off">
         <English> Off </English>
+        <Polish> Wyłączony </Polish>
       </Key>
       <Key ID="STR_f_param_caching">
         <English> AI Caching</English>
+        <Polish> Buforowanie AI </Polish>
       </Key>
       <Key ID="STR_f_param_caching_Option0">
         <English> Off </English>
         <German> Aus </German>
+        <Polish> Wyłączony </Polish>
       </Key>
        <Key ID="STR_f_param_caching_Option1">
         <English> Outside 600m </English>
+        <Polish> Od 600m </Polish>
       </Key>
       <Key ID="STR_f_param_caching_Option2">
         <English> Outside 800m </English>
+        <Polish> Od 800m </Polish>
       </Key>
       <Key ID="STR_f_param_caching_Option3">
         <English> Outside 1000m </English>
+        <Polish> Od 1000m </Polish>
       </Key>
        <Key ID="STR_f_param_caching_Option4">
         <English> Outside 1500m </English>
+        <Polish> Od 1500m </Polish>
       </Key>
        <Key ID="STR_f_param_caching_Option5">
         <English> Outside 2000m </English>
+        <Polish> Od 2000m </Polish>
       </Key>
     </Container>
   </Package>
