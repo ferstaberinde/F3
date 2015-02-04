@@ -238,6 +238,9 @@ Version | Date
 
 * Added F3 Assign Gear AI component:
  * Loops through present or selection of AI and re-equips them with corresponding F3 gear.
+* Updated Loading Screen component:
+ * Added entry for overviewPicture and default logo
+ * Changed default logos for loadScreen and overviewPicture to jpg
 * Updated F3 Briefing Template component:
  * Increased font size of headlines for better readability.
 * Updated F3 Folk ARPS Assign Gear Script component:
