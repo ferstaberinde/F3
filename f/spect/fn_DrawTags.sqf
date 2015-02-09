@@ -30,10 +30,10 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 		_visPos = getPosATLVisual leader _x;
 		if(surfaceIsWater _visPos) then  {_visPos = getPosASLVisual leader _x;};
 		if(_isPlayerGroup) then {
-			_color set [2,0.7];
+			_color set [3,0.7];
 		}
 		else {
-			_color set [2,0.4];
+			_color set [3,0.4];
 		};
 		_str = _x getVariable ["f_cam_nicename",""];
 		if(_str == "") then {
@@ -48,7 +48,7 @@ if(!f_cam_toggleTags || f_cam_mapMode == 2 ) exitWith{};
 		{
 			_visPos = getPosATLVisual _x;
 			if(surfaceIsWater _visPos) then  {_visPos = getPosASLVisual _x;};
-			_color set [2,0.6];
+			_color set [3,0.6];
 			_str = "";
 			_icon = "\A3\ui_f\data\map\markers\military\dot_CA.paa";
 			if(isPlayer _x) then
