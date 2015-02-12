@@ -234,7 +234,7 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-2-2 | XX JAN 2015
+3-2-2 | XX FEB 2015
 
 * Added F3 Assign Gear AI component:
  * Loops through present or selection of AI and re-equips them with corresponding F3 gear.
@@ -250,6 +250,7 @@ Version | Date
  * Rediced performance impact of tags.
  * Fixed issues with JIP players.
  * Fixed issue where TFR spectators sound as if they are underwater.
+ * Fixed tag colors.
 * Updated Radio Systems Support component:
  * ACRE2: Improved frequency assignment.
 * Updated Medical Systems Support component:
