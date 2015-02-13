@@ -7,7 +7,7 @@ USAGE
 [pos,distance,increment] call ws_fnc_NearestLandPos
 
 FEATURE
-Return nearest pos on dry land in distance x (default 10), If no road is found increase by increment x (default 50)
+Return nearest pos on dry land in distance x (default 10), If no position is found increase by increment x (default 50)
 If no dry land in radius increment*50 is found the original position is returned and an error put out.
 
 RETURNS
