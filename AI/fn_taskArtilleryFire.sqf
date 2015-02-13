@@ -1,5 +1,4 @@
 /* ws_fnc_taskArtilleryFire
-Latest: 21.12.2013
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 
 FEATURE
