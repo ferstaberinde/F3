@@ -1,5 +1,4 @@
 /* ws_fnc_NearestLandPos
-Latest: 10.10.2013
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 
 USAGE
