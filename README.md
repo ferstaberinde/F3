@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 3-2-2		| XX JAN 2015 | Patch release - Various improvements (see change history).
+* 3-2-2		| 20 FEB 2015 | Patch release - Various improvements (see change history).
 * 3-2-1     | 06 DEC 2014 | Patch release - Bug fix (see change history).
 * 3-2-0     | 15 NOV 2014 | Patch release - Various improvements (see change history).
 * 3-2-0 RC2 | 06 NOV 2014 | Internal release - Various improvements (see change history).
@@ -234,13 +234,13 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-2-2 | XX FEB 2015
+3-2-2 | 20 FEB 2015
 
 * Added F3 Assign Gear AI component:
  * Loops through present or selection of AI and re-equips them with corresponding F3 gear.
 * Updated Loading Screen component:
- * Added entry for overviewPicture and default logo
- * Changed default logos for loadScreen and overviewPicture to jpg
+ * Added entry for overviewPicture and default logo.
+ * Changed default logos for loadScreen and overviewPicture to JPEG.
 * Updated F3 Briefing Template component:
  * Increased font size of headlines for better readability.
 * Updated F3 Folk ARPS Assign Gear Script component:
@@ -263,12 +263,12 @@ Version | Date
  * Improved impact on network traffic: only sets skill where unit is local
  * fn_setAISkill can now be called with only the unit as argument
 * Updated F3 PreMount component
-  * Only ignores vehicles if locked state is exactly 2
+  * Only ignores vehicles if locked state is exactly 2.
 * Updated F3 Zeus Support
-  * fn_zeusInit automatically detects if F3 AI Skill Selector component is active and uses it on new units
+  * fn_zeusInit automatically detects if F3 AI Skill Selector component is active and uses it on new units.
 * Updated AI Caching component:
- * New variables f_var_cacheRun & f_var_cacheSleep to easier control component behavior during runtime
- * Can now pass aggressiveness directly to f_fnc_gCache as optional param to override global value
+ * New variables f_var_cacheRun and f_var_cacheSleep to easier control component behavior during runtime.
+ * Can now pass aggressiveness directly to f_fnc_gCache as optional param to override global value.
 * Fixed AI Caching component:
  * Infantry would not disable simulation properly on aggressiveness 1 and 2.
 * Fixed ORBAT Notes and Name Tags components:
