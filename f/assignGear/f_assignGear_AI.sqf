@@ -36,7 +36,7 @@ _unitClasses = [
 	["_gl_"			,	"gren"	],
 	["_exp_"		,	"eng"	],
 	["_engineer_"	,	"engm"	],
-	["_mg_"			,	"mgg"	],
+	["_mg_"			,	"mmgg"	],
 	["_amg_"		,	"mmgag"	],
 	["_at_"			,	"matg"	],
 	["_aat_"		,	"matag"	],
