@@ -13,9 +13,9 @@ true - after helicopter has taken off again
 
 USAGE
 Minimal:
-[helicopter,landing position,extract position] spawn ws_fnc_taskLand;
+[helicopter,landing position] spawn ws_fnc_taskLand;
 Full:
-[helicopter,landing position,extract position,wait time] spawn ws_fnc_taskLand;
+[helicopter,landing position,wait time,extract position] spawn ws_fnc_taskLand;
 
 PARAMETERS
 1. The helicopter                              | MANDATORY
@@ -26,7 +26,7 @@ PARAMETERS
 EXAMPLE
 [VehAAF_H,"mkrLand"] spawn ws_fnc_taskLand; - would cause the helicopter named "VehAAF_H" to take off, fly towards the marker named "mkrLand" and move back to it's starting spot
 
-nul = [vehicle (leader group this),position this,"mkrExtract"] spawn ws_fnc_taskLand; - in the on Act. Field of a WP would cause the helicopter to land at the WP's center and then move to the marker named "mkrExtract". I'd suggest to give the WP an activation radius of at least 200.
+nul = [vehicle (leader group this),position this,30,"mkrExtract"] spawn ws_fnc_taskLand; - in the on Act. Field of a WP would cause the helicopter to land at the WP's center, wait for up to 30s and then move to the marker named "mkrExtract". I'd suggest to give the WP an activation radius of at least 200.
 
 TODO
 Use BIS_fnc_findSafePos to avoid slopes
@@ -45,9 +45,9 @@ _pos = (_this select 1) call ws_fnc_getEpos;
 _wait = if (count _this > 2) then [{_this select 2},{15}];
 _extract = if (count _this > 3) then [{_this select 3},{getPosATL _helo}];
 
-{[_x,["OBJECT"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_helo];
-{[_x,["SCALAR"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_wait];
-{[_x,["ARRAY"],"ws_fnc_createGarrison"] call ws_fnc_typecheck;} forEach [_pos];
+{[_x,["OBJECT"],"ws_fnc_taskLand"] call ws_fnc_typecheck;} forEach [_helo];
+{[_x,["SCALAR"],"ws_fnc_taskLand"] call ws_fnc_typecheck;} forEach [_wait];
+{[_x,["ARRAY"],"ws_fnc_taskLand"] call ws_fnc_typecheck;} forEach [_pos];
 
 if !(_helo isKindOf "Helicopter") exitWith {["ws_fnc_taskLand:",[_helo]," must be a helicopter!"] call ws_fnc_debugtext};
 
