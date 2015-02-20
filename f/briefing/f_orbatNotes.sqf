@@ -9,7 +9,7 @@ waitUntil {scriptDone f_script_setGroupIDs};
 private ["_orbatText", "_groups", "_precompileGroups","_maxSlots","_freeSlots"];
 _orbatText = "<br />NOTE: The ORBAT below is only accurate at mission start.<br />
 <br />
-GROUP LEADERS + MEDICS<br /><br />";
+<font size='18'>GROUP LEADERS + MEDICS</font><br /><br />";
 _groups = [];
 _hiddenGroups = [];
 
@@ -64,20 +64,23 @@ if (count _veharray > 0) then {
 _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 
 	{
-		_orbatText = _orbatText + "<br />" + format["%1 ",getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayname")];
+		 // Filter all characters which might break the diary entry (such as the & in Orca Black & White)
+		_vehName = [getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayname"),"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_- "] call BIS_fnc_filterString;
 
-		_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier");
-		_freeSlots = _x emptyPositions "cargo";
+		_orbatText = _orbatText + "<br />" + format["%1 ",_vehName];
+
+		count allTurrets [_x, true] - count allTurrets _x;
 
 		// Workaround for http://feedback.arma3.com/view.php?id=21602
-		if (_maxSlots != 0) then {
-			if (_maxSlots-_freeSlots < 0) then {
-				_maxSlots = _maxSlots -(_maxSlots-_freeSlots);
-			};
+		_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier") + (count allTurrets [_x, true] - count allTurrets _x);
+		_freeSlots = _x emptyPositions "cargo";
+
+		if (_maxSlots > 0) then {
 			_orbatText = _orbatText + format ["[%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
 		};
 
-		_orbatText =_orbatText + "<br />";
+		_orbatText = _orbatText  + "<br />";
+
 		{
 			if ((assignedVehicleRole _x select 0) != "CARGO") then {
 				_orbatText = _orbatText + format["|- %1",name _x];

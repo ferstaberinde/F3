@@ -69,7 +69,7 @@ switch (_weather) do
 // Overcast (Calm)
 	case 3:
 	{
-		_MissionOvercast = 0.8;
+		_MissionOvercast = 0.55;
 		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
@@ -81,7 +81,7 @@ switch (_weather) do
 // Overcast (Light Winds)
 	case 4:
 	{
-		_MissionOvercast = 0.8;
+		_MissionOvercast = 0.55;
 		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
@@ -93,7 +93,7 @@ switch (_weather) do
 // Overcast (Strong Winds)
 	case 5:
 	{
-		_MissionOvercast = 0.8;
+		_MissionOvercast = 0.55;
 		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;

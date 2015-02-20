@@ -6,8 +6,6 @@ if(f_cam_mapMode == 2) then
         _chosen = nil;
         _dist = 99999;
         _ents = _pos nearEntities [["CAManBase","AllVehicles"],10];
-
-
         {
             {
                 if(_pos distance _x <= _dist && _x in f_cam_listUnits) then

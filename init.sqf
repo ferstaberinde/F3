@@ -121,8 +121,15 @@ if(isServer) then {
 // F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
+// f_var_civAI = independent; 		// Optional: The civilian AI will use this side's settings
 // [] execVM "f\setAISKill\f_setAISkill.sqf";
-// f_var_civAI = independent; // Optional: The civilian AI will use this side's settings
+
+// ====================================================================================
+
+// F3 - Assign Gear AI
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+// [] execVM "f\assignGear\f_assignGear_AI.sqf";
 
 // ====================================================================================
 

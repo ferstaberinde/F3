@@ -1,4 +1,4 @@
-// F3 - Folk Assign Gear Script (Server-side)
+// F3 - Folk ARPS Assign Gear Script (Server-side)
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -18,7 +18,7 @@ _unit = _this select 1;
 _faction = toLower (faction _unit);
 if(count _this > 2) then
 {
-  _faction = _this select 2;
+  _faction = toLower (_this select 2);
 };
 
 // ====================================================================================

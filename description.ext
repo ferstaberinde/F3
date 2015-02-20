@@ -18,7 +18,8 @@ class Header
 onLoadName = "*** Insert mission name here. ***";
 onLoadMission = "Made with the F3 Mission Development Framework";
 author = "*** Insert mission author name here. ***";
-loadScreen = "logo.paa";
+loadScreen = "loadLogo.jpg";
+overviewPicture = "overviewLogo.jpg";
 
 // ============================================================================================
 
@@ -363,7 +364,11 @@ class CfgRespawnTemplates
 	{
 		onPlayerRespawn = "f_fnc_CamInit";
 	};
-
+  	//Overwrite Vanilla Seagull
+    class Seagull
+    {
+        onPlayerRespawn = "";
+    };
 	// F3 JIP Menu
 	class f_JIP
 	{

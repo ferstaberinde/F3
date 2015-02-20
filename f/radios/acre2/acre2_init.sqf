@@ -22,13 +22,13 @@ if (!isDedicated && (isNull player)) then
 // setup presets
 _presetSetup = [] call f_acre2_presetSetup;
 
-// define our languages (need to be the same order for everyone)
-{
-	_x call acre_api_fnc_babelAddLanguageType;
-} foreach f_radios_settings_acre2_languages;
 
 // run client stuff.
 if(!isDedicated) then
 {
+	// define our languages (need to be the same order for everyone)
+	{
+		_x call acre_api_fnc_babelAddLanguageType;
+	} foreach f_radios_settings_acre2_languages;
 	[] call f_acre2_clientInit;
 };
