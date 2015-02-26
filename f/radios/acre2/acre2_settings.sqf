@@ -46,9 +46,9 @@ f_radios_settings_acre2_language_opfor = ["farsi"];
 f_radios_settings_acre2_language_indfor = ["greek"];
 
 // radio frequency offset for each side
-f_radios_settings_acre2_offset_blufor = 0.26;
+f_radios_settings_acre2_offset_blufor = 0.25;
 f_radios_settings_acre2_offset_opfor = 0.52;
-f_radios_settings_acre2_offset_indfor = 1.04;
+f_radios_settings_acre2_offset_indfor = 1.02;
 
 
 // Channels names

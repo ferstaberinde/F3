@@ -70,7 +70,7 @@ _items = (items player) call BIS_fnc_consolidateArray;
 // Add lines for all carried weapons and corresponding magazines
 
 if (count _weps > 0) then {
-	_text = _text + "WEAPONS [#MAGAZINES]:";
+	_text = _text + "<font size='18'>WEAPONS [#MAGAZINES]:</font>";
 	{
 		_text = _text + format["<br/>%1",getText (configFile >> "CfgWeapons" >> _x >> "displayname")];
 
@@ -104,7 +104,7 @@ if (count _weps > 0) then {
 // Add lines for all magazines not tied to any carried weapon (grenades etc.)
 
 if (count _mags > 0) then {
-	_text = _text + "<br/>OTHER [#]:<br/>";
+	_text = _text + "<br/><font size='18'>OTHER [#]:</font><br/>";
 
 	{
 		_text = _text + format["%1 [%2]<br/>",getText (configFile >> "CfgMagazines" >> _x select 0 >> "displayname"),_x select 1];
@@ -117,7 +117,7 @@ if (count _mags > 0) then {
 // Add lines for all other items
 
 if !(backpack player == "") then {
-	_text = _text + "<br/>BACKPACK [%FULL]:<br/>";
+	_text = _text + "<br/><font size='18'>BACKPACK [%FULL]:</font><br/>";
 
 	_bp = backpack player;
 	_text = _text + format["%1 [%2",getText (configFile >> "CfgVehicles" >> _bp >> "displayname"), 100*loadBackpack player]+"%]<br/>";
@@ -131,7 +131,7 @@ if !(backpack player == "") then {
 // Add lines for all other items
 
 if (count _items > 0) then {
-	_text = _text + "<br/>ITEMS [#]:<br/>";
+	_text = _text + "<br/><font size='18'>ITEMS [#]:</font><br/>";
 
 	{
 		_text = _text + format["%1 [%2]<br/>",getText (configFile >> "CfgWeapons" >> _x select 0 >> "displayname"),_x select 1];

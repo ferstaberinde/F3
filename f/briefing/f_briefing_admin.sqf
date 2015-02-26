@@ -14,7 +14,7 @@ _customText = "";
 
 _briefing ="
 <br/>
-ADMIN SECTION<br/>
+<font size='18'>ADMIN SECTION</font><br/>
 This briefing section can only be seen by the current admin.
 <br/><br/>
 ";
@@ -26,7 +26,7 @@ This briefing section can only be seen by the current admin.
 
 _briefing ="
 <br/>
-MISSION-MAKER NOTES<br/>
+<font size='18'>MISSION-MAKER NOTES</font><br/>
 Notes and messages made by the mission-maker.
 ";
 
@@ -75,8 +75,11 @@ _briefing = _briefing + "
 ZEUS SUPPORT<br/>
 <execute expression=""
 if !(isNull (getAssignedCuratorLogic player)) then {hintsilent 'ZEUS already assigned!'} else {
-	[[player,true,[]],'f_fnc_zeusInit',false] spawn BIS_fnc_MP; hintsilent 'Curator assigned.';
+	[[player,true],'f_fnc_zeusInit',false] spawn BIS_fnc_MP; hintsilent 'Curator assigned.';
 };"">Assign ZEUS to host</execute>.<br/>
+
+|- <execute expression=""
+if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {[[player,playableUnits],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; hintsilent 'Added playable units.'};"">Add players and playable units to ZEUS object list</execute>.<br/>
 
 |- <execute expression=""
 if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {

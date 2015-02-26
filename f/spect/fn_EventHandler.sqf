@@ -223,7 +223,7 @@ case "KeyDown":
                 ["F_ScreenSetup",false] call BIS_fnc_blackOut;
                 if(isNull (getAssignedCuratorLogic player)) then
                 {
-                    [[player,true],'f_fnc_zeusInit',false] spawn BIS_fnc_MP;
+                    [[player,true,playableUnits],'f_fnc_zeusInit',false] spawn BIS_fnc_MP;
                 };
                 [] spawn {
                     waitUntil {!isNull (getAssignedCuratorLogic player)};

@@ -3,10 +3,9 @@
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
-private ["_range","_sleep","_groups","_debug"];
+private ["_range","_groups","_debug"];
 
 _range = _this select 0;
-_sleep = _this select 1;
 _groups = allGroups;
 
 _debug = if (f_var_debugMode == 1) then [{true},{false}];
@@ -14,7 +13,7 @@ _debug = if (f_var_debugMode == 1) then [{true},{false}];
 // ====================================================================================
 
 // BEGIN THE TRACKING LOOP
-While {count _groups > 0} do {
+While {f_var_cacheRun} do {
         {
                 _groups = allGroups;
 
@@ -39,7 +38,7 @@ While {count _groups > 0} do {
                                                 if (_debug) then {player globalchat format ["f_fnc_cache DBG: Decaching: %1",_x]};
 
                                                 _x setvariable ["f_cached", false];
-                                                [_x,"f_fnc_gUncache", false,false] spawn BIS_fnc_MP;
+                                                _x spawn f_fnc_gUncache;
 
                                         };
                                 } else {
@@ -48,7 +47,7 @@ While {count _groups > 0} do {
                                                 if (_debug) then {player globalchat format ["f_fnc_cache DBG: Caching: %1",_x]};
 
                                                 _x setvariable ["f_cached", true];
-                                                [_x,"f_fnc_gCache",false,false] spawn BIS_fnc_MP;
+                                                [_x] spawn f_fnc_gCache;
                                         };
                                 };
 
@@ -57,5 +56,13 @@ While {count _groups > 0} do {
                 };
         } foreach _groups;
 
-        sleep _sleep;
+        sleep f_var_cacheSleep;
 };
+
+// If the caching loop is terminated, uncache all cached groups
+{
+        if (_x getvariable ["f_cached", false]) then {
+                _x spawn f_fnc_gUncache;
+                _x setvariable ["f_cached", false];
+        };
+} forEach allGroups;
