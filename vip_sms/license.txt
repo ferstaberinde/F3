@@ -1,0 +1,7 @@
+/// voiper's SMS (Simple Mine System) ///
+
+/// Copyright 2015 voiper ///
+
+Usage of this suite requires agreement with the following terms:
+
+The content herein (vip_sms) may NOT be included in other mods/addons in whole or part, or used for military training or any commercial purposes whatsoever, unless given prior permission from the author (voiper). Redistribution of the suite on its own, either modified or in whole, is NOT permitted. This suite may be used, and modified for use, ONLY in non-commercial Arma missions, provided there is due credit to the author.

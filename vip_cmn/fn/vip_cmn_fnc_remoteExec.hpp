@@ -1,0 +1,1 @@
+class vip_cmn_fnc_gl_message;

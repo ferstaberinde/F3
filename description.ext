@@ -399,6 +399,10 @@ class CfgFunctions
 	//ws_fnc
 	#include "ws_fnc\config.hpp"
 
+	//vip's mine system
+	#include "vip_cmn\fn\vip_cmn_fnc.hpp"
+	#include "vip_sms\fn\vip_sms_fnc.hpp"
+
 	class F // Defines the "owner"
 	{
 		class common // category
@@ -517,6 +521,14 @@ class CfgFunctions
 	};
 };
 
+
+class CfgRemoteExecCommands {
+
+	#include "vip_cmn\fn\vip_cmn_fnc_remoteExec.hpp"
+	#include "vip_sms\fn\vip_sms_fnc_remoteExec.hpp"
+};
+
+
 // ============================================================================================
 
 // F3 - Custom Insignia
@@ -524,3 +536,10 @@ class CfgFunctions
 class CfgUnitInsignia {
 	#include "f\assignGear\insignia\define.hpp"
 };
+
+// ============================================================================================
+
+// vip's mine system resources
+
+#include "vip_cmn\resource\vip_dlg_defaults.hpp"
+#include "vip_sms\resource\vip_sms_dlg.hpp"
