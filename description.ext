@@ -521,14 +521,6 @@ class CfgFunctions
 	};
 };
 
-
-class CfgRemoteExecCommands {
-
-	#include "vip_cmn\fn\vip_cmn_fnc_remoteExec.hpp"
-	#include "vip_sms\fn\vip_sms_fnc_remoteExec.hpp"
-};
-
-
 // ============================================================================================
 
 // F3 - Custom Insignia
@@ -543,3 +535,9 @@ class CfgUnitInsignia {
 
 #include "vip_cmn\resource\vip_dlg_defaults.hpp"
 #include "vip_sms\resource\vip_sms_dlg.hpp"
+
+class CfgRemoteExecCommands {
+
+	#include "vip_cmn\fn\vip_cmn_fnc_remoteExec.hpp"
+	#include "vip_sms\fn\vip_sms_fnc_remoteExec.hpp"
+};
