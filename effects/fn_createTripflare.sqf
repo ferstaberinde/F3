@@ -6,6 +6,10 @@ Creates illuminated smoke at position
 USAGE
 [position,color] spawn ws_fnc_tripFlare
 
+PARAMETERS
+1. position  at which to spawn the flare | MANDATORY - object, array [x,y,z] or marker
+2. color of the smoke					 | MANDATORY - "red", "green","yellow" or "blue"
+
 */
 
 private ["_color","_chm","_smk","_duration"];
@@ -18,7 +22,7 @@ if !(_color in ["green","red","yellow","blue"]) exitWith {["ws_fnc_tripFlare DBG
 
 _smk = (format ["Smokeshell%1",_color]) createVehicle _pos;
 sleep 0.2;
-_chm = (format ["Chemlight_%1",_color]) createVehicle _pos;
+_chm = (format ["F_40mm_%1",_color]) createVehicle _pos;
 
 waitUntil {isNull _smk};
 
