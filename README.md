@@ -1,7 +1,7 @@
 ws_fnc for ArmA2:CO and ArmA3
 ==
 Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com  
-Last update: 03.02.15
+Last update: 04.03.15
 
 **INTRODUCTION**
 
