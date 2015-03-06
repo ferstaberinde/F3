@@ -1,5 +1,0 @@
-/// Common (CMN) Functions & Defines ///
-
-/// Copyright 2015 voiper ///
-
-The code in this folder (vip_cmn) is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. Full license found here: https://www.gnu.org/licenses/gpl.txt

@@ -1,1 +1,0 @@
-getnumber (configfile >> "cfgvehicles" >> typeof _this >> "side")

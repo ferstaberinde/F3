@@ -1,8 +1,0 @@
-2015/02/27 - v1.0 Public Release
-====================
-
-2015/02/28 - v1.01 Hotfix
-====================
-
--fixed: error in AT mine loop
--fixed: on respawn without CSE, player loses menu
