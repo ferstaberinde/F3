@@ -8,12 +8,6 @@ if !(isServer) exitWith {};
 
 // ====================================================================================
 
-// WAIT UNTIL THE MISSION HAS STARTED
-
-sleep 0.1;
-
-// ====================================================================================
-
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_units","_superSkill","_highSkill","_mediumSkill","_lowSkill"];
@@ -104,7 +98,5 @@ _skillArray = [];
 		// Call the function to set the skills for the unit
 		[_x,_skillArray] call f_fnc_setAISkill;
      };
-
-sleep 0.1; // Very short sleep to avoid lag when modifiyng a lot of AI
 
 } forEach _units;
