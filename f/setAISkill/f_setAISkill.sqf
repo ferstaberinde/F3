@@ -26,15 +26,15 @@ private ["_units","_superSkill","_highSkill","_mediumSkill","_lowSkill"];
 _superSkill = 1.00;
 _highSkill = 0.7;
 _mediumSkill = 0.55;
-_lowSkill = 0.35;
+_lowSkill = 0.4;
 
 // This are the minimal skills a soldier set to _superSkill would have. For all other skill levels the values are rounded using the numbers above.
 // These are recommended levels to avoid "laser" AI snipers. Change them accordingly if you are finding the AI to be too inaccurate or are using AI mods.
 
 f_var_skillSet = [
-	0.5,		// aimingAccuracy
-	0.6,		// aimingShake
-	0.6,		// aimingSpeed
+	0.55,		// aimingAccuracy
+	0.55,		// aimingShake
+	0.55,		// aimingSpeed
 	0.65,		// spotDistance
 	0.65,		// spotTime
 	1.2,		// courage
