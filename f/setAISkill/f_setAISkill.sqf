@@ -18,7 +18,7 @@ private ["_units","_superSkill","_highSkill","_mediumSkill","_lowSkill"];
 // These values define the total skill level as set by the parameter
 
 _superSkill = 1.00;
-_highSkill = 0.75;
+_highSkill = 0.7;
 _mediumSkill = 0.55;
 _lowSkill = 0.35;
 
@@ -90,7 +90,7 @@ _skillArray = [];
 			_x setVariable ["f_setAISkill",true];
 		};
 
-		for "_i" from 0 to 9 do {
+		for "_i" from 0 to 8 do {
 			_skilllevel = (f_var_skillSet select _i) * _skill;
 			_skillArray pushBack (_skilllevel + random f_var_skillRandom - random f_var_skillRandom);
 		};
