@@ -292,9 +292,9 @@ class CfgDebriefing
 {
 	class End1
 	{
-		title = "Ending #1";
+		title = "MISSION SUCCESS";
 		subtitle = "";
-		description = "*** Insert debriefing #1 here. ***";
+		description = "The platoon managed to fulfill all objectives according to plan.";
 		// pictureBackground = "";
 		// picture = "";
 		// pictureColor[] = {0.0,0.3,0.6,1};
@@ -302,9 +302,9 @@ class CfgDebriefing
 
 	class End2
 	{
-		title = "Ending #2";
+		title = "MISSION FAILURE";
 		subtitle = "";
-		description = "*** Insert debriefing #2 here. ***";
+		description = "The platoon failed at fulfilling it's obejctives.";
 		// pictureBackground = "";
 		// picture = "";
 		// pictureColor[] = {0.0,0.3,0.6,1};
@@ -312,9 +312,9 @@ class CfgDebriefing
 
 	class End3
 	{
-		title = "Ending #3";
+		title = "MISSION INCONCLUSIVE";
 		subtitle = "";
-		description = "*** Insert debriefing #3 here. ***";
+		description = "The platoon either did not fulfill it's objectives to satisfication or had the mission ended in a stalemate.";
 		// pictureBackground = "";
 		// picture = "";
 		// pictureColor[] = {0.0,0.3,0.6,1};

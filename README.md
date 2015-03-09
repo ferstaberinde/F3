@@ -10,6 +10,7 @@
   * Automatic Body Removal
   * Safe Start default set to 1 minute
   * Set AI Skill for all factions - Missionmakers can remove the cases they do not need
+  * Pre-configured endings 1 -3 with generic titles and texts
 * Other changes:
   * Pre-placed a ZEUS player configured to support F3 AI Skill Selector
 
