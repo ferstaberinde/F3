@@ -74,7 +74,7 @@ if(isServer) then {
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 f_var_removeBodyDelay = 120;
-f_var_removeBodyDistance = 400;
+f_var_removeBodyDistance = 360;
 f_var_doNotRemoveBodies = [];
 [] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
 
