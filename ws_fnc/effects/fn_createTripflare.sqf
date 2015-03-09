@@ -1,15 +1,20 @@
-/* ws_fnc_tripFlare
+/* ws_fnc_createTripflare
 
 FEATURE
 Creates illuminated smoke at position
 
 USAGE
-[position,color] spawn ws_fnc_tripFlare
+[position,color] spawn ws_fnc_createTripflare
 
 PARAMETERS
 1. position  at which to spawn the flare | MANDATORY - object, array [x,y,z] or marker
-2. color of the smoke					 | MANDATORY - "red", "green","yellow" or "white"
+2. color of the smoke			 | MANDATORY - "red", "green","yellow" or "white"
 
+NOTE
+Function does not check for locality. Wrap your call in an isServer etc. clause if necessary.
+
+EXAMPLE
+if (isServer) then {[thisTrigger,"red"] spawn ws_fnc_createTripflare}; - in a trigger's on activation field will create a tripflare at the trigger's center when the trigger's conditions have been met
 */
 
 private ["_color","_flare","_smk","_duration"];
