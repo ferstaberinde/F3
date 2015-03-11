@@ -17,6 +17,13 @@ _skillarray = _skillset; // If _skillset is not an array of skills, _skillarray 
 
 // ====================================================================================
 
+// FAULT CHECK
+// If f_setAISkill.sqf has not been run exit with an error message
+
+if ((isNil "f_var_skillSet") || (isNil "f_var_skillRandom")) exitWith {systemchat "F3 SetAISkill DBG: f_setAISkill.sqf needs to run before calling f_fnc_setAISkill!"};
+
+// ====================================================================================
+
 // If the unit was already processed, exit the function
 if (_unit getVariable ["f_setAISkill",false]) exitWith {};
 
@@ -48,7 +55,7 @@ if (typename _skillset == typename 0 && {_skillset == 99}) exitWith {_unit setVa
 if (typename _skillset == typename 0) then {
 	_skill = _skillset;
 	_skillArray = [];
-	for '_x' from 0 to 9 do {
+	for '_x' from 0 to 8 do {
 		_skilllevel = (f_var_skillSet select _x) * _skill;
 		_skillArray pushBack (_skilllevel + random f_var_skillRandom - random f_var_skillRandom);
 	};
