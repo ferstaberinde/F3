@@ -541,12 +541,9 @@ switch (_typeofUnit) do
 	case "hatg":
 	{
 		_unit addmagazines [_carbinemag,7];
-		_unit addmagazines [_carbinemag_tr,2];
 		_unit addweapon _carbine;
-		_unit addmagazines [_grenade,1];
-		_unit addmagazines [_mgrenade,1];
-		_unit addmagazines [_smokegrenade,1];
 		["hatg"] call _backpack;
+		_unit addWeapon _HAT;
 	};
 
 // LOADOUT: HEAVY AT ASSISTANT GUNNER
