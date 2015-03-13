@@ -174,9 +174,9 @@ _baghsamag = "O_HMG_01_support_F";			// used by Heavy SAM assistant gunner
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = "LMG_Mk200_F";
-_ARmag = "200Rnd_65x39_cased_Box";
-_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
+_AR = "LMG_Zafir_F";
+_ARmag = "150Rnd_762x51_Box";
+_ARmag_tr = "150Rnd_762x51_Box_Tracer";
 
 // Medium MG
 _MMG = "LMG_Zafir_F";
@@ -244,8 +244,8 @@ _baseGlasses = [];
 
 // Armored vests
 _lightRig = ["V_HarnessO_brn"];
-_mediumRig = ["V_HarnessOGL_brn"]; 	// default for all infantry classes
-_heavyRig = ["V_HarnessOGL_brn"];
+_mediumRig = ["V_TacVest_khk"]; 	// default for all infantry classes
+_heavyRig = _mediumRig;
 
 // Diver
 _diverUniform =  ["U_O_Wetsuit"];
