@@ -647,6 +647,7 @@ switch (_typeofUnit) do
 		["hsamag"] call _backpack;
 	};
 
+
 // LOADOUT: SNIPER
 	case "sn":
 	{
