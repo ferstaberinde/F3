@@ -408,7 +408,6 @@ case "hatag":
 	(unitBackpack _unit) addMagazineCargoGlobal [_HATmag, 2];
 };
 
-
 // BACKPACK: MORTAR GUNNER (MTRG)
 case "mtrg":
 {
