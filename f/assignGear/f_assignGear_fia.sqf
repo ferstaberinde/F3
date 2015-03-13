@@ -200,6 +200,11 @@ _MAT = "launch_RPG32_F";
 _MATmag1 = "RPG32_F";
 _MATmag2 = "RPG32_HE_F";
 
+// Heavy AT
+_HAT = "launch_I_Titan_short_F";
+_HATmag1 = "Titan_AT";
+_HATmag2 = "Titan_AP";
+
 // Surface Air
 _SAM = "launch_B_Titan_F";
 _SAMmag = "Titan_AA";

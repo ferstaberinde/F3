@@ -209,6 +209,10 @@ _MATmag2 = "NLAW_F";
 _SAM = "launch_B_Titan_F";
 _SAMmag = "Titan_AA";
 
+// Heavy AT
+_HAT = "launch_B_Titan_short_F";
+_HATmag1 = "Titan_AT";
+_HATmag2 = "Titan_AP";
 // Sniper
 _SNrifle = "srifle_LRR_F";
 _SNrifleMag = "7Rnd_408_Mag";

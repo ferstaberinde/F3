@@ -205,6 +205,11 @@ _MATmag2 = "RPG32_HE_F";
 _SAM = "launch_O_Titan_F";
 _SAMmag = "Titan_AA";
 
+// Heavy AT
+_HAT = "launch_O_Titan_short_F";
+_HATmag1 = "Titan_AT";
+_HATmag2 = "Titan_AP";
+
 // Sniper
 _SNrifle = "srifle_GM6_F";
 _SNrifleMag = "5Rnd_127x108_Mag";
