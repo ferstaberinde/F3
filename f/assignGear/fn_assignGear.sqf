@@ -46,34 +46,9 @@ _unit setVariable ["f_var_assignGear",_typeofUnit,true];
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS 2
+// Used by the faction-specific scripts
 
-private [
-"_glrifle","_glriflemag","_glriflemag_tr","_glmag",
-"_glsmokewhite","_glsmokegreen","_glsmokered",
-"_glflarewhite","_glflarered","_glflareyellow","_glflaregreen",
-"_AR","_ARmag","_ARmag_tr",
-"_MMG","_MMGmag","_MMGmag_tr",
-"_HMG","_HMGmount",
-"_RAT","_RATmag",
-"_MAT","_MATmag1","_MATmag2",
-"_HAT","_HATmag1","_HATmag2",
-"_MTR","_MTRmount",
-"_RAA","_RAAmag",
-"_SNrifle","_SNriflemag",
-"_pistol","_pistolmag",
-"_grenade","_smokegrenade","_smokegrenadegreen",
-"_rifle","_riflemag","_riflemag_tr",
-"_carbine","_carbinemag","_carbinemag_tr",
-"_smg","_smgmag","_smgmag_tr",
-"_bagsmall","_bagmedium","_baglarge",
-"_ATmine","_satchel",
-"_medkit","_rifle_attach",
-"_carbine_attach","_smg_attach",
-"_glrifle_attach","_AR_attach",
-"_MMG_attach","_SNrifle_attach"
-,"_APmine", "_nvg",
-"_chemgreen","_chemred","_chemblue","_chemyellow"
-];
+private ["_attach1","_attach2","_silencer1","_silencer2","_scope1","_scope2","_scope3","_attachments","_silencer","_hg_silencer1","_hg_scope1","_hg_attachments","_rifle","_riflemag","_riflemag_tr","_carbine","_carbinemag","_carbinemag_tr","_smg","_smgmag","_smgmag_tr","_diverWep","_diverMag1","_diverMag2","_glrifle","_glriflemag","_glriflemag_tr","_glmag","_glsmokewhite","_glsmokegreen","_glsmokered","_glflarewhite","_glflarered","_glflareyellow","_glflaregreen","_pistol","_pistolmag","_grenade","_Mgrenade","_smokegrenade","_smokegrenadegreen","_firstaid","_medkit","_nvg","_uavterminal","_chemgreen","_chemred","_chemyellow","_chemblue","_bagsmall","_bagmedium","_baglarge","_bagmediumdiver","_baguav","_baghmgg","_baghmgag","_baghatg","_baghatag","_bagmtrg","_bagmtrag","_baghsamg","_baghsamag","_AR","_ARmag","_ARmag_tr","_MMG","_MMGmag","_MMGmag_tr","_DMrifle","_DMriflemag","_RAT","_RATmag","_MAT","_MATmag1","_MATmag2","_SAM","_SAMmag","_SNrifle","_SNrifleMag","_ATmine","_satchel","_APmine1","_APmine2","_light","_heavy","_diver","_pilot","_crew","_ghillie","_specOp","_baseUniform","_baseHelmet","_baseGlasses","_lightRig","_mediumRig","_heavyRig","_diverUniform","_diverHelmet","_diverRig","_diverGlasses","_pilotUniform","_pilotHelmet","_pilotRig","_pilotGlasses","_crewUniform","_crewHelmet","_crewRig","_crewGlasses","_ghillieUniform","_ghillieHelmet","_ghillieRig","_ghillieGlasses","_sfuniform","_sfhelmet","_sfRig","_sfGlasses","_typeofUnit","_unit","_isMan","_backpack","_typeofBackPack","_loadout","_COrifle","_mgrenade","_DCrifle","_FTLrifle","_armag","_ratmag","_typeofunit"];
 
 // ====================================================================================
 
@@ -97,7 +72,6 @@ if (f_var_debugMode == 1) then
 // GEAR: BLUFOR > NATO
 // The following block of code executes only if the unit is in a NATO slot; it
 // automatically includes a file which contains the appropriate equipment data.
-
 
 if (_faction == "blu_f") then {
 #include "f_assignGear_nato.sqf"

@@ -13,6 +13,7 @@
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
 //		rat			- rifleman (AT)
+//		dm			- designated marksman
 //		mmgg		- medium mg gunner
 //		mmgag		- medium mg assistant
 //		matg		- medium AT gunner
@@ -177,10 +178,23 @@ _AR = "arifle_MX_SW_F";
 _ARmag = "100Rnd_65x39_caseless_mag";
 _ARmag_tr = "100Rnd_65x39_caseless_mag_Tracer";
 
+// Marksman rifle
+_DMrifle = "srifle_EBR_F";
+_DMriflemag = "20Rnd_762x51_Mag";
+
 // Medium MG
 _MMG = "LMG_Zafir_F";
 _MMGmag = "150Rnd_762x51_Box";
 _MMGmag_tr = "150Rnd_762x51_Box_Tracer";
+
+// NON-DLC ALTERNATIVE:
+// _MMG = "LMG_Zafir_F";
+// _MMGmag = "150Rnd_762x51_Box";
+// _MMGmag_tr = "150Rnd_762x51_Box_Tracer";
+
+// Marksman rifle
+_DMrifle = "srifle_EBR_F"; //TODO: EMR-1
+_DMriflemag = "20Rnd_762x51_Mag";
 
 // Rifleman AT
 _RAT = "launch_NLAW_F";
@@ -437,6 +451,20 @@ switch (_typeofUnit) do
 		["rat"] call _backpack;
 		(unitBackpack _unit) addMagazineCargoGlobal [_RATmag,1];
 		_unit addweapon _RAT;
+	};
+
+// LOADOUT: DESIGNATED MARKSMAN
+	case "dm":
+	{
+		_unit addmagazines [_DMriflemag,7];
+		_unit addweapon _DMrifle;
+		_unit addmagazines [_grenade,2];
+		_unit addmagazines [_mgrenade,2];
+		_unit addmagazines [_smokegrenade,2];
+		_unit addmagazines [_pistolmag,3];
+		_unit addweapon _pistol;
+		["dm"] call _backpack;
+		_attachments = [_attach1,_scope2];
 	};
 
 // LOADOUT: MEDIUM MG GUNNER
