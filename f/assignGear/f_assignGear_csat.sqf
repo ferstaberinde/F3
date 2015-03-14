@@ -247,7 +247,7 @@ _baseGlasses = [];
 //_baseUniform = ["U_O_CombatUniform_oucamo"];
 //_baseHelmet = ["H_HelmetO_oucamo"];
 
-// Armored vests
+// Vests
 _lightRig = ["V_HarnessO_brn"];
 _mediumRig = ["V_TacVest_khk"]; 	// default for all infantry classes
 _heavyRig = _mediumRig;
