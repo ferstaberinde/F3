@@ -21,7 +21,8 @@ private ["_unit","_addons","_objects","_curator","_createModule"];
 _unit = [_this,0,objNull] call bis_fnc_param;
 _addons = [_this,1,[],["",true,[]]] call bis_fnc_param;
 _objects = [_this,2,[],[objNull,true,[],west]] call bis_fnc_param;
-_announce = [_this,3,false] call bis_fnc_param;
+_synchronize = [_this,3,true] call bis_fnc_param;
+_announce = [_this,4,false] call bis_fnc_param;
 
 // ====================================================================================
 
@@ -64,10 +65,18 @@ _unit assignCurator _curator;
 _curator setCuratorWaypointCost 0;
 {_curator setCuratorCoef [_x,0];} forEach ["place","edit","delete","destroy","group","synchronize"];
 
+if (_synchronize) then {
+	{
+		 [_curator,_x] call f_fnc_zeusSyncCurators;
+	} forEach allCurators - [_curator];
+};
+
 // Check if F3 AI Skill Selector is active and assign corresponding event-handler
 if({!isNil _x} count ["f_param_AISkill_BLUFOR","f_param_AISkill_INDP","f_param_AISkill_OPFOR"] > 0) then {
     _curator addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISkill;} forEach crew(_this select 1)}];
 };
+
+// Setup
 
 // If announce is set to true, the new curator will be announced to all players
 if (_announce) then {

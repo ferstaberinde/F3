@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES
 
-private ["_curator","_target"];
+private ["_curator","_target","_persistent"];
 
 // ====================================================================================
 
@@ -20,6 +20,7 @@ if !(isServer) exitWith {};
 
 _curator = [_this,0,objNull] call bis_fnc_param;
 _target = [_this,1,objNull] call bis_fnc_param;
+_persistent = [_this,2,true] call bis_fnc_param;
 
 // ====================================================================================
 
@@ -52,9 +53,11 @@ if (isNull _target || typeOf _target != "ModuleCurator_F") exitWith {
 
 // ====================================================================================
 
-// Add existing units from other curators to the selected curators list and set up the EHs
+// Add existing units from other curators to the selected curators list and set up eventhandlers to add all subsequent units
 _curator addCuratorEditableObjects [curatorEditableObjects _target,true];
 _target addCuratorEditableObjects [curatorEditableObjects _curator,true];
 
-_curator addEventHandler ['CuratorObjectPlaced',{_target addCuratorEditableObjects [(_this select 1),true];}];
-_target addEventHandler ['CuratorObjectPlaced',{_curator addCuratorEditableObjects [(_this select 1),true];}];
+if (_persistent) then {
+	_curator addEventHandler ['CuratorObjectPlaced',{_target addCuratorEditableObjects [(_this select 1),true];}];
+	_target addEventHandler ['CuratorObjectPlaced',{_curator addCuratorEditableObjects [(_this select 1),true];}];
+};
