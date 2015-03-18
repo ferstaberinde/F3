@@ -40,7 +40,7 @@ while {true} do {
 		// Using curly braces makes the if statement cheaper to evaluate
 		if (group player != _nearGroup && alive _nearUnit && {(_allowDifferentSide || side player == side _nearGroup)}) then {
 
-				_actionString = format["Join %1's group", name _nearUnit];
+				_actionString = format["Join %1 (%2)", name _nearUnit,_nearGroup];
 
 				f_groupJoinAction = player addAction [_actionString, {
 
@@ -51,7 +51,7 @@ while {true} do {
 				[player] joinSilent _grp;
 
 				//Display notifications about new group member to the whole group
-				["JIP",[format ["You have joined %1's group.",name leader _grp]]] call BIS_fnc_showNotification;
+				["JIP",[format ["You have joined %1 (%2).",name leader _grp,_grp]]] call BIS_fnc_showNotification;
 
 				{
 					if (isPlayer _x) then {[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",_x] call BIS_fnc_MP};
@@ -65,10 +65,8 @@ while {true} do {
 				f_groupJoinAction = nil;
 			}, _nearGroup, 0, false, true, "", "_this == player"];
 
-			// Wait until the player has moved too far away or has joined the group
-			waitUntil {sleep 0.1;(group player == _nearGroup || player distance _nearUnit > _actionDistance)};
-
-			sleep 1;
+			// Wait until the player is not facing the unit or has joined the group
+			waitUntil {sleep 0.5;(group player == _nearGroup || cursorTarget != _nearUnit)};
 
 			// Remove and reset the action if it's still present
 			if !(isNil "f_groupJoinAction") then {
