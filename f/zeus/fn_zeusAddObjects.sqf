@@ -60,7 +60,7 @@ switch (typeName _mode) do {
 	};
 	case "BOOL": {
 		 if (_mode) then {
-		 	_objects = (vehicles+allUnits);
+		 	_objects = allMissionObjects "";
 
 		 	//To prevent unnecessary stress on the network compare the the new _objects array to the existing curator objects. If they are identical, reset _objects to an empty array
 		 	if (_objects isEqualTo (curatorEditableObjects _curator)) then {

@@ -51,6 +51,7 @@ if (isNil "f_var_sideCenter") then {
 
 // Create a new curator logic
 _curator = (createGroup f_var_sideCenter) createUnit ["ModuleCurator_F",[0,0,0] , [], 0, ""];
+_curator setVariable ["owner",format["%1",_unit],true];
 
 // Assign the passed unit as curator
 _unit assignCurator _curator;
