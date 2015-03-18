@@ -28,32 +28,46 @@ _actionGraceTime = 3;
 // Check if script caller wants to enable joining of groups on different sides, default to false
 _allowDifferentSide = [_this,0,false] call bis_fnc_param;
 
-// If nearest unit is leader of a different group with playable units in it, add option to join that group
-while {true} do {
-	if (count (nearestObjects [player, ["Man"], _actionDistance] - [player]) > 0) then {
-		_nearUnit = (nearestObjects [player, ["Man"], _actionDistance] - [player]) select 0;
-		_nearGroup = group _nearUnit;
+// Main loop to detect whether the action should be displayed
 
-		// Using curly braces makes the if statement cheaper to evaluate, but requires OA 1.62
-		if (alive _nearUnit && group player != _nearGroup && _nearUnit == leader _nearGroup && _nearUnit in playableUnits) then {
+while {true} do {
+
+	// If targeted unit is a player and infantry
+	if (isPlayer cursorTarget && {player distance cursorTarget < _actionDistance && cursorTarget isKindOf "CAManBase"}) then {
+		_nearUnit = cursorTarget;
+		_nearGroup = group cursorTarget;
+
+		// Using curly braces makes the if statement cheaper to evaluate
+		if (group player != _nearGroup && {alive _nearUnit && _nearUnit == leader _nearGroup}) then {
 			if (_allowDifferentSide || side player == side _nearGroup) then {
-				_actionString = format["Join group: %1", _nearGroup];
+
+				_actionString = format["Join %1's group", name _nearUnit];
 
 				f_groupJoinAction = player addAction [_actionString, {
-					[player] joinSilent (_this select 3);
-					["JIP",[format ["You have joined %1.",(_this select 3)]]] call BIS_fnc_showNotification;
+
 					_unit = player;
-					{
-						if (isPlayer _x) then {
-							[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",_x] spawn BIS_fnc_MP;
-						};
-					} forEach (units (_this select 3) - [_unit]);
+					_grp = (_this select 3);
+
+					// Player joins new group
+					[player] joinSilent _grp;
+
+					//Display notifications about new group member to the whole group
+					["JIP",[format ["You have joined %1's group.",name leader _grp]]] call BIS_fnc_showNotification;
+					[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",(units _grp - [_unit])] spawn BIS_fnc_MP;
+
+					// Make sure the group leader is synchronized properly accross the network
+					[[_nearGroup, leader _nearGroup], "selectLeader", leader _nearGroup, false] call BIS_fnc_mp;
+
+					player removeAction f_groupJoinAction;
 				}, _nearGroup, 0, false, true, "", "_this == player"];
 
 				// Once player leaves the group leader's vicinity, remove action
 				waitUntil {sleep 0.1;player distance _nearUnit > _actionDistance};
+
 				sleep _actionGraceTime;
-				player removeAction (f_groupJoinAction);
+				if !(isNil "f_groupJoinAction") then {
+					player removeAction f_groupJoinAction;
+				};
 			};
 		};
 	};
