@@ -18,58 +18,64 @@ if (!isDedicated && (isNull player)) then
 
 // ====================================================================================
 
-private ["_nearUnit", "_nearGroup", "_actionDistance", "_actionGraceTime", "_allowDifferentSide"];
+private ["_nearUnit", "_nearGroup", "_actionDistance", "_allowDifferentSide"];
 
 // How many meters player needs to be from another group's leader for the join action to be shown
 _actionDistance = 2.5;
-// How many seconds the action is shown for when you leave group leader's range
-_actionGraceTime = 3;
 
 // Check if script caller wants to enable joining of groups on different sides, default to false
 _allowDifferentSide = [_this,0,false] call bis_fnc_param;
 
 // Main loop to detect whether the action should be displayed
-
 while {true} do {
 
-	// If targeted unit is a player and infantry
-	if (isPlayer cursorTarget && {player distance cursorTarget < _actionDistance && cursorTarget isKindOf "CAManBase"}) then {
+	// Only proceed if the action does not exist
+	waitUntil {sleep 0.5; isNil "f_groupJoinAction"};
+
+	// If player does not have the groupJoin action already and the targeted unit is a player and infantry
+	// isPlayer cursorTarget &&
+	if (true && {player distance cursorTarget < _actionDistance && cursorTarget isKindOf "CAManBase"}) then {
 		_nearUnit = cursorTarget;
 		_nearGroup = group cursorTarget;
 
 		// Using curly braces makes the if statement cheaper to evaluate
-		if (group player != _nearGroup && {alive _nearUnit && _nearUnit == leader _nearGroup}) then {
-			if (_allowDifferentSide || side player == side _nearGroup) then {
+		if (group player != _nearGroup && alive _nearUnit && {(_allowDifferentSide || side player == side _nearGroup)}) then {
 
 				_actionString = format["Join %1's group", name _nearUnit];
 
 				f_groupJoinAction = player addAction [_actionString, {
 
-					_unit = player;
-					_grp = (_this select 3);
+				_unit = player;
+				_grp = (_this select 3);
 
-					// Player joins new group
-					[player] joinSilent _grp;
+				// Player joins new group
+				[player] joinSilent _grp;
 
-					//Display notifications about new group member to the whole group
-					["JIP",[format ["You have joined %1's group.",name leader _grp]]] call BIS_fnc_showNotification;
-					[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",(units _grp - [_unit])] spawn BIS_fnc_MP;
+				//Display notifications about new group member to the whole group
+				["JIP",[format ["You have joined %1's group.",name leader _grp]]] call BIS_fnc_showNotification;
 
-					// Make sure the group leader is synchronized properly accross the network
-					[[_nearGroup, leader _nearGroup], "selectLeader", leader _nearGroup, false] call BIS_fnc_mp;
+				{
+					if (isPlayer _x then {[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",_x] call BIS_fnc_MP;};
+				} forEach (units _grp - [_unit]); // Done using a forEach loop to avoid message spam should the group leader be controlling AI
 
-					player removeAction f_groupJoinAction;
-				}, _nearGroup, 0, false, true, "", "_this == player"];
+				// Make sure the group leader is synchronized properly accross the network
+				[[_grp, leader _grp], "selectLeader", leader _grp, false] call BIS_fnc_mp;
 
-				// Once player leaves the group leader's vicinity, remove action
-				waitUntil {sleep 0.1;player distance _nearUnit > _actionDistance};
+				// Remove and reset the action after executing it
+				player removeAction f_groupJoinAction;
+				f_groupJoinAction = nil;
+			}, _nearGroup, 0, false, true, "", "_this == player"];
 
-				sleep _actionGraceTime;
-				if !(isNil "f_groupJoinAction") then {
-					player removeAction f_groupJoinAction;
-				};
+			// Wait until the player is no longer facing the unit or has joined the group
+			waitUntil {sleep 0.1;(group player == _nearGroup || cursorTarget != _nearUnit)};
+
+			sleep 1;
+
+			// Remove and reset the action if it's still present
+			if !(isNil "f_groupJoinAction") then {
+				player removeAction f_groupJoinAction;
+				f_groupJoinAction = nil;
 			};
 		};
 	};
-	sleep 1;
 };
