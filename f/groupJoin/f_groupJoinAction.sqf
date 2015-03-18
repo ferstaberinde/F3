@@ -33,8 +33,7 @@ while {true} do {
 	waitUntil {sleep 0.5; isNil "f_groupJoinAction"};
 
 	// If player does not have the groupJoin action already and the targeted unit is a player and infantry
-	// isPlayer cursorTarget &&
-	if (true && {player distance cursorTarget < _actionDistance && cursorTarget isKindOf "CAManBase"}) then {
+	if (isPlayer cursorTarget && {player distance cursorTarget < _actionDistance && cursorTarget isKindOf "CAManBase"}) then {
 		_nearUnit = cursorTarget;
 		_nearGroup = group cursorTarget;
 
@@ -55,7 +54,7 @@ while {true} do {
 				["JIP",[format ["You have joined %1's group.",name leader _grp]]] call BIS_fnc_showNotification;
 
 				{
-					if (isPlayer _x then {[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",_x] call BIS_fnc_MP;};
+					if (isPlayer _x) then {[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",_x] call BIS_fnc_MP};
 				} forEach (units _grp - [_unit]); // Done using a forEach loop to avoid message spam should the group leader be controlling AI
 
 				// Make sure the group leader is synchronized properly accross the network
@@ -66,8 +65,8 @@ while {true} do {
 				f_groupJoinAction = nil;
 			}, _nearGroup, 0, false, true, "", "_this == player"];
 
-			// Wait until the player is no longer facing the unit or has joined the group
-			waitUntil {sleep 0.1;(group player == _nearGroup || cursorTarget != _nearUnit)};
+			// Wait until the player has moved too far away or has joined the group
+			waitUntil {sleep 0.1;(group player == _nearGroup || player distance _nearUnit > _actionDistance)};
 
 			sleep 1;
 
