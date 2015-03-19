@@ -32,8 +32,8 @@ while {true} do {
 	// Only proceed if the action does not exist
 	waitUntil {sleep 0.5; isNil "f_groupJoinAction"};
 
-	// If player does not have the groupJoin action already and the targeted unit is a player and infantry
-	if (isPlayer cursorTarget && {player distance cursorTarget < _actionDistance && cursorTarget isKindOf "CAManBase"}) then {
+	// If player is not on board of a vehicle and the targeted unit is a player and infantry
+	if (vehicle player == player && {isPlayer cursorTarget && player distance cursorTarget < _actionDistance && cursorTarget isKindOf "CAManBase"}) then {
 		_nearUnit = cursorTarget;
 		_nearGroup = group cursorTarget;
 
