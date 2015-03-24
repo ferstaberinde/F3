@@ -25,8 +25,8 @@ private ["_units","_superSkill","_highSkill","_mediumSkill","_lowSkill"];
 // These values define the total skill level as set by the parameter
 
 _superSkill = 1.00;
-_highSkill = 0.7;
-_mediumSkill = 0.55;
+_highSkill = 0.8;
+_mediumSkill = 0.6;
 _lowSkill = 0.4;
 
 // This are the minimal skills a soldier set to _superSkill would have. For all other skill levels the values are rounded using the numbers above.
