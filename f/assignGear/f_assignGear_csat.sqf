@@ -69,6 +69,9 @@ _scope1 = "optic_ACO_grn";		// ACO
 _scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
+_bipod1 = "bipod_02_F_hex";		// Default bipod
+_bipod2 = "bipod_02_F_blk";		// Black bipod
+
 // Default setup
 _attachments = [_attach1,_scope1]; // The default attachment set for most units, overwritten in the individual unitType
 
@@ -175,22 +178,26 @@ _baghsamag = "O_HMG_01_support_F";			// used by Heavy SAM assistant gunner
 
 // Automatic Rifleman
 _AR = "LMG_Zafir_F";
-_ARmag = "150Rnd_762x51_Box";
-_ARmag_tr = "150Rnd_762x51_Box_Tracer";
+_ARmag = "150Rnd_762x54_Box";
+_ARmag_tr = "150Rnd_762x54_Box_Tracer";
 
 // Medium MG
-_MMG = "LMG_Zafir_F";
-_MMGmag = "150Rnd_762x51_Box";
-_MMGmag_tr = "150Rnd_762x51_Box_Tracer";
+_MMG = "MMG_01_hex_F";
+_MMGmag = "150Rnd_93x64_Mag";
+_MMGmag_tr = "150Rnd_93x64_Mag";
 
 // NON-DLC ALTERNATIVE:
 //_MMG = "LMG_Zafir_F";
-//_MMGmag = "150Rnd_762x51_Box";
-//_MMGmag_tr = "150Rnd_762x51_Box_Tracer";
+//_MMGmag = ""150Rnd_762x54_Box"";
+//_MMGmag_tr = "150Rnd_762x54_Box_Tracer";
 
 // Marksman rifle
-_DMrifle = "srifle_EBR_F"; //TODO: Cyrus
-_DMriflemag = "20Rnd_762x51_Mag";
+_DMrifle = "srifle_DMR_05_hex_F";
+_DMriflemag = "10Rnd_93x64_DMR_05_Mag";
+
+// ASP1-KIR
+// _DMrifle = "srifle_DMR_04_F";
+// _DMriflemag = "10Rnd_127x54_Mag";
 
 // Rifleman AT
 _RAT = "launch_RPG32_F";
@@ -271,7 +278,7 @@ _crewRig = ["V_HarnessO_brn"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_O_GhillieSuit"];
+_ghillieUniform = ["U_O_GhillieSuit"]; //DLC alternatives: ["U_O_FullGhillie_lsh","U_O_FullGhillie_ard","U_O_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_khk"];
 _ghillieGlasses = [];
@@ -484,6 +491,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		["mmg"] call _backpack;
+		_attachments append [_bipod1];
 	};
 
 // LOADOUT: MEDIUM MG ASSISTANT GUNNER
@@ -653,7 +661,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		_unit addmagazines [_smokegrenade,2];
-		_attachments = [_scope3];
+		_attachments = [_scope3,_bipod2];
 	};
 
 // LOADOUT: SPOTTER

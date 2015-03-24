@@ -69,6 +69,9 @@ _scope1 = "optic_ACO_grn";		// ACO
 _scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
+_bipod1 = "bipod_01_F_mtp";		// Default bipod
+_bipod2 = "bipod_02_F_blk";		// Black bipod
+
 // Default setup
 _attachments = [_attach1,_scope1]; // The default attachment set for most units, overwritten in the individual unitType
 
@@ -183,13 +186,18 @@ _ARmag = "200Rnd_65x39_cased_Box";
 _ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
 
 // Medium MG
-_MMG = "LMG_Zafir_F";
-_MMGmag = "150Rnd_762x51_Box";
-_MMGmag_tr = "150Rnd_762x51_Box_Tracer";
+_MMG = "MMG_02_camo_F";
+_MMGmag = "130Rnd_338_Mag";
+_MMGmag_tr = "130Rnd_338_Mag";
+
+// NON-DLC ALTERNATIVE:
+// _MMG = "MMG_02_camo_F";
+// _MMGmag = ""150Rnd_762x54_Box"";
+// _MMGmag_tr = ""150Rnd_762x54_Box"_Tracer";
 
 // Marksman rifle
-_DMrifle = "srifle_EBR_F"; //TODO: M14
-_DMriflemag = "20Rnd_762x51_Mag";
+_DMrifle = "srifle_DMR_06_olive_F";
+_DMriflemag = "16Rnd_9x21_Mag";
 
 // Rifleman AT
 _RAT = "launch_RPG32_F";
@@ -244,7 +252,7 @@ _baseGlasses = ["G_Bandanna_blk","G_Bandanna_khk","G_Bandanna_oli"];
 // Vests
 _lightRig = ["V_BandollierB_blk","V_BandollierB_rgr"];
 _mediumRig = ["V_TacVest_blk","V_TacVest_camo","V_TacVest_oli"]; 	// default for all infantry classes
-_heavyRig = ["V_PlateCarrier1_blk"];
+_heavyRig = ["V_PlateCarrier1_blk","V_PlateCarrierIAGL_oli"];
 
 // Diver
 _diverUniform =  ["U_B_Wetsuit"];
@@ -265,7 +273,7 @@ _crewRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_B_GhillieSuit"];
+_ghillieUniform = ["U_B_GhillieSuit"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
@@ -425,6 +433,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		["ar"] call _backpack;
+		_attachments append [_bipod1];
 	};
 
 // LOADOUT: ASSISTANT AUTOMATIC RIFLEMAN
@@ -478,6 +487,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		["mmg"] call _backpack;
+		_attachments append [_bipod1];
 	};
 
 // LOADOUT: MEDIUM MG ASSISTANT GUNNER

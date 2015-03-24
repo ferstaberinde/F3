@@ -69,6 +69,9 @@ _scope1 = "optic_ACO_grn";		// ACO
 _scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
+_bipod1 = "bipod_03_F_oli";		// Default bipod
+_bipod2 = "bipod_03_F_blk";		// Black bipod
+
 // Default setup
 _attachments = [_attach1,_scope1]; // The default attachment set for most units, overwritten in the individual unitType
 
@@ -179,9 +182,14 @@ _ARmag = "200Rnd_65x39_cased_Box";
 _ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
 
 // Medium MG
-_MMG = "LMG_Zafir_F";
-_MMGmag = "150Rnd_762x51_Box";
-_MMGmag_tr = "150Rnd_762x51_Box_Tracer";
+_MMG = "MMG_01_tan_F";
+_MMGmag = "150Rnd_93x64_Mag";
+_MMGmag_tr = "150Rnd_93x64_Mag";
+
+// NON-DLC ALTERNATIVE:
+//_MMG = "LMG_Zafir_F";
+//_MMGmag = ""150Rnd_762x54_Box"";
+//_MMGmag_tr = ""150Rnd_762x54_Box"_Tracer";
 
 // Marksman rifle
 _DMrifle = "srifle_EBR_F";
@@ -261,12 +269,12 @@ _crewRig = ["V_TacVest_oli"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_I_GhillieSuit"];
+_ghillieUniform = ["U_I_GhillieSuit"];	//DLC alternatives: ["U_I_FullGhillie_lsh","U_I_FullGhillie_ard","U_I_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_oli"];
 _ghillieGlasses = [];
 
-// Spec Op - no nice stuff for AAF :(
+// Spec Op - no nice stuff for AAF
 _sfuniform = _baseUniform;
 _sfhelmet = _baseHelmet;
 _sfRig = _mediumRig;
@@ -420,6 +428,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		["ar"] call _backpack;
+		_attachments append [_bipod1];
 	};
 
 // LOADOUT: ASSISTANT AUTOMATIC RIFLEMAN
@@ -473,6 +482,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		["mmg"] call _backpack;
+		_attachments append [_bipod1];
 	};
 
 // LOADOUT: MEDIUM MG ASSISTANT GUNNER
@@ -641,7 +651,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		_unit addmagazines [_smokegrenade,2];
-		_attachments = [_scope3];
+		_attachments = [_scope3,_bipod1];
 	};
 
 // LOADOUT: SPOTTER
