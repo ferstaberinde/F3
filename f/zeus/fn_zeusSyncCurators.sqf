@@ -41,6 +41,7 @@ if (isNull _curator || typeOf _curator != "ModuleCurator_F") exitWith {
 // Add existing units from other curator to the targeted curator and set up eventhandlers to add all subsequent units
 {
 	_curator addCuratorEditableObjects [curatorEditableObjects _x,true];
+	_x addCuratorEditableObjects [curatorEditableObjects _curator,true];
 } forEach _targets;
 
 if (_persistent) then {
