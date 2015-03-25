@@ -8,9 +8,6 @@ if !(isServer) exitWith {};
 // Redundant sleep to give everything a second to settle
 sleep 1;
 
-// Make players invincible, server-side
-[[player,false],"allowDamage",playableUnits + switchableUnits] call BIS_fnc_MP;
-
 while {f_var_mission_timer > 0} do {
 
 	// Broadcast remaining time to players
