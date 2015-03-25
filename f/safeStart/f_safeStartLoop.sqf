@@ -8,18 +8,29 @@ if !(isServer) exitWith {};
 // Redundant sleep to give everything a second to settle
 sleep 1;
 
-// Timer for the mission setup
-for [{_i = pv_mission_timer;},{_i > 0;},{_i = _i - 1;}] do
-{
-	[["SafeStart",[format["Time Remaining: %1 min",pv_mission_timer]]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
-	uisleep 60;
-	pv_mission_timer = pv_mission_timer - 1;
-	publicVariable "pv_mission_timer";
+// Make players invincible, server-side
+[[player,false],"allowDamage",playableUnits + switchableUnits] call BIS_fnc_MP;
 
-	//Once the mission timer has reached 0, disable the safeties
-	if (pv_mission_timer == 0) exitWith {
-		[["SafeStartMissionStarting",["Mission starting now!"]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
-		[{false execVM "f\safeStart\f_safety.sqf"},"BIS_fnc_spawn",true]  call BIS_fnc_MP;
-	};
+while {f_var_mission_timer > 0} do {
+
+	// Broadcast remaining time to players
+	[["SafeStart",[format["Time Remaining: %1 min",f_var_mission_timer]]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
+
+	uisleep 60; // Sleep 60 seconds
+
+	// If mission timer has been terminated by admin briefing, simply exit
+	if (f_var_mission_timer < 0) exitWith {};
+
+	// Reduce the mission timer by one
+	f_var_mission_timer = f_var_mission_timer - 1;
+	publicVariable "f_var_mission_timer";
 };
 
+//Once the mission timer has reached 0, disable the safeties
+if (f_var_mission_timer == 0) then {
+		// Broadcast message to players
+		[["SafeStartMissionStarting",["Mission starting now!"]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
+
+		// Remotely execute script to disable safety for all selectable units
+		[[[false],"f\safeStart\f_safety.sqf"],"BIS_fnc_execVM",playableUnits + switchableUnits]  call BIS_fnc_MP;
+};
