@@ -56,7 +56,7 @@ while {true} do {
 // Create the briefing section to display the endings
 
 _briefing = _briefing + "
-ENDINGS<br/>
+<font size='18'>ENDINGS</font><br/>
 These endings are available. To trigger an ending click on its link.<br/><br/>
 ";
 
