@@ -49,7 +49,7 @@ while {true} do {
 	_description = getText (missionconfigfile >> "CfgDebriefing" >> format ["end%1",_i] >> "description");
 	if (_title == "") exitWith {};
 	_ending = [_i,_title,_description];
-	_endings append (_ending);
+	_endings append ([_ending]);
 	_i = _i + 1;
 };
 
@@ -119,7 +119,7 @@ if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first
 Add all group leaders and empty vehicles</execute>.<br/>
 
 |- <execute expression=""
-if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {[[player,true],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; hintsilent 'Add all units.'};"">Gain control over all objects</execute> <font color='#FF0000'>(CAN CAUSE DESYNC)</font>.<br/>
+if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {[[player,true],'f_fnc_zeusAddObjects',false] spawn BIS_fnc_MP; hintsilent 'Add all units.'};"">Add all mission objects</execute> <font color='#FF0000'>(POSSIBLE DESYNC)</font>.<br/>
 
 |- <execute expression=""
 if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {(getAssignedCuratorLogic player) removeCuratorEditableObjects [allDead,true]; hintsilent 'Removed dead units.'};"">Remove all dead units from ZEUS</execute>.<br/>
