@@ -507,6 +507,11 @@ class CfgFunctions
 			class tfr_setRadioFrequencies{};
 			class tfr_configureSpectatorChat{};
 		};
+		class safeStart
+		{
+			file = "f\safeStart\"
+			class safety{};
+		};
 		#include "f\simplewoundingsystem\config.hpp"
 		#include "f\spect\functions.hpp"
 

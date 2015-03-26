@@ -11,9 +11,6 @@ if (isNil "f_var_mission_timer") then {
 
 // ====================================================================================
 
-// Make sure the rest of the component only starts after the mission has initialized
-sleep 0.1;
-
 // BEGIN SAFE-START LOOP
 // If a value was set for the mission-timer, begin the safe-start loop and turn on invincibility
 
@@ -26,6 +23,6 @@ if (f_var_mission_timer > 0) then
 
 	// Enable invincibility for players
 	if (!isDedicated) then {
-		[true] execVM "f\safeStart\f_safety.sqf";
+		[true] call f_fnc_safety;
 	};
 };

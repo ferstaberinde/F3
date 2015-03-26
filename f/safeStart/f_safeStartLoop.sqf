@@ -29,5 +29,5 @@ if (f_var_mission_timer == 0) then {
 		[["SafeStartMissionStarting",["Mission starting now!"]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
 
 		// Remotely execute script to disable safety for all selectable units
-		[[[false],"f\safeStart\f_safety.sqf"],"BIS_fnc_execVM",playableUnits + switchableUnits]  call BIS_fnc_MP;
+		[[false],"f_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
 };

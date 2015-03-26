@@ -86,15 +86,15 @@ Begin Safe Start timer</execute><br/>
 
 |- <execute expression=""f_var_mission_timer = -1; publicVariable 'f_var_mission_timer';
 [['SafeStartMissionStarting',['Mission starting now!']],'bis_fnc_showNotification',true] call BIS_fnc_MP;
-[[[false],'f\safeStart\f_safety.sqf'],'BIS_fnc_execVM',playableUnits + switchableUnits]  call BIS_fnc_MP;
+[[false],'f_fnc_safety',playableUnits + switchableUnits] call BIS_fnc_MP;
 hintsilent 'Safe Start ended!';"">
 End Safe Start timer</execute><br/>
 
-|- <execute expression=""[[[true],'f\safeStart\f_safety.sqf'],'BIS_fnc_execVM',playableUnits + switchableUnits] call BIS_fnc_MP;
+|- <execute expression=""[[true],'f_fnc_safety',playableUnits + switchableUnits] call BIS_fnc_MP;
 hintsilent 'Safety on!' "">
 Force safety on for all players</execute><br/>
 
-|- <execute expression=""[[[false],'f\safeStart\f_safety.sqf'],'BIS_fnc_execVM',playableUnits + switchableUnits] call BIS_fnc_MP;
+|- <execute expression=""[[false],'f_fnc_safety',playableUnits + switchableUnits] call BIS_fnc_MP;
 hintsilent 'Safety off!' "">
 Force safety off for all players</execute><br/><br/>
 ";
