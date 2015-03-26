@@ -16,7 +16,7 @@ switch (_this select 0) do
 		};
 
 		// Disable guns and damage for vehicles if player is crewing a vehicle
-		if (vehicle player != player && {(player in [gunner vehicle player,driver vehicle player,commander vehicle player]}) then {
+		if (vehicle player != player && {player in [gunner vehicle player,driver vehicle player,commander vehicle player]}) then {
 			player setVariable ["f_var_safetyVeh",vehicle player];
 			(player getVariable "f_var_safetyVeh") allowDamage false;
 
@@ -40,10 +40,10 @@ switch (_this select 0) do
 		};
 
 		// Re-enable guns and damage for vehicles if they were disabled
-		if !(isNil(player getVariable ["f_var_safetyVeh",nil])) then {
+		if !(isNull(player getVariable ["f_var_safetyVeh",objnull])) then {
 			(player getVariable "f_var_safetyVeh") allowDamage true;
 
-			if (isNil "f_eh_safetyVeh") then {
+			if !(isNil "f_eh_safetyVeh") then {
 				(player getVariable "f_var_safetyVeh") removeeventhandler ["Fired", f_eh_safetyVeh];
 				f_eh_safetyVeh = nil;
 			};
