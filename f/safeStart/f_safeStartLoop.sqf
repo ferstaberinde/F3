@@ -6,7 +6,7 @@
 if !(isServer) exitWith {};
 
 // Redundant sleep to give everything a second to settle
-sleep 1;
+sleep 2;
 
 while {f_var_mission_timer > 0} do {
 
