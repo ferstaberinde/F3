@@ -7,14 +7,15 @@ private ["_u","_pos","_suffix","_color","_str","_height"];
 // Declare variables
 _u = _this select 0;
 _pos = _this select 1;
-_height = f_height_standing_Nametags;
+_height =
 switch (stance _u) do {
     case "CROUCH": {
-    	_height = f_height_crouch_Nametags;
+    	f_height_crouch_Nametags;
     };
     case "PRONE": {
-		_height = f_height_prone_Nametags;
+		f_height_prone_Nametags;
 	};
+	default {f_height_standing_Nametags};
 };
 _suffix = if (count _this > 2) then {_this select 2} else {""};
 
