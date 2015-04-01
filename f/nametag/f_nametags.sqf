@@ -139,7 +139,7 @@ addMissionEventHandler ["Draw3D", {
 			// Filter entities
 			if (
 				// Only for the player's side
-				side _x == side player &&
+				(faction _x == faction player || side _x == side player || group _x == group player) &&
 				// Only other players & no virtual units
 				{_x != player && !(player iskindof "VirtualMan_F")}
 				)
