@@ -22,7 +22,8 @@ f_showVehicle_Nametags = false;  // Show type of vehicle under driver's name
 f_cursortarget_Nametags = false;  // True shows only name for units aimed, false displays tags for all unit in radius
 
 // Other values
-f_dist_Nametags = 15;	// Distance for the nametags to be displayed in
+f_distCursor_Nametags = 22;		// Distance to display name tag for unit under cursor
+f_distAll_Nametags = 10;		// Distance to display name tags for all units around
 F_KEY_NAMETAGS =  "TeamSwitch"; // The action key to toggle the name tags. See possible keys here: http://community.bistudio.com/wiki/Category:Key_Actions
 
 // Display values
@@ -75,11 +76,11 @@ F_KEYDOWN_NAMETAG = {
 
 	//TODO add color section
 	_bstr = format ["<br/><font size='18'>F3 NAMETAGS</font><br/>Toggle nametags for friendly units by pressing %1. This displays nametags for units within %3 m.
-	",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DIST_NAMETAGS];
+	",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DISTALL_NAMETAGS];
 
-	_bstr = _bstr + "<br/><br/><font size='18'>DISPLAY RADIUS</font><br/>Nametags can be displayed for only the targeted unit or in a 360° radius. To toggle this feature <execute expression=""
+	/*_bstr = _bstr + "<br/><br/><font size='18'>DISPLAY RADIUS</font><br/>Nametags can be displayed for only the targeted unit or in a 360° radius. To toggle this feature <execute expression=""
 		if (f_cursortarget_nametags) then [{hintsilent 'Full radius display activated!';f_cursortarget_nametags= false},{f_cursortarget_nametags = true;hintsilent 'Cursor display activated!'}];""
-		>click here</execute>.";
+		>click here</execute>.";*/
 
 	_bstr = _bstr + "<br/><br/><font size='18'>GROUP NAMES</font><br/>Nametags can show group name's next to friendly units who are not in your own group. To toggle this feature <execute expression=""
 	if (F_SHOWGROUP_NAMETAGS) then [{hintsilent 'Group display deactivated!';F_SHOWGROUP_NAMETAGS= false},{F_SHOWGROUP_NAMETAGS = true;hintsilent 'Group display activated!'}];""
@@ -126,13 +127,15 @@ addMissionEventHandler ["Draw3D", {
 
 	// Collect all entities in the relevant distance
 
-	_ents =[];
+	_ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], f_distAll_Nametags];
 
-		if (f_cursortarget_nametags) then {
+	if (!(cursorTarget in _ents) && ((player distance cursorTarget) <= f_distCursor_Nametags)) then {_ents append [cursorTarget]};
+
+		/*if (f_cursortarget_nametags) then {
 			if ((player distance cursorTarget) <= F_DIST_NAMETAGS) then {_ents = [cursortarget]};
 		} else {
-			_ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], F_DIST_NAMETAGS];
-		};
+			_ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], f_distAll_Nametags];
+		};*/
 
 		// Start looping through all entities
 		{
