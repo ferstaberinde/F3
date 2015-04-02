@@ -192,7 +192,7 @@ addMissionEventHandler ["Draw3D", {
 						_pos = visiblePosition _x;
 
 						// Only display tags for non-driver crew and cargo if player is up close
-						if (driver _veh == _x || effectiveCommander _veh == _x || group _x == group player || _pos distance player <= f_distAll_Nametags) then {
+						if (effectiveCommander _veh == _x || group _x == group player || _pos distance player <= f_distAll_Nametags) then {
 
 							// If the unit is the driver, calculate the available and taken seats
 							if (effectiveCommander _veh == _x) then {
