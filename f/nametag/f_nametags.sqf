@@ -181,11 +181,12 @@ addMissionEventHandler ["Draw3D", {
 					{
 						// Get the various crew slots
 						_suffix = switch (true) do {
-							case (driver _veh == _x):{" - D"};
+							case (driver _veh == _x && !(toLower (typeOf _veh) in ["helicopter","plane"])):{" - D"};
+							case (driver _veh == _x && (toLower (typeOf _veh) in ["helicopter","plane"])):{" - P"};
 							case (commander _veh == _x);
-							case (effectiveCommander _veh == _x):{" - C"};
-							case (gunner _veh == _x);
-							case (assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x):{" - G"};
+							case (effectiveCommander _veh == _x):{" - CO"};
+							case (gunner _veh == _x):{" - G"};
+							case (assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x):{" - C"};
 							default {""};
 						};
 
