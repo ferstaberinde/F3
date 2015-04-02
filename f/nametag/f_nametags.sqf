@@ -75,26 +75,31 @@ F_KEYDOWN_NAMETAG = {
 	waitUntil {scriptDone f_script_briefing};
 
 	//TODO add color section
-	_bstr = format ["<br/><font size='18'>F3 NAMETAGS</font><br/>Toggle nametags for friendly units by pressing %1. This displays nametags for units within %3 m.
-	",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DISTALL_NAMETAGS];
+	_bstr = format ["<br/><font size='18'>F3 NAMETAGS</font><br/>Toggle nametags for friendly units by pressing %1. This displays nametags for units within %3m of you and when aiming at units in %4m. Various features can be toggled below.
+	",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DISTALL_NAMETAGS,F_DISTCursor_NAMETAGS];
 
 	/*_bstr = _bstr + "<br/><br/><font size='18'>DISPLAY RADIUS</font><br/>Nametags can be displayed for only the targeted unit or in a 360° radius. To toggle this feature <execute expression=""
 		if (f_cursortarget_nametags) then [{hintsilent 'Full radius display activated!';f_cursortarget_nametags= false},{f_cursortarget_nametags = true;hintsilent 'Cursor display activated!'}];""
 		>click here</execute>.";*/
 
-	_bstr = _bstr + "<br/><br/><font size='18'>GROUP NAMES</font><br/>Nametags can show group name's next to friendly units who are not in your own group. To toggle this feature <execute expression=""
+	_bstr = _bstr + "<br/><br/><execute expression=""
 	if (F_SHOWGROUP_NAMETAGS) then [{hintsilent 'Group display deactivated!';F_SHOWGROUP_NAMETAGS= false},{F_SHOWGROUP_NAMETAGS = true;hintsilent 'Group display activated!'}];""
-	>click here</execute>.";
+	>TOGGLE GROUP NAME DISPLAY</execute>.<br/> Shows group name next to a unit's name.";
 
-	_bstr = _bstr + "<br/><br/><font size='18'>DISTANCE</font><br/>Nametags can display the unit's relative distance to yourself. To toggle this feature <execute expression=""
+	_bstr = _bstr + "<br/><br/><execute expression=""
 	if (F_SHOWDISTANCE_NAMETAGS) then [{hintsilent 'Distance display deactivated!';F_SHOWDISTANCE_NAMETAGS= false},{F_SHOWDISTANCE_NAMETAGS = true;hintsilent 'Distance display activated!'}];""
-	>click here</execute>.";
+	>TOGGLE DISTANCE DISPLAY</execute>.<br/> Displays distance to other units under the name tag.";
 
-	_bstr = _bstr + "<br/><br/><font size='18'>VEHICLE TYPES</font><br/>Nametags can display the vehicle type under the driver's name. To toggle this feature <execute expression=""
+	_bstr = _bstr + "<br/><br/><execute expression=""
 	if (F_SHOWVEHICLE_NAMETAGS) then [{hintsilent 'Vehicle type display deactivated!';F_SHOWVEHICLE_NAMETAGS= false},{F_SHOWVEHICLE_NAMETAGS = true;hintsilent 'Vehicle type display activated!'}];""
-	>click here</execute>.";
+	>TOGGLE VEHICLE TYPE DISPLAY</execute>.<br/> Displays the vehicle type under the driver's name.";
 
-	player createDiaryRecord ["Diary", ["F3 NameTags",_bstr]];
+	_bstr = _bstr + "<br/><br/><font size='18'>COLORS</font><br/>
+	<font color='#FFFFFF'>Friendly</font><br/>
+	<font color='#7FFFD4'>Fireteam</font><br/>
+	<font color='#DC143C'>Vehicle Crew</font>";
+
+	player createDiaryRecord ["Diary", ["F3 NameTags (Options)",_bstr]];
 
 	// NOTIFY PLAYER ABOUT NAMETAGS VIA HINT
 	sleep 5;
@@ -129,7 +134,7 @@ addMissionEventHandler ["Draw3D", {
 
 	_ents = (position player) nearEntities [["CAManBase","LandVehicle","Helicopter","Plane","Ship_F"], f_distAll_Nametags];
 
-	if (!(cursorTarget in _ents) && ((player distance cursorTarget) <= f_distCursor_Nametags)) then {_ents append [cursorTarget]};
+	if (!(cursorTarget in _ents) && {((player distance cursorTarget) <= f_distCursor_Nametags) && player knowsAbout cursorTarget >= 1.5}) then {_ents append [cursorTarget]};
 
 		/*if (f_cursortarget_nametags) then {
 			if ((player distance cursorTarget) <= F_DIST_NAMETAGS) then {_ents = [cursortarget]};
