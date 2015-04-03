@@ -23,7 +23,7 @@ f_showVehicle_Nametags = false;  // Show type of vehicle under driver's name
 f_showCursorOnly_Nametags = false; // Show only units under cursor target (disable 360° view)
 
 // Other values
-f_distCursor_Nametags = 25;		// Distance to display name tag for unit under cursor
+f_distCursor_Nametags = 28;		// Distance to display name tag for unit under cursor
 f_distAll_Nametags = 10;		// Distance to display name tags for all units around
 F_KEY_NAMETAGS =  "TeamSwitch"; // The action key to toggle the name tags. See possible keys here: http://community.bistudio.com/wiki/Category:Key_Actions
 
@@ -181,8 +181,8 @@ addMissionEventHandler ["Draw3D", {
 					{
 						// Get the various crew slots
 						_suffix = switch (true) do {
-							case (driver _veh == _x && !(toLower (typeOf _veh) in ["helicopter","plane"])):{" - D"};
-							case (driver _veh == _x && (toLower (typeOf _veh) in ["helicopter","plane"])):{" - P"};
+							case (driver _veh == _x && !((_veh isKindOf "helicopter") || (_veh isKindOf "plane"))):{" - D"};
+							case (driver _veh == _x && ((_veh isKindOf "helicopter") || (_veh isKindOf "plane"))):{" - P"};
 							case (commander _veh == _x);
 							case (effectiveCommander _veh == _x):{" - CO"};
 							case (gunner _veh == _x):{" - G"};
