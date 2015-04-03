@@ -84,10 +84,11 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 		{
 			if ((assignedVehicleRole _x select 0) != "CARGO") then {
 				_orbatText = _orbatText + format["|- %1",name _x];
-				if (driver vehicle _x == _x) exitWith {_orbatText =_orbatText +" [D] <br />"};
+				if (driver vehicle _x == _x  && !(toLower (typeOf vehicle _x) in ["helicopter","plane"])) exitWith {_orbatText =_orbatText +" [D] <br />"};
+				if (driver vehicle _x == _x  && (toLower (typeOf vehicle _x) in ["helicopter","plane"])) exitWith {_orbatText =_orbatText +" [P] <br />"};
 				if (gunner vehicle _x == _x) exitWith {_orbatText =_orbatText +" [G] <br />"};
-				if (commander vehicle _x == _x) exitWith {_orbatText =_orbatText +" [C] <br />"};
-				_orbatText =_orbatText +" [G] <br />"
+				if (commander vehicle _x == _x) exitWith {_orbatText =_orbatText +" [CO] <br />"};
+				_orbatText =_orbatText +" [C] <br />"
 			};
 		} forEach crew _x;
 
