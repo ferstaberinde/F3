@@ -30,21 +30,9 @@ if(f_cam_isJIP) then
   uiSleep 3;
   ["F_ScreenSetup"] call BIS_fnc_blackIn;
 };
-
-// Create a Virtual Agent to act as our player to make sure we get to keep Draw3D
-if(isNil "f_cam_VirtualCreated") then
+if(typeof _unit == "seagull") then
 {
-  createCenter sideLogic;
-  _newGrp = createGroup sideLogic;
-  _newUnit = _newGrp createUnit ["VirtualCurator_F", [0,0,5], [], 0, "FORM"];
-  _newUnit allowDamage false;
-  _newUnit hideObject true;
-  _newUnit enableSimulation false;
-  _newUnit setpos [0,0,5];
-  selectPlayer _newUnit;
-  waituntil{player == _newUnit};
-  deleteVehicle _unit;
-  f_cam_VirtualCreated = true;
+  _unit setpos [0,0,0];
 };
 
 if(isNull _oldUnit ) then {if(count playableUnits > 0) then {_oldUnit = (playableUnits select 0)} else {_oldUnit = (allUnits select 0)};};
@@ -140,6 +128,13 @@ f_cam_indep_color = [independent] call bis_fnc_sideColor;
 f_cam_civ_color = [civilian] call bis_fnc_sideColor;
 f_cam_empty_color = [sideUnknown] call bis_fnc_sideColor;
 
+// ================================
+
+f_cam_angle = 360;
+f_cam_zoom = 3;
+f_cam_height = 3;
+f_cam_fovZoom = 1.2;
+f_cam_scrollHeight = 0;
 // ====================================================================================
 
 f_cam_listUnits = [];
@@ -207,6 +202,13 @@ f_cam_camera camCommit 0;
 f_cam_fakecamera camCommit 0;
 f_cam_camera cameraEffect ["internal","back"];
 f_cam_camera camSetTarget f_cam_fakecamera;
+f_cam_camera camSetFov 1.2;
+f_cam_freecamera camSetFov 1.2;
+f_cam_zeusKey = 21;
+if( count (actionKeys "curatorInterface") > 0 ) then
+{
+    f_cam_zeusKey = (actionKeys "curatorInterface") select 0;
+};
 f_cam_MouseMoving = false;
 cameraEffectEnableHUD true;
 showCinemaBorder false;
@@ -220,8 +222,8 @@ f_cam_fired = [];
 // spawn sub scripts
 call f_fnc_ReloadModes;
 lbSetCurSel [2101,0];
-f_cam_freeCam_script = [] spawn F_fnc_FreeCam;
+//f_cam_freeCam_script = [] spawn F_fnc_FreeCam;
 f_cam_updatevalues_script = [] spawn F_fnc_UpdateValues;
  ["f_spect_tags", "onEachFrame", {_this call F_fnc_DrawTags}] call BIS_fnc_addStackedEventHandler;
-
+ ["f_spect_cams", "onEachFrame", {_this call F_fnc_FreeCam}] call BIS_fnc_addStackedEventHandler;
 };
