@@ -92,7 +92,7 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 					case (effectiveCommander _veh == _x):{" [CO]"};
 					case (gunner _veh == _x):{" [G]"};
 					case (assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x):{" [C]"};
-					default {"[C]"};
+					default {" [C]"};
 				};
 
 				_orbatText = _orbatText + format["|- %1",name _x] + _crewrole + "<br/>";
@@ -109,7 +109,7 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 
 		if (count _groupList > 0) then {
 			{
-				_orbatText =_orbatText + format["|- %1", _x] + " Passengers <br />";
+				_orbatText =_orbatText + format["|- %1", _x] + " [CARGO] <br />";
 			} forEach _groupList;
 		};
 
