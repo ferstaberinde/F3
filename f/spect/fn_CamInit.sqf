@@ -119,6 +119,10 @@ f_cam_forcedExit = false;
 f_cam_sideButton = 0;
 f_cam_sideNames = ["All Sides","Blufor","Opfor","Indfor","Civ"];
 
+f_cam_menuControls = [2111,2112,2113,2114,2101,4302];
+f_cam_menuShown = true;
+f_cam_menuWorking = false;
+[false] spawn f_fnc_showMenu;
 // ====================================================================================
 // Colors
 
