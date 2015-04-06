@@ -38,8 +38,7 @@ if(isNil "f_cam_VirtualCreated") then
   _newGrp = createGroup sideLogic;
   _newUnit = _newGrp createUnit ["VirtualCurator_F", [0,0,5], [], 0, "FORM"];
   _newUnit allowDamage false;
-  _newUnit hideObject true;
-  _newUnit enableSimulation false;
+  _newUnit enableSimulationGlobal false;
   _newUnit setpos [0,0,5];
   selectPlayer _newUnit;
   waituntil{player == _newUnit};
