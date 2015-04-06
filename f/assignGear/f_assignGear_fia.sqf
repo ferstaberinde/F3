@@ -197,7 +197,7 @@ _MMGmag_tr = "130Rnd_338_Mag";
 
 // Marksman rifle
 _DMrifle = "srifle_DMR_06_olive_F";
-_DMriflemag = "16Rnd_9x21_Mag";
+_DMriflemag = "20Rnd_762x51_Mag";
 
 // Rifleman AT
 _RAT = "launch_RPG32_F";
