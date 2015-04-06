@@ -2,6 +2,18 @@ private ["_commitTime","_delta","_zLevel","_pos","_visPos","_mode","_currPos","_
 // F3 - Spectator Script
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
+// Menu shown/hidden
+if(abs (f_cam_menuShownTime - time) <= 0.1 && !f_cam_menuShown) then // disable due to being a bit wonky
+{
+	[true] spawn f_fnc_showMenu;
+};
+if(abs (f_cam_menuShownTime - time) >= 1 && f_cam_menuShown) then // disable due to being a bit wonky
+{
+	[false] spawn f_fnc_showMenu;
+};
+
+
+// ====================================================================================
 // if freemode.
 f_cam_camera camSetFov f_cam_fovZoom;
 if(f_cam_mode == 0) then
@@ -43,8 +55,11 @@ if(f_cam_mode == 3) then
 	_mX = 0;
 	_mY = 0;
 	_mZ = 0;
-	_accel = 0.8;
-	_accelshift = 2;
+	_height = 0 max (((getPosATL f_cam_freecamera) select 2)-2);
+	//_accel = 50 min (((_height*_height)/10) + 0.03); // 0.8
+	_accel = 0.3 max (_height/5); // 0.8
+	//_accel = (sqrt (_height/10)) + 0.003; // 0.8
+	_accelshift = _accel*4.25;//2;
 	if(f_cam_freecam_buttons select 0) then // W
 	{
 		if(f_cam_shift_down) then
@@ -92,29 +107,47 @@ if(f_cam_mode == 3) then
 	};
 	if(f_cam_freecam_buttons select 4) then // Q
 	{
-		_mZ = 0.5;
+		_scroll = 1*((sqrt _height)/2);
+		if (abs _scroll < 0.1) then {
+			if (_scroll < 0) then { _scroll = -0.1;}
+			else { _scroll = 0.1;};
+		};
+		_mZ = _scroll;
 	};
 	if(f_cam_freecam_buttons select 5) then // Z
 	{
-		_mZ = -0.5;
+		_scroll = -1*((sqrt _height)/2);
+		if (abs _scroll < 0.1) then {
+			if (_scroll < 0) then { _scroll = -0.1;}
+			else { _scroll = 0.1;};
+		};
+		_mZ = _scroll;
 	};
 	if(f_cam_scrollHeight <0 || f_cam_scrollHeight > 0) then
 	{
-		_scroll = f_cam_scrollHeight * _delta*3;
+		_scroll = -f_cam_scrollHeight * _delta*3;//was 3 and was positive
 		f_cam_scrollHeight = _scroll;
 		if(f_cam_scrollHeight < 0.2 && f_cam_scrollHeight > -0.2) then
 		{
 			f_cam_scrollHeight = 0;
 		};
+		_scroll = _scroll*((sqrt _height)/2);
+		if (abs _scroll < 0.1) then {
+			if (_scroll < 0) then { _scroll = -0.1;}
+			else { _scroll = 0.1;};
+		};
 		_mZ = _mZ + _scroll;
 	};
 
-	_rX = (f_cam_angleX + 360) % 360;
+	//_rX = (f_cam_angleX + 360) % 360; unused
+	_mX = _delta * _mX;
+	_mY = _delta * _mY;
 
 	_x = (_currPos select 0) + (_mX * (cos f_cam_angleX)) + (_mY * (sin f_cam_angleX));
 	_y = (_currPos select 1) - (_mX * (sin f_cam_angleX)) + (_mY * (cos f_cam_angleX));
-	_z = (_currPos select 2) + _mZ;
-	f_cam_freecamera setPosASL [_x,_y,_z max (getTerrainHeightASL [_x,_y])];
+	_newHeight = (getTerrainHeightASL [_x,_y]);
+	_z = ((_currPos select 2) + _mZ) min (650 + _newHeight);
+	f_cam_freecamera setPosASL [_x,_y,_z max _newHeight];
 	f_cam_freecamera setDir f_cam_angleX;
 	[f_cam_freecamera,f_cam_angleY,0] call BIS_fnc_setPitchBank;
 	f_cam_scrollHeight = 0;
@@ -122,4 +155,4 @@ if(f_cam_mode == 3) then
 };
 cameraEffectEnableHUD true;
 showCinemaBorder false;
-// ====================================================================================
+// =======================================================================================================================================

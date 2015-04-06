@@ -28,7 +28,7 @@ class RscSpectListBox {
         border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
     };
     style = 528;
-    font = "PuristaMedium";
+    font = "TahomaB";
     sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 50) * 1)";
     shadow = 0;
     colorShadow[] = {0, 0, 0, 0.5};
@@ -650,13 +650,35 @@ class f_spec_dialog {
             w = SafeZoneW; h = SafeZoneH;
 		    colorBackground[] = {0.2, 0.0, 0.0, 0.0};
 		};
+        class OnEnterBox : RscSpectButton
+        {
+            idc = 4344;
+            x = -0.1 * safezoneW + safezoneX;
+            y = -0.1 * safezoneH + safezoneY;
+            w = 0.4 * safezoneW;
+            h = 0.2 * safezoneH;
+        //    onMouseEnter = "[true] spawn f_fnc_showMenu;f_cam_menuShownTime=time;";
+           // onMouseExit = "[false] spawn f_fnc_showMenu;";
+            onMouseHolding = "f_cam_menuShownTime=time";
+            onMouseMoving = "f_cam_menuShownTime=time";
+            borderSize = 0;
+            colorBorder[] = {0,0,0,0};
+            colorBackgroundActive[] = {0,0,0,0};
+            colorBackgroundDisabled[] = {0,0,0,0};
+            colorDisabled[] = {0,0,0,0};
+            colorFocused[] = {0,0,0,0};
+            colorShadow[] = {0,0,0,0};
+            colorText[] = {0,0,0,0};
+            color[] = {0,0,0,0};
+            colorBackground[] = {0,0,0,0};
+        };
         class Devider: RscSpectPic
         {
             idc = 4302;
             x = 0.00293747 * safezoneW + safezoneX;
             y = -0.00160002 * safezoneH + safezoneY;
             w = 0.180469 * safezoneW;
-            h = 0.022 * safezoneH;
+            h = 0.02 * safezoneH;
         };
         class SpectStrText: RscSpectStructuredText
         {
@@ -677,26 +699,7 @@ class f_spec_dialog {
             h = 0.375858 * safezoneH;
            // text = "<br /> Use the mouse or the WASD to control the camera, H to show and close the help window.<br /> Press M for the map.<br /> ";
         };
-                class OnEnterBox : RscSpectButton
-        {
-            idc = 4344;
-            x = 0.00293747 * safezoneW + safezoneX;
-            y = -0.00160002 * safezoneH + safezoneY;
-            w = 0.280469 * safezoneW;
-            h = 0.050 * safezoneH;
-            onMouseEnter = "[true] spawn f_fnc_showMenu";
-            onMouseExit = "[false] spawn f_fnc_showMenu";
-            borderSize = 0;
-            colorBorder[] = {0,0,0,0};
-            colorBackgroundActive[] = {0,0,0,0};
-            colorBackgroundDisabled[] = {0,0,0,0};
-            colorDisabled[] = {0,0,0,0};
-            colorFocused[] = {0,0,0,0};
-            colorShadow[] = {0,0,0,0};
-            colorText[] = {0,0,0,0};
-            color[] = {0,0,0,0};
-            colorBackground[] = {0,0,0,0};
-        };
+
 	};
     class controls {
         class SpectButtonExit: RscSpectButton
@@ -720,6 +723,8 @@ class f_spec_dialog {
             tooltip = "Toggle AI";
             sizeEx = "(         (           (           ((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
             onButtonClick = "[_this select 0,0] call f_fnc_HandleMenu";
+            onMouseHolding = "f_cam_menuShownTime=time";
+            onMouseMoving = "f_cam_menuShownTime=time";
 
         };
         class SideFilterButton: RscSpectButton
@@ -733,6 +738,8 @@ class f_spec_dialog {
             tooltip = "Filter by side";
             sizeEx = "(((((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
             onButtonClick = "[_this select 0,1] call f_fnc_HandleMenu";
+            onMouseHolding = "f_cam_menuShownTime=time";
+            onMouseMoving = "f_cam_menuShownTime=time";
         };
         class TagsNameButton: RscSpectButton
         {
@@ -745,6 +752,8 @@ class f_spec_dialog {
             tooltip = "Toggle tags";
             sizeEx = "(((((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
             onButtonClick = "[_this select 0,2] call f_fnc_HandleMenu";
+            onMouseHolding = "f_cam_menuShownTime=time";
+            onMouseMoving = "f_cam_menuShownTime=time";
         };
         class FirstPersonButton: RscSpectButton
         {
@@ -757,6 +766,8 @@ class f_spec_dialog {
             tooltip = "Switch between First Person or Third person";
             sizeEx = "(((((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
             onButtonClick = "[_this select 0,3] call f_fnc_HandleMenu";
+            onMouseHolding = "f_cam_menuShownTime=time";
+            onMouseMoving = "f_cam_menuShownTime=time";
         };
         class SpecUnitBox: RscSpectList
         {
@@ -776,6 +787,8 @@ class f_spec_dialog {
             h = 0.02 * safezoneH;
             sizeEx = "(((((safezoneW / safezoneH) min 0.9) / 1.2) / 25) * 1)";
             onLBSelChanged = "[""LBListSelChanged_modes"",_this] call F_fnc_EventHandler";
+            onMouseHolding = "f_cam_menuShownTime=time";
+            onMouseMoving = "f_cam_menuShownTime=time";
         };
         class SpecText: RscSpectText
         {

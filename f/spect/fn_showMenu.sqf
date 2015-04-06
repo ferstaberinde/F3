@@ -11,7 +11,7 @@ if(_show && !f_cam_menuShown) then
 		_pos set [1,(_pos select 1) + 0.03];
 		(_disp displayCtrl _x) ctrlSetPosition _pos;
 	} foreach f_cam_menuControls;
-	{(_disp displayCtrl _x) ctrlCommit 1; } foreach f_cam_menuControls;
+	{(_disp displayCtrl _x) ctrlCommit 0.6; } foreach f_cam_menuControls;
 	waitUntil {ctrlCommitted (_disp displayCtrl (f_cam_menuControls select 0))};
 	f_cam_menuWorking = false;
 };
@@ -24,7 +24,7 @@ if(!_show && f_cam_menuShown) then
 		_pos set [1,(_pos select 1) - 0.03];
 		(_disp displayCtrl _x) ctrlSetPosition _pos;
 	} foreach f_cam_menuControls;
-	{(_disp displayCtrl _x) ctrlCommit 1; } foreach f_cam_menuControls;
+	{(_disp displayCtrl _x) ctrlCommit 0.6; } foreach f_cam_menuControls;
 	waitUntil {ctrlCommitted (_disp displayCtrl (f_cam_menuControls select 0))};
 	f_cam_menuWorking = false;
 };
