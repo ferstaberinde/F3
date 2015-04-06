@@ -88,8 +88,7 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 				_crewrole = switch (true) do {
 					case (driver _veh == _x && !((vehicle _x isKindOf "helicopter") || (vehicle _x isKindOf "plane"))):{" [D]"};
 					case (driver _veh == _x && ((vehicle _x isKindOf "helicopter") || (vehicle _x isKindOf "plane"))):{" [P]"};
-					case (commander _veh == _x);
-					case (effectiveCommander _veh == _x):{" [CO]"};
+					case (commander _veh == _x):{" [CO]"};
 					case (gunner _veh == _x):{" [G]"};
 					case (assignedVehicleRole _x select 0 == "Turret" && commander _veh != _x && gunner _veh != _x && driver _veh != _x):{" [C]"};
 					default {" [C]"};
