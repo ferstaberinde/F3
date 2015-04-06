@@ -236,32 +236,38 @@ class Params
 // F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-//	class f_param_AISkill_BLUFOR
-//	{
-//		title = "$STR_f_param_AISkill_BLUFOR";
-//		values[] = {0,1,2,3};
-//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 1;
-//		code = "f_param_AISkill_BLUFOR = %1";
-//	};
-//
-//	class f_param_AISkill_OPFOR
-//	{
-//		title = "$STR_f_param_AISkill_OPFOR";
-//		values[] = {0,1,2,3};
-//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 1;
-//		code = "f_param_AISkill_OPFOR = %1";
-//	};
-//
-//	class f_param_AISkill_INDP
-//	{
-//		title = "$STR_f_param_AISkill_INDP";
-//		values[] = {0,1,2,3};
-//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-//		default = 1;
-//		code = "f_param_AISkill_INDP = %1";
-//	};
+/*
+	class f_param_AISkill_BLUFOR
+	{
+		title = "$STR_f_param_AISkill_BLUFOR";
+		values[] = {0,1,2,3};
+		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+		default = 1;
+		code = "f_param_AISkill_BLUFOR = %1";
+	};
+*/
+
+/*
+	class f_param_AISkill_OPFOR
+	{
+		title = "$STR_f_param_AISkill_OPFOR";
+		values[] = {0,1,2,3};
+		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+		default = 1;
+		code = "f_param_AISkill_OPFOR = %1";
+	};
+*/
+
+/*
+	class f_param_AISkill_INDP
+	{
+		title = "$STR_f_param_AISkill_INDP";
+		values[] = {0,1,2,3};
+		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+		default = 1;
+		code = "f_param_AISkill_INDP = %1";
+	};
+*/
 
 // ============================================================================================
 
@@ -507,6 +513,11 @@ class CfgFunctions
 			class tfr_addRadios{};
 			class tfr_setRadioFrequencies{};
 			class tfr_configureSpectatorChat{};
+		};
+		class safeStart
+		{
+			file = "f\safeStart"
+			class safety{};
 		};
 		#include "f\simplewoundingsystem\config.hpp"
 		#include "f\spect\functions.hpp"
