@@ -1,4 +1,4 @@
-// // F3 Zeus Support - Add Addons
+// F3 Zeus Support - Add Addons
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 

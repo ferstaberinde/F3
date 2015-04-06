@@ -69,8 +69,6 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 
 		_orbatText = _orbatText + "<br />" + format["%1 ",_vehName];
 
-		count allTurrets [_x, true] - count allTurrets _x;
-
 		// Workaround for http://feedback.arma3.com/view.php?id=21602
 		_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier") + (count allTurrets [_x, true] - count allTurrets _x);
 		_freeSlots = _x emptyPositions "cargo";
