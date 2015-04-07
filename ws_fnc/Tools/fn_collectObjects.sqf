@@ -28,7 +28,7 @@ _arr = [];
 	_obj = _x;
 	{
 	    if ([_obj, format ["%1",_x]] call BIS_fnc_inString) then {
-	       _arr set [count _arr,_x];
+	       _arr append [_x];
 	    };
 	} forEach allMissionObjects "ALL";
 } forEach _this;

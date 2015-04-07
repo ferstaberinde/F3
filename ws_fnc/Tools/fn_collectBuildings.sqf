@@ -12,9 +12,9 @@ Full
 [center,radius,bool,bool] call ws_fnc_collectBuildings
 
 PARAMETERS
-1. Center from where to check - can be marker, object, location																| MANDATORY
-2. Radius in which to check - number																													| MANDATORY
-3. Flag whether to ignore buildings without building positions (defined in _badarray)					| OPTIONAL - default true
+1. Center from where to check - can be marker, object, location									| MANDATORY
+2. Radius in which to check - number															| MANDATORY
+3. Flag whether to ignore buildings without building positions									| OPTIONAL - default true
 4. Flag whether to directly assign an array containing all building positions to the building	| OPTIONAL - default false
 
 RETURNS
@@ -32,19 +32,19 @@ _buildings = [];
 
 //Fill buildings array with classes shared by both games
 {
-_buildings = _buildings + nearestObjects [_pos,[_x],_radius];
+_buildings append nearestObjects [_pos,[_x],_radius];
 } forEach ["Fortress", "House","House_Small"];
 
 //Add buildings specific to the game version
 if !(ws_game_a3) then {
 	{
-	_buildings = _buildings + nearestObjects [_pos,[_x],_radius];
+		_buildings append nearestObjects [_pos,[_x],_radius];
 	} forEach ["Church"];
 } else
 
 {
 	{
-	_buildings = _buildings + nearestObjects [_pos,[_x],_radius];
+	_buildings append nearestObjects [_pos,[_x],_radius];
 	} forEach ["Ruins_F","BagBunker_base_F","Stall_base_F","Shelter_base_F"];
 };
 

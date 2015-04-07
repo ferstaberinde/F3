@@ -15,7 +15,7 @@ array containing all players
 _players = [];
 
 {
-	if (isPlayer _x) then {_players = _players + [_x]};
+	if (isPlayer _x) then {_players append (_x)};
 } forEach playableUnits;
 
 _players
