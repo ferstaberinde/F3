@@ -15,4 +15,5 @@ class fspectator
 	class DrawMarkers{};
 	class ForceExit{};
 	class HandleMenu{};
+	class showMenu{};
 };

@@ -35,8 +35,6 @@ while {true} do
 	_groupArr = call F_fnc_GetPlayers;
     f_cam_units = ((_groupArr select 0) + (_groupArr select 1));
 	f_cam_players = _groupArr select 0;
-
-
 	// ====================================================================================
 	// get the list for players or players/ai
 	_tempArr = [];
