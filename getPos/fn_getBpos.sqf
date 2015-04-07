@@ -31,7 +31,7 @@ if (typeName _bposarray != typeName []) then {
 
 	while {str _bp != "[0,0,0]"} do {
 		   if (count _bp == 3) then {
-				_bposarray = _bposarray + [_bp];
+				_bposarray pushback (_bp);
 			};
 
 			_i = _i + 1;
@@ -39,9 +39,9 @@ if (typeName _bposarray != typeName []) then {
 	};
 
 	if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.3,0.3];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";} forEach _bposarray;};
-};
 
-_building setVariable ["ws_bPos",_bposarray,true];
+	_building setVariable ["ws_bPos",_bposarray,true];
+};
 
 //["ws_fnc_getBpos DBG1: ",[_building,(_building getVariable "ws_bpos"),_occupied],""] call ws_fnc_debugText;
 

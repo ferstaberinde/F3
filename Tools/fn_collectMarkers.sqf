@@ -29,7 +29,7 @@ if (typeName _this != typeName []) then {
 	_marker = _x;
 	{
 	    if ([_marker, _x] call BIS_fnc_inString) then {
-	       _arr set [count _arr,_x];
+	       _arr append [_x];
 	    };
 	} forEach allMapMarkers;
 } forEach _this;

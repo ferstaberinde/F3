@@ -11,6 +11,9 @@ Afterwards it will move to the designated location.
 RETURNS
 true - after helicopter has taken off again
 
+NOTE
+Function should only be spawned where helicopter is local
+
 USAGE
 Minimal:
 [helicopter,landing position] spawn ws_fnc_taskLand;
@@ -55,6 +58,11 @@ if !(_helo isKindOf "Helicopter") exitWith {["ws_fnc_taskLand:",[_helo]," must b
 _pilot = driver _helo;
 _grp = group _pilot;
 
+// Exit if the helicopter is called where it isn't local
+if !(local _pilot) exitWith {
+    if (_debug) then {["ws_fnc_taskLand: Helo ",[_helo]," is not local!"] call ws_fnc_debugtext};
+};
+
 // Get helicopter to move towards the position
 _helo doMove _pos;
 
@@ -71,9 +79,9 @@ if (!canMove _helo || !alive _helo || !alive _pilot) exitWith {
 
 // Set up helicopter
 // NOTE: experiment with dis-/enabling stuff here, to achieve the ideal landing w/o gimping AI too much
-//_pilot disableai "AUTOTARGET"; _pilot disableai "TARGET";
-//_grp enableAttack false;
-_pilot setBehaviour "CARELESS";
+_pilot disableai "AUTOTARGET"; _pilot disableai "TARGET";
+_grp enableAttack false;
+//_pilot setBehaviour "CARELESS";
 _pilot allowFleeing 0;
 
 // Create an invisible helipad at location
@@ -133,5 +141,6 @@ deleteVehicle _hp;
 
 // Re-Enable normal pilot behaviour
 _pilot enableai "AUTOTARGET"; _pilot enableai "TARGET";
+_grp enableAttack true;
 
 true

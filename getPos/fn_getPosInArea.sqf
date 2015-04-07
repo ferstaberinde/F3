@@ -24,8 +24,11 @@ _area = _this select 0;
 
 _shape = "";
 _center = [];
-_pos = [];
+_pos = [_area] call ws_fnc_getEPos;
 _dir = 360;
+
+//Checking the variables we have against what is expected
+[_area,["STRING","OBJECT"],"ws_fnc_getPosInAREA"] call ws_fnc_typecheck;
 
 switch (typeName _area) do {
 	case "OBJECT": { _center = getPos _area;_area = triggerarea _area;  _shape = _area select 3; _dir = _area select 2;};
@@ -36,6 +39,7 @@ if (typename _shape == typename "") then {
 	switch (_shape) do {
 		case "RECTANGLE": {_shape = true;};
 		case "ELLIPSE": {_shape = false;};
+		default {_shape=true};
 	};
 };
 

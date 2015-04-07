@@ -26,6 +26,7 @@ class WS
 			class nearPlayer {};
 			class listPlayers {};
 			class setGVar {};
+			class isWallInDir {};
 		};
 		class effects
 		{
@@ -71,6 +72,7 @@ class WS
 			class taskConvoy {};
 			class addWaypoint {};
 			class setAIMode {};
+			class setInsidePos {};
 		};
 		class cache
 		{

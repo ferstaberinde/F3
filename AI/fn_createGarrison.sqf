@@ -147,10 +147,10 @@ for "_x" from 1 to _int do {
 	_u setPosATL _bp;
   	dostop _u;
 
-  	_dir = if (ws_game_A3) then {([_u,_b] call BIS_fnc_DirTo) +180} else {random 360};
-	_u setDir _dir;
+	_u spawn ws_fnc_setInsidePos; // SetInsidePos is fairly expensive, thus spawned
 
-    if (random 1 > 0.75) then {_u setunitpos "Middle";} else {_u setUnitPos "UP"};
+	//_u setDir _dir;
+	// if (random 1 > 0.75) then {_u setunitpos "Middle";} else {_u setUnitPos "UP"};
 
     // Set new variables
   	_u setVariable ["ws_bpos",_bp,true];
@@ -158,8 +158,6 @@ for "_x" from 1 to _int do {
 	_b setVariable ["ws_bPosLeft",_bpl,true];
 
   	if (_debug) then {_mkr = createMarker [format ["%1-bpos",_u],getPos _u];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorGreen";};
-
-
 };
 
 // Prevent the group leader to issue attack orders to the members, improving their attack from buildings

@@ -61,7 +61,7 @@ _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
 _count = count _this;
 
 _group = _this select 0;
-_pos = (_this select 1) call ws_fnc_getEPos;;
+_pos = (_this select 1) call ws_fnc_getEPos;
 _radius = _this select 2;
 _guns = true;				//Man statics?
 _garrison = true;			//Garrison military structures? - defined in _milarray
@@ -88,7 +88,7 @@ if (ws_game_a3) then {
 
 //Remove undesired classes from the array and populate the array containg military buildings in the area
 {
-    if ((str(_x buildingpos 1) != "[0,0,0]") && typeof _x in _milarray) then {_milbuildings = _milbuildings + [_x];_buildings = _buildings - [_x]};
+    if ((str(_x buildingpos 1) != "[0,0,0]") && typeof _x in _milarray) then {_milbuildings pushback (_x);_buildings = _buildings - [_x]};
     if ((str(_x buildingpos 0) == "[0,0,0]") || (typeOf _x in _badarray)) then {_buildings = _buildings - [_x]};
 } foreach _buildings;
 
@@ -107,14 +107,11 @@ _units = [_units,_milbuildings,_mthreshold] call ws_fnc_enterbuilding;
 	if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _milbuildings;};
 };
 
-
 //Take position in regular buildings
 if (count _buildings > 0 && count _units > 0 && _civil) then {
 _units = [_units,_buildings,_cthreshold] call ws_fnc_enterbuilding;
 	if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _buildings;};
 };
-
-
 
 //If there's one unit left they either patrol or hold the area.
 if (count _units >= 1) then {
