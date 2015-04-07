@@ -19,7 +19,7 @@ if !(isServer) exitWith {};
 // Using variables passed to the script instance, we will create some local variables:
 
 _curator = [_this,0,objNull] call bis_fnc_param;
-_targets = [_this,1,(allCurators - [_curator])] call bis_fnc_param;
+_targets = [_this,1,allCurators] call bis_fnc_param;
 _persistent = [_this,2,true] call bis_fnc_param;
 
 // ====================================================================================
@@ -37,6 +37,9 @@ if (isNull _curator || typeOf _curator != "ModuleCurator_F") exitWith {
 };
 
 // ====================================================================================
+
+// Make sure curator does not synchronize with himself
+if (_curator in _targets) then {_targets = _targets - [_curator]};
 
 // Add existing units from other curator to the targeted curator and set up eventhandlers to add all subsequent units
 {

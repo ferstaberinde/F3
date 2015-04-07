@@ -19,7 +19,7 @@ if !(isServer) exitWith {};
 // Using variables passed to the script instance, we will create some local variables:
 
 _curator = [_this,0,objNull] call bis_fnc_param;
-_mode = [_this,1,[],["",true,[]]] call bis_fnc_param;
+_mode = [_this,1,true,["",true,[]]] call bis_fnc_param;
 
 // ====================================================================================
 
