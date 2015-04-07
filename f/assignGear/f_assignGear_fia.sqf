@@ -13,6 +13,7 @@
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
 //		rat			- rifleman (AT)
+//		dm			- designated marksman
 //		mmgg		- medium mg gunner
 //		mmgag		- medium mg assistant
 //		matg		- medium AT gunner
@@ -67,6 +68,9 @@ _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 _scope1 = "optic_ACO_grn";		// ACO
 _scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
+
+_bipod1 = "bipod_01_F_mtp";		// Default bipod
+_bipod2 = "bipod_02_F_blk";		// Black bipod
 
 // Default setup
 _attachments = [_attach1,_scope1]; // The default attachment set for most units, overwritten in the individual unitType
@@ -182,9 +186,18 @@ _ARmag = "200Rnd_65x39_cased_Box";
 _ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
 
 // Medium MG
-_MMG = "LMG_Zafir_F";
-_MMGmag = "150Rnd_762x51_Box";
-_MMGmag_tr = "150Rnd_762x51_Box_Tracer";
+_MMG = "MMG_02_camo_F";
+_MMGmag = "130Rnd_338_Mag";
+_MMGmag_tr = "130Rnd_338_Mag";
+
+// NON-DLC ALTERNATIVE:
+// _MMG = "MMG_02_camo_F";
+// _MMGmag = ""150Rnd_762x54_Box"";
+// _MMGmag_tr = ""150Rnd_762x54_Box"_Tracer";
+
+// Marksman rifle
+_DMrifle = "srifle_DMR_06_olive_F";
+_DMriflemag = "20Rnd_762x51_Mag";
 
 // Rifleman AT
 _RAT = "launch_RPG32_F";
@@ -194,6 +207,11 @@ _RATmag = "RPG32_F";
 _MAT = "launch_RPG32_F";
 _MATmag1 = "RPG32_F";
 _MATmag2 = "RPG32_HE_F";
+
+// Heavy AT
+_HAT = "launch_I_Titan_short_F";
+_HATmag1 = "Titan_AT";
+_HATmag2 = "Titan_AP";
 
 // Surface Air
 _SAM = "launch_B_Titan_F";
@@ -231,10 +249,10 @@ _baseUniform = ["U_BG_leader","U_BG_Guerilla1_1","U_BG_Guerilla2_1","U_BG_Gueril
 _baseHelmet = ["H_Shemag_olive","H_ShemagOpen_tan","H_Bandanna_khk","H_Booniehat_khk","H_Cap_oli","H_Watchcap_blk"];
 _baseGlasses = ["G_Bandanna_blk","G_Bandanna_khk","G_Bandanna_oli"];
 
-// Armored vests
-_lightRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];
-_mediumRig = ["V_PlateCarrier1_blk"]; 	// default for all infantry classes
-_heavyRig = ["V_PlateCarrier1_blk"];
+// Vests
+_lightRig = ["V_BandollierB_blk","V_BandollierB_rgr"];
+_mediumRig = ["V_TacVest_blk","V_TacVest_camo","V_TacVest_oli"]; 	// default for all infantry classes
+_heavyRig = ["V_PlateCarrier1_blk","V_PlateCarrierIAGL_oli"];
 
 // Diver
 _diverUniform =  ["U_B_Wetsuit"];
@@ -255,7 +273,7 @@ _crewRig = ["V_TacVest_blk","V_TacVest_brn","V_TacVest_camo","V_TacVest_oli"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_B_GhillieSuit"];
+_ghillieUniform = ["U_B_GhillieSuit"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
@@ -415,6 +433,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		["ar"] call _backpack;
+		_attachments pushback (_bipod1);
 	};
 
 // LOADOUT: ASSISTANT AUTOMATIC RIFLEMAN
@@ -444,16 +463,31 @@ switch (_typeofUnit) do
 		_unit addweapon _RAT;
 	};
 
+// LOADOUT: DESIGNATED MARKSMAN
+	case "dm":
+	{
+		_unit addmagazines [_DMriflemag,7];
+		_unit addweapon _DMrifle;
+		_unit addmagazines [_grenade,2];
+		_unit addmagazines [_mgrenade,2];
+		_unit addmagazines [_smokegrenade,2];
+		_unit addmagazines [_pistolmag,3];
+		_unit addweapon _pistol;
+		["dm"] call _backpack;
+		_attachments = [_attach1,_scope2];
+	};
+
 // LOADOUT: MEDIUM MG GUNNER
 	case "mmgg":
 	{
-		_unit addmagazines [_MMGmag,2];
-		_unit addmagazines [_MMGmag_tr,1];
-		_unit addmagazines [_smokegrenade,2];
+		_unit addmagazines [_MMGmag,1];
 		_unit addweapon _MMG;
+		_unit addmagazines [_MMGmag,2];
+		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_pistolmag,4];
 		_unit addweapon _pistol;
 		["mmg"] call _backpack;
+		_attachments pushback (_bipod1);
 	};
 
 // LOADOUT: MEDIUM MG ASSISTANT GUNNER
@@ -522,12 +556,9 @@ switch (_typeofUnit) do
 	case "hatg":
 	{
 		_unit addmagazines [_carbinemag,7];
-		_unit addmagazines [_carbinemag_tr,2];
 		_unit addweapon _carbine;
-		_unit addmagazines [_grenade,1];
-		_unit addmagazines [_mgrenade,1];
-		_unit addmagazines [_smokegrenade,1];
 		["hatg"] call _backpack;
+		_unit addWeapon _HAT;
 	};
 
 // LOADOUT: HEAVY AT ASSISTANT GUNNER

@@ -27,7 +27,7 @@ Players can drag a casualty by moving next to them and selecting the relevant ac
 <br/><br/>
 BLEEDING OUT<br/>
 An incapacitated player only has a few minutes before her/his wounds become fatal and they die."];
-		player createDiaryRecord ["Diary", ["Simple Wounding System",_bstr]];
+		player createDiaryRecord ["Diary", ["F3 Simple Wounding System",_bstr]];
 	};
 };
 
