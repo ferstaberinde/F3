@@ -88,7 +88,9 @@ _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVar
 
 				// If the class is not in the _unitClasses array
 				if (!_known) then {
-					[[_defaultclass, _unit], "f_fnc_assignGear", _unit,false,true] call BIS_fnc_MP;
+					if (_defaultclass != "") then {
+						[[_defaultclass, _unit], "f_fnc_assignGear", _unit,false,true] call BIS_fnc_MP;
+					};
 				};
 
 			} else {
