@@ -42,7 +42,7 @@ f_var_skillBlu =
 		};
 	// Default
 	    default {
-	    	99;
+	    	2;
 		};
 	};
 	publicVariable "f_var_skillBlu";
@@ -81,7 +81,7 @@ if (isNil "f_var_skillOpf") then
 		};
 	// Default
 	    default {
-	    	99;
+	    	2;
 		};
 	};
 	publicVariable "f_var_skillOpf";
@@ -118,7 +118,7 @@ if (isNil "f_var_skillRes") then
 		};
 	// Default
 	    default {
-	    	99;
+	    	2;
 		};
 	};
 	publicVariable "f_var_skillRes";
@@ -129,7 +129,7 @@ if (isNil "f_var_skillRes") then
 // SELECT CIVILIAN AI SKILLS
 // If the civilian side variable is enabled, their level will be set accordingly
 
-f_var_skillCiv = 99;
+f_var_skillCiv = 2;
 if (!isNil "f_var_civAI") then {
 	f_var_skillCiv =
 	switch (f_var_civAI) do {
