@@ -30,9 +30,6 @@ EXAMPLE
 [VehAAF_H,"mkrLand"] spawn ws_fnc_taskLand; - would cause the helicopter named "VehAAF_H" to take off, fly towards the marker named "mkrLand" and move back to it's starting spot
 
 nul = [vehicle (leader group this),position this,30,"mkrExtract"] spawn ws_fnc_taskLand; - in the on Act. Field of a WP would cause the helicopter to land at the WP's center, wait for up to 30s and then move to the marker named "mkrExtract". I'd suggest to give the WP an activation radius of at least 200.
-
-TODO
-Use BIS_fnc_findSafePos to avoid slopes
 */
 
 if !(ws_game_a3) exitWith {["ws_fnc_taskLand:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
@@ -84,8 +81,8 @@ _grp enableAttack false;
 //_pilot setBehaviour "CARELESS";
 _pilot allowFleeing 0;
 
-// Create an invisible helipad at location
-_hp = "Land_HelipadEmpty_F" createVehicle (_pos findEmptyPosition [0,100,typeOf _helo]);
+// Create an invisible helipad at a good location for the helicopter
+_hp = "Land_HelipadEmpty_F" createVehicleLocal (_pos findEmptyPosition [0,100,typeOf _helo]);
 
 // Begin landing
 while {canMove _helo  && alive _helo && !(unitReady _helo)} do
@@ -103,11 +100,8 @@ _helo land "GET IN";
 
 if (_debug) then {["ws_fnc_taskLand:",[_helo]," landing."] call ws_fnc_debugtext};
 
-waituntil {isTouchingGround  _helo};
+waituntil {isTouchingGround _helo};
 if (_debug) then {["ws_fnc_taskLand:",[_helo]," touched ground."] call ws_fnc_debugtext};
-
-// Prevent helo from taking off
-//_pilot disableAI "move";
 
 // If cargo is onboard wait until all are out
 if (count (assignedCargo _helo) > 0) then {
