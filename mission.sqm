@@ -7555,7 +7555,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9462.9551,48.039814,7952.6172};
+					position[]={9636.5127,53.093094,8132.9502};
 					id=473;
 					side="LOGIC";
 					vehicle="VirtualCurator_F";
@@ -7574,7 +7574,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9480.2637,50.653904,7952.7969};
+					position[]={9653.8213,57.713715,8133.1299};
 					class args
 					{
 						items=4;
@@ -7621,7 +7621,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9463.5391,49.604931,7941.543};
+					position[]={9637.0967,50.529919,8121.876};
 					id=475;
 					side="LOGIC";
 					vehicle="VirtualCurator_F";
@@ -7640,7 +7640,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9480.8477,50.997601,7941.7227};
+					position[]={9654.4053,56.250179,8122.0557};
 					class args
 					{
 						items=4;
@@ -7687,7 +7687,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9465.0205,50.042133,7930.832};
+					position[]={9638.5781,50.162334,8111.165};
 					id=477;
 					side="LOGIC";
 					vehicle="VirtualCurator_F";
@@ -7706,7 +7706,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9482.3291,50.946232,7931.0117};
+					position[]={9655.8867,56.674271,8111.3447};
 					class args
 					{
 						items=4;
@@ -7753,7 +7753,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9465.4775,50.872108,7920.2852};
+					position[]={9639.0352,50.638954,8100.6182};
 					id=479;
 					side="LOGIC";
 					vehicle="VirtualCurator_F";
@@ -7772,7 +7772,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9482.7861,51.411232,7920.4648};
+					position[]={9656.3438,55.391499,8100.7979};
 					class args
 					{
 						items=4;
