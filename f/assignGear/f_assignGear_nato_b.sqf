@@ -147,6 +147,36 @@ case "rat":
 	};
 };
 
+// BACKPACK: DESIGNATED MARKSMAN (DM)
+case "dm":
+{
+	// LOADOUT: LIGHT
+	if (_loadout == 0) then {
+		_unit addBackpack _bagsmall;
+		clearMagazineCargoGlobal (unitBackpack _unit);
+	};
+
+	// LOADOUT: MEDIUM
+	if (_loadout == 1) then {
+		_unit addBackpack _bagsmall;
+		clearMagazineCargoGlobal (unitBackpack _unit);
+		(unitBackpack _unit) addMagazineCargoGlobal [_DMriflemag, 2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
+
+	};
+	// LOADOUT: HEAVY
+	if (_loadout == 2) then {
+		_unit addBackpack _bagmedium;
+		clearMagazineCargoGlobal (unitBackpack _unit);
+		(unitBackpack _unit) addMagazineCargoGlobal [_DMriflemag, 4];
+		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 4];
+		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 4];
+		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 4];
+	};
+};
+
 // BACKPACK: RIFLEMAN (R)
 case "r":
 {
@@ -361,13 +391,17 @@ case "matag":
 // LOADOUT: HEAVY AT GUNNER (HATG)
 case "hatg":
 {
-	_unit addBackpack _baghatg;
+	_unit addBackpack _bagsmall;
+	clearMagazineCargoGlobal (unitBackpack _unit);
+	(unitBackpack _unit) addMagazineCargoGlobal [_HATmag1, 2];
 };
 
 // LOADOUT: HEAVY AT ASSISTANT GUNNER (HATAG)
 case "hatag":
 {
-	_unit addBackpack _baghatag;
+	_unit addBackpack _bagmedium;
+	clearMagazineCargoGlobal (unitBackpack _unit);
+	(unitBackpack _unit) addMagazineCargoGlobal [_HATmag1, 2];
 };
 
 // BACKPACK: MORTAR GUNNER (MTRG)
