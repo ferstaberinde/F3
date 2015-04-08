@@ -20,7 +20,8 @@ private ["_units","_unit","_faction","_known","_unitFactions","_unitClasses"];
 // The factions of all units which should be affected
 _unitFactions = ["blu_f", "opf_f", "ind_f","blu_g_f","opf_g_f","ind_g_f"];
 
-// The default class picked when no corresponding entry is found in the _unitClasses array
+// The default gear type picked when no corresponding entry is found in the _unitClasses array
+// Set _defaultclass to "" to let these units keep their default gear
 _defaultclass = "r";
 
 // The unit classes and their corresponding F3 Assign Gear Component type
