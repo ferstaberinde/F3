@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-3-0 RC1
+* Version: 3-2-2
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,8 +29,7 @@
 
 Version | Date | Notes
 
-* 3-3-0 RC1 | 08 APR 2015 | Patch release - Various improvements (see change history).
-* 3-2-2     | 20 FEB 2015 | Patch release - Various improvements (see change history).
+* 3-2-2		| 20 FEB 2015 | Patch release - Various improvements (see change history).
 * 3-2-1     | 06 DEC 2014 | Patch release - Bug fix (see change history).
 * 3-2-0     | 15 NOV 2014 | Patch release - Various improvements (see change history).
 * 3-2-0 RC2 | 06 NOV 2014 | Internal release - Various improvements (see change history).
@@ -235,159 +234,106 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-3-0 RC1 | 08 APR 2015
-
-* Updated Folk ARPS Platoons component:
-  * Changed placement of platoons to better support smaller maps.
-  * Updated ranks of AAF CO, DC and SLs to match other factions.
-* Updated AI Caching component:
-  * Fixed: Uncaching would sometimes place group members too high.
-* Updated Admin Briefing component:
-  * New: Allows control of safe start component.
-  * Restructured ZEUS options (less clutter).
-* Updated Safe Start component:
-  * New: Player vehicles can't be damaged until safe start is done.
-  * f_safety.sqf is now a function (f_fnc_safety).
-* Updated AI Skill Selector component:
-  * Now exclusively server-side.
-  * Re-adjusted skill levels: "high" is slightly easier, "low" more difficult.
-  * Changed comments deactivating F3 SetAISkill parameter in description.ext to comment-blocks for convenience.
-  * No longer sets skill for "endurance" as it's not supported in A3.
-  * Reduced random range to +/- 0.08.
-  * Increased initial sleep to 2 seconds, removed unnecessary sleeps elsewhere.
-* Updated Name Tags component:
-  * Shows tag for unit under cursorTarget in 28m (modifiable), always shows tags for units within 10m (modifiable). Latter can be toggled off in briefing menu.
-  * Moved all related global variables from init.sqf into f_nametags.sqf
-  * Tweaked visuals (smaller default font, colors etc.).
-  * Name tags are now automatically activated if component is enabled.
-  * Improved tags for units in vehicles: recognizes non-specialist crew and pilots, only shows effective commander on distance to avoid clutter.
-* Updated Radio Systems Support component (ACRE2):
-  * Updated to the latest API (removing un-neccesary code).
-  * Adds support for the newer radios.
-  * Checks if players have enough free inventory space for radios and provides an action if not.
-* Updated Briefing Template component:
-  * Removed scripted task examples (in-editor module feature preferable).
-  * Added briefing for dedicated ZEUS.
-* Updated Zeus Support component:
-  * Zeus assigned using f_fnc_zeusInit automatically applies AI Skill Selector values to created units if latter component is enabled.
-  * Streamlined Zeus Support in Admin Briefing component.
-  * New: Zeus synchronisation (f_fnc_zeusSyncCurators). Synchronize assigned units between curators and optionally set up permanent synchronization for units created later.
-* Updated Join Group Action component:
-  * Action appears/disappears with less "lag".
-  * No more action spam in certain situations (e.g. entering a vehicle).
-* Updated F3 Folk ARPS Assign Gear component:
-  * Changed primary weapon for CSAT "ar" to Zafir.
-  * New gear type: "dm" (designated marksman) for all factions with corresponding kit.
-  * Added bipods to all factons (given to "ar", "mmgg" and "sn" by default).
-  * "hatg" now uses mobile Titan launcher.
-  * Equipped all "mmgg" with the new DLC MMGs. Old MMGs classnames are commented out in the assign gear file.
-  * Changed CSAT vests: new medium is TacVest Khaki
-* Updated Assign AI Gear component:
-  * New variable: _defaultclass (applied to unit if no corresponding class was found).
-  * Added designated marksman type.
-* Updated ORBAT Notes component:
-  * Better distinction between crew roles.
-
 3-2-2 | 20 FEB 2015
 
 * Added F3 Assign Gear AI component:
-  * Loops through present or selection of AI and re-equips them with corresponding F3 gear.
+ * Loops through present or selection of AI and re-equips them with corresponding F3 gear.
 * Updated Loading Screen component:
-  * Added entry for overviewPicture and default logo.
-  * Changed default logos for loadScreen and overviewPicture to JPEG.
+ * Added entry for overviewPicture and default logo.
+ * Changed default logos for loadScreen and overviewPicture to JPEG.
 * Updated F3 Briefing Template component:
-  * Increased font size of headlines for better readability.
+ * Increased font size of headlines for better readability.
 * Updated F3 Folk ARPS Assign Gear Script component:
-  * Loadout setting can now be over-written on a per unit-type basis.
-  * Optional faction input is now always lowered.
+ * Loadout setting can now be over-written on a per unit-type basis.
+ * Optional faction input is now always lowered.
 * Updated F3 Spectator Script component: 
-  * Rediced performance impact of tags.
-  * Fixed issues with JIP players.
-  * Fixed issue where TFR spectators sound as if they are underwater.
-  * Fixed tag colors.
+ * Rediced performance impact of tags.
+ * Fixed issues with JIP players.
+ * Fixed issue where TFR spectators sound as if they are underwater.
+ * Fixed tag colors.
 * Updated Radio Systems Support component:
-  * ACRE2: Improved frequency assignment.
+ * ACRE2: Improved frequency assignment.
 * Updated Medical Systems Support component:
-  * SWS: various fixes.
-  * AGM: improved item-converter and re-balanced item assignment.
+ * SWS: various fixes.
+ * AGM: improved item-converter and re-balanced item assignment.
 * Updated AI Skill Selector component:
-  * Tweaked default skill levels: medium and low slightly better.
-  * Tweaked default skillSet: non-aiming skills higher by default.
-  * Merged randomUp and randomDown into one variable.
-  * Improved impact on network traffic: only sets skill where unit is local
-  * fn_setAISkill can now be called with only the unit as argument
+ * Tweaked default skill levels: medium and low slightly better.
+ * Tweaked default skillSet: non-aiming skills higher by default.
+ * Merged randomUp and randomDown into one variable.
+ * Improved impact on network traffic: only sets skill where unit is local
+ * fn_setAISkill can now be called with only the unit as argument
 * Updated F3 PreMount component
-   * Only ignores vehicles if locked state is exactly 2.
+  * Only ignores vehicles if locked state is exactly 2.
 * Updated F3 Zeus Support
-   * fn_zeusInit automatically detects if F3 AI Skill Selector component is active and uses it on new units.
+  * fn_zeusInit automatically detects if F3 AI Skill Selector component is active and uses it on new units.
 * Updated AI Caching component:
-  * New variables f_var_cacheRun and f_var_cacheSleep to easier control component behavior during runtime.
-  * Can now pass aggressiveness directly to f_fnc_gCache as optional param to override global value.
+ * New variables f_var_cacheRun and f_var_cacheSleep to easier control component behavior during runtime.
+ * Can now pass aggressiveness directly to f_fnc_gCache as optional param to override global value.
 * Fixed AI Caching component:
-  * Infantry would not disable simulation properly on aggressiveness 1 and 2.
+ * Infantry would not disable simulation properly on aggressiveness 1 and 2.
 * Fixed ORBAT Notes and Name Tags components:
-  * Fixed issue where the number of cargo seats in a vehicle would not be calculated correctly.
+ * Fixed issue where the number of cargo seats in a vehicle would not be calculated correctly.
 * Fixed F3 Mission Conditions Selector:
-  * Default overcast values would occasionally cause rain.
+ * Default overcast values would occasionally cause rain.
 
 3-2-1 | 06 DEC 2014
 
 * Updated Radio Systems Support component:
-  * Switched linkItem to addItem for ACRE2.
+ * Switched linkItem to addItem for ACRE2.
 * Fixed F3 Spectator Script component: 
-  * Fixed incompatiblity with most recent Arma 3 update.
+ * Fixed incompatiblity with most recent Arma 3 update.
 
 3-2-0 | 15 NOV 2014
 
 * Added Insignia component.
-  * Includes insignia for NATO, AAF, CSAT and CSAT urban uniforms.
+ * Includes insignia for NATO, AAF, CSAT and CSAT urban uniforms.
 * Added Loadout Notes component.
-  * Displays loadout section in the briefing, with player weapons and items at mission start.
+ * Displays loadout section in the briefing, with player weapons and items at mission start.
 * Added UAV Recharging component:
-  * Allows recharging of backpack-carried UAVs using laserdesignator batteries.
+ * Allows recharging of backpack-carried UAVs using laserdesignator batteries.
 * Added Zeus Support component:
-  * Adds functions to give hosts easier access to Zeus using the debug console.
-  * Can be invoked from Admin briefing and F3 Spectator Script.
+ * Adds functions to give hosts easier access to Zeus using the debug console.
+ * Can be invoked from Admin briefing and F3 Spectator Script.
 * Updated F3 Common Local Variables
-  * Removed optional looping (bloat).
-  * Removed automatic broadcasting to reduce impact on network.
+ * Removed optional looping (bloat).
+ * Removed automatic broadcasting to reduce impact on network.
 * Updated F3 Spectator Script:
-  * New UI.
-  * Freecam.
-  * Revised unit list with groups.
-  * Map Markers.
-  * Now with context map clicking: in freecam you are moved above the select unit, in chase/first person camera selects the unit as the observed unit.
-  * Camera Marker.
-  * Tracers on map.
-  * Minor edit to LocalGroupMarkers allowing you define faction (used to show other factions group markers for everyone, old style still compatible).
+ * New UI.
+ * Freecam.
+ * Revised unit list with groups.
+ * Map Markers.
+ * Now with context map clicking: in freecam you are moved above the select unit, in chase/first person camera selects the unit as the observed unit.
+ * Camera Marker.
+ * Tracers on map.
+ * Minor edit to LocalGroupMarkers allowing you define faction (used to show other factions group markers for everyone, old style still compatible).
 * Updated Fireteam Member Markers component:
-  * Fireteam member markers re-colour after joining a new group using the Join Group Action component.
+ * Fireteam member markers re-colour after joining a new group using the Join Group Action component.
 * Updated F3 Folk ARPS Platoons component:
-  * Changed NATO and CSAT TH1 and TH2 helicopters to Huron and Taru.
-  * Added TH1 element for FIA (civilian M-900).
+ * Changed NATO and CSAT TH1 and TH2 helicopters to Huron and Taru.
+ * Added TH1 element for FIA (civilian M-900).
 * Updated Folk ARPS Assign Gear Script component:
-  * Faction can now be forced using an optional third parameter.
-  * Added support for faction-specific crates.
-  * Added GPS for medics.
-  * Improved order of execution to avoid locality issues.
-  * Improved comments in the script files.
-  * Disables BI gear randomization by default to prevent overriding of F3 gear randomisation.
+ * Faction can now be forced using an optional third parameter.
+ * Added support for faction-specific crates.
+ * Added GPS for medics.
+ * Improved order of execution to avoid locality issues.
+ * Improved comments in the script files.
+ * Disables BI gear randomization by default to prevent overriding of F3 gear randomisation.
 * Updated Medical Systems Support (F3 Simple Wounding System):
-  * Extra FAKs added to player loadouts (controlled via variable in init.sqf file).
-  * Reduced network traffic.
-  * Various bug fixes.
+ * Extra FAKs added to player loadouts (controlled via variable in init.sqf file).
+ * Reduced network traffic.
+ * Various bug fixes.
 * Updated Name Tags component:
-  * Fixed driver position not properly displaying seat values.
-  * Added new variable f_nametags_shadows to govern the outline of the displayed nametags (default is 2).
+ * Fixed driver position not properly displaying seat values.
+ * Added new variable f_nametags_shadows to govern the outline of the displayed nametags (default is 2).
 * Updated Radio Systems Support component:
-  * Added support for ACRE2.
+ * Added support for ACRE2.
 * Updated Safe Start component:
-  * Now sleeps for 60 real seconds (instead of in-game seconds).
-  * Runs almost exclusively server-side and broadcasts notifications and disabled safety to all clients.
-  * Now disables player vehicle weapons as well.
-  * Reduced duration of "X minutes remaining" note to 10 seconds.
+ * Now sleeps for 60 real seconds (instead of in-game seconds).
+ * Runs almost exclusively server-side and broadcasts notifications and disabled safety to all clients.
+ * Now disables player vehicle weapons as well.
+ * Reduced duration of "X minutes remaining" note to 10 seconds.
 * Fixed E&E Check component:
-  * Component would activate ending/code even if all tracked units were killed.
+ * Component would activate ending/code even if all tracked units were killed.
 
 3-2-0 RC2 | 06 NOV 2014
 
@@ -404,46 +350,46 @@ Version | Date
 3-1-1 | 26 JUL 2014
 
 * Added Medical Systems Support component:
-  * Incorporates F3 Simple Wounding System
-  * Adds support for AGM medical supplies.
+ * Incorporates F3 Simple Wounding System
+ * Adds support for AGM medical supplies.
 * Updated AI Caching component:
-  * Workaround for vehicles being frozen if moving and cached at the same time.
-  * Caching completely run server side using global commands.
-  * New variable to set aggressiveness of caching.
+ * Workaround for vehicles being frozen if moving and cached at the same time.
+ * Caching completely run server side using global commands.
+ * New variable to set aggressiveness of caching.
 * Updated F3 Folk ARPS Platoons component:
-  * Added Heavy MG attachment.
-  * Added Heavy AT attachment.
-  * Added Mortar attachment.
-  * Added Medium SAM attachment.
-  * Added Heavy SAM attachment.
-  * Added Sniper Team attachment.
-  * Attachments are now led by the spotter.
+ * Added Heavy MG attachment.
+ * Added Heavy AT attachment.
+ * Added Mortar attachment.
+ * Added Medium SAM attachment.
+ * Added Heavy SAM attachment.
+ * Added Sniper Team attachment.
+ * Attachments are now led by the spotter.
 * Updated F3 Folk ARPS Assign Gear component:
-  * Tweaked MAT loadouts (gunner now starts with rocket in tube).
-  * Added support for unit types in new attachments.
+ * Tweaked MAT loadouts (gunner now starts with rocket in tube).
+ * Added support for unit types in new attachments.
 * Updated F3 Folk ARPS Assign Gear Clothing component:
-  * Component allows units to wear uniforms from any side or faction.
-  * Added new FIA uniforms, made various other tweaks.
-  * Changed CSAT small bag to correct camo.
+ * Component allows units to wear uniforms from any side or faction.
+ * Added new FIA uniforms, made various other tweaks.
+ * Changed CSAT small bag to correct camo.
 * Updated F3 Folk ARPS Group IDs component: added support for unit types in new attachments.
 * Updated F3 Folk ARPS Group Markers component: added support for unit types in new attachments.
 * Updated F3 Spectator Script:
-  * Revised code to reduce load on CPU.
-  * Virtual men no longer have visible name tags.
+ * Revised code to reduce load on CPU.
+ * Virtual men no longer have visible name tags.
 * Updated Name Tags component: 
-  * Height above unit determined by stance.
-  * Offset for passenger name tags fixed.
+ * Height above unit determined by stance.
+ * Offset for passenger name tags fixed.
 * Updated ORBAT Notes component:
-  * Now lists all groups with playable units (not just player groups).
-  * Highlights player group (highlight colour determined by side).
+ * Now lists all groups with playable units (not just player groups).
+ * Highlights player group (highlight colour determined by side).
 * Updated Radio Systems Support component:
-  * Improved support for spectators in TFR.
-  * Other minor tweaks.
+ * Improved support for spectators in TFR.
+ * Other minor tweaks.
 * Fixed Mission Conditions component:
-  * Lightning set correctly.
-  * All Intel values in editor set to manual/0.
+ * Lightning set correctly.
+ * All Intel values in editor set to manual/0.
 * Fixed PreMount component:
-  * Fixed issue where component would not slot turrets properly for vehicles with multiple turrets.
+ * Fixed issue where component would not slot turrets properly for vehicles with multiple turrets.
 
 3-1-1 RC1 | 23 JUL 2014
 
@@ -456,43 +402,43 @@ Version | Date
 3-1-0 RC6 | 16 JUN 2014
 
 * Added Admin Briefing component:
-  * Lists endings and allows admin to invoke them by clicking a link.
+ * Lists endings and allows admin to invoke them by clicking a link.
 * Updated E&E Check component:
-  * Allows passing of side instead of array.
-  * Groups/units are now passed as an array of strings to prevent script-errors.
-  * Optional boolean (last parameter): toggle if to check playable units only (default: true).
+ * Allows passing of side instead of array.
+ * Groups/units are now passed as an array of strings to prevent script-errors.
+ * Optional boolean (last parameter): toggle if to check playable units only (default: true).
 * Updated the F3 Simple Wounding System component:
-  * Made the release action created on yourself so its always around.
-  * Tweaked SetDowned.
-  * Added longer delay before system starts to allow for desync'd players..
+ * Made the release action created on yourself so its always around.
+ * Tweaked SetDowned.
+ * Added longer delay before system starts to allow for desync'd players..
 * Updated F3 Spectator Script component:
-  * Modified the freecam to use correct height in follow-mode.
+ * Modified the freecam to use correct height in follow-mode.
 * Fixed typo in AI Skill Selector component.
 * Fixed error in Radio Systems Support component.
 
 3-1-0 RC5 | 11 JUN 2014
 
 * Added Radio Systems Support component (replaces ACRE support component):
-  * Supports ACRE and TFR systems via single mission parameter.
-  * All radios cleared to avoid duplication of radio items.
-  * Optional: radio frequencies split based on unit's side.
-  * Spectator chat correctly handled for all players.
-  * Radios assigned based on assignGear calls (from unit init).
-  * ACRE only: vehicles filled with radios, depending on size.
-  * New component works separately from the F3 Folk ARPS Assign Gear Script component  for locality purposes.
+ * Supports ACRE and TFR systems via single mission parameter.
+ * All radios cleared to avoid duplication of radio items.
+ * Optional: radio frequencies split based on unit's side.
+ * Spectator chat correctly handled for all players.
+ * Radios assigned based on assignGear calls (from unit init).
+ * ACRE only: vehicles filled with radios, depending on size.
+ * New component works separately from the F3 Folk ARPS Assign Gear Script component  for locality purposes.
 * Updated Fireteam Member Markers component:
-  * Team colours are now assigned in arrays at top of script (easier to modify, same functionality).
+ * Team colours are now assigned in arrays at top of script (easier to modify, same functionality).
 * Updated Join Group Action component: new notifications.
 * Updated ORBAT Notes component: 
-  * ORBAT lists vehicles, crew and any loaded elements.
-  * ORBAT lists individual medics (under their element leader).
+ * ORBAT lists vehicles, crew and any loaded elements.
+ * ORBAT lists individual medics (under their element leader).
 * Fixed F3 Spectator Script component:
-  * Fixed issues for players joining into spectator mode during a no-respawn mission.
-  * Fixed various tags and camera issues.
+ * Fixed issues for players joining into spectator mode during a no-respawn mission.
+ * Fixed various tags and camera issues.
 * Fixed several components for use with JIP/respawn:
-  * Fireteam Member Markers component.
-  * F3 Folk ARPS Group Markers component (specifically for specialist markers).
-  * Join Group Action component.
+ * Fireteam Member Markers component.
+ * F3 Folk ARPS Group Markers component (specifically for specialist markers).
+ * Join Group Action component.
 
 3-1-0 RC4 | 03 JUN 2014
 
@@ -505,12 +451,12 @@ Version | Date
 3-1-0 RC3 | 29 MAY 2014
 
 * Updated F3 Folk ARPS Platoons component:
-  * Added CO/DC driver (repair) slots (all factions).
-  * Added UAV Operator slots to FIA.
+ * Added CO/DC driver (repair) slots (all factions).
+ * Added UAV Operator slots to FIA.
 * Updated MapClick Teleport component: added HALO option.
 * Updated Mission Conditions Selector component:
-  * Night option now features full moon.
-  * Other options adjusted (better dawn/dusk etc.).
+ * Night option now features full moon.
+ * Other options adjusted (better dawn/dusk etc.).
 * Fixed ReadMe File Template component: removed ArmA 2 references.
 * Fixed F3 Folk ARPS Assign Gear Script component: incomplete lists of classes in headers.
 * Fixed F3 Spectator Script component: minor issues.
@@ -519,102 +465,102 @@ Version | Date
 3-1-0 RC2 | 28 MAY 2014
 
 * Updated F3 Folk ARPS Platoons component:
-  * Ground vehicle drivers and selected helicopter crew members are now able to repair vehicles.
-  * Ground vehicle commanders have rangefinders.
-  * Fixed AAF DC group assignment.
+ * Ground vehicle drivers and selected helicopter crew members are now able to repair vehicles.
+ * Ground vehicle commanders have rangefinders.
+ * Fixed AAF DC group assignment.
 * Updated Safe Start component: 
-  * Changed frequency and duration of notifications.
-  * Changed name of parameter variable.
+ * Changed frequency and duration of notifications.
+ * Changed name of parameter variable.
 * Fixed ACRE Support component: script path(s).
 * Fixed Debug Mode component: string paths (several were still referring to f\common)
 * Fixed F3 Folk ARPS Assign Gear Script component: 
-  * Removed blank between assignGear and ; in unit INIT lines.
-  * Removed nul = for unit INIT assignGear call.
+ * Removed blank between assignGear and ; in unit INIT lines.
+ * Removed nul = for unit INIT assignGear call.
 * Fixed F3 Folk ARPS JIP Reinforcement Options component: paths (were still referring to f\common).
 * Fixed F3 Folk ARPS Group Markers component: markers work for JIP players.
 * Fixed Mission Conditions Selector component: issue with overcast implementation.
 * Fixed PreMount component:
-  * Fixed incorrect function calls in modules for CSAT.
-  * Made more robust.
+ * Fixed incorrect function calls in modules for CSAT.
+ * Made more robust.
 * Fixed E&E and Casualties Cap components: ensured code spawned happens globally.
 * Fixed SP Editor issues (various).
 
 3-1-0 RC1 | 24 MAY 2014
 
 * Restructured folders and files:
-  * Nearly all components now rest within their own sub-folder.
+ * Nearly all components now rest within their own sub-folder.
 * Added AI Skill Selector component:
-  * Replaces the old AI Skill Selector (A&D and Coop) component.
-  * Allows the skill levels of all three combatant sides to be set individually via mission parameters.
+ * Replaces the old AI Skill Selector (A&D and Coop) component.
+ * Allows the skill levels of all three combatant sides to be set individually via mission parameters.
 * Added F3 Folk ARPS Assign Gear Attachments component:
-  * Works with F3 Folk ARPS Assign Gear Script component.
+ * Works with F3 Folk ARPS Assign Gear Script component.
 * Added F3 Folk ARPS Assign Gear Clothes component:
-  * Works with F3 Folk ARPS Assign Gear Script component.
+ * Works with F3 Folk ARPS Assign Gear Script component.
 * Added F3 Simple Wounding System.
 * Added F3 Premount component:
-  * Mission makers can quickly and easily mount multiple groups in multiple vehicles.
-  * Mission makers can control use of crew seats and group cohesion across vehicles.
-  * Pre-placed modules support easy mounting of squads from pre-placed platoons. 
+ * Mission makers can quickly and easily mount multiple groups in multiple vehicles.
+ * Mission makers can control use of crew seats and group cohesion across vehicles.
+ * Pre-placed modules support easy mounting of squads from pre-placed platoons. 
 * Added Respawn Templates component:
-  * Replaces Respawn INIT component.
+ * Replaces Respawn INIT component.
 * Added MapClick Teleport component:
-  * Replaces the Mission Maker Teleport component.
-  * Can also be used by players in-game.
-  * Mission makers can restrict usage by number of uses and/or time.
-  * Mission makers can restrict usage to group leaders.
+ * Replaces the Mission Maker Teleport component.
+ * Can also be used by players in-game.
+ * Mission makers can restrict usage by number of uses and/or time.
+ * Mission makers can restrict usage to group leaders.
 * Added support for OPFOR and Independent FIA platoons to following components:
-  * Briefing Template component.
-  * F3 Folk ARPS Assign Gear Script component.
-  * F3 Folk ARPS Group IDs component.
-  * F3 Folk ARPS Group Markers component.
+ * Briefing Template component.
+ * F3 Folk ARPS Assign Gear Script component.
+ * F3 Folk ARPS Group IDs component.
+ * F3 Folk ARPS Group Markers component.
 * Updated Authorised Crew Check component:
-  * Now incorporates Authorised Crew Type Check component.
-  * Mission maker can now control access to passenger seats as well.
+ * Now incorporates Authorised Crew Type Check component.
+ * Mission maker can now control access to passenger seats as well.
 * Updated Buddy Team colours component:
-  * Fixed bug with teams that begin in vehicles.
+ * Fixed bug with teams that begin in vehicles.
 * Updated Casualties Cap component:
-  * Now incorporates Casualties Cap (Advanced) components.
+ * Now incorporates Casualties Cap (Advanced) components.
 * Updated Dynamic View Distance component:
-  * Mission makers can now control view distances for vehicle passengers. 
+ * Mission makers can now control view distances for vehicle passengers. 
 * Updated F3 Folk ARPS Assign Gear Script component:
-  * Backpacks parameter renamed to Loadouts.
-  * Added UAV operator loadout to all factions.
-  * Changed default AT for AAF faction to RPG32.
-  * Replaced all binoculars with rangefinders.
-  * Fixed issues with respawn and JIP.
-  * F3 Folk ARPS Assign Gear component is now called using f_fnc_assignGear (omitting the folk).
-  * Uniform types (e.g. light, crew, diver etc.) for each unit type can now assigned in the faction's assignGear file.
-  * Added new uniform types: ghillie suits and special forces (AAF don't have a dedicated AAF loadout, FIA use CTRG).
-  * Backpack loadouts have been moved into their own file.
-  * Attachments are now assigned as local variables, can be assigned as a per-type basis.
-  * Added options for handgun attachments.
-  * Tweaks to improve perfomance when loading vehicles with assignGear.
+ * Backpacks parameter renamed to Loadouts.
+ * Added UAV operator loadout to all factions.
+ * Changed default AT for AAF faction to RPG32.
+ * Replaced all binoculars with rangefinders.
+ * Fixed issues with respawn and JIP.
+ * F3 Folk ARPS Assign Gear component is now called using f_fnc_assignGear (omitting the folk).
+ * Uniform types (e.g. light, crew, diver etc.) for each unit type can now assigned in the faction's assignGear file.
+ * Added new uniform types: ghillie suits and special forces (AAF don't have a dedicated AAF loadout, FIA use CTRG).
+ * Backpack loadouts have been moved into their own file.
+ * Attachments are now assigned as local variables, can be assigned as a per-type basis.
+ * Added options for handgun attachments.
+ * Tweaks to improve perfomance when loading vehicles with assignGear.
 * Updated F3 Folk ARPS Group IDs component:
-  * Reworked to tidy up code and bring up to standard.
+ * Reworked to tidy up code and bring up to standard.
 * Updated F3 Folk ARPS JIP Reinforcement Options component:
-  * Fixed component for respawn and JIP.
-  * Uses RespawnTemplate instead of a EventHandler.
-  * Added optional removal of old player corpses.
-  * Added optional enforcement of old gear.
-  * Added JIP menu allows joining no group or staying in old group if it still has members.
+ * Fixed component for respawn and JIP.
+ * Uses RespawnTemplate instead of a EventHandler.
+ * Added optional removal of old player corpses.
+ * Added optional enforcement of old gear.
+ * Added JIP menu allows joining no group or staying in old group if it still has members.
 * Updated F3 Folk ARPS Platoons component:
-  * Added UAV operator to each CO/DC team for NATO, AAF and CSAT.
+ * Added UAV operator to each CO/DC team for NATO, AAF and CSAT.
 * Updated F3 Spectator Script component:
-  * Full sized map.
-  * FOV Zoom.
-  * Tag names for players.
-  * Completely overhauled camera  * now much smoother.
-  * Revamped tags.
+ * Full sized map.
+ * FOV Zoom.
+ * Tag names for players.
+ * Completely overhauled camera * now much smoother.
+ * Revamped tags.
 * Updated Mission Conditions Selector component:
-  * All relevant files moved to f/missionConditions.
-  * Split f_setMissionConditions.sqf into three files: fn_setFog, fn_setDate, fn_setWeather.
-  * Updated component to take advantage of BIS improvements in weather system and sychronisation.
-  * Updated component to allow usage of new setFog array.
-  * Updated component to allow smooth time transitions when changing the date.
+ * All relevant files moved to f/missionConditions.
+ * Split f_setMissionConditions.sqf into three files: fn_setFog, fn_setDate, fn_setWeather.
+ * Updated component to take advantage of BIS improvements in weather system and sychronisation.
+ * Updated component to allow usage of new setFog array.
+ * Updated component to allow smooth time transitions when changing the date.
 * Update Multiplayer Ending Controller component:
-  * Component is now called using ["ending"] call f_fnc_mpEnd and needs only to be called on the server.
-  * Updated to take advantage of Arma 3 improvements.
-  * Component now accepts optional second parameter: true (default) displays "mission completed" type of ending, false "mission failed".
+ * Component is now called using ["ending"] call f_fnc_mpEnd and needs only to be called on the server.
+ * Updated to take advantage of Arma 3 improvements.
+ * Component now accepts optional second parameter: true (default) displays "mission completed" type of ending, false "mission failed".
 * Updated Safe Start component.
 
 3-0-9A | 12 FEB 2014
@@ -625,28 +571,28 @@ Version | Date
 
 * Added AI Caching component.
 * Updated F3 Folk ARPS Group Markers component:
-  * Functions are now defined in cfgFunctions via description.ext.
-  * Fixed bug where marker was frozen despite the group still having members.
+ * Functions are now defined in cfgFunctions via description.ext.
+ * Fixed bug where marker was frozen despite the group still having members.
 * Updated F3 Folk ARPS Assign Gear Script component:
-  * Added uniform randomisation.
-  * MAT teams now use NLAWs or RPGs.
-  * Rifleman (AT) loadout tweaked.
-  * Rifleman (AT), MAT loadouts work when backpacks are disabled.
-  * Added mini grenades to many loadouts.
-  * Expanded engineer detachment.
-  * Split engineer role into two specialisms: demo and mines (both types have repair kits and mine detectors).
-  * Adjusted loadouts and outfits to reflect changes introduced in A3 1.10.
+ * Added uniform randomisation.
+ * MAT teams now use NLAWs or RPGs.
+ * Rifleman (AT) loadout tweaked.
+ * Rifleman (AT), MAT loadouts work when backpacks are disabled.
+ * Added mini grenades to many loadouts.
+ * Expanded engineer detachment.
+ * Split engineer role into two specialisms: demo and mines (both types have repair kits and mine detectors).
+ * Adjusted loadouts and outfits to reflect changes introduced in A3 1.10.
 * Updated Name Tags component:
-  * Added optional display of unit group (defined by setGroupID / F3 Folk ARPS Group IDs component).
-  * Added optional feature to display distance in metres.
-  * Added optional feature to display type of mounted vehicle for driver/gunner/commander.
-  * Drawing of name tags is now its own function defined in cfgFunctions.
-  * Fixed issue where name tag height for units in buildings would be incorrect.
-  * Fixed issue where name tags would display for enemy/neutral units in vehicles.
-  * Misc. improvements and tweaks.
+ * Added optional display of unit group (defined by setGroupID / F3 Folk ARPS Group IDs component).
+ * Added optional feature to display distance in metres.
+ * Added optional feature to display type of mounted vehicle for driver/gunner/commander.
+ * Drawing of name tags is now its own function defined in cfgFunctions.
+ * Fixed issue where name tag height for units in buildings would be incorrect.
+ * Fixed issue where name tags would display for enemy/neutral units in vehicles.
+ * Misc. improvements and tweaks.
 * Updated F3 Folk ARPS Platoons component:
-  * Added tank and attack helo groups to AAF.
-  * Temporarily removed JIP groups (for all factions).
+ * Added tank and attack helo groups to AAF.
+ * Temporarily removed JIP groups (for all factions).
 * Updated Mission Conditions component to adjust fog values.
 * Updated Buddy Team Colours component.
 * Updated Automatic Body Removal component.
@@ -690,9 +636,9 @@ Version | Date
 * Added Buddy Team Colours component.
 * Partially re-enabled weather parameter in Mission Conditions Selector component.
 * Expanded F3 Folk ARPS Platoons component:
-  * INDEPENDENT platoon can now be helibourne or mechanised.
-  * BLUFOR platoon now has 1 x tank.
-  * OPFOR platoon now has 1 x tank.
+ * INDEPENDENT platoon can now be helibourne or mechanised.
+ * BLUFOR platoon now has 1 x tank.
+ * OPFOR platoon now has 1 x tank.
 * Implemented new functions-based approach to parameters, gear etc.
 * Updated F3 Folk ARPS Assign Gear Script component to support new NVG classnames.
 * Removed ShackTactical Fireteam Member Markers component.
@@ -708,9 +654,9 @@ Version | Date
 
 * Migrated ACRE Support component (inc. pre-set frequencies, see F3 wiki for details).
 * Expanded F3 Folk ARPS Platoons component:
-  * BLUFOR platoon can now be helibourne or mechanised.
-  * OPFOR platoon can now be helibourne or mechanised.
-  * INDEPENDENT platoon can now be helibourne.
+ * BLUFOR platoon can now be helibourne or mechanised.
+ * OPFOR platoon can now be helibourne or mechanised.
+ * INDEPENDENT platoon can now be helibourne.
 * Fixed additional unsassigned variable errors.
 * Removed Kegetys Spectator Script component.
 * Removed unused files and references.
