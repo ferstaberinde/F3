@@ -32,8 +32,12 @@ if(f_cam_isJIP) then
 };
 if(typeof _unit == "seagull") then
 {
+  f_spect_seagull = _unit;
   _unit setpos [0,0,0];
 };
+
+if(!isNull player) then {[[player,name player],"F_fnc_registerSpectator",false] call bis_fnc_MP}
+else{ [[f_spect_seagull,profileName],"F_fnc_registerSpectator",false] call bis_fnc_MP};
 
 if(isNull _oldUnit ) then {if(count playableUnits > 0) then {_oldUnit = (playableUnits select 0)} else {_oldUnit = (allUnits select 0)};};
 
