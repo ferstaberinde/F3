@@ -16,5 +16,4 @@ class fspectator
 	class ForceExit{};
 	class HandleMenu{};
 	class showMenu{};
-	class registerSpectator{};
 };
