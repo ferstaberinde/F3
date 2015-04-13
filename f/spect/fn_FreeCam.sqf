@@ -55,10 +55,8 @@ if(f_cam_mode == 3) then
 	_mX = 0;
 	_mY = 0;
 	_mZ = 0;
-	_height = 0 max (((getPosATL f_cam_freecamera) select 2)-2);
-	//_accel = 50 min (((_height*_height)/10) + 0.03); // 0.8
-	_accel = 0.3 max (_height/5); // 0.8
-	//_accel = (sqrt (_height/10)) + 0.003; // 0.8
+	_height = 0 max (((getPosATL f_cam_freecamera) select 2));
+	_accel = 0.2 max (_height/8); // 0.8
 	_accelshift = _accel*4.25;//2;
 	if(f_cam_freecam_buttons select 0) then // W
 	{
@@ -107,7 +105,7 @@ if(f_cam_mode == 3) then
 	};
 	if(f_cam_freecam_buttons select 4) then // Q
 	{
-		_scroll = 1*((sqrt _height)/2);
+		_scroll = 1*((sqrt _height)/2)*_delta;
 		if (abs _scroll < 0.1) then {
 			if (_scroll < 0) then { _scroll = -0.1;}
 			else { _scroll = 0.1;};
@@ -116,7 +114,7 @@ if(f_cam_mode == 3) then
 	};
 	if(f_cam_freecam_buttons select 5) then // Z
 	{
-		_scroll = -1*((sqrt _height)/2);
+		_scroll = -1*((sqrt _height)/2)*_delta;
 		if (abs _scroll < 0.1) then {
 			if (_scroll < 0) then { _scroll = -0.1;}
 			else { _scroll = 0.1;};
@@ -139,14 +137,17 @@ if(f_cam_mode == 3) then
 		_mZ = _mZ + _scroll;
 	};
 
-	//_rX = (f_cam_angleX + 360) % 360; unused
-	_mX = _delta * _mX;
-	_mY = _delta * _mY;
-
-	_x = (_currPos select 0) + (_mX * (cos f_cam_angleX)) + (_mY * (sin f_cam_angleX));
-	_y = (_currPos select 1) - (_mX * (sin f_cam_angleX)) + (_mY * (cos f_cam_angleX));
+	//Max speed 50 m/s
+	_mX = _delta * ((_mX min 50) max -50); 
+	_mY = _delta * ((_mY min 50) max -50);
+	f_freecam_x_speed = f_freecam_x_speed * 0.5 + _mX;
+	f_freecam_y_speed = f_freecam_y_speed * 0.5 + _mY;
+	f_freecam_z_speed = f_freecam_z_speed * 0.5 + _mZ;
+	
+	_x = (_currPos select 0) + (f_freecam_x_speed * (cos f_cam_angleX)) + (f_freecam_y_speed * (sin f_cam_angleX));
+	_y = (_currPos select 1) - (f_freecam_x_speed * (sin f_cam_angleX)) + (f_freecam_y_speed * (cos f_cam_angleX));
 	_newHeight = (getTerrainHeightASL [_x,_y]);
-	_z = ((_currPos select 2) + _mZ) min (650 + _newHeight);
+	_z = ((_currPos select 2) + f_freecam_z_speed) min (650 + _newHeight);
 	f_cam_freecamera setPosASL [_x,_y,_z max _newHeight];
 	f_cam_freecamera setDir f_cam_angleX;
 	[f_cam_freecamera,f_cam_angleY,0] call BIS_fnc_setPitchBank;

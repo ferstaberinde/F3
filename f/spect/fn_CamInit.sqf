@@ -109,6 +109,9 @@ f_cam_ctrl_down = false;
 f_cam_shift_down = false;
 f_cam_freecam_buttons = [false,false,false,false,false,false];
 f_cam_forcedExit = false;
+f_freecam_x_speed = 0;
+f_freecam_y_speed = 0;
+f_freecam_z_speed = 0;
 
 
 f_cam_timestamp = time;
