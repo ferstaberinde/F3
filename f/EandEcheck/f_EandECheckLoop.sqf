@@ -105,7 +105,7 @@ _alive = {alive _x} count _units;
 if (_alive == 0) exitWith {_safe = 0};
 
 // DEBUG
-if (f_var_debugMode == 1) then
+if (f_param_debugMode == 1) then
 {
 	player sideChat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): _alive = %1",_alive];
 };
@@ -119,7 +119,7 @@ if (f_var_debugMode == 1) then
 _safe = {(_x distance _pos < _safeDistance)} count _units;
 
 // DEBUG
-if (f_var_debugMode == 1) then
+if (f_param_debugMode == 1) then
 {
 	player sideChat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): _safe = %1",_safe];
 };

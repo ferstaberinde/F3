@@ -20,7 +20,7 @@ private ["_men","_str_Men","_handle"];
 _men = allUnits - playableUnits;
 
 // DEBUG
-if (f_var_debugMode == 1) then
+if (f_param_debugMode == 1) then
 {
 	_str_men = str _men;
 	player sideChat format ["DEBUG (f\removeBody\f_addRemoveBodyEH.sqf): _men = %1",_str_men];

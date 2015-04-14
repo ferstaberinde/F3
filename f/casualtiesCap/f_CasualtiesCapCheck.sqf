@@ -113,7 +113,7 @@ _started = 0;
 {_started = _started + (count (units _x))} forEach _grps;
 
 // DEBUG
-if (f_var_debugMode == 1) then
+if (f_param_debugMode == 1) then
 {
 	player sideChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): _started = %1",_started];
 };
@@ -137,7 +137,7 @@ while {true} do
 	} forEach _grps;
 
 // DEBUG
-	if (f_var_debugMode == 1) then
+	if (f_param_debugMode == 1) then
 	{
 		player sideChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): _remaining = %1",_remaining];
 	};
