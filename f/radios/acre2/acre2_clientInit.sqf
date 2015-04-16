@@ -59,9 +59,6 @@ _typeOfUnit = _unit getVariable ["f_var_assignGear", "NIL"];
 // Wait for ACRE2 to initialise any radios the unit has in their inventory, and then
 // remove them to ensure that duplicate radios aren't added by accident.
 
-waitUntil{uiSleep 0.3; !("ItemRadio" in (items _unit + assignedItems _unit))};
-uiSleep 1;
-
 waitUntil{[] call acre_api_fnc_isInitialized};
 {_unit removeItem _x;} forEach ([] call acre_api_fnc_getCurrentRadioList);
 // ====================================================================================
