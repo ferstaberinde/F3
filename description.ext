@@ -173,11 +173,25 @@ class Params
     class f_param_medical
     {
             title = "Medical System";
-            values[] = {0,1,2};
-            texts[] = {"Arma 3 Default","F3 Simple Wounding System","Authentic Gameplay Mod"};
+            values[] = {0,1,2,3};
+            texts[] = {"Arma 3 Default (Autodetect)","F3 Simple Wounding System","Force ACE3 Simple","Force ACE3 Advanced"};
             default = 0;
             code = "f_var_medical = %1";
     };
+
+// ============================================================================================
+
+// F3 - ACE3 Support
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+	class f_param_ace3
+	{
+			title = "ACE3 Support";
+			values[] = {0,1};
+			texts[] = {"Off","On"};
+			default = 0;
+			code = "f_var_ace3 = %1";
+	};
 
 // ============================================================================================
 
@@ -410,7 +424,6 @@ class CfgFunctions
 			class processParamsArray
 			{
 				preInit = 1;
-				postInit = 1;
 			};
 
 			class nearPlayer{};
@@ -426,6 +439,18 @@ class CfgFunctions
 			// Defines the functions to preInit the compling of the assignGear function used by units.
 			file = "f\assignGear";
 			class assignGear{};
+		};
+		class ace3
+		{
+			file="f\ace3";
+		};
+		class medical
+		{
+			file="f\medical";
+			class medicalPreInit
+			{
+				preInit = 1;
+			};
 		};
 		class setGroupID
 		{
@@ -516,7 +541,7 @@ class CfgFunctions
 		};
 		class safeStart
 		{
-			file = "f\safeStart"
+			file = "f\safeStart";
 			class safety{};
 		};
 		#include "f\simplewoundingsystem\config.hpp"

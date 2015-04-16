@@ -982,10 +982,15 @@ switch (_typeofUnit) do
 
 if (!_isMan) then
 	{
-	// Authentic Gameplay Modification
+	// ACE Standard
 	if (f_var_medical == 2) exitWith
 		{
-			[_unit] execVM "f\medical\AGM_converter.sqf";
+			[_unit] execVM "f\ace3\ACE3_StandardConverter.sqf";
+		};
+	// ACE Advanced
+	if (f_var_medical == 3) exitWith
+		{
+			[_unit] execVM "f\ace3\ACE3_AdvancedConverter.sqf";
 		};
 	};
 
