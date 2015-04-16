@@ -104,8 +104,6 @@ _wp = [_grp,_nPos,["HOLD",0,10],["STEALTH","GREEN","NORMAL"]] call ws_fnc_addWay
     _trg synchronizeTrigger [_wp];
 } forEach _sidesEnemy;
 
-systemChat format ["%1",_killzone];
-
 // Create attack waypoint (becomes active once trigger flips)
 (units _grp) doWatch _pos;
 _wp = [_grp,_pos,["SAD",0],["AWARE","RED","FULL"]] call ws_fnc_addWaypoint;
