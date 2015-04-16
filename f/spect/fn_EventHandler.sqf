@@ -347,6 +347,7 @@ case "KeyDown":
              _handled = true;
         };
         case 25:
+		{
             f_cam_muteSpectators = !f_cam_muteSpectators;
             switch (f_var_radios) do {
               // ACRE
