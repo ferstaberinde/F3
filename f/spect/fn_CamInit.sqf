@@ -30,9 +30,21 @@ if(f_cam_isJIP) then
   uiSleep 3;
   ["F_ScreenSetup"] call BIS_fnc_blackIn;
 };
-if(typeof _unit == "seagull") then
+
+// Create a Virtual Agent to act as our player to make sure we get to keep Draw3D
+if(isNil "f_cam_VirtualCreated") then
 {
-  _unit setpos [0,0,0];
+  createCenter sideLogic;
+  _newGrp = createGroup sideLogic;
+  _newUnit = _newGrp createUnit ["VirtualCurator_F", [0,0,5], [], 0, "FORM"];
+  _newUnit allowDamage false;
+  _newUnit hideObjectGlobal true;
+  _newUnit enableSimulationGlobal false;
+  _newUnit setpos [0,0,5];
+  selectPlayer _newUnit;
+  waituntil{player == _newUnit};
+  deleteVehicle _unit;
+  f_cam_VirtualCreated = true;
 };
 
 if(isNull _oldUnit ) then {if(count playableUnits > 0) then {_oldUnit = (playableUnits select 0)} else {_oldUnit = (allUnits select 0)};};
@@ -54,26 +66,8 @@ switch (f_var_radios) do {
   };
 
 };
-
 // ====================================================================================
 
-
-// enable all factions but your owns groupMarkers. // DISABLED.
-/*
-_oldUnit spawn {
-  _factions = [];
-  {
-    if(!(faction (leader _x) in _factions)) then
-    {
-      _factions = _factions + [faction (leader _x)];
-    };
-  } foreach allGroups;
-  _factions = _factions - [faction _this];
-  {
-      [toLower _x] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf";
-  } foreach _factions;
-};*/
-// ====================================================================================
 _listBox = 2100;
 lbClear _listBox;
 // set inital values.
@@ -115,16 +109,22 @@ f_cam_ctrl_down = false;
 f_cam_shift_down = false;
 f_cam_freecam_buttons = [false,false,false,false,false,false];
 f_cam_forcedExit = false;
-// 0 = ALL, 1 = BLUFOR , 2 = OPFOR, 3 = INDFOR , 4 = Civ
-f_cam_sideButton = 0;
-f_cam_sideNames = ["All Sides","Blufor","Opfor","Indfor","Civ"];
-f_cam_timestamp = time;
+f_freecam_x_speed = 0;
+f_freecam_y_speed = 0;
+f_freecam_z_speed = 0;
 
+
+f_cam_timestamp = time;
+f_cam_muteSpectators = true;
+
+// ====================================================================================
+// Menu (Top left)
 f_cam_menuControls = [2111,2112,2113,2114,2101,4302];
 f_cam_menuShownTime = 0;
 f_cam_menuShown = true;
 f_cam_menuWorking = false;
-[false] spawn f_fnc_showMenu;
+f_cam_sideButton = 0; // 0 = ALL, 1 = BLUFOR , 2 = OPFOR, 3 = INDFOR , 4 = Civ
+f_cam_sideNames = ["All Sides","Blufor","Opfor","Indfor","Civ"];
 // ====================================================================================
 // Colors
 
@@ -135,12 +135,13 @@ f_cam_civ_color = [civilian] call bis_fnc_sideColor;
 f_cam_empty_color = [sideUnknown] call bis_fnc_sideColor;
 
 // ================================
-
+// Camera
 f_cam_angle = 360;
 f_cam_zoom = 3;
 f_cam_height = 3;
 f_cam_fovZoom = 1.2;
 f_cam_scrollHeight = 0;
+f_cam_cameraMode = 0; // set camera mode (default)
 // ====================================================================================
 
 f_cam_listUnits = [];
@@ -179,8 +180,7 @@ f_cam_GetCurrentCam = {
   };
   _camera
 };
-// set camera mode (default)
-f_cam_cameraMode = 0;
+
 
 // =============================================================================
 
