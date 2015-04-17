@@ -978,19 +978,19 @@ switch (_typeofUnit) do
 
 // ====================================================================================
 
-// If this is an ammobox, check medical component settings and if needed run converter script.
+// If this is an ammobox or vehicle, check medical component settings and if needed run converter script.
 
 if (!_isMan) then
 	{
 	// ACE Standard
 	if (f_var_medical == 2) exitWith
 		{
-			[_unit] execVM "f\ace3\ACE3_StandardConverter.sqf";
+			[_unit] execVM "f\ace3\ACE3_MedicalStandardConverter.sqf";
 		};
 	// ACE Advanced
 	if (f_var_medical == 3) exitWith
 		{
-			[_unit] execVM "f\ace3\ACE3_AdvancedConverter.sqf";
+			[_unit] execVM "f\ace3\ACE3_MedicalAdvancedConverter.sqf";
 		};
 	};
 
