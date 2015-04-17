@@ -516,7 +516,7 @@ class CfgFunctions
 		};
 		class safeStart
 		{
-			file = "f\safeStart"
+			file = "f\safeStart";
 			class safety{};
 		};
 		#include "f\simplewoundingsystem\config.hpp"
