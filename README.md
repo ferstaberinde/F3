@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-3-0 RC1
+* Version: 3-3-0 RC2
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,7 +29,8 @@
 
 Version | Date | Notes
 
-* 3-3-0 RC1 | 08 APR 2015 | Patch release - Various improvements (see change history).
+* 3-3-0 RC2 | 18 APR 2015 | Internal release - Various improvements (see change history). 
+* 3-3-0 RC1 | 08 APR 2015 | Internal release - Various improvements (see change history).
 * 3-2-2     | 20 FEB 2015 | Patch release - Various improvements (see change history).
 * 3-2-1     | 06 DEC 2014 | Patch release - Bug fix (see change history).
 * 3-2-0     | 15 NOV 2014 | Patch release - Various improvements (see change history).
@@ -234,6 +235,17 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-3-0 RC2 | 18 APR 2015
+
+* Updated F3 Spectator Script component:
+  * Identified and fixed possible sFPS issue.
+  * Improved Freecam handling.
+  * Added mute key (P) for spectator.
+* Updated Radio Systems Support component:
+  * Hotfix for acre_api_fnc_isInitialized ignoring itemRadio.
+* Updated Zeus Support component:
+  * Removed Zeus synchronisation (f_fnc_zeusSyncCurators).
 
 3-3-0 RC1 | 08 APR 2015
 
