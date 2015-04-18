@@ -244,6 +244,8 @@ Version | Date
   * Added mute key (P) for spectator.
 * Updated Radio Systems Support component:
   * Hotfix for acre_api_fnc_isInitialized ignoring itemRadio.
+* Updated Zeus Support component:
+  * Removed Zeus synchronisation (f_fnc_zeusSyncCurators).
 
 3-3-0 RC1 | 08 APR 2015
 
