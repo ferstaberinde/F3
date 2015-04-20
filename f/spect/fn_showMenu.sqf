@@ -1,4 +1,4 @@
-disableSerialization;
+/*disableSerialization;
 _show = _this select 0;
 _disp = findDisplay 9228;
 if(f_cam_menuWorking) exitWith {};
@@ -28,3 +28,4 @@ if(!_show && f_cam_menuShown) then
 	waitUntil {ctrlCommitted (_disp displayCtrl (f_cam_menuControls select 0))};
 	f_cam_menuWorking = false;
 };
+*/
