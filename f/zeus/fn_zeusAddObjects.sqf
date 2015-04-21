@@ -45,7 +45,7 @@ switch (typeName _mode) do {
 	case "ARRAY": {_objects = _mode};
 	case "OBJECT": {_objects = [_mode]};
 	case "SIDE": {
-		{if (side _x == _side) then {_objects pushback (vehicle _x)}} forEach allUnits;
+		{if (side _x == _mode && {!(vehicle _x in _objects)}) then {_objects pushback (vehicle _x)}} forEach allUnits;
 	};
 	case "BOOL": {
 		 if (_mode) then {
@@ -69,7 +69,7 @@ _leaders = [];
 if (_groupLeaders) then {
 	{
 		if ((isNull group _x) || _x == leader group _x) then {
-			_leaders pushBack _x;
+			_leaders pushBack (vehicle _x);
 		};
 	} forEach _objects;
 	_objects = _leaders;
