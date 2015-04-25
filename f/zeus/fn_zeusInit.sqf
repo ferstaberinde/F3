@@ -50,7 +50,6 @@ if (isNil "f_var_sideCenter") then {
 
 // Create a new curator logic
 _curator = (createGroup f_var_sideCenter) createUnit ["ModuleCurator_F",[0,0,0] , [], 0, ""];
-_curator setVariable ["owner",format["%1",_unit],true];
 
 // Assign the passed unit as curator
 _unit assignCurator _curator;
@@ -74,6 +73,7 @@ if({!isNil _x} count ["f_param_AISkill_BLUFOR","f_param_AISkill_INDP","f_param_A
 
 // If announce is set to true, the new curator will be announced to all players
 if (_announce) then {
+	_curator setVariable ["owner",format["%1",_unit],true];
 	[["Alert",[format ["%1 has become curator!",name _unit]]],"BIS_fnc_showNotification",true] call BIS_fnc_MP;
 };
 
