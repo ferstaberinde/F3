@@ -32,7 +32,7 @@ class KitPicker
             y = SafeZoneY + 0.2;
             text = "Kit picker";
         };
-    }
+    };
 
     class controls
     {
