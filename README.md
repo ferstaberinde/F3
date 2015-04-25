@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 3-3-0     | 25 APR 2015 | Internal release - Various improvements (see change history). 
+* 3-3-0     | 25 APR 2015 | Patch release - Various improvements (see change history).
 * 3-3-0 RC2 | 18 APR 2015 | Internal release - Various improvements (see change history). 
 * 3-3-0 RC1 | 08 APR 2015 | Internal release - Various improvements (see change history).
 * 3-2-2     | 20 FEB 2015 | Patch release - Various improvements (see change history).
