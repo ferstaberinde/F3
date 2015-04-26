@@ -20,7 +20,7 @@ if !(isServer) exitWith {};
 
 _curator = [_this,0,objNull] call bis_fnc_param;
 _mode = [_this,1,[],[true,west,objNull,[]]] call bis_fnc_param;
-_groupLeaders = [_this,2,false] call bis_fnc_param;
+_groupleaders = [_this,2,false] call bis_fnc_param;
 
 // ====================================================================================
 
@@ -45,18 +45,7 @@ switch (typeName _mode) do {
 	case "ARRAY": {_objects = _mode};
 	case "OBJECT": {_objects = [_mode]};
 	case "SIDE": {
-		_getGlobalVars = [0] execVM "f\common\f_setLocalVars.sqf";
-		waitUntil {scriptDone _getGlobalVars};
-
-		_objects = switch (_mode) do {
-			case west: {f_var_units_BLU};
-			case blufor: {f_var_units_BLU};
-			case east: {f_var_units_OPF};
-			case opfor: {f_var_units_OPF};
-			case resistance: {f_var_units_RES};
-			case independent: {f_var_units_RES};
-			case civilian: {f_var_units_CIV};
-		};
+		{if (side _x == _mode && {!(vehicle _x in _objects)}) then {_objects pushback (vehicle _x)}} forEach allUnits;
 	};
 	case "BOOL": {
 		 if (_mode) then {
@@ -80,7 +69,7 @@ _leaders = [];
 if (_groupLeaders) then {
 	{
 		if ((isNull group _x) || _x == leader group _x) then {
-			_leaders pushBack _x;
+			_leaders pushBack (vehicle _x);
 		};
 	} forEach _objects;
 	_objects = _leaders;
