@@ -69,51 +69,40 @@ waitUntil{[] call acre_api_fnc_isInitialized};
 
 if(_typeOfUnit != "NIL") then {
 
-  // If radios are enabled in the settings
-  if(!f_radios_settings_acre2_disableRadios) then {
-      // Everyone gets a short-range radio by default
-      if(isnil "f_radios_settings_acre2_shortRange") then
-      {
-		if (_unit canAdd f_radios_settings_acre2_standardSHRadio) then
-		{
-			_unit addItem f_radios_settings_acre2_standardSHRadio;
-		} else {
-			f_radios_settings_acre2_standardSHRadio call f_radios_acre2_giveRadioAction;
-		};
-      }
-      else
-      {
-        if(_typeOfUnit in f_radios_settings_acre2_shortRange) then
-        {
-			if (_unit canAdd f_radios_settings_acre2_standardSHRadio) then
-			{
+	// If radios are enabled in the settings
+	if(!f_radios_settings_acre2_disableRadios) then {
+		// Everyone gets a short-range radio by default
+		if(isnil "f_radios_settings_acre2_shortRange") then {
+			if (_unit canAdd f_radios_settings_acre2_standardSHRadio) then {
 				_unit addItem f_radios_settings_acre2_standardSHRadio;
 			} else {
 				f_radios_settings_acre2_standardSHRadio call f_radios_acre2_giveRadioAction;
 			};
-        };
-      };
-
-      // If unit is in the above list, add a 148
-      if(_typeOfUnit in f_radios_settings_acre2_longRange) then {
-		if (_unit canAdd f_radios_settings_acre2_standardLRRadio) then
-		{
-			_unit addItem f_radios_settings_acre2_standardLRRadio;
 		} else {
-			f_radios_settings_acre2_standardLRRadio call f_radios_acre2_giveRadioAction;
+			if(_typeOfUnit in f_radios_settings_acre2_shortRange) then {
+				if (_unit canAdd f_radios_settings_acre2_standardSHRadio) then {
+					_unit addItem f_radios_settings_acre2_standardSHRadio;
+				} else {
+					f_radios_settings_acre2_standardSHRadio call f_radios_acre2_giveRadioAction;
+				};
+			};
 		};
 
-        // If unit is in the list of units that receive an extra long-range radio, add another 148
-        if(_typeOfUnit in f_radios_settings_acre2_extraRadios) then {
-			if (_unit canAdd f_radios_settings_acre2_extraRadio) then
-			{
+		// If unit is in the above list, add a 148
+		if(_typeOfUnit in f_radios_settings_acre2_longRange) then {
+			if (_unit canAdd f_radios_settings_acre2_standardLRRadio) then {
+				_unit addItem f_radios_settings_acre2_standardLRRadio;
+			} else {
+				f_radios_settings_acre2_standardLRRadio call f_radios_acre2_giveRadioAction;
+			};
+		};
+			// If unit is in the list of units that receive an extra long-range radio, add another 148
+		if(_typeOfUnit in f_radios_settings_acre2_extraRadios) then {
+			if (_unit canAdd f_radios_settings_acre2_extraRadio) then {
 				_unit addItem f_radios_settings_acre2_extraRadio;
 			} else {
 				f_radios_settings_acre2_extraRadio call f_radios_acre2_giveRadioAction;
 			};
-        };
-
-      };
-
-  };
+		};
+	};
 };
