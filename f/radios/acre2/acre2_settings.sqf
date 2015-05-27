@@ -44,12 +44,82 @@ f_radios_settings_acre2_language_blufor = ["english"];
 f_radios_settings_acre2_language_opfor = ["farsi"];
 f_radios_settings_acre2_language_indfor = ["greek"];
 
-// Channels names
+// Channel names and group defaults
 // first item in the array will correspond to the first channel
+// item definition: ["CHANNEL NAME", ["GROUP1 NAME", "GROUP2 NAME"]]
 // note these only work if f_radios_settings_acre2_disableFrequencySplit is set to false
-f_radios_settings_acre2_groups_blufor = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
-f_radios_settings_acre2_groups_opfor = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
-f_radios_settings_acre2_groups_indfor = ["Alpha","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliet","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","X-ray","Yankee","Zulu"];
+f_radios_settings_acre2_sr_groups_blufor = [
+	["Alpha",    ["ASL","A1","A2","A3"]],
+	["Bravo",    ["BSL","B1","B2","B3"]],
+	["Charlie",  ["CSL","C1","C2","C3"]],
+	["Delta",    ["CO","DC"]],
+	["Echo",     ["MMG1","HMG1"]],
+	["Foxtrot",  ["MAT1","HAT1"]],
+	["Golf",     ["MTR1"]],
+	["Hotel",    ["MSAM1","HSAM1"]],
+	["India",    ["ST1"]],
+	["Juliet",   ["DT1"]],
+	["Kilo",     ["ENG1"]],
+	["Lima",     ["IFV1","IFV2","IFV3","IFV4","IFV5","IFV6","IFV7","IFV8"]],
+	["Mike",     ["TNK1"]],
+	["November", ["TH1","TH2","TH3","T4","TH5","TH6","TH7","TH8"]],
+	["Oscar", 	 ["AH1"]],
+	["Papa", 	 []],
+	["Quebec", 	 []],
+	["Romeo",    []],
+	["Sierra",   []],
+	["Tango",    []],
+	["Uniform",  []],
+	["Victor",   []],
+	["Whiskey",  []],
+	["X-ray",    []],
+	["Yankee",   []],
+	["Zulu",     []]
+];
+
+f_radios_settings_acre2_sr_groups_opfor = f_radios_settings_acre2_sr_groups_blufor;
+f_radios_settings_acre2_sr_groups_indfor = f_radios_settings_acre2_sr_groups_blufor;
+
+f_radios_settings_acre2_lr_groups_blufor = [
+	["Alpha",    []],
+	["Bravo",    []],
+	["Charlie",  []],
+	["Delta",
+		[
+			"ASL","BSL","CSL",
+			"MMG1","HMG1","MAT1","HAT1","MTR1","MSAM1","HSAM1",
+			"ST1","DT1","ENG1",
+			"IFV1","IFV2","IFV3","IFV4","IFV5","IFV6","IFV7","IFV8","TNK1",
+			"TH1","TH2","TH3","T4","TH5","TH6","TH7","TH8",
+			"AH1"
+		]
+	],
+	["Echo",     []],
+	["Foxtrot",  []],
+	["Golf",     []],
+	["Hotel",    []],
+	["India",    []],
+	["Juliet",   []],
+	["Kilo",     []],
+	["Lima",     []],
+	["Mike",     []],
+	["November", []],
+	["Oscar", 	 []],
+	["Papa", 	 []],
+	["Quebec", 	 []],
+	["Romeo",    []],
+	["Sierra",   []],
+	["Tango",    []],
+	["Uniform",  []],
+	["Victor",   []],
+	["Whiskey",  []],
+	["X-ray",    []],
+	["Yankee",   []],
+	["Zulu",     []]
+];
+
+f_radios_settings_acre2_lr_groups_opfor = f_radios_settings_acre2_lr_groups_blufor;
+f_radios_settings_acre2_lr_groups_indfor = f_radios_settings_acre2_lr_groups_blufor;
 
 // ====================================================================================
 // MISC ACRE2 settings, these are all set the ACRE2 defaults
