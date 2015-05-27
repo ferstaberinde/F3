@@ -167,13 +167,7 @@ _group = (group _unit);
 
 
 {
-	if(!isnil (_x select 0)) then {
-			call compile format ["
-				if (%1==_group) then {
-					_badge = _x select 1;
-				};
-			",_x select 0];
-	};
+    if (_group == missionNamespace getVariable[(_x select 0),grpNull]) exitWith { _badge = _x select 1; };
 } forEach _groupBadges;
 
 // ====================================================================================
