@@ -47,7 +47,8 @@ f_radios_settings_acre2_language_indfor = ["greek"];
 // Channel names and group defaults
 // first item in the array will correspond to the first channel
 // item definition: ["CHANNEL NAME", ["GROUP1 NAME", "GROUP2 NAME"]]
-// note these only work if f_radios_settings_acre2_disableFrequencySplit is set to false
+// note that if using a 343 only the first 16 channels are available for the short-range array
+// also note these only work if f_radios_settings_acre2_disableFrequencySplit is set to false
 f_radios_settings_acre2_sr_groups_blufor = [
 	["Alpha",    ["ASL","A1","A2","A3"]],
 	["Bravo",    ["BSL","B1","B2","B3"]],
@@ -86,6 +87,7 @@ f_radios_settings_acre2_lr_groups_blufor = [
 	["Charlie",  []],
 	["Delta",
 		[
+			"CO", "DC",
 			"ASL","BSL","CSL",
 			"MMG1","HMG1","MAT1","HAT1","MTR1","MSAM1","HSAM1",
 			"ST1","DT1","ENG1",
