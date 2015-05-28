@@ -5,6 +5,8 @@
 ////////// 2: radio classname
 ////////// Example: [player,opfor,"ACRE_PRC148"];
 
+private ["_unit","_side","_radio","_presetName","_ret"];
+
 _unit = _this select 0;
 _side = _this select 1;
 _radio = _this select 2;

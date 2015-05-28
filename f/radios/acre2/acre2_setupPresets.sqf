@@ -2,6 +2,8 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
+private ["_radioName"];
+
 //Set the names for all the radios properly.
 {
 	_radioName = _x;

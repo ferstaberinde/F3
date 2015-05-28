@@ -1,7 +1,13 @@
 // F3 - ACRE Clientside Initialisation
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// ====================================================================================
+
+// DECLARE VARIABLES AND FUNCTIONS
+
+private ["_presetName","_ret","_unit","_typeOfUnit","_radiosAdded"];
 
 // ====================================================================================
+
 // Set up the radio presets according to side.
 _presetName = switch(side player) do {
 	case west:{"default2"};
@@ -131,6 +137,8 @@ if(_typeOfUnit != "NIL") then {
 // Depending on the squad joined, each radio is assigned a default starting channel
 
 if(!f_radios_settings_acre2_disableRadios) then {
+
+	private ["_presetArray","_presetLRArray","_radioSR","_radioLR","_radioExtra","_hasSR","_hasLR","_hasExtra","_groupID","_groupIDSplit","_groupChannelIndex","_groupLRChannelIndex","_groupName"];
 
 	if (_radiosAdded != 0) then {
 		waitUntil {uiSleep 0.3; count ([] call acre_api_fnc_getCurrentRadioList) >= _radiosAdded};
