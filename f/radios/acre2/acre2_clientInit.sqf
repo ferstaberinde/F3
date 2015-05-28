@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_presetName","_ret","_unit","_typeOfUnit","_radiosAdded"];
+private ["_presetName","_ret","_unit","_typeOfUnit"];
 
 // ====================================================================================
 
@@ -75,8 +75,6 @@ waitUntil{[] call acre_api_fnc_isInitialized};
 // Depending on the loadout used in the assignGear component, each unit is assigned
 // a set of radios.
 
-_radiosAdded = 0;
-
 if(_typeOfUnit != "NIL") then {
 
   // If radios are enabled in the settings
@@ -87,7 +85,6 @@ if(_typeOfUnit != "NIL") then {
 		if (_unit canAdd f_radios_settings_acre2_standardSHRadio) then
 		{
 			_unit addItem f_radios_settings_acre2_standardSHRadio;
-			_radiosAdded = _radiosAdded + 1;
 		} else {
 			f_radios_settings_acre2_standardSHRadio call f_radios_acre2_giveRadioAction;
 		};
@@ -99,7 +96,6 @@ if(_typeOfUnit != "NIL") then {
 			if (_unit canAdd f_radios_settings_acre2_standardSHRadio) then
 			{
 				_unit addItem f_radios_settings_acre2_standardSHRadio;
-				_radiosAdded = _radiosAdded + 1;
 			} else {
 				f_radios_settings_acre2_standardSHRadio call f_radios_acre2_giveRadioAction;
 			};
@@ -120,7 +116,6 @@ if(_typeOfUnit != "NIL") then {
 			if (_unit canAdd f_radios_settings_acre2_extraRadio) then
 			{
 				_unit addItem f_radios_settings_acre2_extraRadio;
-				_radiosAdded = _radiosAdded + 1;
 			} else {
 				f_radios_settings_acre2_extraRadio call f_radios_acre2_giveRadioAction;
 			};
@@ -139,15 +134,8 @@ if(_typeOfUnit != "NIL") then {
 if(!f_radios_settings_acre2_disableRadios) then {
 
 	private ["_presetArray","_presetLRArray","_radioSR","_radioLR","_radioExtra","_hasSR","_hasLR","_hasExtra","_groupID","_groupIDSplit","_groupChannelIndex","_groupLRChannelIndex","_groupName"];
-
-	if (_radiosAdded != 0) then {
-		waitUntil {uiSleep 0.3; count ([] call acre_api_fnc_getCurrentRadioList) >= _radiosAdded};
-	} else {
-		waitUntil {uiSleep 0.3; count ([] call acre_api_fnc_getCurrentRadioList) > 0};
-	};
-
-	// Make sure we wait for all radios to be added
-	uiSleep 0.1;
+	
+	waitUntil {uiSleep 0.1; [] call acre_api_fnc_isInitialized};
 
 	_presetArray = switch (side _unit) do {
   		case blufor: {f_radios_settings_acre2_sr_groups_blufor};
