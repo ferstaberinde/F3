@@ -76,7 +76,7 @@ _bipod2 = "bipod_02_F_blk";		// Black bipod
 _attachments = [_attach1,_scope1]; // The default attachment set for most units, overwritten in the individual unitType
 
 // [] = remove all
-// [_attach1,_scope1,_silencer] = remove all, add items assigned in _attach1, _scope1 and _silencer1
+// [_attach1,_scope1,_silencer1] = remove all, add items assigned in _attach1, _scope1 and _silencer1
 // [_scope2] = add _scope2, remove rest
 // false = keep attachments as they are
 
@@ -894,6 +894,101 @@ switch (_typeofUnit) do
 		_unit addMagazineCargoGlobal [_glmag, 8];
 		_unit addMagazineCargoGlobal [_glsmokewhite, 4];
 		_unit addItemCargoGlobal [_firstaid,6];
+	};
+
+//CARGO: TANK
+    case "v_tank":
+	{
+	    clearWeaponCargoGlobal _unit;
+	    clearMagazineCargoGlobal _unit;
+	    clearItemCargoGlobal _unit;
+	    clearBackpackCargoGlobal _unit;
+	    _unit addMagazineCargoGlobal [_smokegrenade,4];
+	    _unit addMagazineCargoGlobal [_smokegrenadegreen,2];
+	    _unit addItemCargoGlobal [_firstaid,2];
+	};
+	
+//CARGO: Rotary Transport Light - Hummingbird
+    case "v_helo_l":
+        {
+            clearWeaponCargoGlobal _unit;
+	    clearMagazineCargoGlobal _unit;
+	    clearItemCargoGlobal _unit;
+	    clearBackpackCargoGlobal _unit;
+	    _unit addMagazineCargoGlobal [_riflemag, 5];
+	    _unit addMagazineCargoGlobal [_glriflemag, 5];
+	    _unit addMagazineCargoGlobal [_armag, 2];
+	    _unit addMagazineCargoGlobal [_carbinemag, 5];
+	    _unit addMagazineCargoGlobal [_smokegrenade,4];
+	    _unit addMagazineCargoGlobal [_smokegrenadegreen,2];
+	    _unit addMagazineCargoGlobal [_chemgreen,4];
+	    _unit addBackpackCargoGlobal ["B_Parachute",2];
+	    _unit addItemCargoGlobal [_firstaid,4];
+	};
+	
+//CARGO: Rotary Transport Medium - Ghost Hawk
+    case "v_helo_m":
+	{
+	    clearWeaponCargoGlobal _unit;
+	    clearMagazineCargoGlobal _unit;
+	    clearItemCargoGlobal _unit;
+	    clearBackpackCargoGlobal _unit;
+	    _unit addWeaponCargoGlobal [_carbine,2];
+	    _unit addWeaponCargoGlobal [_rat,1];
+	    _unit addMagazineCargoGlobal [_riflemag,10];
+	    _unit addMagazineCargoGlobal [_glriflemag,10];
+	    _unit addMagazineCargoGlobal [_carbinemag,10];
+	    _unit addMagazineCargoGlobal [_armag,6];
+	    _unit addMagazineCargoGlobal [_ratmag,1];
+	    _unit addMagazineCargoGlobal [_grenade,4];
+	    _unit addmagazineCargoGlobal [_mgrenade,4];
+	    _unit addMagazineCargoGlobal [_smokegrenade,8];
+	    _unit addMagazineCargoGlobal [_smokegrenadegreen,4];
+	    _unit addMagazineCargoGlobal [_glmag,8];
+	    _unit addMagazineCargoGlobal [_glsmokewhite,12];
+	    _unit addMagazineCargoGlobal [_chemgreen,4];
+	    _unit addBackpackCargoGlobal [_bagmedium,2];
+	    _unit addBackpackCargoGlobal ["B_Parachute",2];
+	    _unit addItemCargoGlobal [_firstaid,4];
+	};
+	
+//CARGO: Rotary Transport Heavy - Chinook
+    case "v_helo_h":
+	{
+	        clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
+		_unit addWeaponCargoGlobal [_carbine,8];
+		_unit addWeaponCargoGlobal [_rat,2];
+		_unit addMagazineCargoGlobal [_riflemag,20];
+		_unit addMagazineCargoGlobal [_glriflemag,20];
+		_unit addMagazineCargoGlobal [_carbinemag,20];
+		_unit addMagazineCargoGlobal [_armag,12];
+		_unit addMagazineCargoGlobal [_ratmag,6];
+		_unit addMagazineCargoGlobal [_grenade,12];
+		_unit addmagazineCargoGlobal [_mgrenade,12];
+		_unit addMagazineCargoGlobal [_smokegrenade,12];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen,4];
+		_unit addMagazineCargoGlobal [_glmag,12];
+		_unit addMagazineCargoGlobal [_glsmokewhite,12];
+		_unit addMagazineCargoGlobal [_chemgreen,4];
+		_unit addBackpackCargoGlobal [_bagmedium,4];
+		_unit addBackpackCargoGlobal ["B_Parachute",4];
+		_unit addItemCargoGlobal [_firstaid,8];
+	};
+	
+//CARGO: Rotary Attack
+    case "v_helo_a":
+	{
+	    clearWeaponCargoGlobal _unit;
+		clearMagazineCargoGlobal _unit;
+		clearItemCargoGlobal _unit;
+		clearBackpackCargoGlobal _unit;
+		_unit addMagazineCargoGlobal [_smokegrenade,4];
+		_unit addMagazineCargoGlobal [_smokegrenadegreen,2];
+		_unit addMagazineCargoGlobal [_chemgreen,4];
+		_unit addItemCargoGlobal [_firstaid,2];
 	};
 
 // CRATE: Small, ammo for 1 fireteam
