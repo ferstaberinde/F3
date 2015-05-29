@@ -92,35 +92,35 @@
       </Key>
       <Key ID="STR_f_param_weather_Option0">
         <English> Clear (Calm)</English>
-        <Polish> Bezchmurnie (bez wiatru)</Polish>
+        <Polish> Bezchmurnie (Bez Wiatru)</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option1">
         <English> Clear (Light Winds)</English>
-        <Polish> Bezchmurnie (lekki wiatr)</Polish>
+        <Polish> Bezchmurnie (Lekki Wiatr)</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option2">
         <English> Clear (Strong Winds)</English>
-        <Polish> Bezchmurnie (silny wiatr)</Polish>
+        <Polish> Bezchmurnie (Silny Wiatr)</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option3">
         <English> Overcast (Calm)</English>
-        <Polish> Zachmurzenie (bez wiatru)</Polish>
+        <Polish> Zachmurzenie (Bez Wiatru)</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option4">
         <English> Overcast (Light Winds)</English>
-        <Polish> Zachmurzenie (lekki wiatr)</Polish>
+        <Polish> Zachmurzenie (Lekki Wiatr)</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option5">
         <English> Overcast (Strong Winds)</English>
-        <Polish> Zachmurzenie (silny wiatr)</Polish>
+        <Polish> Zachmurzenie (Silny Wiatr)</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option6">
         <English> Rain (Light Winds)</English>
-        <Polish> Deszcz (lekki wiatr)</Polish>
+        <Polish> Deszcz (Lekki Wiatr)</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option7">
         <English> Rain (Strong Winds)</English>
-        <Polish> Deszcz (silny wiatr)</Polish>
+        <Polish> Deszcz (Silny Wiatr)</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option8">
         <English> Storm </English>
@@ -245,7 +245,7 @@
       </Key>
       <Key ID="STR_f_JIP_reinforcementOptionsAction">
         <English> Select Reinforcement Options</English>
-        <Polsih> Wybierz opcje wsparcia</Polsih>
+        <Polsih> Wybierz opcje wsparcia</Polish>
       </Key>
       <Key ID="STR_f_param_mission_timer">
         <English> Safe Start (mins) </English>
