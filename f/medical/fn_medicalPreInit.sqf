@@ -2,13 +2,6 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// Wait until medical param is initialized by the pre init param processor
-// Pre Init is unscheduled space...
-//waitUntil
-//{
-//	!(isNil {missionNamespace getVariable "f_var_medical"})
-//};
-
 // Handle forcing of medical level
 switch (f_var_medical) do
 {
