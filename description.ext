@@ -394,7 +394,7 @@ class CfgFunctions
 		class common // category
 		{
 			file = "f\common";
-			class processParamsArray{preInit = 1;};
+			class processParamsArray{preInit = 1; postInit=1;};
 			class nearPlayer{};
 		};
 		class mpEnd

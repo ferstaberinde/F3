@@ -2,6 +2,8 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
+if (!hasInterface) exitWith {}; //Exit if not a player.
+
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_text","_stuff","_weps","_items","_fnc_wepMags","_wepMags","_magArr","_s","_mags","_bp","_maxload"];
