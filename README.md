@@ -13,7 +13,8 @@
   * Pre-configured endings 1 -3 with generic titles and texts
 * Other changes:
   * Pre-placed a ZEUS player configured to support F3 AI Skill Selector
+  * Dedicated CTRG loadout
 
 ## Versions ##
 * F3 3-3-0
-* ws_fnc 16/04/2015
+* ws_fnc 20/04/2015

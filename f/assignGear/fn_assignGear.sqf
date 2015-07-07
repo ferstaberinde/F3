@@ -95,7 +95,7 @@ if (_faction == "opf_f") then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if(_faction == "ind_f") then {
-	#include "f_assignGear_aaf.sqf";
+	#include "f_assignGear_aaf.sqf"
 };
 
 // ====================================================================================
@@ -106,6 +106,16 @@ if(_faction == "ind_f") then {
 
 if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
 	#include "f_assignGear_fia.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: CTRG
+// The following block of code executes only if the unit is in a AAF slot; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if(_faction == "ctrg") then {
+	#include "f_assignGear_ctrg.sqf"
 };
 
 // ====================================================================================
