@@ -2,6 +2,9 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
+// Execute only on the server
+if !isServer exitWith {};
+
 // OPEN THE ARRAY CONTAING ALL GROUPS
 // Do not comment or delete this line!
 _groups = [
