@@ -982,14 +982,26 @@ switch (_typeofUnit) do
 
 if (!_isMan) then
 	{
-	// Authentic Gameplay Modification
-	if (f_var_medical == 2) exitWith
+	switch(f_var_medical == 2) do
 		{
-			[_unit] execVM "f\medical\AGM_converter.sqf";
+		case 2:	// Authentic Gameplay Modification
+			{
+				[_unit] execVM "f\medical\AGM_converter.sqf";
+			};
+			
+		case 3: // ACE 3 Basic Medic System
+			{
+				[_unit] execVM "f\medical\ACE_converter.sqf";
+			};
+			
+		case 4: // ACE 3 Advanced Medic System
+			{
+				[_unit] execVM "f\medical\ACEadvanced_converter.sqf";
+			};
 		};
 	};
 
-// ====================================================================================
+//====================================================================================
 
 // If this isn't run on an infantry unit we can exit
 if !(_isMan) exitWith {};

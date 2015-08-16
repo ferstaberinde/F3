@@ -983,40 +983,28 @@ switch (_typeofUnit) do
 // ====================================================================================
 // If this is an ammobox, check medical component settings and if needed run converter script.
 
-
-//if (!_isMan) then
-//	{
-//	// Authentic Gameplay Modification
-//	if (f_var_medical == 2) exitWith
-//		{
-//			[_unit] execVM "f\medical\AGM_converter.sqf";
-//		};
-//	};
-
-// =====CASE===============================================================================
-
 if (!_isMan) then
 	{
-	
-		switch(f_var_medical == 2) do
+	switch(f_var_medical == 2) do
+		{
+		case 2:	// Authentic Gameplay Modification
 			{
-			case 2:	// Authentic Gameplay Modification
-				{
-					[_unit] execVM "f\medical\AGM_converter.sqf";
-				};
-				
-			case 3: // ACE 3 Basic Medic System
-				{
-					[_unit] execVM "f\medical\ACE_converter.sqf";
-				};
-				
-			case 4: // ACE 3 Advanced Medic System
-				{
-					[_unit] execVM "f\medical\ACEa_converter.sqf";
-				};
+				[_unit] execVM "f\medical\AGM_converter.sqf";
 			};
+			
+		case 3: // ACE 3 Basic Medic System
+			{
+				[_unit] execVM "f\medical\ACE_converter.sqf";
+			};
+			
+		case 4: // ACE 3 Advanced Medic System
+			{
+				[_unit] execVM "f\medical\ACEadvanced_converter.sqf";
+			};
+		};
 	};
 
+// ====================================================================================
 // If this isn't run on an infantry unit we can exit
 if !(_isMan) exitWith {};
 
