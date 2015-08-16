@@ -983,18 +983,6 @@ switch (_typeofUnit) do
 // ====================================================================================
 // If this is an ammobox, check medical component settings and if needed run converter script.
 
-
-//if (!_isMan) then
-//	{
-//	// Authentic Gameplay Modification
-//	if (f_var_medical == 2) exitWith
-//		{
-//			[_unit] execVM "f\medical\AGM_converter.sqf";
-//		};
-//	};
-
-// If this is an ammobox, check medical component settings and if needed run converter script.
-
 if (!_isMan) then
 	{
 	switch(f_var_medical == 2) do
