@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-3-0
+* Version: 3-3-1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -28,7 +28,7 @@
 ### F3 Version History ###
 
 Version | Date | Notes
-* 3-3-1 
+* 3-3-1 IR1 | 16 AUG 2015 | Internal Release- Various Changes and Updates (see change history)
 * 3-3-0     | 25 APR 2015 | Patch release - Various improvements (see change history).
 * 3-3-0 RC2 | 18 APR 2015 | Internal release - Various improvements (see change history). 
 * 3-3-0 RC1 | 08 APR 2015 | Internal release - Various improvements (see change history).
