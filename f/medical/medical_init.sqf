@@ -49,7 +49,7 @@ call
 		// If script is being run on a client
 		if (hasInterface) then
 		{
-			[] execVM "f\medical\ACEa_clientInit.sqf";
+			[] execVM "f\medical\ACEadvanced_clientInit.sqf";
 		};
 	};
 };
