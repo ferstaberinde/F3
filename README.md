@@ -210,6 +210,12 @@ The online manual can be found at:
 
 * http://www.ferstaberinde.com/f3/EN/ (English language version)
 
+For Bug-Reports or any Issues with this Version of the Original Framework distributed by ferstaberinde please contact
+
+[TF47]Raini[Misfit]
+
+@ http://www.taskforce47.de
+
 
 
 ## 08. INSTALLATION ##
