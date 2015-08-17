@@ -1,5 +1,4 @@
 // F3 - ACE 3 Basic Clientside Initialisation
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
 // Wait for gear assignation to take place
@@ -13,7 +12,7 @@ _typeOfUnit = player getVariable "f_var_assignGear";
 {player removeItems _x} forEach ["ACE_fieldDressing","ACE_morphine","ACE_epinephrine","ACE_bloodIV"];
 
 // Add basic items to all units
-player addItem "AGM_EarBuds";
+player addItem "ACE_EarPlugs";
 {player addItem "ACE_fieldDressing"} forEach [1,2,3,4,5,6,7,9,10];
 player addItem "ACE_morphine";
 
