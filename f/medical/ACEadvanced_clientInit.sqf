@@ -1,66 +1,55 @@
-// F3 - Medical Systems ACE3 Advanced Medical System Converter
+// F3 - ACE Advanced Clientside Initialisation
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// DECLARE VARIABLES AND FUNCTIONS
-private ["_unit","_itemCargoList","_cntFAK","_cntMediKit"];
+// Wait for gear assignation to take place
+waitUntil{(player getVariable ["f_var_assignGear_done", false])};
 
-// ====================================================================================
+private "_typeOfUnit";
 
-// DETECT CRATE TYPE
+_typeOfUnit = player getVariable "f_var_assignGear";
 
-_unit = _this select 0;
+// Remove pre-assigned medical items
+{player removeItems _x} forEach ["ACE_tourniquet","ACE_fieldDressing","ACE_morphine","ACE_epinephrine","ACE_packingBandage","ACE_salineIV_250"];
 
-// ====================================================================================
+// Add basic items to all units
+player addItem "ACE_EarPlugs";
+player addItem "ACE_personalAidKit";
+player addItem "ACE_tourniquet";
+{player addItem "ACE_fieldDressing"} forEach [1,2,3,4,5];
+{player addItem "ACE_fieldDressing"} forEach [1,2,3,4,5];
+{player addItem "ACE_morphine";} forEach [1,2];
+{player addItem "ACE_epinephrine";} forEach [1,2];
 
-// COUNT AMOUNT OF FAKS AND MEDIKITS
-
-_itemCargoList = itemCargo _unit;
-_cntFAK = {_x == "FirstAidKit"} count _itemCargoList;
-_cntMediKit = {_x == "MediKit"} count _itemCargoList;
-
-// ====================================================================================
-
-// REMOVE ALL VANILLA ITEMS
-
+if (_typeOfUnit == "m") then
 {
-	if (_x == "FirstAidKit" || {_x == "Medikit"}) then {
-		_itemCargoList = _itemCargoList - [_x];
-		};
-} forEach _itemCargoList;
 
-clearItemCargoGlobal _unit;
-
-{
-	_unit addItemCargoGlobal [_x,1];
-} forEach _itemCargoList;
-
-// ====================================================================================
-
-// ADD BACK ACE3 ITEMS FOR REMOVED VANILLA ITEMS
-
-_unit addItemCargoGlobal ["ACE_fieldDressing", (_cntFAK * 5)];
-
-if (_cntFAK <= 25 && _cntMediKit == 0 ) then // Fireteam sized cargo
-	{
-		_unit addItemCargoGlobal ["ACE_fieldDressing", 10];
-		_unit addItemCargoGlobal ["ACE_morphine", 5];
+	// BACKPACK: LIGHT
+	if (f_param_backpacks <= 1) then {
+		(unitBackpack player) addItemCargoGlobal ["ACE_fieldDressing",  15];
+		(unitBackpack player) addItemCargoGlobal ["ACE_elasticBandage",  15];
+		(unitBackpack player) addItemCargoGlobal ["ACE_packingBandage",  5];
+		(unitBackpack player) addItemCargoGlobal ["ACE_quikclot",  15];
+		(unitBackpack player) addItemCargoGlobal ["ACE_tourniquet ",  3];
+		(unitBackpack player) addItemCargoGlobal ["ACE_morphine", 5];
+		(unitBackpack player) addItemCargoGlobal ["ACE_epinephrine",   5];
+		(unitBackpack player) addItemCargoGlobal ["ACE_atropine",   8];
+		(unitBackpack player) addItemCargoGlobal ["ACE_salineIV_250", 4];
 	};
-
-if (_cntFAK <= 25 && {_cntMediKit == 1}) then // Squad sized cargo
-	{
-		// Add items for 1 medic
-		_unit addItemCargoGlobal ["ACE_fieldDressing", 15];
-		_unit addItemCargoGlobal ["ACE_morphine", 10];
-		_unit addItemCargoGlobal ["ACE_epinephrine", 10];
-		_unit addItemCargoGlobal ["ACE_bloodIV", 3];
+	// BACKPACK: HEAVY
+	if (f_param_backpacks == 2) then {
+		(unitBackpack player) addItemCargoGlobal ["ACE_fieldDressing",  15];
+		(unitBackpack player) addItemCargoGlobal ["ACE_elasticBandage",  15];
+		(unitBackpack player) addItemCargoGlobal ["ACE_packingBandage",  5];
+		(unitBackpack player) addItemCargoGlobal ["ACE_quikclot",  15];
+		(unitBackpack player) addItemCargoGlobal ["ACE_tourniquet ",  5];
+		(unitBackpack player) addItemCargoGlobal ["ACE_morphine", 8];
+		(unitBackpack player) addItemCargoGlobal ["ACE_epinephrine",   8];
+		(unitBackpack player) addItemCargoGlobal ["ACE_atropine",   12];
+		(unitBackpack player) addItemCargoGlobal ["ACE_salineIV_500", 6];
+		(unitBackpack player) addItemCargoGlobal ["ACE_surgicalKit", 4];
+		(unitBackpack player) addItemCargoGlobal ["ACE_personalAidKit", 3];
 	};
+};
 
-if (_cntFAK > 50 || {_cntMediKit > 1}) then // Platoon sized Cargo
-	{
-		// Add items for 4 medics
-		_unit addItemCargoGlobal ["ACE_fieldDressing", 45];
-		_unit addItemCargoGlobal ["ACE_morphine", 30];
-		_unit addItemCargoGlobal ["ACE_epinephrine", 30];
-		_unit addItemCargoGlobal ["ACE_bloodIV", 9];
-	};
+
