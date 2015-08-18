@@ -988,7 +988,7 @@ switch (_typeofUnit) do
 
 if (!_isMan) then
 	{
-	switch(f_var_medical == 2) do
+	switch(f_var_medical) do
 		{
 		case 2:	// Authentic Gameplay Modification
 			{
