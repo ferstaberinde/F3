@@ -991,12 +991,12 @@ if (!_isMan) then
 			
 		case 3: // ACE 3 Basic Medic System
 			{
-				[_unit] execVM "f\medical\ACE_converter.sqf";
+				[_unit] execVM "f\medical\ACEbasic_converter.sqf";
 			};
 			
 		case 4: // ACE 3 Advanced Medic System
 			{
-				[_unit] execVM "f\medical\ACEa_converter.sqf";
+				[_unit] execVM "f\medical\ACEadvanced_converter.sqf";
 			};
 		};
 	};
