@@ -973,7 +973,11 @@ switch (_typeofUnit) do
 
 if (!_isMan) then
 	{
+<<<<<<< HEAD
+	switch(f_var_medical == 2) do
+=======
 	switch(f_var_medical) do
+>>>>>>> RayGab-patch-1
 		{
 		case 2:	// Authentic Gameplay Modification
 			{
@@ -982,7 +986,11 @@ if (!_isMan) then
 			
 		case 3: // ACE 3 Basic Medic System
 			{
+<<<<<<< HEAD
+				[_unit] execVM "f\medical\ACE_converter.sqf";
+=======
 				[_unit] execVM "f\medical\ACEbasic_converter.sqf";
+>>>>>>> RayGab-patch-1
 			};
 			
 		case 4: // ACE 3 Advanced Medic System
@@ -992,7 +1000,7 @@ if (!_isMan) then
 		};
 	};
 
-// ====================================================================================
+// =====================================================================================
 
 // If this isn't run on an infantry unit we can exit
 if !(_isMan) exitWith {};

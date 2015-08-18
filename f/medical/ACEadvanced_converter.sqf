@@ -83,3 +83,29 @@ if (_cntFAK > 50 || {_cntMediKit > 1}) then // Platoon sized Cargo
 		_unit addItemCargoGlobal ["ACE_plasmaIV", 3];
 		_unit addItemCargoGlobal ["ACE_BloodIV", 3];
 	};
+<<<<<<< HEAD
+// ACE Classnames
+/* 
+ACE_atropine 		Atropin autoinjector 				ACE_ItemCore
+ACE_fieldDressing 	Bandage (Basic) 					ACE_ItemCore
+ACE_elasticBandage 	Bandage (Elastic) 					ACE_ItemCore
+ACE_quikclot 		Basic Field Dressing (QuikClot) 	ACE_ItemCore
+ACE_bloodIV 		Blood IV (1000ml) 					ACE_ItemCore
+ACE_bloodIV_500 	Blood IV (500ml) 					ACE_ItemCore
+ACE_bloodIV_250 	Blood IV (250ml) 					ACE_ItemCore
+ACE_bodyBag 		Bodybag 							ACE_ItemCore
+ACE_bodyBagObject 	Bodybag (packed) 	
+ACE_epinephrine 	Epinephrine autoinjector 			ACE_ItemCore
+ACE_morphine 		Morphine autoinjector 				ACE_ItemCore
+ACE_packingBandage 	Packing Bandage 					ACE_ItemCore
+ACE_personalAidKit 	Personal Aid Kit 					ACE_ItemCore
+ACE_plasmaIV 		Plasma IV (1000ml) 					ACE_ItemCore
+ACE_plasmaIV_500 	Plasma IV (500ml) 					ACE_ItemCore
+ACE_plasmaIV_250 	Plasma IV (250ml) 					ACE_ItemCore
+ACE_salineIV 		Saline IV (1000ml) 					ACE_ItemCore
+ACE_salineIV_500 	Saline IV (500ml) 					ACE_ItemCore
+ACE_salineIV_250 	Saline IV (250ml) 					ACE_ItemCore
+ACE_surgicalKit 	Surgical Kit 						ACE_ItemCore
+ACE_tourniquet 		Tourniquet (CAT) 					ACE_ItemCore/*
+=======
+>>>>>>> RayGab-patch-1

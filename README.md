@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-3-0
+* Version: 3-3-1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -28,7 +28,7 @@
 ### F3 Version History ###
 
 Version | Date | Notes
-
+* 3-3-1 IR1 | 16 AUG 2015 | Internal Release- Various Changes and Updates (see change history)
 * 3-3-0     | 25 APR 2015 | Patch release - Various improvements (see change history).
 * 3-3-0 RC2 | 18 APR 2015 | Internal release - Various improvements (see change history). 
 * 3-3-0 RC1 | 08 APR 2015 | Internal release - Various improvements (see change history).
@@ -146,7 +146,7 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers | RayGab
 * Documentation: Fer | Wolfenswan | Dogface | Cam | Head | cptnnick | Snippers
 * Producers: Fer | Wolfenswan
 * Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Zerith | Bear | JonBons | Poulern | Chairborn | captainblaffer
@@ -210,6 +210,12 @@ The online manual can be found at:
 
 * http://www.ferstaberinde.com/f3/EN/ (English language version)
 
+For Bug-Reports or any Issues with this Version of the Original Framework distributed by ferstaberinde please contact
+
+[TF47]Raini[Misfit]
+
+@ http://www.taskforce47.de
+
 
 
 ## 08. INSTALLATION ##
@@ -236,6 +242,12 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-3-1 TF47 Internal Release| 16 AUG 2015
+* Added new AssignGear Scripts
+  * New : RHS Loudouts for BLUEFOR and OPFOR Units added
+* Updated ModCompability Feature for ACE3 Medical System
+  * New choosing Options for either ACE Basic or Advanced Medical System
 
 3-3-0 | 25 APR 2015
 
