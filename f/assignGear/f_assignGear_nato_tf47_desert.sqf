@@ -985,7 +985,7 @@ switch (_typeofUnit) do
 
 if (!_isMan) then
 	{
-	switch(f_var_medical == 2) do
+	switch(f_var_medical) do
 		{
 		case 2:	// Authentic Gameplay Modification
 			{
@@ -994,7 +994,7 @@ if (!_isMan) then
 			
 		case 3: // ACE 3 Basic Medic System
 			{
-				[_unit] execVM "f\medical\ACE_converter.sqf";
+				[_unit] execVM "f\medical\ACEbasic_converter.sqf";
 			};
 			
 		case 4: // ACE 3 Advanced Medic System
