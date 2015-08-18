@@ -83,6 +83,7 @@ if (_cntFAK > 50 || {_cntMediKit > 1}) then // Platoon sized Cargo
 		_unit addItemCargoGlobal ["ACE_plasmaIV", 3];
 		_unit addItemCargoGlobal ["ACE_BloodIV", 3];
 	};
+<<<<<<< HEAD
 // ACE Classnames
 /* 
 ACE_atropine 		Atropin autoinjector 				ACE_ItemCore
@@ -106,3 +107,5 @@ ACE_salineIV_500 	Saline IV (500ml) 					ACE_ItemCore
 ACE_salineIV_250 	Saline IV (250ml) 					ACE_ItemCore
 ACE_surgicalKit 	Surgical Kit 						ACE_ItemCore
 ACE_tourniquet 		Tourniquet (CAT) 					ACE_ItemCore/*
+=======
+>>>>>>> RayGab-patch-1

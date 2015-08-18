@@ -39,7 +39,11 @@ call
 		// If script is being run on a client
 		if (hasInterface) then
 		{
+<<<<<<< HEAD
 			[] execVM "f\medical\ACE_clientInit.sqf";
+=======
+			[] execVM "f\medical\ACEbasic_clientInit.sqf";
+>>>>>>> RayGab-patch-1
 		};
 	};
 	// Advanced Combat Environment 3 Advanced

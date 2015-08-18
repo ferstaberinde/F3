@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // F3 - ACE Advanced Clientside Initialisation
+=======
+// F3 - AGM Clientside Initialisation
+>>>>>>> RayGab-patch-1
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
