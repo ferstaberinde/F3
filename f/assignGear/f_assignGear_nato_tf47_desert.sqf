@@ -66,7 +66,7 @@ _attach2 = "rhsusf_acc_SF3P556";	// Flashlight
 _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
-_scope1 = "";								// Ironsight
+_scope1 = "";						// Ironsight
 _scope2 = "rhsusf_acc_eotech_552";			// Holosight
 _scope3 = "rhsusf_acc_ACOG2_USMC";			// MRCO Scope - 1x - 6x
 _scope4 = "optic_SOS";					// SOS Scope - 18x - 75x
@@ -263,15 +263,15 @@ _diverGlasses = ["G_Diving"];
 
 // Pilot
 _pilotUniform = ["U_B_HeliPilotCoveralls"];
-_pilotHelmet = ["H_PilotHelmetHeli_B"];
+_pilotHelmet = ["H_PilotHelmetHeli_O"];
 _pilotRig = ["V_TacVest_blk"];
-_pilotGlasses = [];
+_pilotGlasses = ["rhs_googles_clear"];
 
 // Crewman
 _crewUniform = ["rhs_uniform_FROG01_d"];
 _crewHelmet = ["H_HelmetCrew_B"];
-_crewRig = ["V_TacVest_blk"];
-_crewGlasses = [];
+_crewRig = ["rhsusf_spc"];
+_crewGlasses = ["rhs_googles_clear"];
 
 // Ghillie
 _ghillieUniform = ["U_B_GhillieSuit"]; //DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
@@ -320,9 +320,9 @@ if (_isMan) then {
 	// Add items universal to all units of this faction
 
 	_unit linkItem _nvg;			// Add and equip the faction's nvg
-	_unit addItem _firstaid;		// Add a single first aid kit (FAK)
+	_unit addItemToUniform _firstaid;	// Add a single first aid kit (FAK)
 	_unit linkItem "ItemMap";		// Add and equip the map
-	_unit linkItem "ItemCompass";	// Add and equip a compass
+	_unit linkItem "ItemCompass";		// Add and equip a compass
 	_unit linkItem "ItemRadio";		// Add and equip A3's default radio
 	_unit linkItem "ItemWatch";		// Add and equip a watch
 	//_unit linkItem "ItemGPS"; 	// Add and equip a GPS
@@ -341,7 +341,7 @@ _backpack = {
 	if (count _this > 1) then {_loadout = _this select 1};
 	switch (_typeofBackPack) do
 	{
-		#include "f_assignGear_nato_b.sqf";
+		#include "f_assignGear_nato_tf47_b.sqf";
 	};
 };
 
