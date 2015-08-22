@@ -32,4 +32,24 @@ call
 			[] execVM "f\medical\AGM_clientInit.sqf";
 		};
 	};
+	// Advanced Combat Environment 3 Basic
+	// * Added by Raini
+	if (f_var_medical == 3) exitWith
+	{
+		// If script is being run on a client
+		if (hasInterface) then
+		{
+			[] execVM "f\medical\ACEbasic_clientInit.sqf";
+		};
+	};
+	// Advanced Combat Environment 3 Advanced
+	// * Added by Raini
+	if (f_var_medical == 4) exitWith
+	{
+		// If script is being run on a client
+		if (hasInterface) then
+		{
+			[] execVM "f\medical\ACEadvanced_clientInit.sqf";
+		};
+	};
 };
