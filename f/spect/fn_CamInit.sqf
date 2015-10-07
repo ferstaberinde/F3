@@ -26,7 +26,7 @@ if(!isnil "BIS_fnc_feedback_allowPP") then
 if(f_cam_isJIP) then
 {
   ["F_ScreenSetup",false] call BIS_fnc_blackOut;
-  systemChat "Initilizing Spectator Script";
+  systemChat "Initializing Spectator Script";
   uiSleep 3;
   ["F_ScreenSetup"] call BIS_fnc_blackIn;
 };
