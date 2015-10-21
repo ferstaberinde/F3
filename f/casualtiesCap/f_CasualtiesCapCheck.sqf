@@ -18,7 +18,7 @@ sleep 0.1;
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_grps","_pc","_end","_started","_remaining","_grpstemp","_alive","_faction","_temp_grp","_temp_grp2","_type","_onlyPlayers","_grpsno","_counter"];
+private ["_grps","_started","_remaining","_alive","_temp_grp","_temp_grp2","_type","_grpsno","_counter"];
 
 // ====================================================================================
 
@@ -28,18 +28,16 @@ private ["_grps","_pc","_end","_started","_remaining","_grpstemp","_alive","_fac
 // 0: = Side (e.g. BLUFOR), or group name(s) as string array (e.g. ["mrGroup1","myGroup2"])
 // 1: = What % of units must be dead before the ending is triggered
 // 2: = What ending will be executed. Can also be code.
-
-_grpstemp = _this select 0; // either SIDE or array with group strings
-_pc = _this select 1;
-_end = _this select 2;
-
 // SET OPTIONAL VARIABLES
 // The last two variables are optional, and may not be passed to the script.
 // 3: = If only groups with a playable leader slot will be included (default is true)
 // 4: = What faction(s) to filter for if the first variable is a side  (e.g. ["blu_f"])
 
-_onlyPlayers = if (count _this > 3) then {_this select 3} else {true};
-_faction = if (count _this > 4) then {_this select 4} else {[]};
+params["_grpstemp",
+       "_pc",
+       "_end",
+       ["_onlyPlayers",true],
+       ["_faction",[]]];
 
 // ====================================================================================
 
@@ -56,14 +54,14 @@ if(typeName _grpstemp == "SIDE") then // if the variable is any of the side vari
 		{
 			if((side _x == _grpstemp) && (leader _x in playableUnits)) then
 			{
-				_grps set [count _grps,_x]; // Add group to array
+				_grps pushBack _x; // Add group to array
 			};
 		}
 		else
 		{
 			if (side _x == _grpstemp) then
 			{
-				_grps set [count _grps,_x]; // Add group to array
+				_grps pushBack _x; // Add group to array
 			};
 		};
 
@@ -85,12 +83,12 @@ else
 {
 	sleep 1;
 	{
-		_Tgrp = call compile format ["%1",_x];
-		if(!isnil "_Tgrp") then
+        _Tgrp = missionNamespace getVariable[_x,grpNull];
+		if(!isNull _Tgrp) then
 		{
-			_grps set [count _grps,_Tgrp];
+			_grps pushBack _Tgrp;
 		};
-	} foreach _grpstemp;
+	} forEach _grpstemp;
 };
 
 // ====================================================================================

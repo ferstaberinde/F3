@@ -23,8 +23,8 @@ if (!isDedicated && (isNull player)) then
 
 f_fnc_SetTeamValue =
 {
-	_unit = _this select 0;
-	_color = _this select 1;
+    params["_unit", "_color"];
+
 	_unit setvariable ["assignedTeam",_color];
 };
 

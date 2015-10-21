@@ -4,24 +4,19 @@
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_grp","_mkrType","_mkrText","_mkrColor","_mkrName","_mkr","_grpName"];
+private ["_grp","_mkrName","_mkr"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-call compile format ["
-if(!isnil '%1') then
-{
-	_grp = %1;
-};
-",_this select 0];
 
-_grpName = _this select 0;
-_mkrType = _this select 1;
-_mkrText = _this select 2;
-_mkrColor = _this select 3;
+params["_grpName","_mkrType","_mkrText","_mkrColor"];
+
+_grp = missionNamespace getVariable [_grpName,grpNull];
+
+
 _mkrName = format ["mkr_%1",_grpName];
 
 // ====================================================================================
@@ -29,20 +24,9 @@ _mkrName = format ["mkr_%1",_grpName];
 // WAIT FOR GROUP TO EXIST IN-MISSION
 // We wait for the group to have members before creating the marker.
 
-if (isNil "_grp") then
+if (isNull _grp) then
 {
-	call compile format ["
-		waitUntil {
-		sleep 3;
-		if(!isnil '%1') then
-		{
-			count units %1 > 0
-		};
-		};
-		_grp = %1;
-
-	",_grpName];
-
+    waitUntil { sleep 3; _grp = missionNamespace getVariable [_grpName,grpNull]; count (units _grp) > 0 };
 };
 
 // ====================================================================================
@@ -50,7 +34,7 @@ if (isNil "_grp") then
 // EXIT FOR EMPTY GROUPS (PART I)
 // If the group is empty, this script exits.
 
-if (isnil "_grp") exitWith {};
+if (isNull _grp) exitWith {};
 
 // ====================================================================================
 
