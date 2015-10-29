@@ -41,7 +41,6 @@ while {alive _unit} do
 		{
 			_unit playMove "";
 			_unit switchmove ([_unit] call f_fnc_GetAnimation);
-			systemchat "wounded";
 		};
     }
 	else
