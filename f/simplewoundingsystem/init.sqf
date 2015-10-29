@@ -65,7 +65,7 @@ F_UncCC = ppEffectCreate ["ColorCorrections", 1603];
 F_UncRadialBlur = ppEffectCreate ["RadialBlur", 280];
 F_UncBlur = ppEffectCreate ["DynamicBlur", 180];
 F_UncToggle = false;
-F_damageValue = 1.1;
+f_damage_effect = 1.1;
 
 // Eventhandlers for the player.
 _unit addEventHandler ["killed", {_this call f_fnc_OnDeath}];
