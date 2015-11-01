@@ -11,5 +11,6 @@ class woundingsystem
 	class OnHeal {};
 	class OnDamage{};
 	class SetBleeding{};
+	class GetAnimation{};
 };
 

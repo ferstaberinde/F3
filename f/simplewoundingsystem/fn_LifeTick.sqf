@@ -37,6 +37,11 @@ while {alive _unit} do
     	_unit setVariable ["f_wound_blood",_blood - 0.6 max 0];
     	if(damage _unit < 0.251) then { _unit setDamage 0.251};
     	if(getBleedingRemaining _unit <= 0) then {    	_unit setBleedingRemaining 10;};
+		if(_downed && {animationstate _unit != [_unit] call f_fnc_GetAnimation)} && !{(["heal",animationstate _unit] call bis_fnc_inString)) then 
+		{
+			_unit playMove "";
+			_unit switchmove ([_unit] call f_fnc_GetAnimation);
+		};
     }
 	else
 	{

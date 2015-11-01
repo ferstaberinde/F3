@@ -30,20 +30,13 @@ if(_bool && alive _unit) then
 
 	// Just a safety switch to ensure that the unit is wounded enough to have the firstaid option
 	if(damage _unit < 0.251) then { _unit setDamage 0.251};
-
-
+	_unit playMove "";
+	_unit switchmove ([_unit] call f_fnc_GetAnimation);
 
 	// if _unit is not in a vehicle, play this animation otherwise fetch the dead animations from the vehicles.
-	if(vehicle _unit == _unit) then
+	if(vehicle _unit != _unit) then
 	{
-		_unit switchmove "acts_InjuredLookingRifle02";
-	}
-	else
-	{
-		_anim = getArray (configfile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "interpolateTo");
-		_unit switchmove (_anim select 0);
-		_veh = vehicle _unit;
-		_veh addAction  ["Pull out wounded", {[_this, "f_fnc_EjectWounded", true] spawn BIS_fnc_MP;}, nil, 5, false, true, "", "_target distance _this < 5 && [_target] call f_fnc_HasWounded"];
+		(vehicle _unit) addAction  ["Pull out wounded", {[_this, "f_fnc_EjectWounded", true] spawn BIS_fnc_MP;}, nil, 5, false, true, "", "_target distance _this < 5 && [_target] call f_fnc_HasWounded"];
 	};
 }
 else
