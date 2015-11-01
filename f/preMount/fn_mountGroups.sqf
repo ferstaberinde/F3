@@ -9,17 +9,22 @@ if (!isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_objects","_crew","_vehs","_grps","_units"];
+private ["_objects","_units"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using the arguments passed to the script, we first define some local variables.
 
-_vehs = _this select 0;												// Array of vehicles    (objects)
-_grps = _this select 1;												// Array of group names (as strings)
-_crew = if (count _this > 2) then {_this select 2} else {true};		// Mount into crew positions? (optional - default:true)
-_fill = if (count _this > 3) then {_this select 3} else {false};	// Ignore fireteam cohesion in favor of filling vehicles? (optional - default:false)
+// 0:Array of vehicles    (objects)
+// 1:Array of group names (as strings)
+// 2:Mount into crew positions? (optional - default:true)
+// 3:Ignore fireteam cohesion in favor of filling vehicles? (optional - default:false)
+
+params["_vehs",
+       "_grps",
+       ["_crew",true],
+       ["_fill",false]];
 
 // ====================================================================================
 
