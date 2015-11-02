@@ -32,6 +32,7 @@ if (f_var_JIP_GearMenu) then {
 
 	_loadout = (player getVariable "f_var_JIP_loadout");
 	[_loadout,player] call f_fnc_assignGear;
+	[] execVM "f\radios\radio_init.sqf"; 
 };
 
 // ====================================================================================
