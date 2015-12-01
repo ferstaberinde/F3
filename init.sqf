@@ -7,10 +7,10 @@ enableSaving [false, false];
 
 // ====================================================================================
 
-// F3 - Mute Orders and Reports
+// F3 - Mute Player
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-enableSentences false;
+player setSpeaker "NoVoice";
 
 // ====================================================================================
 
