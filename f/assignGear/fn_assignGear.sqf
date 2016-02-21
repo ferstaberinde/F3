@@ -60,7 +60,7 @@ _unit setVariable ["f_var_assignGear_done",false,true];
 // ====================================================================================
 
 // DEBUG
-if (f_var_debugMode == 1) then
+if (f_param_debugMode == 1) then
 {
 	_unit sideChat format ["DEBUG (assignGear.sqf): unit faction: %1",_faction];
 };
@@ -127,7 +127,7 @@ _unit setVariable ["f_var_assignGear_done",true,true];
 if (isNil "_carbine") then { //_carbine should exist unless no faction has been called
 	player globalchat format ["DEBUG (assignGear.sqf): Faction %1 is not defined.",_faction];
 } else {
- 	if (f_var_debugMode == 1) then	{
+ 	if (f_param_debugMode == 1) then	{
 		player sideChat format ["DEBUG (assignGear.sqf): Gear for %1: %1 slot selected.",_unit,_faction,_typeofUnit];
 	};
 };

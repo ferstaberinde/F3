@@ -14,7 +14,6 @@
 private ["_grp","_colorTeam"];
 _grp = _this select 0;
 _unit = _this select 1;
-waitUntil {!isnil "f_var_debugMode"};
 
 // ====================================================================================
 
@@ -32,7 +31,7 @@ while{_unit == (leader _grp) && alive _unit} do
 			if((_x getvariable ["assignedTeam","ColorWhite"]) != _colorTeam) then
 			{
 				// debug messages
-				if (f_var_debugMode == 1) then {player sidechat format["%1 ---- %2 by %3",(_x getvariable ["assignedTeam","ColorWhite"])	,_colorTeam,_unit];};
+				if (f_param_debugMode == 1) then {player sidechat format["%1 ---- %2 by %3",(_x getvariable ["assignedTeam","ColorWhite"])	,_colorTeam,_unit];};
 
 				// sends a call to each unit in the group to use the local with the [x_colorTeam] as args.
 				[[_x,_colorTeam] , "f_fnc_SetTeamValue", _grp, false] spawn BIS_fnc_MP;
