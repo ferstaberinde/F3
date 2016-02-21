@@ -22,7 +22,7 @@ _unitToCheck = _fromEH select 2;
 _warningMsg = localize "STR_f_UnauthorisedCrew_Warning";
 
 // DEBUG
-if (f_var_debugMode == 1) then
+if (f_param_debugMode == 1) then
 {
 	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _fromEH = %1",_fromEH];
 	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _vehicle = %1",_vehicle];

@@ -54,7 +54,7 @@ while {!isNull player} do {
 	setViewDistance _vd;
 
 		// DEBUG
-		if (f_var_debugMode == 1) then
+		if (f_param_debugMode == 1) then
 		{
 			player sideChat format ["DEBUG (f\setViewDistance\f_addSetViewDistanceEHs.sqf): Viewdistance set to: = %1",_vd];
 		};
