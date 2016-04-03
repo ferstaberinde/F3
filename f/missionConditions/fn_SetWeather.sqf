@@ -12,6 +12,10 @@ private ["_weather","_missionOvercast","_MissionRain","_MissionRainbow","_Missio
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
 _weather = _this select 0;
+
+// Exit when using mission settings
+if ( _weather == 9 ) exitWith {};
+
 _transition = if (count _this > 1) then {_this select 1} else {false};
 
 _MissionOvercast = 0;

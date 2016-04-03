@@ -6,7 +6,7 @@
 // The boolean indicates whether players are allowed to join groups on different side.
 
 // Only run this for players
-if (isDedicated) exitWith{};
+if (!hasInterface) exitWith {};
 
 // ====================================================================================
 

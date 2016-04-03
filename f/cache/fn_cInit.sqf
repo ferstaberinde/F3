@@ -46,7 +46,7 @@ f_var_cacheRun = true;
 [_range] spawn f_fnc_cTracker;
 
 // Start the debug tracker
-if (f_var_debugMode == 1) then {
+if (f_param_debugMode == 1) then {
 	player globalchat format ["f_fnc_cInit DBG: Starting to track %1 groups, %2 range, %3 sleep",count allGroups,_range,f_var_cacheSleep];
 
 	[] spawn {
