@@ -51,9 +51,7 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"A3_Modules_F_Supports",
 	"A3_Characters_F",
-	"asr_ai3_main",
 	"A3_Static_F_Mortar_01",
-	"cba_xeh",
 	"A3_Data_F_Curator_Virtual"
 };
 class AddonsMetaData
