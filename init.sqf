@@ -121,7 +121,6 @@ f_var_doNotRemoveBodies = [];
 // F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-
 f_var_civAI = independent; // Optional: The civilian AI will use this side's settings
 [] execVM "f\setAISKill\f_setAISkill.sqf";
 
