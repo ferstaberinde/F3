@@ -13,6 +13,7 @@ if(isNull _unit ) then {_unit = cameraOn;f_cam_isJIP=true;};
 if (typeof _unit != "seagull" && !_forced || !hasInterface) ExitWith {};
 // disable this to instantly switch to the spectator script.
 waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit) || f_cam_isJIP || _forced };
+hintsilent "";
 
 
 // ====================================================================================
@@ -26,7 +27,7 @@ if(!isnil "BIS_fnc_feedback_allowPP") then
 if(f_cam_isJIP) then
 {
   ["F_ScreenSetup",false] call BIS_fnc_blackOut;
-  systemChat "Initilizing Spectator Script";
+  systemChat "Initializing Spectator Script";
   uiSleep 3;
   ["F_ScreenSetup"] call BIS_fnc_blackIn;
 };
