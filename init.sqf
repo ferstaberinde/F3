@@ -10,7 +10,7 @@ enableSaving [false, false];
 // F3 - Mute Player
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-player setSpeaker "NoVoice";
+{_x setSpeaker "NoVoice"} forEach playableUnits;
 
 // ====================================================================================
 

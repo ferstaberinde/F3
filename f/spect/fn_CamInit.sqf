@@ -3,6 +3,7 @@
 // ====================================================================================
 // params
 _this spawn {
+hintsilent "";
 _unit = [_this, 0, player,[objNull]] call BIS_fnc_param;
 _oldUnit = [_this, 1, objNull,[objNull]] call BIS_fnc_param;
 _forced = [_this, 4, false,[false]] call BIS_fnc_param;
