@@ -21,8 +21,8 @@ private _leaders = ["_FTL"];
 
 // Set suffixes for each color
 private _white = [];
-private _red = ["_AR","_AAR"];
-private _blue = ["_AT","_FTL"];
+private _red = ["_AT","_R1","_R2"];
+private _blue = ["_AR1","_AR2","_FTL"];
 private _yellow = [];
 private _green = [];
 
@@ -50,7 +50,7 @@ if(!_isFireteam) exitWith {};
 {
 	_unit = _x;
 	_unitStr = str _x;
-	
+
 	{
 		if ((_unitStr find _x) != -1) then {
 			_unit assignTeam "RED";
