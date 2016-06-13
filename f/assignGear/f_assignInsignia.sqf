@@ -2,12 +2,11 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-private ["_group","_badge","_groupBadges","_roleBadge","_unit","_typeofUnit"];
+private ["_group","","","","",""];
 
-_badge = ""; 
-_unit = _this select 0;
-_typeofUnit = _this select 1;
-_faction = toLower (faction _unit);
+private _badge = ""; 
+params ["_unit", "_typeOfUnit"];
+private _faction = toLower (faction _unit);
 
 // Note all badges must be defined in description.ext or be included your modpack.
 // See: https://community.bistudio.com/wiki/Arma_3_Unit_Insignia
@@ -20,7 +19,7 @@ _faction = toLower (faction _unit);
 
 // Assign Insignia based on type of the unit.
 
-_roleBadge = switch (_typeofUnit) do
+private _roleBadge = switch (_typeofUnit) do
 {
 
 // INSIGNIA: MEDIC
@@ -42,7 +41,7 @@ _roleBadge = switch (_typeofUnit) do
 // This array stores a list of groups and the corresponding badge they will receive.
 // Bin by faction (lowers numbers of groups for each unit to be grouped by too!).
 
-_groupBadges = [];
+private _groupBadges = [];
 
 switch (_faction) do
 {	
@@ -163,7 +162,7 @@ switch (_faction) do
 
 // Loop through the groups and match badges to the group _unit belongs to. Due to the groups being variables this requires calling formatted at runtime code.
 
-_group = (group _unit);
+private _group = (group _unit);
 
 
 {
@@ -181,18 +180,17 @@ if (_roleBadge != "") then {
 // Apply the insignia.
 if (_badge != "") then {
 	// spawn to avoid waitUntil bug.
-	private["_index","_texture","_cfgTexture"];
 
 	// Wait till they have the proper uniform assigned.
 	waitUntil{_unit getVariable ["f_var_assignGear_done",false]};
 	waitUntil{(uniform _unit) != ""};
 
 	// Replicate behaviour of setInsignia
-	_cfgTexture = [["CfgUnitInsignia",_badge],configfile] call bis_fnc_loadclass;
+	private _cfgTexture = [["CfgUnitInsignia",_badge],configfile] call bis_fnc_loadclass;
 	if (_cfgTexture == configfile) exitwith {["'%1' not found in CfgUnitInsignia",_badge] call bis_fnc_error; false};
-	_texture = gettext (_cfgTexture >> "texture");
+	private _texture = gettext (_cfgTexture >> "texture");
 	
-	_index = -1;
+	private _index = -1;
 	{
 		if (_x == "insignia") exitwith {_index = _foreachindex;};
 	} foreach getarray (configfile >> "CfgVehicles" >> gettext (configfile >> "CfgWeapons" >> uniform _unit >> "ItemInfo" >> "uniformClass") >> "hiddenSelections");

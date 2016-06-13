@@ -4,41 +4,27 @@
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_unt","_mkrType","_mkrText","_mkrColor","_mkrName","_mkr","_untName"];
+private ["_mkr"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-call compile format ["
-if(!isnil '%1') then
-{
-	_unt = %1;
-};
-",_this select 0];
 
-_untName = _this select 0;
-_mkrType = _this select 1;
-_mkrText = _this select 2;
-_mkrColor = _this select 3;
-_mkrName = format ["mkr_%1",_untName];
+
+params["_untName", "_mkrType", "_mkrText", "_mkrColor"];
+private _mkrName = format ["mkr_%1",_untName];
+private _unt = missionNamespace getVariable [_untName, objNull];
 
 // ====================================================================================
 
 // WAIT FOR UNIT TO EXIST IN-MISSION
 // We wait for the unit to exist before creating the marker.
 
-if (isNil "_unt") then
+if (isNull _unt) then
 {
-	call compile format ["
-		waitUntil {
-		sleep 3;
-		!isnil '%1'
-		};
-		_unt = %1;
-
-	",_untName];
+	waitUntil { sleep 3; _unt = missionNamespace getVariable [_untName, objNull]; !(isNull _unt) };
 };
 
 // ====================================================================================
@@ -101,14 +87,7 @@ while {alive _unt} do
 sleep (getNumber (missionconfigfile >> "RespawnDelay")) + 3;
 
 // Re-compile the unit variable using the initially passed string
-call compile format ["
-		waitUntil {
-		sleep 0.1;
-		!isnil '%1'
-		};
-		_unt = %1;
-
-	",_untName];
+waitUntil { sleep 0.1; _unt = missionNamespace getVariable [_untName,objNull]; !(isNull _unt) };
 
 // Check again if the unit is alive, if yes restart the marker function
 if (alive _unt) exitWith {

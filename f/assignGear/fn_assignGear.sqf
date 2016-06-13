@@ -4,7 +4,6 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_faction","_typeofUnit","_unit"];
 
 // ====================================================================================
 
@@ -12,14 +11,12 @@ private ["_faction","_typeofUnit","_unit"];
 // The following code detects what faction the unit's slot belongs to, and stores
 // it in the private variable _faction. It can also be passed as an optional parameter.
 
-_typeofUnit = toLower (_this select 0);
-_unit = _this select 1;
 
-_faction = toLower (faction _unit);
-if(count _this > 2) then
-{
-  _faction = toLower (_this select 2);
-};
+params["_typeofUnit","_unit"];
+private _faction = toLower (faction _unit);
+
+_typeofUnit = toLower _typeofUnit;
+_faction = toLower (param[2, (faction _unit)]);
 
 // ====================================================================================
 

@@ -1,12 +1,9 @@
 if(f_cam_mapMode == 0) exitWith {};
 disableSerialization;
-_fullmapWindow = _this select 0;
+params["_fullmapWindow"];
 _camera = ([] call f_cam_GetCurrentCam);
 _fullmapWindow drawIcon ["\A3\ui_f\data\GUI\Rsc\RscDisplayMissionEditor\iconCamera_ca.paa", [0,0,0,1],getpos _camera ,20,20,getDir _camera,"",0];
 {
-	_pos = getpos _x;
-	_x1 = _pos select 0;
-	_y = _pos select 1;
 	if(alive _x) then
 	{
 		_name = "";
