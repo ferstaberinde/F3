@@ -12,6 +12,10 @@ private ["_fog","_strength","_decay","_base"];
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
 _fog = _this select 0;
+
+// Exit when using mission settings
+if ( _fog == 4 ) exitWith {};
+
 _transition = if (count _this > 1) then {_this select 1} else {0};
 
 _strength = 0;	// Value for fog at base level

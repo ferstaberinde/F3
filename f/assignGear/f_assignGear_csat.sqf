@@ -989,7 +989,7 @@ switch (_typeofUnit) do
 if (!_isMan) then
 	{
 	// Authentic Gameplay Modification
-	if (f_var_medical == 2) exitWith
+	if (f_param_medical == 2) exitWith
 		{
 			[_unit] execVM "f\medical\AGM_converter.sqf";
 		};

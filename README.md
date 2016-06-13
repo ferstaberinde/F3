@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-3-0 RC2
+* Version: 3-3-0
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,7 +29,8 @@
 
 Version | Date | Notes
 
-* 3-3-0 RC2 | 16 APR 2015 | Internal release - Various improvements (see change history). 
+* 3-3-0     | 25 APR 2015 | Patch release - Various improvements (see change history).
+* 3-3-0 RC2 | 18 APR 2015 | Internal release - Various improvements (see change history). 
 * 3-3-0 RC1 | 08 APR 2015 | Internal release - Various improvements (see change history).
 * 3-2-2     | 20 FEB 2015 | Patch release - Various improvements (see change history).
 * 3-2-1     | 06 DEC 2014 | Patch release - Bug fix (see change history).
@@ -236,28 +237,16 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-3-0 RC2 | 16 APR 2015
+3-3-0 | 25 APR 2015
 
-* Updated F3 Spectator Script
- * Identified and fixed possible sFPS issue
- * Improved Freecam handling
- * Added mute key (P) for spectator
-* Updated Radio Systems Support
- * Hotfix for acre_api_fnc_isInitialized ignoring itemRadio
-
-3-3-0 RC1 | 08 APR 2015
-
-* Updated Folk ARPS Platoons component:
-  * Changed placement of platoons to better support smaller maps.
-  * Updated ranks of AAF CO, DC and SLs to match other factions.
-* Updated AI Caching component:
-  * Fixed: Uncaching would sometimes place group members too high.
 * Updated Admin Briefing component:
   * New: Allows control of safe start component.
-  * Restructured ZEUS options (less clutter).
-* Updated Safe Start component:
-  * New: Player vehicles can't be damaged until safe start is done.
-  * f_safety.sqf is now a function (f_fnc_safety).
+  * Restructured Zeus options (less clutter).
+* Updated Assign AI Gear component:
+  * New variable: _defaultclass (applied to unit if no corresponding class was found).
+  * Added designated marksman type.
+* Updated AI Caching component:
+  * Fixed: Uncaching would sometimes place group members too high.
 * Updated AI Skill Selector component:
   * Now exclusively server-side.
   * Re-adjusted skill levels: "high" is slightly easier, "low" more difficult.
@@ -265,26 +254,9 @@ Version | Date
   * No longer sets skill for "endurance" as it's not supported in A3.
   * Reduced random range to +/- 0.08.
   * Increased initial sleep to 2 seconds, removed unnecessary sleeps elsewhere.
-* Updated Name Tags component:
-  * Shows tag for unit under cursorTarget in 28m (modifiable), always shows tags for units within 10m (modifiable). Latter can be toggled off in briefing menu.
-  * Moved all related global variables from init.sqf into f_nametags.sqf
-  * Tweaked visuals (smaller default font, colors etc.).
-  * Name tags are now automatically activated if component is enabled.
-  * Improved tags for units in vehicles: recognizes non-specialist crew and pilots, only shows effective commander on distance to avoid clutter.
-* Updated Radio Systems Support component (ACRE2):
-  * Updated to the latest API (removing un-neccesary code).
-  * Adds support for the newer radios.
-  * Checks if players have enough free inventory space for radios and provides an action if not.
 * Updated Briefing Template component:
   * Removed scripted task examples (in-editor module feature preferable).
-  * Added briefing for dedicated ZEUS.
-* Updated Zeus Support component:
-  * Zeus assigned using f_fnc_zeusInit automatically applies AI Skill Selector values to created units if latter component is enabled.
-  * Streamlined Zeus Support in Admin Briefing component.
-  * New: Zeus synchronisation (f_fnc_zeusSyncCurators). Synchronize assigned units between curators and optionally set up permanent synchronization for units created later.
-* Updated Join Group Action component:
-  * Action appears/disappears with less "lag".
-  * No more action spam in certain situations (e.g. entering a vehicle).
+  * Added briefing for dedicated Zeus.
 * Updated F3 Folk ARPS Assign Gear component:
   * Changed primary weapon for CSAT "ar" to Zafir.
   * New gear type: "dm" (designated marksman) for all factions with corresponding kit.
@@ -292,11 +264,43 @@ Version | Date
   * "hatg" now uses mobile Titan launcher.
   * Equipped all "mmgg" with the new DLC MMGs. Old MMGs classnames are commented out in the assign gear file.
   * Changed CSAT vests: new medium is TacVest Khaki
-* Updated Assign AI Gear component:
-  * New variable: _defaultclass (applied to unit if no corresponding class was found).
-  * Added designated marksman type.
+* Updated F3 Folk ARPS Platoons component:
+  * Changed placement of platoons to better support smaller maps.
+  * Updated ranks of AAF CO, DC and SLs to match other factions.
+* Updated F3 Spectator Script component:
+  * Identified and fixed possible sFPS issue.
+  * Improved Freecam handling.
+  * Added mute key (P) for spectator.
+* Updated Join Group Action component:
+  * Action appears/disappears with less "lag".
+  * No more action spam in certain situations (e.g. entering a vehicle).
+* Updated Name Tags component:
+  * Shows tag for unit under cursorTarget in 28m (modifiable), always shows tags for units within 10m (modifiable). Latter can be toggled off in briefing menu.
+  * Moved all related global variables from init.sqf into f_nametags.sqf
+  * Tweaked visuals (smaller default font, colors etc.).
+  * Name tags are now automatically activated if component is enabled.
+  * Improved tags for units in vehicles: recognizes non-specialist crew and pilots, only shows effective commander on distance to avoid clutter.
 * Updated ORBAT Notes component:
   * Better distinction between crew roles.
+* Updated Radio Systems Support component (ACRE2):
+  * Updated to the latest API (removing un-neccesary code).
+  * Adds support for the newer radios.
+  * Checks if players have enough free inventory space for radios and provides an action if not.
+  * Hotfix for acre_api_fnc_isInitialized ignoring itemRadio.
+* Updated Safe Start component:
+  * New: Player vehicles can't be damaged until safe start is done.
+  * f_safety.sqf is now a function (f_fnc_safety).
+* Updated Zeus Support component:
+  * Zeus assigned using f_fnc_zeusInit automatically applies AI Skill Selector values to created units if latter component is enabled.
+  * Streamlined Zeus Support in Admin Briefing component.
+
+3-3-0 RC2 | 18 APR 2015
+
+* Please see change history for release v3-3-0.
+
+3-3-0 RC1 | 08 APR 2015
+
+* Please see change history for release v3-3-0.
 
 3-2-2 | 20 FEB 2015
 

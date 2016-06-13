@@ -9,5 +9,5 @@ private ["_grp"];
 
 _grp = missionNamespace getVariable[(_this select 0),grpNull];
 if(!isNull _grp) then {
-	_grp setGroupId [format ["%1",(_this select 1)],"GroupColor0"];
+	_grp setGroupId [(_this select 1),"GroupColor0"];
 };

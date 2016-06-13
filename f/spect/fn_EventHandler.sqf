@@ -191,7 +191,7 @@ case "LBListSelChanged_modes":
 case "KeyDown":
 {
     _key = _args select 1;
-    _handled = true;
+    _handled = false;
     if(!isNull (findDisplay 49)) exitWith {if(_key == 1) then {true}};
     switch (_key) do
     {
@@ -421,7 +421,7 @@ case "KeyUp":
 {
     if(!isNull (findDisplay 49)) exitWith {};
     _key = _args select 1;
-    _handled = true;
+    _handled = false;
     switch (_key) do
     {
         case 42:
