@@ -12,24 +12,6 @@ class Header
 
 // ============================================================================================
 
-// F3 - Loading Screen
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-onLoadName = "*** Insert mission name here. ***";
-onLoadMission = "Made with the F3 Mission Development Framework";
-author = "*** Insert mission author name here. ***";
-loadScreen = "loadLogo.jpg";
-overviewPicture = "overviewLogo.jpg";
-
-// ============================================================================================
-
-// F3 - Debug Console
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-enableDebugConsole = 1;
-
-// ============================================================================================
-
 // F3 - Respawn Settings
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
