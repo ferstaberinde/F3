@@ -88,14 +88,6 @@ class F // Defines the "owner"
 		class zeusAddAddons{};
 		class zeusAddObjects{};
 	};
-	class acre
-	{
-		file = "f\radios\acre";
-		class acre_removeRadios{};
-		class acre_addRadios{};
-		class acre_setRadioFrequencies{};
-		class acre_configureSpectatorChat{};
-	};
 	class tfr
 	{
 		file = "f\radios\tfr";
