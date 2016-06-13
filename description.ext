@@ -157,8 +157,8 @@ class Params
     class f_param_radios
     {
             title = "Radio System";
-            values[] = {0,1,2,3};
-            texts[] = {"Off","ACRE","TFR","ACRE2"};
+            values[] = {0,2,3};
+            texts[] = {"Off","TFR","ACRE2"};
             default = 0;
     };
 
@@ -478,14 +478,6 @@ class CfgFunctions
 			class zeusInit{};
 			class zeusAddAddons{};
 			class zeusAddObjects{};
-		};
-		class acre
-		{
-			file = "f\radios\acre";
-			class acre_removeRadios{};
-			class acre_addRadios{};
-			class acre_setRadioFrequencies{};
-			class acre_configureSpectatorChat{};
 		};
 		class tfr
 		{
