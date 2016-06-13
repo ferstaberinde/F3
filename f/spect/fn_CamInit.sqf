@@ -54,7 +54,7 @@ if(isNull _oldUnit ) then {if(count playableUnits > 0) then {_oldUnit = (playabl
 // Set spectator mode for whichever radio system is in use
 if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
 	[player, true] call TFAR_fnc_forceSpectator;
-}
+};
 
 if (isClass(configFile >> "CfgPatches" >> "acre_main")) then {
     [true] call acre_api_fnc_setSpectator;
