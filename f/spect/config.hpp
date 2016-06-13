@@ -35,7 +35,7 @@ class RscSpectListBox {
     color[] = {1, 1, 1, 0.1};
     colorDisabled[] = {1, 1, 1, 0.25};
     period = 1.2;
-    maxHistoryDelay = 1;
+    maxHistoryDelay = 99999999999999999;
     autoScrollSpeed = -1;
     autoScrollDelay = 5;
     autoScrollRewind = 0;
