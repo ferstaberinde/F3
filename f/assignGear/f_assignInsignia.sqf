@@ -2,8 +2,6 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-private ["_group","","","","",""];
-
 private _badge = ""; 
 params ["_unit", "_typeOfUnit"];
 private _faction = toLower (faction _unit);

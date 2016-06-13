@@ -115,6 +115,9 @@ case "LBListSelChanged":
             };
         };
     };
+	//Deselect the control to prevent keyboard input
+	ctrlEnable [2100, false];
+	ctrlEnable [2100, true];
 };
 case "LBListSelChanged_modes":
 {

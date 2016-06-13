@@ -51,22 +51,22 @@ if(isNil "f_cam_VirtualCreated") then
 if(isNull _oldUnit ) then {if(count playableUnits > 0) then {_oldUnit = (playableUnits select 0)} else {_oldUnit = (allUnits select 0)};};
 
 // ====================================================================================
-
 // Set spectator mode for whichever radio system is in use
-switch (f_param_radios) do {
-  // ACRE
-  case 1: {
-    [true] call acre_api_fnc_setSpectator;
-  };
-  // TFR
-  case 2: {
-    [player, true] call TFAR_fnc_forceSpectator;
-  };
-  case 3: {
-    [true] call acre_api_fnc_setSpectator;
-  };
+if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
+	[player, true] call TFAR_fnc_forceSpectator;
+}
 
+if (isClass(configFile >> "CfgPatches" >> "acre_main")) then {
+    [true] call acre_api_fnc_setSpectator;
+	if (!isNil "f_radios_settings_acre2_languages") then {
+		_languages = [];
+		{
+			_languages pushBack (_x select 0);
+		} forEach f_radios_settings_acre2_languages;
+		_languages call acre_api_fnc_babelSetSpokenLanguages;
+	};
 };
+
 // ====================================================================================
 
 _listBox = 2100;
