@@ -17014,7 +17014,6 @@ class Mission
 						skill=0.60000002;
 						init="this addAction [""Start Camera"",""[] call bis_fnc_camera;"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
 						description="BBC Reporter";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=790;
