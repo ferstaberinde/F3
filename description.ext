@@ -374,7 +374,6 @@ class CfgFunctions
 	#include "f\common\functions.hpp"
 };
 
-
 // ============================================================================================
 
 // F3 - Custom Insignia
