@@ -220,7 +220,6 @@ class Mission
 	class Intel
 	{
 		briefingName="*** Insert mission name here. ***";
-		overviewText="F3 v3-3-0 | FA OrBat 2015 | WS_fnc 260415";
 		resistanceWest=0;
 		startWeather=0.84999996;
 		startWind=0;
