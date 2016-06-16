@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10622.416,1148.4705,11175.39};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={10336.975,88.786736,11928.831};
+		dir[]={0.50002795,-0.48192337,-0.71955109};
+		up[]={0.27501512,0.87620634,-0.39575273};
+		aside[]={-0.82119894,1.8673018e-007,-0.57066315};
 	};
 };
 binarizationWanted=0;
@@ -250,8 +250,8 @@ class Mission
 				position[]={10362.554,15.894564,11817.747};
 				angles[]={0,0,6.2738566};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -305,8 +305,8 @@ class Mission
 				position[]={10362.706,15.916256,11789.729};
 				angles[]={6.2791886,0,0.010664274};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -323,8 +323,8 @@ class Mission
 				position[]={10386.56,14.541289,11817.947};
 				angles[]={6.276526,0,0.026657995};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -341,8 +341,8 @@ class Mission
 				position[]={10387.417,14.228426,11790.409};
 				angles[]={0.012000273,0,6.2498641};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -359,8 +359,8 @@ class Mission
 				position[]={10413.494,14.901851,11818.227};
 				angles[]={0.0053265258,0,6.2259154};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -377,8 +377,8 @@ class Mission
 				position[]={10413.566,14.971339,11790.22};
 				angles[]={0.0039967569,0,0.012000273};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -395,8 +395,8 @@ class Mission
 				position[]={10437.295,15.177407,11818.406};
 				angles[]={0.029326396,0,0.079830162};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -413,8 +413,8 @@ class Mission
 				position[]={10438.187,16.308697,11790.9};
 				angles[]={0.063912325,0,0.0039967569};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -432,7 +432,8 @@ class Mission
 				position[]={10386.623,14.726778,11865.865};
 				angles[]={0.087773547,0,0.022662206};
 			};
-			side="Empty";
+			side="West";
+			flags=2;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -451,8 +452,8 @@ class Mission
 				position[]={10410.934,14.758958,11865.559};
 				angles[]={0.0093286335,0,6.2511969};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -470,8 +471,8 @@ class Mission
 				position[]={10437.344,14.473436,11866.016};
 				angles[]={6.2698579,0,0.023993526};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -489,8 +490,8 @@ class Mission
 				position[]={10364.892,13.708694,11865.513};
 				angles[]={0.017332481,0,6.2099833};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -508,8 +509,8 @@ class Mission
 				position[]={10459.499,16.375725,11803.348};
 				angles[]={6.2818484,0,0.0013372133};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -807,8 +808,8 @@ class Mission
 				position[]={10412.803,15.043087,11840.869};
 				angles[]={6.2618566,0,0};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -1623,8 +1624,8 @@ class Mission
 				position[]={10365.45,14.998517,11840.378};
 				angles[]={6.2805109,0,6.2631893};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -1643,8 +1644,8 @@ class Mission
 				position[]={10386.729,14.806462,11840.373};
 				angles[]={0.013332055,0,6.276526};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -5433,8 +5434,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10364.095,11.414301,11875.438};
-						angles[]={6.2086568,0,6.1980586};
+						position[]={10364.712,11.264364,11865.52};
+						angles[]={0.01733112,0,6.2099862};
 					};
 					side="West";
 					flags=6;
@@ -5442,22 +5443,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_COV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNATO_COV;";
+						init="GrpNATO_COV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_COV_C";
 						description="NATO Command Vehicle Commander";
 						isPlayable=1;
 					};
 					id=201;
 					type="B_crew_F";
-					atlOffset=-6.7710876e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10369.095,11.350366,11873.787};
-						angles[]={6.2086568,0,0.033322938};
+						position[]={10361.901,11.557895,11863.086};
+						angles[]={0.017332481,0,6.2099833};
 					};
 					side="West";
 					flags=4;
@@ -5465,41 +5488,130 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_COV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNATO_COV;";
+						init="GrpNATO_COV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitNATO_COV_G";
 						description="NATO Command Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=202;
 					type="B_crew_F";
+					atlOffset=0.10978603;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10359.095,11.661758,11873.787};
-						angles[]={6.196734,0,6.2099833};
+						position[]={10364.712,11.264348,11865.521};
+						angles[]={0.017332481,0,6.2099833};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpNATO_COV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNATO_COV;";
+						init="GrpNATO_COV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitNATO_COV_D";
 						description="NATO Command Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=203;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=201;
+						item1=13;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=202;
+						item1=13;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=203;
+						item1=13;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
 			id=200;
-			atlOffset=-6.7710876e-005;
 		};
 		class Item169
 		{
@@ -5849,8 +5961,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10386.062,11.822216,11875.616};
-						angles[]={0.10494626,0,6.2805109};
+						position[]={10386.679,12.285563,11865.7};
+						angles[]={0.029321531,0,0.081157811};
 					};
 					side="West";
 					flags=6;
@@ -5858,21 +5970,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_AV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNATO_AV;";
+						init="GrpNATO_AV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_AV_C";
 						description="NATO Alpha Vehicle Commander";
 						isPlayable=1;
 					};
 					id=222;
 					type="B_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10391.062,12.087249,11873.966};
-						angles[]={0.1049457,0,0.02666023};
+						position[]={10386.679,12.285563,11865.7};
+						angles[]={6.2818413,0,0.022654373};
 					};
 					side="West";
 					flags=4;
@@ -5880,40 +6015,130 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_AV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNATO_AV;";
+						init="GrpNATO_AV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitNATO_AV_G";
 						description="NATO Alpha Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=223;
 					type="B_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10381.062,11.587601,11873.966};
-						angles[]={0.021331646,0,0.08115413};
+						position[]={10386.679,12.285563,11865.7};
+						angles[]={0.029326396,0,0.081154868};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpNATO_AV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNATO_AV;";
+						init="GrpNATO_AV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitNATO_AV_D";
 						description="NATO Alpha Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=224;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=222;
+						item1=10;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=223;
+						item1=10;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=224;
+						item1=10;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
 			id=221;
+			atlOffset=0.55239105;
 		};
 		class Item173
 		{
@@ -6264,8 +6489,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10410.238,12.169918,11875.503};
-						angles[]={0.031990308,0,6.253859};
+						position[]={10410.855,12.309039,11865.586};
+						angles[]={0.0093286335,0,6.2511969};
 					};
 					side="West";
 					flags=6;
@@ -6273,21 +6498,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_BV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNATO_BV;";
+						init="GrpNATO_BV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_BV_C";
 						description="NATO Bravo Vehicle Commander";
 						isPlayable=1;
 					};
 					id=243;
 					type="B_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10415.238,12.076054,11873.853};
-						angles[]={0.031990308,0,6.253859};
+						position[]={10410.855,12.309039,11865.586};
+						angles[]={0.0093286335,0,6.2511969};
 					};
 					side="West";
 					flags=4;
@@ -6295,38 +6543,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_BV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNATO_BV;";
+						init="GrpNATO_BV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitNATO_BV_G";
 						description="NATO Bravo Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=244;
 					type="B_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10405.238,12.269546,11873.853};
-						angles[]={0.030656165,0,6.2751846};
+						position[]={10410.855,12.309039,11865.586};
+						angles[]={0.0093286335,0,6.2751846};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpNATO_BV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNATO_BV;";
+						init="GrpNATO_BV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitNATO_BV_D";
 						description="NATO Bravo Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=245;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=243;
+						item1=11;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=244;
+						item1=11;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=245;
+						item1=11;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=242;
 		};
@@ -6679,8 +7016,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10436.785,11.672073,11876.015};
-						angles[]={0.037316564,0,6.2551923};
+						position[]={10437.402,12.02308,11866.098};
+						angles[]={0.04796192,0,6.2458706};
 					};
 					side="West";
 					flags=6;
@@ -6688,21 +7025,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_CV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNATO_CV;";
+						init="GrpNATO_CV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_CV_C";
 						description="NATO Charlie Vehicle Commander";
 						isPlayable=1;
 					};
 					id=264;
 					type="B_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10441.785,11.615096,11874.364};
-						angles[]={0.03731497,0,6.2671909};
+						position[]={10437.402,12.02308,11866.098};
+						angles[]={6.2698579,0,0.023993526};
 					};
 					side="West";
 					flags=4;
@@ -6710,38 +7070,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_CV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNATO_CV;";
+						init="GrpNATO_CV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitNATO_CV_G";
 						description="NATO Charlie Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=265;
 					type="B_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10431.785,11.940042,11874.364};
-						angles[]={0.046633169,0,6.2365522};
+						position[]={10437.402,12.02308,11866.098};
+						angles[]={6.2698579,0,0.023993526};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpNATO_CV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNATO_CV;";
+						init="GrpNATO_CV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitNATO_CV_D";
 						description="NATO Charlie Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=266;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=264;
+						item1=12;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=265;
+						item1=12;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=266;
+						item1=12;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=263;
 		};
@@ -7524,8 +7973,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10364.784,12.199284,11850.352};
-						angles[]={0.073202357,0,0};
+						position[]={10365.401,12.537762,11840.435};
+						angles[]={6.272521,0,6.2711902};
 					};
 					side="West";
 					flags=6;
@@ -7533,21 +7982,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_IFV1 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNATO_IFV1;";
+						init="GrpNATO_IFV1 = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_IFV1_C";
 						description="NATO IFV 1 Commander";
 						isPlayable=1;
 					};
 					id=308;
 					type="B_crew_F";
+					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10369.784,12.287477,11848.701};
-						angles[]={0.025327841,0,0.0066682254};
+						position[]={10365.401,12.537762,11840.435};
+						angles[]={6.2805109,0,6.2631893};
 					};
 					side="West";
 					flags=4;
@@ -7555,41 +8028,132 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_IFV1 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNATO_IFV1;";
+						init="GrpNATO_IFV1 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitNATO_IFV1_G";
 						description="NATO IFV 1 Gunner";
 						isPlayable=1;
 					};
 					id=309;
 					type="B_crew_F";
-					atlOffset=-9.5367432e-007;
+					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10359.784,12.350266,11848.701};
-						angles[]={0.043970551,0,6.2698536};
+						position[]={10365.401,12.537762,11840.435};
+						angles[]={6.2805109,0,6.2631893};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpNATO_IFV1 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNATO_IFV1;";
+						init="GrpNATO_IFV1 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitNATO_IFV1_D";
 						description="NATO IFV 1 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=310;
 					type="B_soldier_repair_F";
+					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=308;
+						item1=73;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=309;
+						item1=73;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=310;
+						item1=73;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
 			id=307;
+			atlOffset=9.5367432e-007;
 		};
 		class Item194
 		{
@@ -7603,8 +8167,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10386.096,12.374925,11850.307};
-						angles[]={6.2791886,0,6.2671871};
+						position[]={10386.712,12.345479,11840.39};
+						angles[]={0.013332055,0,6.276526};
 					};
 					side="West";
 					flags=6;
@@ -7612,21 +8176,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_IFV2 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNATO_IFV2;";
+						init="GrpNATO_IFV2 = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_IFV2_C";
 						description="NATO IFV 2 Commander";
 						isPlayable=1;
 					};
 					id=312;
 					type="B_crew_F";
+					atlOffset=-5.7220459e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10391.096,12.299002,11848.656};
-						angles[]={6.2765174,0,6.2711902};
+						position[]={10386.712,12.345479,11840.39};
+						angles[]={0.013332055,0,6.2685208};
 					};
 					side="West";
 					flags=4;
@@ -7634,40 +8222,132 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_IFV2 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNATO_IFV2;";
+						init="GrpNATO_IFV2 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitNATO_IFV2_G";
 						description="NATO IFV 2 Gunner";
 						isPlayable=1;
 					};
 					id=313;
 					type="B_crew_F";
+					atlOffset=-5.7220459e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10381.096,12.443709,11848.656};
-						angles[]={6.2685208,0,6.276526};
+						position[]={10386.712,12.345479,11840.39};
+						angles[]={0.013332055,0,6.276526};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpNATO_IFV2 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNATO_IFV2;";
+						init="GrpNATO_IFV2 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitNATO_IFV2_D";
 						description="NATO IFV 2 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=314;
 					type="B_soldier_repair_F";
+					atlOffset=-5.7220459e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=312;
+						item1=74;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=313;
+						item1=74;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=314;
+						item1=74;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
 			id=311;
+			atlOffset=-5.7220459e-006;
 		};
 		class Item195
 		{
@@ -7681,8 +8361,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10410.557,12.538229,11850.234};
-						angles[]={0.013332055,0,6.2818484};
+						position[]={10412.803,12.507806,11840.973};
 					};
 					side="West";
 					flags=6;
@@ -7690,21 +8369,43 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_TNK1 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNATO_TNK1;";
+						init="GrpNATO_TNK1 = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TNK1_C";
 						description="NATO Tank 1 Commander";
 						isPlayable=1;
 					};
 					id=316;
 					type="B_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10415.557,12.535982,11848.584};
-						angles[]={0.0013372133,0,6.2818484};
+						position[]={10412.803,12.507806,11840.973};
 					};
 					side="West";
 					flags=4;
@@ -7712,38 +8413,126 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_TNK1 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNATO_TNK1;";
+						init="GrpNATO_TNK1 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TNK1_G";
 						description="NATO Tank 1 Gunner";
 						isPlayable=1;
 					};
 					id=317;
 					type="B_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10405.557,12.351869,11848.584};
-						angles[]={0,0,0.042640556};
+						position[]={10412.803,12.507806,11840.973};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpNATO_TNK1 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNATO_TNK1;";
+						init="GrpNATO_TNK1 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TNK1_D";
 						description="NATO Tank 1 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=318;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=316;
+						item1=30;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=317;
+						item1=30;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=318;
+						item1=30;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=315;
 		};
@@ -7759,8 +8548,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10361.136,12.551737,11825.502};
-						angles[]={6.2805333,0,6.2765174};
+						position[]={10362.522,12.534562,11817.886};
+						angles[]={0,0,6.2738566};
 					};
 					side="West";
 					flags=6;
@@ -7768,21 +8557,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpNATO_TH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNATO_TH1;";
+						init="GrpNATO_TH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_P";
 						description="NATO Transport Helo 1 Pilot";
 						isPlayable=1;
 					};
 					id=320;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10366.136,12.485221,11823.852};
-						angles[]={6.2805333,0,6.2511969};
+						position[]={10360.08,12.46591,11821.089};
+						angles[]={6.2805333,0,6.2765174};
 					};
 					side="West";
 					flags=4;
@@ -7790,21 +8602,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpNATO_TH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH1,[0]];";
+						init="GrpNATO_TH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_CP";
 						description="NATO Transport Helo 1 Co-Pilot";
 						isPlayable=1;
 					};
 					id=321;
 					type="B_Helipilot_F";
+					atlOffset=-0.091441154;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10356.136,12.572345,11823.852};
-						angles[]={0,0,0.0066592805};
+						position[]={10362.522,12.534562,11817.886};
+						angles[]={0,0,6.2738476};
 					};
 					side="West";
 					flags=4;
@@ -7812,21 +8648,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_TH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH1,[1]];";
+						init="GrpNATO_TH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_G1";
 						description="NATO Transport Helo 1 Crew Chief (Repair)";
 						isPlayable=1;
 					};
 					id=322;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10371.136,12.323042,11821.112};
-						angles[]={0.53449273,0,0.27420241};
+						position[]={10362.522,12.534562,11817.886};
+						angles[]={6.2805324,0,6.2765183};
 					};
 					side="West";
 					flags=4;
@@ -7834,17 +8693,94 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_TH1 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH1,[2]];";
+						init="GrpNATO_TH1 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_G2";
 						description="NATO Transport Helo 1 Gunner";
 						isPlayable=1;
 					};
 					id=323;
 					type="B_helicrew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=320;
+						item1=0;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=321;
+						item1=0;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=322;
+						item1=0;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=323;
+						item1=0;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
 			};
 			id=319;
 		};
@@ -7860,7 +8796,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10361.355,12.571509,11797.496};
+						position[]={10362.742,12.55668,11789.88};
 						angles[]={0.0012918708,0,0};
 					};
 					side="West";
@@ -7869,21 +8805,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpNATO_TH2 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNATO_TH2;";
+						init="GrpNATO_TH2 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_P";
 						description="NATO Transport Helo 2 Pilot";
 						isPlayable=1;
 					};
 					id=325;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10366.355,12.561055,11795.846};
-						angles[]={0.0013372133,0,6.2738566};
+						position[]={10362.742,12.55668,11789.88};
+						angles[]={0.0012918708,0,0};
 					};
 					side="West";
 					flags=4;
@@ -7891,21 +8850,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpNATO_TH2 = group this; [""pp"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH2,[0]];";
+						init="GrpNATO_TH2 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_CP";
 						description="NATO Transport Helo 2 Co-Pilot";
 						isPlayable=1;
 					};
 					id=326;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10356.355,12.538753,11795.846};
-						angles[]={6.2738566,0,0.014664836};
+						position[]={10362.742,12.55668,11789.88};
+						angles[]={0.0012918708,0,0};
 					};
 					side="West";
 					flags=4;
@@ -7913,21 +8895,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_TH2 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH2,[1]];";
+						init="GrpNATO_TH2 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_G1";
 						description="NATO Transport Helo 2 Crew Chief (Repair)";
 						isPlayable=1;
 					};
 					id=327;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10371.355,12.507844,11793.106};
-						angles[]={0.0066592805,0,6.2685208};
+						position[]={10362.742,12.55668,11789.88};
+						angles[]={0.0012918708,0,0};
 					};
 					side="West";
 					flags=4;
@@ -7935,17 +8940,94 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_TH2 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH2,[2]];";
+						init="GrpNATO_TH2 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_G2";
 						description="NATO Transport Helo 2 Gunner";
 						isPlayable=1;
 					};
 					id=328;
 					type="B_helicrew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=325;
+						item1=3;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=326;
+						item1=3;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=327;
+						item1=3;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=328;
+						item1=3;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
 			};
 			id=324;
 		};
@@ -7961,7 +9043,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10385.229,12.403465,11825.627};
+						position[]={10386.616,12.404286,11818.011};
 						angles[]={6.2818484,0,0.019996032};
 					};
 					side="West";
@@ -7970,21 +9052,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpNATO_TH3 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNATO_TH3;";
+						init="GrpNATO_TH3 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_P";
 						description="NATO Transport Helo 3 Pilot";
 						isPlayable=1;
 					};
 					id=330;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10390.229,12.486704,11823.977};
-						angles[]={6.2818484,0,0.014664836};
+						position[]={10386.616,12.404286,11818.011};
+						angles[]={6.2818484,0,0.019996032};
 					};
 					side="West";
 					flags=4;
@@ -7992,21 +9097,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpNATO_TH3 = group this; [""pp"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH3,[0]];";
+						init="GrpNATO_TH3 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_CP";
 						description="NATO Transport Helo 3 Co-Pilot";
 						isPlayable=1;
 					};
 					id=331;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10380.229,12.278963,11823.977};
-						angles[]={6.2751846,0,0.02666023};
+						position[]={10386.616,12.404286,11818.011};
+						angles[]={6.2818484,0,0.019996032};
 					};
 					side="West";
 					flags=4;
@@ -8014,21 +9142,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_TH3 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH3,[1]];";
+						init="GrpNATO_TH3 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_G1";
 						description="NATO Transport Helo 3 Crew Chief (Repair)";
 						isPlayable=1;
 					};
 					id=332;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10395.229,12.556932,11821.237};
-						angles[]={0,0,0.023993526};
+						position[]={10386.616,12.404286,11818.011};
+						angles[]={6.2818484,0,0.019996032};
 					};
 					side="West";
 					flags=4;
@@ -8036,17 +9187,94 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_TH3 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH3,[2]];";
+						init="GrpNATO_TH3 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_G2";
 						description="NATO Transport Helo 3 Gunner";
 						isPlayable=1;
 					};
 					id=333;
 					type="B_helicrew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=330;
+						item1=4;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=331;
+						item1=4;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=332;
+						item1=4;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=333;
+						item1=4;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
 			};
 			id=329;
 		};
@@ -8062,8 +9290,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10385.959,12.052136,11798.047};
-						angles[]={0.0013372133,0,6.2498641};
+						position[]={10387.346,12.091963,11790.433};
+						angles[]={0.012000273,0,6.2498641};
 					};
 					side="West";
 					flags=6;
@@ -8071,21 +9299,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpNATO_TH4 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNATO_TH4;";
+						init="GrpNATO_TH4 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_P";
 						description="NATO Transport Helo 4 Pilot";
 						isPlayable=1;
 					};
 					id=335;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10390.959,12.024489,11796.396};
-						angles[]={0.023993526,0,6.2818484};
+						position[]={10387.346,12.091963,11790.433};
+						angles[]={0.012007865,0,6.249867};
 					};
 					side="West";
 					flags=4;
@@ -8093,21 +9344,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpNATO_TH4 = group this; [""pp"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH4,[0]];";
+						init="GrpNATO_TH4 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_CP";
 						description="NATO Transport Helo 4 Co-Pilot";
 						isPlayable=1;
 					};
 					id=336;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10380.959,12.231485,11796.396};
-						angles[]={0.0026520467,0,6.259192};
+						position[]={10387.346,12.091963,11790.433};
+						angles[]={0.012000273,0,6.2498641};
 					};
 					side="West";
 					flags=4;
@@ -8115,21 +9389,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_TH4 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH4,[1]];";
+						init="GrpNATO_TH4 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_G1";
 						description="NATO Transport Helo 4 Crew Chief (Repair)";
 						isPlayable=1;
 					};
 					id=337;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10395.959,12.110431,11793.657};
-						angles[]={0.02399601,0,0.02666023};
+						position[]={10387.346,12.091963,11790.433};
+						angles[]={0.011995304,0,0.010664274};
 					};
 					side="West";
 					flags=4;
@@ -8137,17 +9434,94 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_TH4 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH4,[2]];";
+						init="GrpNATO_TH4 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_G2";
 						description="NATO Transport Helo 4 Gunner";
 						isPlayable=1;
 					};
 					id=338;
 					type="B_helicrew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=335;
+						item1=5;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=336;
+						item1=5;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=337;
+						item1=5;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=338;
+						item1=5;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
 			};
 			id=334;
 		};
@@ -8163,8 +9537,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10411.983,12.642259,11825.881};
-						angles[]={0.013332055,0,6.247201};
+						position[]={10413.372,12.767582,11818.265};
+						angles[]={0.034652505,0,6.2259154};
 					};
 					side="West";
 					flags=6;
@@ -8172,20 +9546,43 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpNATO_TH5 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNATO_TH5;";
+						init="GrpNATO_TH5 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_P";
 						description="NATO Transport Helo 5 Pilot";
 						isPlayable=1;
 					};
 					id=340;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10416.983,12.484279,11824.23};
+						position[]={10413.372,12.767582,11818.265};
 						angles[]={0.013332055,0,6.247201};
 					};
 					side="West";
@@ -8194,21 +9591,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpNATO_TH5 = group this; [""pp"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH5,[0]];";
+						init="GrpNATO_TH5 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_CP";
 						description="NATO Transport Helo 5 Co-Pilot";
 						isPlayable=1;
 					};
 					id=341;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10406.983,12.746175,11824.23};
-						angles[]={0.034652505,0,0.019996032};
+						position[]={10413.372,12.767582,11818.265};
+						angles[]={0.034652505,0,6.2259154};
 					};
 					side="West";
 					flags=4;
@@ -8216,21 +9636,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_TH5 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH5,[1]];";
+						init="GrpNATO_TH5 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_G1";
 						description="NATO Transport Helo 5 Crew Chief (Repair)";
 						isPlayable=1;
 					};
 					id=342;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10421.983,12.514172,11821.491};
-						angles[]={0.013332055,0,0.0026520467};
+						position[]={10413.372,12.767582,11818.265};
+						angles[]={0.013332055,0,6.247201};
 					};
 					side="West";
 					flags=4;
@@ -8238,17 +9681,94 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_TH5 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH5,[2]];";
+						init="GrpNATO_TH5 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_G2";
 						description="NATO Transport Helo 5 Gunner";
 						isPlayable=1;
 					};
 					id=343;
 					type="B_helicrew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=340;
+						item1=6;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=341;
+						item1=6;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=342;
+						item1=6;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=343;
+						item1=6;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
 			};
 			id=339;
 		};
@@ -8264,8 +9784,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10412.205,12.78453,11797.875};
-						angles[]={0.0013372133,0,0.010664274};
+						position[]={10413.592,12.833704,11790.261};
+						angles[]={0.0053265258,0,0.010664274};
 					};
 					side="West";
 					flags=6;
@@ -8273,20 +9793,43 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpNATO_TH6 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNATO_TH6;";
+						init="GrpNATO_TH6 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_P";
 						description="NATO Transport Helo 6 Pilot";
 						isPlayable=1;
 					};
 					id=345;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10417.205,12.845361,11796.225};
+						position[]={10413.592,12.833704,11790.261};
 						angles[]={0.0053265258,0,0.010664274};
 					};
 					side="West";
@@ -8295,21 +9838,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpNATO_TH6 = group this; [""pp"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH6,[0]];";
+						init="GrpNATO_TH6 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_CP";
 						description="NATO Transport Helo 6 Co-Pilot";
 						isPlayable=1;
 					};
 					id=346;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10407.205,12.569282,11796.225};
-						angles[]={0.0039967569,0,0.070548877};
+						position[]={10413.592,12.833704,11790.261};
+						angles[]={0.0039967569,0,0.012000273};
 					};
 					side="West";
 					flags=4;
@@ -8317,21 +9883,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_TH6 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH6,[1]];";
+						init="GrpNATO_TH6 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_G1";
 						description="NATO Transport Helo 6 Crew Chief (Repair)";
 						isPlayable=1;
 					};
 					id=347;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10422.205,13.160858,11793.485};
-						angles[]={0.069222413,0,0.0080009829};
+						position[]={10413.592,12.833704,11790.261};
+						angles[]={0.0053265258,0,0.010664274};
 					};
 					side="West";
 					flags=4;
@@ -8339,17 +9928,94 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_TH6 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH6,[2]];";
+						init="GrpNATO_TH6 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_G2";
 						description="NATO Transport Helo 6 Gunner";
 						isPlayable=1;
 					};
 					id=348;
 					type="B_helicrew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=345;
+						item1=7;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=346;
+						item1=7;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=347;
+						item1=7;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=348;
+						item1=7;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
 			};
 			id=344;
 		};
@@ -8365,7 +10031,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10436.077,12.637131,11826.01};
+						position[]={10437.466,13.047333,11818.394};
 						angles[]={0.094385199,0,0};
 					};
 					side="West";
@@ -8374,21 +10040,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpNATO_TH7 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNATO_TH7;";
+						init="GrpNATO_TH7 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_P";
 						description="NATO Transport Helo 7 Pilot";
 						isPlayable=1;
 					};
 					id=350;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10441.077,12.820696,11824.359};
-						angles[]={0.094385825,0,0.025327841};
+						position[]={10437.466,13.047333,11818.394};
+						angles[]={0.094385199,0,0};
 					};
 					side="West";
 					flags=4;
@@ -8396,21 +10085,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpNATO_TH7 = group this; [""pp"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH7,[0]];";
+						init="GrpNATO_TH7 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_CP";
 						description="NATO Transport Helo 7 Co-Pilot";
 						isPlayable=1;
 					};
 					id=351;
 					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10431.077,12.532531,11824.359};
-						angles[]={0.014664836,0,0.0039967569};
+						position[]={10437.466,13.047333,11818.394};
+						angles[]={0.014664836,0,0.079830162};
 					};
 					side="West";
 					flags=4;
@@ -8418,21 +10130,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_TH7 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH7,[1]];";
+						init="GrpNATO_TH7 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_G1";
 						description="NATO Transport Helo 7 Crew Chief (Repair)";
 						isPlayable=1;
 					};
 					id=352;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10446.077,13.204495,11821.62};
-						angles[]={0.10890111,0,0.010669862};
+						position[]={10437.466,13.047333,11818.394};
+						angles[]={0.014664836,0,0.079830162};
 					};
 					side="West";
 					flags=4;
@@ -8440,17 +10175,94 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_TH7 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH7,[2]];";
+						init="GrpNATO_TH7 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_G2";
 						description="NATO Transport Helo 7 Gunner";
 						isPlayable=1;
 					};
 					id=353;
 					type="B_helicrew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=350;
+						item1=8;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=351;
+						item1=8;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=352;
+						item1=8;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=353;
+						item1=8;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
 			};
 			id=349;
 		};
@@ -8466,8 +10278,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10436.807,13.907234,11798.43};
-						angles[]={0.13386136,0,0.070549726};
+						position[]={10438.195,14.175296,11790.813};
+						angles[]={6.2805109,0,0.070548877};
 					};
 					side="West";
 					flags=6;
@@ -8475,21 +10287,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpNATO_TH8 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNATO_TH8;";
+						init="GrpNATO_TH8 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_P";
 						description="NATO Transport Helo 8 Pilot";
 						isPlayable=1;
 					};
 					id=355;
 					type="B_Helipilot_F";
+					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10441.807,14.271429,11796.779};
-						angles[]={6.2778587,0,0.013332055};
+						position[]={10438.195,14.175296,11790.813};
+						angles[]={6.2805109,0,0.070548877};
 					};
 					side="West";
 					flags=4;
@@ -8497,21 +10333,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpNATO_TH8 = group this; [""pp"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH8,[0]];";
+						init="GrpNATO_TH8 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_CP";
 						description="NATO Transport Helo 8 Co-Pilot";
 						isPlayable=1;
 					};
 					id=356;
 					type="B_Helipilot_F";
+					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10431.807,13.694942,11796.779};
-						angles[]={0.063912325,0,0.10890111};
+						position[]={10438.195,14.175295,11790.813};
+						angles[]={6.2805147,0,0.070546202};
 					};
 					side="West";
 					flags=4;
@@ -8519,21 +10379,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_TH8 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH8,[1]];";
+						init="GrpNATO_TH8 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_G1";
 						description="NATO Transport Helo 8 Crew Chief (Repair)";
 						isPlayable=1;
 					};
 					id=357;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10446.807,14.323483,11794.04};
-						angles[]={6.2778587,0,0.013332055};
+						position[]={10438.195,14.175296,11790.813};
+						angles[]={6.2805109,0,0.070548877};
 					};
 					side="West";
 					flags=4;
@@ -8541,7 +10424,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_TH8 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehNATO_TH8,[2]];";
+						init="GrpNATO_TH8 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_G2";
 						description="NATO Transport Helo 8 Gunner";
 						isPlayable=1;
@@ -8549,12 +10432,90 @@ class Mission
 					id=358;
 					type="B_helicrew_F";
 					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=355;
+						item1=9;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=356;
+						item1=9;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=357;
+						item1=9;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=358;
+						item1=9;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={2};
+						};
+					};
+				};
+			};
 			id=354;
+			atlOffset=9.5367432e-007;
 		};
 		class Item204
 		{
@@ -8568,7 +10529,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10459.174,14.453859,11812.305};
+						position[]={10459.502,14.445242,11803.399};
 						angles[]={6.2791886,0,0.0080009829};
 					};
 					side="West";
@@ -8590,7 +10551,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10464.174,14.487254,11810.654};
+						position[]={10459.502,14.445242,11803.399};
 						angles[]={6.2791886,0,0.0080009829};
 					};
 					side="West";
@@ -8610,6 +10571,38 @@ class Mission
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=360;
+						item1=14;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=361;
+						item1=14;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
 			};
 			id=359;
 		};
