@@ -268,8 +268,8 @@ class Mission
 				position[]={11468.809,25.775793,11697.765};
 				angles[]={6.2751918,0,0};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -584,8 +584,8 @@ class Mission
 				position[]={11467.919,25.797367,11672.026};
 				angles[]={0.010664274,0,0.011995304};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -602,8 +602,8 @@ class Mission
 				position[]={11494.91,25.152395,11697.939};
 				angles[]={0.0012918708,0,0};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -620,8 +620,8 @@ class Mission
 				position[]={11494.058,25.198511,11672.149};
 				angles[]={0.0026520467,0,6.2818484};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -638,8 +638,8 @@ class Mission
 				position[]={11520.553,25.123486,11698.013};
 				angles[]={0.0026520467,0,6.2805333};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -656,8 +656,8 @@ class Mission
 				position[]={11519.694,25.177101,11672.217};
 				angles[]={0.0013372133,0,6.2818484};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -674,8 +674,8 @@ class Mission
 				position[]={11546.65,25.090885,11698.275};
 				angles[]={0.0013372133,0,6.2805333};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -692,8 +692,8 @@ class Mission
 				position[]={11545.795,25.134247,11672.485};
 				angles[]={0.0026520467,0,6.2805333};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -710,8 +710,8 @@ class Mission
 				position[]={11465.583,26.27515,11745.78};
 				angles[]={6.2525272,0,6.2711854};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -729,8 +729,8 @@ class Mission
 				position[]={11488.543,25.891304,11745.095};
 				angles[]={6.213963,0,6.2751846};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -749,8 +749,8 @@ class Mission
 				position[]={11515.532,25.492664,11744.72};
 				angles[]={0,0,6.2751918};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -768,8 +768,8 @@ class Mission
 				position[]={11540.529,25.374105,11744.396};
 				angles[]={0.0066682254,0,6.2765174};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -788,8 +788,8 @@ class Mission
 				position[]={11568.099,25.508949,11681.63};
 				angles[]={6.2698536,0,6.1493239};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -903,8 +903,8 @@ class Mission
 				position[]={11517.544,25.12187,11723.387};
 				angles[]={0.0013372133,0,6.2818484};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -1702,8 +1702,8 @@ class Mission
 				position[]={11464.979,26.035002,11721.955};
 				angles[]={6.2698536,0,6.2033553};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -1721,8 +1721,8 @@ class Mission
 				position[]={11489.773,25.36857,11721.612};
 				angles[]={6.2685208,0,0.0066592805};
 			};
-			side="Empty";
-			flags=4;
+			side="East";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -10918,8 +10918,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11464.102,24.108994,11756.752};
-						angles[]={6.2658563,0,0.013332055};
+						position[]={11465.553,23.72113,11745.908};
+						angles[]={6.2525272,0,6.2711854};
 					};
 					side="East";
 					flags=6;
@@ -10927,21 +10927,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpCSAT_COV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehCSAT_COV;";
+						init="GrpCSAT_COV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_COV_C";
 						description="CSAT Command Vehicle Commander";
 						isPlayable=1;
 					};
 					id=378;
 					type="O_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11469.102,24.136362,11755.102};
-						angles[]={6.2658563,0,0.0066592805};
+						position[]={11465.553,23.72113,11745.908};
+						angles[]={6.2525272,0,6.2711854};
 					};
 					side="East";
 					flags=4;
@@ -10949,38 +10972,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpCSAT_COV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehCSAT_COV;";
+						init="GrpCSAT_COV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_COV_G";
 						description="CSAT Command Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=379;
 					type="O_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11459.102,24.039463,11755.102};
-						angles[]={6.2671871,0,6.2751918};
+						position[]={11465.553,23.72113,11745.908};
+						angles[]={6.2525272,0,6.2711854};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpCSAT_COV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_COV;";
+						init="GrpCSAT_COV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_COV_D";
 						description="CSAT Command Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=380;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=378;
+						item1=25;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=379;
+						item1=25;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=380;
+						item1=25;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=377;
 		};
@@ -11346,8 +11458,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11487.069,23.938879,11756.16};
-						angles[]={6.2378831,0,6.251195};
+						position[]={11488.522,23.339979,11745.287};
+						angles[]={6.213963,0,6.2751846};
 					};
 					side="East";
 					flags=6;
@@ -11355,21 +11467,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpCSAT_AV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehCSAT_AV;";
+						init="GrpCSAT_AV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_AV_C";
 						description="CSAT Alpha Vehicle Commander";
 						isPlayable=1;
 					};
 					id=399;
 					type="O_crew_F";
+					atlOffset=0.00022315979;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11492.069,23.808937,11754.51};
-						angles[]={6.2378831,0,0.018663859};
+						position[]={11488.522,23.339979,11745.287};
+						angles[]={6.233892,0,6.2551923};
 					};
 					side="East";
 					flags=4;
@@ -11377,40 +11513,132 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpCSAT_AV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehCSAT_AV;";
+						init="GrpCSAT_AV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_AV_G";
 						description="CSAT Alpha Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=400;
 					type="O_crew_F";
+					atlOffset=0.00022315979;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11482.069,23.988138,11754.51};
-						angles[]={6.233892,0,0};
+						position[]={11488.522,23.339979,11745.287};
+						angles[]={6.2272439,0,6.2751846};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpCSAT_AV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_AV;";
+						init="GrpCSAT_AV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_AV_D";
 						description="CSAT Alpha Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=401;
 					type="O_soldier_repair_F";
+					atlOffset=0.00022315979;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=399;
+						item1=26;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=400;
+						item1=26;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=401;
+						item1=26;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
 			id=398;
+			atlOffset=0.00022315979;
 		};
 		class Item213
 		{
@@ -11774,8 +12002,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11514.06,23.053446,11755.609};
-						angles[]={6.2685208,0,6.2685208};
+						position[]={11515.512,22.937342,11744.77};
+						angles[]={0,0,6.2751918};
 					};
 					side="East";
 					flags=6;
@@ -11783,21 +12011,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpCSAT_BV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehCSAT_BV;";
+						init="GrpCSAT_BV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_BV_C";
 						description="CSAT Bravo Vehicle Commander";
 						isPlayable=1;
 					};
 					id=420;
 					type="O_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11519.06,22.952776,11753.959};
-						angles[]={6.2751846,0,6.2618566};
+						position[]={11515.512,22.937342,11744.77};
+						angles[]={6.2738566,0,6.2751846};
 					};
 					side="East";
 					flags=4;
@@ -11805,38 +12056,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpCSAT_BV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehCSAT_BV;";
+						init="GrpCSAT_BV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_BV_G";
 						description="CSAT Bravo Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=421;
 					type="O_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11509.06,23.12219,11753.959};
-						angles[]={6.2578578,0,6.2671871};
+						position[]={11515.512,22.937342,11744.77};
+						angles[]={6.2738566,0,6.2751846};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpCSAT_BV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_BV;";
+						init="GrpCSAT_BV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_BV_D";
 						description="CSAT Bravo Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=422;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=420;
+						item1=27;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=421;
+						item1=27;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=422;
+						item1=27;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=419;
 		};
@@ -12202,8 +12542,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11539.06,22.790499,11756.072};
-						angles[]={0.0013372133,0,6.2791886};
+						position[]={11540.513,22.818815,11744.43};
+						angles[]={0.0066682254,0,6.2765174};
 					};
 					side="East";
 					flags=6;
@@ -12211,21 +12551,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpCSAT_CV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehCSAT_CV;";
+						init="GrpCSAT_CV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CV_C";
 						description="CSAT Charlie Vehicle Commander";
 						isPlayable=1;
 					};
 					id=441;
 					type="O_crew_F";
+					atlOffset=1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11544.06,22.774782,11754.422};
-						angles[]={0.0013372133,0,6.2805333};
+						position[]={11540.513,22.818815,11744.43};
+						angles[]={0.0066682254,0,6.2765174};
 					};
 					side="East";
 					flags=4;
@@ -12233,40 +12597,132 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpCSAT_CV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehCSAT_CV;";
+						init="GrpCSAT_CV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CV_G";
 						description="CSAT Charlie Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=442;
 					type="O_crew_F";
+					atlOffset=1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11534.06,22.81897,11754.422};
-						angles[]={0.0013372133,0,6.272521};
+						position[]={11540.513,22.818815,11744.43};
+						angles[]={0.0066682254,0,6.2765174};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpCSAT_CV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_CV;";
+						init="GrpCSAT_CV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CV_D";
 						description="CSAT Charlie Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=443;
 					type="O_soldier_repair_F";
+					atlOffset=1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=441;
+						item1=28;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=442;
+						item1=28;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=443;
+						item1=28;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
 			id=440;
+			atlOffset=1.9073486e-006;
 		};
 		class Item221
 		{
@@ -13043,8 +13499,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11463.336,23.386227,11736.248};
-						angles[]={0.0079935296,0,6.2605233};
+						position[]={11464.788,23.651484,11722.037};
+						angles[]={6.2698536,0,6.2033553};
 					};
 					side="East";
 					flags=6;
@@ -13052,21 +13508,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpCSAT_IFV1 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehCSAT_IFV1;";
+						init="GrpCSAT_IFV1 = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_IFV1_C";
 						description="CSAT IFV 1 Commander";
 						isPlayable=1;
 					};
 					id=485;
 					type="O_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11468.336,23.284969,11734.598};
-						angles[]={0.0080009829,0,6.2591896};
+						position[]={11464.788,23.651484,11722.037};
+						angles[]={6.2698536,0,6.2033553};
 					};
 					side="East";
 					flags=4;
@@ -13074,38 +13553,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpCSAT_IFV1 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehCSAT_IFV1;";
+						init="GrpCSAT_IFV1 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_IFV1_G";
 						description="CSAT IFV 1 Gunner";
 						isPlayable=1;
 					};
 					id=486;
 					type="O_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11458.336,23.671749,11734.598};
-						angles[]={0.045302324,0,6.2312322};
+						position[]={11464.788,23.651484,11722.037};
+						angles[]={6.2698536,0,6.2033553};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpCSAT_IFV1 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_IFV1;";
+						init="GrpCSAT_IFV1 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_IFV1_D";
 						description="CSAT IFV 1 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=487;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=485;
+						item1=77;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=486;
+						item1=77;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=487;
+						item1=77;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=484;
 		};
@@ -13121,8 +13689,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11488.336,22.924526,11735.913};
-						angles[]={0.0066682254,0,6.2698536};
+						position[]={11489.789,22.977533,11721.697};
+						angles[]={6.2685208,0,0.0066592805};
 					};
 					side="East";
 					flags=6;
@@ -13130,21 +13698,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpCSAT_IFV2 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehCSAT_IFV2;";
+						init="GrpCSAT_IFV2 = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_IFV2_C";
 						description="CSAT IFV 2 Commander";
 						isPlayable=1;
 					};
 					id=489;
 					type="O_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11493.336,22.94887,11734.263};
-						angles[]={0.0080009829,0,0.0093286335};
+						position[]={11489.789,22.977533,11721.697};
+						angles[]={6.2685208,0,0.0066592805};
 					};
 					side="East";
 					flags=4;
@@ -13152,38 +13743,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpCSAT_IFV2 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehCSAT_IFV2;";
+						init="GrpCSAT_IFV2 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_IFV2_G";
 						description="CSAT IFV2 Gunner";
 						isPlayable=1;
 					};
 					id=490;
 					type="O_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11483.336,22.989126,11734.263};
-						angles[]={0.0013372133,0,6.2751846};
+						position[]={11489.789,22.977533,11721.697};
+						angles[]={6.2685208,0,0.0066592805};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpCSAT_IFV2 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_IFV2;";
+						init="GrpCSAT_IFV2 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_IFV2_D";
 						description="CSAT IFV 2 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=491;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=489;
+						item1=78;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=490;
+						item1=78;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=491;
+						item1=78;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=488;
 		};
@@ -13199,8 +13879,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11514.218,22.936136,11736.101};
-						angles[]={0.0026520467,0,6.2778587};
+						position[]={11517.541,22.93354,11723.431};
+						angles[]={0.0013372133,0,6.2818484};
 					};
 					side="East";
 					flags=6;
@@ -13208,21 +13888,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpCSAT_TNK1 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehCSAT_TNK1;";
+						init="GrpCSAT_TNK1 = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TNK1_C";
 						description="CSAT Tank 1 Commander";
 						isPlayable=1;
 					};
 					id=493;
 					type="O_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11519.218,22.913872,11734.45};
-						angles[]={0.0026520467,0,6.2778587};
+						position[]={11517.541,22.93354,11723.431};
+						angles[]={0.0013372133,0,6.2818484};
 					};
 					side="East";
 					flags=4;
@@ -13230,38 +13933,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpCSAT_TNK1 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehCSAT_TNK1;";
+						init="GrpCSAT_TNK1 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TNK1_G";
 						description="CSAT Tank 1 Gunner";
 						isPlayable=1;
 					};
 					id=494;
 					type="O_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11509.218,22.959183,11734.45};
-						angles[]={6.2818484,0,6.2765174};
+						position[]={11517.541,22.93354,11723.431};
+						angles[]={0.0013372133,0,6.2818484};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpCSAT_TNK1 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_TNK1;";
+						init="GrpCSAT_TNK1 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TNK1_D";
 						description="CSAT Tank 1 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=495;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=493;
+						item1=35;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=494;
+						item1=35;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=495;
+						item1=35;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=492;
 		};
@@ -13277,8 +14069,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11460.676,23.172226,11702.283};
-						angles[]={6.2605309,0,6.2538638};
+						position[]={11468.809,22.903692,11697.831};
+						angles[]={6.2751918,0,0};
 					};
 					side="East";
 					flags=6;
@@ -13322,8 +14114,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11465.676,22.988153,11700.633};
-						angles[]={6.2605233,0,6.253861};
+						position[]={11470.556,22.875824,11700.956};
+						angles[]={6.2751918,0,0};
 					};
 					side="East";
 					flags=4;
@@ -13331,21 +14123,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpCSAT_TH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehCSAT_TH1,[0]];";
+						init="GrpCSAT_TH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH1_CP";
 						description="CSAT Transport Helo 1 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=498;
 					type="O_soldier_repair_F";
+					atlOffset=-0.0034046173;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11455.676,23.365509,11700.633};
-						angles[]={0.0013372133,0,6.2312322};
+						position[]={11468.809,22.903692,11697.831};
+						angles[]={6.2751918,0,0};
 					};
 					side="East";
 					flags=4;
@@ -13353,17 +14169,83 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpCSAT_TH1 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehCSAT_TH1,[1]];";
+						init="GrpCSAT_TH1 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH1_LM";
 						description="CSAT Transport Helo 1 Loadmaster";
 						isPlayable=1;
 					};
 					id=499;
 					type="O_helicrew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=497;
+						item1=1;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=498;
+						item1=1;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=499;
+						item1=1;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+				};
 			};
 			id=496;
 		};
@@ -13379,8 +14261,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11459.822,22.762367,11676.39};
-						angles[]={0.0080009829,0,6.2738566};
+						position[]={11467.953,22.925667,11672.039};
+						angles[]={0.010664274,0,0.011995304};
 					};
 					side="East";
 					flags=6;
@@ -13388,20 +14270,43 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpCSAT_TH2 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_TH2;";
+						init="GrpCSAT_TH2 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH2_P";
 						description="CSAT Transport Helo 2 Pilot";
 						isPlayable=1;
 					};
 					id=501;
 					type="O_helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11464.822,22.852146,11674.739};
+						position[]={11467.953,22.925667,11672.039};
 						angles[]={0.010664274,0,0.014664836};
 					};
 					side="East";
@@ -13410,21 +14315,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpCSAT_TH2 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehCSAT_TH2,[0]];";
+						init="GrpCSAT_TH2 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH2_CP";
 						description="CSAT Transport Helo 2 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=502;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11454.822,22.807949,11674.739};
-						angles[]={6.2618537,0,0.019999012};
+						position[]={11467.953,22.925667,11672.039};
+						angles[]={0.010664274,0,0.011995304};
 					};
 					side="East";
 					flags=4;
@@ -13432,17 +14360,83 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpCSAT_TH2 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehCSAT_TH2,[1]];";
+						init="GrpCSAT_TH2 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH2_LM";
 						description="CSAT Transport Helo 2 Loadmaster";
 						isPlayable=1;
 					};
 					id=503;
 					type="O_helicrew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=501;
+						item1=18;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=502;
+						item1=18;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=503;
+						item1=18;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+				};
 			};
 			id=500;
 		};
@@ -13458,8 +14452,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11486.775,22.926092,11702.549};
-						angles[]={0.0066592805,0,0.011995304};
+						position[]={11494.91,22.984041,11698.097};
+						angles[]={0.0012918708,0,0};
 					};
 					side="East";
 					flags=6;
@@ -13467,21 +14461,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpCSAT_TH3 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_TH3;";
+						init="GrpCSAT_TH3 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH3_P";
 						description="CSAT Transport Helo 3 Pilot";
 						isPlayable=1;
 					};
 					id=505;
 					type="O_helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11491.775,22.97011,11700.898};
-						angles[]={0.013327583,0,0};
+						position[]={11494.91,22.984041,11698.097};
+						angles[]={0.0012918708,0,0};
 					};
 					side="East";
 					flags=4;
@@ -13489,17 +14506,72 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpCSAT_TH3 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehCSAT_TH3,[0]];";
+						init="GrpCSAT_TH3 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH3_CP";
 						description="CSAT Transport Helo 3 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=506;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=505;
+						item1=19;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=506;
+						item1=19;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
 			};
 			id=504;
 		};
@@ -13515,8 +14587,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11485.922,23.001806,11676.756};
-						angles[]={0.0026520467,0,0.0053265258};
+						position[]={11494.055,23.030018,11672.304};
+						angles[]={0.0026520467,0,6.2818484};
 					};
 					side="East";
 					flags=6;
@@ -13524,20 +14596,43 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpCSAT_TH4 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_TH4;";
+						init="GrpCSAT_TH4 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH4_P";
 						description="CSAT Transport Helo 4 Pilot";
 						isPlayable=1;
 					};
 					id=508;
 					type="O_helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11490.922,23.026724,11675.105};
+						position[]={11494.055,23.030018,11672.304};
 						angles[]={0.0026520467,0,6.2818484};
 					};
 					side="East";
@@ -13546,17 +14641,72 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpCSAT_TH4 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehCSAT_TH4,[0]];";
+						init="GrpCSAT_TH4 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH4_CP";
 						description="CSAT Transport Helo 4 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=509;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=508;
+						item1=20;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=509;
+						item1=20;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
 			};
 			id=507;
 		};
@@ -13572,7 +14722,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11512.414,22.964811,11702.619};
+						position[]={11520.547,22.954998,11698.167};
 						angles[]={0.0026520467,0,6.2805333};
 					};
 					side="East";
@@ -13581,20 +14731,43 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpCSAT_TH5 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_TH5;";
+						init="GrpCSAT_TH5 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH5_P";
 						description="CSAT Transport Helo 5 Pilot";
 						isPlayable=1;
 					};
 					id=511;
 					type="O_helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11517.414,22.955881,11700.969};
+						position[]={11520.547,22.954998,11698.167};
 						angles[]={0.0026520467,0,6.2805333};
 					};
 					side="East";
@@ -13603,17 +14776,72 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpCSAT_TH5 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehCSAT_TH5,[0]];";
+						init="GrpCSAT_TH5 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH5_CP";
 						description="CSAT Transport Helo 5 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=512;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=511;
+						item1=21;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=512;
+						item1=21;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
 			};
 			id=510;
 		};
@@ -13629,8 +14857,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11511.559,23.012405,11676.824};
-						angles[]={0.0012918708,0,0};
+						position[]={11519.691,23.008749,11672.374};
+						angles[]={0.0013372133,0,6.2818484};
 					};
 					side="East";
 					flags=6;
@@ -13638,20 +14866,43 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpCSAT_TH6 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_TH6;";
+						init="GrpCSAT_TH6 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH6_P";
 						description="CSAT Transport Helo 6 Pilot";
 						isPlayable=1;
 					};
 					id=514;
 					type="O_helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11516.559,23.009193,11675.174};
+						position[]={11519.691,23.008749,11672.374};
 						angles[]={0.0013372133,0,6.2818484};
 					};
 					side="East";
@@ -13660,17 +14911,72 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpCSAT_TH6 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehCSAT_TH6,[0]];";
+						init="GrpCSAT_TH6 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH6_CP";
 						description="CSAT Transport Helo 6 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=515;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=514;
+						item1=22;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=515;
+						item1=22;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
 			};
 			id=513;
 		};
@@ -13686,8 +14992,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11538.512,22.932976,11702.885};
-						angles[]={0.0013372133,0,6.2818484};
+						position[]={11546.645,22.922539,11698.433};
+						angles[]={0.0013372133,0,6.2805333};
 					};
 					side="East";
 					flags=6;
@@ -13695,20 +15001,43 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpCSAT_TH7 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_TH7;";
+						init="GrpCSAT_TH7 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH7_P";
 						description="CSAT Transport Helo 7 Pilot";
 						isPlayable=1;
 					};
 					id=517;
 					type="O_helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11543.512,22.927156,11701.234};
+						position[]={11546.645,22.922539,11698.433};
 						angles[]={0.0013372133,0,6.2805333};
 					};
 					side="East";
@@ -13729,6 +15058,38 @@ class Mission
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=517;
+						item1=23;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=518;
+						item1=23;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
 			id=516;
 		};
 		class Item243
@@ -13743,7 +15104,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11537.656,22.975573,11677.092};
+						position[]={11545.789,22.965759,11672.64};
 						angles[]={0.0026520467,0,6.2805333};
 					};
 					side="East";
@@ -13752,20 +15113,43 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpCSAT_TH8 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_TH8;";
+						init="GrpCSAT_TH8 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH8_P";
 						description="CSAT Transport Helo 8 Pilot";
 						isPlayable=1;
 					};
 					id=520;
 					type="O_helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11542.656,22.96664,11675.441};
+						position[]={11545.789,22.965759,11672.64};
 						angles[]={0.0026520467,0,6.2805333};
 					};
 					side="East";
@@ -13774,17 +15158,72 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpCSAT_TH8 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehCSAT_TH8,[0]];";
+						init="GrpCSAT_TH8 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH8_CP";
 						description="CSAT Transport Helo 8 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=521;
 					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=520;
+						item1=24;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=521;
+						item1=24;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
 			};
 			id=519;
 		};
@@ -13800,8 +15239,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11567.087,22.678558,11693.593};
-						angles[]={0.0053265258,0,6.2605233};
+						position[]={11567.669,22.317711,11681.734};
+						angles[]={6.2698536,0,6.1493239};
 					};
 					side="East";
 					flags=6;
@@ -13809,21 +15248,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpCSAT_AH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehCSAT_AH1;";
+						init="GrpCSAT_AH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_AH1_P";
 						description="CSAT Attack Helo 1 Pilot";
 						isPlayable=1;
 					};
 					id=523;
 					type="O_helipilot_F";
+					atlOffset=-9.5367432e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11572.087,22.548944,11691.942};
-						angles[]={6.247201,0,6.2605233};
+						position[]={11567.669,22.317711,11681.734};
+						angles[]={6.2698536,0,6.1493239};
 					};
 					side="East";
 					flags=4;
@@ -13831,19 +15294,76 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpCSAT_AH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehCSAT_AH1,[0]];";
+						init="GrpCSAT_AH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_AH1_CP";
 						description="CSAT Attack Helo 1 Gunner (Repair)";
 						isPlayable=1;
 					};
 					id=524;
 					type="O_soldier_repair_F";
+					atlOffset=-9.5367432e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=523;
+						item1=29;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=524;
+						item1=29;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
 			id=522;
+			atlOffset=-9.5367432e-006;
 		};
 		class Item245
 		{
