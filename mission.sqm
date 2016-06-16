@@ -1854,8 +1854,8 @@ class Mission
 				position[]={10589.258,8.8077202,11253.662};
 				angles[]={6.2285728,0,0.075854406};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -1873,8 +1873,8 @@ class Mission
 				position[]={10610.682,9.6158218,11253.697};
 				angles[]={6.2658529,0,0.02399601};
 			};
-			side="Empty";
-			flags=4;
+			side="West";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -5540,6 +5540,7 @@ class Mission
 					};
 					id=203;
 					type="B_soldier_repair_F";
+					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5977,6 +5978,7 @@ class Mission
 					};
 					id=222;
 					type="B_crew_F";
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6022,6 +6024,7 @@ class Mission
 					};
 					id=223;
 					type="B_crew_F";
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6066,6 +6069,7 @@ class Mission
 					};
 					id=224;
 					type="B_soldier_repair_F";
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16962,8 +16966,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10591.583,6.4643641,11293.796};
-						angles[]={6.253859,0,0.043971907};
+						position[]={10591.583,6.4643631,11293.796};
+						angles[]={6.2538638,0,0.043964844};
 					};
 					side="West";
 					flags=4;
@@ -16978,7 +16982,30 @@ class Mission
 					};
 					id=686;
 					type="B_G_officer_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=-4.7683716e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
@@ -18790,8 +18817,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10589.794,7.0360031,11263.314};
-						angles[]={6.2578578,0,0.055941612};
+						position[]={10589.422,6.6519327,11253.788};
+						angles[]={6.2285728,0,0.075854406};
 					};
 					side="West";
 					flags=6;
@@ -18799,42 +18826,118 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpFIA_IFV1 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehFIA_IFV1;";
+						init="GrpFIA_IFV1 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitFIA_IFV1_G";
 						description="FIA Technical 1 Gunner";
 						isPlayable=1;
 					};
 					id=779;
 					type="B_crew_F";
-					atlOffset=4.7683716e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10594.794,7.2884831,11261.664};
-						angles[]={6.2658529,0,0.053282689};
+						position[]={10589.422,6.6519327,11253.788};
+						angles[]={6.2285728,0,0.075854406};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpFIA_IFV1 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehFIA_IFV1;";
+						init="GrpFIA_IFV1 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitFIA_IFV1_D";
 						description="FIA Technical 1 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=780;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=779;
+						item1=85;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=780;
+						item1=85;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
 			id=778;
-			atlOffset=4.7683716e-007;
 		};
 		class Item306
 		{
@@ -18848,8 +18951,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10610.733,7.4692073,11263.517};
-						angles[]={0.014664836,0,0.0026520467};
+						position[]={10610.733,7.4530849,11253.743};
+						angles[]={6.2658529,0,0.02399601};
 					};
 					side="West";
 					flags=6;
@@ -18857,40 +18960,120 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpFIA_IFV2 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehFIA_IFV2;";
+						init="GrpFIA_IFV2 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitFIA_IFV2_G";
 						description="FIA Technical 2 Gunner";
 						isPlayable=1;
 					};
 					id=782;
 					type="B_crew_F";
+					atlOffset=-4.7683716e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10615.733,7.5781517,11261.866};
-						angles[]={6.2498641,0,0.071875811};
+						position[]={10610.733,7.4530854,11253.743};
+						angles[]={6.2658529,0,0.02399601};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpFIA_IFV2 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehFIA_IFV2;";
+						init="GrpFIA_IFV2 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitFIA_IFV2_D";
 						description="FIA Technical 2 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=783;
 					type="B_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=782;
+						item1=86;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=783;
+						item1=86;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
 			id=781;
+			atlOffset=-4.7683716e-007;
 		};
 		class Item307
 		{
