@@ -286,8 +286,8 @@ class Mission
 				position[]={10633.283,18.984623,12531.378};
 				angles[]={6.2605233,0,6.2818484};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -528,8 +528,8 @@ class Mission
 				position[]={10657.703,18.752792,12531.268};
 				angles[]={6.2299027,0,6.2618566};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -547,8 +547,8 @@ class Mission
 				position[]={10681.825,18.620895,12532.167};
 				angles[]={6.2738504,0,0.065240532};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -565,8 +565,8 @@ class Mission
 				position[]={10706.897,19.053598,12532.293};
 				angles[]={6.2578578,0,0.015998369};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -827,8 +827,8 @@ class Mission
 				position[]={10632.845,20.2008,12592.38};
 				angles[]={6.2485328,0,0.033321146};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -846,8 +846,8 @@ class Mission
 				position[]={10658.581,20.391724,12591.895};
 				angles[]={6.2206011,0,0.0093286335};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -865,8 +865,8 @@ class Mission
 				position[]={10681.271,20.575693,12592.019};
 				angles[]={6.2325621,0,0.017329043};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -884,8 +884,8 @@ class Mission
 				position[]={10706.579,19.932966,12591.772};
 				angles[]={6.196734,0,6.233892};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -922,8 +922,8 @@ class Mission
 				position[]={10681.344,18.987843,12568.252};
 				angles[]={6.2073317,0,6.2791886};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -941,8 +941,8 @@ class Mission
 				position[]={10733.774,17.339033,12531.86};
 				angles[]={6.2445378,0,6.2605233};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -1778,8 +1778,8 @@ class Mission
 				position[]={10633.441,19.01549,12567.102};
 				angles[]={6.2086577,0,0.0026744273};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -1797,8 +1797,8 @@ class Mission
 				position[]={10657.798,18.780739,12567.498};
 				angles[]={6.2485328,0,0.021328852};
 			};
-			side="Empty";
-			flags=4;
+			side="Independent";
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -15666,8 +15666,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10632.576,18.22245,12604.049};
-						angles[]={6.2219281,0,0.030658109};
+						position[]={10632.932,17.593292,12592.572};
+						angles[]={6.2285728,0,0.033321146};
 					};
 					side="Independent";
 					flags=6;
@@ -15675,21 +15675,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpAAF_COV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehAAF_COV;";
+						init="GrpAAF_COV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_COV_C";
 						description="AAF Command Vehicle Commander";
 						isPlayable=1;
 					};
 					id=541;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10637.576,18.2127,12602.398};
-						angles[]={6.2219291,0,0.0066682254};
+						position[]={10632.932,17.593292,12592.572};
+						angles[]={6.2485328,0,0.033321146};
 					};
 					side="Independent";
 					flags=4;
@@ -15697,38 +15720,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpAAF_COV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehAAF_COV;";
+						init="GrpAAF_COV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitAAF_COV_G";
 						description="AAF Command Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=542;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10627.576,17.866407,12602.398};
-						angles[]={6.2020307,0,0.050624419};
+						position[]={10632.932,17.593292,12592.572};
+						angles[]={6.2285728,0,0.033321146};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpAAF_COV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehAAF_COV;";
+						init="GrpAAF_COV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitAAF_COV_D";
 						description="AAF Command Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=543;
 					type="I_Soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=541;
+						item1=31;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=542;
+						item1=31;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=543;
+						item1=31;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=540;
 		};
@@ -16080,8 +16192,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10658.142,18.342554,12603.756};
-						angles[]={6.2432065,0,0.019999012};
+						position[]={10658.605,17.784105,12592.107};
+						angles[]={6.2206011,0,0.0093286335};
 					};
 					side="Independent";
 					flags=6;
@@ -16089,21 +16201,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpAAF_AV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehAAF_AV;";
+						init="GrpAAF_AV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_AV_C";
 						description="AAF Alpha Vehicle Commander";
 						isPlayable=1;
 					};
 					id=562;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10663.142,18.377596,12602.105};
-						angles[]={6.2378831,0,0.025327841};
+						position[]={10658.605,17.784105,12592.107};
+						angles[]={6.2206011,0,0.0093286335};
 					};
 					side="Independent";
 					flags=4;
@@ -16111,38 +16246,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpAAF_AV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehAAF_AV;";
+						init="GrpAAF_AV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitAAF_AV_G";
 						description="AAF Alpha Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=563;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10653.142,18.126324,12602.105};
-						angles[]={6.2365522,0,0.034654226};
+						position[]={10658.605,17.784105,12592.107};
+						angles[]={6.2206011,0,0.0093286335};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpAAF_AV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehAAF_AV;";
+						init="GrpAAF_AV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitAAF_AV_D";
 						description="AAF Alpha Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=564;
 					type="I_Soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=562;
+						item1=32;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=563;
+						item1=32;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=564;
+						item1=32;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=561;
 		};
@@ -16496,8 +16720,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10681.27,18.669033,12604.411};
-						angles[]={6.2458687,0,6.2711854};
+						position[]={10681.316,17.966583,12592.2};
+						angles[]={6.2325621,0,0.017329043};
 					};
 					side="Independent";
 					flags=6;
@@ -16505,21 +16729,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpAAF_BV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehAAF_BV;";
+						init="GrpAAF_BV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_BV_C";
 						description="AAF Bravo Vehicle Commander";
 						isPlayable=1;
 					};
 					id=583;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10686.27,18.543482,12602.761};
-						angles[]={6.2485328,0,6.2685208};
+						position[]={10681.316,17.966583,12592.2};
+						angles[]={6.2086568,0,0.017332481};
 					};
 					side="Independent";
 					flags=4;
@@ -16527,38 +16774,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpAAF_BV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehAAF_BV;";
+						init="GrpAAF_BV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitAAF_BV_G";
 						description="AAF Bravo Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=584;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10676.27,18.629009,12602.761};
-						angles[]={6.247201,0,6.2805333};
+						position[]={10681.316,17.966583,12592.2};
+						angles[]={6.2325621,0,0.017329043};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpAAF_BV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehAAF_BV;";
+						init="GrpAAF_BV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitAAF_BV_D";
 						description="AAF Bravo Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=585;
 					type="I_Soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=583;
+						item1=33;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=584;
+						item1=33;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=585;
+						item1=33;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=582;
 		};
@@ -16912,8 +17248,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10706.045,18.189939,12604.137};
-						angles[]={6.212636,0,6.2605205};
+						position[]={10706.451,17.333019,12592.048};
+						angles[]={6.196734,0,6.233892};
 					};
 					side="Independent";
 					flags=6;
@@ -16921,21 +17257,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpAAF_CV = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehAAF_CV;";
+						init="GrpAAF_CV = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CV_C";
 						description="AAF Charlie Vehicle Commander";
 						isPlayable=1;
 					};
 					id=604;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10711.045,17.929295,12602.486};
-						angles[]={6.212636,0,6.2312322};
+						position[]={10706.451,17.333019,12592.048};
+						angles[]={6.1967392,0,6.2338972};
 					};
 					side="Independent";
 					flags=4;
@@ -16943,38 +17302,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpAAF_CV = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehAAF_CV;";
+						init="GrpAAF_CV = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CV_G";
 						description="AAF Charlie Vehicle Gunner";
 						isPlayable=1;
 					};
 					id=605;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10701.045,18.271523,12602.486};
-						angles[]={6.2285728,0,6.2578578};
+						position[]={10706.451,17.333019,12592.048};
+						angles[]={6.196734,0,6.233892};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpAAF_CV = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehAAF_CV;";
+						init="GrpAAF_CV = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CV_D";
 						description="AAF Charlie Vehicle Driver (Repair)";
 						isPlayable=1;
 					};
 					id=606;
 					type="I_Soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=604;
+						item1=34;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=605;
+						item1=34;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=606;
+						item1=34;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=603;
 		};
@@ -17748,8 +18196,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10633.093,17.108294,12578.813};
-						angles[]={6.2685165,0,6.2578578};
+						position[]={10633.448,16.534824,12567.337};
+						angles[]={6.2086601,0,0.0026703537};
 					};
 					side="Independent";
 					flags=6;
@@ -17757,21 +18205,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpAAF_IFV1 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehAAF_IFV1;";
+						init="GrpAAF_IFV1 = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_IFV1_C";
 						description="AAF IFV 1 Commander";
 						isPlayable=1;
 					};
 					id=648;
 					type="I_crew_F";
+					atlOffset=1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10638.093,17.019798,12577.163};
-						angles[]={6.2378831,0,6.2818484};
+						position[]={10633.448,16.534824,12567.337};
+						angles[]={6.2086601,0,0.0026703537};
 					};
 					side="Independent";
 					flags=4;
@@ -17779,38 +18251,129 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpAAF_IFV1 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehAAF_IFV1;";
+						init="GrpAAF_IFV1 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitAAF_IFV1_G";
 						description="AAF IFV 1 Gunner";
 						isPlayable=1;
 					};
 					id=649;
 					type="I_crew_F";
+					atlOffset=1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10628.093,17.200954,12577.163};
-						angles[]={6.2432065,0,6.2578578};
+						position[]={10633.448,16.534824,12567.337};
+						angles[]={6.2086601,0,0.0026703537};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpAAF_IFV1 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehAAF_IFV1;";
+						init="GrpAAF_IFV1 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitAAF_IFV1_D";
 						description="AAF IFV 1 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=650;
 					type="I_Soldier_repair_F";
+					atlOffset=1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=648;
+						item1=81;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=649;
+						item1=81;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=650;
+						item1=81;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=647;
 		};
@@ -17826,8 +18389,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10657.386,16.907473,12579.282};
-						angles[]={6.2152901,0,0.015998369};
+						position[]={10657.851,16.295214,12567.634};
+						angles[]={6.2485328,0,6.2685208};
 					};
 					side="Independent";
 					flags=6;
@@ -17835,21 +18398,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpAAF_IFV2 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehAAF_IFV2;";
+						init="GrpAAF_IFV2 = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_IFV2_C";
 						description="AAF IFV 2 Commander";
 						isPlayable=1;
 					};
 					id=652;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10662.386,16.790527,12577.632};
-						angles[]={6.215291,0,6.2818484};
+						position[]={10657.851,16.295214,12567.634};
+						angles[]={6.2485328,0,6.2685208};
 					};
 					side="Independent";
 					flags=4;
@@ -17857,38 +18443,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpAAF_IFV2 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehAAF_IFV2;";
+						init="GrpAAF_IFV2 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitAAF_IFV2_G";
 						description="AAF IFV 2 Gunner";
 						isPlayable=1;
 					};
 					id=653;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10652.386,16.956739,12577.632};
-						angles[]={6.2631893,0,6.2511969};
+						position[]={10657.851,16.295214,12567.634};
+						angles[]={6.2485328,0,0.021328852};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpAAF_IFV2 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehAAF_IFV2;";
+						init="GrpAAF_IFV2 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitAAF_IFV2_D";
 						description="AAF IFV 2 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=654;
 					type="I_Soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=652;
+						item1=82;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=653;
+						item1=82;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=654;
+						item1=82;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=651;
 		};
@@ -17904,8 +18579,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10680.669,17.274235,12579.616};
-						angles[]={6.2352223,0,0.0053265258};
+						position[]={10681.334,16.448021,12568.495};
+						angles[]={6.2073317,0,6.2791886};
 					};
 					side="Independent";
 					flags=6;
@@ -17913,21 +18588,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpAAF_TNK1 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehAAF_TNK1;";
+						init="GrpAAF_TNK1 = group this; [""vc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TNK1_C";
 						description="AAF Tank 1 Commander";
 						isPlayable=1;
 					};
 					id=656;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10685.669,17.221672,12577.966};
-						angles[]={6.2352223,0,0.0053265258};
+						position[]={10681.334,16.448021,12568.495};
+						angles[]={6.2073317,0,6.2791886};
 					};
 					side="Independent";
 					flags=4;
@@ -17935,38 +18633,127 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpAAF_TNK1 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehAAF_TNK1;";
+						init="GrpAAF_TNK1 = group this; [""vg"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TNK1_G";
 						description="AAF Tank 1 Gunner";
 						isPlayable=1;
 					};
 					id=657;
 					type="I_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10675.669,16.993015,12577.966};
-						angles[]={6.212636,0,0.047963165};
+						position[]={10681.334,16.448021,12568.495};
+						angles[]={6.2073317,0,6.2791886};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpAAF_TNK1 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehAAF_TNK1;";
+						init="GrpAAF_TNK1 = group this; [""vd"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TNK1_D";
 						description="AAF Tank 1 Driver (Repair)";
 						isPlayable=1;
 					};
 					id=658;
 					type="I_Soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=656;
+						item1=36;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0,0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=657;
+						item1=36;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=658;
+						item1=36;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
 			};
 			id=655;
 		};
@@ -17982,8 +18769,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10633.958,15.362844,12539.768};
-						angles[]={0.0039967569,0,0.0093286335};
+						position[]={10633.278,15.380282,12531.515};
+						angles[]={6.2605233,0,6.2818484};
 					};
 					side="Independent";
 					flags=6;
@@ -17991,22 +18778,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpAAF_TH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehAAF_TH1;";
+						init="GrpAAF_TH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH1_P";
 						description="AAF Transport Helo 1 Pilot";
 						isPlayable=1;
 					};
 					id=660;
 					type="I_helipilot_F";
-					atlOffset=9.5367432e-007;
+					atlOffset=-9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10638.958,15.337702,12538.117};
-						angles[]={6.2711854,0,6.2805333};
+						position[]={10633.278,15.380282,12531.515};
+						angles[]={6.2605233,0,6.2818484};
 					};
 					side="Independent";
 					flags=4;
@@ -18014,20 +18824,76 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpAAF_TH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehAAF_TH1,[0]];";
+						init="GrpAAF_TH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH1_CP";
 						description="AAF Transport Helo 1 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=661;
 					type="I_Soldier_repair_F";
+					atlOffset=-9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=660;
+						item1=2;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=661;
+						item1=2;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
 			id=659;
-			atlOffset=9.5367432e-007;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item277
 		{
@@ -18041,8 +18907,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10658.304,15.464508,12539.768};
-						angles[]={6.2219291,0,0.025327841};
+						position[]={10657.626,15.153546,12531.515};
+						angles[]={6.2299027,0,0.029324362};
 					};
 					side="Independent";
 					flags=6;
@@ -18050,21 +18916,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpAAF_TH2 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehAAF_TH2;";
+						init="GrpAAF_TH2 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH2_P";
 						description="AAF Transport Helo 2 Pilot";
 						isPlayable=1;
 					};
 					id=663;
 					type="I_helipilot_F";
+					atlOffset=-2.1934509e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10663.304,15.490003,12538.117};
-						angles[]={6.2219291,0,0.025327841};
+						position[]={10657.626,15.153546,12531.515};
+						angles[]={6.2299027,0,6.2618566};
 					};
 					side="Independent";
 					flags=4;
@@ -18072,19 +18962,76 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpAAF_TH2 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehAAF_TH2,[0]];";
+						init="GrpAAF_TH2 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH2_CP";
 						description="AAF Transport Helo 2 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=664;
 					type="I_Soldier_repair_F";
+					atlOffset=-2.1934509e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=663;
+						item1=15;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=664;
+						item1=15;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
 			id=662;
+			atlOffset=-2.1934509e-005;
 		};
 		class Item278
 		{
@@ -18098,8 +19045,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10682.738,15.178512,12540.509};
-						angles[]={6.247201,0,0.043970551};
+						position[]={10682.061,15.023348,12532.256};
+						angles[]={6.2738504,0,0.065240532};
 					};
 					side="Independent";
 					flags=6;
@@ -18107,21 +19054,44 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpAAF_TH3 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehAAF_TH3;";
+						init="GrpAAF_TH3 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH3_P";
 						description="AAF Transport Helo 3 Pilot";
 						isPlayable=1;
 					};
 					id=666;
 					type="I_helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10687.738,15.37239,12538.858};
-						angles[]={0.0013372133,0,6.2805333};
+						position[]={10682.061,15.023348,12532.256};
+						angles[]={0.013332055,0,0.042640556};
 					};
 					side="Independent";
 					flags=4;
@@ -18129,17 +19099,72 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpAAF_TH3 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehAAF_TH3,[0]];";
+						init="GrpAAF_TH3 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH3_CP";
 						description="AAF Transport Helo 3 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=667;
 					type="I_Soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=666;
+						item1=16;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=667;
+						item1=16;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
 			};
 			id=665;
 		};
@@ -18155,8 +19180,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10707.631,15.737354,12540.692};
-						angles[]={6.2551947,0,0.034652505};
+						position[]={10706.955,15.449943,12532.439};
+						angles[]={6.2578578,0,0.015998369};
 					};
 					side="Independent";
 					flags=6;
@@ -18164,21 +19189,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpAAF_TH4 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehAAF_TH4;";
+						init="GrpAAF_TH4 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH4_P";
 						description="AAF Transport Helo 4 Pilot";
 						isPlayable=1;
 					};
 					id=669;
 					type="I_helipilot_F";
+					atlOffset=-7.6293945e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10712.631,15.833488,12539.042};
-						angles[]={6.2418742,0,0.027993103};
+						position[]={10706.955,15.449943,12532.439};
+						angles[]={6.2618566,0,0.015998369};
 					};
 					side="Independent";
 					flags=4;
@@ -18186,20 +19235,76 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpAAF_TH4 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehAAF_TH4,[0]];";
+						init="GrpAAF_TH4 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH4_CP";
 						description="AAF Transport Helo 4 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=670;
 					type="I_Soldier_repair_F";
-					atlOffset=9.5367432e-007;
+					atlOffset=-7.6293945e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=669;
+						item1=17;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=670;
+						item1=17;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
 			id=668;
+			atlOffset=-7.6293945e-006;
 		};
 		class Item280
 		{
@@ -18213,8 +19318,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10734.418,16.130016,12540.223};
-						angles[]={6.2418742,0,6.2578578};
+						position[]={10733.739,15.810931,12531.97};
+						angles[]={6.2445378,0,6.2605233};
 					};
 					side="Independent";
 					flags=6;
@@ -18222,21 +19327,45 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="GrpAAF_AH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehAAF_AH1;";
+						init="GrpAAF_AH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_AH1_P";
 						description="AAF Attack Helo 1 Pilot";
 						isPlayable=1;
 					};
 					id=672;
 					type="I_helipilot_F";
+					atlOffset=-9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10739.418,15.939065,12538.572};
-						angles[]={6.2445378,0,6.2578578};
+						position[]={10733.739,15.810932,12531.97};
+						angles[]={6.2445378,0,6.2605233};
 					};
 					side="Independent";
 					flags=4;
@@ -18244,17 +19373,72 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpAAF_AH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehAAF_AH1,[0]];";
+						init="GrpAAF_AH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_AH1_CP";
 						description="AAF Attack Helo 1 Co-Pilot (Repair)";
 						isPlayable=1;
 					};
 					id=673;
 					type="I_Soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
 			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=672;
+						item1=37;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=673;
+						item1=37;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
 			};
 			id=671;
 		};
