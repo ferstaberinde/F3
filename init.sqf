@@ -33,10 +33,11 @@ f_script_briefing = [] execVM "briefing.sqf";
 
 // ====================================================================================
 
+// TODO REMOVE
 // F3 - F3 Folk ARPS Group IDs
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_setGroupIDs = [] execVM "f\setGroupID\f_setGroupIDs.sqf";
+// f_script_setGroupIDs = [] execVM "f\setGroupID\f_setGroupIDs.sqf";
 
 // ====================================================================================
 
@@ -67,6 +68,13 @@ f_script_setGroupMarkers = [] execVM "f\groupMarkers\f_setLocalGroupMarkers.sqf"
 if(isServer) then {
 	f_script_setLocalVars = [] execVM "f\common\f_setLocalVars.sqf";
 };
+
+// ====================================================================================
+
+// F3 - F3 Mission Conditions Selector
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+f_script_setMissionConditions = [] execVM "f\missionConditions\f_setMissionConditions.sqf";
 
 // ====================================================================================
 

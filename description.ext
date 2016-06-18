@@ -181,18 +181,22 @@ class Params
 		values[] = {0,1,2,3,4,5,6,7,8,9};
 		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option11};
 		default = 0;
-		function = "f_fnc_setWeather";		// This function is called to apply the values
-		isGlobal = 0;						// Execute this only on the server
 	};
 
 	class f_param_fog
 	{
-		title = "Fog";
+		title = "Override Fog";
 		values[] = {0,1,2,4};
-		texts[] = {"None","Light","Heavy","Use mission settings"};
-		default = 0;
-		function = "f_fnc_SetFog";			// This function is called to apply the values
-		isGlobal = 0;						// Execute this only on the server
+		texts[] = {"No Fog","Light Fog","Heavy Fog","Use default"};
+		default = 4;
+	};
+
+	class f_param_wind
+	{
+		title = "Override Wind";
+		values[] = {0,1,2,4};
+		texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
+		default = 4;
 	};
 
     class f_param_timeOfDay
@@ -371,115 +375,8 @@ class CfgRespawnTemplates
 
 class CfgFunctions
 {
-	class F // Defines the "owner"
-	{
-		class common // category
-		{
-			file = "f\common";
-			class processParamsArray{preInit = 1; postInit=1;};
-			class nearPlayer{};
-		};
-		class mpEnd
-		{
-			file = "f\mpEnd";
-			class mpEnd{};
-			class mpEndReceiver{};
-		};
-		class assignGear
-		{
-			// Defines the functions to preInit the compling of the assignGear function used by units.
-			file = "f\assignGear";
-			class assignGear{};
-		};
-		class setGroupID
-		{
-			file = "f\setGroupID";
-			class setGroupID{};
-		};
-		class missionConditions
-		{
-			file = "f\missionConditions";
-			class SetTime{};
-			class SetFog{};
-			class SetWeather{};
-		};
-		class cache
-		{
-			file = "f\cache";
-			class cInit {};
-			class cTracker {};
-			class gCache {};
-			class gUncache {};
-		};
-		class groupMarkers {
-			file = "f\groupMarkers";
-			class localGroupMarker{};
-			class localSpecialistMarker{};
-		};
-		class authorisedCrew
-		{
-			file = "f\authorisedCrew";
-			class authorisedCrewCheck {};
-		};
-		class FTMemberMarkers
-		{
-			file = "f\FTMemberMarkers";
-			class SetLocalFTMemberMarkers{};
-			class GetMarkerColor{};
-			class LocalFTMarkerSync{};
-		};
-		class bodyRemoval
-		{
-			file = "f\removeBody";
-			class removeBody{};
-		};
-		class setAISkill
-		{
-			file = "f\setAISKill";
-			class setAISKill{};
-		};
-		class mapClickTeleport
-		{
-			file = "f\mapClickTeleport";
-			class mapClickTeleportUnit{};
-			class mapClickTeleportGroup{};
-		};
-		class nametag
-		{
-			file = "f\nametag";
-			class drawNameTag{};
-		};
-		class preMount
-		{
-			file = "f\preMount";
-			class mountGroups{};
-		};
-		class zeus
-		{
-			file = "f\zeus";
-			class zeusInit{};
-			class zeusAddAddons{};
-			class zeusAddObjects{};
-		};
-		class tfr
-		{
-			file = "f\radios\tfr";
-			class tfr_removeRadios{};
-			class tfr_addRadios{};
-			class tfr_setRadioFrequencies{};
-			class tfr_configureSpectatorChat{};
-		};
-		class safeStart
-		{
-			file = "f\safeStart";
-			class safety{};
-		};
-		#include "f\simplewoundingsystem\config.hpp"
-		#include "f\spect\functions.hpp"
-
-	};
+	#include "f\common\functions.hpp"
 };
-
 
 // ============================================================================================
 

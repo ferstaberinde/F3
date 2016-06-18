@@ -20,7 +20,7 @@ _skillarray = _skillset; // If _skillset is not an array of skills, _skillarray 
 // FAULT CHECK
 // If f_setAISkill.sqf has not been run exit with an error message
 
-if ((isNil "f_var_skillSet") || (isNil "f_var_skillRandom")) exitWith {systemchat "F3 SetAISkill DBG: f_setAISkill.sqf needs to run before calling f_fnc_setAISkill!"};
+if ((isNil "f_var_skillSet") || (isNil "f_var_skillRandom")) exitWith {};
 
 // ====================================================================================
 
