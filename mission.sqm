@@ -4889,7 +4889,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpNATO_CO = group this; [""co"",this] call f_fnc_assignGear;";
+						init="[""co"",this] call f_fnc_assignGear;";
 						name="UnitNATO_CO";
 						description="NATO Commander";
 						isPlayable=1;
@@ -4911,7 +4911,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="GrpNATO_CO = group this; [""jtac"",this] call f_fnc_assignGear;";
+						init="[""jtac"",this] call f_fnc_assignGear;";
 						name="UnitNATO_CO_JTAC";
 						description="NATO JTAC";
 						isPlayable=1;
@@ -4933,7 +4933,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpNATO_CO = group this; [""uav"",this] call f_fnc_assignGear;";
+						init="[""uav"",this] call f_fnc_assignGear;";
 						name="UnitNATO_CO_UAV";
 						description="NATO UAV Operator";
 						isPlayable=1;
@@ -4954,7 +4954,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpNATO_CO = group this; [""m"",this] call f_fnc_assignGear;";
+						init="[""m"",this] call f_fnc_assignGear;";
 						name="UnitNATO_CO_M";
 						description="NATO Medic";
 						isPlayable=1;
@@ -4965,8 +4965,32 @@ class Mission
 			};
 			class Attributes
 			{
+				name="GrpNATO_CO";
 			};
 			id=190;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NATO CO";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item135
 		{
@@ -8376,7 +8400,7 @@ class Mission
 						skill=0.60000002;
 						rank="LIEUTENANT";
 						lock="UNLOCKED";
-						init="GrpCSAT_CO = group this; [""co"",this] call f_fnc_assignGear;";
+						init="[""co"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CO";
 						description="CSAT Commander";
 						isPlayable=1;
@@ -8398,7 +8422,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpCSAT_CO = group this; [""jtac"",this] call f_fnc_assignGear;";
+						init="[""jtac"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CO_JTAC";
 						description="CSAT JTAC";
 						isPlayable=1;
@@ -8420,7 +8444,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpCSAT_CO = group this; [""uav"",this] call f_fnc_assignGear;";
+						init="[""uav"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CO_UAV";
 						description="CSAT UAV Operator";
 						isPlayable=1;
@@ -8441,7 +8465,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpCSAT_CO = group this; [""m"",this] call f_fnc_assignGear;";
+						init="[""m"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CO_M";
 						description="CSAT Medic";
 						isPlayable=1;
@@ -8452,8 +8476,32 @@ class Mission
 			};
 			class Attributes
 			{
+				name="GrpCSAT_CO";
 			};
 			id=367;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CSAT CO";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item175
 		{
@@ -11610,7 +11658,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpAAF_CO = group this; [""co"",this] call f_fnc_assignGear;";
+						init="[""co"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CO";
 						description="AAF Commander";
 						isPlayable=1;
@@ -11631,7 +11679,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpAAF_CO = group this; [""jtac"",this] call f_fnc_assignGear;";
+						init="[""jtac"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CO_JTAC";
 						description="AAF Forward Observer";
 						isPlayable=1;
@@ -11652,7 +11700,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpAAF_CO = group this; [""uav"",this] call f_fnc_assignGear;";
+						init="[""uav"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CO_UAV";
 						description="AAF UAV Operator";
 						isPlayable=1;
@@ -11673,7 +11721,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpAAF_CO = group this; [""m"",this] call f_fnc_assignGear;";
+						init="[""m"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CO_M";
 						description="AAF Medic";
 						isPlayable=1;
@@ -11684,8 +11732,32 @@ class Mission
 			};
 			class Attributes
 			{
+				name="GrpAAF_CO";
 			};
 			id=530;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="AAF CO";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item215
 		{
@@ -14503,7 +14575,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="GrpFIA_CO = group this; [""co"",this,""ctrg""] call f_fnc_assignGear;";
+						init="[""co"",this,""ctrg""] call f_fnc_assignGear;";
 						name="UnitFIA_CO";
 						description="CTRG Commander";
 						isPlayable=1;
@@ -14525,7 +14597,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="GrpFIA_CO = group this; [""jtac"",this,""ctrg""] call f_fnc_assignGear;";
+						init="[""jtac"",this,""ctrg""] call f_fnc_assignGear;";
 						name="UnitFIA_CO_JTAC";
 						description="CTRG JTAC";
 						isPlayable=1;
@@ -14546,7 +14618,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpFIA_CO = group this; [""uav"",this] call f_fnc_assignGear;";
+						init="[""uav"",this] call f_fnc_assignGear;";
 						name="UnitFIA_CO_UAV";
 						description="FIA UAV Operator";
 						isPlayable=1;
@@ -14568,7 +14640,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="GrpFIA_CO = group this; [""m"",this] call f_fnc_assignGear;";
+						init="[""m"",this] call f_fnc_assignGear;";
 						name="UnitFIA_CO_M";
 						description="FIA Medic";
 						isPlayable=1;
@@ -14580,8 +14652,32 @@ class Mission
 			};
 			class Attributes
 			{
+				name="GrpFIA_CO";
 			};
 			id=679;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="FIA CO";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item251
 		{
