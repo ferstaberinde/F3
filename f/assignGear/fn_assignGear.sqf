@@ -124,6 +124,16 @@ _unit setVariable ["f_var_assignGear_done",true,true];
 
 // ====================================================================================
 
+// GEAR: INDEPEDENT > SYNDIKAT
+// The following block of code executes only if the unit is manually assigned the Syndikat faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction =="ind_c_f") then {
+	#include "f_assignGear_syndikat.sqf"
+};
+
+// ====================================================================================
+
 // DEBUG
 
 // ====================================================================================

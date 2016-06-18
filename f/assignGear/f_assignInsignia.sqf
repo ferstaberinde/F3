@@ -2,7 +2,7 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-private _badge = ""; 
+private _badge = "";
 params ["_unit", "_typeOfUnit"];
 private _faction = toLower (faction _unit);
 
@@ -24,11 +24,11 @@ private _roleBadge = switch (_typeofUnit) do
 	case "m":
 	{
 		switch (_faction) do
-		{	
+		{
 			case "blu_f": {"NATO_Medic_Badge"};
 			case "opf_f": {"CSAT_Medic_Badge"};
 			case "ind_f": {"AAF_Medic_Badge"};
-			default {"NATO_Medic_Badge"};			
+			default {"NATO_Medic_Badge"};
 		};
 	};
 	default {""};
@@ -42,7 +42,7 @@ private _roleBadge = switch (_typeofUnit) do
 private _groupBadges = [];
 
 switch (_faction) do
-{	
+{
 	case "blu_f" : {
 		_groupBadges = [
 			["GrpNATO_ASL","NATO_ASL_Badge"],
@@ -151,7 +151,24 @@ switch (_faction) do
 			["GrpIFIA_DC","NATO_DC_Badge"]
 		];
 	};
-
+	case "ind_c_f" :{
+		_groupBadges = [
+			["GrpSyndikat_ASL","NATO_ASL_Badge"],
+			["GrpSyndikat_A1","NATO_A1_Badge"],
+			["GrpSyndikat_A2","NATO_A2_Badge"],
+			["GrpSyndikat_A3","NATO_A3_Badge"],
+			["GrpSyndikat_BSL","NATO_BSL_Badge"],
+			["GrpSyndikat_B1","NATO_B1_Badge"],
+			["GrpSyndikat_B2","NATO_B2_Badge"],
+			["GrpSyndikat_B3","NATO_B3_Badge"],
+			["GrpSyndikat_CSL","NATO_CSL_Badge"],
+			["GrpSyndikat_C1","NATO_C1_Badge"],
+			["GrpSyndikat_C2","NATO_C2_Badge"],
+			["GrpSyndikat_C3","NATO_C3_Badge"],
+			["GrpSyndikat_CO","NATO_CO_Badge"],
+			["GrpSyndikat_DC","NATO_DC_Badge"]
+		];
+	};
 };
 
 // ====================================================================================
@@ -187,7 +204,7 @@ if (_badge != "") then {
 	private _cfgTexture = [["CfgUnitInsignia",_badge],configfile] call bis_fnc_loadclass;
 	if (_cfgTexture == configfile) exitwith {["'%1' not found in CfgUnitInsignia",_badge] call bis_fnc_error; false};
 	private _texture = gettext (_cfgTexture >> "texture");
-	
+
 	private _index = -1;
 	{
 		if (_x == "insignia") exitwith {_index = _foreachindex;};
