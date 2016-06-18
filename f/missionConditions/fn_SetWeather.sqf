@@ -4,14 +4,16 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_weather","_missionOvercast","_MissionRain","_MissionRainbow","_MissionLightnings","_MissionWindStr","_MissionWindGusts","_MissionWaves","_MissionHumidity"];
+private ["_missionOvercast","_MissionRain","_MissionRainbow","_MissionLightnings","_MissionWindStr","_MissionWindGusts","_MissionWaves","_MissionHumidity"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
-_weather = _this select 0;
+params [["_weather",9,[0]],["_setFog",true,[true]],["_setWind",true,[true]]];
+
+systemChat format ["%1",_this];
 
 // Exit when using mission settings
 if ( _weather == 9 ) exitWith {};
@@ -22,10 +24,13 @@ _MissionOvercast = 0;
 _MissionRain = 0;
 _MissionRainbow = 0;
 _MissionLightnings = 0;
-_MissionWindStr = 0;
-_MissionWindGusts = 0;
+_MissionWindStr = 0.01;
+_MissionWindGusts = 0.01;
 _MissionWaves = 0;
 _MissionHumidity = 0;
+_MissionFogStrength = 0;
+_MissionFogDecay = 0;
+_MissionFogBase = 0;
 
 // ====================================================================================
 
@@ -34,22 +39,25 @@ _MissionHumidity = 0;
 
 switch (_weather) do
 {
-// Clear (Calm)
+// Clear
 	case 0:
 	{
 		_MissionOvercast = 0;
 		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
-		_MissionWindStr = 0;
-		_MissionWindGusts = 0;
+		_MissionWindStr = 0.01;
+		_MissionWindGusts = 0.01;
 		_MissionWaves = 0;
 		_MissionHumidity = 0;
+		_MissionFogStrength = 0;
+		_MissionFogDecay = 0;
+		_MissionFogBase = 0;
 	};
-// Clear (Light Winds)
+// Cloudy
 	case 1:
 	{
-		_MissionOvercast = 0.01;
+		_MissionOvercast = 0.25;
 		_MissionRain = 0;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
@@ -57,34 +65,13 @@ switch (_weather) do
 		_MissionWindGusts = 0.5;
 		_MissionWaves = 0.25;
 		_MissionHumidity = 0.2;
+		_MissionFogStrength = 0;
+		_MissionFogDecay = 0;
+		_MissionFogBase = 0;
 	};
-// Clear (Strong Winds)
+// Mostly Cloudy
 	case 2:
 	{
-		_MissionOvercast = 0.01;
-		_MissionRain = 0;
-		_MissionRainbow = 0;
-		_MissionLightnings = 0;
-		_MissionWindStr = 0.75;
-		_MissionWindGusts = 1;
-		_MissionWaves = 0.75;
-		_MissionHumidity = 0.2;
-	};
-// Overcast (Calm)
-	case 3:
-	{
-		_MissionOvercast = 0.55;
-		_MissionRain = 0;
-		_MissionRainbow = 0;
-		_MissionLightnings = 0;
-		_MissionWindStr = 0;
-		_MissionWindGusts = 0;
-		_MissionWaves = 0.1;
-		_MissionHumidity = 0.2;
-	};
-// Overcast (Light Winds)
-	case 4:
-	{
 		_MissionOvercast = 0.55;
 		_MissionRain = 0;
 		_MissionRainbow = 0;
@@ -93,42 +80,84 @@ switch (_weather) do
 		_MissionWindGusts = 0.5;
 		_MissionWaves = 0.25;
 		_MissionHumidity = 0.2;
+		_MissionFogStrength = 0;
+		_MissionFogDecay = 0;
+		_MissionFogBase = 0;
 	};
-// Overcast (Strong Winds)
+// Overcast
+	case 3:
+	{
+		_MissionOvercast = 1;
+		_MissionRain = 0;
+		_MissionRainbow = 0;
+		_MissionLightnings = 0;
+		_MissionWindStr = 0.25;
+		_MissionWindGusts = 0.5;
+		_MissionWaves = 0.25;
+		_MissionHumidity = 0.2;
+		_MissionFogStrength = 0;
+		_MissionFogDecay = 0;
+		_MissionFogBase = 0;
+	};
+// Foggy
+	case 4:
+	{
+		_MissionOvercast = 0.9;
+		_MissionRain = 0;
+		_MissionRainbow = 0;
+		_MissionLightnings = 0;
+		_MissionWindStr = 0.25;
+		_MissionWindGusts = 0.5;
+		_MissionWaves = 0.25;
+		_MissionHumidity = 0.2;
+		_MissionFogStrength = 0.3;
+		_MissionFogDecay = 0;
+		_MissionFogBase = 0;
+	};
+// Showers
 	case 5:
 	{
 		_MissionOvercast = 0.55;
-		_MissionRain = 0;
-		_MissionRainbow = 0;
-		_MissionLightnings = 0;
-		_MissionWindStr = 0.75;
-		_MissionWindGusts = 1;
-		_MissionWaves = 0.75;
-		_MissionHumidity = 0.2;
-	};
-// Rain (Light Winds)
-	case 6:
-	{
-		_MissionOvercast = 1;
-		_MissionRain = 1;
-		_MissionRainbow = 0;
+		_MissionRain = 0.1;
+		_MissionRainbow = 0.6;
 		_MissionLightnings = 0;
 		_MissionWindStr = 0.25;
 		_MissionWindGusts = 0.5;
-		_MissionWaves = 0.75;
-		_MissionHumidity = 0.9;
+		_MissionWaves = 0.25;
+		_MissionHumidity = 0.2;
+		_MissionFogStrength = 0.03;
+		_MissionFogDecay = 0;
+		_MissionFogBase = 0;
 	};
-// Rain (Strong Winds)
+// Light Rain
+	case 6:
+	{
+		_MissionOvercast = 1;
+		_MissionRain = 0.2;
+		_MissionRainbow = 0.4;
+		_MissionLightnings = 0;
+		_MissionWindStr = 0.25;
+		_MissionWindGusts = 0.5;
+		_MissionWaves = 0.25;
+		_MissionHumidity = 0.9;
+		_MissionFogStrength = 0.05;
+		_MissionFogDecay = 0;
+		_MissionFogBase = 0;
+	};
+// Heavy Rain
 	case 7:
 	{
 		_MissionOvercast = 1;
-		_MissionRain = 1;
+		_MissionRain = 0.8;
 		_MissionRainbow = 0;
 		_MissionLightnings = 0;
-		_MissionWindStr = 0.75;
+		_MissionWindStr = 0.5;
 		_MissionWindGusts = 1;
-		_MissionWaves = 0.75;
+		_MissionWaves = 0.6;
 		_MissionHumidity = 0.9;
+		_MissionFogStrength = 0.15;
+		_MissionFogDecay = 0;
+		_MissionFogBase = 0;
 	};
 // Storm
 	case 8:
@@ -141,6 +170,9 @@ switch (_weather) do
 		_MissionWindGusts = 1;
 		_MissionWaves = 1;
 		_MissionHumidity = 1;
+		_MissionFogStrength = 0.2;
+		_MissionFogDecay = 0;
+		_MissionFogBase = 0;
 	};
 };
 
@@ -155,19 +187,29 @@ if (typeName _transition == typeName 0) then {
 _transition setOvercast  _MissionOvercast;
 _transition setRain _MissionRain;
 _transition setRainbow _MissionRainbow;
-_transition setWindStr  _MissionWindStr;
-_transition setWindForce _MissionWindGusts;
-_transition setWaves _MissionWaves;
 _transition setLightnings _MissionLightnings;
+if (_setWind) then {
+	_transition setWindStr  _MissionWindStr;
+	_transition setWindForce _MissionWindGusts;
+	_transition setWaves _MissionWaves;
+};
+if (_setFog) then {
+	_transition setFog [_MissionFogStrength,_MissionFogDecay,_MissionFogBase];
+};
 
 } else {
 	0 setOvercast  _MissionOvercast;
 	0 setRain _MissionRain;
 	0 setRainbow _MissionRainbow;
-	0 setWindStr  _MissionWindStr;
-	0 setWindForce _MissionWindGusts;
-	0 setWaves _MissionWaves;
 	0 setLightnings _MissionLightnings;
+	if (_setWind) then {
+		0 setWindStr  _MissionWindStr;
+		0 setWindForce _MissionWindGusts;
+		0 setWaves _MissionWaves;
+	};
+	if (_setFog) then {
+		0 setFog [_MissionFogStrength,_MissionFogDecay,_MissionFogBase];
+	};
 	forceWeatherChange;
 };
 

@@ -70,6 +70,13 @@ if(isServer) then {
 
 // ====================================================================================
 
+// F3 - F3 Mission Conditions Selector
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+f_script_setMissionConditions = [] execVM "f\missionConditions\f_setMissionConditions.sqf";
+
+// ====================================================================================
+
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 

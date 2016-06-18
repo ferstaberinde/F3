@@ -181,18 +181,22 @@ class Params
 		values[] = {0,1,2,3,4,5,6,7,8,9};
 		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option11};
 		default = 0;
-		function = "f_fnc_setWeather";		// This function is called to apply the values
-		isGlobal = 0;						// Execute this only on the server
 	};
 
 	class f_param_fog
 	{
-		title = "Fog";
+		title = "Override Fog";
 		values[] = {0,1,2,4};
-		texts[] = {"None","Light","Heavy","Use mission settings"};
-		default = 0;
-		function = "f_fnc_SetFog";			// This function is called to apply the values
-		isGlobal = 0;						// Execute this only on the server
+		texts[] = {"No Fog","Light Fog","Heavy Fog","Use default"};
+		default = 4;
+	};
+
+	class f_param_wind
+	{
+		title = "Override Wind";
+		values[] = {0,1,2,4};
+		texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
+		default = 4;
 	};
 
     class f_param_timeOfDay

@@ -88,31 +88,31 @@
       </Key>
       <Key ID="STR_f_param_weather">
         <English> Weather </English>
-	<French> Météo </English>
+        <French> Météo </English>
       </Key>
       <Key ID="STR_f_param_weather_Option0">
-        <English> Clear (Calm)</English>
+        <English> Clear</English>
       </Key>
       <Key ID="STR_f_param_weather_Option1">
-        <English> Clear (Light Winds)</English>
+        <English> Cloudy</English>
       </Key>
       <Key ID="STR_f_param_weather_Option2">
-        <English> Clear (Strong Winds)</English>
+        <English> Mostly Cloudy</English>
       </Key>
       <Key ID="STR_f_param_weather_Option3">
-        <English> Overcast (Calm)</English>
+        <English> Overcast</English>
       </Key>
       <Key ID="STR_f_param_weather_Option4">
-        <English> Overcast (Light Winds)</English>
+        <English> Foggy</English>
       </Key>
       <Key ID="STR_f_param_weather_Option5">
-        <English> Overcast (Strong Winds)</English>
+        <English> Showers</English>
       </Key>
       <Key ID="STR_f_param_weather_Option6">
-        <English> Rain (Light Winds)</English>
+        <English> Light Rain</English>
       </Key>
       <Key ID="STR_f_param_weather_Option7">
-        <English> Rain (Strong Winds)</English>
+        <English> Heavy Rain</English>
       </Key>
       <Key ID="STR_f_param_weather_Option8">
         <English> Storm </English>
