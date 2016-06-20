@@ -139,7 +139,15 @@
         <English> Use mission setting </English>
         <Polish> Użyj ustawień misji </Polish>
       </Key>
-      <Key ID="STR_f_param_weather_Option9">
+      <Key ID="$STR_f_param_fog">
+        <English> Fog settings </English>
+        <Polish> Ustawienia mgły </Polish>
+      </Key>    
+      <Key ID="$STR_f_param_fog_Option1">
+        <English> No fog </English>
+        <Polish> Bez mgły </Polish>
+      </Key>
+      <Key ID="$STR_f_param_fog_Option2">
         <English> Light Fog </English>
         <Czech> Slabá mlha </Czech>
         <German> Leichter Nebel </German>
@@ -148,7 +156,7 @@
         <Spanish> Bruma </Spanish>
         <French> Brume </French>
       </Key>
-      <Key ID="STR_f_param_weather_Option10">
+      <Key ID="$STR_f_param_fog_Option3">
         <English> Heavy Fog </English>
         <Czech> Hustá mlha </Czech>
         <German> Dichter Nebel </German>
@@ -156,6 +164,22 @@
         <Russian> Густой туман </Russian>
         <Spanish> Niebla </Spanish>
         <French> Brouillard </French>
+      </Key>
+      <Key ID="$STR_f_param_wind">
+        <English> Wind settings </English>
+        <Polish> Ustawienia wiatru </Polish>
+      </Key>
+      <Key ID="$STR_f_param_wind_Option1">
+        <English> No wind </English>
+        <Polish> Bez wiatru </Polish>
+      </Key>
+      <Key ID="$STR_f_param_wind_Option2">
+        <English> Light Wind </English>
+        <Polish> Słaby wiatr </Polish>
+      </Key>
+      <Key ID="$STR_f_param_wind_Option3">
+        <English> Heavy Wind </English>
+        <Polish> Śilny wiatr </Polish>
       </Key>
       <Key ID="STR_f_param_AISkill_BLUFOR">
         <English> AI Skill (BLUFOR) </English>
