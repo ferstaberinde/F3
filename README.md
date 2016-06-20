@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-3-0
+* Version: 3-4-0
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-4-0     | DD MMM 2016 | Patch release - APEX support and various improvements (see change history).
 * 3-3-0     | 25 APR 2015 | Patch release - Various improvements (see change history).
 * 3-3-0 RC2 | 18 APR 2015 | Internal release - Various improvements (see change history). 
 * 3-3-0 RC1 | 08 APR 2015 | Internal release - Various improvements (see change history).
@@ -146,7 +147,7 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers | SuicideKing | Pasrules | darkChozo | Przemro
 * Documentation: Fer | Wolfenswan | Dogface | Cam | Head | cptnnick | Snippers
 * Producers: Fer | Wolfenswan
 * Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Zerith | Bear | JonBons | Poulern | Chairborn | captainblaffer
@@ -172,7 +173,7 @@ Version | Date | Notes
 
 ## 03. COPYRIGHT STATEMENT ##
 
-F3 is composed of many components. Each component is (c) 2007/2008/2009/2010/2011/2012/2013/2014 its respective contributor(s). All rights reserved.
+F3 is composed of many components. Each component is (c) 2007/2008/2009/2010/2011/2012/2013/2014/2015/2016 its respective contributor(s). All rights reserved.
 
 
 
@@ -236,6 +237,10 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-4-0 | DD MMM 2016
+
+* PLACEHOLDER
 
 3-3-0 | 25 APR 2015
 
