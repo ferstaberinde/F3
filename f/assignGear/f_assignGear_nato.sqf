@@ -36,6 +36,7 @@
 //		pp			- air vehicle pilot / co-pilot
 //		pcc			- air vehicle co-pilot (repair) / crew chief (repair)
 //		pc			- air vehicle crew
+//      jp          - jet pilot
 //		eng			- engineer (demo)
 //		engm		- engineer (mines)
 //		uav			- UAV operator"
@@ -237,7 +238,7 @@ _APmine2 = "APERSMine_Range_Mag";
 _light = [];
 _heavy =  ["eng","engm"];
 _diver = ["div"];
-_pilot = ["pp","pcc","pc"];
+_pilot = ["pp","pcc","pc","jp"];
 _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
@@ -728,6 +729,18 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smgmag,5];
 		_unit addweapon _smg;
 		_unit addmagazines [_smokegrenade,2];
+	};
+	
+// LOADOUT: Jet Pilot
+    case "jp":
+    {
+	    _unit addUniform "U_B_PilotCoveralls";
+		_unit addHeadgear "H_PilotHelmetFighter_B";
+		_unit addmagazines [_smgmag,5];
+		_unit addweapon _smg;
+		_attachments = [];
+		_unit addmagazines [_smokegrenade,2];
+		_unit linkItem "ItemGPS";
 	};
 
 // LOADOUT: ENGINEER (DEMO)
