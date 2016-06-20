@@ -1,4 +1,4 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- This document was created with Syntext Serna Free. -->
 <Project ID="Arma3">
   <Package ID="Missions">
@@ -14,16 +14,18 @@
       </Key>
       <Key ID="STR_f_param_loadouts">
         <English> Loadouts </English>
+        <Polish> Wyposażenie </Polish>
       </Key>
       <Key ID="STR_f_param_timeOfDay">
         <English> Time of Day </English>
 	<French> Heure de la journée </French>
+	<Polish> Pora dnia </Polsih>
       </Key>
       <Key ID="STR_f_param_timeOfDay_Option0">
         <English> Dawn </English>
         <Czech> Svítání </Czech>
         <German> Morgendämmerung </German>
-        <Polish> Swit </Polish>
+        <Polish> Świt </Polish>
         <Russian> Рассвет </Russian>
         <Spanish> Amanecer </Spanish>
         <French> Aube </French>
@@ -46,7 +48,7 @@
         <English> Noon </English>
         <Czech> Poledne </Czech>
         <German> Mittag </German>
-        <Polish> Poludnie </Polish>
+        <Polish> Południe </Polish>
         <Russian> Полдень </Russian>
         <Spanish> Mediodía </Spanish>
         <French> Midi </French>
@@ -85,34 +87,44 @@
       </Key>
       <Key ID="STR_f_param_timeOfDay_Option8">
         <English> Use mission settings </English>
+        <Polish> Użyj ustawień misji </Polish>
       </Key>
       <Key ID="STR_f_param_weather">
         <English> Weather </English>
-        <French> Météo </English>
+	<French> Météo </English>
+	<Polish> Pogoda </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option0">
         <English> Clear</English>
+        <Polish> Bezchmurnie</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option1">
         <English> Cloudy</English>
+        <Polish> Lekkie zachmurzenie</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option2">
         <English> Mostly Cloudy</English>
+        <Polish> Pochmurno</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option3">
         <English> Overcast</English>
+        <Polish> Zachmurzenie</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option4">
         <English> Foggy</English>
+        <Polish> Mgla </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option5">
         <English> Showers</English>
+        <Polish> Lekki deszcz</Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option6">
         <English> Light Rain</English>
+        <Polish> Deszcz </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option7">
         <English> Heavy Rain</English>
+        <Polish> Ulewa </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option8">
         <English> Storm </English>
@@ -125,12 +137,13 @@
       </Key>
       <Key ID="STR_f_param_weather_Option11">
         <English> Use mission setting </English>
+        <Polish> Użyj ustawień misji </Polish>
       </Key>
       <Key ID="STR_f_param_weather_Option9">
         <English> Light Fog </English>
         <Czech> Slabá mlha </Czech>
         <German> Leichter Nebel </German>
-        <Polish> Lekka Mgla </Polish>
+        <Polish> Rzadka Mgla </Polish>
         <Russian> Туман </Russian>
         <Spanish> Bruma </Spanish>
         <French> Brume </French>
@@ -139,7 +152,7 @@
         <English> Heavy Fog </English>
         <Czech> Hustá mlha </Czech>
         <German> Dichter Nebel </German>
-        <Polish> Ciezka Mgla </Polish>
+        <Polish> Gęsta Mgla </Polish>
         <Russian> Густой туман </Russian>
         <Spanish> Niebla </Spanish>
         <French> Brouillard </French>
@@ -148,7 +161,7 @@
         <English> AI Skill (BLUFOR) </English>
         <Czech> Úroveň AI (BLUFOR) </Czech>
         <German> KI Stärke (BLUFOR) </German>
-        <Polish> Umiejętności SI (BLUFOR): </Polish>
+        <Polish> Poziom SI (BLUFOR) </Polish>
         <Russian> Навык ИИ (BLUFOR) </Russian>
         <Spanish> Habilidad de la IA (BLUFOR): </Spanish>
         <French> Capacité IA (BLUFOR) </French>
@@ -157,7 +170,7 @@
         <English> AI Skill (OPFOR) </English>
         <Czech> Úroveň AI (OPFOR) </Czech>
         <German> KI Stärke (OPFOR) </German>
-        <Polish> Umiejętności SI (OPFOR) </Polish>
+        <Polish> Poziom SI (OPFOR) </Polish>
         <Russian> Навык ИИ (OPFOR) </Russian>
         <Spanish> Habilidad de la IA (OPFOR) </Spanish>
         <French> Capacité IA (OPFOR) </French>
@@ -166,7 +179,7 @@
         <English> AI Skill (INDEPENDENT) </English>
         <Czech> Úroveň AI (INDEPENDENT) </Czech>
         <German> KI Stärke (INDEPENDENT) </German>
-        <Polish> Umiejętności SI (INDEPENDENT) </Polish>
+        <Polish> Poziom SI (INDEPENDENT) </Polish>
         <Russian> Навык ИИ (INDEPENDENT) </Russian>
         <Spanish> Habilidad de la IA (INDEPENDENT) </Spanish>
         <French> Capacité IA (INDEPENDENT) </French>
@@ -184,7 +197,7 @@
         <English> High </English>
         <Czech> Vysoká </Czech>
         <German> Stark </German>
-        <Polish> Wysoka </Polish>
+        <Polish> Wysoki </Polish>
         <Russian> Высокий </Russian>
         <Spanish> Alta </Spanish>
         <French> Élevé </French>
@@ -193,7 +206,7 @@
         <English> Medium </English>
         <Czech> Střední </Czech>
         <German> Mittel </German>
-        <Polish> Średnia </Polish>
+        <Polish> Średni </Polish>
         <Russian> Средний </Russian>
         <Spanish> Media </Spanish>
         <French> Moyen </French>
@@ -202,7 +215,7 @@
         <English> Low </English>
         <Czech> Střední </Czech>
         <German> Schwach </German>
-        <Polish> Niska </Polish>
+        <Polish> Niski </Polish>
         <Russian> Низкий </Russian>
         <Spanish> Baja </Spanish>
         <French> Bas </French>
@@ -218,30 +231,39 @@
       </Key>
       <Key ID="STR_f_mapClickTeleportAction">
         <English> Teleport </English>
+        <Polish> Teleport </Polish>
       </Key>
       <Key ID="STR_f_mapClickTeleportSelect">
         <English> Click on the map to set teleport coordinates. </English>
+        <Polish> Kliknij na mape by ustawić miejsce teleportacji. </Polish>
       </Key>
       <Key ID="STR_f_mapClickTeleportDone">
         <English> You have been moved to the selected location. </English>
+        <Polish> Zostales przeniesiony do wybranej lokacji. </Polish>
       </Key>
        <Key ID="STR_f_mapClickHALOAction">
         <English> HALO </English>
+        <Polish> HALO </Polish>
       </Key>
       <Key ID="STR_f_mapClickHALOSelect">
         <English> Click on the map to set HALO coordinates. </English>
+        <Polish> Kliknij na mape by ustawić miejsce skoku HALO. </Polish>
       </Key>
       <Key ID="STR_f_mapClickHALODone">
         <English> You have been moved to the selected location. </English>
+        <Polish> Zostales przeniesiony do wybranej lokacji. </Polish>
       </Key>
       <Key ID="STR_f_JIP_reinforcementOptionsAction">
         <English> Select Reinforcement Options</English>
+        <Polsih> Wybierz opcje wsparcia</Polish>
       </Key>
       <Key ID="STR_f_param_mission_timer">
         <English> Safe Start (mins) </English>
+        <Polish> Bezpieczny start (min) </Polish>
       </Key>
       <Key ID="STR_f_param_mission_timer_off">
         <English> Off </English>
+        <Polish> Wyłącz </Polish>
       </Key>
       <Key ID="STR_f_param_caching">
         <English> AI Caching</English>
@@ -249,6 +271,7 @@
       <Key ID="STR_f_param_caching_Option0">
         <English> Off </English>
         <German> Aus </German>
+        <Polish> Wyłącz </Polish>
       </Key>
        <Key ID="STR_f_param_caching_Option1">
         <English> Outside 600m </English>
