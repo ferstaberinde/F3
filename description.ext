@@ -185,17 +185,17 @@ class Params
 
 	class f_param_fog
 	{
-		title = "Override Fog";
+		title = "$STR_f_param_fog";
 		values[] = {0,1,2,4};
-		texts[] = {"No Fog","Light Fog","Heavy Fog","Use default"};
+		texts[] = {$STR_f_param_fog_Option1,$STR_f_param_fog_Option2,$STR_f_param_fog_Option3,$STR_f_param_weather_Option11};
 		default = 4;
 	};
 
 	class f_param_wind
 	{
-		title = "Override Wind";
+		title = "$STR_f_param_wind";
 		values[] = {0,1,2,4};
-		texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
+		texts[] = {$STR_f_param_wind_Option1,$STR_f_param_wind_Option2,$STR_f_param_wind_Option3,$STR_f_param_weather_Option11};
 		default = 4;
 	};
 
