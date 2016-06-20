@@ -41,44 +41,45 @@ class Mission
 		"A3_Air_F_Heli_Heli_Transport_03",
 		"A3_Air_F_Heli_Heli_Transport_04",
 		"A3_Air_F_Heli_Heli_Light_01",
-		"a3_air_f_heli_light_01"
+		"a3_air_f_heli_light_01",
+		"A3_Armor_F_Beta_APC_Wheeled_01",
+		"A3_Armor_F_Beta_APC_Wheeled_02",
+		"A3_Armor_F_Gamma_MBT_01",
+		"A3_Armor_F_Gamma_APC_Wheeled_03",
+		"A3_Armor_F_Gamma_MBT_02",
+		"A3_Soft_F_Beta_Truck_02",
+		"A3_Soft_F_Beta_MRAP_03",
+		"A3_Soft_F_Beta_Truck_01",
+		"A3_Soft_F_Gamma_Van_01"
 	};
 	addOnsAuto[]=
 	{
-		"A3_Characters_F_BLUFOR",
-		"a3_characters_f",
-		"A3_Characters_F_Gamma",
-		"A3_Characters_F_OPFOR",
-		"A3_Characters_F_INDEP",
-		"A3_Characters_F_Civil",
+		"A3_Characters_F",
 		"A3_Modules_F",
 		"A3_Air_F_Heli_Heli_Transport_03",
 		"A3_Air_F_Heli_Heli_Transport_04",
 		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Air_F_Beta_Heli_Transport_01",
-		"A3_Armor_F_AMV",
+		"A3_Armor_F_Beta_APC_Wheeled_01",
 		"A3_Air_F_Beta_Heli_Attack_01",
 		"A3_Air_F_Heli_Light_02",
-		"A3_Armor_F_Marid",
+		"A3_Armor_F_Beta_APC_Wheeled_02",
 		"A3_Air_F_Beta_Heli_Attack_02",
-		"A3_Armor_F_Slammer",
-		"A3_Armor_F_APC_Wheeled_03",
-		"A3_Armor_F_T100K",
+		"A3_Armor_F_Gamma_MBT_01",
+		"A3_Armor_F_Gamma_APC_Wheeled_03",
+		"A3_Armor_F_Gamma_MBT_02",
 		"A3_Armor_F_EPB_MBT_03",
 		"A3_Air_F_EPB_Heli_Light_03",
-		"A3_Soft_F_TruckHeavy",
-		"A3_Soft_F_MRAP_03",
+		"A3_Soft_F_Beta_Truck_02",
+		"A3_Soft_F_Beta_MRAP_03",
 		"A3_Soft_F_MRAP_01",
-		"A3_Soft_F_HEMTT",
+		"A3_Soft_F_Beta_Truck_01",
 		"A3_Soft_F_MRAP_02",
 		"A3_Soft_F_EPC_Truck_03",
-		"A3_Soft_F_Gamma_Offroad",
-		"a3_soft_f_offroad_01",
-		"A3_Soft_F_Truck",
-		"A3_Weapons_F_Beta_Ammoboxes",
-		"a3_weapons_f_ammoboxes",
-		"A3_Air_F_Heli_Heli_Light_01",
-		"a3_air_f_heli_light_01",
+		"A3_Soft_F_Offroad_01",
+		"A3_Soft_F_Gamma_Van_01",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Air_F_Heli_Light_01",
 		"a3_map_altis"
 	};
 	randomSeed=11823142;
@@ -7561,6 +7562,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_TH1";
+			init="[""v_helo_h"",this] call f_fnc_assignGear";
 		};
 		class Item1
 		{
@@ -7570,6 +7572,7 @@ class Mission
 			vehicle="O_Heli_Transport_04_covered_F";
 			skill=0.60000002;
 			text="VehCSAT_TH1";
+			init="[""v_helo_h"",this] call f_fnc_assignGear";
 		};
 		class Item2
 		{
@@ -7580,6 +7583,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehAAF_TH1";
+			init="[""v_helo_h"",this] call f_fnc_assignGear";
 		};
 		class Item3
 		{
@@ -7590,6 +7594,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_TH2";
+			init="[""v_helo_h"",this] call f_fnc_assignGear";
 		};
 		class Item4
 		{
@@ -7600,6 +7605,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_TH3";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item5
 		{
@@ -7610,6 +7616,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_TH4";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item6
 		{
@@ -7620,6 +7627,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_TH5";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item7
 		{
@@ -7630,6 +7638,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_TH6";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item8
 		{
@@ -7640,6 +7649,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_TH7";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item9
 		{
@@ -7650,6 +7660,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_TH8";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item10
 		{
@@ -7740,6 +7751,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehNATO_AH1";
+			init="[""v_helo_a"",this] call f_fnc_assignGear";
 		};
 		class Item19
 		{
@@ -7750,6 +7762,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehAAF_TH2";
+			init="[""v_helo_h"",this] call f_fnc_assignGear";
 		};
 		class Item20
 		{
@@ -7760,6 +7773,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehAAF_TH3";
+			init="[""v_helo_h"",this] call f_fnc_assignGear";
 		};
 		class Item21
 		{
@@ -7770,6 +7784,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehAAF_TH4";
+			init="[""v_helo_h"",this] call f_fnc_assignGear";
 		};
 		class Item22
 		{
@@ -7779,6 +7794,7 @@ class Mission
 			vehicle="O_Heli_Transport_04_covered_F";
 			skill=0.60000002;
 			text="VehCSAT_TH2";
+			init="[""v_helo_h"",this] call f_fnc_assignGear";
 		};
 		class Item23
 		{
@@ -7788,6 +7804,7 @@ class Mission
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
 			text="VehCSAT_TH3";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item24
 		{
@@ -7797,6 +7814,7 @@ class Mission
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
 			text="VehCSAT_TH4";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item25
 		{
@@ -7806,6 +7824,7 @@ class Mission
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
 			text="VehCSAT_TH5";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item26
 		{
@@ -7815,6 +7834,7 @@ class Mission
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
 			text="VehCSAT_TH6";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item27
 		{
@@ -7824,6 +7844,7 @@ class Mission
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
 			text="VehCSAT_TH7";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item28
 		{
@@ -7833,6 +7854,7 @@ class Mission
 			vehicle="O_Heli_Light_02_unarmed_F";
 			skill=0.60000002;
 			text="VehCSAT_TH8";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item29
 		{
@@ -7930,6 +7952,7 @@ class Mission
 			vehicle="O_Heli_Attack_02_black_F";
 			skill=0.60000002;
 			text="VehCSAT_AH1";
+			init="[""v_helo_a"",this] call f_fnc_assignGear";
 		};
 		class Item38
 		{
@@ -7939,6 +7962,7 @@ class Mission
 			vehicle="B_MBT_01_cannon_F";
 			skill=0.60000002;
 			text="VehNATO_TNK1";
+			init="[""v_tank"",this] call f_fnc_assignGear";
 		};
 		class Item39
 		{
@@ -8036,6 +8060,7 @@ class Mission
 			vehicle="O_MBT_02_cannon_F";
 			skill=0.60000002;
 			text="VehCSAT_TNK1";
+			init="[""v_tank"",this] call f_fnc_assignGear";
 		};
 		class Item48
 		{
@@ -8046,6 +8071,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehAAF_TNK1";
+			init="[""v_tank"",this] call f_fnc_assignGear";
 		};
 		class Item49
 		{
@@ -8056,6 +8082,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehAAF_AH1";
+			init="[""v_helo_m"",this] call f_fnc_assignGear";
 		};
 		class Item50
 		{
@@ -8406,6 +8433,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="VehFIA_TH1";
+			init="[""v_helo_l"",this] call f_fnc_assignGear";
 		};
 	};
 	class Markers
