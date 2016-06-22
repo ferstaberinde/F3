@@ -5187,29 +5187,7 @@ class Mission
 					};
 					id=201;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -5232,29 +5210,6 @@ class Mission
 					};
 					id=202;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
 				};
 				class Item2
 				{
@@ -5276,29 +5231,7 @@ class Mission
 					};
 					id=203;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -5720,29 +5653,7 @@ class Mission
 					id=222;
 					type="B_crew_F";
 					atlOffset=-2.6702881e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -5766,29 +5677,7 @@ class Mission
 					id=223;
 					type="B_crew_F";
 					atlOffset=-2.6702881e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -5811,29 +5700,7 @@ class Mission
 					id=224;
 					type="B_soldier_repair_F";
 					atlOffset=-2.6702881e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -6256,29 +6123,7 @@ class Mission
 					};
 					id=243;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -6301,29 +6146,7 @@ class Mission
 					};
 					id=244;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -6345,29 +6168,7 @@ class Mission
 					};
 					id=245;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -6786,29 +6587,7 @@ class Mission
 					};
 					id=264;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -6831,29 +6610,7 @@ class Mission
 					};
 					id=265;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -6875,29 +6632,7 @@ class Mission
 					};
 					id=266;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -7749,29 +7484,7 @@ class Mission
 					id=308;
 					type="B_crew_F";
 					atlOffset=-9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -7795,29 +7508,7 @@ class Mission
 					id=309;
 					type="B_crew_F";
 					atlOffset=-9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -7840,29 +7531,7 @@ class Mission
 					id=310;
 					type="B_soldier_repair_F";
 					atlOffset=-9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -7942,29 +7611,7 @@ class Mission
 					};
 					id=312;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -7987,29 +7634,7 @@ class Mission
 					};
 					id=313;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -8031,29 +7656,7 @@ class Mission
 					};
 					id=314;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -8132,29 +7735,7 @@ class Mission
 					};
 					id=316;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -8177,29 +7758,7 @@ class Mission
 					};
 					id=317;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -8221,29 +7780,7 @@ class Mission
 					};
 					id=318;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -8322,29 +7859,7 @@ class Mission
 					};
 					id=320;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -8367,29 +7882,7 @@ class Mission
 					};
 					id=321;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -8412,29 +7905,7 @@ class Mission
 					};
 					id=322;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -8457,29 +7928,7 @@ class Mission
 					};
 					id=323;
 					type="B_helicrew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -8569,29 +8018,7 @@ class Mission
 					};
 					id=325;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -8614,29 +8041,7 @@ class Mission
 					};
 					id=326;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.05;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -8659,29 +8064,7 @@ class Mission
 					};
 					id=327;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -8704,29 +8087,7 @@ class Mission
 					};
 					id=328;
 					type="B_helicrew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -8817,29 +8178,7 @@ class Mission
 					id=330;
 					type="B_Helipilot_F";
 					atlOffset=9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -8863,29 +8202,7 @@ class Mission
 					id=331;
 					type="B_Helipilot_F";
 					atlOffset=9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -8909,29 +8226,7 @@ class Mission
 					id=332;
 					type="B_soldier_repair_F";
 					atlOffset=9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -8955,29 +8250,7 @@ class Mission
 					id=333;
 					type="B_helicrew_F";
 					atlOffset=9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -9069,29 +8342,7 @@ class Mission
 					id=335;
 					type="B_Helipilot_F";
 					atlOffset=9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -9115,29 +8366,7 @@ class Mission
 					id=336;
 					type="B_Helipilot_F";
 					atlOffset=9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -9161,29 +8390,7 @@ class Mission
 					id=337;
 					type="B_soldier_repair_F";
 					atlOffset=9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -9207,29 +8414,7 @@ class Mission
 					id=338;
 					type="B_helicrew_F";
 					atlOffset=9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -9320,29 +8505,7 @@ class Mission
 					};
 					id=340;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -9365,29 +8528,7 @@ class Mission
 					};
 					id=341;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -9410,29 +8551,7 @@ class Mission
 					};
 					id=342;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -9455,29 +8574,7 @@ class Mission
 					};
 					id=343;
 					type="B_helicrew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -9568,29 +8665,7 @@ class Mission
 					id=345;
 					type="B_Helipilot_F";
 					atlOffset=-9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -9614,29 +8689,7 @@ class Mission
 					id=346;
 					type="B_Helipilot_F";
 					atlOffset=-9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -9660,29 +8713,7 @@ class Mission
 					id=347;
 					type="B_soldier_repair_F";
 					atlOffset=-9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -9706,29 +8737,7 @@ class Mission
 					id=348;
 					type="B_helicrew_F";
 					atlOffset=-9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -9819,29 +8828,7 @@ class Mission
 					};
 					id=350;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -9864,29 +8851,7 @@ class Mission
 					};
 					id=351;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -9909,29 +8874,7 @@ class Mission
 					};
 					id=352;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -9954,29 +8897,7 @@ class Mission
 					};
 					id=353;
 					type="B_helicrew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -10066,29 +8987,7 @@ class Mission
 					};
 					id=355;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -10111,29 +9010,7 @@ class Mission
 					};
 					id=356;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -10156,29 +9033,7 @@ class Mission
 					};
 					id=357;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -10201,29 +9056,7 @@ class Mission
 					};
 					id=358;
 					type="B_helicrew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -10313,29 +9146,7 @@ class Mission
 					};
 					id=360;
 					type="B_Helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -10358,29 +9169,7 @@ class Mission
 					};
 					id=361;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -10682,29 +9471,7 @@ class Mission
 					};
 					id=378;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -10727,29 +9494,7 @@ class Mission
 					};
 					id=379;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -10771,29 +9516,7 @@ class Mission
 					};
 					id=380;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -11227,29 +9950,7 @@ class Mission
 					};
 					id=399;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -11272,29 +9973,7 @@ class Mission
 					};
 					id=400;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -11316,29 +9995,7 @@ class Mission
 					};
 					id=401;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -11770,29 +10427,7 @@ class Mission
 					};
 					id=420;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -11815,29 +10450,7 @@ class Mission
 					};
 					id=421;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -11859,29 +10472,7 @@ class Mission
 					};
 					id=422;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -12313,29 +10904,7 @@ class Mission
 					};
 					id=441;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -12358,29 +10927,7 @@ class Mission
 					};
 					id=442;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -12402,29 +10949,7 @@ class Mission
 					};
 					id=443;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -13270,29 +11795,7 @@ class Mission
 					};
 					id=485;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -13315,29 +11818,7 @@ class Mission
 					};
 					id=486;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -13359,29 +11840,7 @@ class Mission
 					};
 					id=487;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -13460,29 +11919,7 @@ class Mission
 					};
 					id=489;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -13505,29 +11942,7 @@ class Mission
 					};
 					id=490;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -13549,29 +11964,7 @@ class Mission
 					};
 					id=491;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -13650,29 +12043,7 @@ class Mission
 					};
 					id=493;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -13695,29 +12066,7 @@ class Mission
 					};
 					id=494;
 					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -13739,29 +12088,7 @@ class Mission
 					};
 					id=495;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -13840,29 +12167,7 @@ class Mission
 					};
 					id=497;
 					type="O_helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -13885,29 +12190,7 @@ class Mission
 					};
 					id=498;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -13930,29 +12213,7 @@ class Mission
 					};
 					id=499;
 					type="O_helicrew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -14031,29 +12292,7 @@ class Mission
 					};
 					id=501;
 					type="O_helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.05;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -14076,29 +12315,7 @@ class Mission
 					};
 					id=502;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -14121,29 +12338,7 @@ class Mission
 					};
 					id=503;
 					type="O_helicrew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -14223,29 +12418,7 @@ class Mission
 					id=505;
 					type="O_helipilot_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -14269,29 +12442,7 @@ class Mission
 					id=506;
 					type="O_soldier_repair_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -14360,29 +12511,7 @@ class Mission
 					};
 					id=508;
 					type="O_helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -14405,29 +12534,7 @@ class Mission
 					};
 					id=509;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -14495,29 +12602,7 @@ class Mission
 					};
 					id=511;
 					type="O_helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -14540,29 +12625,7 @@ class Mission
 					};
 					id=512;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -14630,29 +12693,7 @@ class Mission
 					};
 					id=514;
 					type="O_helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -14675,29 +12716,7 @@ class Mission
 					};
 					id=515;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -14766,29 +12785,7 @@ class Mission
 					id=517;
 					type="O_helipilot_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -14812,29 +12809,7 @@ class Mission
 					id=518;
 					type="O_soldier_repair_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -14904,29 +12879,7 @@ class Mission
 					id=520;
 					type="O_helipilot_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -14950,29 +12903,7 @@ class Mission
 					id=521;
 					type="O_soldier_repair_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -15041,29 +12972,7 @@ class Mission
 					};
 					id=523;
 					type="O_helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -15086,29 +12995,7 @@ class Mission
 					};
 					id=524;
 					type="O_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -15399,29 +13286,7 @@ class Mission
 					};
 					id=541;
 					type="I_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -15444,29 +13309,7 @@ class Mission
 					};
 					id=542;
 					type="I_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -15488,29 +13331,7 @@ class Mission
 					};
 					id=543;
 					type="I_Soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -15929,29 +13750,7 @@ class Mission
 					id=562;
 					type="I_crew_F";
 					atlOffset=-1.9073486e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -15975,29 +13774,7 @@ class Mission
 					id=563;
 					type="I_crew_F";
 					atlOffset=-1.9073486e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -16020,29 +13797,7 @@ class Mission
 					id=564;
 					type="I_Soldier_repair_F";
 					atlOffset=-1.9073486e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -16464,29 +14219,7 @@ class Mission
 					};
 					id=583;
 					type="I_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -16509,29 +14242,7 @@ class Mission
 					};
 					id=584;
 					type="I_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -16553,29 +14264,7 @@ class Mission
 					};
 					id=585;
 					type="I_Soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -16995,29 +14684,7 @@ class Mission
 					};
 					id=604;
 					type="I_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -17040,29 +14707,7 @@ class Mission
 					};
 					id=605;
 					type="I_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -17084,29 +14729,7 @@ class Mission
 					};
 					id=606;
 					type="I_Soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -17950,29 +15573,7 @@ class Mission
 					id=648;
 					type="I_crew_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -17996,29 +15597,7 @@ class Mission
 					id=649;
 					type="I_crew_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -18041,29 +15620,7 @@ class Mission
 					id=650;
 					type="I_Soldier_repair_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -18144,29 +15701,7 @@ class Mission
 					id=652;
 					type="I_crew_F";
 					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -18190,29 +15725,7 @@ class Mission
 					id=653;
 					type="I_crew_F";
 					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -18235,29 +15748,7 @@ class Mission
 					id=654;
 					type="I_Soldier_repair_F";
 					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -18337,29 +15828,7 @@ class Mission
 					};
 					id=656;
 					type="I_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -18382,29 +15851,7 @@ class Mission
 					};
 					id=657;
 					type="I_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -18426,29 +15873,7 @@ class Mission
 					};
 					id=658;
 					type="I_Soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -18527,29 +15952,7 @@ class Mission
 					};
 					id=660;
 					type="I_helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -18572,29 +15975,7 @@ class Mission
 					};
 					id=661;
 					type="I_Soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -18662,29 +16043,7 @@ class Mission
 					};
 					id=663;
 					type="I_helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -18707,29 +16066,7 @@ class Mission
 					};
 					id=664;
 					type="I_Soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -18797,29 +16134,7 @@ class Mission
 					};
 					id=666;
 					type="I_helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -18842,29 +16157,7 @@ class Mission
 					};
 					id=667;
 					type="I_Soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -18933,29 +16226,7 @@ class Mission
 					id=669;
 					type="I_helipilot_F";
 					atlOffset=9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -18979,29 +16250,7 @@ class Mission
 					id=670;
 					type="I_Soldier_repair_F";
 					atlOffset=9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -19070,29 +16319,7 @@ class Mission
 					};
 					id=672;
 					type="I_helipilot_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -19115,29 +16342,7 @@ class Mission
 					};
 					id=673;
 					type="I_Soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -19351,29 +16556,7 @@ class Mission
 					};
 					id=686;
 					type="B_G_officer_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -21135,29 +18318,7 @@ class Mission
 					};
 					id=776;
 					type="B_G_engineer_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -21180,29 +18341,7 @@ class Mission
 					};
 					id=777;
 					type="B_G_engineer_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -21271,29 +18410,7 @@ class Mission
 					id=779;
 					type="B_crew_F";
 					atlOffset=-4.7683716e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.98000002;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -21316,29 +18433,7 @@ class Mission
 					id=780;
 					type="B_soldier_repair_F";
 					atlOffset=-4.7683716e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -21406,29 +18501,7 @@ class Mission
 					};
 					id=782;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -21450,29 +18523,7 @@ class Mission
 					};
 					id=783;
 					type="B_soldier_repair_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -21538,29 +18589,7 @@ class Mission
 					};
 					id=790;
 					type="C_journalist_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -22503,29 +19532,7 @@ class Mission
 					};
 					id=824;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -22546,29 +19553,7 @@ class Mission
 					};
 					id=825;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -22588,29 +19573,7 @@ class Mission
 					};
 					id=826;
 					type="I_C_Soldier_Para_3_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -22632,29 +19595,7 @@ class Mission
 					};
 					id=827;
 					type="I_C_Soldier_Para_2_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -22690,29 +19631,7 @@ class Mission
 					id=839;
 					type="I_C_Soldier_Para_1_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.99000001;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -22733,29 +19652,7 @@ class Mission
 					};
 					id=840;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -22775,29 +19672,7 @@ class Mission
 					};
 					id=841;
 					type="I_C_Soldier_Para_3_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -22819,29 +19694,7 @@ class Mission
 					};
 					id=842;
 					type="I_C_Soldier_Para_2_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -22876,29 +19729,7 @@ class Mission
 					id=854;
 					type="I_C_Soldier_Para_3_F";
 					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -22920,29 +19751,7 @@ class Mission
 					};
 					id=855;
 					type="I_C_Soldier_Para_2_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -22977,29 +19786,7 @@ class Mission
 					};
 					id=857;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -23020,29 +19807,7 @@ class Mission
 					};
 					id=858;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -23062,29 +19827,7 @@ class Mission
 					};
 					id=859;
 					type="I_C_Soldier_Para_5_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -23105,29 +19848,7 @@ class Mission
 					id=860;
 					type="I_C_Soldier_Para_1_F";
 					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item4
 				{
@@ -23147,29 +19868,7 @@ class Mission
 					};
 					id=861;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item5
 				{
@@ -23191,29 +19890,7 @@ class Mission
 					};
 					id=862;
 					type="I_C_Soldier_Para_2_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -23248,29 +19925,7 @@ class Mission
 					};
 					id=864;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -23291,29 +19946,7 @@ class Mission
 					};
 					id=865;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -23334,29 +19967,7 @@ class Mission
 					id=866;
 					type="I_C_Soldier_Para_5_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -23377,29 +19988,7 @@ class Mission
 					id=867;
 					type="I_C_Soldier_Para_1_F";
 					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item4
 				{
@@ -23419,29 +20008,7 @@ class Mission
 					};
 					id=868;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item5
 				{
@@ -23463,29 +20030,7 @@ class Mission
 					};
 					id=869;
 					type="I_C_Soldier_Para_2_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -23519,29 +20064,7 @@ class Mission
 					};
 					id=871;
 					type="I_C_Soldier_Para_3_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -23563,29 +20086,7 @@ class Mission
 					};
 					id=872;
 					type="I_C_Soldier_Para_2_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -23620,29 +20121,7 @@ class Mission
 					};
 					id=874;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -23663,29 +20142,7 @@ class Mission
 					};
 					id=875;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -23706,29 +20163,7 @@ class Mission
 					id=876;
 					type="I_C_Soldier_Para_5_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -23748,29 +20183,7 @@ class Mission
 					};
 					id=877;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item4
 				{
@@ -23790,29 +20203,7 @@ class Mission
 					};
 					id=878;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item5
 				{
@@ -23834,29 +20225,7 @@ class Mission
 					};
 					id=879;
 					type="I_C_Soldier_Para_2_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -23891,29 +20260,7 @@ class Mission
 					};
 					id=881;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -23935,29 +20282,7 @@ class Mission
 					id=882;
 					type="I_C_Soldier_Para_4_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -23977,29 +20302,7 @@ class Mission
 					};
 					id=883;
 					type="I_C_Soldier_Para_5_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -24019,29 +20322,7 @@ class Mission
 					};
 					id=884;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item4
 				{
@@ -24061,29 +20342,7 @@ class Mission
 					};
 					id=885;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item5
 				{
@@ -24106,29 +20365,7 @@ class Mission
 					id=886;
 					type="I_C_Soldier_Para_2_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -24164,29 +20401,7 @@ class Mission
 					id=888;
 					type="I_C_Soldier_Para_3_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -24208,29 +20423,7 @@ class Mission
 					};
 					id=889;
 					type="I_C_Soldier_Para_2_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -24265,29 +20458,7 @@ class Mission
 					};
 					id=891;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -24308,29 +20479,7 @@ class Mission
 					};
 					id=892;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -24351,29 +20500,7 @@ class Mission
 					id=893;
 					type="I_C_Soldier_Para_5_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -24393,29 +20520,7 @@ class Mission
 					};
 					id=894;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item4
 				{
@@ -24436,29 +20541,7 @@ class Mission
 					id=895;
 					type="I_C_Soldier_Para_1_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item5
 				{
@@ -24481,29 +20564,7 @@ class Mission
 					id=896;
 					type="I_C_Soldier_Para_2_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -24539,29 +20600,7 @@ class Mission
 					};
 					id=898;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -24582,29 +20621,7 @@ class Mission
 					};
 					id=899;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -24624,29 +20641,7 @@ class Mission
 					};
 					id=900;
 					type="I_C_Soldier_Para_5_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -24666,29 +20661,7 @@ class Mission
 					};
 					id=901;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item4
 				{
@@ -24708,29 +20681,7 @@ class Mission
 					};
 					id=902;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item5
 				{
@@ -24753,29 +20704,7 @@ class Mission
 					id=903;
 					type="I_C_Soldier_Para_2_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -24812,29 +20741,7 @@ class Mission
 					id=905;
 					type="I_C_Soldier_Para_2_F";
 					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -24854,29 +20761,7 @@ class Mission
 					};
 					id=906;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -24913,29 +20798,7 @@ class Mission
 					id=908;
 					type="I_C_Soldier_Para_2_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -24955,29 +20818,7 @@ class Mission
 					};
 					id=909;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -25014,29 +20855,7 @@ class Mission
 					id=911;
 					type="I_C_Soldier_Para_2_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -25057,29 +20876,7 @@ class Mission
 					};
 					id=912;
 					type="I_C_Soldier_Para_5_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -25116,29 +20913,7 @@ class Mission
 					id=914;
 					type="I_C_Soldier_Para_2_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -25159,29 +20934,7 @@ class Mission
 					};
 					id=915;
 					type="I_C_Soldier_Para_5_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -25218,29 +20971,7 @@ class Mission
 					id=917;
 					type="I_C_Soldier_Para_2_F";
 					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -25261,29 +20992,7 @@ class Mission
 					};
 					id=918;
 					type="I_C_Soldier_Para_4_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -25319,29 +21028,7 @@ class Mission
 					};
 					id=920;
 					type="I_C_Soldier_Para_2_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -25362,29 +21049,7 @@ class Mission
 					};
 					id=921;
 					type="I_C_Soldier_Para_5_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -25420,29 +21085,7 @@ class Mission
 					};
 					id=923;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -25464,29 +21107,7 @@ class Mission
 					id=924;
 					type="I_C_Soldier_Para_1_F";
 					atlOffset=-1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -25523,29 +21144,7 @@ class Mission
 					id=926;
 					type="I_C_Soldier_Para_5_F";
 					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -25566,29 +21165,7 @@ class Mission
 					};
 					id=927;
 					type="I_C_Soldier_Para_5_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -25625,29 +21202,7 @@ class Mission
 					};
 					id=929;
 					type="I_C_Soldier_Para_5_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -25668,29 +21223,7 @@ class Mission
 					};
 					id=930;
 					type="I_C_Soldier_Para_5_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -25726,29 +21259,7 @@ class Mission
 					};
 					id=932;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -25769,29 +21280,7 @@ class Mission
 					};
 					id=933;
 					type="I_C_Soldier_Para_1_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -25828,29 +21317,7 @@ class Mission
 					id=935;
 					type="I_C_Soldier_Para_8_F";
 					atlOffset=1.9073486e-006;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -25871,29 +21338,7 @@ class Mission
 					};
 					id=936;
 					type="I_C_Soldier_Para_8_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item2
 				{
@@ -25914,29 +21359,7 @@ class Mission
 					};
 					id=937;
 					type="I_C_Soldier_Para_8_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item3
 				{
@@ -25958,29 +21381,7 @@ class Mission
 					id=938;
 					type="I_C_Soldier_Para_8_F";
 					atlOffset=-9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -26018,29 +21419,7 @@ class Mission
 					id=940;
 					type="I_C_Helipilot_F";
 					atlOffset=0.027001381;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -26063,29 +21442,7 @@ class Mission
 					id=941;
 					type="I_C_Helipilot_F";
 					atlOffset=0.027001381;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -26175,29 +21532,7 @@ class Mission
 					id=944;
 					type="I_C_Soldier_Para_1_F";
 					atlOffset=0.05381012;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -26219,29 +21554,7 @@ class Mission
 					id=945;
 					type="I_C_Soldier_Para_1_F";
 					atlOffset=0.073961258;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
@@ -26329,29 +21642,7 @@ class Mission
 					id=948;
 					type="I_C_Soldier_Para_1_F";
 					atlOffset=0.15895844;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.03;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 				class Item1
 				{
@@ -26373,29 +21664,7 @@ class Mission
 					id=949;
 					type="I_C_Soldier_Para_1_F";
 					atlOffset=0.15366173;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
+					
 				};
 			};
 			class Attributes
