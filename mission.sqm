@@ -5210,31 +5210,6 @@ class Mission
 					};
 					id=202;
 					type="B_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-		
-
-						{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
 				};
 				class Item2
 				{
