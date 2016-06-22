@@ -62,8 +62,6 @@ _transition setWindStr  _strength;
 _transition setWindForce _gusts;
 _transition setWaves _waves;
 
-systemChat format ["%1",[_strength,_gusts,_waves]];
-
 // ====================================================================================
 
 
