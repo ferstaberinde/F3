@@ -1,4 +1,4 @@
-// F3 - Folk ARPS Assign Gear Script - FIA
+// F3 - Folk ARPS Assign Gear Script - SYNDIKAT
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 

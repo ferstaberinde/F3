@@ -71,7 +71,7 @@ if (f_param_debugMode == 1) then
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "blu_f") then {
-#include "f_assignGear_nato.sqf"
+	#include "f_assignGear_nato.sqf"
 };
 
 
@@ -117,13 +117,6 @@ if(_faction == "ctrg") then {
 
 // ====================================================================================
 
-// This variable simply tracks the progress of the gear assignation process, for other
-// scripts to reference.
-
-_unit setVariable ["f_var_assignGear_done",true,true];
-
-// ====================================================================================
-
 // GEAR: INDEPEDENT > SYNDIKAT
 // The following block of code executes only if the unit is manually assigned the Syndikat faction; it
 // automatically includes a file which contains the appropriate equipment data.
@@ -131,6 +124,13 @@ _unit setVariable ["f_var_assignGear_done",true,true];
 if (_faction =="ind_c_f") then {
 	#include "f_assignGear_syndikat.sqf"
 };
+
+// ====================================================================================
+
+// This variable simply tracks the progress of the gear assignation process, for other
+// scripts to reference.
+
+_unit setVariable ["f_var_assignGear_done",true,true];
 
 // ====================================================================================
 
