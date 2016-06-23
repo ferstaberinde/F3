@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10251.867,260.06497,11139.657};
-		dir[]={0.37630194,-0.2389345,0.89521426};
-		up[]={0.092595279,0.97103488,0.22028401};
-		aside[]={0.92191321,5.8137812e-007,-0.38752508};
+		pos[]={10110.314,306.59985,11166.143};
+		dir[]={0.49345011,-0.2545329,0.83173996};
+		up[]={0.12988475,0.96705669,0.2189288};
+		aside[]={0.86006165,3.5692938e-007,-0.51025236};
 	};
 };
 binarizationWanted=0;
@@ -495,6 +495,7 @@ class Mission
 			};
 			id=11;
 			type="B_APC_Tracked_01_rcws_F";
+			atlOffset=-0.64373875;
 		};
 		class Item12
 		{
@@ -571,6 +572,7 @@ class Mission
 			};
 			id=15;
 			type="I_Heli_Transport_02_F";
+			atlOffset=9.5367432e-007;
 		};
 		class Item16
 		{
@@ -590,6 +592,7 @@ class Mission
 			};
 			id=16;
 			type="I_Heli_Transport_02_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item17
 		{
@@ -610,6 +613,7 @@ class Mission
 			};
 			id=17;
 			type="I_Heli_Transport_02_F";
+			atlOffset=9.5367432e-007;
 		};
 		class Item18
 		{
@@ -895,6 +899,7 @@ class Mission
 			};
 			id=31;
 			type="I_APC_Wheeled_03_cannon_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item32
 		{
@@ -934,6 +939,7 @@ class Mission
 			};
 			id=33;
 			type="I_APC_Wheeled_03_cannon_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item34
 		{
@@ -953,7 +959,6 @@ class Mission
 			};
 			id=34;
 			type="I_APC_Wheeled_03_cannon_F";
-			atlOffset=-9.5367432e-007;
 		};
 		class Item35
 		{
@@ -1019,7 +1024,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10257.693,16.860996,12497.276};
-				angles[]={6.2418742,0,0.019999012};
+				angles[]={6.2418733,0,0.020001473};
 			};
 			side="Empty";
 			flags=4;
@@ -1038,7 +1043,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10303.109,17.371386,12497.23};
-				angles[]={0.0013372133,0,6.2765174};
+				angles[]={0.0013439035,0,6.2765183};
 			};
 			side="Empty";
 			flags=4;
@@ -1057,7 +1062,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10345.207,16.090858,12497.404};
-				angles[]={6.2498641,0,6.2711854};
+				angles[]={6.249867,0,6.2711778};
 			};
 			side="Empty";
 			flags=4;
@@ -1076,7 +1081,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10209.819,15.86188,12482.811};
-				angles[]={0.0066592805,0,6.2432079};
+				angles[]={0.0066671576,0,6.2431998};
 			};
 			side="Empty";
 			flags=4;
@@ -1095,7 +1100,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10300.921,14.19739,11939.679};
-				angles[]={0.0013372133,0,6.2658563};
+				angles[]={0.0013439035,0,6.2658539};
 			};
 			side="Empty";
 			flags=4;
@@ -1115,7 +1120,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10352.492,14.919389,11956.145};
-				angles[]={0.0080009829,0,0.021328852};
+				angles[]={0.0079936078,0,0.021327924};
 			};
 			side="Empty";
 			flags=4;
@@ -1134,7 +1139,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10398.141,16.32139,11954.68};
-				angles[]={6.259192,0,0.010664274};
+				angles[]={6.2591867,0,0.010663962};
 			};
 			side="Empty";
 			flags=4;
@@ -1154,7 +1159,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10439.263,16.604935,11956.319};
-				angles[]={6.2698536,0,6.2418756};
+				angles[]={6.2698507,0,6.2418733};
 			};
 			side="Empty";
 			flags=4;
@@ -1172,9 +1177,10 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11553.957,23.824558,12699.737};
+				position[]={11553.957,23.319742,12699.737};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -1184,7 +1190,6 @@ class Mission
 			};
 			id=46;
 			type="O_MRAP_02_F";
-			atlOffset=0.50481606;
 		};
 		class Item47
 		{
@@ -1192,7 +1197,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11609.482,20.737776,12715.357};
-				angles[]={0.025325486,0,6.2751846};
+				angles[]={0.025324726,0,6.2751913};
 			};
 			side="Empty";
 			flags=4;
@@ -1210,8 +1215,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11657.727,20.716623,12714.738};
-				angles[]={0.033321146,0,0.0066682254};
+				position[]={11657.727,20.716593,12714.739};
+				angles[]={0.033318337,0,0.0066671576};
 			};
 			side="Empty";
 			flags=4;
@@ -1230,7 +1235,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11711.446,21.760355,12714.811};
-				angles[]={0.033321146,0,0.038647637};
+				angles[]={0.033318337,0,0.038641591};
 			};
 			side="Empty";
 			flags=4;
@@ -1249,7 +1254,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10532.801,13.086236,11496.494};
-				angles[]={0.02399601,0,0.049293593};
+				angles[]={0.023998277,0,0.049288094};
 			};
 			side="Empty";
 			flags=4;
@@ -1269,7 +1274,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10356.883,11.949976,11527.808};
-				angles[]={6.2751846,0,6.0003128};
+				angles[]={6.2751913,0,6.00032};
 			};
 			side="Empty";
 			flags=4;
@@ -1288,8 +1293,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10356.962,13.497055,11505.284};
-				angles[]={6.2671871,0,6.2818484};
+				position[]={10356.962,13.497004,11505.285};
+				angles[]={6.2671809,0,6.2818413};
 			};
 			side="Empty";
 			flags=4;
@@ -1309,7 +1314,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10532.035,13.311337,11519.062};
-				angles[]={6.2751846,0,6.2818484};
+				angles[]={6.2751913,0,6.2818413};
 			};
 			side="Empty";
 			flags=4;
@@ -1329,7 +1334,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10398.184,13.189231,11541.457};
-				angles[]={6.0845079,0,6.2578578};
+				angles[]={6.0845146,0,6.2578607};
 			};
 			side="Empty";
 			flags=4;
@@ -1349,7 +1354,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10406.081,11.871214,11536.964};
-				angles[]={6.0845079,0,6.1967349};
+				angles[]={6.0845146,0,6.1967392};
 			};
 			side="Empty";
 			flags=4;
@@ -1369,7 +1374,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10442.094,10.674369,11542.245};
-				angles[]={0.050623242,0,0.17421596};
+				angles[]={0.050614551,0,0.17421877};
 			};
 			side="Empty";
 			flags=4;
@@ -1390,7 +1395,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10210.078,16.363462,12454.219};
-				angles[]={0.0039967569,0,6.2511969};
+				angles[]={0.0039968039,0,6.251193};
 			};
 			side="Empty";
 			flags=4;
@@ -1409,7 +1414,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11553.976,23.613438,12672.078};
-				angles[]={0.027993103,0,6.2698488};
+				angles[]={0.02799508,0,6.2698507};
 			};
 			side="Empty";
 			flags=4;
@@ -1428,8 +1433,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10300.56,14.245038,11919.985};
-				angles[]={0.13909611,0,0.0026744273};
+				position[]={10300.56,14.477843,11919.984};
+				angles[]={0.13910274,0,0.0026703537};
 			};
 			side="Empty";
 			flags=4;
@@ -1448,7 +1453,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10257.921,15.222128,12485.016};
-				angles[]={6.2711902,0,6.2738566};
+				angles[]={6.2711945,0,6.2738476};
 			};
 			side="Empty";
 			flags=4;
@@ -1460,6 +1465,29 @@ class Mission
 			};
 			id=60;
 			type="I_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_Mk20_F"",""LMG_Mk200_F""],[1,2,1]],[[""9Rnd_45ACP_Mag"",""30Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""30Rnd_556x45_Stanag"",""200Rnd_65x39_cased_Box"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareYellow_F"",""UGL_FlareGreen_F""],[6,6,6,24,3,6,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator_03"",""FirstAidKit"",""acc_flashlight"",""bipod_03_F_blk""],[1,10,2,1]],[[""B_FieldPack_oli""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item61
 		{
@@ -1467,7 +1495,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10301.113,15.877282,12485.571};
-				angles[]={6.2805333,0,0};
+				angles[]={6.2805324,0,0};
 			};
 			side="Empty";
 			flags=4;
@@ -1480,6 +1508,29 @@ class Mission
 			id=61;
 			type="I_supplyCrate_F";
 			atlOffset=-9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_Mk20_F"",""LMG_Mk200_F""],[1,2,1]],[[""9Rnd_45ACP_Mag"",""30Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""30Rnd_556x45_Stanag"",""200Rnd_65x39_cased_Box"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareYellow_F"",""UGL_FlareGreen_F""],[6,6,6,24,3,6,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator_03"",""FirstAidKit"",""acc_flashlight"",""bipod_03_F_blk""],[1,10,2,1]],[[""B_FieldPack_oli""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item62
 		{
@@ -1487,7 +1538,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10345.712,14.379478,12485.774};
-				angles[]={6.2805109,0,6.2618566};
+				angles[]={6.2805147,0,6.2618575};
 			};
 			side="Empty";
 			flags=4;
@@ -1499,6 +1550,29 @@ class Mission
 			};
 			id=62;
 			type="I_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_Mk20_F"",""LMG_Mk200_F""],[1,2,1]],[[""9Rnd_45ACP_Mag"",""30Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""30Rnd_556x45_Stanag"",""200Rnd_65x39_cased_Box"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareYellow_F"",""UGL_FlareGreen_F""],[6,6,6,24,3,6,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator_03"",""FirstAidKit"",""acc_flashlight"",""bipod_03_F_blk""],[1,10,2,1]],[[""B_FieldPack_oli""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item63
 		{
@@ -1506,7 +1580,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10348.945,13.526385,11944.248};
-				angles[]={0.0093350215,0,0.13647979};
+				angles[]={0.0093375118,0,0.13648474};
 			};
 			side="Empty";
 			flags=4;
@@ -1518,6 +1592,29 @@ class Mission
 			};
 			id=63;
 			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item64
 		{
@@ -1525,7 +1622,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10397.415,14.545132,11942.274};
-				angles[]={6.247201,0,6.1993818};
+				angles[]={6.2471962,0,6.1993747};
 			};
 			side="Empty";
 			flags=4;
@@ -1537,6 +1634,29 @@ class Mission
 			};
 			id=64;
 			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item65
 		{
@@ -1544,7 +1664,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10440.409,14.51112,11943.026};
-				angles[]={6.1954122,0,0.14432329};
+				angles[]={6.1954126,0,0.14432128};
 			};
 			side="Empty";
 			flags=4;
@@ -1556,6 +1676,29 @@ class Mission
 			};
 			id=65;
 			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item66
 		{
@@ -1563,7 +1706,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11606.142,20.318802,12701.232};
-				angles[]={0.031990308,0,6.2405434};
+				angles[]={0.031991884,0,6.2405472};
 			};
 			side="Empty";
 			flags=4;
@@ -1575,6 +1718,29 @@ class Mission
 			};
 			id=66;
 			type="O_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_RPG32_F"",""arifle_Katiba_F"",""LMG_Zafir_F""],[1,2,1]],[[""16Rnd_9x21_Mag"",""30Rnd_65x39_caseless_green"",""10Rnd_762x54_Mag"",""150Rnd_762x54_Box"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""Chemlight_red"",""RPG32_F"",""RPG32_HE_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellRed"",""UGL_FlareYellow_F"",""UGL_FlareRed_F"",""30Rnd_9x21_Mag_SMG_02""],[6,24,12,4,6,2,2,6,3,1,2,6,6,2,2,2,2,6]],[[""Laserdesignator_02"",""FirstAidKit"",""acc_flashlight"",""bipod_02_F_blk""],[1,10,2,1]],[[""B_FieldPack_ocamo""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item67
 		{
@@ -1582,7 +1748,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11658.193,19.661289,12701.354};
-				angles[]={0.035982672,0,0.0053265258};
+				angles[]={0.035988688,0,0.0053232545};
 			};
 			side="Empty";
 			flags=4;
@@ -1594,6 +1760,29 @@ class Mission
 			};
 			id=67;
 			type="O_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_RPG32_F"",""arifle_Katiba_F"",""LMG_Zafir_F""],[1,2,1]],[[""16Rnd_9x21_Mag"",""30Rnd_65x39_caseless_green"",""10Rnd_762x54_Mag"",""150Rnd_762x54_Box"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""Chemlight_red"",""RPG32_F"",""RPG32_HE_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellRed"",""UGL_FlareYellow_F"",""UGL_FlareRed_F"",""30Rnd_9x21_Mag_SMG_02""],[6,24,12,4,6,2,2,6,3,1,2,6,6,2,2,2,2,6]],[[""Laserdesignator_02"",""FirstAidKit"",""acc_flashlight"",""bipod_02_F_blk""],[1,10,2,1]],[[""B_FieldPack_ocamo""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item68
 		{
@@ -1601,7 +1790,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11712.181,20.796804,12700.599};
-				angles[]={0.035984326,0,0.037316564};
+				angles[]={0.035988688,0,0.037315138};
 			};
 			side="Empty";
 			flags=4;
@@ -1614,6 +1803,29 @@ class Mission
 			id=68;
 			type="O_supplyCrate_F";
 			atlOffset=1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_RPG32_F"",""arifle_Katiba_F"",""LMG_Zafir_F""],[1,2,1]],[[""16Rnd_9x21_Mag"",""30Rnd_65x39_caseless_green"",""10Rnd_762x54_Mag"",""150Rnd_762x54_Box"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""Chemlight_red"",""RPG32_F"",""RPG32_HE_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellRed"",""UGL_FlareYellow_F"",""UGL_FlareRed_F"",""30Rnd_9x21_Mag_SMG_02""],[6,24,12,4,6,2,2,6,3,1,2,6,6,2,2,2,2,6]],[[""Laserdesignator_02"",""FirstAidKit"",""acc_flashlight"",""bipod_02_F_blk""],[1,10,2,1]],[[""B_FieldPack_ocamo""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item69
 		{
@@ -1621,7 +1833,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10400.139,11.722569,11529.852};
-				angles[]={6.2658529,0,6.1050925};
+				angles[]={6.2658539,0,6.1050916};
 			};
 			side="Empty";
 			flags=4;
@@ -1633,6 +1845,29 @@ class Mission
 			};
 			id=69;
 			type="IG_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_RPG32_F"",""arifle_TRG20_F"",""arifle_TRG21_F"",""arifle_TRG21_GL_F"",""srifle_DMR_06_camo_F"",""srifle_DMR_06_olive_F"",""LMG_Mk200_F""],[1,1,4,1,1,1,2]],[[""30Rnd_556x45_Stanag"",""200Rnd_65x39_cased_Box"",""20Rnd_762x51_Mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_blue"",""RPG32_F"",""RPG32_HE_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,12,6,2,2,6,3,1,6,6,2,2,2,2]],[[""Binocular"",""Rangefinder"",""FirstAidKit"",""acc_flashlight"",""bipod_03_F_oli"",""V_Chestrig_oli"",""V_TacVest_blk""],[1,1,10,2,2,4,4]],[[""B_TacticalPack_blk""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item70
 		{
@@ -1640,7 +1875,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10442.063,9.9695492,11530.556};
-				angles[]={0.0066682254,0,0.1612542};
+				angles[]={0.0066671576,0,0.16125098};
 			};
 			side="Empty";
 			flags=4;
@@ -1652,6 +1887,29 @@ class Mission
 			};
 			id=70;
 			type="IG_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_RPG32_F"",""arifle_TRG20_F"",""arifle_TRG21_F"",""arifle_TRG21_GL_F"",""srifle_DMR_06_camo_F"",""srifle_DMR_06_olive_F"",""LMG_Mk200_F""],[1,1,4,1,1,1,2]],[[""30Rnd_556x45_Stanag"",""200Rnd_65x39_cased_Box"",""20Rnd_762x51_Mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_blue"",""RPG32_F"",""RPG32_HE_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,12,6,2,2,6,3,1,6,6,2,2,2,2]],[[""Binocular"",""Rangefinder"",""FirstAidKit"",""acc_flashlight"",""bipod_03_F_oli"",""V_Chestrig_oli"",""V_TacVest_blk""],[1,1,10,2,2,4,4]],[[""B_TacticalPack_blk""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item71
 		{
@@ -1659,7 +1917,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10482.104,12.628836,11529.774};
-				angles[]={0.081154868,0,0.14432287};
+				angles[]={0.081157811,0,0.14432128};
 			};
 			side="Empty";
 			flags=4;
@@ -1671,6 +1929,29 @@ class Mission
 			};
 			id=71;
 			type="IG_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_RPG32_F"",""arifle_TRG20_F"",""arifle_TRG21_F"",""arifle_TRG21_GL_F"",""srifle_DMR_06_camo_F"",""srifle_DMR_06_olive_F"",""LMG_Mk200_F""],[1,1,4,1,1,1,2]],[[""30Rnd_556x45_Stanag"",""200Rnd_65x39_cased_Box"",""20Rnd_762x51_Mag"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_blue"",""RPG32_F"",""RPG32_HE_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,12,6,2,2,6,3,1,6,6,2,2,2,2]],[[""Binocular"",""Rangefinder"",""FirstAidKit"",""acc_flashlight"",""bipod_03_F_oli"",""V_Chestrig_oli"",""V_TacVest_blk""],[1,1,10,2,2,4,4]],[[""B_TacticalPack_blk""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item72
 		{
@@ -1737,7 +2018,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10514.698,17.663506,11934.195};
-				angles[]={6.2618566,0,0.034652505};
+				angles[]={6.2618575,0,0.034644786};
 			};
 			side="Empty";
 			flags=4;
@@ -1756,7 +2037,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10514.385,17.600363,11911.22};
-				angles[]={6.1336436,0,0.062584557};
+				angles[]={6.1336455,0,0.062587507};
 			};
 			side="Empty";
 			flags=4;
@@ -1815,8 +2096,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11792.742,25.774649,12689.154};
-				angles[]={6.256525,0,0.061256282};
+				position[]={11792.742,25.774599,12689.153};
+				angles[]={6.2565165,0,0.061261058};
 			};
 			side="Empty";
 			flags=4;
@@ -1837,7 +2118,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11792.88,26.278711,12663.812};
-				angles[]={0.0013372133,0,0.017329043};
+				angles[]={0.0013439035,0,0.01733112};
 			};
 			side="Empty";
 			flags=4;
@@ -1869,6 +2150,7 @@ class Mission
 			};
 			id=81;
 			type="I_APC_tracked_03_cannon_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item82
 		{
@@ -1894,8 +2176,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10418.404,16.2285,12472.69};
-				angles[]={0.0053265258,0,0.059927464};
+				position[]={10418.404,16.228506,12472.689};
+				angles[]={0.0053232545,0,0.059934605};
 			};
 			side="Empty";
 			flags=4;
@@ -1914,7 +2196,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10419.854,16.86677,12445.024};
-				angles[]={0.031988446,0,0.014664836};
+				angles[]={0.031991884,0,0.014660765};
 			};
 			side="Empty";
 			flags=4;
@@ -1975,7 +2257,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10452.204,12.028765,11537.089};
-				angles[]={0.050623242,0,0.035984326};
+				angles[]={0.050614551,0,0.035988688};
 			};
 			side="Empty";
 			flags=4;
@@ -1994,8 +2276,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10482.551,11.311644,11542.091};
-				angles[]={0.065240532,0,6.2725158};
+				position[]={10482.55,11.311654,11542.091};
+				angles[]={0.065240405,0,6.2725215};
 			};
 			side="Empty";
 			flags=4;
@@ -2015,7 +2297,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10491.412,12.811243,11536.582};
-				angles[]={0.20379739,0,0.0026520467};
+				angles[]={0.20380209,0,0.0026529003};
 			};
 			side="Empty";
 			flags=4;
@@ -2256,7 +2538,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={10930.72,18.605131,12362.038};
+				position[]={10929.35,18.579138,12362.104};
 				angles[]={0.034652505,0,0.017332481};
 			};
 			init="this addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISKill} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
@@ -2798,6 +3080,7 @@ class Mission
 			};
 			id=120;
 			type="SupportRequester";
+			atlOffset=-9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3029,7 +3312,7 @@ class Mission
 					};
 					id=128;
 					type="B_Helipilot_F";
-					atlOffset=9.5367432e-007;
+					atlOffset=-1.0490417e-005;
 				};
 				class Item1
 				{
@@ -3046,7 +3329,7 @@ class Mission
 					};
 					id=129;
 					type="B_Helipilot_F";
-					atlOffset=9.5367432e-007;
+					atlOffset=-1.0490417e-005;
 				};
 			};
 			class Attributes
@@ -4269,6 +4552,7 @@ class Mission
 				};
 			};
 			id=163;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item121
 		{
@@ -4286,6 +4570,7 @@ class Mission
 			};
 			id=164;
 			type="I_Heli_light_03_F";
+			atlOffset=-9.5367432e-007;
 		};
 		class Item122
 		{
@@ -4526,6 +4811,7 @@ class Mission
 					};
 					id=175;
 					type="I_helipilot_F";
+					atlOffset=6.6757202e-006;
 				};
 				class Item1
 				{
@@ -4542,6 +4828,7 @@ class Mission
 					};
 					id=176;
 					type="I_helipilot_F";
+					atlOffset=6.6757202e-006;
 				};
 			};
 			class Attributes
@@ -4620,6 +4907,7 @@ class Mission
 					};
 					id=179;
 					type="I_soldier_F";
+					atlOffset=6.6757202e-006;
 				};
 			};
 			class Attributes
@@ -4988,15 +5276,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10310.009,11.813065,11941.32};
-						angles[]={6.2738504,0,6.259192};
+						position[]={10310.009,11.813056,11941.319};
+						angles[]={6.2738476,0,6.2591867};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="COLONEL";
 						init="[""co"",this] call f_fnc_assignGear;";
 						name="UnitNATO_CO";
 						description="NATO Commander";
@@ -5004,6 +5292,29 @@ class Mission
 					};
 					id=191;
 					type="B_officer_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
@@ -5011,29 +5322,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10315.009,11.749908,11939.67};
-						angles[]={0.039979152,0,6.2805109};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="SERGEANT";
-						init="[""jtac"",this] call f_fnc_assignGear;";
-						name="UnitNATO_CO_JTAC";
-						description="NATO JTAC";
-						isPlayable=1;
-					};
-					id=192;
-					type="B_officer_F";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={10305.009,11.921762,11939.67};
-						angles[]={0.0013372133,0,6.2631893};
+						angles[]={0.039985489,0,6.2805147};
 					};
 					side="West";
 					flags=4;
@@ -5041,6 +5330,50 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
+						init="[""jtac"",this] call f_fnc_assignGear;";
+						name="UnitNATO_CO_JTAC";
+						description="NATO JTAC";
+						isPlayable=1;
+					};
+					id=192;
+					type="B_officer_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={10305.009,11.921762,11939.67};
+						angles[]={0.0013439035,0,6.2631841};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
 						init="[""uav"",this] call f_fnc_assignGear;";
 						name="UnitNATO_CO_UAV";
 						description="NATO UAV Operator";
@@ -5048,6 +5381,29 @@ class Mission
 					};
 					id=193;
 					type="B_soldier_UAV_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
@@ -5055,7 +5411,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10320.009,11.845987,11936.931};
-						angles[]={0.039979152,0,6.2631865};
+						angles[]={0.039985489,0,6.2631841};
 					};
 					side="West";
 					flags=4;
@@ -5069,6 +5425,29 @@ class Mission
 					};
 					id=194;
 					type="B_medic_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -5113,14 +5492,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10309.826,12.344701,11919.597};
-						angles[]={0.079830162,0,6.2618566};
+						angles[]={0.079831354,0,6.2618575};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="MAJOR";
 						init="GrpNATO_DC = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_DC";
 						description="NATO Deputy Commander";
@@ -5128,6 +5507,29 @@ class Mission
 					};
 					id=196;
 					type="B_officer_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
@@ -5135,7 +5537,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10314.826,12.227724,11917.946};
-						angles[]={0.039979152,0,6.1940885};
+						angles[]={0.039985489,0,6.1940861};
 					};
 					side="West";
 					flags=4;
@@ -5150,6 +5552,29 @@ class Mission
 					};
 					id=197;
 					type="B_officer_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
@@ -5157,14 +5582,13 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10304.826,12.568809,11917.946};
-						angles[]={0.079829417,0,0.062584557};
+						angles[]={0.079831354,0,0.062587507};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="GrpNATO_DC = group this; [""uav"",this] call f_fnc_assignGear;";
 						name="UnitNATO_DC_UAV";
 						description="NATO UAV Operator";
@@ -5172,6 +5596,29 @@ class Mission
 					};
 					id=198;
 					type="B_soldier_UAV_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
@@ -5179,7 +5626,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10319.826,11.244204,11915.207};
-						angles[]={6.0514259,0,6.1940885};
+						angles[]={6.0514231,0,6.1940861};
 					};
 					side="West";
 					flags=4;
@@ -5194,6 +5641,29 @@ class Mission
 					id=199;
 					type="B_medic_F";
 					atlOffset=-9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -5342,7 +5812,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="GrpNATO_ASL = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_ASL_SL";
 						description="NATO Alpha Squad Leader";
@@ -5399,7 +5869,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpNATO_A1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitNATO_A1_FTL";
 						description="NATO Alpha 1 Fire Team Leader";
@@ -5421,6 +5891,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_A1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_A1_AR1";
 						description="NATO Alpha 1 Automatic Rifleman";
@@ -5443,6 +5914,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_A1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_A1_AR2";
 						description="NATO Alpha 1 Automatic Rifleman";
@@ -5465,6 +5937,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpNATO_A1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitNATO_A1_AT";
 						description="NATO Alpha 1 Assaultman (AT)";
@@ -5542,7 +6015,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpNATO_A2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitNATO_A2_FTL";
 						description="NATO Alpha 2 Fire Team Leader";
@@ -5564,6 +6037,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_A2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_A2_AR1";
 						description="NATO Alpha 2 Automatic Rifleman";
@@ -5585,6 +6059,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_A2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_A2_AR2";
 						description="NATO Alpha 2 Automatic Rifleman";
@@ -5607,6 +6082,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpNATO_A2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitNATO_A2_AT";
 						description="NATO Alpha 2 Assaultman (AT)";
@@ -5692,6 +6168,7 @@ class Mission
 					};
 					id=222;
 					type="B_crew_F";
+					atlOffset=-2.6702881e-005;
 				};
 				class Item1
 				{
@@ -5714,6 +6191,7 @@ class Mission
 					};
 					id=223;
 					type="B_crew_F";
+					atlOffset=-2.6702881e-005;
 				};
 				class Item2
 				{
@@ -5735,6 +6213,7 @@ class Mission
 					};
 					id=224;
 					type="B_soldier_repair_F";
+					atlOffset=-2.6702881e-005;
 				};
 			};
 			class Attributes
@@ -5805,7 +6284,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="GrpNATO_BSL = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_BSL_SL";
 						description="NATO Bravo Squad Leader";
@@ -5864,7 +6343,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpNATO_B1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitNATO_B1_FTL";
 						description="NATO Bravo 1 Fire Team Leader";
@@ -5886,6 +6365,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_B1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_B1_AR1";
 						description="NATO Bravo 1 Automatic Rifleman";
@@ -5907,6 +6387,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_B1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_B1_AR2";
 						description="NATO Bravo 1 Automatic Rifleman";
@@ -5929,6 +6410,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpNATO_B1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitNATO_B1_AT";
 						description="NATO Bravo 1 Assaultman (AT)";
@@ -6006,7 +6488,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpNATO_B2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitNATO_B2_FTL";
 						description="NATO Bravo 2 Fire Team Leader";
@@ -6028,6 +6510,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_B2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_B2_AR1";
 						description="NATO Bravo 2 Automatic Rifleman";
@@ -6050,6 +6533,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_B2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_B2_AR2";
 						description="NATO Bravo 2 Automatic Rifleman";
@@ -6072,6 +6556,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpNATO_B2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitNATO_B2_AT";
 						description="NATO Bravo 2 Assaultman (AT)";
@@ -6249,6 +6734,7 @@ class Mission
 				};
 			};
 			id=242;
+			atlOffset=-0.64373875;
 		};
 		class Item145
 		{
@@ -6262,22 +6748,45 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10438.314,13.276064,11940.98};
-						angles[]={6.2551947,0,0.018663859};
+						position[]={10438.314,13.276038,11940.979};
+						angles[]={6.2551899,0,0.018657569};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="GrpNATO_CSL = group this; [""dc"",this] call f_fnc_assignGear;";
-						name="UnitNATO_CSL";
+						name="UnitNATO_CSL_SL";
 						description="NATO Charlie Squad Leader";
 						isPlayable=1;
 					};
 					id=247;
 					type="B_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
@@ -6327,7 +6836,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpNATO_C1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitNATO_C1_FTL";
 						description="NATO Charlie 1 Fire Team Leader";
@@ -6349,6 +6858,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_C1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_C1_AR1";
 						description="NATO Charlie 1 Automatic Rifleman";
@@ -6356,7 +6866,6 @@ class Mission
 					};
 					id=251;
 					type="B_soldier_AR_F";
-					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
@@ -6371,6 +6880,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_C1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_C1_AR2";
 						description="NATO Charlie 1 Automatic Rifleman";
@@ -6392,6 +6902,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpNATO_C1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitNATO_C1_AT";
 						description="NATO Charlie 1 Assaultman (AT)";
@@ -6399,6 +6910,7 @@ class Mission
 					};
 					id=253;
 					type="B_soldier_LAT_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item4
 				{
@@ -6468,7 +6980,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpNATO_C2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitNATO_C2_FTL";
 						description="NATO Charlie 2 Fire Team Leader";
@@ -6490,6 +7002,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_C2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_C2_AR1";
 						description="NATO Charlie 2 Automatic Rifleman";
@@ -6512,6 +7025,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpNATO_C2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitNATO_C2_AR2";
 						description="NATO Charlie 2 Automatic Rifleman";
@@ -6533,6 +7047,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpNATO_C2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitNATO_C2_AT";
 						description="NATO Charlie 2 Assaultman (AT)";
@@ -6851,6 +7366,7 @@ class Mission
 					};
 					id=274;
 					type="B_Soldier_TL_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item1
 				{
@@ -6879,6 +7395,7 @@ class Mission
 			{
 			};
 			id=273;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item152
 		{
@@ -8821,6 +9338,7 @@ class Mission
 					};
 					id=350;
 					type="B_Helipilot_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item1
 				{
@@ -8843,6 +9361,7 @@ class Mission
 					};
 					id=351;
 					type="B_Helipilot_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item2
 				{
@@ -8865,6 +9384,7 @@ class Mission
 					};
 					id=352;
 					type="B_soldier_repair_F";
+					atlOffset=9.5367432e-007;
 				};
 				class Item3
 				{
@@ -8887,6 +9407,7 @@ class Mission
 					};
 					id=353;
 					type="B_helicrew_F";
+					atlOffset=9.5367432e-007;
 				};
 			};
 			class Attributes
@@ -9212,7 +9733,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="COLONEL";
 						lock="UNLOCKED";
 						init="[""co"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CO";
@@ -9303,7 +9824,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="[""uav"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CO_UAV";
 						description="CSAT UAV Operator";
@@ -9430,7 +9950,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="MAJOR";
 						lock="UNLOCKED";
 						init="GrpCSAT_DC = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_DC";
@@ -9476,7 +9996,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="GrpCSAT_DC = group this; [""uav"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_DC_UAV";
 						description="CSAT UAV Operator";
@@ -9696,7 +10215,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						lock="UNLOCKED";
 						init="GrpCSAT_ASL = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_ASL_SL";
@@ -9800,7 +10319,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_A1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_A1_FTL";
@@ -9846,6 +10365,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_A1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_A1_AR1";
@@ -9891,6 +10411,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_A1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_A1_AR2";
@@ -9936,6 +10457,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						lock="UNLOCKED";
 						init="GrpCSAT_A1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_A1_AT";
@@ -10084,7 +10606,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_A2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_A2_FTL";
@@ -10130,6 +10652,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_A2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_A2_AR1";
@@ -10176,6 +10699,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_A2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_A2_AR2";
@@ -10221,6 +10745,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						lock="UNLOCKED";
 						init="GrpCSAT_A2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_A2_AT";
@@ -10513,7 +11038,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						lock="UNLOCKED";
 						init="GrpCSAT_BSL = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_BSL_SL";
@@ -10617,7 +11142,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_B1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_B1_FTL";
@@ -10663,6 +11188,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_B1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_B1_AR1";
@@ -10708,6 +11234,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_B1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_B1_AR2";
@@ -10754,6 +11281,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						lock="UNLOCKED";
 						init="GrpCSAT_B1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_B1_AT";
@@ -10902,7 +11430,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_B2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_B2_FTL";
@@ -10948,6 +11476,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_B2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_B2_AR1";
@@ -10994,6 +11523,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_B2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_B2_AR2";
@@ -11039,6 +11569,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						lock="UNLOCKED";
 						init="GrpCSAT_B2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_B2_AT";
@@ -11359,7 +11890,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						lock="UNLOCKED";
 						init="GrpCSAT_CSL = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CSL_SL";
@@ -11463,7 +11994,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_C1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_C1_FTL";
@@ -11510,6 +12041,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_C1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_C1_AR1";
@@ -11555,6 +12087,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_C1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_C1_AR2";
@@ -11600,6 +12133,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						lock="UNLOCKED";
 						init="GrpCSAT_C1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_C1_AT";
@@ -11749,7 +12283,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_C2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_C2_FTL";
@@ -11795,6 +12329,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_C2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_C2_AR1";
@@ -11840,6 +12375,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						lock="UNLOCKED";
 						init="GrpCSAT_C2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_C2_AR2";
@@ -11886,6 +12422,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						lock="UNLOCKED";
 						init="GrpCSAT_C2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_C2_AT";
@@ -14887,7 +15424,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="COLONEL";
 						init="[""co"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CO";
 						description="AAF Commander";
@@ -14909,6 +15446,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="[""jtac"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CO_JTAC";
 						description="AAF Forward Observer";
@@ -15010,7 +15548,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="MAJOR";
 						init="GrpAAF_DC = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_DC";
 						description="AAF Deputy Commander";
@@ -15032,6 +15570,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpAAF_DC = group this; [""jtac"",this] call f_fnc_assignGear;";
 						name="UnitAAF_DC_JTAC";
 						description="AAF Forward Observer";
@@ -15209,6 +15748,7 @@ class Mission
 				};
 			};
 			id=540;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item215
 		{
@@ -15230,7 +15770,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="GrpAAF_ASL = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_ASL_SL";
 						description="AAF Alpha Squad Leader";
@@ -15286,7 +15826,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpAAF_A1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitAAF_A1_FTL";
 						description="AAF Alpha 1 Fire Team Leader";
@@ -15309,6 +15849,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_A1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_A1_AR1";
 						description="AAF Alpha 1 Automatic Rifleman";
@@ -15330,6 +15871,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_A1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_A1_AR2";
 						description="AAF Alpha 1 Automatic Rifleman";
@@ -15351,6 +15893,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpAAF_A1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitAAF_A1_AT";
 						description="AAF Alpha 1 Assaultman (AT)";
@@ -15429,7 +15972,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpAAF_A2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitAAF_A2_FTL";
 						description="AAF Alpha 2 Fire Team Leader";
@@ -15451,6 +15994,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_A2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_A2_AR1";
 						description="AAF Alpha 2 Automatic Rifleman";
@@ -15458,6 +16002,7 @@ class Mission
 					};
 					id=556;
 					type="I_Soldier_AR_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item2
 				{
@@ -15472,6 +16017,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_A2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_A2_AR2";
 						description="AAF Alpha 2 Automatic Rifleman";
@@ -15494,6 +16040,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpAAF_A2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitAAF_A2_AT";
 						description="AAF Alpha 2 Assaultman (AT)";
@@ -15696,7 +16243,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="GrpAAF_BSL = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_BSL_SL";
 						description="AAF Bravo Squad Leader";
@@ -15753,7 +16300,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpAAF_B1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitAAF_B1_FTL";
 						description="AAF Bravo 1 Fire Team Leader";
@@ -15776,6 +16323,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_B1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_B1_AR1";
 						description="AAF Bravo 1 Automatic Rifleman";
@@ -15798,6 +16346,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_B1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_B1_AR2";
 						description="AAF Bravo 1 Automatic Rifleman";
@@ -15819,6 +16368,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpAAF_B1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitAAF_B1_AT";
 						description="AAF Bravo 1 Assaultman (AT)";
@@ -15896,7 +16446,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpAAF_B2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitAAF_B2_FTL";
 						description="AAF Bravo 2 Fire Team Leader";
@@ -15918,6 +16468,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_B2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_B2_AR1";
 						description="AAF Bravo 2 Automatic Rifleman";
@@ -15939,6 +16490,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_B2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_B2_AR2";
 						description="AAF Bravo 2 Automatic Rifleman";
@@ -15960,6 +16512,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpAAF_B2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitAAF_B2_AT";
 						description="AAF Bravo 2 Assaultman (AT)";
@@ -16010,6 +16563,7 @@ class Mission
 					};
 					id=581;
 					type="I_soldier_F";
+					atlOffset=-9.5367432e-007;
 				};
 			};
 			class Attributes
@@ -16137,6 +16691,7 @@ class Mission
 				};
 			};
 			id=582;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item223
 		{
@@ -16158,7 +16713,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="GrpAAF_CSL = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CSL_SL";
 						description="AAF Charlie Squad Leader";
@@ -16214,7 +16769,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpAAF_C1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitAAF_C1_FTL";
 						description="AAF Charlie 1 Fire Team Leader";
@@ -16222,6 +16777,7 @@ class Mission
 					};
 					id=590;
 					type="I_Soldier_TL_F";
+					atlOffset=-9.5367432e-007;
 				};
 				class Item1
 				{
@@ -16236,6 +16792,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_C1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_C1_AR1";
 						description="AAF Charlie 1 Automatic Rifleman";
@@ -16257,6 +16814,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_C1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_C1_AR2";
 						description="AAF Charlie 1 Automatic Rifleman";
@@ -16278,6 +16836,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpAAF_C1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitAAF_C1_AT";
 						description="AAF Charlie 1 Assaultman (AT)";
@@ -16334,6 +16893,7 @@ class Mission
 			{
 			};
 			id=589;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item225
 		{
@@ -16355,7 +16915,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpAAF_C2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitAAF_C2_FTL";
 						description="AAF Charlie 2 Fire Team Leader";
@@ -16377,6 +16937,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_C2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_C2_AR1";
 						description="AAF Charlie 2 Automatic Rifleman";
@@ -16398,6 +16959,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpAAF_C2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitAAF_C2_AR2";
 						description="AAF Charlie 2 Automatic Rifleman";
@@ -16419,6 +16981,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpAAF_C2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitAAF_C2_AT";
 						description="AAF Charlie 2 Assaultman (AT)";
@@ -16598,7 +17161,6 @@ class Mission
 				};
 			};
 			id=603;
-			atlOffset=-9.5367432e-007;
 		};
 		class Item227
 		{
@@ -17045,6 +17607,7 @@ class Mission
 					};
 					id=630;
 					type="I_Soldier_AA_F";
+					atlOffset=-9.5367432e-007;
 				};
 			};
 			class Attributes
@@ -17487,6 +18050,7 @@ class Mission
 				};
 			};
 			id=647;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item240
 		{
@@ -17907,6 +18471,7 @@ class Mission
 				};
 			};
 			id=662;
+			atlOffset=9.5367432e-007;
 		};
 		class Item244
 		{
@@ -17996,6 +18561,7 @@ class Mission
 				};
 			};
 			id=665;
+			atlOffset=-9.5367432e-007;
 		};
 		class Item245
 		{
@@ -18085,6 +18651,7 @@ class Mission
 				};
 			};
 			id=668;
+			atlOffset=9.5367432e-007;
 		};
 		class Item246
 		{
@@ -18195,7 +18762,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="COLONEL";
 						init="[""co"",this,""ctrg""] call f_fnc_assignGear;";
 						name="UnitFIA_CO";
 						description="CTRG Commander";
@@ -18321,7 +18888,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="MAJOR";
 						init="GrpFIA_DC = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitFIA_DC";
 						description="FIA Deputy Commander";
@@ -18515,7 +19082,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="GrpFIA_ASL = group this; [""dc"",this,""ctrg""] call f_fnc_assignGear;";
 						name="UnitFIA_ASL_SL";
 						description="CTRG Alpha Squad Leader";
@@ -18619,7 +19186,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpFIA_A1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitFIA_A1_FTL";
 						description="FIA Alpha 1 Fire Team Leader";
@@ -18664,6 +19231,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_A1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_A1_AR1";
 						description="FIA Alpha 1 Automatic Rifleman";
@@ -18708,6 +19276,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_A1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_A1_AR2";
 						description="FIA Alpha 1 Automatic Rifleman";
@@ -18753,6 +19322,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpFIA_A1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitFIA_A1_AT";
 						description="FIA Alpha 1 Assaultman (AT)";
@@ -18899,7 +19469,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpFIA_A2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitFIA_A2_FTL";
 						description="FIA Alpha 2 Fire Team Leader";
@@ -18944,6 +19514,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_A2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_A2_AR1";
 						description="FIA Alpha 2 Automatic Rifleman";
@@ -18988,6 +19559,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_A2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_A2_AR2";
 						description="FIA Alpha 2 Automatic Rifleman";
@@ -19032,6 +19604,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpFIA_A2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitFIA_A2_AT";
 						description="FIA Alpha 2 Assaultman (AT)";
@@ -19178,7 +19751,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="GrpFIA_BSL = group this; [""dc"",this,""ctrg""] call f_fnc_assignGear;";
 						name="UnitFIA_BSL_SL";
 						description="CTRG Bravo Squad Leader";
@@ -19283,7 +19856,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpFIA_B1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitFIA_B1_FTL";
 						description="FIA Bravo 1 Fire Team Leader";
@@ -19305,6 +19878,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_B1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_B1_AR1";
 						description="FIA Bravo 1 Automatic Rifleman";
@@ -19350,6 +19924,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_B1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_B1_AR2";
 						description="FIA Bravo 1 Automatic Rifleman";
@@ -19372,6 +19947,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpFIA_B1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitFIA_B1_AT";
 						description="FIA Bravo 1 Assaultman (AT)";
@@ -19449,7 +20025,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpFIA_B2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitFIA_B2_FTL";
 						description="FIA Bravo 2 Fire Team Leader";
@@ -19472,6 +20048,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_B2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_B2_AR1";
 						description="FIA Bravo 2 Automatic Rifleman";
@@ -19493,6 +20070,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_B2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_B2_AR2";
 						description="FIA Bravo 2 Automatic Rifleman";
@@ -19514,6 +20092,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpFIA_B2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitFIA_B2_AT";
 						description="FIA Bravo 2 Assaultman (AT)";
@@ -19592,7 +20171,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="GrpFIA_CSL = group this; [""dc"",this] call f_fnc_assignGear;";
 						name="UnitFIA_CSL_SL";
 						description="FIA Charlie Squad Leader";
@@ -19648,7 +20227,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpFIA_C1 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitFIA_C1_FTL";
 						description="FIA Charlie 1 Fire Team Leader";
@@ -19671,6 +20250,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_C1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_C1_AR1";
 						description="FIA Charlie 1 Automatic Rifleman";
@@ -19693,6 +20273,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_C1 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_C1_AR2";
 						description="FIA Charlie 1 Automatic Rifleman";
@@ -19714,6 +20295,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpFIA_C1 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitFIA_C1_AT";
 						description="FIA Charlie 1 Assaultman (AT)";
@@ -19792,7 +20374,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="GrpFIA_C2 = group this; [""FTL"",this] call f_fnc_assignGear;";
 						name="UnitFIA_C2_FTL";
 						description="FIA Charlie 2 Fire Team Leader";
@@ -19814,6 +20396,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_C2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_C2_AR1";
 						description="FIA Charlie 2 Automatic Rifleman";
@@ -19835,6 +20418,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="SERGEANT";
 						init="GrpFIA_C2 = group this; [""ar"",this] call f_fnc_assignGear;";
 						name="UnitFIA_C2_AR2";
 						description="FIA Charlie 2 Automatic Rifleman";
@@ -19856,6 +20440,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
+						rank="CORPORAL";
 						init="GrpFIA_C2 = group this; [""rat"",this] call f_fnc_assignGear;";
 						name="UnitFIA_C2_AT";
 						description="FIA Charlie 2 Assaultman (AT)";
@@ -20880,6 +21465,7 @@ class Mission
 					};
 					id=790;
 					type="C_journalist_F";
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -20909,6 +21495,7 @@ class Mission
 			{
 			};
 			id=789;
+			atlOffset=9.5367432e-007;
 		};
 		class Item273
 		{
@@ -21302,6 +21889,7 @@ class Mission
 			};
 			id=800;
 			type="SupportProvider_Virtual_CAS_Heli";
+			atlOffset=4.5776367e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -21859,7 +22447,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="LIEUTENANT";
+						rank="COLONEL";
 						init="[""co"",this] call f_fnc_assignGear;";
 						name="UnitSyn_CO";
 						description="Syndikat Commander";
@@ -21902,7 +22490,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="[""jtac"",this] call f_fnc_assignGear;";
 						name="UnitSyn_CO_JTAC";
 						description="Syndikat JTAC";
@@ -21945,7 +22533,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						rank="CORPORAL";
 						init="[""uav"",this] call f_fnc_assignGear;";
 						name="UnitSyn_CO_UAV";
 						description="Syndikat UAV Operator";
@@ -22067,7 +22654,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="[""jtac"",this] call f_fnc_assignGear;";
 						name="UnitSyn_DC_JTAC";
 						description="Syndikat JTAC";
@@ -22111,7 +22698,6 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						rank="CORPORAL";
 						init="[""uav"",this] call f_fnc_assignGear;";
 						name="UnitSyn_DC_UAV";
 						description="Syndikat UAV Operator";
@@ -22198,7 +22784,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="MAJOR";
 						init="[""co"",this] call f_fnc_assignGear;";
 						name="UnitSyn_DC";
 						description="Syndikat Deputy Commander";
@@ -22299,7 +22885,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="[""dc"",this] call f_fnc_assignGear;";
 						name="UnitSyn_ASL_SL";
 						description="Syndikat Alpha Squad Leader";
@@ -22357,6 +22943,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_A1_AR1";
 						description="Syndikat Alpha 1 Automatic Rifleman";
@@ -22400,6 +22987,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_A1_AR2";
 						description="Syndikat Alpha 1 Automatic Rifleman";
@@ -22442,6 +23030,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						rank="CORPORAL";
 						init="[""rat"",this] call f_fnc_assignGear;";
 						name="UnitSyn_A1_AT";
 						description="Syndikat Alpha 1 Assaultman (AT)";
@@ -22449,6 +23038,29 @@ class Mission
 					};
 					id=859;
 					type="I_C_Soldier_Para_5_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item3
 				{
@@ -22498,7 +23110,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10291.57,21.355305,12729.23};
+						position[]={10291.57,21.355238,12729.229};
 					};
 					side="Independent";
 					flags=5;
@@ -22511,6 +23123,29 @@ class Mission
 					};
 					id=861;
 					type="I_C_Soldier_Para_1_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item5
 				{
@@ -22524,7 +23159,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="[""ftl"",this] call f_fnc_assignGear;";
 						name="UnitSyn_A1_FTL";
 						description="Syndikat Alpha 1 Fire Team Leader";
@@ -22582,6 +23217,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_A2_AR1";
 						description="Syndikat Alpha 2 Automatic Rifleman";
@@ -22625,6 +23261,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_A2_AR2";
 						description="Syndikat Alpha 2 Automatic Rifleman";
@@ -22667,6 +23304,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						rank="CORPORAL";
 						init="[""rat"",this] call f_fnc_assignGear;";
 						name="UnitSyn_A2_AT";
 						description="Syndikat Alpha 2 Assaultman (AT)";
@@ -22796,7 +23434,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="[""ftl"",this] call f_fnc_assignGear;";
 						name="UnitSyn_A2_FTL";
 						description="Syndikat Alpha 2 Fire Team Leader";
@@ -22896,7 +23534,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="[""dc"",this] call f_fnc_assignGear;";
 						name="UnitSyn_BSL_SL";
 						description="Syndikat Bravo Squad Leader";
@@ -22954,6 +23592,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_B1_AR1";
 						description="Syndikat Bravo 1 Automatic Rifleman";
@@ -22997,6 +23636,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_B1_AR2";
 						description="Syndikat Bravo 1 Automatic Rifleman";
@@ -23039,6 +23679,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						rank="CORPORAL";
 						init="[""rat"",this] call f_fnc_assignGear;";
 						name="UnitSyn_B1_AT";
 						description="Syndikat Bravo 1 Assaultman (AT)";
@@ -23168,7 +23809,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="[""ftl"",this] call f_fnc_assignGear;";
 						name="UnitSyn_B1_FTL";
 						description="Syndikat Bravo 1 Fire Team Leader";
@@ -23226,6 +23867,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_B2_AR1";
 						description="Syndikat Bravo 2 Automatic Rifleman";
@@ -23269,6 +23911,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_B2_AR2";
 						description="Syndikat Bravo 2 Automatic Rifleman";
@@ -23312,6 +23955,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						rank="CORPORAL";
 						init="[""rat"",this] call f_fnc_assignGear;";
 						name="UnitSyn_B2_AT";
 						description="Syndikat Bravo 2 Assaultman (AT)";
@@ -23439,7 +24083,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="[""ftl"",this] call f_fnc_assignGear;";
 						name="UnitSyn_B2_FTL";
 						description="Syndikat Bravo 2 Fire Team Leader";
@@ -23542,7 +24186,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CAPTAIN";
 						init="[""dc"",this] call f_fnc_assignGear;";
 						name="UnitSyn_CSL_SL";
 						description="Syndikat Charlie Squad Leader";
@@ -23600,6 +24244,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_C1_AR1";
 						description="Syndikat Charlie 1 Automatic Rifleman";
@@ -23643,6 +24288,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_C1_AR2";
 						description="Syndikat Charlie 1 Automatic Rifleman";
@@ -23685,6 +24331,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						rank="CORPORAL";
 						init="[""rat"",this] call f_fnc_assignGear;";
 						name="UnitSyn_C1_AT";
 						description="Syndikat Charlie 1 Assaultman (AT)";
@@ -23814,7 +24461,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="[""ftl"",this] call f_fnc_assignGear;";
 						name="UnitSyn_C1_FTL";
 						description="Syndikat Charlie 1 Fire Team Leader";
@@ -23874,6 +24521,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_C2_AR1";
 						description="Syndikat Charlie 2 Automatic Rifleman";
@@ -23916,6 +24564,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						rank="SERGEANT";
 						init="[""ar"",this] call f_fnc_assignGear;";
 						name="UnitSyn_C2_AR2";
 						description="Syndikat Charlie 2 Automatic Rifleman";
@@ -23958,6 +24607,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						rank="CORPORAL";
 						init="[""rat"",this] call f_fnc_assignGear;";
 						name="UnitSyn_C2_AT";
 						description="Syndikat Charlie 2 Assaultman (AT)";
@@ -24016,7 +24666,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="CORPORAL";
+						rank="LIEUTENANT";
 						init="[""ftl"",this] call f_fnc_assignGear;";
 						name="UnitSyn_C2_FTL";
 						description="Syndikat Charlie 2 Fire Team Leader";
@@ -25230,6 +25880,7 @@ class Mission
 					};
 					id=938;
 					type="I_C_Soldier_Para_8_F";
+					atlOffset=-9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25397,7 +26048,7 @@ class Mission
 				};
 			};
 			id=939;
-			atlOffset=9.5367432e-007;
+			atlOffset=1.9073486e-006;
 		};
 		class Item317
 		{
@@ -25417,7 +26068,7 @@ class Mission
 			};
 			id=942;
 			type="C_Heli_Light_01_civil_F";
-			atlOffset=9.5367432e-007;
+			atlOffset=1.9073486e-006;
 		};
 		class Item318
 		{
@@ -25553,7 +26204,7 @@ class Mission
 				};
 			};
 			id=943;
-			atlOffset=-1.9073486e-006;
+			atlOffset=-3.8146973e-006;
 		};
 		class Item319
 		{
@@ -25574,7 +26225,7 @@ class Mission
 			};
 			id=946;
 			type="B_G_Offroad_01_armed_F";
-			atlOffset=-1.9073486e-006;
+			atlOffset=-3.8146973e-006;
 		};
 		class Item320
 		{
@@ -25735,7 +26386,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10223.137,19.520124,12766.134};
-				angles[]={6.2551923,0,0.055941612};
+				angles[]={6.2551899,0,0.055937801};
 			};
 			side="Empty";
 			flags=4;
@@ -25754,8 +26405,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10221.774,18.5119,12738.914};
-				angles[]={6.272521,0,0.013332055};
+				position[]={10221.774,18.51189,12738.913};
+				angles[]={6.2725215,0,0.013334315};
 			};
 			side="Empty";
 			flags=4;
@@ -25775,7 +26426,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10273.659,25.513187,12788.372};
-				angles[]={6.2365522,0,0.17809302};
+				angles[]={6.2365503,0,0.1780934};
 			};
 			side="Empty";
 			flags=4;
@@ -25795,7 +26446,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10280.82,25.88216,12782.394};
-				angles[]={6.2152891,0,0.091741994};
+				angles[]={6.2152915,0,0.091734506};
 			};
 			side="Empty";
 			flags=4;
@@ -25815,7 +26466,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10311.264,28.879013,12788.35};
-				angles[]={6.1180367,0,0.033321146};
+				angles[]={6.118042,0,0.033318337};
 			};
 			side="Empty";
 			flags=4;
@@ -25835,7 +26486,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10319.41,28.315426,12781.823};
-				angles[]={6.1401691,0,0.051954471};
+				angles[]={6.140173,0,0.051958453};
 			};
 			side="Empty";
 			flags=4;
@@ -25855,7 +26506,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10355.545,29.655258,12786.693};
-				angles[]={6.0552187,0,0.11811411};
+				angles[]={6.0552101,0,0.11810643};
 			};
 			side="Empty";
 			flags=4;
@@ -25876,7 +26527,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10372.205,31.233393,12782.733};
-				angles[]={6.0640931,0,0.12861934};
+				angles[]={6.0640941,0,0.12861331};
 			};
 			side="Empty";
 			flags=4;
@@ -25896,7 +26547,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10430.303,25.17325,12760.798};
-				angles[]={6.1637568,0,6.2711854};
+				angles[]={6.1637526,0,6.2711778};
 			};
 			side="Empty";
 			flags=4;
@@ -25917,7 +26568,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10429.391,22.590286,12735.319};
-				angles[]={6.2285743,0,6.2605233};
+				angles[]={6.2285738,0,6.2605309};
 			};
 			side="Empty";
 			flags=4;
@@ -25937,7 +26588,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10362.69,26.082323,12768.124};
-				angles[]={5.9954023,0,0.11153467};
+				angles[]={5.9953976,0,0.11152653};
 			};
 			side="Empty";
 			flags=4;
@@ -25978,8 +26629,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10321.539,26.246613,12768.391};
-				angles[]={6.2378831,0,6.2698488};
+				position[]={10321.539,26.246571,12768.39};
+				angles[]={6.2378764,0,6.2698507};
 			};
 			side="Empty";
 			flags=4;
@@ -26021,7 +26672,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10280.718,23.556046,12768.687};
-				angles[]={6.211309,0,0.12337045};
+				angles[]={6.2113123,0,0.12337732};
 			};
 			side="Empty";
 			flags=4;
@@ -26718,6 +27369,7 @@ class Mission
 					};
 					id=976;
 					type="I_helipilot_F";
+					atlOffset=1.7166138e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -26757,6 +27409,7 @@ class Mission
 					};
 					id=977;
 					type="I_helipilot_F";
+					atlOffset=1.7166138e-005;
 					class CustomAttributes
 					{
 						class Attribute0
