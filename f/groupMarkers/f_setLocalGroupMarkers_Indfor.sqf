@@ -188,11 +188,11 @@ case "ind_c_f":
 
 	["GrpSyn_AH1",_hel, "AH1", "ColorRed"] spawn f_fnc_localGroupMarker;
 
-	["UnitSyndikat_CO_M",_med, "COM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
-	["UnitSyndikat_DC_M",_med, "DCM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
-	["UnitSyndikat_ASL_M",_med, "AM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
-	["UnitSyndikat_BSL_M",_med, "BM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
-	["UnitSyndikat_CSL_M",_med, "CM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
+	["UnitSyn_CO_M",_med, "COM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
+	["UnitSyn_DC_M",_med, "DCM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
+	["UnitSyn_ASL_M",_med, "AM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
+	["UnitSyn_BSL_M",_med, "BM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
+	["UnitSyn_CSL_M",_med, "CM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 
 };
 
