@@ -1036,6 +1036,7 @@ class Mission
 			};
 			id=38;
 			type="I_Truck_02_transport_F";
+			atlOffset=9.5367432e-007;
 		};
 		class Item39
 		{
@@ -1550,6 +1551,7 @@ class Mission
 			};
 			id=62;
 			type="I_supplyCrate_F";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1845,6 +1847,7 @@ class Mission
 			};
 			id=69;
 			type="IG_supplyCrate_F";
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5381,6 +5384,7 @@ class Mission
 					};
 					id=193;
 					type="B_soldier_UAV_F";
+					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6764,6 +6768,7 @@ class Mission
 					};
 					id=247;
 					type="B_Soldier_SL_F";
+					atlOffset=2.5749207e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6815,6 +6820,7 @@ class Mission
 			{
 			};
 			id=246;
+			atlOffset=2.5749207e-005;
 		};
 		class Item146
 		{
@@ -8385,7 +8391,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpNATO_TH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_P";
 						description="NATO Transport Helo 1 Pilot";
@@ -8407,7 +8413,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpNATO_TH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_CP";
 						description="NATO Transport Helo 1 Co-Pilot";
@@ -8429,7 +8435,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="GrpNATO_TH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_G1";
 						description="NATO Transport Helo 1 Crew Chief (Repair)";
@@ -8451,7 +8457,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="GrpNATO_TH1 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_G2";
 						description="NATO Transport Helo 1 Gunner";
@@ -8540,7 +8545,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpNATO_TH2 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_P";
 						description="NATO Transport Helo 2 Pilot";
@@ -8562,7 +8567,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpNATO_TH2 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_CP";
 						description="NATO Transport Helo 2 Co-Pilot";
@@ -8584,7 +8589,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="GrpNATO_TH2 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_G1";
 						description="NATO Transport Helo 2 Crew Chief (Repair)";
@@ -8606,7 +8611,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="GrpNATO_TH2 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_G2";
 						description="NATO Transport Helo 2 Gunner";
@@ -8695,7 +8699,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpNATO_TH3 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_P";
 						description="NATO Transport Helo 3 Pilot";
@@ -8718,7 +8722,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpNATO_TH3 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_CP";
 						description="NATO Transport Helo 3 Co-Pilot";
@@ -8741,7 +8745,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="GrpNATO_TH3 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_G1";
 						description="NATO Transport Helo 3 Crew Chief (Repair)";
@@ -8764,7 +8768,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="GrpNATO_TH3 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_G2";
 						description="NATO Transport Helo 3 Gunner";
@@ -8855,7 +8858,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpNATO_TH4 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_P";
 						description="NATO Transport Helo 4 Pilot";
@@ -8878,7 +8881,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpNATO_TH4 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_CP";
 						description="NATO Transport Helo 4 Co-Pilot";
@@ -8901,7 +8904,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="GrpNATO_TH4 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_G1";
 						description="NATO Transport Helo 4 Crew Chief (Repair)";
@@ -8924,7 +8927,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="GrpNATO_TH4 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_G2";
 						description="NATO Transport Helo 4 Gunner";
@@ -9015,7 +9017,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpNATO_TH5 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_P";
 						description="NATO Transport Helo 5 Pilot";
@@ -9037,7 +9039,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpNATO_TH5 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_CP";
 						description="NATO Transport Helo 5 Co-Pilot";
@@ -9059,7 +9061,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="GrpNATO_TH5 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_G1";
 						description="NATO Transport Helo 5 Crew Chief (Repair)";
@@ -9081,7 +9083,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="GrpNATO_TH5 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_G2";
 						description="NATO Transport Helo 5 Gunner";
@@ -9170,7 +9171,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpNATO_TH6 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_P";
 						description="NATO Transport Helo 6 Pilot";
@@ -9193,7 +9194,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpNATO_TH6 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_CP";
 						description="NATO Transport Helo 6 Co-Pilot";
@@ -9216,7 +9217,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="GrpNATO_TH6 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_G1";
 						description="NATO Transport Helo 6 Crew Chief (Repair)";
@@ -9239,7 +9240,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="GrpNATO_TH6 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_G2";
 						description="NATO Transport Helo 6 Gunner";
@@ -9330,7 +9330,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpNATO_TH7 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_P";
 						description="NATO Transport Helo 7 Pilot";
@@ -9353,7 +9353,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpNATO_TH7 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_CP";
 						description="NATO Transport Helo 7 Co-Pilot";
@@ -9376,7 +9376,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="GrpNATO_TH7 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_G1";
 						description="NATO Transport Helo 7 Crew Chief (Repair)";
@@ -9399,7 +9399,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="GrpNATO_TH7 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_G2";
 						description="NATO Transport Helo 7 Gunner";
@@ -9489,7 +9488,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpNATO_TH8 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_P";
 						description="NATO Transport Helo 8 Pilot";
@@ -9511,7 +9510,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpNATO_TH8 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_CP";
 						description="NATO Transport Helo 8 Co-Pilot";
@@ -9533,7 +9532,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="GrpNATO_TH8 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_G1";
 						description="NATO Transport Helo 8 Crew Chief (Repair)";
@@ -9555,7 +9554,6 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
 						init="GrpNATO_TH8 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_G2";
 						description="NATO Transport Helo 8 Gunner";
@@ -9644,7 +9642,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpNATO_AH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_AH1_P";
 						description="NATO Attack Helo 1 Pilot";
@@ -9666,7 +9664,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpNATO_AH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_AH1_CP";
 						description="NATO Attack Helo 1 Gunner (Repair)";
@@ -14515,7 +14513,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpCSAT_TH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH1_P";
 						description="CSAT Transport Helo 1 Pilot";
@@ -14537,7 +14535,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpCSAT_TH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH1_CP";
 						description="CSAT Transport Helo 1 Co-Pilot (Repair)";
@@ -14559,7 +14557,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="GrpCSAT_TH1 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH1_LM";
 						description="CSAT Transport Helo 1 Loadmaster";
@@ -14567,6 +14565,29 @@ class Mission
 					};
 					id=499;
 					type="O_helicrew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -14637,7 +14658,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpCSAT_TH2 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH2_P";
 						description="CSAT Transport Helo 2 Pilot";
@@ -14660,7 +14681,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpCSAT_TH2 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH2_CP";
 						description="CSAT Transport Helo 2 Co-Pilot (Repair)";
@@ -14683,7 +14704,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="GrpCSAT_TH2 = group this; [""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH2_LM";
 						description="CSAT Transport Helo 2 Loadmaster";
@@ -14692,6 +14713,29 @@ class Mission
 					id=503;
 					type="O_helicrew_F";
 					atlOffset=-1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -14763,7 +14807,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpCSAT_TH3 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH3_P";
 						description="CSAT Transport Helo 3 Pilot";
@@ -14785,7 +14829,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpCSAT_TH3 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH3_CP";
 						description="CSAT Transport Helo 3 Co-Pilot (Repair)";
@@ -14852,7 +14896,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpCSAT_TH4 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH4_P";
 						description="CSAT Transport Helo 4 Pilot";
@@ -14875,7 +14919,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpCSAT_TH4 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH4_CP";
 						description="CSAT Transport Helo 4 Co-Pilot (Repair)";
@@ -14944,7 +14988,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpCSAT_TH5 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH5_P";
 						description="CSAT Transport Helo 5 Pilot";
@@ -14967,7 +15011,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpCSAT_TH5 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH5_CP";
 						description="CSAT Transport Helo 5 Co-Pilot (Repair)";
@@ -15036,7 +15080,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpCSAT_TH6 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH6_P";
 						description="CSAT Transport Helo 6 Pilot";
@@ -15059,7 +15103,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpCSAT_TH6 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH6_CP";
 						description="CSAT Transport Helo 6 Co-Pilot (Repair)";
@@ -15128,7 +15172,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpCSAT_TH7 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH7_P";
 						description="CSAT Transport Helo 7 Pilot";
@@ -15150,7 +15194,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpCSAT_TH7 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH7_CP";
 						description="CSAT Transport Helo 7 Co-Pilot (Repair)";
@@ -15217,7 +15261,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpCSAT_TH8 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH8_P";
 						description="CSAT Transport Helo 8 Pilot";
@@ -15240,7 +15284,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpCSAT_TH8 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH8_CP";
 						description="CSAT Transport Helo 8 Co-Pilot (Repair)";
@@ -15309,7 +15353,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpCSAT_AH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_AH1_P";
 						description="CSAT Attack Helo 1 Pilot";
@@ -15355,7 +15399,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpCSAT_AH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_AH1_CP";
 						description="CSAT Attack Helo 1 Gunner (Repair)";
@@ -18314,7 +18358,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpAAF_TH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH1_P";
 						description="AAF Transport Helo 1 Pilot";
@@ -18336,7 +18380,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpAAF_TH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH1_CP";
 						description="AAF Transport Helo 1 Co-Pilot (Repair)";
@@ -18403,7 +18447,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpAAF_TH2 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH2_P";
 						description="AAF Transport Helo 2 Pilot";
@@ -18425,7 +18469,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpAAF_TH2 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH2_CP";
 						description="AAF Transport Helo 2 Co-Pilot (Repair)";
@@ -18493,7 +18537,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpAAF_TH3 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH3_P";
 						description="AAF Transport Helo 3 Pilot";
@@ -18515,7 +18559,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpAAF_TH3 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH3_CP";
 						description="AAF Transport Helo 3 Co-Pilot (Repair)";
@@ -18583,7 +18627,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpAAF_TH4 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH4_P";
 						description="AAF Transport Helo 4 Pilot";
@@ -18605,7 +18649,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpAAF_TH4 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH4_CP";
 						description="AAF Transport Helo 4 Co-Pilot (Repair)";
@@ -18673,7 +18717,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpAAF_AH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_AH1_P";
 						description="AAF Attack Helo 1 Pilot";
@@ -18695,7 +18739,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpAAF_AH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_AH1_CP";
 						description="AAF Attack Helo 1 Co-Pilot (Repair)";
@@ -21188,7 +21232,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="GrpFIA_TH1 = group this; [""pp"",this] call f_fnc_assignGear;";
 						name="UnitFIA_TH1_P";
 						description="FIA Transport Helo 1 Pilot";
@@ -21210,7 +21254,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="GrpFIA_TH1 = group this; [""pcc"",this] call f_fnc_assignGear;";
 						name="UnitFIA_TH1_CP";
 						description="FIA Transport Helo 1 Co-Pilot (Repair)";
@@ -21452,7 +21496,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10095.155,12.594543,12113.347};
-						angles[]={0.013327583,0,0.023993526};
+						angles[]={0.013334315,0,0.023998277};
 					};
 					side="Civilian";
 					flags=6;
@@ -21465,7 +21509,6 @@ class Mission
 					};
 					id=790;
 					type="C_journalist_F";
-					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21495,7 +21538,6 @@ class Mission
 			{
 			};
 			id=789;
-			atlOffset=9.5367432e-007;
 		};
 		class Item273
 		{
@@ -21510,7 +21552,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10096.677,12.434593,12131.003};
-						angles[]={0.0026520467,0,0.013332055};
+						angles[]={0.0026529003,0,0.013334315};
 					};
 					side="Civilian";
 					flags=6;
@@ -23123,6 +23165,7 @@ class Mission
 					};
 					id=861;
 					type="I_C_Soldier_Para_1_F";
+					atlOffset=6.4849854e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25932,7 +25975,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						rank="CAPTAIN";
+						rank="LIEUTENANT";
 						init="[""pp"",this] call f_fnc_assignGear;";
 						name="UnitSyn_TH1_P";
 						description="Syndikat Transport Helo 1 Pilot";
@@ -25977,7 +26020,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						rank="LIEUTENANT";
+						rank="SERGEANT";
 						init="[""pcc"",this] call f_fnc_assignGear; ";
 						name="UnitSyn_TH1_CP";
 						description="Syndikat Transport Helo 1 Co-Pilot (Repair)";
