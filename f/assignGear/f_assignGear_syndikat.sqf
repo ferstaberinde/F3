@@ -710,6 +710,7 @@ switch (_typeofUnit) do
 // LOADOUT: VEHICLE DRIVER
 	case "vd":
 	{
+		_unit setUnitTrait ["engineer",true]; // Can repair
 		_unit addmagazines [_smgmag,5];
 		_unit addweapon _smg;
 		_unit addmagazines [_smokegrenade,2];
@@ -731,6 +732,7 @@ switch (_typeofUnit) do
 // LOADOUT: AIR VEHICLE PILOTS
 	case "pp":
 	{
+		_unit setUnitTrait ["engineer",true]; // Can repair
 		_unit addmagazines [_smgmag,5];
 		_unit addweapon _smg;
 		_unit addmagazines [_smokegrenade,2];
@@ -741,6 +743,7 @@ switch (_typeofUnit) do
 // LOADOUT: AIR VEHICLE CREW CHIEF
 	case "pcc":
 	{
+		_unit setUnitTrait ["engineer",true]; // Can repair
 		_unit addmagazines [_smgmag,5];
 		_unit addweapon _smg;
 		_unit addmagazines [_smokegrenade,2];
