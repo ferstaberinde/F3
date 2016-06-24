@@ -394,7 +394,7 @@ switch (_typeofUnit) do
 		_unit linkItem "ItemGPS";
 		["g"] call _backpack;
 	};
-	
+
 // LOADOUT: JTAC
 	case "jtac":
 	{
@@ -791,7 +791,6 @@ switch (_typeofUnit) do
 		//_unit addmagazines [_mgrenade,2];		// Do not use with grenades
 		_unit linkItem _uavterminal;
 		["uav"] call _backpack;
-		_unit addMagazines ["Laserbatteries",4];	// Batteries added for the F3 UAV Recharging component
 	};
 
 // LOADOUT: Diver
