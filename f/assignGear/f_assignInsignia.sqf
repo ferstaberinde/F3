@@ -3,7 +3,7 @@
 // ====================================================================================
 
 private _badge = "";
-params ["_unit", "_typeOfUnit"];
+params ["_unit", "_typeOfUnit", "_island"];
 private _faction = toLower (faction _unit);
 
 // Note all badges must be defined in description.ext or be included your modpack.
@@ -44,40 +44,78 @@ private _groupBadges = [];
 switch (_faction) do
 {
 	case "blu_f" : {
-		_groupBadges = [
-			["GrpNATO_ASL","NATO_ASL_Badge"],
-			["GrpNATO_A1","NATO_A1_Badge"],
-			["GrpNATO_A2","NATO_A2_Badge"],
-			["GrpNATO_A3","NATO_A3_Badge"],
-			["GrpNATO_BSL","NATO_BSL_Badge"],
-			["GrpNATO_B1","NATO_B1_Badge"],
-			["GrpNATO_B2","NATO_B2_Badge"],
-			["GrpNATO_B3","NATO_B3_Badge"],
-			["GrpNATO_CSL","NATO_CSL_Badge"],
-			["GrpNATO_C1","NATO_C1_Badge"],
-			["GrpNATO_C2","NATO_C2_Badge"],
-			["GrpNATO_C3","NATO_C3_Badge"],
-			["GrpNATO_CO","NATO_CO_Badge"],
-			["GrpNATO_DC","NATO_DC_Badge"]
-		];
+		if (_island == "Tanoa") then {
+			_groupBadges = [
+				["GrpNATO_ASL","NATO_Pacific_ASL_Badge"],
+				["GrpNATO_A1","NATO_Pacific_A1_Badge"],
+				["GrpNATO_A2","NATO_Pacific_A2_Badge"],
+				["GrpNATO_A3","NATO_Pacific_A3_Badge"],
+				["GrpNATO_BSL","NATO_Pacific_BSL_Badge"],
+				["GrpNATO_B1","NATO_Pacific_B1_Badge"],
+				["GrpNATO_B2","NATO_Pacific_B2_Badge"],
+				["GrpNATO_B3","NATO_Pacific_B3_Badge"],
+				["GrpNATO_CSL","NATO_Pacific_CSL_Badge"],
+				["GrpNATO_C1","NATO_Pacific_C1_Badge"],
+				["GrpNATO_C2","NATO_Pacific_C2_Badge"],
+				["GrpNATO_C3","NATO_Pacific_C3_Badge"],
+				["GrpNATO_CO","NATO_Pacific_CO_Badge"],
+				["GrpNATO_DC","NATO_Pacific_DC_Badge"]
+			];
+		} else {
+			_groupBadges = [
+				["GrpNATO_ASL","NATO_ASL_Badge"],
+				["GrpNATO_A1","NATO_A1_Badge"],
+				["GrpNATO_A2","NATO_A2_Badge"],
+				["GrpNATO_A3","NATO_A3_Badge"],
+				["GrpNATO_BSL","NATO_BSL_Badge"],
+				["GrpNATO_B1","NATO_B1_Badge"],
+				["GrpNATO_B2","NATO_B2_Badge"],
+				["GrpNATO_B3","NATO_B3_Badge"],
+				["GrpNATO_CSL","NATO_CSL_Badge"],
+				["GrpNATO_C1","NATO_C1_Badge"],
+				["GrpNATO_C2","NATO_C2_Badge"],
+				["GrpNATO_C3","NATO_C3_Badge"],
+				["GrpNATO_CO","NATO_CO_Badge"],
+				["GrpNATO_DC","NATO_DC_Badge"]
+			];
+		};
 	};
 	case "opf_f": {
-		_groupBadges = [
-			["GrpCSAT_ASL","CSAT_ASL_Badge"],
-			["GrpCSAT_A1","CSAT_A1_Badge"],
-			["GrpCSAT_A2","CSAT_A2_Badge"],
-			["GrpCSAT_A3","CSAT_A3_Badge"],
-			["GrpCSAT_BSL","CSAT_BSL_Badge"],
-			["GrpCSAT_B1","CSAT_B1_Badge"],
-			["GrpCSAT_B2","CSAT_B2_Badge"],
-			["GrpCSAT_B3","CSAT_B3_Badge"],
-			["GrpCSAT_CSL","CSAT_CSL_Badge"],
-			["GrpCSAT_C1","CSAT_C1_Badge"],
-			["GrpCSAT_C2","CSAT_C2_Badge"],
-			["GrpCSAT_C3","CSAT_C3_Badge"],
-			["GrpCSAT_CO","CSAT_CO_Badge"],
-			["GrpCSAT_DC","CSAT_DC_Badge"]
-		];
+		if (_island == "Tanoa") then {
+			_groupBadges = [
+				["GrpCSAT_ASL","CSAT_Pacific_ASL_Badge"],
+				["GrpCSAT_A1","CSAT_Pacific_A1_Badge"],
+				["GrpCSAT_A2","CSAT_Pacific_A2_Badge"],
+				["GrpCSAT_A3","CSAT_Pacific_A3_Badge"],
+				["GrpCSAT_BSL","CSAT_Pacific_BSL_Badge"],
+				["GrpCSAT_B1","CSAT_Pacific_B1_Badge"],
+				["GrpCSAT_B2","CSAT_Pacific_B2_Badge"],
+				["GrpCSAT_B3","CSAT_Pacific_B3_Badge"],
+				["GrpCSAT_CSL","CSAT_Pacific_CSL_Badge"],
+				["GrpCSAT_C1","CSAT_Pacific_C1_Badge"],
+				["GrpCSAT_C2","CSAT_Pacific_C2_Badge"],
+				["GrpCSAT_C3","CSAT_Pacific_C3_Badge"],
+				["GrpCSAT_CO","CSAT_Pacific_CO_Badge"],
+				["GrpCSAT_DC","CSAT_Pacific_DC_Badge"]
+			];
+		} else {
+			_groupBadges = [
+				["GrpCSAT_ASL","CSAT_ASL_Badge"],
+				["GrpCSAT_A1","CSAT_A1_Badge"],
+				["GrpCSAT_A2","CSAT_A2_Badge"],
+				["GrpCSAT_A3","CSAT_A3_Badge"],
+				["GrpCSAT_BSL","CSAT_BSL_Badge"],
+				["GrpCSAT_B1","CSAT_B1_Badge"],
+				["GrpCSAT_B2","CSAT_B2_Badge"],
+				["GrpCSAT_B3","CSAT_B3_Badge"],
+				["GrpCSAT_CSL","CSAT_CSL_Badge"],
+				["GrpCSAT_C1","CSAT_C1_Badge"],
+				["GrpCSAT_C2","CSAT_C2_Badge"],
+				["GrpCSAT_C3","CSAT_C3_Badge"],
+				["GrpCSAT_CO","CSAT_CO_Badge"],
+				["GrpCSAT_DC","CSAT_DC_Badge"]
+			];
+		};
 	};
 	case "ind_f": {
 		_groupBadges = [
