@@ -4,6 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
+private ["_faction","_typeofUnit","_unit"];
 
 // ====================================================================================
 
@@ -11,18 +12,21 @@
 // The following code detects what faction the unit's slot belongs to, and stores
 // it in the private variable _faction. It can also be passed as an optional parameter.
 
+_typeofUnit = toLower (_this select 0);
+_unit = _this select 1;
 
-params["_typeofUnit","_unit"];
-private _faction = toLower (faction _unit);
-
-_typeofUnit = toLower _typeofUnit;
-_faction = toLower (param[2, (faction _unit)]);
+_faction = toLower (faction _unit);
+if(count _this > 2) then
+{
+  _faction = toLower (_this select 2);
+};
 
 // ====================================================================================
 
 // INSIGNIA
 // This block will give units insignia on their uniforms.
-[_unit,_typeofUnit] spawn {
+// Strings "Tanoa" or "Altis" specify which island style CSAT and NATO badges take
+[_unit,_typeofUnit, "Altis"] spawn {
 	#include "f_assignInsignia.sqf"
 };
 
@@ -57,7 +61,7 @@ _unit setVariable ["f_var_assignGear_done",false,true];
 // ====================================================================================
 
 // DEBUG
-if (f_param_debugMode == 1) then
+if (f_var_debugMode == 1) then
 {
 	_unit sideChat format ["DEBUG (assignGear.sqf): unit faction: %1",_faction];
 };
@@ -67,18 +71,18 @@ if (f_param_debugMode == 1) then
 // ====================================================================================
 
 // GEAR: BLUFOR > NATO
-// The following block of code executes only if the unit belongs to the NATO faction; it
+// The following block of code executes only if the unit is in a NATO slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "blu_f") then {
-	#include "f_assignGear_nato.sqf"
+#include "f_assignGear_nato.sqf"
 };
 
 
 // ====================================================================================
 
 // GEAR: OPFOR > CSAT
-// The following block of code executes only if the unit belongs to the CSAT faction; it
+// The following block of code executes only if the unit is in a CSAT slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction == "opf_f") then {
@@ -88,41 +92,21 @@ if (_faction == "opf_f") then {
 // ====================================================================================
 
 // GEAR: INDEPEDENT > AAF
-// The following block of code executes only if the unit belongs to the AAF faction; it
+// The following block of code executes only if the unit is in a AAF slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if(_faction == "ind_f") then {
-	#include "f_assignGear_aaf.sqf"
+	#include "f_assignGear_aaf.sqf";
 };
 
 // ====================================================================================
 
 // GEAR: FIA
-// The following block of code executes only if the unit belongs to the FIA slot (any faction); it
+// The following block of code executes only if the unit is in a FIA slot (any faction); it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
 	#include "f_assignGear_fia.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: CTRG
-// The following block of code executes only if the unit is manually assigned the "ctrg" faction; it
-// automatically includes a file which contains the appropriate equipment data.
-
-if(_faction == "ctrg") then {
-	#include "f_assignGear_ctrg.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: INDEPEDENT > SYNDIKAT
-// The following block of code executes only if the unit is manually assigned the Syndikat faction; it
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction =="ind_c_f") then {
-	#include "f_assignGear_syndikat.sqf"
 };
 
 // ====================================================================================
@@ -144,7 +128,7 @@ _unit setVariable ["f_var_assignGear_done",true,true];
 if (isNil "_carbine") then { //_carbine should exist unless no faction has been called
 	player globalchat format ["DEBUG (assignGear.sqf): Faction %1 is not defined.",_faction];
 } else {
- 	if (f_param_debugMode == 1) then	{
+ 	if (f_var_debugMode == 1) then	{
 		player sideChat format ["DEBUG (assignGear.sqf): Gear for %1: %1 slot selected.",_unit,_faction,_typeofUnit];
 	};
 };
