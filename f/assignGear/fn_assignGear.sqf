@@ -22,8 +22,16 @@ _faction = toLower (param[2, (faction _unit)]);
 
 // INSIGNIA
 // This block will give units insignia on their uniforms.
-// Strings "Tanoa" or "Altis" specify which style CSAT and NATO badges take, CSAT can also leverage "Urban"
-[_unit,_typeofUnit, "Altis"] spawn {
+
+// NATO and CSAT have different styles of insignia to match the different uniforms for
+// Altis and Tanoa. Additionally, CSAT has an urban camo option. The following variables
+// can be changed to apply the desired style of insignia to the NATO and CSAT platoons.
+
+_insignia_style_NATO = "Altis"; // Options: "Altis" | "Tanoa"
+_insignia_style_CSAT = "Altis"; // Options: "Altis" | "Tanoa" | "Urban"
+
+_insignia_styles = [_insignia_style_NATO,_insignia_style_CSAT];
+[_unit,_typeofUnit,_insignia_styles] spawn {
 	#include "f_assignInsignia.sqf"
 };
 

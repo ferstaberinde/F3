@@ -3,7 +3,7 @@
 // ====================================================================================
 
 private _badge = "";
-params ["_unit", "_typeOfUnit", "_style"];
+params ["_unit", "_typeOfUnit","_insignia_styles"];
 private _faction = toLower (faction _unit);
 
 // Note all badges must be defined in description.ext or be included your modpack.
@@ -12,6 +12,25 @@ private _faction = toLower (faction _unit);
 // This variable stores the final badge to use which will applied at the end of this script.
 // A default badge can be set by changing this.
 
+// ===================================================================================
+
+// The next two variables determine if which NATO and CSAT insignia variants will be used:
+
+_insignia_style_NATO = _insignia_styles select 0;
+_insignia_style_CSAT = _insignia_styles select 1;
+
+
+// The following (commented-out) block isn't working as intended yet!
+/*
+if (_insignia_style_NATO == "Tanoa") then {_NATO_Medic_Badge = "NATO_Medic_Badge";} else {_NATO_Medic_Badge = "NATO_Pacific_Medic_Badge";};
+
+switch (_insignia_style_CSAT) do
+	{
+	case "Tanoa" : {_CSAT_Medic_Badge = "CSAT_Pacific_Medic_Badge";};
+	case "Altis" : {_CSAT_Medic_Badge = "CSAT_Medic_Badge";};
+	case "Urban" : {_CSAT_Medic_Badge = "CSAT_Urban_Medic_Badge";};
+	};
+*/
 
 // ===================================================================================
 
@@ -25,9 +44,9 @@ private _roleBadge = switch (_typeofUnit) do
 	{
 		switch (_faction) do
 		{
-			case "blu_f": {"NATO_Medic_Badge"};
-			case "opf_f": {"CSAT_Medic_Badge"};
-			case "ind_f": {"AAF_Medic_Badge"};
+			case "blu_f" : {"NATO_Medic_Badge"};
+			case "opf_f" : {"CSAT_Medic_Badge"};
+			case "ind_f" : {"AAF_Medic_Badge"};
 			default {"NATO_Medic_Badge"};
 		};
 	};
@@ -44,7 +63,7 @@ private _groupBadges = [];
 switch (_faction) do
 {
 	case "blu_f" : {
-		if (_style == "Tanoa") then {
+		if (_insignia_style_NATO == "Tanoa") then {
 			_groupBadges = [
 				["GrpNATO_ASL","NATO_Pacific_ASL_Badge"],
 				["GrpNATO_A1","NATO_Pacific_A1_Badge"],
@@ -81,7 +100,7 @@ switch (_faction) do
 		};
 	};
 	case "opf_f": {
-		switch (_style) do
+		switch (_insignia_style_CSAT) do
 		{
 			case "Tanoa" : {
 				_groupBadges = [
