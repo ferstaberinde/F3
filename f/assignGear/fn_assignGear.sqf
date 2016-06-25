@@ -22,7 +22,7 @@ _faction = toLower (param[2, (faction _unit)]);
 
 // INSIGNIA
 // This block will give units insignia on their uniforms.
-// Strings "Tanoa" or "Altis" specify which island style CSAT and NATO badges take
+// Strings "Tanoa" or "Altis" specify which style CSAT and NATO badges take, CSAT can also leverage "Urban"
 [_unit,_typeofUnit, "Altis"] spawn {
 	#include "f_assignInsignia.sqf"
 };
