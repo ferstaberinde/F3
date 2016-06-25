@@ -3,7 +3,7 @@
 // ====================================================================================
 
 private _badge = "";
-params ["_unit", "_typeOfUnit", "_island"];
+params ["_unit", "_typeOfUnit", "_style"];
 private _faction = toLower (faction _unit);
 
 // Note all badges must be defined in description.ext or be included your modpack.
@@ -44,7 +44,7 @@ private _groupBadges = [];
 switch (_faction) do
 {
 	case "blu_f" : {
-		if (_island == "Tanoa") then {
+		if (_style == "Tanoa") then {
 			_groupBadges = [
 				["GrpNATO_ASL","NATO_Pacific_ASL_Badge"],
 				["GrpNATO_A1","NATO_Pacific_A1_Badge"],
@@ -81,40 +81,62 @@ switch (_faction) do
 		};
 	};
 	case "opf_f": {
-		if (_island == "Tanoa") then {
-			_groupBadges = [
-				["GrpCSAT_ASL","CSAT_Pacific_ASL_Badge"],
-				["GrpCSAT_A1","CSAT_Pacific_A1_Badge"],
-				["GrpCSAT_A2","CSAT_Pacific_A2_Badge"],
-				["GrpCSAT_A3","CSAT_Pacific_A3_Badge"],
-				["GrpCSAT_BSL","CSAT_Pacific_BSL_Badge"],
-				["GrpCSAT_B1","CSAT_Pacific_B1_Badge"],
-				["GrpCSAT_B2","CSAT_Pacific_B2_Badge"],
-				["GrpCSAT_B3","CSAT_Pacific_B3_Badge"],
-				["GrpCSAT_CSL","CSAT_Pacific_CSL_Badge"],
-				["GrpCSAT_C1","CSAT_Pacific_C1_Badge"],
-				["GrpCSAT_C2","CSAT_Pacific_C2_Badge"],
-				["GrpCSAT_C3","CSAT_Pacific_C3_Badge"],
-				["GrpCSAT_CO","CSAT_Pacific_CO_Badge"],
-				["GrpCSAT_DC","CSAT_Pacific_DC_Badge"]
-			];
-		} else {
-			_groupBadges = [
-				["GrpCSAT_ASL","CSAT_ASL_Badge"],
-				["GrpCSAT_A1","CSAT_A1_Badge"],
-				["GrpCSAT_A2","CSAT_A2_Badge"],
-				["GrpCSAT_A3","CSAT_A3_Badge"],
-				["GrpCSAT_BSL","CSAT_BSL_Badge"],
-				["GrpCSAT_B1","CSAT_B1_Badge"],
-				["GrpCSAT_B2","CSAT_B2_Badge"],
-				["GrpCSAT_B3","CSAT_B3_Badge"],
-				["GrpCSAT_CSL","CSAT_CSL_Badge"],
-				["GrpCSAT_C1","CSAT_C1_Badge"],
-				["GrpCSAT_C2","CSAT_C2_Badge"],
-				["GrpCSAT_C3","CSAT_C3_Badge"],
-				["GrpCSAT_CO","CSAT_CO_Badge"],
-				["GrpCSAT_DC","CSAT_DC_Badge"]
-			];
+		switch (_style) do
+		{
+			case "Tanoa" : {
+				_groupBadges = [
+					["GrpCSAT_ASL","CSAT_Pacific_ASL_Badge"],
+					["GrpCSAT_A1","CSAT_Pacific_A1_Badge"],
+					["GrpCSAT_A2","CSAT_Pacific_A2_Badge"],
+					["GrpCSAT_A3","CSAT_Pacific_A3_Badge"],
+					["GrpCSAT_BSL","CSAT_Pacific_BSL_Badge"],
+					["GrpCSAT_B1","CSAT_Pacific_B1_Badge"],
+					["GrpCSAT_B2","CSAT_Pacific_B2_Badge"],
+					["GrpCSAT_B3","CSAT_Pacific_B3_Badge"],
+					["GrpCSAT_CSL","CSAT_Pacific_CSL_Badge"],
+					["GrpCSAT_C1","CSAT_Pacific_C1_Badge"],
+					["GrpCSAT_C2","CSAT_Pacific_C2_Badge"],
+					["GrpCSAT_C3","CSAT_Pacific_C3_Badge"],
+					["GrpCSAT_CO","CSAT_Pacific_CO_Badge"],
+					["GrpCSAT_DC","CSAT_Pacific_DC_Badge"]
+				];
+			};
+			case "Altis" : {
+				_groupBadges = [
+					["GrpCSAT_ASL","CSAT_ASL_Badge"],
+					["GrpCSAT_A1","CSAT_A1_Badge"],
+					["GrpCSAT_A2","CSAT_A2_Badge"],
+					["GrpCSAT_A3","CSAT_A3_Badge"],
+					["GrpCSAT_BSL","CSAT_BSL_Badge"],
+					["GrpCSAT_B1","CSAT_B1_Badge"],
+					["GrpCSAT_B2","CSAT_B2_Badge"],
+					["GrpCSAT_B3","CSAT_B3_Badge"],
+					["GrpCSAT_CSL","CSAT_CSL_Badge"],
+					["GrpCSAT_C1","CSAT_C1_Badge"],
+					["GrpCSAT_C2","CSAT_C2_Badge"],
+					["GrpCSAT_C3","CSAT_C3_Badge"],
+					["GrpCSAT_CO","CSAT_CO_Badge"],
+					["GrpCSAT_DC","CSAT_DC_Badge"]
+				];
+			};
+			case "Urban" : {
+				_groupBadges = [
+					["GrpCSAT_ASL","CSAT_Urban_ASL_Badge"],
+					["GrpCSAT_A1","CSAT_Urban_A1_Badge"],
+					["GrpCSAT_A2","CSAT_Urban_A2_Badge"],
+					["GrpCSAT_A3","CSAT_Urban_A3_Badge"],
+					["GrpCSAT_BSL","CSAT_Urban_BSL_Badge"],
+					["GrpCSAT_B1","CSAT_Urban_B1_Badge"],
+					["GrpCSAT_B2","CSAT_Urban_B2_Badge"],
+					["GrpCSAT_B3","CSAT_Urban_B3_Badge"],
+					["GrpCSAT_CSL","CSAT_Urban_CSL_Badge"],
+					["GrpCSAT_C1","CSAT_Urban_C1_Badge"],
+					["GrpCSAT_C2","CSAT_Urban_C2_Badge"],
+					["GrpCSAT_C3","CSAT_Urban_C3_Badge"],
+					["GrpCSAT_CO","CSAT_Urban_CO_Badge"],
+					["GrpCSAT_DC","CSAT_Urban_DC_Badge"]
+				];
+			};
 		};
 	};
 	case "ind_f": {
