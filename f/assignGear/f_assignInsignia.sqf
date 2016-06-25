@@ -14,14 +14,14 @@ private _faction = toLower (faction _unit);
 
 // ===================================================================================
 
-// The next two variables determine if which NATO and CSAT insignia variants will be used:
+// The following block of code determines which NATO and CSAT insignia variants will be used:
 
 _insignia_style_NATO = _insignia_styles select 0;
 _insignia_style_CSAT = _insignia_styles select 1;
 
+_NATO_Medic_Badge = "NATO_Medic_Badge";
+_CSAT_Medic_Badge = "CSAT_Medic_Badge";
 
-// The following (commented-out) block isn't working as intended yet!
-/*
 if (_insignia_style_NATO == "Tanoa") then {_NATO_Medic_Badge = "NATO_Medic_Badge";} else {_NATO_Medic_Badge = "NATO_Pacific_Medic_Badge";};
 
 switch (_insignia_style_CSAT) do
@@ -30,7 +30,6 @@ switch (_insignia_style_CSAT) do
 	case "Altis" : {_CSAT_Medic_Badge = "CSAT_Medic_Badge";};
 	case "Urban" : {_CSAT_Medic_Badge = "CSAT_Urban_Medic_Badge";};
 	};
-*/
 
 // ===================================================================================
 
@@ -44,8 +43,8 @@ private _roleBadge = switch (_typeofUnit) do
 	{
 		switch (_faction) do
 		{
-			case "blu_f" : {"NATO_Medic_Badge"};
-			case "opf_f" : {"CSAT_Medic_Badge"};
+			case "blu_f" : {_insignia_style_NATO};
+			case "opf_f" : {_CSAT_Medic_Badge};
 			case "ind_f" : {"AAF_Medic_Badge"};
 			default {"NATO_Medic_Badge"};
 		};
