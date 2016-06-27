@@ -62,11 +62,6 @@ _uav = "b_uav";			// UAV
 // Due to the amount of markers the script is split into various sub-scripts (by side)
 // which are now included to create the complete script
 
-switch (_unitfaction) do
-{
-
-// ====================================================================================
-
 // MARKERS: BLUFOR
 // Markers seen by players in BLUFOR slots
 
@@ -87,5 +82,3 @@ switch (_unitfaction) do
 #include "f_setLocalGroupMarkers_Indfor.sqf"
 
 // ====================================================================================
-
-};

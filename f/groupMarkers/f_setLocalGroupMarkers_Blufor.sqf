@@ -3,10 +3,9 @@
 // ====================================================================================
 
 // MARKERS: BLUFOR > NATO
-// Markers seen by players in NATO slots.
+// Markers seen by players in NATO & NATO (Pacific) slots.
 
-case "blu_f":
-{
+if (_unitfaction in ["blu_f","blu_t_f"]) then {
 	["GrpNATO_CO",_hq, "CO", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpNATO_DC",_hq, "DC", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpNATO_COV",_ifv, "COV", "ColorYellow"] spawn f_fnc_localGroupMarker;
@@ -64,7 +63,6 @@ case "blu_f":
 	["UnitNATO_ASL_M",_med, "AM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitNATO_BSL_M",_med, "BM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitNATO_CSL_M",_med, "CM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
-
 };
 
 // ====================================================================================
@@ -72,8 +70,7 @@ case "blu_f":
 // MARKERS: BLUFOR > FIA
 // Markers seen by players in FIA slots.
 
-case "blu_g_f":
-{
+if (_unitfaction in ["blu_g_f"]) then {
 	["GrpFIA_CO",_hq, "CO", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpFIA_DC",_hq, "DC", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpFIA_COV",_ifv, "COV", "ColorYellow"] spawn f_fnc_localGroupMarker;
@@ -131,7 +128,6 @@ case "blu_g_f":
 	["UnitFIA_ASL_M",_med, "AM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitFIA_BSL_M",_med, "BM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitFIA_CSL_M",_med, "CM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
-
 };
 
 // ====================================================================================
