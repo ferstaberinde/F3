@@ -73,16 +73,23 @@ if (f_param_debugMode == 1) then
 
 // ====================================================================================
 
-// ====================================================================================
-
 // GEAR: BLUFOR > NATO
 // The following block of code executes only if the unit belongs to the NATO faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "blu_f") then {
+if (_faction in ["blu_f","nato"]) then {
 	#include "f_assignGear_nato.sqf"
 };
 
+// ====================================================================================
+
+// GEAR: BLUFOR > NATO (Pacific)
+// The following block of code executes only if the unit belongs to the NATO (Pacific) faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["blu_t_f","natopacific"]) then {
+	#include "f_assignGear_natopacific.sqf"
+};
 
 // ====================================================================================
 
@@ -90,8 +97,18 @@ if (_faction == "blu_f") then {
 // The following block of code executes only if the unit belongs to the CSAT faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "opf_f") then {
+if (_faction in ["opf_f","csat"]) then {
 	#include "f_assignGear_csat.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: OPFOR > CSAT (Pacific)
+// The following block of code executes only if the unit belongs to the CSAT (Pacific) faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["opf_t_f","csatpacific"]) then {
+	#include "f_assignGear_csatpacific.sqf"
 };
 
 // ====================================================================================
@@ -100,27 +117,27 @@ if (_faction == "opf_f") then {
 // The following block of code executes only if the unit belongs to the AAF faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if(_faction == "ind_f") then {
+if (_faction in ["ind_f","aaf"]) then {
 	#include "f_assignGear_aaf.sqf"
 };
 
 // ====================================================================================
 
 // GEAR: FIA
-// The following block of code executes only if the unit belongs to the FIA slot (any faction); it
+// The following block of code executes only if the unit belongs to the FIA slot (any side); it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
+if (_faction in ["blu_g_f","opf_g_f","ind_g_f","fia"]) then {
 	#include "f_assignGear_fia.sqf"
 };
 
 // ====================================================================================
 
 // GEAR: CTRG
-// The following block of code executes only if the unit is manually assigned the "ctrg" faction; it
+// The following block of code executes only if the unit belongs to the CTRG faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if(_faction == "ctrg") then {
+if (_faction in ["","ctrg"]) then {
 	#include "f_assignGear_ctrg.sqf"
 };
 
@@ -130,7 +147,7 @@ if(_faction == "ctrg") then {
 // The following block of code executes only if the unit is manually assigned the Syndikat faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction =="ind_c_f") then {
+if (_faction in ["ind_c_f","syndikat"]) then {
 	#include "f_assignGear_syndikat.sqf"
 };
 
