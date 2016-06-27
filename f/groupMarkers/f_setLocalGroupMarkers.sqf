@@ -82,3 +82,8 @@ _uav = "b_uav";			// UAV
 #include "f_setLocalGroupMarkers_Indfor.sqf"
 
 // ====================================================================================
+
+// MARKERS: ALL
+// Markers spawned here can be seen by all units
+
+// ====================================================================================
