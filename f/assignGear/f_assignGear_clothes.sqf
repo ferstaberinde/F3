@@ -13,6 +13,7 @@ _unit setVariable ["BIS_enableRandomization", false];
 removeUniform _unit;
 removeHeadgear _unit;
 removeVest _unit;
+removeGoggles _unit;
 
 // Assign default clothes
 _uniform = _baseUniform;
