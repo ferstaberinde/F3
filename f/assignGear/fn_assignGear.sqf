@@ -27,10 +27,10 @@ _faction = toLower (param[2, (faction _unit)]);
 // Altis and Tanoa. Additionally, CSAT has an urban camo option. The following variables
 // can be changed to apply the desired style of insignia to the NATO and CSAT platoons.
 
-private _insignia_style_NATO = "Altis"; // Options: "Altis" | "Tanoa"
-private _insignia_style_CSAT = "Altis"; // Options: "Altis" | "Tanoa" | "Urban"
+_insignia_style_NATO = "Altis"; // Options: "Altis" | "Tanoa"
+_insignia_style_CSAT = "Altis"; // Options: "Altis" | "Tanoa" | "Urban"
 
-private _insignia_styles = [_insignia_style_NATO,_insignia_style_CSAT];
+_insignia_styles = [_insignia_style_NATO,_insignia_style_CSAT];
 [_unit,_typeofUnit,_insignia_styles] spawn {
 	#include "f_assignInsignia.sqf"
 };
