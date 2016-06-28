@@ -3,10 +3,9 @@
 // ====================================================================================
 
 // MARKERS: OPFOR > CSAT
-// Markers seen by players in CSAT slots.
+// Markers seen by players in CSAT & CSAT (Pacific) slots.
 
-case "opf_f":
-{
+if (_unitfaction in ["opf_f","opf_t_f"]) then {
 	["GrpCSAT_CO",_hq, "CO", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpCSAT_DC",_hq, "DC", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpCSAT_COV",_ifv, "COV", "ColorYellow"] spawn f_fnc_localGroupMarker;
@@ -71,8 +70,7 @@ case "opf_f":
 // MARKERS: OPFOR > FIA
 // Markers seen by players in OPFOR-FIA slots.
 
-case "opf_g_f":
-{
+if (_unitfaction in ["opf_g_f"]) then {
 	["GrpOFIA_CO",_hq, "CO", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpOFIA_DC",_hq, "DC", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpOFIA_COV",_ifv, "COV", "ColorYellow"] spawn f_fnc_localGroupMarker;
@@ -130,7 +128,6 @@ case "opf_g_f":
 	["UnitOFIA_ASL_M",_med, "AM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitOFIA_BSL_M",_med, "BM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitOFIA_CSL_M",_med, "CM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
-
 };
 
 // ====================================================================================

@@ -5,8 +5,7 @@
 // MARKERS: INDEPEDENT > AAF
 // Markers seen by players in AAF slots.
 
-case "ind_f":
-{
+if (_unitfaction in ["ind_f"]) then {
 	["GrpAAF_CO",_hq, "CO", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpAAF_DC",_hq, "DC", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpAAF_COV",_ifv, "COV", "ColorYellow"] spawn f_fnc_localGroupMarker;
@@ -67,8 +66,7 @@ case "ind_f":
 // MARKERS: INDEPENDENT > FIA
 // Markers seen by players in INDEPENDENT-FIA slots.
 
-case "ind_g_f":
-{
+if (_unitfaction in ["ind_g_f"]) then {
 	["GrpIFIA_CO",_hq, "CO", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpIFIA_DC",_hq, "DC", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpIFIA_COV",_ifv, "COV", "ColorYellow"] spawn f_fnc_localGroupMarker;
@@ -126,7 +124,6 @@ case "ind_g_f":
 	["UnitIFIA_ASL_M",_med, "AM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitIFIA_BSL_M",_med, "BM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitIFIA_CSL_M",_med, "CM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
-
 };
 
 // ====================================================================================
@@ -134,8 +131,7 @@ case "ind_g_f":
 // MARKERS: INDEPENDENT > SYNDIKAT
 // Markers seen by players in SYNDIKAT slots.
 
-case "ind_c_f":
-{
+if (_unitfaction in ["ind_c_f"]) then {
 	["GrpSyn_CO",_hq, "CO", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpSyn_DC",_hq, "DC", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpSyn_COV",_ifv, "COV", "ColorYellow"] spawn f_fnc_localGroupMarker;
@@ -193,7 +189,6 @@ case "ind_c_f":
 	["UnitSyn_ASL_M",_med, "AM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitSyn_BSL_M",_med, "BM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitSyn_CSL_M",_med, "CM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
-
 };
 
 // ====================================================================================

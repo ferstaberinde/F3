@@ -54,7 +54,7 @@ _unit setVariable ["f_var_assignGear",_typeofUnit,true];
 // DECLARE VARIABLES AND FUNCTIONS 2
 // Used by the faction-specific scripts
 
-private ["_attach1","_attach2","_silencer1","_silencer2","_scope1","_scope2","_scope3","_bipod1","_bipod2","_attachments","_silencer","_hg_silencer1","_hg_scope1","_hg_attachments","_rifle","_riflemag","_riflemag_tr","_carbine","_carbinemag","_carbinemag_tr","_smg","_smgmag","_smgmag_tr","_diverWep","_diverMag1","_diverMag2","_glrifle","_glriflemag","_glriflemag_tr","_glmag","_glsmokewhite","_glsmokegreen","_glsmokered","_glflarewhite","_glflarered","_glflareyellow","_glflaregreen","_pistol","_pistolmag","_grenade","_Mgrenade","_smokegrenade","_smokegrenadegreen","_firstaid","_medkit","_nvg","_uavterminal","_chemgreen","_chemred","_chemyellow","_chemblue","_bagsmall","_bagmedium","_baglarge","_bagmediumdiver","_baguav","_baghmgg","_baghmgag","_baghatg","_baghatag","_bagmtrg","_bagmtrag","_baghsamg","_baghsamag","_AR","_ARmag","_ARmag_tr","_MMG","_MMGmag","_MMGmag_tr","_Tracer","_DMrifle","_DMriflemag","_RAT","_RATmag","_MAT","_MATmag1","_MATmag2","_HAT","_HATmag1","_HATmag2","_SAM","_SAMmag","_SNrifle","_SNrifleMag","_ATmine","_satchel","_APmine1","_APmine2","_light","_heavy","_diver","_pilot","_crew","_ghillie","_specOp","_baseUniform","_baseHelmet","_baseGlasses","_lightRig","_mediumRig","_heavyRig","_diverUniform","_diverHelmet","_diverRig","_diverGlasses","_pilotUniform","_pilotHelmet","_pilotRig","_pilotGlasses","_crewUniform","_crewHelmet","_crewRig","_crewGlasses","_ghillieUniform","_ghillieHelmet","_ghillieRig","_ghillieGlasses","_sfuniform","_sfhelmet","_sfRig","_sfGlasses","_typeofUnit","_unit","_isMan","_backpack","_typeofBackPack","_loadout","_COrifle","_mgrenade","_DCrifle","_FTLrifle","_armag","_ratmag","_typeofunit"];
+private ["_attach1","_attach2","_silencer1","_silencer2","_scope1","_scope2","_scope3","_bipod1","_bipod2","_attachments","_silencer","_hg_silencer1","_hg_scope1","_hg_attachments","_rifle","_riflemag","_riflemag_tr","_carbine","_carbinemag","_carbinemag_tr","_smg","_smgmag","_smgmag_tr","_diverWep","_diverMag1","_diverMag2","_glrifle","_glriflemag","_glriflemag_tr","_glmag","_glsmokewhite","_glsmokegreen","_glsmokered","_glflarewhite","_glflarered","_glflareyellow","_glflaregreen","_pistol","_pistolmag","_grenade","_Mgrenade","_smokegrenade","_smokegrenadegreen","_firstaid","_medkit","_nvg","_uavterminal","_chemgreen","_chemred","_chemyellow","_chemblue","_bagsmall","_bagmedium","_baglarge","_bagmediumdiver","_baguav","_baghmgg","_baghmgag","_baghatg","_baghatag","_bagmtrg","_bagmtrag","_baghsamg","_baghsamag","_AR","_ARmag","_ARmag_tr","_MMG","_MMGmag","_MMGmag_tr","_Tracer","_DMrifle","_DMriflemag","_RAT","_RATmag","_MAT","_MATmag1","_MATmag2","_SAM","_SAMmag","_HAT","_HATmag1","_HATmag2","_SNrifle","_SNrifleMag","_ATmine","_satchel","_APmine1","_APmine2","_light","_heavy","_diver","_pilot","_crew","_ghillie","_specOp","_baseUniform","_baseHelmet","_baseGlasses","_lightRig","_mediumRig","_heavyRig","_diverUniform","_diverHelmet","_diverRig","_diverGlasses","_pilotUniform","_pilotHelmet","_pilotRig","_pilotGlasses","_crewUniform","_crewHelmet","_crewRig","_crewGlasses","_ghillieUniform","_ghillieHelmet","_ghillieRig","_ghillieGlasses","_sfuniform","_sfhelmet","_sfRig","_sfGlasses","_typeofUnit","_unit","_isMan","_backpack","_typeofBackPack","_loadout","_COrifle","_mgrenade","_DC","_SLrifle","_JTACrifle","_ftlrifle","_grenrifle","_typeofunit"];
 
 // ====================================================================================
 
@@ -73,16 +73,23 @@ if (f_param_debugMode == 1) then
 
 // ====================================================================================
 
-// ====================================================================================
-
 // GEAR: BLUFOR > NATO
 // The following block of code executes only if the unit belongs to the NATO faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "blu_f") then {
+if (_faction in ["blu_f","nato"]) then {
 	#include "f_assignGear_nato.sqf"
 };
 
+// ====================================================================================
+
+// GEAR: BLUFOR > NATO (Pacific)
+// The following block of code executes only if the unit belongs to the NATO (Pacific) faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["blu_t_f","natopacific"]) then {
+	#include "f_assignGear_natopacific.sqf"
+};
 
 // ====================================================================================
 
@@ -90,8 +97,18 @@ if (_faction == "blu_f") then {
 // The following block of code executes only if the unit belongs to the CSAT faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "opf_f") then {
+if (_faction in ["opf_f","csat"]) then {
 	#include "f_assignGear_csat.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: OPFOR > CSAT (Pacific)
+// The following block of code executes only if the unit belongs to the CSAT (Pacific) faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["opf_t_f","csatpacific"]) then {
+	#include "f_assignGear_csatpacific.sqf"
 };
 
 // ====================================================================================
@@ -100,27 +117,27 @@ if (_faction == "opf_f") then {
 // The following block of code executes only if the unit belongs to the AAF faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if(_faction == "ind_f") then {
+if (_faction in ["ind_f","aaf"]) then {
 	#include "f_assignGear_aaf.sqf"
 };
 
 // ====================================================================================
 
 // GEAR: FIA
-// The following block of code executes only if the unit belongs to the FIA slot (any faction); it
+// The following block of code executes only if the unit belongs to the FIA slot (any side); it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
+if (_faction in ["blu_g_f","opf_g_f","ind_g_f","fia"]) then {
 	#include "f_assignGear_fia.sqf"
 };
 
 // ====================================================================================
 
 // GEAR: CTRG
-// The following block of code executes only if the unit is manually assigned the "ctrg" faction; it
+// The following block of code executes only if the unit belongs to the CTRG faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if(_faction == "ctrg") then {
+if (_faction in ["blu_ctrg_f","ctrg"]) then {
 	#include "f_assignGear_ctrg.sqf"
 };
 
@@ -130,7 +147,7 @@ if(_faction == "ctrg") then {
 // The following block of code executes only if the unit is manually assigned the Syndikat faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction =="ind_c_f") then {
+if (_faction in ["ind_c_f","syndikat"]) then {
 	#include "f_assignGear_syndikat.sqf"
 };
 

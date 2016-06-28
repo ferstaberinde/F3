@@ -177,62 +177,6 @@ _groups = [
 
 // ====================================================================================
 
-// GROUP IDs: INDEPENDENT > SYNDIKAT
-// Automatically assigns intelligible names to groups
-
-["GrpSyn_CO","AAF CO -"],
-["GrpSyn_DC","AAF DC -"],
-["GrpSyn_COV","AAF COV -"],
-
-["GrpSyn_ASL","AAF ASL -"],
-["GrpSyn_A1","AAF A1 -"],
-["GrpSyn_A2","AAF A2 -"],
-["GrpSyn_AV","AAF AV -"],
-
-["GrpSyn_BSL","AAF BSL -"],
-["GrpSyn_B1","AAF B1 -"],
-["GrpSyn_B2","AAF B2 -"],
-["GrpSyn_BV","AAF BV -"],
-
-["GrpSyn_CSL","AAF CSL -"],
-["GrpSyn_C1","AAF C1 -"],
-["GrpSyn_C2","AAF C2 -"],
-["GrpSyn_CV","AAF CV -"],
-
-["GrpSyn_JSL","AAF JSL -"],
-["GrpSyn_J1","AAF J1 -"],
-["GrpSyn_J2","AAF J2 -"],
-["GrpSyn_JV","AAF JV -"],
-
-["GrpSyn_MMG1","AAF MMG1 -"],
-["GrpSyn_MMG2","AAF MMG2 -"],
-["GrpSyn_HMG1","AAF HMG1 -"],
-["GrpSyn_MAT1","AAF MAT1 -"],
-["GrpSyn_MAT2","AAF MAT2 -"],
-["GrpSyn_HAT1","AAF HAT1 -"],
-["GrpSyn_MTR1","AAF MTR1 -"],
-["GrpSyn_MSAM1","AAF MSAM1 -"],
-["GrpSyn_HSAM1","AAF HSAM1 -"],
-["GrpSyn_ST1","AAF ST1 -"],
-["GrpSyn_DT1","AAF DT1 -"],
-["GrpSyn_ENG1","AAF ENG1 -"],
-
-["GrpSyn_IFV1","AAF IFV1 -"],
-["GrpSyn_IFV2","AAF IFV2 -"],
-["GrpSyn_TNK1","AAF TNK1 -"],
-
-["GrpSyn_TH1","AAF TH1 -"],
-["GrpSyn_TH2","AAF TH2 -"],
-["GrpSyn_TH3","AAF TH3 -"],
-["GrpSyn_TH4","AAF TH4 -"],
-["GrpSyn_TH5","AAF TH5 -"],
-["GrpSyn_TH6","AAF TH6 -"],
-["GrpSyn_TH7","AAF TH7 -"],
-["GrpSyn_TH8","AAF TH8 -"],
-["GrpSyn_AH1","AAF AH1 -"],
-
-// ====================================================================================
-
 // GROUP IDs: OPFOR > FIA
 // Automatically assigns intelligible names to groups
 
@@ -343,10 +287,65 @@ _groups = [
 ["GrpAAF_TH8","AAF TH8 -"],
 ["GrpAAF_AH1","AAF AH1 -"],
 
+// ====================================================================================
+
+// GROUP IDs: INDEPENDENT > SYNDIKAT
+// Automatically assigns intelligible names to groups
+
+["GrpSyn_CO","AAF CO -"],
+["GrpSyn_DC","AAF DC -"],
+["GrpSyn_COV","AAF COV -"],
+
+["GrpSyn_ASL","AAF ASL -"],
+["GrpSyn_A1","AAF A1 -"],
+["GrpSyn_A2","AAF A2 -"],
+["GrpSyn_AV","AAF AV -"],
+
+["GrpSyn_BSL","AAF BSL -"],
+["GrpSyn_B1","AAF B1 -"],
+["GrpSyn_B2","AAF B2 -"],
+["GrpSyn_BV","AAF BV -"],
+
+["GrpSyn_CSL","AAF CSL -"],
+["GrpSyn_C1","AAF C1 -"],
+["GrpSyn_C2","AAF C2 -"],
+["GrpSyn_CV","AAF CV -"],
+
+["GrpSyn_JSL","AAF JSL -"],
+["GrpSyn_J1","AAF J1 -"],
+["GrpSyn_J2","AAF J2 -"],
+["GrpSyn_JV","AAF JV -"],
+
+["GrpSyn_MMG1","AAF MMG1 -"],
+["GrpSyn_MMG2","AAF MMG2 -"],
+["GrpSyn_HMG1","AAF HMG1 -"],
+["GrpSyn_MAT1","AAF MAT1 -"],
+["GrpSyn_MAT2","AAF MAT2 -"],
+["GrpSyn_HAT1","AAF HAT1 -"],
+["GrpSyn_MTR1","AAF MTR1 -"],
+["GrpSyn_MSAM1","AAF MSAM1 -"],
+["GrpSyn_HSAM1","AAF HSAM1 -"],
+["GrpSyn_ST1","AAF ST1 -"],
+["GrpSyn_DT1","AAF DT1 -"],
+["GrpSyn_ENG1","AAF ENG1 -"],
+
+["GrpSyn_IFV1","AAF IFV1 -"],
+["GrpSyn_IFV2","AAF IFV2 -"],
+["GrpSyn_TNK1","AAF TNK1 -"],
+
+["GrpSyn_TH1","AAF TH1 -"],
+["GrpSyn_TH2","AAF TH2 -"],
+["GrpSyn_TH3","AAF TH3 -"],
+["GrpSyn_TH4","AAF TH4 -"],
+["GrpSyn_TH5","AAF TH5 -"],
+["GrpSyn_TH6","AAF TH6 -"],
+["GrpSyn_TH7","AAF TH7 -"],
+["GrpSyn_TH8","AAF TH8 -"],
+["GrpSyn_AH1","AAF AH1 -"],
 
 // ====================================================================================
 
-// GROUP IDs: OPFOR > FIA
+// GROUP IDs: Independent > FIA
 // Automatically assigns intelligible names to groups
 
 ["GrpIFIA_CO","FIA I CO -"],
