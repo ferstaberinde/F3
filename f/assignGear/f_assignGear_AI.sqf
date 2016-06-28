@@ -17,12 +17,12 @@ private ["_units","_unit","_faction","_known","_unitFactions","_unitClasses"];
 
 // SETUP CUSTOM VARIABLES
 
-// The factions of all units which should be affected
-_unitFactions = ["blu_f", "opf_f", "ind_f","blu_g_f","opf_g_f","ind_g_f"];
-
 // The default gear type picked when no corresponding entry is found in the _unitClasses array
 // Set _defaultclass to "" to let these units keep their default gear
-_defaultclass = "r";
+_defaultclass = "";
+
+// The factions that should be ignored
+_excludeFactions = ["civ_f"];
 
 // The unit classes and their corresponding F3 Assign Gear Component type
 _unitClasses = [
@@ -47,6 +47,7 @@ _unitClasses = [
 	["_aa_"			,	"msamg"	],
 	["_aaa_"		,	"msamag"],
 	["_uav_"		,	"uav"	],
+	["_jtac_"		,	"jtac"	],
 	["_m_"			,	"dm"	],
 	["_sniper_"		,	"sn"	],
 	["_spotter_"	,	"sp"	],
@@ -55,7 +56,27 @@ _unitClasses = [
 	["_crew_"		,	"vd"	],
 	["_helipilot_"	,	"pp"	],
 	["_helicrew_"	,	"pc"	],
-	["_pilot_"		,	"pp"	]
+	["_pilot_"		,	"pp"	],
+
+	//Syndikat Units
+	["t_1_"		,	"m"		],
+	["t_2_"		,	"rat"	],
+	["t_3_"		,	"ar"	],
+	["t_4_"		,	"ftl"	],
+	["t_5_"		,	"r"		],
+	["t_6_"		,	"gren"	],
+	["t_7_"		,	"car"	],
+	["t_8_"		,	"engm"	],
+	["p_1_"		,	"r"		],
+	["p_2_"		,	"ftl"	],
+	["p_3_"		,	"m"		],
+	["p_4_"		,	"ar"	],
+	["p_5_"		,	"rat"	],
+	["p_6_"		,	"gren"	],
+	["p_7_"		,	"car"	],
+	["p_8_"		,	"eng"	]
+
+	// No comma after the last array!
 
 ];
 
@@ -66,7 +87,6 @@ _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVar
 
 // LOOP THROUGH AI UNITS AND ASSIGN GEAR
 {
-
 	sleep 0.1;
 	_unit = _x;
 
@@ -76,7 +96,7 @@ _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVar
 			_faction = toLower (faction _unit);
 
 			// If the unit's faction is allowed, proceed
-			if (_faction in _unitFactions) then {
+			if !(_faction in _excludeFactions) then {
 				_known = false;
 				{
 					_known = [toLower (_x select 0),toLower (typeOf _unit)] call BIS_fnc_inString;
