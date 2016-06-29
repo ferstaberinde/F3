@@ -5792,7 +5792,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=203;
-					type="B_soldier_repair_F";
+					type="B_crew_F";
 					atlOffset=0.2648325;
 				};
 			};
@@ -6359,7 +6359,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=224;
-					type="B_soldier_repair_F";
+					type="B_crew_F";
 					atlOffset=0.26462555;
 				};
 			};
@@ -6930,7 +6930,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=245;
-					type="B_soldier_repair_F";
+					type="B_crew_F";
 					atlOffset=-0.44396687;
 				};
 			};
@@ -7522,7 +7522,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=266;
-					type="B_soldier_repair_F";
+					type="B_crew_F";
 					atlOffset=0.079956055;
 				};
 			};
@@ -8731,7 +8731,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=310;
-					type="B_soldier_repair_F";
+					type="B_crew_F";
 					atlOffset=0.20639706;
 				};
 			};
@@ -8880,7 +8880,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=314;
-					type="B_soldier_repair_F";
+					type="B_crew_F";
 					atlOffset=0.072402;
 				};
 			};
@@ -9029,7 +9029,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=318;
-					type="B_soldier_repair_F";
+					type="B_crew_F";
 					atlOffset=0.14305305;
 				};
 			};
@@ -9179,7 +9179,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=322;
-					type="B_soldier_repair_F";
+					type="B_helicrew_F";
 					atlOffset=0.13847637;
 				};
 				class Item3
@@ -9360,7 +9360,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=327;
-					type="B_soldier_repair_F";
+					type="B_helicrew_F";
 					atlOffset=0.25963306;
 				};
 				class Item3
@@ -9542,7 +9542,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=332;
-					type="B_soldier_repair_F";
+					type="B_helicrew_F";
 					atlOffset=0.066307068;
 				};
 				class Item3
@@ -9725,7 +9725,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=337;
-					type="B_soldier_repair_F";
+					type="B_helicrew_F";
 					atlOffset=0.08699131;
 				};
 				class Item3
@@ -9908,7 +9908,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=342;
-					type="B_soldier_repair_F";
+					type="B_helicrew_F";
 					atlOffset=0.13609791;
 				};
 				class Item3
@@ -10091,7 +10091,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=347;
-					type="B_soldier_repair_F";
+					type="B_helicrew_F";
 					atlOffset=0.21621132;
 				};
 				class Item3
@@ -10274,7 +10274,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=352;
-					type="B_soldier_repair_F";
+					type="B_helicrew_F";
 					atlOffset=0.11835194;
 				};
 				class Item3
@@ -10457,7 +10457,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=357;
-					type="B_soldier_repair_F";
+					type="B_helicrew_F";
 					atlOffset=0.15250683;
 				};
 				class Item3
@@ -10616,7 +10616,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=361;
-					type="B_soldier_repair_F";
+					type="B_Helipilot_F";
 					atlOffset=0.26832104;
 				};
 			};
@@ -11139,7 +11139,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=380;
-					type="O_soldier_repair_F";
+					type="O_crew_F";
 					atlOffset=0.002986908;
 				};
 			};
@@ -12062,7 +12062,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=401;
-					type="O_soldier_repair_F";
+					type="O_crew_F";
 					atlOffset=0.014223099;
 				};
 			};
@@ -13010,7 +13010,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=422;
-					type="O_soldier_repair_F";
+					type="O_crew_F";
 					atlOffset=0.010656357;
 				};
 			};
@@ -13936,7 +13936,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=443;
-					type="O_soldier_repair_F";
+					type="O_crew_F";
 					atlOffset=0.038473129;
 				};
 			};
@@ -15800,7 +15800,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=487;
-					type="O_soldier_repair_F";
+					type="O_crew_F";
 					atlOffset=0.012704849;
 				};
 			};
@@ -15949,7 +15949,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=491;
-					type="O_soldier_repair_F";
+					type="O_crew_F";
 					atlOffset=0.19464874;
 				};
 			};
@@ -16095,7 +16095,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=495;
-					type="O_soldier_repair_F";
+					type="O_crew_F";
 					atlOffset=0.027082443;
 				};
 			};
@@ -16222,7 +16222,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=498;
-					type="O_soldier_repair_F";
+					type="O_helipilot_F";
 					atlOffset=0.016393661;
 				};
 				class Item2
@@ -16395,7 +16395,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=502;
-					type="O_soldier_repair_F";
+					type="O_helipilot_F";
 					atlOffset=0.018474579;
 				};
 				class Item2
@@ -16568,7 +16568,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=506;
-					type="O_soldier_repair_F";
+					type="O_helipilot_F";
 					atlOffset=0.0085163116;
 				};
 			};
@@ -16684,7 +16684,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=509;
-					type="O_soldier_repair_F";
+					type="O_helipilot_F";
 					atlOffset=0.073816299;
 				};
 			};
@@ -16800,7 +16800,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=512;
-					type="O_soldier_repair_F";
+					type="O_helipilot_F";
 					atlOffset=1.9073486e-006;
 				};
 			};
@@ -16916,7 +16916,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=515;
-					type="O_soldier_repair_F";
+					type="O_helipilot_F";
 					atlOffset=0.020431519;
 				};
 			};
@@ -17032,7 +17032,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=518;
-					type="O_soldier_repair_F";
+					type="O_helipilot_F";
 					atlOffset=0.014560699;
 				};
 			};
@@ -17148,7 +17148,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=521;
-					type="O_soldier_repair_F";
+					type="O_helipilot_F";
 					atlOffset=0.02526474;
 				};
 			};
@@ -17287,7 +17287,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=524;
-					type="O_soldier_repair_F";
+					type="O_helipilot_F";
 					atlOffset=0.03509903;
 				};
 			};
@@ -17672,7 +17672,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=543;
-					type="I_Soldier_repair_F";
+					type="I_crew_F";
 					atlOffset=0.48532963;
 				};
 			};
@@ -18239,7 +18239,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=564;
-					type="I_Soldier_repair_F";
+					type="I_crew_F";
 					atlOffset=0.56803799;
 				};
 			};
@@ -18806,7 +18806,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=585;
-					type="I_Soldier_repair_F";
+					type="I_crew_F";
 					atlOffset=0.44394302;
 				};
 			};
@@ -19370,7 +19370,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=606;
-					type="I_Soldier_repair_F";
+					type="I_crew_F";
 					atlOffset=0.32751942;
 				};
 			};
@@ -20573,7 +20573,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=650;
-					type="I_Soldier_repair_F";
+					type="I_crew_F";
 					atlOffset=0.40900421;
 				};
 			};
@@ -20720,7 +20720,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=654;
-					type="I_Soldier_repair_F";
+					type="I_crew_F";
 					atlOffset=0.59694004;
 				};
 			};
@@ -20869,7 +20869,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=658;
-					type="I_Soldier_repair_F";
+					type="I_crew_F";
 					atlOffset=0.24329376;
 				};
 			};
@@ -20995,7 +20995,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=661;
-					type="I_Soldier_repair_F";
+					type="I_helipilot_F";
 					atlOffset=0.91416168;
 				};
 			};
@@ -21110,7 +21110,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=664;
-					type="I_Soldier_repair_F";
+					type="I_helipilot_F";
 					atlOffset=0.76019192;
 				};
 			};
@@ -21225,7 +21225,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=667;
-					type="I_Soldier_repair_F";
+					type="I_helipilot_F";
 					atlOffset=0.87363148;
 				};
 			};
@@ -21340,7 +21340,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=670;
-					type="I_Soldier_repair_F";
+					type="I_helipilot_F";
 					atlOffset=0.63227272;
 				};
 			};
@@ -21455,7 +21455,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=673;
-					type="I_Soldier_repair_F";
+					type="I_helipilot_F";
 					atlOffset=0.33528137;
 				};
 			};
@@ -24616,7 +24616,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=780;
-					type="B_soldier_repair_F";
+					type="B_crew_F";
 					atlOffset=0.030425072;
 				};
 			};
@@ -24731,7 +24731,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=783;
-					type="B_soldier_repair_F";
+					type="B_crew_F";
 					atlOffset=0.14796257;
 				};
 			};
