@@ -240,7 +240,79 @@ Version | Date
 
 3-4-0 | DD MMM 2016
 
-* PLACEHOLDER
+* Updated Assign AI Gear component:
+  * Implemented new Folk ARPS 2016 loadout options.
+  * Added support for the Syndikat faction.
+  * Added support for the NATO Pacific faction.
+  * Added support for the CSAT Pacific faction.
+  * Pilots can now repair vehicles (via the new trait command).
+  * Vehicle and crate loadouts now split into separate files per faction.
+  * All IF checks now compare the faction to an array of possible BIS factions.
+  * Strings such as 'aaf', 'nato' etc. can now be used when forcing a specific faction loadout (instead of a precise faction string such as 'ind_f').
+* Updated Assign AI Gear component:
+  * Added support for the Syndikat faction.
+  * All BIS factions are now processed unless specifically excluded.
+  * Non-recognised units keep their default gear.
+  * fn_setAISkill now exits without an error message if AI skills are not set.
+* Updated Admin Briefing component:
+  * Added support for the Syndikat faction.
+  * NATO and CSAT Pacific factions see default NATO and CSAT breifings.
+  * Component checks against BIS factions
+* Updated F3 Folk ARPS Platoons component:
+  * Changed OrBat to Folk ARPS 2015 pattern:
+     * Infantry squads now: SL, medic and 2 x 6-man FTs.
+     * Mechanised squads now:  SL, medic, 1 x 6-man FT and 1 x IFV (with crew). 
+  * Added a pre-placed Syndikat platoon with attachments.
+  * Ranks of units adjusted to allow correct leadership when merging groups
+  * JTAC CAS elements now virtual.
+  * Removed pre-placed 'reserved for JIP' groups.
+* Updated F3 Folk ARPS Group IDs component:
+  * Moved group name definitions to the group object in EDEN editor.
+  * Added support for the Syndikat faction.
+* Updated F3 Folk ARPS Group Markers component:
+  * Component now gets group names from group object in EDEN editor.
+  * Added support for the Syndikat faction.
+  * NATO and CSAT Pacific factions are shown the default NATO and CSAT markers.
+  * Changed switch structure to several IF-checks (making it easier to show the same marker to several units / factions - you only need to add a string)
+* Updated F3 Spectator Script component:
+  * Fix spectator jumping on keyboard input.
+* Updated Insignia component:
+  * Added new insignia patches for NATO and CSAT Pacific factions.
+  * Script variable toggles NATO / CSAT factions between Altis and Tanoa patches.
+  * Script variable can also enable CSAT urban patches.
+* Updated Naming your mission and Loading Screen components:
+  * Moved some settings from description.ext to the EDEN editor:
+     * Mission load and overview screen texts and pictures.
+     * Debug console.
+     * Author name.
+* Updated Medical Systems Support component:
+  * Fixed: SWS would on occasion not properly immobilise downed players.
+* Updated Mission Conditions Selector component:
+  * Pre-defined conditions now integrate time and atmospheric options.
+  * Parameters allow overrides for fog and wind settings.
+  * Pre-defined condtions adapt to support dawn/dusk on Altis and Tanoa.
+  * Added "Use mission settings" option to mission conditions parameter.
+* Updated Mute Orders and Reports component:
+  * Muting now only applies to playable AI units. 
+* Updated PreMount component:
+  * Removed pre-placed modules (component can still be used via script). 
+* Updated Radio Systems Support component:
+  * Added support for defaulting ACRE2 radios to a starting channel.
+  * TFR fix and radio designation changes:
+     * Long range default is now ch1.
+     * Short range radio (5km) to replace backpackRadios for weapons team leader (assistant) except the sniper's spotter.
+     * Vehicle teams expected to use vehicle radios for long range comms.
+  * Removed support for ACRE1.
+* Updated Zeus Support component:
+  * Pre-Placed ZEUS units assign F3 AI Skill to created units.
+* Various optimisations:
+  * ACRE2 (Radio Systems Support component)
+  * Group IDs component
+  * Insignia component
+  * Move CfgFunctions F3 definitions into its own hpp file.
+  * Parameters system now works in singleplayer editor and has been made slightly faster.
+  * Added new and update Polish translations of many terms.
+* Removed UAV Recharging component.
 
 3-3-0 | 25 APR 2015
 
