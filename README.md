@@ -251,9 +251,8 @@ Version | Date
   * Strings such as 'aaf', 'nato' etc. can now be used when forcing a specific faction loadout (instead of a precise faction string such as 'ind_f').
 * Updated Assign AI Gear component:
   * Added support for the Syndikat faction.
-  * All BIS factions are now processed unless specifically excluded.
+  * All factions are now processed unless specifically excluded.
   * Non-recognised units keep their default gear.
-  * fn_setAISkill now exits without an error message if AI skills are not set.
 * Updated Admin Briefing component:
   * Added support for the Syndikat faction.
   * NATO and CSAT Pacific factions see default NATO and CSAT breifings.
@@ -307,11 +306,11 @@ Version | Date
   * Pre-Placed ZEUS units assign F3 AI Skill to created units.
 * Various optimisations:
   * ACRE2 (Radio Systems Support component)
+  * fn_setAISkill now exits without an error message if AI skills are not set.
   * Group IDs component
   * Insignia component
   * Move CfgFunctions F3 definitions into its own hpp file.
   * Parameters system now works in singleplayer editor and has been made slightly faster.
-  * Added new and update Polish translations of many terms.
 * Removed UAV Recharging component.
 
 3-3-0 | 25 APR 2015
