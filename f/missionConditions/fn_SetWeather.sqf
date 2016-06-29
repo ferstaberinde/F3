@@ -13,8 +13,6 @@ private ["_missionOvercast","_MissionRain","_MissionRainbow","_MissionLightnings
 
 params [["_weather",9,[0]],["_setFog",true,[true]],["_setWind",true,[true]]];
 
-systemChat format ["%1",_this];
-
 // Exit when using mission settings
 if ( _weather == 9 ) exitWith {};
 

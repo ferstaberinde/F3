@@ -45,34 +45,6 @@ _mkrName setMarkerColorLocal _mkrColor;
 _mkrName setMarkerSizeLocal [0.8, 0.8];
 _mkrName setMarkerTextLocal _mkrText;
 
-/*
-switch (_mkrType) do
-{
-
-// Medics
-	case 0:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos _unt select 0),(getPos _unt select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal "b_med";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.5, 0.5];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
-// UAV Operator
-	case 1:
-	{
-		_mkr = createMarkerLocal [_mkrName,[(getPos _unt select 0),(getPos _unt select 1)]];
-		_mkr setMarkerShapeLocal "ICON";
-		_mkrName setMarkerTypeLocal "b_uav";
-		_mkrName setMarkerColorLocal _mkrColor;
-		_mkrName setMarkerSizeLocal [0.5, 0.5];
-		_mkrName setMarkerTextLocal _mkrText;
-	};
-
-};
-*/
-
 // ====================================================================================
 
 // UPDATE MARKER POSITION

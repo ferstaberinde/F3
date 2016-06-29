@@ -88,7 +88,7 @@ if (_faction in ["blu_f","nato"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["blu_t_f","natopacific"]) then {
-	#include "f_assignGear_natopacific.sqf"
+	#include "f_assignGear_natoPacific.sqf"
 };
 
 // ====================================================================================
@@ -108,7 +108,7 @@ if (_faction in ["opf_f","csat"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["opf_t_f","csatpacific"]) then {
-	#include "f_assignGear_csatpacific.sqf"
+	#include "f_assignGear_csatPacific.sqf"
 };
 
 // ====================================================================================
