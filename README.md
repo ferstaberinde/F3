@@ -147,7 +147,7 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers | SuicideKing | Pasrules | darkChozo | Przemro | GeEom
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers | SuicideKing | Pasrules | darkChozo | Przemro | GeEom | JonBons
 * Documentation: Fer | Wolfenswan | Dogface | Cam | Head | cptnnick | Snippers
 * Producers: Fer | Wolfenswan
 * Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Zerith | Bear | JonBons | Poulern | Chairborn | captainblaffer
