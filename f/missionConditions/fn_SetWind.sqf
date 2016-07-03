@@ -22,8 +22,8 @@ _waves = 0; 		// Size of waves
 
 // ====================================================================================
 
-// SELECT FOG VALUES
-// Using the value of _fog, new fog values are set.
+// SELECT WIND VALUES
+// Using the value of _wind, new wind values are set.
 
 switch (_wind) do
 {
@@ -63,5 +63,3 @@ _transition setWindForce _gusts;
 _transition setWaves _waves;
 
 // ====================================================================================
-
-
