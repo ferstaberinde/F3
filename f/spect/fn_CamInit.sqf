@@ -13,6 +13,7 @@ if(isNull _unit ) then {_unit = cameraOn;f_cam_isJIP=true;};
 if (typeof _unit != "seagull" && !_forced || !hasInterface) ExitWith {};
 // disable this to instantly switch to the spectator script.
 waituntil {missionnamespace getvariable ["BIS_fnc_feedback_allowDeathScreen",true] || isNull (_oldUnit) || f_cam_isJIP || _forced };
+hintsilent "";
 
 
 // ====================================================================================
@@ -26,7 +27,7 @@ if(!isnil "BIS_fnc_feedback_allowPP") then
 if(f_cam_isJIP) then
 {
   ["F_ScreenSetup",false] call BIS_fnc_blackOut;
-  systemChat "Initilizing Spectator Script";
+  systemChat "Initializing Spectator Script";
   uiSleep 3;
   ["F_ScreenSetup"] call BIS_fnc_blackIn;
 };
@@ -50,22 +51,22 @@ if(isNil "f_cam_VirtualCreated") then
 if(isNull _oldUnit ) then {if(count playableUnits > 0) then {_oldUnit = (playableUnits select 0)} else {_oldUnit = (allUnits select 0)};};
 
 // ====================================================================================
-
 // Set spectator mode for whichever radio system is in use
-switch (f_var_radios) do {
-  // ACRE
-  case 1: {
-    [true] call acre_api_fnc_setSpectator;
-  };
-  // TFR
-  case 2: {
-    [player, true] call TFAR_fnc_forceSpectator;
-  };
-  case 3: {
-    [true] call acre_api_fnc_setSpectator;
-  };
-
+if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
+	[player, true] call TFAR_fnc_forceSpectator;
 };
+
+if (isClass(configFile >> "CfgPatches" >> "acre_main")) then {
+    [true] call acre_api_fnc_setSpectator;
+	if (!isNil "f_radios_settings_acre2_languages") then {
+		_languages = [];
+		{
+			_languages pushBack (_x select 0);
+		} forEach f_radios_settings_acre2_languages;
+		_languages call acre_api_fnc_babelSetSpokenLanguages;
+	};
+};
+
 // ====================================================================================
 
 _listBox = 2100;

@@ -11,18 +11,21 @@ if !(isServer) exitWith {};
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_units","_unit","_faction","_known","_unitFactions","_unitClasses"];
+private ["_units","_unit","_faction","_known","_excludeFactions","_unitClasses"];
 
 // ====================================================================================
 
 // SETUP CUSTOM VARIABLES
 
-// The factions of all units which should be affected
-_unitFactions = ["blu_f", "opf_f", "ind_f","blu_g_f","opf_g_f","ind_g_f"];
-
 // The default gear type picked when no corresponding entry is found in the _unitClasses array
 // Set _defaultclass to "" to let these units keep their default gear
-_defaultclass = "r";
+_defaultclass = "";
+
+// The factions that should be ignored
+_excludeFactions = ["civ_f","blu_gen_f"];
+// Other factions:
+//["blu_f","blu_t_f","opf_f","opf_t_f","ind_f","ind_c_f","blu_g_f","opf_g_f","ind_g_f"
+
 
 // The unit classes and their corresponding F3 Assign Gear Component type
 _unitClasses = [
@@ -47,6 +50,7 @@ _unitClasses = [
 	["_aa_"			,	"msamg"	],
 	["_aaa_"		,	"msamag"],
 	["_uav_"		,	"uav"	],
+	["_jtac_"		,	"jtac"	],
 	["_m_"			,	"dm"	],
 	["_sniper_"		,	"sn"	],
 	["_spotter_"	,	"sp"	],
@@ -55,7 +59,27 @@ _unitClasses = [
 	["_crew_"		,	"vd"	],
 	["_helipilot_"	,	"pp"	],
 	["_helicrew_"	,	"pc"	],
-	["_pilot_"		,	"pp"	]
+	["_pilot_"		,	"pp"	],
+
+	//Syndikat Units
+	["_Para_1_"		,	"r"		],
+	["_Para_2_"		,	"ftl"	],
+	["_Para_3_"		,	"m"		],
+	["_Para_4_"		,	"ar"	],
+	["_Para_5_"		,	"rat"	],
+	["_Para_6_"		,	"gren"	],
+	["_Para_7_"		,	"car"	],
+	["_Para_8_"		,	"eng"	],
+	["_Bandit_1_"		,	"m"		],
+	["_Bandit_2_"		,	"rat"	],
+	["_Bandit_3_"		,	"ar"	],
+	["_Bandit_4_"		,	"ftl"	],
+	["_Bandit_5_"		,	"r"		],
+	["_Bandit_6_"		,	"gren"	],
+	["_Bandit_7_"		,	"car"	],
+	["_Bandit_8_"		,	"engm"	]
+
+	// No comma after the last array!
 
 ];
 
@@ -66,7 +90,6 @@ _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVar
 
 // LOOP THROUGH AI UNITS AND ASSIGN GEAR
 {
-
 	sleep 0.1;
 	_unit = _x;
 
@@ -76,7 +99,7 @@ _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVar
 			_faction = toLower (faction _unit);
 
 			// If the unit's faction is allowed, proceed
-			if (_faction in _unitFactions) then {
+			if !(_faction in _excludeFactions) then {
 				_known = false;
 				{
 					_known = [toLower (_x select 0),toLower (typeOf _unit)] call BIS_fnc_inString;

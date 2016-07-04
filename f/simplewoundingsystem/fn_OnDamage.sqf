@@ -5,7 +5,7 @@ _unit = _this select 0;
 _selection = _this select 1;
 _damage = _this select 2;
 _totalDamage = damage _unit + _damage;
-if (f_var_debugMode == 1) then
+if (f_param_debugMode == 1) then
 {
 	player sidechat format["%1 - '%2' - %3 - %4",_unit,_selection,_damage,_totalDamage];
 };

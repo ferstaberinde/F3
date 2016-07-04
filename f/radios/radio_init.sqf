@@ -7,17 +7,10 @@
 // split into a seperate script file for initialisation of each mod, on both the
 // server and client.
 
-// Wait for parameter to be initialised
-waitUntil{!isNil "f_var_radios"};
-
 // If any radio system selected
-if(f_var_radios != 0) then {
+if(f_param_radios != 0) then {
 
-  switch (f_var_radios) do {
-  // ACRE
-  case 1: {
-    [] execVM "f\radios\acre\acre_init.sqf";
-  };
+  switch (f_param_radios) do {
 
   // TFR
   case 2: {

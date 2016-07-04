@@ -8,23 +8,23 @@ if !(isServer) exitWith {};
 // Redundant sleep to give everything a second to settle
 sleep 2;
 
-while {f_var_mission_timer > 0} do {
+while {f_param_mission_timer > 0} do {
 
 	// Broadcast remaining time to players
-	[["SafeStart",[format["Time Remaining: %1 min",f_var_mission_timer]]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
+	[["SafeStart",[format["Time Remaining: %1 min",f_param_mission_timer]]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
 
 	uisleep 60; // Sleep 60 seconds
 
 	// If mission timer has been terminated by admin briefing, simply exit
-	if (f_var_mission_timer < 0) exitWith {};
+	if (f_param_mission_timer < 0) exitWith {};
 
 	// Reduce the mission timer by one
-	f_var_mission_timer = f_var_mission_timer - 1;
-	publicVariable "f_var_mission_timer";
+	f_param_mission_timer = f_param_mission_timer - 1;
+	publicVariable "f_param_mission_timer";
 };
 
 //Once the mission timer has reached 0, disable the safeties
-if (f_var_mission_timer == 0) then {
+if (f_param_mission_timer == 0) then {
 		// Broadcast message to players
 		[["SafeStartMissionStarting",["Mission starting now!"]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
 

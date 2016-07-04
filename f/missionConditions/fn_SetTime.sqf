@@ -8,7 +8,7 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_timeOfDay","_year","_month","_day","_hour","_minute","_transition"];
+private ["_timeOfDay","_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time"];
 
 // ====================================================================================
 
@@ -34,22 +34,59 @@ _minute = 0;
 
 // ====================================================================================
 
+// CALCULATE SUNSET/SUNRISE
+// Ensure dawn and dusk don't happen in the dark during different seasons and at different latitudes
+
+_sunsetSunrise = [_year,_month,_day,_hour,_minute] call BIS_fnc_sunriseSunsetTime;
+_sunriseSunsetExists = !(_sunsetSunrise in [[-1,0],[0,-1]]); // can happen if you're far north or far south
+_sunrise = [floor (_sunsetSunrise select 0), floor (((_sunsetSunrise select 0) % 1) * 60)];
+_sunset = [floor (_sunsetSunrise select 1), floor (((_sunsetSunrise select 1) % 1) * 60)];
+
+// function for correcting adding hours and minutes to hours and minutes
+_addTime = {
+    params ["_time1","_time2"];
+    _result = [_time1,_time2] call BIS_fnc_vectorAdd;
+    while { _result select 1 > 60 } do { // convert extra minutes into hours
+        _result set [1,(_result select 1) - 60];
+        _result set [0,(_result select 0) + 1];
+    };
+    // make sure hour is in range [0,23]
+    _result set [0,(_result select 0) % 24];
+    if (_result select 0 < 0) then {
+        _result set [0,(_result select 0) + 24];
+    };
+    _result
+};
+
+// ====================================================================================
+
 // SELECT MISSION TIME OF DAY
 // Using the value of _timeOfDay, we define new values for _hour and _minute.
 
 switch (_timeOfDay) do
 {
-// Dawn
+// Dawn (at sunrise)
 	case 0:
 	{
-		_hour = 4;
-		_minute = 50;
+        if (_sunriseSunsetExists) then {
+            _hour = _sunrise select 0;
+            _minute = _sunrise select 1;
+        } else {
+            _hour = 4;
+            _minute = 50;
+        };
 	};
-// Early Morning
+// Early Morning (30 minutes after sunrise)
 	case 1:
 	{
-		_hour = 5;
-		_minute = 20;
+        if (_sunriseSunsetExists) then {
+            _time = [_sunrise,[0,30]] call _addTime;
+            _hour = _time select 0;
+            _minute = _time select 1;
+        } else {
+            _hour = 5;
+            _minute = 20;
+        };
 	};
 // Morning
 	case 2:
@@ -69,17 +106,28 @@ switch (_timeOfDay) do
 		_hour = 15;
 		_minute = 30;
 	};
-// Evening
+// Evening (30 minutes before sunset)
 	case 5:
 	{
-		_hour = 18;
-		_minute = 40;
+        if (_sunriseSunsetExists) then {
+            _time = [_sunset,[0,-30]] call _addTime;
+            _hour = _time select 0;
+            _minute = _time select 1;
+        } else {
+            _hour = 18;
+            _minute = 40;
+        };
 	};
-// Dusk
+// Dusk (at sunset)
 	case 6:
 	{
-		_hour = 19;
-		_minute = 10;
+        if (_sunriseSunsetExists) then {
+            _hour = _sunset select 0;
+            _minute = _sunset select 1;
+        } else {
+            _hour = 19;
+            _minute = 10;
+        };
 	};
 // Night
 	case 7:
@@ -120,4 +168,3 @@ _date = [_year,_month,_day,_hour,_minute];
 [_date,true,_transition] call BIS_fnc_setDate;
 
 // ====================================================================================
-

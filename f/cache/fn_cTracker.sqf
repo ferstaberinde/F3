@@ -8,7 +8,7 @@ private ["_range","_groups","_debug"];
 _range = _this select 0;
 _groups = allGroups;
 
-_debug = if (f_var_debugMode == 1) then [{true},{false}];
+_debug = if (f_param_debugMode == 1) then [{true},{false}];
 
 // ====================================================================================
 
