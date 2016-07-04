@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-4-0
+* Version: 3-4-0 RC1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 3-4-0     | DD MMM 2016 | Patch release - APEX support and various improvements (see change history).
+* 3-4-0 RC1 | 04 JUL 2016 | Internal release - APEX support and various improvements (see change history).
 * 3-3-0     | 25 APR 2015 | Patch release - Various improvements (see change history).
 * 3-3-0 RC2 | 18 APR 2015 | Internal release - Various improvements (see change history). 
 * 3-3-0 RC1 | 08 APR 2015 | Internal release - Various improvements (see change history).
@@ -238,7 +238,7 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-4-0 | DD MMM 2016
+3-4-0 RC1 | 04 JUL 2016
 
 * Updated Assign AI Gear component:
   * Implemented new Folk ARPS 2016 loadout options.
@@ -281,9 +281,9 @@ Version | Date
   * Script variable can also enable CSAT urban patches.
 * Updated Naming your mission and Loading Screen components:
   * Moved some settings from description.ext to the EDEN editor:
-     * Mission load and overview screen texts and pictures.
-     * Debug console.
+     * Mission name.
      * Author name.
+     * Mission load and overview screen texts and pictures.
 * Updated Medical Systems Support component:
   * Fixed: SWS would on occasion not properly immobilise downed players.
 * Updated Mission Conditions Selector component:
@@ -305,12 +305,13 @@ Version | Date
 * Updated Zeus Support component:
   * Pre-Placed ZEUS units assign F3 AI Skill to created units.
 * Various optimisations:
-  * ACRE2 (Radio Systems Support component)
+  * ACRE2 (Radio Systems Support component).
   * fn_setAISkill now exits without an error message if AI skills are not set.
-  * Group IDs component
-  * Insignia component
+  * Group IDs component.
+  * Insignia component.
   * Move CfgFunctions F3 definitions into its own hpp file.
   * Parameters system now works in singleplayer editor and has been made slightly faster.
+  * Re-ordered the init.sqf file code blocks.
 * Removed UAV Recharging component.
 
 3-3-0 | 25 APR 2015
