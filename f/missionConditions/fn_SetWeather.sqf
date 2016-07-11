@@ -190,7 +190,6 @@ if (_setWind) then {
 	_transition setWindStr  _MissionWindStr;
 	_transition setWindForce _MissionWindGusts;
 	_transition setWaves _MissionWaves;
-	_transition setWindDir random 360;
 };
 if (_setFog) then {
 	_transition setFog [_MissionFogStrength,_MissionFogDecay,_MissionFogBase];
@@ -205,7 +204,6 @@ if (_setFog) then {
 		0 setWindStr  _MissionWindStr;
 		0 setWindForce _MissionWindGusts;
 		0 setWaves _MissionWaves;
-		0 setWindDir random 360;
 	};
 	if (_setFog) then {
 		0 setFog [_MissionFogStrength,_MissionFogDecay,_MissionFogBase];
