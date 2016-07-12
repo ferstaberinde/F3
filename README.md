@@ -148,10 +148,10 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers | SuicideKing | Pasrules | darkChozo | Przemro | GeEom | JonBons | Boarnoah
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers | SuicideKing | Pasrules | darkChozo | Przemro | GeEom | JonBons | Ferrard Carson
 * Documentation: Fer | Wolfenswan | Dogface | Cam | Head | cptnnick | Snippers
 * Producers: Fer | Wolfenswan
-* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Zerith | Bear | JonBons | Poulern | Chairborn | captainblaffer
+* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Zerith | Bear | JonBons | Poulern | Chairborn | captainblaffer | Boarnoah | CostNo
 * Special thanks to everyone at: Folk ARPS | Basterd ArmA | Black sh33p | Bourbon Warfare | Phantactical | Pointfire | Project Awesome | Team One Tactical | The Company
 
 ### F2 Credits ###
