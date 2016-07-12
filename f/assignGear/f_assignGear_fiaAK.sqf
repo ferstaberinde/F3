@@ -337,12 +337,12 @@ _loadout = f_param_loadouts;
 
 // Light Loadout
 if (_loadout == 0) then {
-	#include "f_assignGear_fia_light.sqf"
+	#include "f_assignGear_fiaAK_light.sqf"
 };
 
 // Standard Loadout
 if (_loadout == 1) then {
-	#include "f_assignGear_fia_standard.sqf"
+	#include "f_assignGear_fiaAK_standard.sqf"
 };
 
 // ====================================================================================
