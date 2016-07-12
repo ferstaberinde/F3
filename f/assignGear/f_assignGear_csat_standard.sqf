@@ -53,8 +53,8 @@ switch (_typeofUnit) do
 	case "ftl":
 	{
 		_unit addmagazines [_glriflemag, 1];
-		_unit addweapon _glrifle;
 		_unit addmagazines [_glmag, 1];
+		_unit addweapon _glrifle;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
@@ -68,8 +68,8 @@ switch (_typeofUnit) do
 	case "dc":
 	{
 		_unit addmagazines [_glriflemag, 1];
-		_unit addweapon _glrifle;
 		_unit addmagazines [_glmag, 1];
+		_unit addweapon _glrifle;
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 1];
 		_unit addItem _firstaid;
@@ -481,8 +481,8 @@ switch (_typeofUnit) do
 	case "gren":
 	{
 		_unit addmagazines [_glriflemag, 1];
-		_unit addweapon _glrifle;
 		_unit addmagazines [_glmag, 1];
+		_unit addweapon _glrifle;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
