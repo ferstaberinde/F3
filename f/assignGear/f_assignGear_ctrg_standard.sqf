@@ -213,7 +213,7 @@ switch (_typeofUnit) do
 // Heavy AT Gunner Loadout:
 	case "hatg":
 	{
-		_unit addBackpack _bag;
+		_unit addBackpack _baghatg;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addweapon _SAM;
@@ -226,7 +226,7 @@ switch (_typeofUnit) do
 // Heavy AT Team Leader Loadout:
 	case "hatag":
 	{
-		_unit addBackpack _bagLarge;
+		_unit addBackpack _baghatag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -430,12 +430,12 @@ switch (_typeofUnit) do
 	case "div":
 	{
 		_unit addBackpack _bagdiver;
-		_unit addmagazines [_riflemag, 1];
+		_unit addmagazines [_diverMag1, 1];
 		_unit addweapon _diverWep;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
-		_unit addmagazines [_riflemag_tr, 2];
+		_unit addmagazines [_diverMag1, 2];
+		_unit addmagazines [_diverMag2, 2];
 		_unit addmagazines [_diverMag3, 3];
 		_unit addmagazines [_grenade, 3];
 	};

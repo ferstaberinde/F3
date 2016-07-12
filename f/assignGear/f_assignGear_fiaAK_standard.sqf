@@ -13,7 +13,7 @@ switch (_typeofUnit) do
 // Automatic Rifleman Loadout:
 	case "ar":
 	{
-		_unit addBackpack _bag;;
+		_unit addBackpack _bag;
 		_unit addmagazines [_ARmag, 1];
 		_unit addweapon _AR ;
 		_unit addItem _firstaid;
@@ -25,7 +25,7 @@ switch (_typeofUnit) do
 // Rifleman (AT) Loadout:
 	case "rat":
 	{
-		_unit addBackpack _bag;;
+		_unit addBackpack _bag;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addweapon _RAT;
@@ -41,7 +41,7 @@ switch (_typeofUnit) do
 // Assistant Autorifleman Loadout:
 	case "aar":
 	{
-		_unit addBackpack _bag;;
+		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -110,7 +110,7 @@ switch (_typeofUnit) do
 // Medic Loadout:
 	case "m":
 	{
-		_unit addBackpack _bag;;
+		_unit addBackpack _bag;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
@@ -134,7 +134,7 @@ switch (_typeofUnit) do
 // Medium MG Gunner Loadout:
 	case "mmgg":
 	{
-		_unit addBackpack _bag;;
+		_unit addBackpack _bag;
 		_unit addmagazines [_MMGmag, 1];
 		_unit addweapon _MMG;
 		_unit addItem _firstaid;
@@ -146,7 +146,7 @@ switch (_typeofUnit) do
 // Medium MG Team Leader Loadout:
 	case "mmgag":
 	{
-		_unit addBackpack _bag;;
+		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -183,7 +183,7 @@ switch (_typeofUnit) do
 // Medium AT Gunner Loadout:
 	case "matg":
 	{
-		_unit addBackpack Kitbag;
+		_unit addBackpack _baglarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addweapon _MAT;
@@ -198,7 +198,7 @@ switch (_typeofUnit) do
 // Medium AT Team Leader Loadout:
 	case "matag":
 	{
-		_unit addBackpack _bag;;
+		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -211,7 +211,7 @@ switch (_typeofUnit) do
 // Heavy AT Gunner Loadout:
 	case "hatg":
 	{
-		_unit addBackpack Kitbag;
+		_unit addBackpack _baghatg;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addweapon _HAT;
@@ -225,7 +225,7 @@ switch (_typeofUnit) do
 // Heavy AT Team Leader Loadout:
 	case "hatag":
 	{
-		_unit addBackpack Kitbag;
+		_unit addBackpack _baghatag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -262,7 +262,7 @@ switch (_typeofUnit) do
 // Medium SAM Gunner Loadout:
 	case "msamg":
 	{
-		_unit addBackpack _bag;;
+		_unit addBackpack _bag;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addweapon _SAM;
@@ -276,7 +276,7 @@ switch (_typeofUnit) do
 // Medium SAM Team Leader Loadout:
 	case "msamag":
 	{
-		_unit addBackpack Kitbag;
+		_unit addBackpack _baglarge;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -359,7 +359,7 @@ switch (_typeofUnit) do
 // Vehicle Driver Loadout:
 	case "vd":
 	{
-		_unit addBackpack _bag;;
+		_unit addBackpack _bag;
 		_unit addmagazines [_smgmag, 1];
 		_unit addweapon _smg;
 		_unit addItem _firstaid;
@@ -371,7 +371,7 @@ switch (_typeofUnit) do
 // Heli Pilot / Crew Chief Loadout:
 	case "pp, pcc":
 	{
-		_unit addBackpack _bag;;
+		_unit addBackpack _bag;
 		_unit addmagazines [_smgmag, 1];
 		_unit addweapon _smg;
 		_unit addItem _firstaid;
@@ -393,7 +393,7 @@ switch (_typeofUnit) do
 // Engineer (Demo) Loadout:
 	case "eng":
 	{
-		_unit addBackpack Kitbag;
+		_unit addBackpack _baglarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
@@ -409,7 +409,7 @@ switch (_typeofUnit) do
 // Engineer (Mines) Loadout:
 	case "engm":
 	{
-		_unit addBackpack Kitbag;
+		_unit addBackpack _baglarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
