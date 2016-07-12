@@ -244,7 +244,7 @@ _diverRig = ["V_RebreatherB"];
 _diverGlasses = ["G_Diving"];
 
 // Pilot
-_pilotUniform = "U_C_WorkerCoveralls";
+_pilotUniform = ["U_C_WorkerCoveralls"];
 _pilotHelmet = _baseHelmet;
 _pilotRig = ["V_Chestrig_blk"];
 _pilotGlasses = [];
