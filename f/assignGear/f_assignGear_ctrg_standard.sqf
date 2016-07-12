@@ -17,8 +17,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_ARmag, 1];
 		_unit addweapon _AR;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_ARmag, 1];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_ARmag, 2];
 		_unit addmagazines [_ARmag_tr, 1];
 		_unit addmagazines [_grenade, 1];
 	};
@@ -31,8 +31,8 @@ switch (_typeofUnit) do
 		_unit addweapon _RAT;
 		_unit addmagazines [_RATmag, 1];
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 	};
@@ -42,8 +42,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_ARmag, 2];
 		_unit addmagazines [_grenade, 2];
@@ -55,8 +55,8 @@ switch (_typeofUnit) do
 		_unit addweapon _glrifle;
 		_unit addmagazines [_glmag, 1];
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_glriflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
 		_unit addmagazines [_glsmokewhite, 3];
@@ -72,8 +72,8 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 1];
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_glriflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
 		_unit addmagazines [_glsmokewhite, 3];
@@ -90,8 +90,8 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 1];
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_glriflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glsmokewhite, 5];
 		_unit addmagazines [_glsmokered, 3];
@@ -105,11 +105,14 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag, 1];
 		_unit addweapon _glrifle;
 		_unit addmagazines [_glsmokered, 1];
+		_unit addweapon _pistol;
+		_unit addmagazines [_pistolmag, 1];
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_glriflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glsmokered, 8];
+		_unit addmagazines [_pistolmag, 4];
 		_unit addPrimaryWeaponItem "acc_pointer_IR";
 		_unit addmagazines ["Laserbatteries", 2];
 	};
@@ -120,8 +123,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addItem _medkit;
 		_unit addItem _firstaid;
@@ -132,9 +135,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_DMriflemag, 1];
 		_unit addweapon _DMrifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_DMriflemag, 4];
-		_unit addmagazines [_grenade, 1];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_DMriflemag, 6];
+		_unit addmagazines [_grenade, 2];
 	};
 // Medium MG Gunner Loadout:
 	case "mmgg":
@@ -143,8 +146,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_MMGmag, 1];
 		_unit addweapon _MMG;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MMGmag, 1];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_MMGmag, 2];
 	};
 // Medium MG Team Leader Loadout:
 	case "mmgag":
@@ -153,12 +156,12 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 1];
+		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_MMGmag, 1];
-		_unit addmagazines [_MMGmag, 1];
+		_unit addmagazines [_MMGmag, 2];
 	};
 // Heavy MG Gunner Loadout:
 	case "hmgg":
@@ -167,7 +170,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 	};
@@ -178,10 +181,10 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 1];
+		_unit addmagazines [_grenade, 2];
 	};
 // Medium AT Gunner Loadout:
 	case "matg":
@@ -189,13 +192,13 @@ switch (_typeofUnit) do
 		_unit addBackpack _bagLarge;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
-		_unit addweapon _RAT;
-		_unit addmagazines [_RATmag, 1];
+		_unit addweapon _MAT;
+		_unit addmagazines [_MATmag1, 1];
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_RATmag, 1];
+		_unit addmagazines [_MATmag1, 2];
 	};
 // Medium AT Team Leader Loadout:
 	case "matag":
@@ -204,11 +207,11 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 1];
-		_unit addmagazines [_RATmag, 2];
+		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_MATmag1, 2];
 	};
 // Heavy AT Gunner Loadout:
 	case "hatg":
@@ -219,9 +222,10 @@ switch (_typeofUnit) do
 		_unit addweapon _SAM;
 		_unit addmagazines [_HATmag1, 1];
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
+		_unit addmagazines [_HATmag1, 1];
 	};
 // Heavy AT Team Leader Loadout:
 	case "hatag":
@@ -230,10 +234,10 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 1];
+		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_HATmag1, 2];
 	};
 // Mortar Gunner Loadout:
@@ -243,7 +247,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 	};
@@ -254,10 +258,10 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 1];
+		_unit addmagazines [_grenade, 2];
 	};
 // Medium SAM Gunner Loadout:
 	case "msamg":
@@ -268,7 +272,7 @@ switch (_typeofUnit) do
 		_unit addweapon _HAT;
 		_unit addmagazines [_SAMmag, 1];
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 	};
@@ -279,11 +283,11 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 1];
-		_unit addmagazines [_SAMmag, 1];
+		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_SAMmag, 2];
 	};
 // Heavy SAM Gunner Loadout:
 	case "hsamg":
@@ -292,7 +296,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 	};
@@ -303,10 +307,10 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 1];
+		_unit addmagazines [_grenade, 2];
 	};
 // Sniper Loadout:
 	case "sn":
@@ -316,9 +320,9 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 1];
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_SNrifleMag, 4];
-		_unit addmagazines [_pistolmag, 3];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_SNrifleMag, 6];
+		_unit addmagazines [_pistolmag, 5];
 	};
 // Spotter Loadout:
 	case "sp":
@@ -326,8 +330,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines ["Laserbatteries", 2];
@@ -340,7 +344,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smgmag, 1];
 		_unit addweapon _smg;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenadeblue, 4];
+		_unit addmagazines [_smokegrenadeblue, 3];
 		_unit addmagazines [_smgmag, 4];
 		_unit addweapon "Rangefinder";
 	};
@@ -350,7 +354,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smgmag, 1];
 		_unit addweapon _smg;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenadeblue, 4];
+		_unit addmagazines [_smokegrenadeblue, 3];
 		_unit addmagazines [_smgmag, 4];
 	};
 // Vehicle Driver Loadout:
@@ -360,7 +364,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smgmag, 1];
 		_unit addweapon _smg;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenadeblue, 4];
+		_unit addmagazines [_smokegrenadeblue, 3];
 		_unit addmagazines [_smgmag, 4];
 		_unit addItem "ToolKit";
 	};
@@ -371,7 +375,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smgmag, 1];
 		_unit addweapon _smg;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenadeblue, 4];
+		_unit addmagazines [_smokegrenadeblue, 3];
 		_unit addmagazines [_smgmag, 4];
 		_unit addItem "ToolKit";
 	};
@@ -381,7 +385,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smgmag, 1];
 		_unit addweapon _smg;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenadeblue, 4];
+		_unit addmagazines [_smokegrenadeblue, 3];
 		_unit addmagazines [_smgmag, 4];
 	};
 // Engineer (Demo) Loadout:
@@ -391,13 +395,13 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addItem "ToolKit";
 		_unit addItem "MineDetector";
-		_unit addmagazines [_satchel, 1];
+		_unit addmagazines [_satchel, 2];
 	};
 // Engineer (Mines) Loadout:
 	case "engm":
@@ -406,13 +410,14 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addItem "ToolKit";
 		_unit addItem "MineDetector";
 		_unit addmagazines [_APmine2, 4];
+		_unit addmagazines [_ATmine, 1];
 	};
 // UAV Operator Loadout:
 	case "uav":
@@ -421,8 +426,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addItem _uavterminal;
 	};
@@ -433,8 +438,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_diverMag1, 1];
 		_unit addweapon _diverWep;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_diverMag1, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_diverMag1, 4];
 		_unit addmagazines [_diverMag2, 2];
 		_unit addmagazines [_diverMag3, 3];
 		_unit addmagazines [_grenade, 3];
@@ -445,10 +450,10 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_grenade, 3];
 	};
 // Carbineer Loadout:
 	case "car":
@@ -456,10 +461,10 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_riflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_grenade, 3];
 	};
 // Submachinegunner Loadout:
 	case "smg":
@@ -467,9 +472,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smgmag, 1];
 		_unit addweapon _smg;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_smgmag, 4];
-		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_smgmag, 6];
+		_unit addmagazines [_grenade, 3];
 	};
 // Grenadier Loadout:
 	case "gren":
@@ -478,15 +483,11 @@ switch (_typeofUnit) do
 		_unit addweapon _glrifle;
 		_unit addmagazines [_glmag, 1];
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_glriflemag, 2];
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
 	};
-
-// Include the loadouts for vehicles and crates:
-#include "f_assignGear_ctrg_v.sqf";
-
 // ====================================================================================
 
 // END SWITCH FOR DEFINE UNIT TYPE LOADOUTS
