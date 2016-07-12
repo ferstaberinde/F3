@@ -1,17 +1,5 @@
 // ============================================================================================
 
-// F3 - Mission Header
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-class Header
-{
-	gameType = Coop;
-	minPlayers = 1;
-	maxPlayers = 457;
-};
-
-// ============================================================================================
-
 // F3 - Respawn Settings
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
