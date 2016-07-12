@@ -189,7 +189,7 @@ _MMGmag_tr = "150Rnd_93x64_Mag";
 
 // NON-DLC ALTERNATIVE:
 //_MMG = "LMG_Zafir_F";
-//_MMGmag = ""150Rnd_762x54_Box"";
+//_MMGmag = "150Rnd_762x54_Box";
 //_MMGmag_tr = "150Rnd_762x54_Box_Tracer";
 
 // Marksman rifle

@@ -141,7 +141,7 @@ _pistolmag = "11Rnd_45ACP_Mag";
 _grenade = "HandGrenade";
 _Mgrenade = "MiniGrenade";
 _smokegrenade = "SmokeShell";
-_smokegrenadebgreen = "SmokeShellGreen";
+_smokegrenadegreen = "SmokeShellGreen";
 _smokegrenadeblue = "SmokeShellBlue";
 _smokegrenadepurple = "SmokeShellPurple";
 
@@ -191,8 +191,8 @@ _MMGmag_tr = "130Rnd_338_Mag";
 
 // NON-DLC ALTERNATIVE:
 // _MMG = "LMG_Zafir_F";
-// _MMGmag = ""150Rnd_762x54_Box"";
-// _MMGmag_tr = ""150Rnd_762x54_Box"_Tracer";
+// _MMGmag = "150Rnd_762x54_Box";
+// _MMGmag_tr = "150Rnd_762x54_Box"_Tracer";
 
 // Marksman rifle
 _DMrifle = "arifle_MXM_F";

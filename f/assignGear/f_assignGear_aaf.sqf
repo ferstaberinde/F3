@@ -186,8 +186,8 @@ _ARmag = "200Rnd_65x39_cased_Box";
 _ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
 
 _MMG = "LMG_Zafir_F";
-_MMGmag = ""150Rnd_762x54_Box"";
-_MMGmag_tr = ""150Rnd_762x54_Box"_Tracer";
+_MMGmag = "150Rnd_762x54_Box";
+_MMGmag_tr = "150Rnd_762x54_Box_Tracer";
 
 // Marksman rifle
 _DMrifle = "srifle_EBR_F";
