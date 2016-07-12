@@ -1,4 +1,4 @@
-// F3 - Folk ARPS Assign Gear Script - AAF - Light Loadout
+	// F3 - Folk ARPS Assign Gear Script - AAF - Light Loadout
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -61,7 +61,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glmag, 5];
 		_unit addmagazines [_glsmokewhite, 3];
 		_unit addPrimaryWeaponItem "acc_pointer_IR";
-		_unit addmagazines [_smokegrenadebgreen, 2];
+		_unit addmagazines [_smokegrenadegreen, 2];
 	};
 // Squad Leader / DC Loadout:
 	case "dc":
