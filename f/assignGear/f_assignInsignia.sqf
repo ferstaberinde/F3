@@ -22,7 +22,7 @@ _insignia_style_CSAT = _insignia_styles select 1;
 _NATO_Medic_Badge = "NATO_Medic_Badge";
 _CSAT_Medic_Badge = "CSAT_Medic_Badge";
 
-if (_insignia_style_NATO == "Tanoa") then {_NATO_Medic_Badge = "NATO_Medic_Badge";} else {_NATO_Medic_Badge = "NATO_Pacific_Medic_Badge";};
+if (_insignia_style_NATO == "Tanoa") then {_NATO_Medic_Badge = "NATO_Pacific_Medic_Badge"};
 
 switch (_insignia_style_CSAT) do
 	{
