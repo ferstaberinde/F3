@@ -185,7 +185,7 @@ _MMG = "LMG_Zafir_F";
 _MMGmag = "150Rnd_762x54_Box";
 
 // Marksman rifle
-_DMrifle = "srifle_DMR_03_woodland_F";
+_DMrifle = "srifle_DMR_03_F";
 _DMriflemag = "20Rnd_762x51_Mag";
 
 // Rifleman AT
