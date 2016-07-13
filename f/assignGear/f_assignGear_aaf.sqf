@@ -113,7 +113,7 @@ _smgmag_tr = "30Rnd_9x21_Mag";
 _diverWep = "arifle_SDAR_F";
 _diverMag1 = "30Rnd_556x45_Stanag";
 _diverMag2 = "30Rnd_556x45_Stanag_Tracer_Yellow";
-_diverMag2 = "20Rnd_556x45_UW_mag";
+_diverMag3 = "20Rnd_556x45_UW_mag";
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
 _glrifle = "arifle_Mk20_GL_F";
