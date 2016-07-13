@@ -217,7 +217,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
-		_unit addmagazines [_MATmag, 2];
+		_unit addmagazines [_MATmag1, 1];
 		_unit addWeapon "Rangefinder";
 	};
 // Heavy AT Gunner Loadout:
