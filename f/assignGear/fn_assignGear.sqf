@@ -131,7 +131,7 @@ if (_faction in ["ind_f","aaf"]) then {
 
 if (_faction in ["blu_g_f","opf_g_f","ind_g_f","fia"]) then {
 	#include "f_assignGear_fia.sqf"
-	// #include "f_assignGear_fiaAK.sqf" // Alternative FIA loadouts using AKs and RPG-7s
+	//#include "f_assignGear_fiaAK.sqf" // Alternative FIA loadouts using AKs and RPG-7s
 };
 
 // ====================================================================================

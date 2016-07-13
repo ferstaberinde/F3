@@ -69,11 +69,11 @@ _scope1 = "optic_ACO";			// ACO
 _scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
-_bipod1 = "bipod_01_F_mtp";		// Default bipod
+_bipod1 = "bipod_02_F_blk";		// Default bipod
 _bipod2 = "bipod_02_F_blk";		// Black bipod
 
 // Default setup
-_attachments = [_scope1]; // The default attachment set for most units, overwritten in the individual unitType
+_attachments = [_scope1]; 		// The default attachment set for most units, overwritten in the individual unitType
 
 // [] = remove all
 // [_attach1,_scope1,_silencer] = remove all, add items assigned in _attach1, _scope1 and _silencer1
@@ -95,12 +95,12 @@ _hg_attachments= []; // The default attachment set for handguns, overwritten in 
 // WEAPON SELECTION
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
-_rifle = ["arifle_TRG21_F"];
+_rifle = "arifle_AKM_F";
 _riflemag = "30Rnd_762x39_Mag_F";
 _riflemag_tr = "30Rnd_762x39_Mag_Tracer_F";
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
-_carbine = ["arifle_AKS_F"];
+_carbine = "arifle_AKS_F";
 _carbinemag = "30Rnd_545x39_Mag_F";
 _carbinemag_tr = "30Rnd_545x39_Mag_Tracer_F";
 
@@ -116,7 +116,7 @@ _diverMag2 = "30Rnd_556x45_Stanag_Tracer_Red";
 _diverMag3 = "20Rnd_556x45_UW_mag";
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle = ["arifle_SPAR_01_GL_blk_F"];
+_glrifle = "arifle_SPAR_01_GL_blk_F";
 _glriflemag = "30Rnd_556x45_Stanag_red";
 _glriflemag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 _glmag = "1Rnd_HE_Grenade_shell";

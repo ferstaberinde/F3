@@ -65,9 +65,9 @@ _attach2 = "acc_flashlight";	// Flashlight
 _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
-_scope1 = "optic_Holosight";	// Basic Scope
-_scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
-_scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
+_scope1 = "optic_Holosight_khk_F";	// Basic Scope
+_scope2 = "optic_Hamr_khk_F";		// RCO Scope
+_scope3 = "optic_LRPS_tna_F";		// LRPS
 
 _bipod1 = "bipod_01_F_snd";		// Default bipod
 _bipod2 = "bipod_02_F_blk";		// Black bipod
@@ -198,7 +198,7 @@ _MMGmag_tr = "130Rnd_338_Mag";
 // _MMGmag_tr = "150Rnd_762x54_Box"_Tracer";
 
 // Marksman rifle
-_DMrifle = "arifle_MXM_F";
+_DMrifle = "arifle_MXM_khk_F";
 _DMriflemag = "30Rnd_65x39_caseless_mag";
 _DMriflemag_tr = "30Rnd_65x39_caseless_mag_Tracer";
 

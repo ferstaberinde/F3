@@ -148,7 +148,8 @@ _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
 // Night Vision Goggles
-_nvg = "NVGoggles_OPFOR";
+_nvg = "O_NVGoggles_hex_F";
+//_nvg = "O_NVGoggles_urb_F";
 
 // Laserdesignator
 _laserdesignator = "Laserdesignator_02";
@@ -290,9 +291,9 @@ _ghillieRig = ["V_HarnessO_brn"];
 _ghillieGlasses = [];
 
 // Spec Op
-_sfuniform = ["U_O_SpecopsUniform_ocamo"];
-_sfhelmet = ["H_HelmetSpecO_ocamo","H_HelmetSpecO_blk"];
-_sfRig = ["V_PlateCarrier1_blk"];
+_sfuniform = ["U_O_SpecopsUniform_ocamo"]; // Viper: ["U_O_V_Soldier_Viper_hex_F"];
+_sfhelmet = ["H_HelmetSpecO_ocamo"];	   //Viper: ["H_HelmetO_ViperSP_hex_F"]; IMPORTANT: Will be overriden if nvg is added afterwards
+_sfRig = _standardRig;
 _sfGlasses = [];
 
 // ====================================================================================
