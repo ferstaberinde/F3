@@ -149,8 +149,11 @@ _smokegrenadepurple = "SmokeShellPurple";
 _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
-// Night Vision Goggles (NVGoggles)
+// Night Vision Goggles
 _nvg = "NVGoggles";
+
+// Laserdesignator
+_laserdesignator = "Laserdesignator_01_khk_F";
 
 // UAV Terminal
 _uavterminal = "B_UavTerminal";	  // BLUFOR - FIA
