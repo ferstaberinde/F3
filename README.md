@@ -216,7 +216,7 @@ The online manual can be found at:
 
 ## 08. INSTALLATION ##
 
-To begin using the Software, move the F3.Altis folder into one of the following directories:
+To begin using the Software, move the F3.VR folder into one of the following directories:
 
 * \My Documents\Arma 3\MPMissions\
 * \My Documents\Arma 3 Other Profiles\YourPlayerName\MPMissions\
