@@ -140,6 +140,8 @@ _grenade = "HandGrenade";
 _Mgrenade = "MiniGrenade";
 _smokegrenade = "SmokeShell";
 _smokegrenadegreen = "SmokeShellGreen";
+_smokegrenadeblue = "SmokeShellBlue";
+_smokegrenadepurple = "SmokeShellPurple";
 
 // misc medical items.
 _firstaid = "FirstAidKit";
