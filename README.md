@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-4-0 RC1
+* Version: 3-4-0
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-4-0     | 13 JUL 2016 | Patch release - APEX support and various improvements (see change history).
 * 3-4-0 RC1 | 04 JUL 2016 | Internal release - APEX support and various improvements (see change history).
 * 3-3-0     | 25 APR 2015 | Patch release - Various improvements (see change history).
 * 3-3-0 RC2 | 18 APR 2015 | Internal release - Various improvements (see change history). 
@@ -147,10 +148,10 @@ Version | Date | Notes
 
 ### F3 Credits ###
 
-* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers | SuicideKing | Pasrules | darkChozo | Przemro | GeEom | JonBons
+* Contributors: Head | Harakka | Fer | Wolfenswan | Cam | turowicz | CaseMonster | Black Mamba | DarkTatka | Tigershark | cptnnick | Linux | Snippers | SuicideKing | Pasrules | darkChozo | Przemro | GeEom | JonBons | Ferrard Carson
 * Documentation: Fer | Wolfenswan | Dogface | Cam | Head | cptnnick | Snippers
 * Producers: Fer | Wolfenswan
-* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Zerith | Bear | JonBons | Poulern | Chairborn | captainblaffer
+* Special Thanks: Arctor | BasterActual | batboyx2 | cptnnick | Dogface | Draakon | Landyacht | Linux | nolux | Pabstmirror | Zerith | Bear | JonBons | Poulern | Chairborn | captainblaffer | Boarnoah | CostNo
 * Special thanks to everyone at: Folk ARPS | Basterd ArmA | Black sh33p | Bourbon Warfare | Phantactical | Pointfire | Project Awesome | Team One Tactical | The Company
 
 ### F2 Credits ###
@@ -215,7 +216,7 @@ The online manual can be found at:
 
 ## 08. INSTALLATION ##
 
-To begin using the Software, move the F3.Altis folder into one of the following directories:
+To begin using the Software, move the F3.VR folder into one of the following directories:
 
 * \My Documents\Arma 3\MPMissions\
 * \My Documents\Arma 3 Other Profiles\YourPlayerName\MPMissions\
@@ -238,16 +239,16 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-4-0 RC1 | 04 JUL 2016
+3-4-0 | 13 JUL 2016
 
-* Updated Assign AI Gear component:
+* Updated Assign Gear component:
   * Implemented new Folk ARPS 2016 loadout options.
   * Added support for the Syndikat faction.
   * Added support for the NATO Pacific faction.
   * Added support for the CSAT Pacific faction.
   * Pilots can now repair vehicles (via the new trait command).
   * Vehicle and crate loadouts now split into separate files per faction.
-  * All IF checks now compare the faction to an array of possible BIS factions.
+  * All IF checks now compare the faction to an array of possible factions.
   * Strings such as 'aaf', 'nato' etc. can now be used when forcing a specific faction loadout (instead of a precise faction string such as 'ind_f').
 * Updated Assign AI Gear component:
   * Added support for the Syndikat faction.
@@ -313,6 +314,10 @@ Version | Date
   * Parameters system now works in singleplayer editor and has been made slightly faster.
   * Re-ordered the init.sqf file code blocks.
 * Removed UAV Recharging component.
+
+3-4-0 RC1 | 04 JUL 2016
+
+* Please see change history for release v3-4-0.
 
 3-3-0 | 25 APR 2015
 

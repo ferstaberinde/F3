@@ -39,16 +39,16 @@ switch (_wind) do
 	case 1:
 	{
 		_strength = 0.25;
-		_gusts = 0.5;
-		_waves = 0.25;
+		_gusts = 0.25;
+		_waves = 0.6;
 	};
 
 	//Heavy
 	case 2:
 	{
 		_strength = 0.75;
-		_gusts = 1;
-		_waves = 0.25;
+		_gusts = 0.75;
+		_waves = 1;
 	};
 };
 

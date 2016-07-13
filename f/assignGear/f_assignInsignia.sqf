@@ -22,7 +22,7 @@ _insignia_style_CSAT = _insignia_styles select 1;
 _NATO_Medic_Badge = "NATO_Medic_Badge";
 _CSAT_Medic_Badge = "CSAT_Medic_Badge";
 
-if (_insignia_style_NATO == "Tanoa") then {_NATO_Medic_Badge = "NATO_Medic_Badge";} else {_NATO_Medic_Badge = "NATO_Pacific_Medic_Badge";};
+if (_insignia_style_NATO == "Tanoa") then {_NATO_Medic_Badge = "NATO_Pacific_Medic_Badge"};
 
 switch (_insignia_style_CSAT) do
 	{
@@ -30,6 +30,11 @@ switch (_insignia_style_CSAT) do
 	case "Altis" : {_CSAT_Medic_Badge = "CSAT_Medic_Badge";};
 	case "Urban" : {_CSAT_Medic_Badge = "CSAT_Urban_Medic_Badge";};
 	};
+
+// Default APEX factions to their vanilla equivalent
+if (_faction == "blu_t_f") then {_faction = "blu_f"};
+if (_faction == "blu_ctrg_f") then {_faction = "blu_f"};
+if (_faction == "opf_t_f") then {_faction = "opf_f"};
 
 // ===================================================================================
 
@@ -43,7 +48,7 @@ private _roleBadge = switch (_typeofUnit) do
 	{
 		switch (_faction) do
 		{
-			case "blu_f" : {_insignia_style_NATO};
+			case "blu_f" : {_NATO_Medic_Badge};
 			case "opf_f" : {_CSAT_Medic_Badge};
 			case "ind_f" : {"AAF_Medic_Badge"};
 			default {"NATO_Medic_Badge"};

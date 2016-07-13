@@ -1,17 +1,5 @@
 // ============================================================================================
 
-// F3 - Mission Header
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-class Header
-{
-	gameType = Coop;
-	minPlayers = 1;
-	maxPlayers = 457;
-};
-
-// ============================================================================================
-
 // F3 - Respawn Settings
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -123,11 +111,11 @@ class Params
 // F3 - Folk Assign Gear Script
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-    class f_param_backpacks
+    class f_param_loadouts
     {
             title = "$STR_f_param_loadouts";
-            values[] = {0,1,2};
-            texts[] = {"Light","Medium","Heavy"};
+            values[] = {0,1};
+            texts[] = {"Light","Standard"};
             default = 1;
     };
 
