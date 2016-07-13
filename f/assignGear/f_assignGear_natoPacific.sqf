@@ -150,7 +150,7 @@ _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
 // Night Vision Goggles
-_nvg = "NVGoggles";
+_nvg = "NVGoggles_tna_F";
 
 // Laserdesignator
 _laserdesignator = "Laserdesignator_01_khk_F";
