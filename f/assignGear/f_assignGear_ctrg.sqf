@@ -186,7 +186,7 @@ _ARmag = "150Rnd_556x45_Drum_Mag_F";
 _ARmag_tr = "150Rnd_556x45_Drum_Mag_Tracer_F";
 
 // Medium MG
-_MMG = "MMG_02_base_F";
+_MMG = "MMG_02_black_F";
 _MMGmag = "130Rnd_338_Mag";
 _MMGmag_tr = "130Rnd_338_Mag";
 

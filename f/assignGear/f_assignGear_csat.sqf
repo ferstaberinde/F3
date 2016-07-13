@@ -187,7 +187,7 @@ _ARmag = "200Rnd_65x39_cased_Box";
 _ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
 
 // Medium MG
-_MMG = "MMG_01_base_F";
+_MMG = "MMG_01_hex_F";
 _MMGmag = "150Rnd_93x64_Mag";
 _MMGmag_tr = "150Rnd_93x64_Mag";
 
