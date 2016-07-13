@@ -114,8 +114,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glsmokered, 8];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
-		_unit addWeapon "Rangefinder";
-		_unit addmagazines ["Laserbatteries", 2];
+        _unit addmagazines ["Laserbatteries", 1];
+		_unit addWeapon _laserdesignator;
 	};
 // Medic Loadout:
 	case "m":
@@ -346,8 +346,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_SNrifleMag, 3];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
-		_unit addWeapon "Rangefinder";
-		_unit addmagazines ["Laserbatteries", 2];
+		_unit addweapon "Rangefinder";
 	};
 // Vehicle Commander Loadout:
 	case "vc":

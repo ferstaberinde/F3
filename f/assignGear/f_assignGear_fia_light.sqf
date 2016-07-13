@@ -108,8 +108,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag, 2];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glsmokered, 6];
-		_unit addmagazines ["Laserbatteries", 2];
-		_unit addWeapon "Rangefinder";
+        _unit addmagazines ["Laserbatteries", 1];
+		_unit addWeapon _laserdesignator;
 	};
 // Medic Loadout:
 	case "m":
@@ -346,7 +346,6 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
-		_unit addmagazines ["Laserbatteries", 2];
 		_unit addmagazines [_SNrifleMag, 3];
 		_unit addWeapon "Rangefinder";
 	};

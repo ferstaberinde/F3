@@ -147,8 +147,11 @@ _smokegrenadepurple = "SmokeShellPurple";
 _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
-// Night Vision Goggles (NVGoggles)
-_nvg = "NVGoggles_OPFOR";
+// Night Vision Goggles
+_nvg = "NVGoggles_tna_F";
+
+// Laserdesignator
+_laserdesignator = "Laserdesignator_02_ghex_F";
 
 // UAV Terminal
 _uavterminal = "O_UavTerminal";

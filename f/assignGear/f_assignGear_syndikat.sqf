@@ -83,7 +83,7 @@ _attachments = [_scope1]; // The default attachment set for most units, overwrit
 // ====================================================================================
 
 // ATTACHMENTS - HANDGUN
-_hg_silencer1 = "muzzle_snds_L";	// 9mm suppressor
+_hg_silencer1 = "";					// No suppressor for Zubr
 
 _hg_scope1 = "optic_mrd";			// MRD
 
@@ -145,8 +145,11 @@ _smokegrenadegreen = "SmokeShellGreen";
 _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
-// Night Vision Goggles (NVGoggles)
-_nvg = "NVGoggles";
+// Night Vision Goggles
+_nvg = "NVGoggles_INDEP";
+
+// Laserdesignator
+_laserdesignator = "Laserdesignator_01_khk_F";
 
 // UAV Terminal
 _uavterminal = "I_UavTerminal";
