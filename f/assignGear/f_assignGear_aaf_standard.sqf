@@ -384,8 +384,20 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smgmag, 4];
 		_unit addItem "ToolKit";
 	};
-// Heli Pilot / Crew Chief Loadout:
-	case "pp, pcc":
+// Heli Pilot Loadout:
+	case "pp":
+	{
+		_unit setUnitTrait ["engineer",true]; // Can repair
+		_unit addBackpack _bag;
+		_unit addmagazines [_smgmag, 1];
+		_unit addweapon _smg;
+		_unit addItem _firstaid ;
+		_unit addmagazines [_smokegrenadeblue, 3];
+		_unit addmagazines [_smgmag, 4];
+		_unit addItem "ToolKit";
+	};
+// Heli Crew Chief Loadout:
+	case "pcc":
 	{
 		_unit setUnitTrait ["engineer",true]; // Can repair
 		_unit addBackpack _bag;
