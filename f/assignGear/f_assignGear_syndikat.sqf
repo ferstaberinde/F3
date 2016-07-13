@@ -140,6 +140,8 @@ _grenade = "HandGrenade";
 _Mgrenade = "MiniGrenade";
 _smokegrenade = "SmokeShell";
 _smokegrenadegreen = "SmokeShellGreen";
+_smokegrenadeblue = "SmokeShellBlue";
+_smokegrenadepurple = "SmokeShellPurple";
 
 // misc medical items.
 _firstaid = "FirstAidKit";
@@ -167,6 +169,7 @@ _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "I_UAV_01_backpack_F";			// used by UAV operator
 _baghmgg = "B_HMG_01_weapon_F";				// used by Heavy MG gunner
 _baghmgag = "B_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghatg = "B_AssaultPack_rgr";				// Used by Heavy AT Gunner
 _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
 _baghsamg = "B_AA_01_weapon_F";				// used by Heavy SAM gunner
@@ -194,14 +197,14 @@ _RATmag = "RPG32_F";
 
 // Medium AT
 _MAT = "launch_NLAW_F";
-_MATmag = "NLAW_F";
+_MATmag1 = "NLAW_F";
 
 // Heavy AT
-_HAT = "launch_Titan_F";
+_HAT = "launch_I_Titan_short_F";
 _HATmag1 = "Titan_AT";
 
 // Surface Air
-_SAM = "launch_I_Titan_short_F";
+_SAM = "launch_Titan_F";
 _SAMmag = "Titan_AA";
 
 // Sniper

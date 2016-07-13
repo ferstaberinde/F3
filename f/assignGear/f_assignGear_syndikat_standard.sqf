@@ -205,14 +205,14 @@ switch (_typeofUnit) do
 		_unit addBackpack _bagLarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
+        _unit addmagazines [_MATmag1, 1];
 		_unit addweapon _MAT;
-		_unit addmagazines [_MATmag, 1];
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 2];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MATmag, 2];
+		_unit addmagazines [_MATmag1, 1];
 	};
 // Medium AT Team Leader Loadout:
 	case "matag":
@@ -225,7 +225,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MATmag, 2];
+		_unit addmagazines [_MATmag1, 1];
 		_unit addWeapon "Rangefinder";
 	};
 // Heavy AT Gunner Loadout:
@@ -234,8 +234,8 @@ switch (_typeofUnit) do
 		_unit addBackpack _baghatg;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
-		_unit addweapon _SAM;
 		_unit addmagazines [_HATmag1, 1];
+		_unit addweapon _HAT;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 2];
