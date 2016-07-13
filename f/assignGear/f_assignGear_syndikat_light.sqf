@@ -64,7 +64,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag, 2];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
-		_unit addmagazines [_smokegrenade, 3];s
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_smokegrenadegreen, 2];
 		_unit addWeapon "Rangefinder";
 	};

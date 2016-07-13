@@ -62,12 +62,12 @@
 _attach1 = "acc_pointer_IR";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
-_silencer1 = "muzzle_snds_M";	// 5.56 suppressor
-_silencer2 = "muzzle_snds_H";	// 6.5 suppressor
+_silencer1 = "muzzle_snds_58_wdm_F";	// 5.8 suppressor
+_silencer2 = "muzzle_snds_H";			// 6.5 suppressor
 
 _scope1 = "optic_ACO_grn";		// ACO
-_scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
-_scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
+_scope2 = "optic_Arco_ghex_F";	// ARCO Scope
+_scope3 = "optic_LRPS_ghex_F";	// LRPS Scope
 
 _bipod1 = "bipod_02_F_hex";		// Default bipod
 _bipod2 = "bipod_02_F_blk";		// Black bipod
@@ -95,12 +95,12 @@ _hg_attachments= []; // The default attachment set for handguns, overwritten in 
 // WEAPON SELECTION
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
-_rifle = "arifle_CTAR_blk_F";
+_rifle = "arifle_CTAR_ghex_F";
 _riflemag = "30Rnd_580x42_Mag_F";
 _riflemag_tr = "30Rnd_580x42_Mag_Tracer_F";
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
-_carbine = "arifle_CTAR_blk_F";
+_carbine = "arifle_CTAR_ghex_F";
 _carbinemag = "30Rnd_580x42_Mag_F";
 _carbinemag_tr = "30Rnd_580x42_Mag_Tracer_F";
 
@@ -116,7 +116,7 @@ _diverMag2 = "30Rnd_556x45_Stanag_Tracer_Green";
 _diverMag3 = "20Rnd_556x45_UW_mag";
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle = "arifle_CTAR_GL_blk_F";
+_glrifle = "arifle_CTAR_GL_ghex_F";
 _glriflemag = "30Rnd_580x42_Mag_F";
 _glriflemag_tr = "30Rnd_580x42_Mag_Tracer_F";
 _glmag = "1Rnd_HE_Grenade_shell";
@@ -148,7 +148,7 @@ _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
 // Night Vision Goggles
-_nvg = "NVGoggles_tna_F";
+_nvg = "O_NVGoggles_ghex_F";
 
 // Laserdesignator
 _laserdesignator = "Laserdesignator_02_ghex_F";
@@ -181,7 +181,7 @@ _baghsamag = "O_HMG_01_support_F";			// used by Heavy SAM assistant gunner
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = "arifle_CTARS_blk_F";
+_AR = "arifle_CTARS_ghex_F";
 _ARmag = "100Rnd_580x42_Mag_F";
 _ARmag_tr = "100Rnd_580x42_Mag_Tracer_F";
 
@@ -221,7 +221,7 @@ _HATmag1 = "Titan_AT";
 _HATmag2 = "Titan_AP";
 
 // Sniper
-_SNrifle = "srifle_GM6_F";
+_SNrifle = "srifle_GM6_ghex_F";
 _SNrifleMag = "5Rnd_127x108_Mag";
 
 // Engineer items
@@ -243,7 +243,7 @@ _diver = ["div"];
 _pilot = ["pp","pcc","pc"];
 _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
-_specOp = [];
+_specOp = ["r"];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -286,9 +286,9 @@ _ghillieRig = ["V_HarnessO_ghex_F"];
 _ghillieGlasses = [];
 
 // Spec Op
-_sfuniform = ["U_O_SpecopsUniform_ocamo"];
-_sfhelmet = ["H_HelmetSpecO_ocamo","H_HelmetSpecO_blk"];
-_sfRig = ["V_PlateCarrier1_blk"];
+_sfuniform = ["U_O_T_Soldier_F"];		//Viper: ["U_O_V_Soldier_Viper_F"];
+_sfhelmet = ["H_HelmetSpecO_ghex_F"];	//Viper: ["H_HelmetO_ViperSP_ghex_F"]; IMPORTANT: Will be overriden if nvg is added afterwards
+_sfRig = _standardRig;
 _sfGlasses = [];
 
 // ====================================================================================
@@ -331,7 +331,7 @@ if (_isMan) then {
 	_unit linkItem "ItemCompass";	// Add and equip a compass
 	_unit linkItem "ItemRadio";		// Add and equip A3's default radio
 	_unit linkItem "ItemWatch";		// Add and equip a watch
-	_unit linkItem "ItemGPS"; 	// Add and equip a GPS
+	_unit linkItem "ItemGPS"; 		// Add and equip a GPS
 
 };
 

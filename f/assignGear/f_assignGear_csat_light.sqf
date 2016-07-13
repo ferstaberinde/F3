@@ -21,7 +21,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_ARmag, 1];
 		_unit addmagazines [_grenade, 1];
-	};""
+	};
 // Rifleman (AT) Loadout:
 	case "rat":
 	{
