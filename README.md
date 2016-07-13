@@ -29,7 +29,7 @@
 
 Version | Date | Notes
 
-* 3-4-0     | DD JUL 2016 | Patch release - APEX support and various improvements (see change history).
+* 3-4-0     | 13 JUL 2016 | Patch release - APEX support and various improvements (see change history).
 * 3-4-0 RC1 | 04 JUL 2016 | Internal release - APEX support and various improvements (see change history).
 * 3-3-0     | 25 APR 2015 | Patch release - Various improvements (see change history).
 * 3-3-0 RC2 | 18 APR 2015 | Internal release - Various improvements (see change history). 
@@ -216,7 +216,7 @@ The online manual can be found at:
 
 ## 08. INSTALLATION ##
 
-To begin using the Software, move the F3.Altis folder into one of the following directories:
+To begin using the Software, move the F3.VR folder into one of the following directories:
 
 * \My Documents\Arma 3\MPMissions\
 * \My Documents\Arma 3 Other Profiles\YourPlayerName\MPMissions\
@@ -239,7 +239,7 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 
 Version | Date
 
-3-4-0 | DD JUL 2016
+3-4-0 | 13 JUL 2016
 
 * Updated Assign Gear component:
   * Implemented new Folk ARPS 2016 loadout options.
