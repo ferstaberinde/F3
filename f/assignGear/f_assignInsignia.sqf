@@ -60,9 +60,9 @@ private _roleBadge = switch (_typeofUnit) do
 private _groupBadges = [];
 
 // Default APEX factions to their vanilla equivalent
-if (_faction == "blu_t_f") then {_faction == "blu_f"};
-if (_faction == "blu_ctrg_f") then {_faction == "blu_f"};
-if (_faction == "opf_t_f") then {_faction == "opf_f"};
+if (_faction == "blu_t_f") then {_faction = "blu_f"};
+if (_faction == "blu_ctrg_f") then {_faction = "blu_f"};
+if (_faction == "opf_t_f") then {_faction = "opf_f"};
 
 switch (_faction) do
 {
