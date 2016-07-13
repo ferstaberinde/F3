@@ -15,7 +15,8 @@ switch (_typeofUnit) do
 	{
 		_unit addBackpack _bag;
 		_unit addmagazines [_ARmag, 1];
-		_unit addweapon _AR ;
+		_unit addweapon _AR;
+		_attachments pushback (_bipod1); // Adds the bipod
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_ARmag, 1];
@@ -65,6 +66,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glmag, 3];
 		_unit addmagazines [_smokegrenadegreen, 2];
 		_unit addmagazines [_smokegrenade, 5];
+		_unit addWeapon "Rangefinder";
 	};
 // Squad Leader / DC Loadout:
 	case "dc":
@@ -79,6 +81,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glmag, 3];
 		_unit addmagazines [_glsmokewhite, 3];
 		_unit addmagazines [_smokegrenadepurple, 2];
+		_unit addWeapon "Rangefinder";
 	};
 // Platoon CO Loadout:
 	case "co":
@@ -93,6 +96,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glsmokewhite, 3];
 		_unit addmagazines [_glsmokered, 3];
 		_unit addmagazines [_smokegrenadepurple, 3];
+		_unit addWeapon "Rangefinder";
 	};
 // JTAC Loadout:
 	case "jtac":
@@ -106,6 +110,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glsmokered, 6];
 		_unit addmagazines ["Laserbatteries", 2];
+		_unit addWeapon "Rangefinder";
 	};
 // Medic Loadout:
 	case "m":
@@ -126,6 +131,7 @@ switch (_typeofUnit) do
 	{
 		_unit addmagazines [_DMriflemag, 1];
 		_unit addweapon _DMrifle;
+		_attachments = [_bipod1,_scope2]; // Overwrites default attachments to add a bipod and scope 2
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_DMriflemag, 4];
@@ -137,6 +143,7 @@ switch (_typeofUnit) do
 		_unit addBackpack _bag;
 		_unit addmagazines [_MMGmag, 1];
 		_unit addweapon _MMG;
+		_attachments pushback (_bipod1); // Adds the bipod
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_MMGmag, 1];
@@ -155,6 +162,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
 		_unit addmagazines [_MMGmag, 2];
+		_unit addWeapon "Rangefinder";
 	};
 // Heavy MG Gunner Loadout:
 	case "hmgg":
@@ -179,6 +187,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
+		_unit addWeapon "Rangefinder";
 	};
 // Medium AT Gunner Loadout:
 	case "matg":
@@ -207,6 +216,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
 		_unit addmagazines [_MATmag1, 2];
+		_unit addWeapon "Rangefinder";
 	};
 // Heavy AT Gunner Loadout:
 	case "hatg":
@@ -234,6 +244,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
 		_unit addmagazines [_HATmag1, 2];
+		_unit addWeapon "Rangefinder";
 	};
 // Mortar Gunner Loadout:
 	case "mtrg":
@@ -258,6 +269,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
+		_unit addWeapon "Rangefinder";
 	};
 // Medium SAM Gunner Loadout:
 	case "msamg":
@@ -285,6 +297,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
 		_unit addmagazines [_SAMmag, 1];
+		_unit addWeapon "Rangefinder";
 	};
 // Heavy SAM Gunner Loadout:
 	case "hsamg":
@@ -309,12 +322,14 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
+		_unit addWeapon "Rangefinder";
 	};
 // Sniper Loadout:
 	case "sn":
 	{
 		_unit addmagazines [_SNrifleMag, 1];
-		_unit addweapon _SNrifle ;
+		_unit addweapon _SNrifle;
+		_attachments = [_bipod1,_scope3]; // Overwrites default attachments to add a bipod and scope 3
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 1];
 		_unit addItem _firstaid;
@@ -334,6 +349,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines ["Laserbatteries", 2];
 		_unit addmagazines [_SNrifleMag, 3];
+		_unit addWeapon "Rangefinder";
 	};
 // Vehicle Commander Loadout:
 	case "vc":
