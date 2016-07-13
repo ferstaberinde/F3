@@ -8,14 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1030;
+		nextID=1034;
 	};
 	class Camera
 	{
-		pos[]={567.19745,34.423553,1376.6833};
-		dir[]={0.81308895,-0.44567436,-0.37480733};
-		up[]={0.40474087,0.89518851,-0.18657187};
-		aside[]={-0.41868109,5.691254e-007,-0.90826142};
+		pos[]={462.22433,13.506721,689.18683};
+		dir[]={-0.80336642,-0.54313248,-0.24462824};
+		up[]={-0.5195635,0.83964837,-0.15820959};
+		aside[]={-0.2913301,9.7672455e-007,0.95674664};
 	};
 };
 binarizationWanted=0;
@@ -23744,7 +23744,50 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={448.18198,5.0014391,686.51361};
+						position[]={448.18201,5.0014391,686.51398};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[""vd"",this] call f_fnc_assignGear;";
+						name="UnitFIA_IFV1_D";
+						description="FIA Technical 1 Driver (Repair)";
+						isPlayable=1;
+					};
+					id=1032;
+					type="B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={448.18201,5.0014391,686.51398};
 					};
 					side="West";
 					flags=6;
@@ -23757,28 +23800,31 @@ class Mission
 						description="FIA Technical 1 Gunner";
 						isPlayable=1;
 					};
-					id=779;
-					type="B_crew_F";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
+					id=1033;
+					type="B_G_Soldier_F";
+					class CustomAttributes
 					{
-						position[]={448.18198,5.0014391,686.51361};
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
 					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						skill=0.60000002;
-						init="[""vd"",this] call f_fnc_assignGear;";
-						name="UnitFIA_IFV1_D";
-						description="FIA Technical 1 Driver (Repair)";
-						isPlayable=1;
-					};
-					id=780;
-					type="B_crew_F";
 				};
 			};
 			class Attributes
@@ -23797,22 +23843,22 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=779;
+						item0=1032;
 						item1=85;
 						class CustomData
 						{
-							role=2;
-							turretPath[]={0};
+							role=1;
 						};
 					};
 					class Item1
 					{
 						linkID=1;
-						item0=780;
+						item0=1033;
 						item1=85;
 						class CustomData
 						{
-							role=1;
+							role=2;
+							turretPath[]={0};
 						};
 					};
 				};
@@ -23854,7 +23900,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={482.90561,5.0014391,686.4306};
+						position[]={482.90601,5.0014391,686.43097};
 					};
 					side="West";
 					flags=6;
@@ -23867,15 +23913,38 @@ class Mission
 						description="FIA Technical 2 Gunner";
 						isPlayable=1;
 					};
-					id=782;
-					type="B_crew_F";
+					id=1030;
+					type="B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99833667;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={482.90561,5.0014391,686.4306};
+						position[]={482.90601,5.0014391,686.43097};
 					};
 					side="West";
 					flags=4;
@@ -23887,8 +23956,31 @@ class Mission
 						description="FIA Technical 2 Driver (Repair)";
 						isPlayable=1;
 					};
-					id=783;
-					type="B_crew_F";
+					id=1031;
+					type="B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 			};
 			class Attributes
@@ -23907,7 +23999,7 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=782;
+						item0=1030;
 						item1=86;
 						class CustomData
 						{
@@ -23918,7 +24010,7 @@ class Mission
 					class Item1
 					{
 						linkID=1;
-						item0=783;
+						item0=1031;
 						item1=86;
 						class CustomData
 						{
