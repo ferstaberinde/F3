@@ -197,7 +197,7 @@ _RATmag = "RPG32_F";
 
 // Medium AT
 _MAT = "launch_NLAW_F";
-_MATmag = "NLAW_F";
+_MATmag1 = "NLAW_F";
 
 // Heavy AT
 _HAT = "launch_I_Titan_short_F";
