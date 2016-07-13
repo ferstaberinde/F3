@@ -161,7 +161,7 @@ _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
 // Backpacks
-_bags = "B_AssaultPack_rgr";					// Regular bag
+_bag = "B_AssaultPack_rgr";					// Regular bag
 _baglarge =  "B_Kitbag_rgr"; 			// Large bag
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "B_UAV_01_backpack_F";			// used by UAV operator
