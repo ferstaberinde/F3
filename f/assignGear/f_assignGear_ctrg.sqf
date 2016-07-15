@@ -202,6 +202,11 @@ _DMriflemag = "20Rnd_762x51_Mag";
 _RAT = "launch_NLAW_F";
 _RATmag = "NLAW_F";
 
+// Medium AT
+_MAT = "launch_NLAW_F";
+_MATmag1 = "NLAW_F";
+_MATmag2 = "NLAW_F";
+
 // Surface Air
 _SAM = "launch_B_Titan_short_tna_F";
 _SAMmag = "Titan_AA";
@@ -216,7 +221,8 @@ _SNrifleMag = "7Rnd_408_Mag";
 
 // Engineer items
 _ATmine = "ATMine_Range_Mag";
-_satchel = "DemoCharge_Remote_Mag";
+_satchel = "SatchelCharge_Remote_Mag";
+_democharge = "DemoCharge_Remote_Mag";
 _APmine1 = "APERSBoundingMine_Range_Mag";
 _APmine2 = "APERSMine_Range_Mag";
 
