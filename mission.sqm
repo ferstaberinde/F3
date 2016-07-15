@@ -8,14 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1034;
+		nextID=1037;
 	};
 	class Camera
 	{
-		pos[]={462.22433,13.506721,689.18683};
-		dir[]={-0.80336642,-0.54313248,-0.24462824};
-		up[]={-0.5195635,0.83964837,-0.15820959};
-		aside[]={-0.2913301,9.7672455e-007,0.95674664};
+		pos[]={525.41235,219.35558,1056.434};
+		dir[]={-0.13464116,-0.72109824,0.67979693};
+		up[]={-0.14009155,0.6928609,0.70731193};
+		aside[]={0.98106158,1.3795216e-006,0.19430749};
 	};
 };
 binarizationWanted=0;
@@ -25436,48 +25436,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1425.2299,5.0014391,1369.6653};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						init="[""m"",this] call f_fnc_assignGear;";
-						name="UnitSyn_ASL_M";
-						description="Syndikat Alpha Medic";
-						isPlayable=1;
-					};
-					id=854;
-					type="I_C_Soldier_Para_3_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={1420.1244,5.0014391,1372.6526};
 					};
 					side="Independent";
@@ -25510,6 +25468,48 @@ class Mission
 										};
 									};
 									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1425.2299,5.0014391,1369.6653};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="[""m"",this] call f_fnc_assignGear;";
+						name="UnitSyn_ASL_M";
+						description="Syndikat Alpha Medic";
+						isPlayable=1;
+					};
+					id=854;
+					type="I_C_Soldier_Para_3_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
 								};
 							};
 						};
@@ -26144,48 +26144,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1465.3158,5.0014391,1368.7073};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						init="[""m"",this] call f_fnc_assignGear;";
-						name="UnitSyn_BSL_M";
-						description="Syndikat Bravo Medic";
-						isPlayable=1;
-					};
-					id=871;
-					type="I_C_Soldier_Para_3_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={1460.2103,5.0014391,1371.6956};
 					};
 					side="Independent";
@@ -26218,6 +26176,48 @@ class Mission
 										};
 									};
 									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1465.3158,5.0014391,1368.7073};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="[""m"",this] call f_fnc_assignGear;";
+						name="UnitSyn_BSL_M";
+						description="Syndikat Bravo Medic";
+						isPlayable=1;
+					};
+					id=871;
+					type="I_C_Soldier_Para_3_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
 								};
 							};
 						};
@@ -26852,48 +26852,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1505.9779,5.0014391,1367.8723};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						init="[""m"",this] call f_fnc_assignGear;";
-						name="UnitSyn_CSL_M";
-						description="Syndikat Charlie Medic";
-						isPlayable=1;
-					};
-					id=888;
-					type="I_C_Soldier_Para_3_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={1500.8724,5.0014391,1370.8596};
 					};
 					side="Independent";
@@ -26926,6 +26884,48 @@ class Mission
 										};
 									};
 									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1505.9779,5.0014391,1367.8723};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="[""m"",this] call f_fnc_assignGear;";
+						name="UnitSyn_CSL_M";
+						description="Syndikat Charlie Medic";
+						isPlayable=1;
+					};
+					id=888;
+					type="I_C_Soldier_Para_3_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
 								};
 							};
 						};
