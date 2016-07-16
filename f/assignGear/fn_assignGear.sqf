@@ -94,6 +94,16 @@ if (_faction in ["blu_t_f","natopacific"]) then {
 
 // ====================================================================================
 
+// GEAR: BLUFOR > GENDARMERIE
+// The following block of code executes only if the unit belongs to the gendarmerie faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["blu_gen_f"]) then {
+	#include "f_assignGear_gendarmerie.sqf"
+};
+
+// ====================================================================================
+
 // GEAR: OPFOR > CSAT
 // The following block of code executes only if the unit belongs to the CSAT faction; it
 // automatically includes a file which contains the appropriate equipment data.
