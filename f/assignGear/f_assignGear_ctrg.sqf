@@ -127,10 +127,10 @@ _glsmokegreen = "1Rnd_SmokeGreen_Grenade_shell";
 _glsmokered = "1Rnd_SmokeRed_Grenade_shell";
 
 // Flares for FTLs, Squad Leaders, etc
-_glflarewhite = "1Rnd_UGL_FlareWhite_F";
-_glflarered = "1Rnd_UGL_FlareRed_F";
-_glflareyellow = "1Rnd_UGL_FlareYellow_F";
-_glflaregreen = "1Rnd_UGL_FlareGreen_F";
+_glflarewhite = "UGL_FlareWhite_F";
+_glflarered = "UGL_FlareRed_F";
+_glflareyellow = "UGL_FlareYellow_F";
+_glflaregreen = "UGL_FlareGreen_F";
 
 // Pistol
 _pistol = "hgun_Pistol_heavy_01_F";
