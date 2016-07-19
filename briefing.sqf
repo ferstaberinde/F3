@@ -82,6 +82,23 @@ if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f"]) exitwith {
 
 // ====================================================================================
 
+// BRIEFING: GENDARMERIE
+// The following block of code executes only if the player is in a gendarmerie slot; it
+// automatically includes a file which contains the appropriate briefing data.
+
+if (_unitfaction in ["blu_gen_f"]) exitwith {
+
+#include "f\briefing\f_briefing_gendarmerie.sqf"
+
+// DEBUG
+	if (f_param_debugMode == 1) then
+	{
+	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
+	};
+};
+
+// ====================================================================================
+
 // BRIEFING: OPFOR > CSAT
 // The following block of code executes only if the player is in a CSAT & CSAT (Pacific) slot; it
 // automatically includes a file which contains the appropriate briefing data.

@@ -120,6 +120,20 @@ _groups = [
 
 // ====================================================================================
 
+// GROUP IDs: BLUFOR > GENDARMERIE
+// Automatically assigns intelligible names to groups
+
+["GrpGEN_CO","Gendarmerie CO -"],
+["GrpGEN_DC","Gendarmerie DC -"],
+["GrpGEN_A","Gendarmerie Alpha -"],
+["GrpGEN_B","Gendarmerie Bravo -"],
+["GrpGEN_C","Gendarmerie Charlie -"],
+["GrpGEN_J","Gendarmerie Juliet -"],
+["GrpGEN_MK","Gendarmerie Marksman -"],
+["GrpGEN_TH1","Gendarmerie TH1 -"],
+
+// ====================================================================================
+
 // GROUP IDs: OPFOR > CSAT
 // Automatically assigns intelligible names to groups
 

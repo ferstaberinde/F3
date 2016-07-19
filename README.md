@@ -1,6 +1,6 @@
 # F3 README #
 
-* Version: 3-4-0
+* Version: 3-4-1
 * Codebase: https://github.com/ferstaberinde/F3
 * Developer: Please see credits section below.
 * Publishers: Fer (alanr@ferstaberinde.com)
@@ -29,6 +29,7 @@
 
 Version | Date | Notes
 
+* 3-4-1     | 19 JUL 2016 | Patch release - Various improvements (see change history).
 * 3-4-0     | 13 JUL 2016 | Patch release - APEX support and various improvements (see change history).
 * 3-4-0 RC1 | 04 JUL 2016 | Internal release - APEX support and various improvements (see change history).
 * 3-3-0     | 25 APR 2015 | Patch release - Various improvements (see change history).
@@ -238,6 +239,21 @@ Fer :) (alanr@ferstaberinde.com) (on behalf of all F3 / F2 / BAS f contributors)
 ### F3 Change History ###
 
 Version | Date
+
+3-4-1 | 19 JUL 2016
+
+* Added F3 Gendarmerie component, with support for this added to:
+  * Briefing Template component.
+  * F3 Folk ARPS Assign Gear Script component.
+  * F3 Folk ARPS Group Markers component.
+  * F3 Folk ARPS Group IDs component.
+* Updated F3 Folk ARPS Assign Gear Script component:
+  * Various minor fixes.
+* Updated F3 Folk ARPS Platoons component:
+  * Fixed issues with order of Syndikat slots.
+* Updated Insignia component:
+  * Automatically supports mission-maker placed Pacific units (NATO and CSAT).
+* Updated Mission Header component documentation.
 
 3-4-0 | 13 JUL 2016
 

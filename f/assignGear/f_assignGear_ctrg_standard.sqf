@@ -71,8 +71,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag, 1];
 		_unit addmagazines [_glmag, 1];
 		_unit addweapon _glrifle;
-		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 1];
+		_unit addweapon _pistol;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
@@ -88,10 +88,10 @@ switch (_typeofUnit) do
 	case "co":
 	{
 		_unit addmagazines [_glriflemag, 1];
-		_unit addweapon _glrifle;
 		_unit addmagazines [_glsmokewhite, 1];
-		_unit addweapon _pistol;
+		_unit addweapon _glrifle;
 		_unit addmagazines [_pistolmag, 1];
+		_unit addweapon _pistol;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
@@ -107,10 +107,10 @@ switch (_typeofUnit) do
 	case "jtac":
 	{
 		_unit addmagazines [_glriflemag, 1];
-		_unit addweapon _glrifle;
 		_unit addmagazines [_glsmokered, 1];
-		_unit addweapon _pistol;
+		_unit addweapon _glrifle;
 		_unit addmagazines [_pistolmag, 1];
+		_unit addweapon _pistol;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
@@ -281,8 +281,8 @@ switch (_typeofUnit) do
 		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
-		_unit addweapon _HAT;
 		_unit addmagazines [_SAMmag, 1];
+		_unit addweapon _SAM;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 2];
@@ -332,8 +332,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_SNrifleMag, 1];
 		_unit addweapon _SNrifle;
 		_attachments = [_bipod1,_scope3]; // Overwrites default attachments to add a bipod and scope 3
-		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 1];
+		_unit addweapon _pistol;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_SNrifleMag, 6];
@@ -458,7 +458,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addItem _uavterminal;
+		_unit linkItem _uavterminal;
 	};
 // Diver Loadout:
 	case "div":
@@ -517,6 +517,10 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
 	};
+
+// Include the loadouts for vehicles and crates:
+#include "f_assignGear_ctrg_v.sqf";
+
 // ====================================================================================
 
 // END SWITCH FOR DEFINE UNIT TYPE LOADOUTS

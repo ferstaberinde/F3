@@ -72,6 +72,7 @@ if (_unitfaction in ["blu_f","blu_t_f","blu_ctrg_f"]) then {
 // Markers seen by players in FIA & CTRG slots.
 
 if (_unitfaction in ["blu_g_f","blu_ctrg_f"]) then {
+
 	["GrpFIA_CO",_hq, "CO", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpFIA_DC",_hq, "DC", "ColorYellow"] spawn f_fnc_localGroupMarker;
 	["GrpFIA_COV",_ifv, "COV", "ColorYellow"] spawn f_fnc_localGroupMarker;
@@ -129,6 +130,23 @@ if (_unitfaction in ["blu_g_f","blu_ctrg_f"]) then {
 	["UnitFIA_ASL_M",_med, "AM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitFIA_BSL_M",_med, "BM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
 	["UnitFIA_CSL_M",_med, "CM", "ColorBlack"] spawn f_fnc_localSpecialistMarker;
+};
+
+// ====================================================================================
+
+// MARKERS: BLUFOR > GENDARMERIE
+// Markers seen by players in gendarmerie slots.
+
+if (_unitfaction in ["blu_gen_f"]) then {
+
+	["GrpGEN_CO",_hq, "CO", "ColorYellow"] spawn f_fnc_localGroupMarker;
+	["GrpGEN_DC",_hq, "DC", "ColorYellow"] spawn f_fnc_localGroupMarker;
+	["GrpGEN_A",_hq, "A", "ColorRed"] spawn f_fnc_localGroupMarker;
+	["GrpGEN_B",_hq, "B", "ColorBlue"] spawn f_fnc_localGroupMarker;
+	["GrpGEN_C",_hq, "C", "ColorGreen"] spawn f_fnc_localGroupMarker;
+	["GrpGEN_J",_hq, "J", "ColorPink"] spawn f_fnc_localGroupMarker;
+	["GrpGEN_MK",_rec, "MK", "ColorOrange"] spawn f_fnc_localGroupMarker;
+	["GrpGEN_TH1",_hel, "TH1", "ColorOrange"] spawn f_fnc_localGroupMarker;
 };
 
 // ====================================================================================

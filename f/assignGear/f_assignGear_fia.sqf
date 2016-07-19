@@ -95,12 +95,12 @@ _hg_attachments= []; // The default attachment set for handguns, overwritten in 
 // WEAPON SELECTION
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
-_rifle = "arifle_TRG21_F";
+_rifle = ["arifle_TRG21_F","arifle_TRG21_F","arifle_Mk20_plain_F"]; // Slight randomization, biased towards TRG
 _riflemag = "30Rnd_556x45_Stanag_red";
 _riflemag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
-_carbine = "arifle_TRG20_F";
+_carbine = ["arifle_TRG20_F","arifle_TRG20_F","arifle_Mk20C_plain_F"]; // Slight randomization, biased towards TRG
 _carbinemag = "30Rnd_556x45_Stanag_red";
 _carbinemag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 
@@ -116,7 +116,7 @@ _diverMag2 = "30Rnd_556x45_Stanag_Tracer_Red";
 _diverMag3 = "20Rnd_556x45_UW_mag";
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle = "arifle_TRG21_GL_F";
+_glrifle = ["arifle_TRG21_GL_F","arifle_TRG21_GL_F","arifle_Mk20_GL_plain_F"]; // Slight randomization, biased towards TRG_glriflemag = "30Rnd_556x45_Stanag_red";
 _glriflemag = "30Rnd_556x45_Stanag_red";
 _glriflemag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 _glmag = "1Rnd_HE_Grenade_shell";
@@ -226,7 +226,8 @@ _SNrifleMag = "7Rnd_408_Mag";
 
 // Engineer items
 _ATmine = "ATMine_Range_Mag";
-_satchel = "DemoCharge_Remote_Mag";
+_satchel = "SatchelCharge_Remote_Mag";
+_democharge = "DemoCharge_Remote_Mag";
 _APmine1 = "APERSBoundingMine_Range_Mag";
 _APmine2 = "APERSMine_Range_Mag";
 

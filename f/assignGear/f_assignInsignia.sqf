@@ -31,10 +31,8 @@ switch (_insignia_style_CSAT) do
 	case "Urban" : {_CSAT_Medic_Badge = "CSAT_Urban_Medic_Badge";};
 	};
 
-// Default APEX factions to their vanilla equivalent
-if (_faction == "blu_t_f") then {_faction = "blu_f"};
+// Treat CTRG like BLUFOR
 if (_faction == "blu_ctrg_f") then {_faction = "blu_f"};
-if (_faction == "opf_t_f") then {_faction = "opf_f"};
 
 // ===================================================================================
 
@@ -103,6 +101,24 @@ switch (_faction) do
 			];
 		};
 	};
+	case "blu_t_f": {
+		_groupBadges = [
+			["GrpNATO_ASL","NATO_Pacific_ASL_Badge"],
+			["GrpNATO_A1","NATO_Pacific_A1_Badge"],
+			["GrpNATO_A2","NATO_Pacific_A2_Badge"],
+			["GrpNATO_A3","NATO_Pacific_A3_Badge"],
+			["GrpNATO_BSL","NATO_Pacific_BSL_Badge"],
+			["GrpNATO_B1","NATO_Pacific_B1_Badge"],
+			["GrpNATO_B2","NATO_Pacific_B2_Badge"],
+			["GrpNATO_B3","NATO_Pacific_B3_Badge"],
+			["GrpNATO_CSL","NATO_Pacific_CSL_Badge"],
+			["GrpNATO_C1","NATO_Pacific_C1_Badge"],
+			["GrpNATO_C2","NATO_Pacific_C2_Badge"],
+			["GrpNATO_C3","NATO_Pacific_C3_Badge"],
+			["GrpNATO_CO","NATO_Pacific_CO_Badge"],
+			["GrpNATO_DC","NATO_Pacific_DC_Badge"]
+		];
+	};
 	case "opf_f": {
 		switch (_insignia_style_CSAT) do
 		{
@@ -161,6 +177,24 @@ switch (_faction) do
 				];
 			};
 		};
+	};
+	case "opf_t_f": {
+		_groupBadges = [
+			["GrpCSAT_ASL","CSAT_Pacific_ASL_Badge"],
+			["GrpCSAT_A1","CSAT_Pacific_A1_Badge"],
+			["GrpCSAT_A2","CSAT_Pacific_A2_Badge"],
+			["GrpCSAT_A3","CSAT_Pacific_A3_Badge"],
+			["GrpCSAT_BSL","CSAT_Pacific_BSL_Badge"],
+			["GrpCSAT_B1","CSAT_Pacific_B1_Badge"],
+			["GrpCSAT_B2","CSAT_Pacific_B2_Badge"],
+			["GrpCSAT_B3","CSAT_Pacific_B3_Badge"],
+			["GrpCSAT_CSL","CSAT_Pacific_CSL_Badge"],
+			["GrpCSAT_C1","CSAT_Pacific_C1_Badge"],
+			["GrpCSAT_C2","CSAT_Pacific_C2_Badge"],
+			["GrpCSAT_C3","CSAT_Pacific_C3_Badge"],
+			["GrpCSAT_CO","CSAT_Pacific_CO_Badge"],
+			["GrpCSAT_DC","CSAT_Pacific_DC_Badge"]
+		];
 	};
 	case "ind_f": {
 		_groupBadges = [

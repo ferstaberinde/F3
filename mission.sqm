@@ -5,17 +5,17 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1034;
+		nextID=1102;
 	};
 	class Camera
 	{
-		pos[]={462.22433,13.506721,689.18683};
-		dir[]={-0.80336642,-0.54313248,-0.24462824};
-		up[]={-0.5195635,0.83964837,-0.15820959};
-		aside[]={-0.2913301,9.7672455e-007,0.95674664};
+		pos[]={500.4133,30,925.26514};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -51,10 +51,13 @@ addons[]=
 	"A3_Modules_F_Supports",
 	"A3_Characters_F",
 	"A3_Static_F_Mortar_01",
+	"cba_xeh",
 	"A3_Data_F_Curator_Virtual",
 	"A3_Characters_F_Exp",
 	"A3_Soft_F_Exp_Offroad_02",
-	"A3_Soft_F_Exp_Van_01"
+	"A3_Soft_F_Exp_Van_01",
+	"A3_Soft_F_Exp_Offroad_01",
+	"A3_Soft_F_Gamma_SUV_01"
 };
 class AddonsMetaData
 {
@@ -259,7 +262,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=349;
+		items=365;
 		class Item0
 		{
 			dataType="Object";
@@ -25436,48 +25439,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1425.2299,5.0014391,1369.6653};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						init="[""m"",this] call f_fnc_assignGear;";
-						name="UnitSyn_ASL_M";
-						description="Syndikat Alpha Medic";
-						isPlayable=1;
-					};
-					id=854;
-					type="I_C_Soldier_Para_3_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.04;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={1420.1244,5.0014391,1372.6526};
 					};
 					side="Independent";
@@ -25510,6 +25471,48 @@ class Mission
 										};
 									};
 									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1425.2299,5.0014391,1369.6653};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="[""m"",this] call f_fnc_assignGear;";
+						name="UnitSyn_ASL_M";
+						description="Syndikat Alpha Medic";
+						isPlayable=1;
+					};
+					id=854;
+					type="I_C_Soldier_Para_3_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
 								};
 							};
 						};
@@ -26144,48 +26147,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1465.3158,5.0014391,1368.7073};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						init="[""m"",this] call f_fnc_assignGear;";
-						name="UnitSyn_BSL_M";
-						description="Syndikat Bravo Medic";
-						isPlayable=1;
-					};
-					id=871;
-					type="I_C_Soldier_Para_3_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.02;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={1460.2103,5.0014391,1371.6956};
 					};
 					side="Independent";
@@ -26218,6 +26179,48 @@ class Mission
 										};
 									};
 									value=1.01;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1465.3158,5.0014391,1368.7073};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="[""m"",this] call f_fnc_assignGear;";
+						name="UnitSyn_BSL_M";
+						description="Syndikat Bravo Medic";
+						isPlayable=1;
+					};
+					id=871;
+					type="I_C_Soldier_Para_3_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
 								};
 							};
 						};
@@ -26852,48 +26855,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1505.9779,5.0014391,1367.8723};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						init="[""m"",this] call f_fnc_assignGear;";
-						name="UnitSyn_CSL_M";
-						description="Syndikat Charlie Medic";
-						isPlayable=1;
-					};
-					id=888;
-					type="I_C_Soldier_Para_3_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={1500.8724,5.0014391,1370.8596};
 					};
 					side="Independent";
@@ -26926,6 +26887,48 @@ class Mission
 										};
 									};
 									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1505.9779,5.0014391,1367.8723};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="[""m"",this] call f_fnc_assignGear;";
+						name="UnitSyn_CSL_M";
+						description="Syndikat Charlie Medic";
+						isPlayable=1;
+					};
+					id=888;
+					type="I_C_Soldier_Para_3_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
 								};
 							};
 						};
@@ -30684,6 +30687,1630 @@ class Mission
 			};
 			id=1027;
 			type="I_Heli_light_03_unarmed_F";
+		};
+		class Item349
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={489.91336,5.0014391,1044.3853};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="CAPTAIN";
+						init="[""co"",this] call f_fnc_assignGear;";
+						name="UnitGEN_CO";
+						description="Gendarmerie Commander";
+						isPlayable=1;
+					};
+					id=1038;
+					type="B_GEN_Commander_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpGEN_CO";
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=1038;
+						item1=1088;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=1037;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Gendarmerie CO -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item350
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={490.23773,5.0014391,1022.6599};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="[""dc"",this] call f_fnc_assignGear;";
+						name="UnitGEN_DC";
+						description="Gendarmerie Deputy Commander";
+						isPlayable=1;
+					};
+					id=1040;
+					type="B_GEN_Commander_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpGEN_DC";
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=1040;
+						item1=1089;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=1039;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Gendarmerie DC -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item351
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.42276,5.1286469,1041.3831};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""pat"",this] call f_fnc_assignGear;";
+						name="UnitGEN_A_Sgt";
+						description="Gendarmerie Alpha Sergeant";
+						isPlayable=1;
+					};
+					id=1067;
+					type="B_GEN_Soldier_F";
+					atlOffset=0.12720776;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={509.84177,5.0014391,1044.8337};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""pat"",this] call f_fnc_assignGear;";
+						name="UnitGEN_A_G2";
+						description="Gendarmerie Alpha Gendarme";
+						isPlayable=1;
+					};
+					id=1068;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={512.95728,5.0014391,1039.1799};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""pat"",this] call f_fnc_assignGear;";
+						name="UnitGEN_A_G3";
+						description="Gendarmerie Alpha Gendarme";
+						isPlayable=1;
+					};
+					id=1069;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={513.53827,5.1286469,1035.7292};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""pat"",this] call f_fnc_assignGear;";
+						name="UnitGEN_A_G1";
+						description="Gendarmerie Alpha Gendarme";
+						isPlayable=1;
+					};
+					id=1066;
+					type="B_GEN_Soldier_F";
+					atlOffset=0.12720776;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpGEN_A";
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=1067;
+						item1=1090;
+						class CustomData
+						{
+							role=3;
+							cargoIndex=0;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1068;
+						item1=1090;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=1069;
+						item1=1091;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=1066;
+						item1=1091;
+						class CustomData
+						{
+							role=3;
+							cargoIndex=0;
+						};
+					};
+				};
+			};
+			id=1041;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Gendarmerie Alpha -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item352
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.1658,5.0014391,1021.7027};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""smg"",this] call f_fnc_assignGear;";
+						name="UnitGEN_B_Sgt";
+						description="Gendarmerie Bravo Sergeant";
+						isPlayable=1;
+					};
+					id=1070;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.1658,5.0014391,1021.7027};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""smg"",this] call f_fnc_assignGear;";
+						name="UnitGEN_B_G1";
+						description="Gendarmerie Bravo Gendarme";
+						isPlayable=1;
+					};
+					id=1071;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.1658,5.0014391,1021.7027};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""smg"",this] call f_fnc_assignGear;";
+						name="UnitGEN_B_G2";
+						description="Gendarmerie Bravo Gendarme";
+						isPlayable=1;
+					};
+					id=1072;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.1658,5.0014391,1021.7027};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""smg"",this] call f_fnc_assignGear;";
+						name="UnitGEN_B_G3";
+						description="Gendarmerie Bravo Gendarme";
+						isPlayable=1;
+					};
+					id=1073;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpGEN_B";
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=1070;
+						item1=1092;
+						class CustomData
+						{
+							role=3;
+							cargoIndex=0;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1071;
+						item1=1092;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=1072;
+						item1=1092;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=1073;
+						item1=1092;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=1049;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Gendarmerie Bravo -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item353
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.59879,5.0014391,999.65369};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""car"",this] call f_fnc_assignGear;";
+						name="UnitGEN_C_Sgt";
+						description="Gendarmerie Charlie Sergeant";
+						isPlayable=1;
+					};
+					id=1074;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.59879,5.0014391,999.65369};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""car"",this] call f_fnc_assignGear;";
+						name="UnitGEN_C_G1";
+						description="Gendarmerie Charlie Gendarme";
+						isPlayable=1;
+					};
+					id=1075;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.59879,5.0014391,999.65369};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""car"",this] call f_fnc_assignGear;";
+						name="UnitGEN_C_G2";
+						description="Gendarmerie Charlie Gendarme";
+						isPlayable=1;
+					};
+					id=1076;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.59879,5.0014391,999.65369};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""car"",this] call f_fnc_assignGear;";
+						name="UnitGEN_C_G3";
+						description="Gendarmerie Charlie Gendarme";
+						isPlayable=1;
+					};
+					id=1077;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpGEN_C";
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=1074;
+						item1=1093;
+						class CustomData
+						{
+							role=3;
+							cargoIndex=0;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1075;
+						item1=1093;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=1076;
+						item1=1093;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={1};
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=1077;
+						item1=1093;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=1054;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Gendarmerie Charlie -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item354
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.27676,5.0014391,976.62372};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""nf"",this] call f_fnc_assignGear;";
+						name="UnitGEN_J_Sgt";
+						description="Gendarmerie Juliet Sergeant (Night Force)";
+						isPlayable=1;
+					};
+					id=1078;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.27676,5.0014391,976.62372};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""nf"",this] call f_fnc_assignGear;";
+						name="UnitGEN_J_G1";
+						description="Gendarmerie Juliet Gendarme (Night Force)";
+						isPlayable=1;
+					};
+					id=1079;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.27676,5.0014391,976.62372};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""nf"",this] call f_fnc_assignGear;";
+						name="UnitGEN_J_G2";
+						description="Gendarmerie Juliet Gendarme (Night Force)";
+						isPlayable=1;
+					};
+					id=1080;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={510.27676,5.0014391,976.62372};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="[""nf"",this] call f_fnc_assignGear;";
+						name="UnitGEN_J_G3";
+						description="Gendarmerie Juliet Gendarme (Night Force)";
+						isPlayable=1;
+					};
+					id=1081;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpGEN_J";
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=4;
+				};
+				class Links
+				{
+					items=4;
+					class Item0
+					{
+						linkID=0;
+						item0=1078;
+						item1=1098;
+						class CustomData
+						{
+							role=3;
+							cargoIndex=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1079;
+						item1=1098;
+						class CustomData
+						{
+							role=3;
+							cargoIndex=0;
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=1080;
+						item1=1098;
+						class CustomData
+						{
+							role=3;
+							cargoIndex=2;
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=1081;
+						item1=1098;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=1059;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Gendarmerie Juliet -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item355
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={491.44461,5.0014391,999.80695};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""mk"",this] call f_fnc_assignGear;";
+						name="UnitGEN_MK_MK";
+						description="Gendarmerie Marksman";
+						isPlayable=1;
+					};
+					id=1082;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpGEN_MK";
+			};
+			id=1064;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Gendarmerie MK -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item356
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={491.17267,5.0014391,976.23016};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="[""pp"",this] call f_fnc_assignGear;";
+						name="UnitGEN_TH1_P";
+						description="Gendarmerie Transport Helo 1 Pilot";
+						isPlayable=1;
+					};
+					id=1084;
+					type="B_GEN_Commander_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={491.17267,5.0014391,976.23016};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""pp"",this] call f_fnc_assignGear;";
+						name="UnitGEN_TH1_CP";
+						description="Gendarmerie Transport Helo 1 Co-Pilot (Repair)";
+						isPlayable=1;
+					};
+					id=1086;
+					type="B_GEN_Commander_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpGEN_TH1";
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=1084;
+						item1=1087;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1086;
+						item1=1087;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=1083;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Gendarmerie TH1 -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item357
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={491.17273,5.6047058,975.20013};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				init="[""v_helo_l"",this] call f_fnc_assignGear";
+				name="VehGEN_TH1";
+				textures="BlueLine";
+			};
+			id=1087;
+			type="C_Heli_Light_01_civil_F";
+		};
+		class Item358
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={489.91336,6.6115026,1044.366};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				init="[""v_car"",this] call f_fnc_assignGear";
+				name="VehGEN_CAR1";
+			};
+			id=1088;
+			type="B_GEN_Offroad_01_gen_F";
+		};
+		class Item359
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={490.23773,6.6115026,1022.6406};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				init="[""v_car"",this] call f_fnc_assignGear";
+				name="VehGEN_CAR2";
+			};
+			id=1089;
+			type="B_GEN_Offroad_01_gen_F";
+		};
+		class Item360
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={509.84177,6.6115026,1044.8145};
+			};
+			side="West";
+			flags=4;
+			class Attributes
+			{
+				init="[""v_car"",this] call f_fnc_assignGear";
+				name="VehGEN_CAR3";
+			};
+			id=1090;
+			type="B_GEN_Offroad_01_gen_F";
+		};
+		class Item361
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={512.95728,6.6115026,1039.1606};
+			};
+			side="West";
+			flags=4;
+			class Attributes
+			{
+				init="[""v_car"",this] call f_fnc_assignGear";
+				name="VehGEN_CAR4";
+			};
+			id=1091;
+			type="B_GEN_Offroad_01_gen_F";
+		};
+		class Item362
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={510.1658,6.6115026,1021.6835};
+			};
+			side="West";
+			flags=4;
+			class Attributes
+			{
+				init="[""v_car"",this] call f_fnc_assignGear";
+				name="VehGEN_CAR5";
+			};
+			id=1092;
+			type="B_GEN_Offroad_01_gen_F";
+		};
+		class Item363
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={510.59879,6.6115026,999.63446};
+			};
+			side="West";
+			flags=4;
+			class Attributes
+			{
+				init="[""v_car"",this] call f_fnc_assignGear";
+				name="VehGEN_CAR6";
+			};
+			id=1093;
+			type="B_GEN_Offroad_01_gen_F";
+		};
+		class Item364
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={510.27676,6.5964622,976.57373};
+			};
+			side="West";
+			flags=4;
+			class Attributes
+			{
+				init="[""v_car"",this] call f_fnc_assignGear";
+				name="VehGEN_CAR7";
+				textures="Black";
+			};
+			id=1098;
+			type="C_SUV_01_F";
 		};
 	};
 	class Connections

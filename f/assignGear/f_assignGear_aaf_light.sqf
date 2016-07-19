@@ -70,8 +70,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag, 1];
 		_unit addmagazines [_glmag, 1];
 		_unit addweapon _glrifle;
-		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 1];
+		_unit addweapon _pistol;
 		_unit addItem _firstaid ;
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_glriflemag, 2];
@@ -87,10 +87,10 @@ switch (_typeofUnit) do
 	case "co":
 	{
 		_unit addmagazines [_glriflemag, 1];
-		_unit addweapon _glrifle;
 		_unit addmagazines [_glsmokewhite, 1];
-		_unit addweapon _pistol;
+		_unit addweapon _glrifle;
 		_unit addmagazines [_pistolmag, 1];
+		_unit addweapon _pistol;
 		_unit addItem _firstaid ;
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_glriflemag, 2];
@@ -106,8 +106,8 @@ switch (_typeofUnit) do
 	case "jtac":
 	{
 		_unit addmagazines [_glriflemag, 1];
-		_unit addweapon _glrifle;
 		_unit addmagazines [_glsmokered, 1];
+		_unit addweapon _glrifle;
 		_unit addItem _firstaid ;
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_glriflemag, 2];
@@ -276,8 +276,8 @@ switch (_typeofUnit) do
 		_unit addBackpack _bag;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
-		_unit addweapon _SAM;
 		_unit addmagazines [_SAMmag, 1];
+		_unit addweapon _SAM;
 		_unit addItem _firstaid ;
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_carbinemag, 2];
@@ -327,8 +327,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_SNrifleMag, 1];
 		_unit addweapon _SNrifle;
 		_attachments = [_bipod1,_scope3]; // Overwrites default attachments to add a bipod and scope 3
-		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 1];
+		_unit addweapon _pistol;
 		_unit addItem _firstaid ;
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_SNrifleMag, 4];
@@ -452,7 +452,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_carbinemag, 2];
 		_unit addmagazines [_carbinemag_tr, 2];
-		_unit addItem _uavterminal;
+		_unit linkItem _uavterminal;
 	};
 // Diver Loadout:
 	case "div":
