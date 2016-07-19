@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={500.4133,30,925.26514};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={253.20601,157.21956,576.88916};
+		dir[]={0.75964439,-0.27484706,0.58941227};
+		up[]={0.2171492,0.96148634,0.16848733};
+		aside[]={0.6130206,-2.2511813e-008,-0.79006982};
 	};
 };
 binarizationWanted=0;
@@ -51,7 +51,6 @@ addons[]=
 	"A3_Modules_F_Supports",
 	"A3_Characters_F",
 	"A3_Static_F_Mortar_01",
-	"cba_xeh",
 	"A3_Data_F_Curator_Virtual",
 	"A3_Characters_F_Exp",
 	"A3_Soft_F_Exp_Offroad_02",
