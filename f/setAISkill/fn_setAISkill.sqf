@@ -57,6 +57,7 @@ if (typename _skillset == typename 0) then {
 	_skillArray = [];
 	for '_x' from 0 to 8 do {
 		_skilllevel = (f_var_skillSet select _x) * _skill;
+		if (_skill < 0.1) then {_skill = 0.1};
 		_skillArray pushBack (_skilllevel + random f_var_skillRandom - random f_var_skillRandom);
 	};
 };
