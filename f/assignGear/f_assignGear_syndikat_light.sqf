@@ -66,7 +66,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glmag, 5];
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_smokegrenadegreen, 2];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Squad Leader / DC Loadout:
 	case "dc":
@@ -81,7 +81,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glmag, 5];
 		_unit addmagazines [_glsmokewhite, 3];
 		_unit addmagazines [_smokegrenadepurple, 2];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Platoon CO Loadout:
 	case "co":
@@ -98,7 +98,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glsmokewhite, 5];
 		_unit addmagazines [_glsmokered, 3];
 		_unit addmagazines [_smokegrenadepurple, 2];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // JTAC Loadout:
 	case "jtac":
@@ -164,7 +164,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
 		_unit addmagazines [_MMGmag, 2];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Heavy MG Gunner Loadout:
 	case "hmgg":
@@ -189,7 +189,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Medium AT Gunner Loadout:
 	case "matg":
@@ -218,7 +218,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
 		_unit addmagazines [_MATmag1, 1];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Heavy AT Gunner Loadout:
 	case "hatg":
@@ -246,7 +246,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
 		_unit addmagazines [_HATmag1, 2];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Mortar Gunner Loadout:
 	case "mtrg":
@@ -271,7 +271,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Medium SAM Gunner Loadout:
 	case "msamg":
@@ -299,7 +299,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
 		_unit addmagazines [_SAMmag, 1];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Heavy SAM Gunner Loadout:
 	case "hsamg":
@@ -324,7 +324,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 2];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 5];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Sniper Loadout:
 	case "sn":
@@ -350,7 +350,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_SNrifleMag, 3];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Vehicle Commander Loadout:
 	case "vc":
@@ -361,7 +361,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_smgmag, 4];
 		_unit addmagazines [_smokegrenadeblue, 5];
-		_unit addweapon "Rangefinder";
+		_unit addweapon _binoculars;
 	};
 // Vehicle Gunner Loadout:
 	case "vg":

@@ -164,6 +164,10 @@ _chemred = "Chemlight_red";
 _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
+// Binoculars
+//_binoculars = "Binocular";
+_binoculars = "Rangefinder";
+
 // Backpacks
 _bag = "B_AssaultPack_mcamo";
 _baglarge = "B_Kitbag_mcamo";
