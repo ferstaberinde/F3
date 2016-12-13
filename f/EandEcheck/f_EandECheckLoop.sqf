@@ -27,7 +27,7 @@ _safe = 0;
 _units = [];
 _pos = [];
 
-waitUntil {sleep 0.1;scriptDone f_script_setLocalVars};
+waitUntil {sleep 0.1; scriptDone f_script_setLocalVars};
 
 // ====================================================================================
 
@@ -56,11 +56,11 @@ if (typeName _objects == "SIDE") then {
 } else {
 	{
 
-		if(!isnil _x) then
+		if(!isNil _x) then
 		{
 			_temp = call compile format ["%1",_x];
-			player globalchat format ["%1",typeName _temp];
-			if (typename _temp == "GROUP") then {
+			player globalChat format ["%1",typeName _temp];
+			if (typeName _temp == "GROUP") then {
 				{
 					if !(_x in _units) then {
 						_units set [count _units,_x];
@@ -76,7 +76,7 @@ if (typeName _objects == "SIDE") then {
 };
 
 // If for some reason the units array is still empty exit with an error message
-if (count _units == 0) exitWith {player globalchat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): _units array is empty! passed array = %1, units array = %2",_objects,_units];};
+if (count _units == 0) exitWith {player globalChat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): _units array is empty! passed array = %1, units array = %2",_objects,_units];};
 
 // ====================================================================================
 
