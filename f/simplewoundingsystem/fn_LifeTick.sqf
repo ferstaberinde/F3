@@ -34,10 +34,10 @@ while {alive _unit} do
     if(_downed || _bleeding) then
     {
     	// blood loss
-    	_unit setVariable ["f_wound_blood",_blood - 0.6 max 0];
+    	_unit setVariable ["f_wound_blood",(_blood - (0.6 -(random 0.2))) max 0];
     	if(damage _unit < 0.251) then { _unit setDamage 0.251};
     	if(getBleedingRemaining _unit <= 0) then {    	_unit setBleedingRemaining 10;};
-		if(_downed && {animationstate _unit != [_unit] call f_fnc_GetAnimation)} && !{(["heal",animationstate _unit] call bis_fnc_inString)) then 
+		if(_downed && {(animationstate _unit != [_unit] call f_fnc_GetAnimation)} && !(["heal",animationstate _unit] call bis_fnc_inString)) then
 		{
 			_unit playMove "";
 			_unit switchmove ([_unit] call f_fnc_GetAnimation);
@@ -46,7 +46,7 @@ while {alive _unit} do
 	else
 	{
 		// blood regens.
-		_unit setVariable ["f_wound_blood",_blood + 0.6 min 100];
+		_unit setVariable ["f_wound_blood",(_blood + 1) min 100];
 	};
 	if(_blood <= 0) then
 	{
