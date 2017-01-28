@@ -92,6 +92,10 @@ _chemred = "Chemlight_red";
 _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
+// Binoculars
+//_binoculars = "Binocular";
+_binoculars = "Rangefinder";
+
 // Backpacks
 _bag = "B_AssaultPack_blk";
 _baglarge = "B_Kitbag_blk";
@@ -206,7 +210,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 		_unit addItem _firstaid;
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_chemgreen,1];
 		_unit addmagazines [_chemred,1];
@@ -220,7 +224,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 		_unit addItem _firstaid;
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_chemgreen,1];
 		_unit addmagazines [_chemred,1];
@@ -234,7 +238,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 		_unit addItem _firstaid;
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_chemgreen,1];
 		_unit addmagazines [_chemred,1];
@@ -308,7 +312,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 7];
 		_attachments pushback (_silencer1); // Adds silencer
 		_hg_attachments pushback (_hg_silencer1); // Adds pistol silencer
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_smokegrenade, 2];
 		_unit addmagazines [_chemgreen,1];

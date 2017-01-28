@@ -162,6 +162,10 @@ _chemred = "Chemlight_red";
 _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
+// Binoculars
+//_binoculars = "Binocular";
+_binoculars = "Rangefinder";
+
 // Backpacks
 _bag = "B_FieldPack_ghex_F";			// carries 120, weighs 20
 _baglarge =  "B_Carryall_ghex_F"; 			// carries 320, weighs 40

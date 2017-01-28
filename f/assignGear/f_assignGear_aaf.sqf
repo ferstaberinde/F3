@@ -163,6 +163,10 @@ _chemred = "Chemlight_red";
 _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
+// Binoculars
+//_binoculars = "Binocular";
+_binoculars = "Rangefinder";
+
 // Standard Backpacks
 _bag = "B_AssaultPack_dgtl";			// The standard bag for most classes
 _bagLarge = "B_Kitbag_rgr";				// Larger bag for some special purpose classes
