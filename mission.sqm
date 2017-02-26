@@ -8,14 +8,14 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1102;
+		nextID=1099;
 	};
 	class Camera
 	{
-		pos[]={253.20601,157.21956,576.88916};
-		dir[]={0.75964439,-0.27484706,0.58941227};
-		up[]={0.2171492,0.96148634,0.16848733};
-		aside[]={0.6130206,-2.2511813e-008,-0.79006982};
+		pos[]={496.543,7.4236813,1023.0076};
+		dir[]={-0.84531337,-0.17032278,0.50663656};
+		up[]={-0.14613166,0.98536563,0.087582253};
+		aside[]={0.51416159,-1.0040822e-007,0.85785311};
 	};
 };
 binarizationWanted=0;
@@ -237,7 +237,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="*** Insert mission name here. ***";
+		briefingName="f3-4-1dev_fa15_ws_140716";
 		resistanceWest=0;
 		timeOfChanges=28800;
 		startWeather=0.50001526;
@@ -30901,21 +30901,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={510.42276,5.1286469,1041.3831};
+						position[]={509.84177,5.0014391,1044.8337};
 					};
 					side="West";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="[""pat"",this] call f_fnc_assignGear;";
-						name="UnitGEN_A_Sgt";
-						description="Gendarmerie Alpha Sergeant";
+						name="UnitGEN_A_G1";
+						description="Gendarmerie Alpha Gendarme";
 						isPlayable=1;
 					};
-					id=1067;
+					id=1066;
 					type="B_GEN_Soldier_F";
-					atlOffset=0.12720776;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -30946,6 +30945,49 @@ class Mission
 					class PositionInfo
 					{
 						position[]={509.84177,5.0014391,1044.8337};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						rank="SERGEANT";
+						init="[""pat"",this] call f_fnc_assignGear;";
+						name="UnitGEN_A_Sgt";
+						description="Gendarmerie Alpha Sergeant";
+						isPlayable=1;
+					};
+					id=1067;
+					type="B_GEN_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.94999999;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={514.65173,5.0014391,1039.97};
 					};
 					side="West";
 					flags=4;
@@ -30983,12 +31025,12 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item2
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={512.95728,5.0014391,1039.1799};
+						position[]={514.65173,5.0014391,1039.97};
 					};
 					side="West";
 					flags=4;
@@ -31001,50 +31043,6 @@ class Mission
 					};
 					id=1069;
 					type="B_GEN_Soldier_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={513.53827,5.1286469,1035.7292};
-					};
-					side="West";
-					flags=4;
-					class Attributes
-					{
-						rank="CORPORAL";
-						init="[""pat"",this] call f_fnc_assignGear;";
-						name="UnitGEN_A_G1";
-						description="Gendarmerie Alpha Gendarme";
-						isPlayable=1;
-					};
-					id=1066;
-					type="B_GEN_Soldier_F";
-					atlOffset=0.12720776;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31086,6 +31084,16 @@ class Mission
 					class Item0
 					{
 						linkID=0;
+						item0=1066;
+						item1=1090;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
 						item0=1067;
 						item1=1090;
 						class CustomData
@@ -31094,35 +31102,25 @@ class Mission
 							cargoIndex=0;
 						};
 					};
-					class Item1
-					{
-						linkID=1;
-						item0=1068;
-						item1=1090;
-						class CustomData
-						{
-							role=1;
-						};
-					};
 					class Item2
 					{
 						linkID=2;
-						item0=1069;
-						item1=1091;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item3
-					{
-						linkID=3;
-						item0=1066;
+						item0=1068;
 						item1=1091;
 						class CustomData
 						{
 							role=3;
 							cargoIndex=0;
+						};
+					};
+					class Item3
+					{
+						linkID=3;
+						item0=1069;
+						item1=1091;
+						class CustomData
+						{
+							role=1;
 						};
 					};
 				};
@@ -32247,7 +32245,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={512.95728,6.6115026,1039.1606};
+				position[]={514.65173,6.6115026,1039.9507};
 			};
 			side="West";
 			flags=4;
