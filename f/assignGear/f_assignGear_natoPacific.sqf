@@ -62,14 +62,14 @@
 _attach1 = "acc_pointer_IR";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
-_silencer1 = "muzzle_snds_M";	// 5.56 suppressor
-_silencer2 = "muzzle_snds_H";	// 6.5 suppressor
+_silencer1 = "muzzle_snds_m_khk_F";	// 5.56 suppressor
+_silencer2 = "muzzle_snds_H_khk_F";	// 6.5 suppressor
 
 _scope1 = "optic_Holosight_khk_F";	// Basic Scope
 _scope2 = "optic_Hamr_khk_F";		// RCO Scope
 _scope3 = "optic_LRPS_tna_F";		// LRPS
 
-_bipod1 = "bipod_01_F_snd";		// Default bipod
+_bipod1 = "bipod_01_F_khk";		// Default bipod
 _bipod2 = "bipod_02_F_blk";		// Black bipod
 
 // Default setup
@@ -123,7 +123,7 @@ _glmag = "1Rnd_HE_Grenade_shell";
 _glmaglarge = "3Rnd_HE_Grenade_shell";
 
 // Smoke for FTLs, Squad Leaders, etc
-_glsmokewhite = "1Rnd_SmokeRed_Grenade_shell";
+_glsmokewhite = "1Rnd_Smoke_Grenade_shell";
 _glsmokegreen = "1Rnd_SmokeGreen_Grenade_shell";
 _glsmokered = "1Rnd_SmokeRed_Grenade_shell";
 
@@ -166,13 +166,13 @@ _chemblue = "Chemlight_blue";
 
 // Backpacks
 _bag = "B_AssaultPack_tna_F";
-_baglarge = "B_Kitbag_mcamo";
+_baglarge = "B_Kitbag_rgr";
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "B_UAV_01_backpack_F";			// used by UAV operator
 _baghmgg = "B_HMG_01_weapon_F";			// used by Heavy MG gunner
 _baghmgag = "B_HMG_01_support_F";			// used by Heavy MG assistant gunner
-_baghatg = "B_AssaultPack_mcamo";			// used by Heavy AT gunner
-_baghatag = "B_Kitbag_mcamo";			// used by Heavy AT assistant gunner **
+_baghatg = "B_AssaultPack_tna_F";			// used by Heavy AT gunner
+_baghatag = "B_Kitbag_rgr";			// used by Heavy AT assistant gunner **
 _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
 _baghsamg = "B_AA_01_weapon_F";			// used by Heavy SAM gunner
@@ -188,7 +188,7 @@ _ARmag = "100Rnd_65x39_caseless_mag";
 _ARmag_tr = "100Rnd_65x39_caseless_mag_Tracer";
 
 // Medium MG
-_MMG = "MMG_02_camo_F";
+_MMG = "MMG_02_black_F";
 _MMGmag = "130Rnd_338_Mag";
 _MMGmag_tr = "130Rnd_338_Mag";
 
@@ -212,16 +212,16 @@ _MATmag1 = "NLAW_F";
 _MATmag2 = "NLAW_F";
 
 // Surface Air
-_SAM = "launch_B_Titan_F";
+_SAM = "launch_B_Titan_tna_F";
 _SAMmag = "Titan_AA";
 
 // Heavy AT
-_HAT = "launch_B_Titan_short_F";
+_HAT = "launch_B_Titan_short_tna_F";
 _HATmag1 = "Titan_AT";
 _HATmag2 = "Titan_AP";
 
 // Sniper
-_SNrifle = "srifle_LRR_camo_F";
+_SNrifle = "srifle_LRR_tna_F";
 _SNrifleMag = "7Rnd_408_Mag";
 
 // Engineer items
@@ -269,15 +269,15 @@ _pilotRig = ["V_TacVest_blk"];
 _pilotGlasses = [];
 
 // Crewman
-_crewUniform = ["U_B_CombatUniform_mcam_vest"];
+_crewUniform = ["U_B_T_Soldier_SL_F"];
 _crewHelmet = ["H_HelmetCrew_B"];
-_crewRig = ["V_Chestrig_khk"];
+_crewRig = ["V_Chestrig_oli"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_B_GhillieSuit"]; //DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
+_ghillieUniform = ["U_B_T_Sniper_F"]; //DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
 _ghillieHelmet = [];
-_ghillieRig = ["V_Chestrig_khk"];
+_ghillieRig = ["V_Chestrig_oli"];
 _ghillieGlasses = [];
 
 // Spec Op
