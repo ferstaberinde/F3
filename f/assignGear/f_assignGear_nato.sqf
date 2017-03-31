@@ -123,7 +123,7 @@ _glmag = "1Rnd_HE_Grenade_shell";
 _glmaglarge = "3Rnd_HE_Grenade_shell";
 
 // Smoke for FTLs, Squad Leaders, etc
-_glsmokewhite = "1Rnd_SmokeRed_Grenade_shell";
+_glsmokewhite = "1Rnd_Smoke_Grenade_shell";
 _glsmokegreen = "1Rnd_SmokeGreen_Grenade_shell";
 _glsmokered = "1Rnd_SmokeRed_Grenade_shell";
 
