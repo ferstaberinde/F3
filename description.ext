@@ -7,15 +7,6 @@ author = "*** Insert Author Here. ***";
 loadScreen = "loadLogo.jpg";
 overviewPicture = "overviewLogo.jpg";
 
-// ============================================================================================
-
-// F3 - Respawn Settings
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-respawn = 1;
-respawndelay = 3;
-respawnOnStart = 0;
-respawnTemplates[] = {"Seagull","f_spectator","f_JIP"};
 
 // ============================================================================================
 
@@ -130,30 +121,6 @@ class Params
 
 // ============================================================================================
 
-// F3 - Radio Systems Support
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-    class f_param_radios
-    {
-            title = "Radio System";
-            values[] = {0,2,3};
-            texts[] = {"Off","TFR","ACRE2"};
-            default = 0;
-    };
-
-// ============================================================================================
-
-// F3 - Medical Systems Support
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-    class f_param_medical
-    {
-            title = "Medical System";
-            values[] = {0,1};
-            texts[] = {"Arma 3 Default","F3 Simple Wounding System"};
-            default = 1;
-    };
-
 // ============================================================================================
 
 // F3 - Mission Timer/Safe Start
@@ -237,18 +204,6 @@ class Params
 
 // ============================================================================================
 
-// F3 - Caching
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-	class f_param_caching
-	{
-		title = "Cache AI outside distance (m)";
-		values[] = {0,600,800,1000,1500,2000};
-		default = 0;
-	};
-
-// ============================================================================================
-
 // F3 - End of Params code blocks.
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
@@ -323,41 +278,14 @@ class CfgDebriefing
 
 };
 
-// ============================================================================================
 
-// F3 - Respawn Templates
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-class CfgRespawnTemplates
-{
-	// F3 Spectator Script
-	class f_Spectator
-	{
-		onPlayerRespawn = "f_fnc_CamInit";
-	};
-  	//Overwrite Vanilla Seagull
-    class Seagull
-    {
-        onPlayerRespawn = "";
-    };
-	// F3 JIP Menu
-	class f_JIP
-	{
-		onPlayerRespawn = "f\JIP\f_JIP_playerRespawn.sqf";
-	};
-};
 
 // ============================================================================================
 
 // F3 - Menu components
 // DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
 
-// Menu components for the JIP Menu
-#include "f\JIP\f_JIP_kitpicker.h"
-#include "f\JIP\f_JIP_grppicker.h"
 
-// Menu components for the Spectator Script
-#include "f\spect\config.hpp"
 
 // ============================================================================================
 
