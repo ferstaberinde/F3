@@ -9,8 +9,15 @@ overviewPicture = "overviewLogo.jpg";
 
 
 // ============================================================================================
-
-
+ReviveMode = 1;
+ReviveUnconsciousStateMode = 1;
+ReviveRequiredTrait = 0;
+ReviveRequiredItems = 2;
+ReviveRequiredItemsFakConsumed = 1;
+ReviveMedicSpeedMultiplier = 2;
+reviveDelay = 6;
+reviveForceRespawnDelay = 99999;
+reviveBleedOutDelay = 240;
 // F3 - Start of Notifications block.
 
 class cfgNotifications
