@@ -9,6 +9,22 @@ overviewPicture = "overviewLogo.jpg";
 
 
 // ============================================================================================
+
+// F3 - Respawn Settings
+
+
+respawn = 1;
+respawndelay = 3;
+respawnOnStart = 0;
+respawnTemplates[] = {"Seagull"};
+
+// ============================================================================================
+
+// F3 - Revive Settings
+/*
+https://community.bistudio.com/wiki/Arma_3_Revive
+https://community.bistudio.com/wiki/Description.ext#ReviveMode
+*/
 ReviveMode = 1;
 ReviveUnconsciousStateMode = 1;
 ReviveRequiredTrait = 0;
@@ -289,10 +305,18 @@ class CfgDebriefing
 
 // ============================================================================================
 
-// F3 - Menu components
+// F3 - Respawn templates
 // DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
 
 
+// ============================================================================================
+class CfgRespawnTemplates
+{
+    class Seagull
+    {
+		onPlayerRespawn = "f\spect\f_activate_spectator.sqf";
+    };
+};
 
 // ============================================================================================
 

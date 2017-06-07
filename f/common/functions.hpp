@@ -87,4 +87,12 @@ class F // Defines the "owner"
 		file = "f\safeStart";
 		class safety{};
 	};
+	class woundingsystem
+	{
+		file = "f\simplewoundingsystem";
+		class reviveEhDammaged {};
+		class addDragAction {};
+		class onDrag {};
+		class onDragServer {};
+	};
 };
