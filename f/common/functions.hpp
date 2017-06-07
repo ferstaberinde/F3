@@ -32,14 +32,6 @@ class F // Defines the "owner"
 		class SetWeather{};
 		class SetWind{};
 	};
-	class cache
-	{
-		file = "f\cache";
-		class cInit {};
-		class cTracker {};
-		class gCache {};
-		class gUncache {};
-	};
 	class groupMarkers {
 		file = "f\groupMarkers";
 		class localGroupMarker{};
@@ -90,51 +82,9 @@ class F // Defines the "owner"
 		class zeusAddAddons{};
 		class zeusAddObjects{};
 	};
-	class tfr
-	{
-		file = "f\radios\tfr";
-		class tfr_removeRadios{};
-		class tfr_addRadios{};
-		class tfr_setRadioFrequencies{};
-		class tfr_configureSpectatorChat{};
-	};
 	class safeStart
 	{
 		file = "f\safeStart";
 		class safety{};
-	};
-	class woundingsystem
-	{
-		file = "f\simplewoundingsystem";
-		class SetDowned {};
-		class WoundedEffect{};
-		class HasWounded{};
-		class EjectWounded{};
-		class OnDrag{};
-		class LifeTick {};
-		class OnDeath {};
-		class OnHeal {};
-		class OnDamage{};
-		class SetBleeding{};
-		class GetAnimation{};
-	};
-	class fspectator
-	{
-		file = "f\spect";
-		class CamInit{};
-		class OnUnload{};
-		class DrawTags{};
-		class EventHandler{};
-		class FreeCam{};
-		class GetPlayers{};
-		class ReloadModes{};
-		class UpdateValues{};
-		class HandleCamera{};
-		class ToggleGUI{};
-		class OnMapClick{};
-		class DrawMarkers{};
-		class ForceExit{};
-		class HandleMenu{};
-		class showMenu{};
 	};
 };
