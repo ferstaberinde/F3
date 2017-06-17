@@ -314,7 +314,7 @@ class CfgRespawnTemplates
 {
     class Seagull
     {
-		onPlayerRespawn = "f\spect\f_activate_spectator.sqf";
+		onPlayerRespawn = "f\spect\fn_activateSpectator.sqf";
     };
 };
 

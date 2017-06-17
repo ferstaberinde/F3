@@ -87,6 +87,11 @@ class F // Defines the "owner"
 		file = "f\safeStart";
 		class safety{};
 	};
+	class spect
+	{
+		file = "f\spect";
+		class activateSpectator{};
+	};
 	class woundingsystem
 	{
 		file = "f\medical";

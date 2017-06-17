@@ -7,6 +7,10 @@ if (_downInVeh && _originalOwner == clientOwner) then {
     F_UncCC ppEffectEnable false;
     _camera = player;
     selectPlayer (_this select 0);
+    [_camera] joinSilent grpNull;
     deleteVehicle _camera;
-    diag_log "remoteExecing back to client";
+    [] spawn {
+        sleep 0.5;
+        [] spawn f_fnc_activateSpectator;
+    }
 };
