@@ -1,5 +1,16 @@
 // F3 - SimpleWoundingSystem
+/*
+//\
+unit placement post drag
+post drag revive problems
+revive ragdoll drag
 
+test:
+dragger down
+dragger dead
+
+
+*/
 // ====================================================================================
 #include "\a3\functions_f_mp_mark\Revive\defines.inc"
 
@@ -10,7 +21,6 @@ _unit    setVariable ["f_wound_being_dragged", true, true];
 
 private _actionIdx = -1;
 
-//TODO wait until animation ANIM_WOUNDED??
 
 // the dragger gets a release option.
 if(local _dragger) then {
@@ -60,32 +70,7 @@ if (_actionIdx != -1) then { _dragger removeAction _actionIdx; };
 _dragger setVariable ["f_wound_dragging", nil, true];
 _unit    setVariable ["f_wound_being_dragged", false, true];
 detach _unit;
-_unit setPosATL getposATL _dragger;
-/*
-_unit    switchmove ""; //otherwise player might get stuck
+[_unit, _dragger] spawn {
+    (_this select 0) setPosATL ([(getposATL (_this select 1)), 1.2, direction (_this select 1)] call BIS_fnc_relPos);
+};
 _dragger switchmove ""; //otherwise player might get stuck
-*/
-/*
-//Animations:
-if( GET_STATE(_dragger) != STATE_INCAPACITATED && GET_STATE(_dragger) != STATE_DEAD) then {
-	_unit switchMove "AinjPpneMstpSnonWrflDb_release";
-};
-
-sleep 0.1;
-*/
-if( GET_STATE(_unit) == STATE_INCAPACITATED ) then {
-	//_unit switchMove ANIM_WOUNDED;
-	_unit switchMove ANIM_WOUNDED;
-} else {
-	//_unit switchMove "amovppnemstpsraswrfldnon";
-	//_unit switchmove "amovppnemstpsraswrfldnon"
-	_unit switchMove "";
-};
-/*
-if( GET_STATE(_dragger) == STATE_INCAPACITATED ) then {
-	_dragger switchMove ANIM_WOUNDED;
-} else {
-	//_dragger switchMove "";
-	_dragger switchMove "";
-};
-*/

@@ -40,7 +40,7 @@ what happens if a dragging unit gets downed?
 
 */
 params ["_unit"];
-
+diag_log "adding to local start";
 if (!hasInterface) exitWith {};
 
 
@@ -48,13 +48,19 @@ if (!hasInterface) exitWith {};
 //set our own event handler: (to allow special handling of vehicles, and to remove the force-respawn action)
 [] spawn {
 	waitUntil {sleep 1; (player getVariable ["bis_revive_ehDammaged", -1]) != -1};
+
+    diag_log "waitUntil done";
 	private _ehID = player getVariable ["bis_revive_ehDammaged", -1];
 	if (_ehID != -1) then {
+
+    diag_log "removing old";
 		player removeEventHandler ["Dammaged", _ehID];
 	};
-	player setVariable ["bis_revive_ehDammaged", player addEventHandler ["Dammaged", f_fnc_reviveEhDammaged]];
-};
 
+    diag_log "adding new";
+	player setVariable ["bis_revive_ehDammaged", player addEventHandler ["Dammaged", f_fnc_reviveEhDammaged]];
+    
+};
 //drag action:
-[_unit] remoteExec ["f_fnc_addDragAction", 0, _unit];
+[player] remoteExec ["f_fnc_addDragAction", 0, player];
 

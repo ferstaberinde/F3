@@ -16,7 +16,8 @@ private _drag_action_cond = str {
 	_target distance _this < 2 && {
 		isNil '_var' && {
 			GET_STATE(_target) == STATE_INCAPACITATED && {
-				!(_target getVariable ['f_wound_being_dragged',false])
+				(_target getVariable ['f_wound_draggable',false])
+			    && !(_target getVariable ['f_wound_being_dragged',false])
 			}
 		}
 	}

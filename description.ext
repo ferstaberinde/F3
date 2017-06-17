@@ -325,7 +325,7 @@ class CfgRespawnTemplates
 
 class CfgFunctions
 {
-	#include "f\common\functions.hpp"
+	#include "f\functions.hpp"
 
 	#include "ws_fnc\config.hpp"
 };
@@ -336,4 +336,17 @@ class CfgFunctions
 
 class CfgUnitInsignia {
 	#include "f\assignGear\insignia\define.hpp"
+};
+class CfgRemoteExec
+{        
+       // List of script functions allowed to be sent from client via remoteExec
+       class Functions
+       {
+               mode = 2;
+       };        
+       // List of script commands allowed to be sent from client via remoteExec
+       class Commands
+       {
+            mode = 2;
+        };
 };
