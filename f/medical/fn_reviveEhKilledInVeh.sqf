@@ -1,8 +1,12 @@
 _unit = _this select 0;
 _downInVeh = _unit getVariable ["#revDownInVeh", false];
+_originalOwner = _unit getVariable ["#revOwner", -1];
 
 diag_log format["down in veh %1", _downInVeh];
-if (_downInVeh) then {
+if (_downInVeh && _originalOwner == clientOwner) then {
+    F_UncCC ppEffectEnable false;
+    _camera = player;
+    selectPlayer (_this select 0);
+    deleteVehicle _camera;
     diag_log "remoteExecing back to client";
-    [_unit] remoteExec ["f_fnc_clientKilledEh", (_unit getVariable ["#revOwner", 2])]
 };

@@ -92,9 +92,8 @@ class F // Defines the "owner"
 		file = "f\medical";
 		class reviveEhDammaged {};
 		class reviveEhKilledInVeh {};
-		class addServerKilledEh {};
-		class clientKilledEh {};
 		class addDragAction {};
+		class reinhabitBody {};
 		class onDrag {};
 		class onDragServer {};
 		class HasWounded {};
