@@ -10,10 +10,10 @@ _unit setVariable ["#revDownInVeh", false, true];
 deleteVehicle _camera;
 [_unit ] spawn {
     _unit = _this select 0;
-    sleep 0.5;
+    sleep 0.05;
     moveOut _unit;
     diag_log format ["%1 ejecting", _unit];
-    sleep 0.5;
-    (_unit) setPosATL ([(getPosATL (_unit)), 1.2, direction (_unit)] call BIS_fnc_relPos);
+    sleep 0.2;
+    (_unit) setPosATL ([(getPosATL (_unit)), 0.6, direction (_unit)] call BIS_fnc_relPos);
     SET_STATE(_unit,STATE_INCAPACITATED);
 };
