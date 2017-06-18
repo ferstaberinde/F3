@@ -5,7 +5,8 @@
 _veh = _this select 0;
 _ret = false;
 {
-	if(IS_DISABLED(_x)) then
+
+	if(_x getVariable ["#revDownInVeh", false]) then
 	{
 		_ret = true;
 	};

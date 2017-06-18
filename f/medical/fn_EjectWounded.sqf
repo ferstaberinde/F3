@@ -6,8 +6,7 @@ diag_log format ["%1 is going", _this];
 _veh = _this select 0;
 
 {
-    diag_log format ["%1 is disabled %2", _x, IS_DISABLED(_x)];
-	if(IS_DISABLED(_x)) then
+	if(_x getVariable ["#revDownInVeh", false]) then
 	{
         _originalOwnerId = _x getVariable["#revOwner", 0];
         diag_log format ["telling %1 to reinhabit", _originalOwnerId];

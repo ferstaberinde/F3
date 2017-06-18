@@ -73,7 +73,6 @@ if (alive _unit && {_damage >= 1 && {REVIVE_ENABLED(_unit) && {_hitPoint == "Inc
         _unit setVariable ["#revDownInVeh", true, true];
         _unit setVariable ["#revOwner", owner _unit, true];
         [_unit, (owner _unit)] remoteExec ["f_fnc_addServerKilledEh", 2];
-        SET_STATE(_unit,STATE_INCAPACITATED);
         diag_log format ["setting incapped damage: %1",_this];
         diag_log format ["event handler %1",_unit getVariable ["f3_revive_ehKilled", -1]];
         _unit playMove ((getArray (configfile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "interpolateTo")) select 0);

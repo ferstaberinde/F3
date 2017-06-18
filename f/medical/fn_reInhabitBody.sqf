@@ -5,14 +5,15 @@ F_UncCC ppEffectEnable false;
 _unit = _this select 0;
 selectPlayer _unit;
 
-(_unit) setPosATL ([(getposATL (_unit)), 1.2, direction (_unit)] call BIS_fnc_relPos);
 [_camera] joinSilent grpNull;
+_unit setVariable ["#revDownInVeh", false, true];
 deleteVehicle _camera;
-sleep 0.05;
-SET_STATE(_unit,STATE_REVIVED);
-diag_log format ["%1 ejecting", _unit];
-sleep 0.05;
-unassignVehicle _unit;
-_unit action["eject",vehicle _unit];
-sleep 0.05;
-SET_STATE(_unit,STATE_INCAPACITATED);
+[_unit ] spawn {
+    _unit = _this select 0;
+    sleep 0.5;
+    moveOut _unit;
+    diag_log format ["%1 ejecting", _unit];
+    sleep 0.5;
+    (_unit) setPosATL ([(getPosATL (_unit)), 1.2, direction (_unit)] call BIS_fnc_relPos);
+    SET_STATE(_unit,STATE_INCAPACITATED);
+};
