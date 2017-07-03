@@ -32,7 +32,7 @@ if (alive _unit && {_damage >= 1 && {REVIVE_ENABLED(_unit) && {_hitPoint == "Inc
 
 		//tell others that we are draggable
 		[_unit ] spawn {
-		    _unit = _this select 0;
+		    params ["_unit"];
 		    waitUntil{ sleep 0.1; animationState _unit ==  "unconsciousrevivedefault"};
 		    _unit setVariable ["f_wound_draggable", true, true];
 		    waitUntil{ sleep 0.1; animationState _unit !=  "unconsciousrevivedefault"};
@@ -69,13 +69,10 @@ if (alive _unit && {_damage >= 1 && {REVIVE_ENABLED(_unit) && {_hitPoint == "Inc
             0.299, 0.587, 0.114, 0
         ];
         F_UncCC ppEffectCommit 1;
-        oldUnit = player;
         _unit setVariable ["#revDownInVeh", true, true];
         _unit setVariable ["#revOwner", owner _unit, true];
         [_unit, (owner _unit)] remoteExec ["f_fnc_addServerKilledEh", 2];
-        diag_log format ["setting incapped damage: %1",_this];
-        diag_log format ["event handler %1",_unit getVariable ["f3_revive_ehKilled", -1]];
-        _unit playMove ((getArray (configfile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "interpolateTo")) select 0);
+        _unit playMove ((getArray (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "interpolateTo")) select 0);
         [] spawn {
             sleep 1;
             if(alive player) then {
@@ -84,7 +81,7 @@ if (alive _unit && {_damage >= 1 && {REVIVE_ENABLED(_unit) && {_hitPoint == "Inc
                 player addMPEventHandler ["mpkilled", f_fnc_reviveEhKilledInVeh];
                 _camera = _group createUnit ["VirtualCurator_F", ASLToAGL eyePos player, [], 0, ""];
                 selectPlayer _camera;
-                [_unit] remoteExecCall ["f_fnc_addEject"];
+                [_unit] remoteExecCall ["f_fnc_addEject", 0, true];
                 _camera attachTo [(vehicle _unit), [0,0,0]];
             }else {
                 F_UncCC ppEffectEnable false;

@@ -27,15 +27,6 @@ if(local _dragger) then {
 	_this remoteExec ["f_fnc_onDragServer", 2];
 
 	_actionIdx = _dragger addAction [format["Release %1",name _unit],{(_this select 1) setVariable ["f_wound_dragging",nil,true];(_this select 1) removeAction (_this select 2);}, nil, 6, false, true, "", "true"];
-
-	//switch (currentWeapon _dragger) do {
-	//	case (primaryWeapon _dragger): {
-	//		_dragger playMoveNow "acinpknlmstpsraswrfldnon";
-	//	};
-	//	case (secondaryWeapon _dragger): {
-	//		_dragger playMoveNow "AcinPknlMstpSnonWnonDnon";
-	//	};
-	//};                  acinpknlmstpsraswrfldnon
 	_dragger playMoveNow "AcinPknlMstpSnonWnonDnon";
 };
 //_unit switchMove "AinjPpneMrunSnonWnonDb";
@@ -56,6 +47,7 @@ waitUntil {
 		isNil "_dragged_unit" //unit is released
 		|| !(_unit getVariable ["f_wound_being_dragged", false])
 		|| GET_STATE(_unit) != STATE_INCAPACITATED // unit isn't incapacitated anymore
+		|| GET_STATE(_dragger) == STATE_INCAPACITATED // dragger is incapacitated
 		|| IS_BEING_REVIVED(_unit) // someone else is reviving the unit
 		|| !alive _unit
 		|| !alive _dragger
@@ -71,6 +63,8 @@ _dragger setVariable ["f_wound_dragging", nil, true];
 _unit    setVariable ["f_wound_being_dragged", false, true];
 detach _unit;
 [_unit, _dragger] spawn {
-    (_this select 0) setPosATL ([(getposATL (_this select 1)), 1.2, direction (_this select 1)] call BIS_fnc_relPos);
+    params ["_unit", "_dragger"];'
+
+    _unit setPosATL (_unit getPos [1.2, direction _dragger]);
 };
 _dragger switchmove ""; //otherwise player might get stuck
