@@ -5,6 +5,7 @@ params ["_unit"];
 if (!hasInterface) exitWith {};
 waitUntil {sleep 0.1; !isNull player};
 if (_unit == player) exitWith {};
+if (_unit getVariable ["#revDragId", -1] != -1) exitWith {};
 
 
 //_target (object to which action is attached to)
@@ -25,7 +26,7 @@ private _drag_action_cond = str {
 //hacky method to remove the braces at the beginning and end, so that it's the format that addAction expects.
 _drag_action_cond = _drag_action_cond select [1, count _drag_action_cond - 2];
 
-_unit addAction [
+_resultId = _unit addAction [
 	format ["Drag %1", name _unit],
 
 	// _this variable (in the code below) is: [target, caller, ID, arguments]
@@ -37,3 +38,4 @@ _unit addAction [
 	"",
 	_drag_action_cond
 ];
+_unit setVariable ['#revDragId', _resultId];
