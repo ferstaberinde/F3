@@ -70,9 +70,12 @@ if (alive _unit && {_damage >= 1 && {REVIVE_ENABLED(_unit) && {_hitPoint == "Inc
         ];
         F_UncCC ppEffectCommit 1;
         _unit setVariable ["#revDownInVeh", true, true];
-        _unit setVariable ["#revOwner", owner _unit, true];
+        _unit setVariable ["#revOwner", clientOwner, true];
         [_unit, (owner _unit)] remoteExec ["f_fnc_addServerKilledEh", 2];
-        _unit playMove ((getArray (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "interpolateTo")) select 0);
+
+
+
+        _unit playMove ([_unit] call f_fnc_findDeadAnim);
         [] spawn {
             sleep 1;
             if(alive player) then {

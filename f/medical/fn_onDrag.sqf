@@ -21,6 +21,7 @@ _unit    setVariable ["f_wound_being_dragged", true, true];
 
 private _actionIdx = -1;
 
+diag_log local _dragger;
 
 // the dragger gets a release option.
 if(local _dragger) then {
@@ -40,6 +41,16 @@ if(local _unit) then
 };
 
 // Wait until the unit is released, dead, downed, or revived)
+diag_log "starting drag";
+diag_log isNil "_dragged_unit";
+diag_log !(_unit getVariable ["f_wound_being_dragged", false]);
+diag_log GET_STATE(_unit) != STATE_INCAPACITATED;
+diag_log GET_STATE(_dragger) == STATE_INCAPACITATED;
+diag_log IS_BEING_REVIVED(_unit);
+diag_log !alive _unit;
+diag_log !alive _dragger;
+diag_log !(isPlayer _dragger);
+diag_log !(isPlayer _unit);
 waitUntil {
 	sleep 0.1;
 	_dragged_unit =  _dragger getVariable ["f_wound_dragging",nil];

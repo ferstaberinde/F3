@@ -96,6 +96,7 @@ class F // Defines the "owner"
 	{
 		file = "f\medical";
 		class reviveEhDammaged {};
+		class findDeadAnim {};
 		class reviveEhKilledInVeh {};
 		class addDragAction {};
 		class reinhabitBody {};

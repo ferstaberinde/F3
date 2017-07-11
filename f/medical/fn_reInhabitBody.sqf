@@ -15,4 +15,9 @@ deleteVehicle _camera;
     sleep 0.2;
     (_unit) setPosATL (_unit getPos [0.6, direction _unit]);
     SET_STATE(_unit,STATE_INCAPACITATED);
+    //tell others we are draggable
+    waitUntil{ sleep 0.1; animationState _unit ==  "unconsciousrevivedefault"};
+    _unit setVariable ["f_wound_draggable", true, true];
+    waitUntil{ sleep 0.1; animationState _unit !=  "unconsciousrevivedefault"};
+    _unit setVariable ["f_wound_draggable", false, true];
 };
