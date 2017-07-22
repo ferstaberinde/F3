@@ -88,7 +88,7 @@
       </Key>
       <Key ID="STR_f_param_weather">
         <English> Weather </English>
-        <French> Météo </English>
+        <French> Météo </French>
       </Key>
       <Key ID="STR_f_param_weather_Option0">
         <English> Clear</English>
