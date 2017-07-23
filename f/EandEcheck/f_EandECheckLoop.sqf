@@ -144,7 +144,7 @@ if (_safe > 0) then {
 	};
 
 	if (typeName _end == typeName {}) exitWith {
-		[_end,"bis_fnc_spawn",true] call BIS_fnc_MP;
+		_end remoteExec ["bis_fnc_spawn",0];
 	};
 };
 

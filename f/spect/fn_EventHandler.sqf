@@ -233,7 +233,7 @@ case "KeyDown":
                 ["F_ScreenSetup",false] call BIS_fnc_blackOut;
                 if(isNull (getAssignedCuratorLogic player)) then
                 {
-                    [[player,true,playableUnits],'f_fnc_zeusInit',false] spawn BIS_fnc_MP;
+                    [player,true,playableUnits] remoteExec ['f_fnc_zeusInit', 2];
                 };
                 [] spawn {
                     waitUntil {!isNull (getAssignedCuratorLogic player)};
@@ -516,4 +516,3 @@ case "KeyUp":
 };
 _handled
 };
-

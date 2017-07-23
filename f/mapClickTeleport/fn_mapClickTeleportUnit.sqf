@@ -47,7 +47,7 @@ if (vehicle player != player && f_var_mapClickTeleport_Height == 0) then {
 if (f_var_mapClickTeleport_GroupTeleport) then {
 	sleep 0.1;
 	{
-		[[_x,f_var_mapClickTeleport_telePos],"f_fnc_mapClickTeleportGroup",_x] spawn BIS_fnc_MP;
+		[_x,f_var_mapClickTeleport_telePos] remoteExec ["f_fnc_mapClickTeleportGroup", _x];
 	} forEach ((units group player) - [player]);
 };
 

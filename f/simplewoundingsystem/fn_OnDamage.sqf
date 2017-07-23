@@ -15,7 +15,7 @@ if((_selection != "head") &&  _selection != ""  && _selection != "hands" && _tot
 {
 	if(!(_unit getVariable ["f_wound_down",false])) then
 	{
-		 [[_unit,true], "f_fnc_SetDowned", true] spawn BIS_fnc_MP;
+		 [_unit,true] remoteExec ["f_fnc_SetDowned", 0];
 
 		_damage = 0;
 		_unit spawn {_this allowDammage false;sleep 1;_this allowDammage true};
@@ -27,4 +27,3 @@ if(isBleeding _unit && _unit getVariable ["f_wound_bleeding",false]) then
 	_unit setVariable ["f_wound_bleeding",true];
 };
 _damage
-
