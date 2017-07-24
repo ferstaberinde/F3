@@ -45,11 +45,11 @@ _groups = _groups - _hiddenGroups;
 		if (_x getVariable ["f_var_assignGear",""] == "m" && {_x != leader group _x}) then {
 			_orbatText = _orbatText + format["|- %1 [M]",name _x] + "<br />";
 		};
-		
+
 		if (_x getVariable ["f_var_assignGear",""] == "jtac" && {_x != leader group _x}) then {
 
 			// FAC is a specialised JTAC, so need some way to differentiate
-			if (["FAC", roleDescription _x, true] call BIS_fnc_inString) then {
+			if ((roleDescription _x) find "FAC" != -1) then {
 				_orbatText = _orbatText + format["|- %1 [FAC]",name _x] + "<br />";
 			} else {
 				_orbatText = _orbatText + format["|- %1 [JTAC]",name _x] + "<br />";
