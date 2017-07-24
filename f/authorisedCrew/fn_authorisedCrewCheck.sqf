@@ -50,8 +50,8 @@ if (_vehicleRole == "CARGO" && !_restrictcargo) exitWith {};
 _restrictedTypes = [];
 _restrictedUnits = [];
 {
-  if (typeName _x == typeName "") then {_restrictedTypes pushBack _x};
-  if (typeName _x == typeName objNull) then {_restrictedUnits pushBack _x};
+  if (_x isEqualType "") then {_restrictedTypes pushBack _x};
+  if (_x isEqualType objNull) then {_restrictedUnits pushBack _x};
 } forEach _restrictedList;
 
 // ====================================================================================
