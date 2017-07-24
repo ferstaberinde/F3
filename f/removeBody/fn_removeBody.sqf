@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_body","_wait","_group","_distance","_pos","_nearPlayers","_nearUnits","_check"];
+private ["_body","_wait","_group","_distance","_pos","_nearPlayers","_nearUnits","_check","_loop"];
 
 // ====================================================================================
 
@@ -53,6 +53,3 @@ deleteVehicle _body;
 sleep 30;
 _check = count (units (_group));
 if (_check == 0) then {deleteGroup _group};
-
-
-

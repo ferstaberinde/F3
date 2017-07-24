@@ -76,7 +76,7 @@ _units = if (count _this > 0) then [{_this},{allUnits}];
 
 {
 
-private ["_skill","_skillarray"];
+private ["_skill","_skillarray","_skilllevel"];
 _skill = 0;
 _skillArray = [];
 

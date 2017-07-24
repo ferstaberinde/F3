@@ -3,7 +3,7 @@
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
-private ["_range","_groups","_debug"];
+private ["_range","_groups","_debug", "_exclude", "_cached"];
 
 _range = _this select 0;
 _groups = allGroups;

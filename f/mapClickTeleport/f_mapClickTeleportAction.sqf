@@ -51,7 +51,7 @@ if (f_var_mapClickTeleport_GroupTeleport && player != leader group player)  exit
 // Setup the localized strings for the various stages of the component
 // Depending on the setting of the height variable the strings either use the teleport or the HALO option.
 
-_string = if (f_var_mapClickTeleport_Height == 0) then {"Teleport"} else {"HALO"};
+private _string = if (f_var_mapClickTeleport_Height == 0) then {"Teleport"} else {"HALO"};
 
 f_var_mapClickTeleport_textAction = localize format ["STR_f_mapClick%1Action",_string];
 f_var_mapClickTeleport_textDone = localize format ["STR_f_mapClick%1Done",_string];

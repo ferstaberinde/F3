@@ -27,7 +27,7 @@ if (!alive _u) exitWith {};
 // Define the color of the nametag
 _color = F_COLOR_NAMETAGS; // Default color
 if (_suffix != "") then {_color = F_COLOR2_NAMETAGS};			// Mounted units
-if(_x in units player) then { _color = f_groupColor_Nametags }; // Units of same group
+if(_u in units player) then { _color = f_groupColor_Nametags }; // Units of same group
 
 // Check which tags to show
 _showgroup = if (!isNil "F_SHOWGROUP_NAMETAGS") then [{F_SHOWGROUP_NAMETAGS},{false}];
@@ -40,13 +40,13 @@ if (_showgroup && group _u != group player) then {_str = format ["%1 ",groupID (
 // Show distance for units in over 3m distance only
 if (_showdis && {_pos distance player >= 3}) then {
 	_str = _str + format [" - %1m",round (_pos distance player)];
-	//drawIcon3D ["", _color, [_pos select 0,_pos select 1,(getPosATL _x select 2) - _height], 0, 0, 0, _str, F_SHADOW_NAMETAGS,(F_SIZE_NAMETAGS - 0.005), F_FONT_NAMETAGS];
+	//drawIcon3D ["", _color, [_pos select 0,_pos select 1,(getPosATL _u select 2) - _height], 0, 0, 0, _str, F_SHADOW_NAMETAGS,(F_SIZE_NAMETAGS - 0.005), F_FONT_NAMETAGS];
 };
 
-drawIcon3D ["", _color, [_pos select 0,_pos select 1,(getPosATL _x select 2) + _height], 0, 0, 0, _str, F_SHADOW_NAMETAGS,F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
+drawIcon3D ["", _color, [_pos select 0,_pos select 1,(getPosATL _u select 2) + _height], 0, 0, 0, _str, F_SHADOW_NAMETAGS,F_SIZE_NAMETAGS, F_FONT_NAMETAGS];
 
 // Show vehicle type only for vehicles the player is not crewing himself
 if (_showveh && {!(typeOf (vehicle _u) isKindof "Man") && vehicle _u != vehicle player && ((_u == driver vehicle _u) || (_u == gunner vehicle _u))}) then {
   _str = format ["%1",getText (configFile >> "CfgVehicles" >> (typeOf vehicle _u) >> "displayname")];
-  drawIcon3D ["", _color, [_pos select 0,_pos select 1,(getPosATL _x select 2) + _height - 0.2], 0, 0, 0, _str,F_SHADOW_NAMETAGS,F_SIZE_NAMETAGS,F_FONT_NAMETAGS];
+  drawIcon3D ["", _color, [_pos select 0,_pos select 1,(getPosATL _u select 2) + _height - 0.2], 0, 0, 0, _str,F_SHADOW_NAMETAGS,F_SIZE_NAMETAGS,F_FONT_NAMETAGS];
 };

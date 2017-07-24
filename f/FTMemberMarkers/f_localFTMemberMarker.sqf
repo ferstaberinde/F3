@@ -4,7 +4,7 @@
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_unit","_mkrType","_mkrColor","_mkrName","_mkr","_mkrBorder","_pos"];
+private ["_unit","_mkrName","_mkr","_mkrBorder","_pos","_mkrborderName","_dir"];
 
 // ====================================================================================
 
@@ -67,4 +67,3 @@ while{alive _unit && (_unit in f_var_HandlerGroup)} do
 //He's dead Jim, let's clear up obsolete markers
 deleteMarkerLocal _mkrBorder;
 deleteMarkerLocal _mkr;
-

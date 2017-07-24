@@ -11,7 +11,7 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_objects","_obj","_safeDistance","_alive","_safe","_end","_pos","_playersonly"];
+private ["_objects","_obj","_safeDistance","_alive","_safe","_end","_pos","_playersonly","_units","_temp"];
 
 // ====================================================================================
 

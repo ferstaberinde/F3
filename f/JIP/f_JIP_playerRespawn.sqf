@@ -17,7 +17,7 @@ if (!isDedicated && (isNull player)) then
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_unit","_corpse"];
+private ["_unit","_corpse", "_loadout"];
 
 // ====================================================================================
 

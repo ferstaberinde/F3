@@ -8,7 +8,7 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_timeOfDay","_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time"];
+private ["_timeOfDay","_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time","_result","_date"];
 
 // ====================================================================================
 

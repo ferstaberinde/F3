@@ -6,11 +6,11 @@ if (!hasInterface) exitWith {}; //Exit if not a player.
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_text","_stuff","_weps","_items","_fnc_wepMags","_wepMags","_magArr","_s","_mags","_bp","_maxload"];
+private ["_text","_weps","_items","_fnc_wepMags","_mags","_bp","_maxload","_attachments","_wepItems"];
 
 // Local function to set the proper magazine count.
 _fnc_wepMags = {
-		private ["_w","_magarr"];
+		private ["_w","_magarr","_wepMags","_magArr","_s"];
 		_w = _this select 0;
 
 		//Get possible magazines for weapon
@@ -52,7 +52,6 @@ _fnc_wepMags = {
 
 _text = "<br />NOTE: The loadout shown below is only accurate at mission start.<br />
 <br />";
-_stuff = [];
 
 // All weapons minus the field glasses
 _weps = weapons player - ["Rangefinder","Binocular","Laserdesignator"];

@@ -11,7 +11,7 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES
 
-private ["_unit","_addons","_objects","_curator","_createModule"];
+private ["_unit","_addons","_objects","_curator","_createModule","_announce"];
 
 // ====================================================================================
 
