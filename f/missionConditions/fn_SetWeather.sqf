@@ -18,7 +18,7 @@ params [["_weather",9,[0]],["_setFog",true,[true,0]],["_setWind",true,[true]],["
 if ( _weather == 9 ) exitWith {};
 
 // Support for legacy transition call
-if (typeName _setFog == typeName 0) then {
+if (_setFog isEqualType 0) then {
 	_transition = _setFog;
 	_setFog = true;
 };
