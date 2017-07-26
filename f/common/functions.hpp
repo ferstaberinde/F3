@@ -137,4 +137,9 @@ class F // Defines the "owner"
 		class HandleMenu{};
 		class showMenu{};
 	};
+	class disableThermals
+	{
+		file = "f\disableThermals";
+		class disableThermals {};
+	};
 };

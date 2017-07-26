@@ -220,3 +220,8 @@ f_var_civAI = independent; 		// Optional: The civilian AI will use this side's s
 
 // INDEPENDENT > AAF
 // [INDEPENDENT,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
+
+// F3 - Disable Thermals
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+[] spawn f_fnc_disableThermals;
+// [[UnitName1, "UnitClass1"]] spawn f_fnc_disableThermals;
