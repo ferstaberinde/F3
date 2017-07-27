@@ -33,7 +33,7 @@ while{_unit == (leader _grp) && alive _unit} do
 				if (f_param_debugMode == 1) then {player sidechat format["%1 ---- %2 by %3",(_x getvariable ["assignedTeam","ColorWhite"])	,_colorTeam,_unit];};
 
 				// sends a call to each unit in the group to use the local with the [x_colorTeam] as args.
-				[[_x,_colorTeam] , "f_fnc_SetTeamValue", _grp, false] spawn BIS_fnc_MP;
+				[_x,_colorTeam] remoteExec ["f_fnc_SetTeamValue", _grp];
 			};
 		};
 
@@ -47,5 +47,5 @@ if(!isnil "_grp") then
 	// get the new leader
 	_x = leader _grp;
 	// tell him to start running the sync.
-	[[_grp,_x] , "f_fnc_LocalFTMarkerSync",_x, false] spawn BIS_fnc_MP;
+	[_grp,_x] remoteExec ["f_fnc_LocalFTMarkerSync", _x];
 };

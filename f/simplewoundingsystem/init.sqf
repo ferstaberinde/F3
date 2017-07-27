@@ -57,7 +57,7 @@ _unit spawn f_fnc_LifeTick;
 	_x setVariable ["f_wound_bleeding",false];
 	_x addEventHandler ["HandleHeal",{_this call f_fnc_OnHeal}];
 		// Drag Action.
-	_addIndex = _x addAction [format ["Drag %1", name _x],{[_this, "f_fnc_OnDrag", [_this select 0,_this select 1],false] spawn BIS_fnc_MP;}, nil, 6, false, true, "", "_var = _this getVariable ['f_wound_dragging',nil];_target distance _this < 2 && isNil '_var' && _target getVariable['f_wound_down',false] && !(_this getVariable ['f_wound_down',false])"];
+	_addIndex = _x addAction [format ["Drag %1", name _x],{_this remoteExec ["f_fnc_OnDrag", [_this select 0,_this select 1]]}, nil, 6, false, true, "", "_var = _this getVariable ['f_wound_dragging',nil];_target distance _this < 2 && isNil '_var' && _target getVariable['f_wound_down',false] && !(_this getVariable ['f_wound_down',false])"];
 } foreach playableUnits;
 
 // defines the PP effects for the downed effect.
@@ -70,4 +70,3 @@ f_damage_effect = 1.1;
 // Eventhandlers for the player.
 _unit addEventHandler ["killed", {_this call f_fnc_OnDeath}];
 _unit addEventHandler ["HandleDamage",{_this call f_fnc_OnDamage}];
-

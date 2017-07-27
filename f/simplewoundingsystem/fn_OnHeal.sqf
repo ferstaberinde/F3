@@ -13,13 +13,13 @@ _ret = true;
 	// if unit is bleeding, stop bleeding
 	if(_unit getVariable ["f_wound_bleeding",false]) then
 	{
-		[[_unit,false], "f_fnc_SetBleeding", true] spawn BIS_fnc_MP;
+		[_unit,false] remoteExec ["f_fnc_SetBleeding", 0];
 	};
 
 	// if unit is down , revive him.
 	if(_unit getVariable ["f_wound_down",false] ) then
 	{
-		[[_unit,false], "f_fnc_SetDowned", true] spawn BIS_fnc_MP;
+		[_unit,false] remoteExec ["f_fnc_SetDowned", 0];
 	};
 };
 _ret

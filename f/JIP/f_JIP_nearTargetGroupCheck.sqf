@@ -48,7 +48,7 @@ sleep 3;
 		["JIP",[format ["You have joined %1",_grp]]] call BIS_fnc_showNotification;
 
 		_unit = player;
-		[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",units (_this select 3) - [_unit]] spawn BIS_fnc_MP;
+		["JIP",[format ["%1 has joined your group.",name _unit]]] remoteExec ["BIS_fnc_showNotification", units (_this select 3) - [_unit]];
 
 		sleep 1;
 	};

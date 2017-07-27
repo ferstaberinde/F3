@@ -26,7 +26,7 @@ _code = format ["%1 [%2,%3]",_text,str _string,str _type];
 
 ws_fnc_showText = compile _code;
 
-[[],"ws_fnc_showText",true] spawn BIS_fnc_MP;
+[] remoteExec ["ws_fnc_showText", 0];
 
 _code = "";
 ws_fnc_showText = compile _code;

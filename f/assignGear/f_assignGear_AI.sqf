@@ -106,14 +106,14 @@ _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVar
 
 					// If the unit's classname corresponds to a class in the assignment array, set it's gear accordingly
 					if (_known) exitWith {
-						[[_x select 1, _unit], "f_fnc_assignGear", _unit,false,true] call BIS_fnc_MP;
+						[_x select 1, _unit] remoteExecCall ["f_fnc_assignGear", _unit];
 					};
 				} forEach _unitClasses;
 
 				// If the class is not in the _unitClasses array
 				if (!_known) then {
 					if (_defaultclass != "") then {
-						[[_defaultclass, _unit], "f_fnc_assignGear", _unit,false,true] call BIS_fnc_MP;
+						[_defaultclass, _unit] remoteExecCall ["f_fnc_assignGear", _unit];
 					};
 				};
 

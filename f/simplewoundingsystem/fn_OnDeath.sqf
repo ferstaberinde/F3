@@ -5,5 +5,5 @@
 _unit = _this select 0;
 if(_unit getVariable ["f_wound_down",false]) then
 {
-	[[_unit,false], "f_fnc_SetDowned", true] spawn BIS_fnc_MP;
+	[_unit,false] remoteExec ["f_fnc_SetDowned", 0];
 };

@@ -74,7 +74,7 @@ if({!isNil _x} count ["f_param_AISkill_BLUFOR","f_param_AISkill_INDP","f_param_A
 // If announce is set to true, the new curator will be announced to all players
 if (_announce) then {
 	_curator setVariable ["owner",format["%1",_unit],true];
-	[["Alert",[format ["%1 has become curator!",name _unit]]],"BIS_fnc_showNotification",true] call BIS_fnc_MP;
+	["Alert",[format ["%1 has become curator!",name _unit]]] remoteExec ["BIS_fnc_showNotification", 0];
 };
 
 // ====================================================================================

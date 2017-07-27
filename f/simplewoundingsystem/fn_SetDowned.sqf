@@ -36,7 +36,7 @@ if(_bool && alive _unit) then
 	// if _unit is not in a vehicle, play this animation otherwise fetch the dead animations from the vehicles.
 	if(vehicle _unit != _unit) then
 	{
-		(vehicle _unit) addAction  ["Pull out wounded", {[_this, "f_fnc_EjectWounded", true] spawn BIS_fnc_MP;}, nil, 5, false, true, "", "_target distance _this < 5 && [_target] call f_fnc_HasWounded"];
+		(vehicle _unit) addAction  ["Pull out wounded", {_this remoteExec ["f_fnc_EjectWounded", 0];}, nil, 5, false, true, "", "_target distance _this < 5 && [_target] call f_fnc_HasWounded"];
 	};
 }
 else

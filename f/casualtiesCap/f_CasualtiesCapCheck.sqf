@@ -157,7 +157,7 @@ if (typeName _end == typeName 0) exitWith {
 };
 
 if (typeName _end == typeName {}) exitWith {
-	[_end,"bis_fnc_spawn",true] call BIS_fnc_MP;
+	_end remoteExec ["bis_fnc_spawn", 0];
 };
 
 player GlobalChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];
