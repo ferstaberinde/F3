@@ -47,8 +47,8 @@ F_KEYNAME_NAMETAGS = actionKeysNames F_KEY_NAMETAGS;
 if (isNil "F_ACTIONKEY_NAMETAGS") then {F_ACTIONKEY_NAMETAGS = 20; F_KEYNAME_NAMETAGS = 'U';}; // If the user has not bound 'TeamSwitch' to a key we default to 'U' to toggle the tags
 
 F_KEYUP_NAMETAG = {
-	_key = _this select 1;
-	_handeld = false;
+	private _key = _this select 1;
+	private _handeld = false;
 	if(_key == F_ACTIONKEY_NAMETAGS) then
 	{
 		_handeld = true;
@@ -57,8 +57,8 @@ F_KEYUP_NAMETAG = {
 };
 
 F_KEYDOWN_NAMETAG = {
-	_key = _this select 1;
-	_handeld = false;
+	private _key = _this select 1;
+	private _handeld = false;
 	if(_key == F_ACTIONKEY_NAMETAGS) then
 	{
 		F_DRAW_NAMETAGS = !F_DRAW_NAMETAGS;
@@ -75,7 +75,7 @@ F_KEYDOWN_NAMETAG = {
 [] spawn {
 	waitUntil {scriptDone f_script_briefing};
 
-	_bstr = format ["<font size='18'>F3 NAME TAGS</font><br/>Toggle name tags for friendly units by pressing %1.<br/><br/>
+	private _bstr = format ["<font size='18'>F3 NAME TAGS</font><br/>Toggle name tags for friendly units by pressing %1.<br/><br/>
 Name tags are displayed when aiming at individual units up to %4m away, and constantly for all units within %3m.
         ",F_KEYNAME_NAMETAGS, F_KEY_NAMETAGS,F_DISTALL_NAMETAGS,F_DISTCursor_NAMETAGS];
 
@@ -134,7 +134,7 @@ addMissionEventHandler ["Draw3D", {
 	if(F_DRAW_NAMETAGS) then
 	{
 
-	private ["_ents","_veh","_color","_inc","_suffix","_pos","_angle"];
+	private ["_ents","_veh","_color","_inc","_suffix","_pos","_angle","_maxSlots","_freeSlots"];
 
 	_ents = [];
 
@@ -176,7 +176,6 @@ addMissionEventHandler ["Draw3D", {
 
 					_veh = _x;
 					_inc = 1;
-					_alternate = 0;
 
 					{
 						// Get the various crew slots
@@ -237,4 +236,3 @@ addMissionEventHandler ["Draw3D", {
 	}; // Outmost if scope
 
 }]; // End of the Eventhandler Scope
-

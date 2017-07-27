@@ -15,6 +15,12 @@ waitUntil {time > (_this select 0)};
 
 // ====================================================================================
 
+// DECLARE PRIVATE VARIABLES
+
+private ["_range", "_str1", "_str2", "_str3", "_str4", "_str5"];
+
+// ====================================================================================
+
 // Player and the headless client's (if present) groups are always excluded from being cached
 if (!isDedicated && !(group player getVariable ["f_cacheExcl", false])) then {
         (group player) setVariable ["f_cacheExcl", true, true];

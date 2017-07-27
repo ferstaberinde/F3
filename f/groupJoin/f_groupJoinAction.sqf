@@ -18,7 +18,7 @@ if (!isDedicated && (isNull player)) then
 
 // ====================================================================================
 
-private ["_nearUnit", "_nearGroup", "_actionDistance", "_allowDifferentSide"];
+private ["_nearUnit", "_nearGroup", "_actionDistance", "_allowDifferentSide", "_actionString", "_unit", "_grp"];
 
 // How many meters player needs to be from another group's leader for the join action to be shown
 _actionDistance = 2.5;

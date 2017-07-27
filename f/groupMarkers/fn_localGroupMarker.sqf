@@ -36,8 +36,8 @@ if (isnil "_grp") exitWith {};
 // CREATE MARKER
 // Depending on the value of _mkrType a different type of marker is created.
 
-_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
-_mkr setMarkerShapeLocal "ICON";
+_mkrName = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+_mkrName setMarkerShapeLocal "ICON";
 _mkrName setMarkerTypeLocal  _mkrType;
 _mkrName setMarkerColorLocal _mkrColor;
 _mkrName setMarkerSizeLocal [0.8, 0.8];
@@ -58,5 +58,3 @@ while {{!isNull _x} count units _grp > 0} do
 
 
 // ====================================================================================
-
-

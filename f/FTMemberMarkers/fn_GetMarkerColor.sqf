@@ -9,7 +9,7 @@
 // 		["MAIN"] call f_fnc_GetMarkerColor;
 //
 // ====================================================================================
-_color = "ColorWhite";
+private _color = "ColorWhite";
 switch ((_this select 0)) do
 {
   case "MAIN": {_color = "ColorWhite"};

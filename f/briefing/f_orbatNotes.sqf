@@ -8,7 +8,7 @@ if (!hasInterface) exitWith {}; //Exit if not a player.
 // waitUntil {scriptDone f_script_setGroupIDs};
 
 // Define needed variables
-private ["_orbatText", "_groups", "_precompileGroups","_maxSlots","_freeSlots"];
+private ["_orbatText", "_groups", "_precompileGroups","_maxSlots","_freeSlots","_hiddenGroups","_color","_veharray","_vehName","_veh","_crewrole","_groupList"];
 _orbatText = "<br />NOTE: The ORBAT below is only accurate at mission start.<br />
 <br />
 <font size='18'>GROUP LEADERS + MEDICS</font><br /><br />";

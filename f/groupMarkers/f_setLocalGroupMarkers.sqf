@@ -4,7 +4,8 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_unitfaction"];
+private ["_unitfaction", "_hq", "_ft", "_sup", "_lau", "_mor", "_eng", "_ifv", "_tnk", "_rec", "_hel", "_pla", "_art", "_med", "_uav"];
+
 
 // ====================================================================================
 
