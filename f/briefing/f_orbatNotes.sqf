@@ -11,7 +11,7 @@ if (!hasInterface) exitWith {}; //Exit if not a player.
 private ["_orbatText", "_groups", "_precompileGroups","_maxSlots","_freeSlots","_hiddenGroups","_color","_veharray","_vehName","_veh","_crewrole","_groupList"];
 _orbatText = "<br />NOTE: The ORBAT below is only accurate at mission start.<br />
 <br />
-<font size='18'>GROUP LEADERS + MEDICS</font><br /><br />";
+<font size='18'>GROUP LEADERS + NOTABLE</font><br /><br />";
 _groups = [];
 _hiddenGroups = [];
 
@@ -44,6 +44,16 @@ _groups = _groups - _hiddenGroups;
 	{
 		if (_x getVariable ["f_var_assignGear",""] == "m" && {_x != leader group _x}) then {
 			_orbatText = _orbatText + format["|- %1 [M]",name _x] + "<br />";
+		};
+
+		if (_x getVariable ["f_var_assignGear",""] == "jtac" && {_x != leader group _x}) then {
+
+			// FAC is a specialised JTAC, so need some way to differentiate
+			if ((roleDescription _x) find "FAC" != -1) then {
+				_orbatText = _orbatText + format["|- %1 [FAC]",name _x] + "<br />";
+			} else {
+				_orbatText = _orbatText + format["|- %1 [JTAC]",name _x] + "<br />";
+			};
 		};
 	} forEach units _x;
 } forEach _groups;
