@@ -194,7 +194,7 @@ f_var_civAI = independent; 		// Optional: The civilian AI will use this side's s
 // F3 - Name Tags
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-[] execVM "f\nametag\f_nametags.sqf";
+[] execVM "f\nametag\f_nametagInit.sqf";
 
 // ====================================================================================
 
