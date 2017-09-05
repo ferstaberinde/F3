@@ -75,7 +75,7 @@ class F // Defines the "owner"
 	};
 	class nametag
 	{
-		file = "f\nametag";
+		file = "f\nametag\functions";
 		class nametagUpdate {};
 		class nametagDraw {};
 		class nametagGetData {};

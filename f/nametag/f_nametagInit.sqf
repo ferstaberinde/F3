@@ -18,7 +18,7 @@ if (!hasInterface) exitWith {};
 F_NT_NAMETAGS_ON = true; 
 
 //	Determine which mods are active.
-#include "f_nametagCheckMods.sqf";
+#include "include\f_nametagCheckMods.sqf";
 
 
 //------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ F_NT_NAMETAGS_ON = true;
 #include "f_nametagCONFIG.sqf"
 
 //	Allows for player (client) configuration of other settings.
-#include "f_nametagSettings.sqf"
+#include "include\f_nametagSettings.sqf"
 
 
 //------------------------------------------------------------------------------------
@@ -52,14 +52,14 @@ F_NT_CACHE_FADE = [[],[],[]];
 waitUntil {!isNull (findDisplay 46)};
 
 //	Setting up our disableKey (Default '+')
-#include "f_nametagDisableKey.sqf"
+#include "include\f_nametagDisableKey.sqf"
 
 
 //------------------------------------------------------------------------------------
 //	Keep an updated cache of all tags to draw.
 //------------------------------------------------------------------------------------
 
-#include "f_nametagCacheLoop.sqf"
+#include "include\f_nametagCacheLoop.sqf"
 
 
 //------------------------------------------------------------------------------------
@@ -72,3 +72,9 @@ F_NT_EVENTHANDLER = addMissionEventHandler
 	if F_NT_NAMETAGS_ON then
 	{	call f_fnc_nametagUpdate	};
 }];
+
+//------------------------------------------------------------------------------------
+//	Add briefing with configurable options.
+//------------------------------------------------------------------------------------
+
+#include "include\f_nametagBrief.sqf"
