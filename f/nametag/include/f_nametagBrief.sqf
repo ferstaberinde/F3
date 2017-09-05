@@ -54,7 +54,9 @@
 		//<font color='#7FFFD4'>Fireteam</font><br/>
 		//<font color='#FF143C'>Vehicle Crew</font>";
 
-		//	Add brief to map screen.
-		player createDiaryRecord ["Diary", ["F3 Nametags (Options)",_bstr]];
+		
 	};
+	
+	//	Add brief to map screen.
+	player createDiaryRecord ["Diary", ["F3 Nametags (Options)",_bstr]];
 };
