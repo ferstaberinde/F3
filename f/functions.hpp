@@ -67,8 +67,13 @@ class F // Defines the "owner"
 	};
 	class nametag
 	{
-		file = "f\nametag";
-		class drawNameTag{};
+		file = "f\nametag\functions";
+		class nametagUpdate {};
+		class nametagDraw {};
+		class nametagGetData {};
+		class nametagCache {};
+		class nametagResetFont {};
+		class getZoom {};
 	};
 	class preMount
 	{

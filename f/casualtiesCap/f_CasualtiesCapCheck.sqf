@@ -18,7 +18,7 @@ sleep 0.1;
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_grps","_pc","_end","_started","_remaining","_grpstemp","_alive","_faction","_temp_grp","_temp_grp2","_type","_onlyPlayers","_grpsno","_counter"];
+private ["_grps","_pc","_end","_started","_remaining","_grpstemp","_alive","_faction","_temp_grp","_temp_grp2","_type","_onlyPlayers","_grpsno","_counter", "_grp", "_Tgrp"];
 
 // ====================================================================================
 
@@ -157,7 +157,7 @@ if (typeName _end == typeName 0) exitWith {
 };
 
 if (typeName _end == typeName {}) exitWith {
-	[_end,"bis_fnc_spawn",true] call BIS_fnc_MP;
+	_end remoteExec ["bis_fnc_spawn", 0];
 };
 
 player GlobalChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];

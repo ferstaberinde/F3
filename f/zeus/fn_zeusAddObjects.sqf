@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES
 
-private ["_curator","_mode","_objects","_getGlobalVars"];
+private ["_curator","_mode","_objects","_getGlobalVars","_groupleaders","_leaders"];
 
 // ====================================================================================
 

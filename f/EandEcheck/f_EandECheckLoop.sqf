@@ -11,7 +11,7 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_objects","_obj","_safeDistance","_alive","_safe","_end","_pos","_playersonly"];
+private ["_objects","_obj","_safeDistance","_alive","_safe","_end","_pos","_playersonly","_units","_temp"];
 
 // ====================================================================================
 
@@ -144,7 +144,7 @@ if (_safe > 0) then {
 	};
 
 	if (typeName _end == typeName {}) exitWith {
-		[_end,"bis_fnc_spawn",true] call BIS_fnc_MP;
+		_end remoteExec ["bis_fnc_spawn",0];
 	};
 };
 

@@ -9,17 +9,18 @@ if (!isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_objects","_crew","_vehs","_grps","_units"];
+private ["_objects","_crew","_vehs","_grps","_units","_grp","_fill"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using the arguments passed to the script, we first define some local variables.
 
-_vehs = _this select 0;												// Array of vehicles    (objects)
-_grps = _this select 1;												// Array of group names (as strings)
-_crew = if (count _this > 2) then {_this select 2} else {true};		// Mount into crew positions? (optional - default:true)
-_fill = if (count _this > 3) then {_this select 3} else {false};	// Ignore fireteam cohesion in favor of filling vehicles? (optional - default:false)
+params ["_vehs", "_grps", ["_crew", true], ["_fill", false]];
+//_vehs: Array of vehicles    (objects)
+//_grps: Array of group names (as strings)
+//_crew: Mount into crew positions? (optional - default:true)
+//_fill: Ignore fireteam cohesion in favor of filling vehicles? (optional - default:false)
 
 // ====================================================================================
 
@@ -83,9 +84,8 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 // We loop through all vehicles and assign crew & cargo accordingly
 
 {
-	private ["_veh","_grpsT","_emptyPositions"];
+	private ["_veh","_grpsT","_emptyPositions","_vehicleRoles"];
 	_veh = _x;
-	_crew = if (count _this > 2) then {_this select 2} else {true};
 
 	// Calculate the number of spare seats
 	_emptyPositions = [typeOf _veh,true] call BIS_fnc_crewCount; // Count all available slots(this includes co-pilot, commander, main-gunner etc.)
@@ -98,7 +98,7 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 
 	while {_emptyPositions > 0 && count _grpsT > 0 && locked _veh != 2} do {
 
-		private ["_grp","_units","_run"];
+		private ["_grp","_units","_run","_unit","_slot","_path"];
 
 		_grp = _grpsT select 0;
 		_units = units _grp;
@@ -113,21 +113,21 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 			_grpsT = _grpsT - [_grp];
 		};
 
-	   	if (_run) then {
+		if (_run) then {
 
-	   		// Loop through all vehicle roles and place the units in them accordingly
-		   	{
-			   	_unit = _units select 0;
-			   	_slot = _x select 0;
-			   	_path = _x select 1;
+			// Loop through all vehicle roles and place the units in them accordingly
+			{
+				_unit = _units select 0;
+				_slot = _x select 0;
+				_path = _x select 1;
 
-			   	// If the slot is not a cargo slot and crew should be slotted
+				// If the slot is not a cargo slot and crew should be slotted
 				if (_crew && {_slot != "CARGO" && isNull assignedVehicle _unit}) then{
 					if (_slot == "Driver" && (_veh emptyPositions "Driver") > 0 && !(lockedDriver _veh)) exitWith {_unit assignAsDriver _veh;_unit moveInDriver _veh;};
 					if (_slot == "Turret" && !(_veh lockedTurret _path) && isNull (_veh TurretUnit _path)) exitWith {_unit assignAsTurret [_veh,_path];_unit moveInTurret [_veh,_path];};
 				};
 
-			   	if (_slot == "CARGO" && isNull assignedVehicle _unit && !(_veh lockedCargo (_path select 0))) then {
+				if (_slot == "CARGO" && isNull assignedVehicle _unit && !(_veh lockedCargo (_path select 0))) then {
 					_unit assignAsCargo _veh; _unit moveInCargo _veh;
 				};
 
@@ -139,10 +139,10 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 				// If no units are left, exit
 				if (count _units == 0) exitWith {};
 
-		    } forEach _vehicleRoles;
+			} forEach _vehicleRoles;
 
-		    // Remove the processed group from the temporary array
-		    _grpsT = _grpsT - [_grp];
+			// Remove the processed group from the temporary array
+			_grpsT = _grpsT - [_grp];
 		};
 
 		// Check if all units in the group have been assigned a vehicle, remove group from both group arrays

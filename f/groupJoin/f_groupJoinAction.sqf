@@ -18,7 +18,7 @@ if (!isDedicated && (isNull player)) then
 
 // ====================================================================================
 
-private ["_nearUnit", "_nearGroup", "_actionDistance", "_allowDifferentSide"];
+private ["_nearUnit", "_nearGroup", "_actionDistance", "_allowDifferentSide", "_actionString", "_unit", "_grp"];
 
 // How many meters player needs to be from another group's leader for the join action to be shown
 _actionDistance = 2.5;
@@ -54,11 +54,11 @@ while {true} do {
 				["JIP",[format ["You have joined %1 (%2).",name leader _grp,_grp]]] call BIS_fnc_showNotification;
 
 				{
-					if (isPlayer _x) then {[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",_x] call BIS_fnc_MP};
+					if (isPlayer _x) then {["JIP",[format ["%1 has joined your group.",name _unit]]] remoteExec ["BIS_fnc_showNotification", _x]};
 				} forEach (units _grp - [_unit]); // Done using a forEach loop to avoid message spam should the group leader be controlling AI
 
 				// Make sure the group leader is synchronized properly accross the network
-				[[_grp, leader _grp], "selectLeader", leader _grp, false] call BIS_fnc_mp;
+				[_grp, leader _grp] remoteExec ["selectLeader", leader _grp];
 
 				// Remove and reset the action after executing it
 				player removeAction f_groupJoinAction;

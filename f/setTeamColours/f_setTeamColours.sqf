@@ -49,7 +49,7 @@ if(!_isFireteam) exitWith {};
 // SET TEAM COLOURS
 {
 	_unit = _x;
-	_unitStr = str _x;
+	private _unitStr = str _x;
 
 	{
 		if ((_unitStr find _x) != -1) then {

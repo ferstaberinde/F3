@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_fromEH","_vehicle","_vehicleRole","_unitToCheck","_restrictedCrew","_warningMsg","_restrictcargo"];
+private ["_fromEH","_vehicle","_vehicleRole","_unitToCheck","_restrictedCrew","_warningMsg","_restrictcargo","_restrictedList","_restrictedTypes","_restrictedUnits"];
 
 // ====================================================================================
 
@@ -50,8 +50,8 @@ if (_vehicleRole == "CARGO" && !_restrictcargo) exitWith {};
 _restrictedTypes = [];
 _restrictedUnits = [];
 {
-  if (typeName _x == typeName "") then {_restrictedTypes set [count _restrictedListTypes,_x]};
-  if (typeName _x == typeName objNull) then {_restrictedUnits set [count _restrictedListTypes,_x]};
+  if (_x isEqualType "") then {_restrictedTypes pushBack _x};
+  if (_x isEqualType objNull) then {_restrictedUnits pushBack _x};
 } forEach _restrictedList;
 
 // ====================================================================================

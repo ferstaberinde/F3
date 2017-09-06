@@ -1,8 +1,8 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <!-- This document was created with Syntext Serna Free. -->
-<Project ID="Arma3">
-  <Package ID="Missions">
-    <Container ID="">
+<Project name="Arma3">
+  <Package name="Missions">
+    <Container name="">
       <Key ID="STR_f_param_debugMode">
         <English> Debug Mode </English>
         <Czech> Debug mód </Czech>
@@ -88,7 +88,7 @@
       </Key>
       <Key ID="STR_f_param_weather">
         <English> Weather </English>
-        <French> Météo </English>
+        <French> Météo </French>
       </Key>
       <Key ID="STR_f_param_weather_Option0">
         <English> Clear</English>

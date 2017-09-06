@@ -4,7 +4,7 @@
 
 // OPEN THE ARRAY CONTAING ALL GROUPS
 // Do not comment or delete this line!
-_groups = [
+private _groups = [
 
 // ====================================================================================
 

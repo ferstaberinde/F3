@@ -72,11 +72,10 @@ _units = if (count _this > 0) then [{_this},{allUnits}];
 
 // SET SKILL LEVELS FOR ALL AI
 // AI Skill for all AIs is set using side levels (see above).
-// By using the BI function BIS_fnc_MP we ensure that AI is set to the correct level for all connected clients, including the server
 
 {
 
-private ["_skill","_skillarray"];
+private ["_skill","_skillarray","_skilllevel"];
 _skill = 0;
 _skillArray = [];
 

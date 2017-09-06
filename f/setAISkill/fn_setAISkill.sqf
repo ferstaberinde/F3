@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES
 
-private ["_unit","_skill","_skillset","_skillarray"];
+private ["_unit","_skill","_skillset","_skillarray","_skilllevel"];
 
 // ====================================================================================
 
