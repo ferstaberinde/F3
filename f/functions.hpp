@@ -111,4 +111,9 @@ class F // Defines the "owner"
 		class EjectWounded {};
 		class addEject {};
 	};
+	class disableThermals
+	{
+		file = "f\disableThermals";
+		class disableThermals {};
+	};
 };
