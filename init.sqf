@@ -136,18 +136,18 @@ f_var_cachingAggressiveness = 2;
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_removeBodyDelay = 180;
-// f_var_removeBodyDistance = 500;
-// f_var_doNotRemoveBodies = [];
-// [] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
+f_var_removeBodyDelay = 180;
+f_var_removeBodyDistance = 500;
+f_var_doNotRemoveBodies = [];
+[] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
 
 // ====================================================================================
 
 // F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_civAI = independent; 		// Optional: The civilian AI will use this side's settings
-// [] execVM "f\setAISKill\f_setAISkill.sqf";
+f_var_civAI = independent; 		// Optional: The civilian AI will use this side's settings
+[] execVM "f\setAISKill\f_setAISkill.sqf";
 
 // ====================================================================================
 
@@ -194,7 +194,7 @@ f_var_cachingAggressiveness = 2;
 // F3 - Name Tags
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [] execVM "f\nametag\f_nametags.sqf";
+[] execVM "f\nametag\f_nametagInit.sqf";
 
 // ====================================================================================
 

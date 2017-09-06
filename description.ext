@@ -1,4 +1,13 @@
 // ============================================================================================
+// Loading Screen
+
+onLoadName = "*** Insert Mission Name Here. ***";
+onLoadMission = "Made with the F3 Mission Development Framework";
+author = "*** Insert Author Here. ***";
+loadScreen = "loadLogo.jpg";
+overviewPicture = "overviewLogo.jpg";
+
+// ============================================================================================
 
 // F3 - Respawn Settings
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
@@ -140,9 +149,9 @@ class Params
     class f_param_medical
     {
             title = "Medical System";
-            values[] = {0,1,2};
-            texts[] = {"Arma 3 Default","F3 Simple Wounding System","Authentic Gameplay Mod"};
-            default = 0;
+            values[] = {0,1};
+            texts[] = {"Arma 3 Default","F3 Simple Wounding System"};
+            default = 1;
     };
 
 // ============================================================================================
@@ -155,7 +164,7 @@ class Params
             title = "$STR_f_param_mission_timer";
             values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
             texts[] = {"$STR_f_param_mission_timer_off","1","2","3","4","5","6","7","8","9","10","15"};
-            default = 0;
+            default = 1;
     };
 
 // ============================================================================================
@@ -202,7 +211,6 @@ class Params
 // F3 - AI Skill Selector
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-/*
 	class f_param_AISkill_BLUFOR
 	{
 		title = "$STR_f_param_AISkill_BLUFOR";
@@ -210,9 +218,7 @@ class Params
 		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
 		default = 1;
 	};
-*/
 
-/*
 	class f_param_AISkill_OPFOR
 	{
 		title = "$STR_f_param_AISkill_OPFOR";
@@ -220,9 +226,7 @@ class Params
 		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
 		default = 1;
 	};
-*/
 
-/*
 	class f_param_AISkill_INDP
 	{
 		title = "$STR_f_param_AISkill_INDP";
@@ -230,7 +234,6 @@ class Params
 		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
 		default = 1;
 	};
-*/
 
 // ============================================================================================
 
@@ -364,6 +367,8 @@ class CfgRespawnTemplates
 class CfgFunctions
 {
 	#include "f\common\functions.hpp"
+
+	#include "ws_fnc\config.hpp"
 };
 
 // ============================================================================================

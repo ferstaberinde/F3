@@ -1,0 +1,4 @@
+class CfgFunctions
+{
+	#include "ws_fnc\config.hpp"
+};
