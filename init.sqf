@@ -194,7 +194,7 @@ f_var_cachingAggressiveness = 2;
 // F3 - Name Tags
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// [] execVM "f\nametag\f_nametags.sqf";
+// [] execVM "f\nametag\f_nametagInit.sqf";
 
 // ====================================================================================
 
