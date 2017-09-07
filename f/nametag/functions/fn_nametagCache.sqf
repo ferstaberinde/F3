@@ -26,7 +26,13 @@ if F_NT_NAMETAGS_ON then
 	F_NT_VAR_NIGHT = if F_NT_NIGHT then
 	{ linearConversion [0, 1, sunOrMoon, 0.25+0.5*(currentVisionMode _player),1,true]; } 
 	else { 1 };
-
+	
+	WH_NT_VAR_VEHICLETPP = 
+	if (!(isNull objectParent _player) && {(cameraView isEqualTo "EXTERNAL")})
+	then { true }
+	else { false };
+	
+	
 	//--------------------------------------------------------------------------------
 	//	If not set to only draw the cursor, collect nearEntities.
 	//--------------------------------------------------------------------------------
@@ -49,12 +55,9 @@ if F_NT_NAMETAGS_ON then
 		((F_NT_DRAWDISTANCE_NEAR+(F_NT_DRAWDISTANCE_NEAR*0.25)+1)*F_NT_VAR_NIGHT)]	
 		select 	
 		{
-			!(_x isEqualTo _player) &&
-			{(
-				(side group _x isEqualTo side group _player) 	// 0.0018ms
-				//((side _x getFriend side player) > 0.6) 		// 0.0024ms
-				//|| {(group _x isEqualTo group player)}
-			)} 
+			!(_x isEqualTo _player)
+			&& (side group _x isEqualTo side group _player)
+			&& {!WH_NT_VAR_VEHICLETPP || {(vehicle _x != vehicle _player)}}
 		};
 
 		//	Collect each filter entities' data.
