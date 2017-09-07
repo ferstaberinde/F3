@@ -27,7 +27,7 @@ if F_NT_NAMETAGS_ON then
 	{ linearConversion [0, 1, sunOrMoon, 0.25+0.5*(currentVisionMode _player),1,true]; } 
 	else { 1 };
 	
-	WH_NT_VAR_VEHICLETPP = 
+	F_NT_VAR_VEHICLETPP = 
 	if (!(isNull objectParent _player) && {(cameraView isEqualTo "EXTERNAL")})
 	then { true }
 	else { false };
@@ -57,7 +57,7 @@ if F_NT_NAMETAGS_ON then
 		{
 			!(_x isEqualTo _player)
 			&& (side group _x isEqualTo side group _player)
-			&& {!WH_NT_VAR_VEHICLETPP || {(vehicle _x != vehicle _player)}}
+			&& {!F_NT_VAR_VEHICLETPP || {(vehicle _x != vehicle _player)}}
 		};
 
 		//	Collect each filter entities' data.
