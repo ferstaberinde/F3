@@ -82,7 +82,7 @@ if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f"]) exitwith {
 
 // ====================================================================================
 
-// BRIEFING: GENDARMERIE
+// BRIEFING: BLUFOR > GENDARMERIE
 // The following block of code executes only if the player is in a gendarmerie slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
@@ -150,7 +150,7 @@ if (_unitfaction in ["ind_c_f"]) exitwith {
 
 // ====================================================================================
 
-// BRIEFING: INDEPENDENT > CTRG
+// BRIEFING: BLUFOR > CTRG
 // The following block of code executes only if the player is in a Syndikat
 // slot; it automatically includes a file which contains the appropriate briefing data.
 
