@@ -167,11 +167,11 @@ if (_unitfaction in ["blu_ctrg_f"]) exitwith {
 
 // ====================================================================================
 
-// BRIEFING: CIVILIAN
+// BRIEFING: CIVILIAN and IDAP
 // The following block of code executes only if the player is in a CIVILIAN
 // slot; it automatically includes a file which contains the appropriate briefing data.
 
-if (_unitfaction in ["civ_f"]) exitwith {
+if (_unitfaction in ["civ_f", "civ_idap_f"]) exitwith {
 
 #include "f\briefing\f_briefing_civ.sqf"
 
