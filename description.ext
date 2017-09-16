@@ -1,5 +1,5 @@
 // ============================================================================================
-// Loading Screen
+// F3 - Loading Screen
 // Set Author, overview image/text, loading image/text from Eden Editor
 
 onLoadName = "*** Insert Mission Name Here. ***";
