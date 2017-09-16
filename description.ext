@@ -1,11 +1,8 @@
 // ============================================================================================
 // Loading Screen
+// Set Author, overview image/text, loading image/text from Eden Editor
 
 onLoadName = "*** Insert Mission Name Here. ***";
-onLoadMission = "Made with the F3 Mission Development Framework";
-author = "*** Insert Author Here. ***";
-loadScreen = "loadLogo.jpg";
-overviewPicture = "overviewLogo.jpg";
 
 // ============================================================================================
 
