@@ -13,7 +13,6 @@ _unit setVariable ["BIS_enableRandomization", false];
 removeUniform _unit;
 removeHeadgear _unit;
 removeVest _unit;
-removeGoggles _unit;
 
 // Assign default clothes
 _uniform = _baseUniform;
@@ -87,5 +86,6 @@ if(count _rig > 0) then
 
 if(count _glasses > 0) then
 {
+    removeGoggles _unit;
 	_unit addGoggles (_glasses call BIS_fnc_selectRandom);
 };
