@@ -71,21 +71,21 @@ if (_typeOfUnit in _specOp) then {
 // Add clothing items to unit
 if(count _uniform > 0) then
 {
-	_unit forceAddUniform (_uniform call BIS_fnc_selectRandom);
+	_unit forceAddUniform (selectRandom _uniform);
 };
 
 if(count _helmet > 0) then
 {
-	_unit addHeadgear (_helmet call BIS_fnc_selectRandom);
+	_unit addHeadgear (selectRandom _helmet);
 };
 
 if(count _rig > 0) then
 {
-	_unit addVest (_rig call BIS_fnc_selectRandom);
+	_unit addVest (selectRandom _rig);
 };
 
 if(count _glasses > 0) then
 {
     removeGoggles _unit;
-	_unit addGoggles (_glasses call BIS_fnc_selectRandom);
+	_unit addGoggles (selectRandom _glasses);
 };
