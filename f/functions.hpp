@@ -97,6 +97,11 @@ class F // Defines the "owner"
 		file = "f\spect";
 		class activateSpectator{};
 	};
+	class disableThermals
+	{
+		file = "f\disableThermals";
+		class disableThermals{};
+	};
 	class woundingsystem
 	{
 		file = "f\medical";
