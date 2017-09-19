@@ -82,8 +82,8 @@ if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f"]) exitwith {
 
 // ====================================================================================
 
-// BRIEFING: GENDARMERIE
-// The following block of code executes only if the player is in a gendarmerie slot; it
+// BRIEFING: BLUFOR > GENDARMERIE
+// The following block of code executes only if the player is in a Gendarmerie slot; it
 // automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction in ["blu_gen_f"]) exitwith {
@@ -150,8 +150,8 @@ if (_unitfaction in ["ind_c_f"]) exitwith {
 
 // ====================================================================================
 
-// BRIEFING: INDEPENDENT > CTRG
-// The following block of code executes only if the player is in a Syndikat
+// BRIEFING: BLUFOR > CTRG
+// The following block of code executes only if the player is in a CTRG
 // slot; it automatically includes a file which contains the appropriate briefing data.
 
 if (_unitfaction in ["blu_ctrg_f"]) exitwith {
@@ -167,11 +167,11 @@ if (_unitfaction in ["blu_ctrg_f"]) exitwith {
 
 // ====================================================================================
 
-// BRIEFING: CIVILIAN
+// BRIEFING: CIVILIAN and IDAP
 // The following block of code executes only if the player is in a CIVILIAN
 // slot; it automatically includes a file which contains the appropriate briefing data.
 
-if (_unitfaction in ["civ_f"]) exitwith {
+if (_unitfaction in ["civ_f", "civ_idap_f"]) exitwith {
 
 #include "f\briefing\f_briefing_civ.sqf"
 
