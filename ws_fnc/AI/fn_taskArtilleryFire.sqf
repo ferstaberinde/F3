@@ -91,7 +91,7 @@ if ({isNull _x} count _art > 1 || str _target == "[0,0,0]" || count (getArtiller
 				};
 
 				case (typeName []): {
-					_targetPos = (_target call ws_fnc_selectRandom) call ws_fnc_getEPos;
+					_targetPos = (selectRandom _target) call ws_fnc_getEPos;
 				};
 			};
 

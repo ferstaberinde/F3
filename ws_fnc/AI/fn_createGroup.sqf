@@ -42,7 +42,9 @@ _code = {};
 //Optional parameters parsed with the call
 if (_count > 4) then {_code = _this select 4;};
 
-["ws_fnc_createGroup DBG: running with: ",_this,""] call ws_fnc_debugText;
+if (_debug) then {
+	["ws_fnc_createGroup DBG: running with: ",_this,""] call ws_fnc_debugText;
+};
 
 //Fault checks
 //Checking the variables we have enough against what we should have
@@ -63,7 +65,7 @@ for "_x" from 2 to (_size) do {
   if (_x <= (count _forcedclasses)) then {
   _unit = _grp createUnit [_forcedclasses select (_x - 1),_pos,[],5,"NONE"];
   } else {
-	 _unit = _grp createUnit [_commonclasses call ws_fnc_selectrandom,_pos,[],5,"NONE"];
+	 _unit = _grp createUnit [selectRandom _commonclasses,_pos,[],5,"NONE"];
 	 };
 };
 
