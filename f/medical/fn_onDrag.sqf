@@ -41,16 +41,6 @@ if(local _unit) then
 };
 
 // Wait until the unit is released, dead, downed, or revived)
-diag_log "starting drag";
-diag_log isNil "_dragged_unit";
-diag_log !(_unit getVariable ["f_wound_being_dragged", false]);
-diag_log GET_STATE(_unit) != STATE_INCAPACITATED;
-diag_log GET_STATE(_dragger) == STATE_INCAPACITATED;
-diag_log IS_BEING_REVIVED(_unit);
-diag_log !alive _unit;
-diag_log !alive _dragger;
-diag_log !(isPlayer _dragger);
-diag_log !(isPlayer _unit);
 waitUntil {
 	sleep 0.1;
 	_dragged_unit =  _dragger getVariable ["f_wound_dragging",nil];
@@ -73,9 +63,13 @@ if (_actionIdx != -1) then { _dragger removeAction _actionIdx; };
 _dragger setVariable ["f_wound_dragging", nil, true];
 _unit    setVariable ["f_wound_being_dragged", false, true];
 detach _unit;
-[_unit, _dragger] spawn {
-    params ["_unit", "_dragger"];'
+if(local _unit) then {
+    [_unit, _dragger] spawn {
+        sleep 0.1;
+        params ["_unit", "_dragger"];
 
-    _unit setPosATL (_unit getPos [1.2, direction _dragger]);
+        _unit setPosATL (_unit getPos [1.2, direction _dragger]);
+    };
 };
+
 _dragger switchmove ""; //otherwise player might get stuck
