@@ -22,12 +22,10 @@ if (alive _unit && {_damage >= 1 && {REVIVE_ENABLED(_unit) && {_hitPoint == "Inc
 		if (isNull _source || {!bis_revive_killfeedShow}) then
 		{
 			SET_STATE(_unit,STATE_INCAPACITATED);
-            diag_log format ["setting incapped outside damage: %1",_this];
 		}
 		else
 		{
 			SET_STATE_XTRA(_unit,STATE_INCAPACITATED,_source);
-            diag_log format ["setting incapped outside damage: %1",_this];
 		};
 
 		//tell others that we are draggable

@@ -21,7 +21,6 @@ _unit    setVariable ["f_wound_being_dragged", true, true];
 
 private _actionIdx = -1;
 
-diag_log local _dragger;
 
 // the dragger gets a release option.
 if(local _dragger) then {

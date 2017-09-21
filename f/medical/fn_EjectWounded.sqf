@@ -10,7 +10,6 @@ if(isServer) then {
         {
             _originalOwnerId = _x getVariable["#revOwner", -1];
             if(_originalOwnerId != -1) then {
-                diag_log format ["telling %1 to reinhabit", _originalOwnerId];
                 [_x] remoteExec ["f_fnc_reInhabitBody", _originalOwnerId];
             };
         };
