@@ -33,3 +33,14 @@ _allowedUnits = [];
 		_vehicleToCheck disableTIEquipment true;
 	}
 } foreach vehicles;
+
+// HANDLE ASSEMBLED VEHICLES
+// Create event handler to disable thermals on assembled vehicles (e.g. UAV) unless that type is allowed to have thermals
+
+player addEventHandler ["WeaponAssembled", {
+    params ["", ["_assembled", objNull, [objNull]]];
+
+    if ({_assembled isKindOf _x} count _allowedTypes == 0) then {
+        _assembled disableTIEquipment true;
+    }
+}];
