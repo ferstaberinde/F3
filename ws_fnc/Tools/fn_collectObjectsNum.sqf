@@ -25,7 +25,7 @@ _arr = [];
 _i = 0;
 _done = false;
 
-if (typeName _this != typeName []) then {
+if (!(_this isEqualType [])) then {
 	_this = [_this];
 };
 

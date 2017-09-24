@@ -21,7 +21,7 @@ private ["_arr"];
 
 _arr = [];
 
-if (typeName _this != typeName []) then {
+if (!(_this isEqualType [])) then {
 	_this = [_this];
 };
 

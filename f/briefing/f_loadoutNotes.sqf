@@ -90,7 +90,7 @@ if (count _weps > 0) then {
 		_attachments = [_attachments,0] call BIS_fnc_removeIndex; // Remove the first element as it points to the weapon itself
 
 		{
-			if (typeName _x != typeName [] && {_x != ""}) then {
+			if (!(_x isEqualType []) && {_x != ""}) then {
 				_text = _text + format["<br/> |- %1",getText (configFile >> "CfgWeapons" >> _x >> "displayname")];
 			};
 		} forEach _attachments;

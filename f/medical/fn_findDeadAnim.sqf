@@ -2,7 +2,7 @@
 params ["_unit"];
  _countCondit = {
             params["_animEntry", "_testString"];
-            if(typeName _animEntry  == "STRING") exitWith {
+            if(_animEntry isEqualType "") exitWith {
                _animEntry find _testString != -1
             };
             false

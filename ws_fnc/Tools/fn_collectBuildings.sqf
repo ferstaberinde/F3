@@ -51,7 +51,7 @@ if !(ws_game_a3) then {
 if (_flag1) then {
 	{
 		_bp = _x buildingPos 0;
- 		if (str _bp == "[0,0,0]" || typeName _bp != typeName []) then {_buildings = _buildings - [_x]};
+ 		if (str _bp == "[0,0,0]" || !(_bp isEqualType [])) then {_buildings = _buildings - [_x]};
 	} forEach _buildings;
 };
 
