@@ -27,7 +27,7 @@ _arr = [];
 {
 	_obj = _x;
 	{
-	    if ([_obj, format ["%1",_x]] call BIS_fnc_inString) then {
+	    if (((format ["%1",_x]) find _obj) != -1) then {
 	       _arr append [_x];
 	    };
 	} forEach allMissionObjects "ALL";
