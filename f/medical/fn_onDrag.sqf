@@ -1,16 +1,5 @@
 // F3 - SimpleWoundingSystem
-/*
-//\
-unit placement post drag
-post drag revive problems
-revive ragdoll drag
 
-test:
-dragger down
-dragger dead
-
-
-*/
 // ====================================================================================
 #include "\a3\functions_f_mp_mark\Revive\defines.inc"
 
