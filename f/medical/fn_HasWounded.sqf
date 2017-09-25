@@ -1,12 +1,6 @@
+#include "\a3\functions_f_mp_mark\Revive\defines.inc"
 // F3 - SimpleWoundingSystem
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
-_veh = _this select 0;
-_ret = false;
-{
-	if(_x getVariable ["f_wound_down",false]) then
-	{
-		_ret = true;
-	};
-}	foreach crew _veh;
-_ret
+params ["_veh"];
+{ _x getVariable ["#revDownInVeh", false] } count crew _veh > 0

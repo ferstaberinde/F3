@@ -74,14 +74,6 @@ class WS
 			class setAIMode {};
 			class setInsidePos {};
 		};
-		class cache
-		{
-			file = "ws_fnc\cache";
-			class cInit {};
-			class gCache {};
-			class gUncache {};
-			class cTracker {};
-		};
 
 		class init {
 			class init {file = "ws_fnc\ws_fnc_init.sqf";preInit = 1;};

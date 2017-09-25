@@ -12,5 +12,6 @@
   * Pre-configured endings 1 -3 with generic titles and texts
 
 ## Versions ##
-* F3 3-4-0
+
+* F3 3-5-0
 * ws_fnc 05/07/2015
