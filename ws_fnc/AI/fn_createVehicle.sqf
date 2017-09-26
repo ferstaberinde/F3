@@ -114,7 +114,7 @@ if (_guards > 0) then {
 	_grp = createGroup _side;
 
 	for "_x" from 1 to _guards do {
-		_unit = _grp createUnit [_guardclasses call ws_fnc_selectRandom, getPos _veh, [], 2, "NONE"];
+		_unit = _grp createUnit [selectRandom _guardclasses, getPos _veh, [], 2, "NONE"];
 	};
 
 	if (_load) then {

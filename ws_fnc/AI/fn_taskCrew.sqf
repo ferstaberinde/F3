@@ -20,7 +20,7 @@ _pos = (_group) call ws_fnc_getEPos;
 //Get nearby vehicles to start populating the static weapons
 _vehicles =  [];
 {
-	_vehicles = _vehicles + nearestObjects [_pos,[_x],_radius];
+	_vehicles append nearestObjects [_pos,[_x],_radius];
 } forEach ["StaticWeapon","Tank","Car"];
 
 _staticarray = [];
@@ -35,7 +35,7 @@ _units2 = _units - [leader _group];
 
 	if ((_x emptyPositions "gunner") > 0 && !(_locked) && ((count crew _x) == 0)) then
 	{
-		_staticarray = _staticarray + [_x];
+		_staticarray pushBack _x;
 	};
 } forEach _vehicles;
 
@@ -43,7 +43,7 @@ _units2 = _units - [leader _group];
 {
 	// Make sure it doesn't have a gunner yet
 	if (isNull (gunner _x) && isNUll (_x getVariable ["ws_StaticCrew",objNull])) then {
-		_unit = _units2 call ws_fnc_selectRandom;
+		_unit = selectRandom _units2;
 		_unit assignasgunner _x;
 		[_unit] ordergetin true;
 		_units = _units - [_unit];

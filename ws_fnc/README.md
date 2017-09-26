@@ -1,4 +1,4 @@
-ws_fnc for ArmA2:CO and ArmA3
+ws_fnc for ArmA3
 ==
 Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com  
 
@@ -17,5 +17,5 @@ https://github.com/Wolfenswan/ws_fnc/wiki
 
 * All major functions are documented in themselves. To see how they work open their .sqf with a text editor or their pages on github. 
 
-* If you're running ArmA 3 then you can also seem them all in the editor when opening the function viewer (CTRL+F). Make sure to select "missionConfigFile" in the top-left drop-down menu.
+* If you're running ArmA 3 then you can browse them from inside the editor by opening the function viewer (CTRL+F). Make sure to select "missionConfigFile" in the top-left drop-down menu.
 

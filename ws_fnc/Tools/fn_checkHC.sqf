@@ -11,13 +11,15 @@ true/false for HC/not-HC
 
 _hc = false;
 ws_var_isHC = false;
-["ws_var_HCs",[],true]call ws_fnc_setGVar;
+["ws_var_HCs",[],true] call ws_fnc_setGVar;
 
 if (!hasInterface && !isServer) then {
 	_hc = true;
 	ws_var_isHC=true;
 
-	ws_var_HCs append (player); publicVariable "ws_var_HCs";
+	if !(player in ws_var_HCs) then {
+		ws_var_HCs pushback (player); publicVariable "ws_var_HCs";
+	};
 };
 
 _hc

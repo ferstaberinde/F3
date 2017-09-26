@@ -39,8 +39,8 @@ private ["_debug","_game","_count","_milarrayA2","_badarrayA2","_badarrayA3","_m
 "_buildings","_vehicles","_milbuildings","_staticarray","_badarray","_milarray","_units","_static","_mkr"];
 
 //Customizable Variables
-_mthreshold = 0.9; // Percentage of building positions to occupy in military buildings (1=all)
-_cthreshold = 0.5; // Percentage of building positions to occupy in civilian buildings (1=all)
+_mthreshold = 1; // Percentage of building positions to occupy in military buildings (1=all)
+_cthreshold = 1; // Percentage of building positions to occupy in civilian buildings (1=all)
 
 // ARMA 2 only
 // Military buildings that are garrisoned before civilian buildings
@@ -112,6 +112,8 @@ if (count _buildings > 0 && count _units > 0 && _civil) then {
 _units = [_units,_buildings,_cthreshold] call ws_fnc_enterbuilding;
 	if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.4,0.4];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";}forEach _buildings;};
 };
+
+// Give HOLD waypoint to ensure units focus on defending
 
 //If there's one unit left they either patrol or hold the area.
 if (count _units >= 1) then {

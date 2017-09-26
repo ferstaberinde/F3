@@ -17,7 +17,7 @@ PARAMETERS
 1. The ambush group                                                 | MANDATORY
 2. The position to be ambushed                                      | MANDATORY - can be marker, trigger, group or positional array
 3. The killzone in [x,y,angle,rectangle(bool)] around the position  | OPTIONAL (default: If marker or trigger was passed as position use their area, otherwise [50,50,0,false])
-4. The minimal distance and radius in which to find an overlook     | OPTIONAL (default: [100,300] - if left empty ([]) the group will stay where they are)
+4. The minimal distance and radius in which to find an overlook     | OPTIONAL (default: [50,400] - if left empty ([]) the group will stay where they are)
 
 EXAMPLES
 A) nul = [group this,TrgAmbush] spawn ws_fnc_taskAmbush in Waypoint onAct: group will ambush enemies entering killzone as indicated by Trigger named TrgAmbush and look for a decent overwatch spot
@@ -37,7 +37,7 @@ _count = count _this;
 _grp = _this select 0;
 _ambush = _this select 1;
 _killzone = if (_count > 2) then [{_this select 2},{[]}];
-_owatch = if (_count > 3) then [{_this select 3},{[100,300]}];
+_owatch = if (_count > 3) then [{_this select 3},{[50,200]}];
 
 // Get positions for group and ambush location
 _pos = _ambush call ws_fnc_getEPos;
@@ -74,7 +74,7 @@ if (count _owatch > 0) then {
     if (_mindis > _radius) then {_radius = _mindis * 4};
 
     // Get a position overwatching the ambush point
-    _nPos = [_pos, _radius, _mindis, 10] call BIS_fnc_findOverwatch;
+    _nPos = [_pos, _radius, _mindis, 0] call BIS_fnc_findOverwatch;
 };
 
 // Get group to move to overwatch position
