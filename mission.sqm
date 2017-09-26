@@ -237,7 +237,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="f3-4-1dev_fa15_ws_140716";
+		briefingName="fa f3 3.5.0 release";
 		resistanceWest=0;
 		timeOfChanges=28800;
 		startWeather=0.50001526;
