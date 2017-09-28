@@ -118,7 +118,7 @@ _grp = createGroup _side;
 for "_x" from 1 to _int do {
 	private ["_b","_bpa","_bpl","_bu","_i","_u","_dir"];
 
-	_b = _buildings call ws_fnc_selectRandom;
+	_b = selectRandom _buildings;
 	_bpa = _b getVariable "ws_bPos";
 	_bpl = _b getVariable ["ws_bPosLeft",_bpa];
 	_bu = _b getVariable ["ws_bUnits",0];
@@ -131,7 +131,7 @@ for "_x" from 1 to _int do {
 
 		if (count _buildings == 0) exitWith {};
 
-		_b = _buildings call ws_fnc_selectRandom;
+		_b = selectRandom _buildings;
 		_bpa = _b getVariable "ws_bPos";
 		_bpl = _b getVariable ["ws_bPosLeft",_bpa];
 		_bu = _b getVariable ["ws_bUnits",0];
@@ -143,7 +143,7 @@ for "_x" from 1 to _int do {
 
 		if (count _buildings == 0) exitWith {};
 
-		_b = _buildings call ws_fnc_selectRandom;
+		_b = selectRandom _buildings;
 		_bpa = _b getVariable "ws_bPos";
 		_bpl = _b getVariable ["ws_bPosLeft",_bpa];
 		_bu = _b getVariable ["ws_bUnits",0];
@@ -157,11 +157,10 @@ for "_x" from 1 to _int do {
 	_bp = _bpl select _i;
 
 	// Remove the building position from the array
-	_bpl set [_i,0];			//Workaround as in http://community.bistudio.com/wiki/Array#Subtraction
-	_bpl = _bpl - [0];
+	_bpl deleteAt _i;
 
 	// Create a unit and move it into place
-  	_u = _grp createUnit [_classes call ws_fnc_selectRandom,_area,[],5,"NONE"];
+  	_u = _grp createUnit [selectRandom _classes,_area,[],5,"NONE"];
 	_u setPosATL _bp;
   	dostop _u;
 

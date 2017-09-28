@@ -1,4 +1,4 @@
-// ws_fnc_broadcast
+// ws_fnc_showFPS
 // By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 /*
 FEATURE

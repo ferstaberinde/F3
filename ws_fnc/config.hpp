@@ -14,7 +14,6 @@ class WS
 		class tools
 		{
 			file = "ws_fnc\tools";
-			class selectRandom {};
 			class gameCheck {preInit=1;};
 			class collectMarkers {};
 			class collectObjects {};
@@ -27,6 +26,8 @@ class WS
 			class listPlayers {};
 			class setGVar {};
 			class isWallInDir {};
+			class getObjectClasses {};
+			class shuffleArray {};
 		};
 		class effects
 		{
@@ -74,9 +75,13 @@ class WS
 			class setAIMode {};
 			class setInsidePos {};
 		};
-
-		class init {
-			class init {file = "ws_fnc\ws_fnc_init.sqf";preInit = 1;};
+		class cache
+		{
+			file = "ws_fnc\cache";
+			class cInit {};
+			class gCache {};
+			class gUncache {};
+			class cTracker {};
 		};
 
 	};

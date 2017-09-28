@@ -4,9 +4,6 @@
 
 private ["_debug","_string1","_variables","_string2"];
 
-_debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
-if !(_debug) exitWith {};
-
 _string1= _this select 0;
 _variables = _this select 1;
 _string2 = _this select 2;

@@ -28,7 +28,7 @@ if (typeName _this != typeName []) then {
 {
 	_marker = _x;
 	{
-	    if ([_marker, _x] call BIS_fnc_inString) then {
+	    if (_x find _marker != -1) then {
 	       _arr append [_x];
 	    };
 	} forEach allMapMarkers;

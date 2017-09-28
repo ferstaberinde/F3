@@ -17,10 +17,9 @@ positional array
 */
 
 
-private ["_count","_area","_shape","_center","_pos","_px","_py","_vector"];
+private ["_area","_shape","_center","_pos","_px","_py","_vector"];
 
-_count = count _this;
-_area = _this select 0;
+params["_area"];
 
 _shape = "";
 _center = [];
@@ -35,7 +34,7 @@ switch (typeName _area) do {
 	case "STRING":{ _center = getMarkerPos _area; _shape = MarkerShape _area; _dir = markerDir _area;_area = markerSize _area;};
 };
 
-if (typename _shape == typename "") then {
+if (_shape isEqualType "STRING") then {
 	switch (_shape) do {
 		case "RECTANGLE": {_shape = true;};
 		case "ELLIPSE": {_shape = false;};
