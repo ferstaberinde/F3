@@ -1,4 +1,4 @@
-/*ws_fnc_selectRandom
+/*ws_fnc_gameCheck
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 
 FEATURE

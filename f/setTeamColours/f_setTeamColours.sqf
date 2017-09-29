@@ -41,7 +41,7 @@ private _isFireteam = false;
 // If the group isn't a full fireteam, leave teams as default.
 
 {
-	if ([_x, format["%1",(leader (group _unit))]] call BIS_fnc_inString) exitWith {_isFireteam = true;}
+	if ((format["%1",(leader (group _unit))] find _x) != -1) exitWith {_isFireteam = true;}
 } forEach _leaders;
 
 if(!_isFireteam) exitWith {};

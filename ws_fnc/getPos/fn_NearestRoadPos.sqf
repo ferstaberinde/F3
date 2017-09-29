@@ -28,7 +28,7 @@ _done = false;
 while {!_done && _i <= 20} do {
 	_roads = _pos nearroads _distance;
 	if (count _roads > 0) then {
-		_pos = getPosATL (_roads call ws_fnc_selectRandom);
+		_pos = getPosATL (selectRandom _roads);
 		_done = true;
 	} else {
 	_distance = _distance + _increment;

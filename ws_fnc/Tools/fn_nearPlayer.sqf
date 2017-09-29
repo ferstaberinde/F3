@@ -28,5 +28,5 @@ _players = [] call ws_fnc_listPlayers;
 
 {
 	if (_pos distance _x < _distance) exitWith {true};
-	false;
+	false
 } forEach _players;

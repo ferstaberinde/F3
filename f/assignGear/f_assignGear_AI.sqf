@@ -102,7 +102,7 @@ _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVar
 			if !(_faction in _excludeFactions) then {
 				_known = false;
 				{
-					_known = [toLower (_x select 0),toLower (typeOf _unit)] call BIS_fnc_inString;
+					_known = (toLower (typeOf _unit)) find (toLower (_x select 0)) != -1;
 
 					// If the unit's classname corresponds to a class in the assignment array, set it's gear accordingly
 					if (_known) exitWith {

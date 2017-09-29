@@ -15,8 +15,10 @@ Full:
 [[veh1],["Grp1","Grp2"],boolean,boolean] call ws_fnc_loadVehicle
 
 RETURNS
-Units that weren't loaded. If all units were loaded an empty array is returned
+Groups that weren't loaded. If all groups were loaded an empty array is returned
 */
+
+// ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
 
@@ -35,29 +37,32 @@ _fill = if (count _this > 3) then {_this select 3} else {false};	// Ignore firet
 // ====================================================================================
 
 // CLEAN THE GROUP ARRAY
-// First we check if there are illegal groups (non-existent) in the array and fix it by replacing it with a null-group.
-// At the end we remove all null-groups are removed and the array is clean
+// First we check if there are illegal groups (non-existent) in the array and remove them.
 
 if ({isNil _x} count _grps > 0) then {
 	{
 		if (isNil _x) then {
 			_grps set [_forEachIndex,grpNull];
 		};
-
 	} forEach _grps;
-	_grps = _grps - [grpNull];
 };
 
-// We check the passed groups to make sure none of them is empty and they have at least one unit that's not inside a vehicle
+_grps = _grps - [grpNull];
+
+// ====================================================================================
+
+// PROCESS GROUPS
+// Check the passed groups to make sure none of them is empty and they have at least one unit that's not inside a vehicle
 {
 	_grp = call compile format ["%1",_x];
 	_grps set [_forEachIndex,_grp];
 
 	if (count (units _grp) == 0 || {isNull (assignedVehicle _x)} count (units _grp) == 0) then {
-	 	_grps set [_forEachIndex,grpNull];
+		_grps set [_forEachIndex,grpNull];
 	};
 
 } forEach _grps;
+
 _grps = _grps - [grpNull];
 
 // ====================================================================================
@@ -104,7 +109,7 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 	_grpsT = _grps;
 	// As long there are spare seats and groups left
 
-	while {_emptyPositions > 0 && count _grpsT > 0 && locked _veh < 2} do {
+	while {_emptyPositions > 0 && count _grpsT > 0 && locked _veh != 2} do {
 
 		private ["_grp","_units","_run"];
 

@@ -17,10 +17,9 @@ positional array
 */
 
 
-private ["_count","_area","_shape","_center","_pos","_px","_py","_vector"];
+private ["_area","_shape","_center","_pos","_px","_py","_vector"];
 
-_count = count _this;
-_area = _this select 0;
+params["_area"];
 
 _shape = "";
 _center = [];

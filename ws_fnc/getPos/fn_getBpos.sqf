@@ -13,30 +13,21 @@ RETURNS
 array containing all building positions
 */
 
-private ["_debug","_building","_bposarray","_i","_occupied"];
+private ["_debug","_building","_bposarray","_occupied"];
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
 
 // Buildings to ignore
 _badarray = [];
 
 _building = _this select 0;
+
+if isNil "_building" exitWith {};
 _bposarray = _building getVariable ["ws_bPos",false];
 [_building,["OBJECT"],format ["ws_fnc_getBpos: %1",_building]] call ws_fnc_typecheck;
-_i = 0;
 
 if (!(_bposarray isEqualType [])) then {
 
-	_bposarray = [];
-	_bp = _building buildingpos _i;
-
-	while {str _bp != "[0,0,0]"} do {
-		   if (count _bp == 3) then {
-				_bposarray pushback (_bp);
-			};
-
-			_i = _i + 1;
-			_bp = _building buildingpos _i;
-	};
+	_bposarray = _building buildingPos -1;
 
 	if (_debug) then {{_mkr = createMarker [format ["%1-bpos",_x],_x];_mkr setMarkerSize [0.3,0.3];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorWhite";} forEach _bposarray;};
 

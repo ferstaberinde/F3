@@ -105,7 +105,7 @@ switch (_mode) do {
 
 	case "ambush": {
 		_wp setWaypointType "MOVE";
-		_wp setWaypointStatements ["true", format["[group this,getPos this,%2] spawn ws_fnc_taskAmbush;%1",_code,_modifier]];
+		_wp setWaypointStatements ["true", format["[group this,getPos this] spawn ws_fnc_taskAmbush;%1",_code]];
 		_wp setWaypointCompletionRadius 50;
 	};
 

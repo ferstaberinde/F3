@@ -33,9 +33,6 @@ private ["_grp","_modes"];
 _grp = _this select 0;
 _modes = _this - [_this select 0];
 
-//Debugging - _modearray shouldnt have over three entries
-if (count _modes > 3) then {["ws_fnc_setAIMode DBG:",_modearray,"for some reason has over three entries. Why?"] call ws_fnc_debugText;};
-
 {
 switch (_x) do {
 

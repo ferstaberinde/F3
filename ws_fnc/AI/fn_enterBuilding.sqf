@@ -23,12 +23,12 @@ _barray = _this select 1;
 _threshold = if (count _this > 2) then [{_this select 2},{1}];	//Percentage of building positions that can be taken before building is considered "full"
 
 if (!(_barray isEqualType [])) then {_barray = [_this select 1]};
-if (_threshold <= 0) then {_threshold = 0.1};
+if (_threshold <= 0) then {_threshold = 0.8};
 
 // As long we have units and a more than one building we loop through either
 while {count _units > 0 && count _barray > 0} do {
 
-	_building = _barray call ws_fnc_selectRandom;
+	_building = selectRandom _barray;
 	_bposarray = [_building] call ws_fnc_getBpos;
 
 	if (count _bposarray > 0) then {
@@ -41,7 +41,7 @@ while {count _units > 0 && count _barray > 0} do {
 		while {count _barray > 0 && {count _bposLeft == 0 || (_bUnits / (count _bposarray) >= _threshold)}} do {
 			_barray = _barray - [_building];
 
-			_building = _barray call ws_fnc_selectRandom;
+			_building = selectRandom _barray;
 			_bposarray = _building getVariable ["ws_bPos",[]];
 			if (count _bposleft == 0) then {_bposarray = [_building] call ws_fnc_getBpos;};
 
@@ -54,14 +54,13 @@ while {count _units > 0 && count _barray > 0} do {
 		if (count _barray == 0) exitWith {};
 
 		// Otherwise continue to place unit:
-		_unit = _units call ws_fnc_selectrandom;
+		_unit = selectRandom _units;
 		_units = _units - [_unit];
 
 		//Get a building position and remove it from the array
 		_i = floor (random (count _bposleft));
 		_bpos = _bposleft select _i;
-		_bposleft set [_i,0];			//Workaround as in http://community.bistudio.com/wiki/Array#Subtraction
-		_bposleft = _bposleft - [0];
+		_bposleft deleteAt _i;
 
 		// Set the new variables for the building
 		_building setVariable ["ws_bPosLeft",_bposleft,true];

@@ -41,7 +41,7 @@ switch (typename _side) do {
 	case "SIDE": {
 		// All non-static vehicles with a turret on the map
 		{if (!(_x isKindOf "StaticWeapon") && side _x == _side && canFire _x && (count crew _x > 0)) then [{
-			_vehicles = _vehicles + [_x];},{if _debug then {player sidechat format ["ws_bettervehicles DBG: %1 has no crew or is a static weapon",_x]};}];
+			_vehicles pushBack _x;},{if _debug then {player sidechat format ["ws_bettervehicles DBG: %1 has no crew or is a static weapon",_x]};}];
 		} forEach vehicles;
 	};
 	case "OBJECT": {
