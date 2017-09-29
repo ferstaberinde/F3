@@ -128,13 +128,13 @@ f_var_civAI = independent; 		// Optional: The civilian AI will use this side's s
 // F3 - Dynamic View Distance
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_viewDistance_default = 1250;
-// f_var_viewDistance_tank = 2000;
-// f_var_viewDistance_car = 2000;
-// f_var_viewDistance_rotaryWing = 2500;
-// f_var_viewDistance_fixedWing = 5000;
-// f_var_viewDistance_crewOnly = true;
-// [] execVM "f\dynamicViewDistance\f_setViewDistanceLoop.sqf";
+f_var_viewDistance_default = 1600;
+f_var_viewDistance_tank = 2500;
+f_var_viewDistance_car = 2000;
+f_var_viewDistance_rotaryWing = 3000;
+f_var_viewDistance_fixedWing = 5000;
+f_var_viewDistance_crewOnly = true;
+[] execVM "f\dynamicViewDistance\f_setViewDistanceInit.sqf";
 
 // ====================================================================================
 

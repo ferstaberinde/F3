@@ -115,4 +115,9 @@ class F // Defines the "owner"
 		file = "f\disableThermals";
 		class disableThermals {};
 	};
+	class dynamicViewDistance
+	{
+		file = "f\dynamicViewDistance";
+		class ehSetViewDistance {};
+	};
 };
