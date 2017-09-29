@@ -14,15 +14,15 @@
 //	None of this will execute if the actionkey line in CONFIG is commented out.
 if (!isNil "F_NT_ACTIONKEY") then
 {
-	F_NT_ACTIONKEY_KEY = (actionKeys F_NT_ACTIONKEY) select 0;// This key, a global variable.
-	F_NT_ACTIONKEY_KEYNAME = actionKeysNames F_NT_ACTIONKEY;	// Which is named this...
+	F_NT_ACTIONKEY_KEYS = actionKeys F_NT_ACTIONKEY;// This key, a global variable.
+	F_NT_ACTIONKEY_KEYNAMES = actionKeysNames F_NT_ACTIONKEY;	// Which is named this...
 	
 	//	Function that will determine when the disableKey is depressed.
 	F_NT_KEYDOWN = 
 	{
 		_key = _this select 1;
 		_handled = false;
-		if(_key == F_NT_ACTIONKEY_KEY) then
+		if(_key in F_NT_ACTIONKEY_KEYS) then
 		{
 			F_NT_NAMETAGS_ON = !F_NT_NAMETAGS_ON;
 			_handled = true;
@@ -35,7 +35,7 @@ if (!isNil "F_NT_ACTIONKEY") then
 	{
 		_key = _this select 1;
 		_handled = false;
-		if(_key == F_NT_ACTIONKEY_KEY) then
+		if(_key in F_NT_ACTIONKEY_KEYS) then
 		{
 			_handled = true;
 		};
