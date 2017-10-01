@@ -531,6 +531,9 @@ switch (_typeofUnit) do
 // Redefine _carbine as an array to avoid breaking selectRandom in f_assignGear_fia_v.sqf
 _carbine = [_carbine];
 
+// Redefine _carbine as an array to avoid breaking selectRandom in f_assignGear_fia_v.sqf
+_carbine = [_carbine];
+
 // Include the loadouts for vehicles and crates:
 #include "f_assignGear_fia_v.sqf";
 
