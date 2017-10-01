@@ -81,7 +81,7 @@ if (_count > 5) then {_code = _this select 5};
 {[_x,["SCALAR"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_guards,_pos select 0,_pos select 1];
 {[_x,["STRING","CODE"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_code];
 
-if (typename _side == "SIDE") then {
+if (_side isEqualType sideUnknown) then {
 _grp = createGroup _side;} else
 {_grp = _side};
 

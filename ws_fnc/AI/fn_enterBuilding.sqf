@@ -22,7 +22,7 @@ _units = _this select 0;
 _barray = _this select 1;
 _threshold = if (count _this > 2) then [{_this select 2},{1}];	//Percentage of building positions that can be taken before building is considered "full"
 
-if (typename _barray != "ARRAY") then {_barray = [_this select 1]};
+if (!(_barray isEqualType [])) then {_barray = [_this select 1]};
 if (_threshold <= 0) then {_threshold = 0.8};
 
 // As long we have units and a more than one building we loop through either

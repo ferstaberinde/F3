@@ -105,7 +105,7 @@ if (!_building && (count (_pos nearObjects ["House",5]) >= 1)) then {
 	_done = false;
 	while {!_done && _i <= 100} do {
 		for "_x" from 0 to 340 step 20 do {
-			if (typeName _posradius == "BOOL") then {_pos = [_posloc] call ws_fnc_getPosInArea;} else {
+			if (_posradius isEqualType false) then {_pos = [_posloc] call ws_fnc_getPosInArea;} else {
 				_distance = _distance + 5;
 				_pos set [0,_posX + (_distance * sin _x)];
 				_pos set [1,_posY + (_distance * cos _x)];

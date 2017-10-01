@@ -25,7 +25,7 @@ if isNil "_building" exitWith {};
 _bposarray = _building getVariable ["ws_bPos",false];
 [_building,["OBJECT"],format ["ws_fnc_getBpos: %1",_building]] call ws_fnc_typecheck;
 
-if (typeName _bposarray != typeName []) then {
+if (!(_bposarray isEqualType [])) then {
 
 	_bposarray = _building buildingPos -1;
 
