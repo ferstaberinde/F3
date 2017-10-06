@@ -105,7 +105,8 @@ class F // Defines the "owner"
 		class reviveEhKilledInVeh {};
 		class addDragAction {};
 		class reinhabitBody {};
-		class onDrag {};
+		class onDragDragger {};
+		class onDragTarget {};
 		class onDragServer {};
 		class HasWounded {};
 		class EjectWounded {};

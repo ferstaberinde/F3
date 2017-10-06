@@ -2,6 +2,9 @@
 
 // ====================================================================================
 params ["_unit", "_dragger"];
+_dragger setVariable ["f_wound_dragging", _unit, true];
+_unit    setVariable ["f_wound_being_dragged", true, true];
+
 
 // Wait until the unit is released, dead or downed, or revived)
 waitUntil {
@@ -19,14 +22,4 @@ waitUntil {
 		|| !(isPlayer _dragger)
 		|| !(isPlayer _unit)
 	)
-};
-
-_dragger setVariable ["f_wound_dragging", nil, true];
-_unit    setVariable ["f_wound_being_dragged", false, true];
-detach _unit;
-_unit setPosATL getposATL _dragger;
-if( GET_STATE(_dragger) == STATE_INCAPACITATED ) then {
-	_dragger switchMove ANIM_WOUNDED;
-} else {
-	_dragger switchMove "";
 };

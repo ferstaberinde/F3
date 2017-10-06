@@ -3,22 +3,6 @@
 // ====================================================================================
 #include "\a3\functions_f_mp_mark\Revive\defines.inc"
 
-/*
-CURRENT STATUS:
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-* bis revive JIP is broken. maybe only because of me => test in new mission => maybe we have to go back to sws
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-* test bis revive with zeus and admin tool
-	https://feedback.bistudio.com/T85766
-
-
-TEST
-test if downed units can drag others.
-
-what happens if a dragging unit gets downed?
-
-*/
 params ["_unit"];
 if (!hasInterface) exitWith {};
 

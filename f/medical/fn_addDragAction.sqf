@@ -26,11 +26,17 @@ private _drag_action_cond = str {
 //hacky method to remove the braces at the beginning and end, so that it's the format that addAction expects.
 _drag_action_cond = _drag_action_cond select [1, count _drag_action_cond - 2];
 
+_drag_exec_code = {
+	 _this remoteExec ["f_fnc_OnDragServer", 2];
+	 _this remoteExec ["f_fnc_OnDragDragger", [_this select 1]];
+	 _this remoteExec ["f_fnc_OnDragTarget", [_this select 0]];
+};
+
 _resultId = _unit addAction [
 	format ["Drag %1", name _unit],
 
 	// _this variable (in the code below) is: [target, caller, ID, arguments]
-	{ _this remoteExec ["f_fnc_OnDrag", [_this select 0,_this select 1]] }, //called for both players
+	_drag_exec_code,
 	nil,
 	6,
 	false,
