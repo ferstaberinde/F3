@@ -69,10 +69,12 @@ if (count _units == 0) exitWith {player globalchat format ["DEBUG (f\EandECheck\
 // GET SAFE-ZONE POSITION
 // Get a position for the safe-zone
 
-switch (typeName _obj) do {
-	case "STRING": {_pos = getMarkerPos _obj};
-	case "OBJECT": {_pos = getPosATL _obj};
-	default {_pos = getPosATL _obj};
+if (_safeDistance <= 0) then {
+	switch (typeName _obj) do {
+		case "STRING": {_pos = getMarkerPos _obj};
+		case "OBJECT": {_pos = getPosATL _obj};
+		default {_pos = getPosATL _obj};
+	};
 };
 
 // ====================================================================================
@@ -102,7 +104,11 @@ while {true} do
 	// We then check how many of the units are within the required proximity to the
 	// objective; if all units qualify then we exit the script.
 
-	_safe = {(_x distance _pos < _safeDistance)} count _units;
+	if (_safeDistance <= 0) then {
+		_safe = {_x inArea _obj} count _units;
+	} else {
+		_safe = {(_x distance _pos < _safeDistance)} count _units;
+	};
 
 	// DEBUG
 	if (f_param_debugMode == 1) then
