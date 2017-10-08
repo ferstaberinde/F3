@@ -69,7 +69,7 @@ if (count _units == 0) exitWith {player globalchat format ["DEBUG (f\EandECheck\
 // GET SAFE-ZONE POSITION
 // Get a position for the safe-zone
 
-if (_safeDistance <= 0) then {
+if (_safeDistance > 0) then {
 	switch (typeName _obj) do {
 		case "STRING": {_pos = getMarkerPos _obj};
 		case "OBJECT": {_pos = getPosATL _obj};
