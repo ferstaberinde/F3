@@ -14,13 +14,12 @@ if (f_param_debugMode == 1) then {
 // the dragger gets a release option.
 _actionIdx = _dragger addAction [format["Release %1",name _unit],{(_this select 1) setVariable ["f_wound_dragging",nil,true];}, nil, 6, false, true, "", "true"];
 _dragger playMoveNow "AcinPknlMstpSnonWnonDnon";
-//_unit switchMove "AinjPpneMrunSnonWnonDb";
 
-//setting these here to prevent race cconditions
-_dragger setVariable ["f_wound_dragging", _unit, false];
-_unit    setVariable ["f_wound_being_dragged", true, false];
-//though there will be a race condition between the 3 different execs, if the waitUntil
-//on the server finishes before we reach here, which really should never happen.
+
+_dragger setVariable ["f_wound_dragging", _unit, true];
+_unit    setVariable ["f_wound_being_dragged", true, true];
+//though there will be a race condition between the 2 different execs, if the waitUntil
+//on the target finishes before we reach here, which really should never happen.
 
 // Wait until the unit is released, dead, downed, or revived)
 waitUntil {
@@ -36,6 +35,7 @@ waitUntil {
 		|| !alive _dragger
 		|| !(isPlayer _dragger)
 		|| !(isPlayer _unit)
+		|| (vehicle _dragger != _dragger)
 	)
 };
 
@@ -55,7 +55,9 @@ if (f_param_debugMode == 1) then {
 if( GET_STATE(_dragger) == STATE_INCAPACITATED) then {
 	_dragger switchMove ANIM_WOUNDED;
 } else {
-	_dragger switchMove "";
+    if(vehicle _dragger == _dragger) then {
+	    _dragger switchMove "";
+    }
 };
 
 _dragger removeAction _actionIdx;

@@ -18,8 +18,6 @@ _unit setPos getPos _unit;
 //setting these here to prevent race cconditions
 _dragger setVariable ["f_wound_dragging", _unit, false];
 _unit    setVariable ["f_wound_being_dragged", true, false];
-//though there will be a race condition between the 3 different execs, if the waitUntil
-//on the server finishes before we reach here
 
 
 // Wait until the unit is released, dead, downed, or revived)
@@ -36,6 +34,7 @@ waitUntil {
 		|| !alive _dragger
 		|| !(isPlayer _dragger)
 		|| !(isPlayer _unit)
+		|| (vehicle _dragger != _dragger)
 	)
 };
 
