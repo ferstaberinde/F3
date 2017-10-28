@@ -107,7 +107,6 @@ class F // Defines the "owner"
 		class reinhabitBody {};
 		class onDragDragger {};
 		class onDragTarget {};
-		class onDragServer {};
 		class HasWounded {};
 		class EjectWounded {};
 		class addEject {};

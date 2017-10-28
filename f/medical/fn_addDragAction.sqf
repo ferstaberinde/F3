@@ -27,7 +27,6 @@ private _drag_action_cond = str {
 _drag_action_cond = _drag_action_cond select [1, count _drag_action_cond - 2];
 
 _drag_exec_code = {
-	 _this remoteExec ["f_fnc_OnDragServer", 2];
 	 _this remoteExec ["f_fnc_OnDragDragger", [_this select 1]];
 	 _this remoteExec ["f_fnc_OnDragTarget", [_this select 0]];
 };
