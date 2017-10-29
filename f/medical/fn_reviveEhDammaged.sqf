@@ -77,10 +77,10 @@ if (alive _unit && {_damage >= 1 && {REVIVE_ENABLED(_unit) && {_hitPoint == "Inc
         [] spawn {
             sleep 1;
             if(alive player) then {
-                _group = group player;
+                private _group = group player;
                 _unit = player;
                 player addMPEventHandler ["mpkilled", f_fnc_reviveEhKilledInVeh];
-                _camera = _group createUnit ["VirtualCurator_F", ASLToAGL eyePos player, [], 0, ""];
+                private _camera = _group createUnit ["VirtualCurator_F", ASLToAGL eyePos player, [], 0, ""];
                 _camera setName format ["Ressurection%1",  round(random 20000)];
                 selectPlayer _camera;
                 _unit setName (name _camera);
