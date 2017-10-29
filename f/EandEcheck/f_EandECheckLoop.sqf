@@ -11,7 +11,7 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-params ["_objects", "_obj", "_safeDistance", "_end", ["_playersonly", true]];
+params [["_objects", sideUnknown, [sideUnknown, []]], "_obj", ["_safeDistance", 0, [0]], ["_end", 0, [0, {}]], ["_playersonly", true, [true]]];
 
 private ["_alive","_safe","_pos","_playersonly","_units","_temp"];
 
@@ -31,17 +31,24 @@ waitUntil {sleep 0.1;scriptDone f_script_setLocalVars};
 // POPULATE UNITS ARRAY
 // Conduct several checks against the first variable to see if we're dealing with a specific unit, a group or an array of several groups or units.
 
+if ( !(_objects isEqualType sideUnknown || _objects isEqualType []) ) exitWith {
+	player globalChat format ["DEBUG (f\EandECheck\f_EandECheckLoop.sqf): _objects must be a side or an array! passed _objects = %1",_objects];
+};
+
 // If a side was passed, take all Units from that side
 if (_objects isEqualType sideUnknown) then {
+	private _units_available = nil;
+	//Select from all units or only from players
 	if (_playersonly) then {
-		_units = playableUnits select { (side _x) == _objects};
+		_units_available = playableUnits;
 	} else {
-		_units = f_var_men select { (side _x) == _objects};
+		_units_available = f_var_men;
 	};
+	//Filter available units by side
+	_units = _units_available select { (side _x) == _objects};
 // Otherwise populate the units array using the passed strings, checking if it's either a group or a unit
 } else {
 	{
-
 		if(!isnil _x) then
 		{
 			_temp = call compile format ["%1",_x];
