@@ -8,7 +8,7 @@ if(isServer) then {
     {
         if(_x getVariable ["#revDownInVeh", false]) then
         {
-            _originalOwnerId = _x getVariable["#revOwner", -1];
+            private _originalOwnerId = _x getVariable["#revOwner", -1];
             if(_originalOwnerId != -1) then {
                 [_x] remoteExec ["f_fnc_reInhabitBody", _originalOwnerId];
             };

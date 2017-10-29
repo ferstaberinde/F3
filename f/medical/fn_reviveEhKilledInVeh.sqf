@@ -4,7 +4,7 @@ private _originalOwner = _unit getVariable ["#revOwner", -1];
 
 if (_downInVeh && _originalOwner == clientOwner) then {
     F_UncCC ppEffectEnable false;
-    _camera = player;
+    private _camera = player;
     selectPlayer _unit;
     [_camera] joinSilent grpNull;
     deleteVehicle _camera;

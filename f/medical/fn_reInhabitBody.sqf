@@ -1,7 +1,7 @@
 #include "\a3\functions_f_mp_mark\Revive\defines.inc"
 
 params ["_unit"];
-_camera = player;
+private _camera = player;
 F_UncCC ppEffectEnable false;
 selectPlayer _unit;
 
