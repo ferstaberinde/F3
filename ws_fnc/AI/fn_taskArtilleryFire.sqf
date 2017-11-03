@@ -32,14 +32,16 @@ true
 
 if !(ws_game_a3) exitWith {["ws_fnc_taskArtilleryFire DBG:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
-private ["_art","_dispersion","_fireMission","_ammo"];
+private ["_targetPos"];
 
-_art = [_this,0,objNull] call BIS_fnc_param;
-_target = [_this,1,[0,0,0]] call BIS_fnc_param;
-_fireMission = ([_this,2,[4,1]]) call BIS_fnc_param;
-_dispersion = [_this,3,80] call BIS_fnc_param;
-_sleep = ([_this,4,-1]) call BIS_fnc_param;
-_ammo = [_this,5,""] call BIS_fnc_param;
+params [
+	["_art", objNull, [objNull, []]],
+	["_target", [0,0,0], [objNull, "", []]],
+	["_fireMission", [4,1], [[]], 2],
+	["_dispersion", 80, [0]],
+	["_sleep", -1, [0]],
+	["_ammo", "", [""]]
+];
 
 switch (typeName _art) do {
 	case "OBJECT": {_art = [_art]};
@@ -54,14 +56,7 @@ if ({isNull _x} count _art > 1 || str _target == "[0,0,0]" || count (getArtiller
 {
 	// Spawn a seperate fire mission for each artillery piece
 	[_x,_target,_dispersion,_fireMission,_sleep,_ammo] spawn {
-		private ["_target","_dispersion","_fireMission","_ammo","_sleep","_artpiece"];
-
-		_artpiece = _this select 0;
-		_target = _this select 1;
-		_dispersion = _this select 2;
-		_fireMission = _this select 3;
-		_sleep = _this select 4;
-		_ammo = _this select 5;
+		params ["_artpiece", "_target", "_dispersion", "_fireMission", "_sleep", "_ammo"];
 
 		// Select the ammo
 		if (_ammo == "") then {

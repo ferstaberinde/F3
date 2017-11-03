@@ -24,16 +24,21 @@ Full:
 PARAMETERS
 1. The leading vehicle (all other vehicles should share the same naming template) 					 	| MANDATORY - object
 2. The first marker indicating the convoy route (all other markers should share the naming template) 	| MANDATORY - can be marker, object or positional array
-3. Speed limit in km/h (the slower the more reliably the convoy will move) 								| OPTIONAL - any number (default: 14)
+3. Speed limit in km/h (the slower the more reliably the convoy will move) 								| OPTIONAL - any number (default: 15)
 
 EXAMPLE
 [cv,"cvwp"] spawn ws_fnc_taskConvoy - All vehicles sharing the cv-name (cv,cv_1,cv_2...) would follow the route indicated by the markers sharing the "cvwp"-name ("cvwp","cvwp_1","cvwp_2"...)
 
 */
 
-_leadv = [_this,0,objNull] call BIS_fnc_param;
-_marker = [_this,1,""] call BIS_fnc_param;
-_speedLimit = [_this,2,15] call BIS_fnc_param;
+private ["_finalwp","_convoy","_waypoints","_run","_wp","_veh","_vfront","_vback","_vback","_dir"];
+
+params [
+	["_leadv", objNull],
+	["_marker", "", ["",objNull,[]]],
+	["_speedLimit", 15, [0]]
+];
+
 
 // What waypoint-type the final/combat waypoint will be. Sentry or Hold work best
 _finalwp = "SENTRY";

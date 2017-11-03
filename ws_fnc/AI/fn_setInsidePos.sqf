@@ -17,7 +17,7 @@ RETURNS
 true
 */
 
-private ["_u","_b","_udir","_inside","_facingwall","_dirtob","_dir"];
+private ["_u","_b","_udir","_inside","_facingwall","_dirtob","_dir","_nb","_x"];
 
 _u = _this;
 _nb = (nearestObjects [_u,["BagBunker_base_F","HouseBase"],50]);
@@ -28,7 +28,7 @@ _b = _nb select 0;
 
 _inside = [_u,0,0,25] call ws_fnc_isWallInDir;
 _facingwall = false;
-_dirtob = [_u,_b] call BIS_fnc_RelativeDirTo;
+_dirtob = _u getRelDir _b;
 _udir = _dirtob - 180;
 
 // If unit is outside set to kneel and check for wall facing away from building

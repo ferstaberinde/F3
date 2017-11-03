@@ -17,16 +17,21 @@ NOTE
 ARMA 3 only
 */
 
+private ["_game", "_code"];
+
+_game = [] call ws_fnc_gameCheck;
 if !(ws_game_a3) exitWith {["ws_fnc_broadcast DBG: Game version: ",[_game]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
-_string = [_this,0,"ws_fnc_broadcast DBG: No string parsed",["STRING"]]  call BIS_fnc_Param;
-_text = [_this,1,"cutText",["STRING"]] call BIS_fnc_Param;
-_type = [_this,2,"PLAIN",["STRING"]] call BIS_fnc_Param;
+params [
+	["_string", "ws_fnc_broadcast DBG: No string parsed", [""]],
+	["_text", "cutText", [""]],
+	["_type", "PLAIN", [""]]
+];
 _code = format ["%1 [%2,%3]",_text,str _string,str _type];
 
 ws_fnc_showText = compile _code;
 
-[[],"ws_fnc_showText",true] spawn BIS_fnc_MP;
+[] remoteExec ["ws_fnc_showText", 0];
 
 _code = "";
 ws_fnc_showText = compile _code;

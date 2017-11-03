@@ -38,43 +38,36 @@ EXAMPLES
 */
 
 private ["_debug",
-"_grp","_count","_pos","_modes","_mode","_marray","_behaviour","_speed","_modifier","_compl","_code",
-"_wp","_mkr"];
+"_pos","_modes","_wp","_mkr"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};  //Debug mode. If ws_debug is globally defined it overrides _debug
 
 //Declaring variables
-_count = count _this;
-_grp = _this select 0;
-_marray = [_this,2,[]] call BIS_fnc_Param;
-_behaviour = [_this,3,[]] call BIS_fnc_Param;
-_code = [_this,4,""] call BIS_fnc_Param;
+params [
+	["_grp", grpNull, [grpNull]],
+	["_pos", [0,0,0]],
+	["_marray", [], [[]]],
+	["_behaviour", [], [[]]],
+	["_code", "", [""]]
+];
 
 //Array of all legal possible modes. See http://community.bistudio.com/wiki/setWaypointType
 _modes = ["move","destroy","getin","sad","join","leader","getout","cycle","load","unload","tr unload","hold","sentry","guard","talk","scripted","support","getin nearest","dismiss","defend","garrison","patrol","ambush"];
-_modifier = 0;
-_compl = 0;
-_road = false;
-_mode = "move";
 
 //Interpreting variables
 //Setting up the array for the movepos
-if (count _marray > 0) then {_mode = _marray select 0;};
-if (count _marray > 1) then {_modifier = _marray select 1;};
-if (count _marray > 2) then {_compl = _marray select 2;};
-if (count _marray > 3) then {_road = _marray select 3;};
-if (_count > 4) then {_code = _this select 4};
+_marray params [
+	["_mode", "move", [""]],
+	["_modifier", 0, [0]],
+	["_compl", 0, [0]],
+	["_road", false, [false]]
+];
 
-_pos = if !(_road) then {(_this select 1) call ws_fnc_getEPos;} else {[(_this select 1),150,5] call ws_fnc_NearestRoadPos};
-
+_pos = if !(_road) then {(_pos) call ws_fnc_getEPos;} else {[(_pos),150,5] call ws_fnc_NearestRoadPos};
 
 //Fault checks
 //Checking the variables we have enough against what we should have
-[_grp,["GROUP"],format ["ws_fnc_createWaypoint: %1",_grp]] spawn ws_fnc_typecheck;
-[_mode,["STRING"],format ["ws_fnc_createWaypoint: %1",_mode]] spawn ws_fnc_typecheck;
-[_modifier,["SCALAR"],format ["ws_fnc_createWaypoint: %1",_modifier]] spawn ws_fnc_typecheck;
-[_code,["STRING"],format ["ws_fnc_createWaypoint: %1",_code]] spawn ws_fnc_typecheck;
-{[_x,["ARRAY"],format ["ws_fnc_createWaypoint: %1",_x]] spawn ws_fnc_typecheck;}  forEach [_pos,_behaviour,_marray];
+[_pos,["ARRAY"],format ["ws_fnc_createWaypoint: %1",_pos]] spawn ws_fnc_typecheck;
 
 if !(toLower _mode in _modes) exitWith {["ws_fnc_addWaypoint ERROR: ",_mode," is not a legal waypoint mode"] call ws_fnc_debugText;};
 
