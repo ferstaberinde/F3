@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_unit","_pos","_units","_textDone","_dispersion","_string"];
+private ["_unit","_pos","_dispersion","_string"];
 
 // ====================================================================================
 

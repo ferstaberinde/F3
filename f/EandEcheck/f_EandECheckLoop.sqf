@@ -13,7 +13,7 @@ if !(isServer) exitWith {};
 
 params [["_objects", sideUnknown, [sideUnknown, []]], "_obj", ["_safeDistance", 0, [0]], ["_end", 0, [0, {}]], ["_playersonly", true, [true]]];
 
-private ["_alive","_safe","_pos","_playersonly","_units","_temp"];
+private ["_alive","_safe","_pos","_units","_temp"];
 
 // ====================================================================================
 

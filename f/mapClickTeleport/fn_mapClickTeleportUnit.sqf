@@ -2,12 +2,6 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// DECLARE VARIABLES AND FUNCTIONS
-
-private ["_textSelect","_textDone"];
-
-// ====================================================================================
-
 // SET KEY VARIABLES
 
 f_telePositionSelected = false;

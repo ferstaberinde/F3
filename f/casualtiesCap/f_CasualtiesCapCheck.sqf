@@ -18,7 +18,7 @@ sleep 0.1;
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_grps","_pc","_end","_started","_remaining","_grpstemp","_alive","_faction","_temp_grp","_temp_grp2","_type","_onlyPlayers","_grpsno","_counter", "_grp", "_Tgrp"];
+private ["_grps","_pc","_end","_started","_remaining","_grpstemp","_alive","_faction","_onlyPlayers","_grp", "_Tgrp"];
 
 // ====================================================================================
 

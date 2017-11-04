@@ -3,7 +3,6 @@
 // ====================================================================================
 #include "\a3\functions_f_mp_mark\Revive\defines.inc"
 
-params ["_unit"];
 if (!hasInterface) exitWith {};
 
 
@@ -18,7 +17,7 @@ if (!hasInterface) exitWith {};
 	};
 
 	player setVariable ["bis_revive_ehDammaged", player addEventHandler ["Dammaged", f_fnc_reviveEhDammaged]];
-    
+
 };
 //drag action:
 [player] remoteExec ["f_fnc_addDragAction", 0, player];
