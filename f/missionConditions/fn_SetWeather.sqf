@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_missionOvercast","_MissionRain","_MissionRainbow","_MissionLightnings","_MissionWindStr","_MissionWindGusts","_MissionWaves","_MissionHumidity","_MissionFogStrength","_MissionFogDecay","_MissionFogBase"];
+private ["_missionOvercast","_MissionRain","_MissionRainbow","_MissionLightnings","_MissionWindStr","_MissionWindGusts","_MissionWaves","_MissionFogStrength","_MissionFogDecay","_MissionFogBase"];
 
 // ====================================================================================
 
@@ -30,7 +30,6 @@ _MissionLightnings = 0;
 _MissionWindStr = 0.01;
 _MissionWindGusts = 0.01;
 _MissionWaves = 0;
-_MissionHumidity = 0;
 _MissionFogStrength = 0;
 _MissionFogDecay = 0;
 _MissionFogBase = 0;
@@ -52,7 +51,6 @@ switch (_weather) do
 		_MissionWindStr = 0.01;
 		_MissionWindGusts = 0.01;
 		_MissionWaves = 0;
-		_MissionHumidity = 0;
 		_MissionFogStrength = 0;
 		_MissionFogDecay = 0;
 		_MissionFogBase = 0;
@@ -67,7 +65,6 @@ switch (_weather) do
 		_MissionWindStr = 0.2;
 		_MissionWindGusts = 0.2;
 		_MissionWaves = 0.3;
-		_MissionHumidity = 0.2;
 		_MissionFogStrength = 0;
 		_MissionFogDecay = 0;
 		_MissionFogBase = 0;
@@ -82,7 +79,6 @@ switch (_weather) do
 		_MissionWindStr = 0.25;
 		_MissionWindGusts = 0.25;
 		_MissionWaves = 0.5;
-		_MissionHumidity = 0.2;
 		_MissionFogStrength = 0;
 		_MissionFogDecay = 0;
 		_MissionFogBase = 0;
@@ -97,7 +93,6 @@ switch (_weather) do
 		_MissionWindStr = 0.25;
 		_MissionWindGusts = 0.25;
 		_MissionWaves = 0.5;
-		_MissionHumidity = 0.2;
 		_MissionFogStrength = 0;
 		_MissionFogDecay = 0;
 		_MissionFogBase = 0;
@@ -112,7 +107,6 @@ switch (_weather) do
 		_MissionWindStr = 0.1;
 		_MissionWindGusts = 0.1;
 		_MissionWaves = 0.25;
-		_MissionHumidity = 0.2;
 		_MissionFogStrength = 0.5;
 		_MissionFogDecay = 0;
 		_MissionFogBase = 0;
@@ -127,7 +121,6 @@ switch (_weather) do
 		_MissionWindStr = 0.2;
 		_MissionWindGusts = 0.2;
 		_MissionWaves = 0.5;
-		_MissionHumidity = 0.2;
 		_MissionFogStrength = 0.03;
 		_MissionFogDecay = 0;
 		_MissionFogBase = 0;
@@ -142,7 +135,6 @@ switch (_weather) do
 		_MissionWindStr = 0.25;
 		_MissionWindGusts = 0.25;
 		_MissionWaves = 0.5;
-		_MissionHumidity = 0.9;
 		_MissionFogStrength = 0.07;
 		_MissionFogDecay = 0;
 		_MissionFogBase = 0;
@@ -157,7 +149,6 @@ switch (_weather) do
 		_MissionWindStr = 0.4;
 		_MissionWindGusts = 0.4;
 		_MissionWaves = 0.8;
-		_MissionHumidity = 0.9;
 		_MissionFogStrength = 0.15;
 		_MissionFogDecay = 0;
 		_MissionFogBase = 0;
@@ -172,7 +163,6 @@ switch (_weather) do
 		_MissionWindStr = 0.75;
 		_MissionWindGusts = 1;
 		_MissionWaves = 1;
-		_MissionHumidity = 1;
 		_MissionFogStrength = 0.3;
 		_MissionFogDecay = 0;
 		_MissionFogBase = 0;

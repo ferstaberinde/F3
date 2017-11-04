@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_wind","_strength","_decay","_base","_gusts","_waves"];
+private ["_wind","_strength","_gusts","_waves"];
 
 // ====================================================================================
 

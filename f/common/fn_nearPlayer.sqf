@@ -3,7 +3,7 @@
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
-private ["_ent","_distance","_pos","_players"];
+private ["_distance","_pos","_players"];
 _pos = getPosATL (_this select 0);
 _distance = _this select 1;
 

@@ -8,7 +8,7 @@ if (_unit == player) exitWith {};
 if (_unit getVariable ["#revDragId", -1] != -1) exitWith {};
 
 //TODO maybe add a side-check: {side group _this getFriend side group _target >= 0.6} (just like the bis revive thing)
-_drag_action_cond = str {
+private _drag_action_cond = str {
 	//_target (object to which action is attached to)
 	// _this (caller/executing person)
 	private _var = _this getVariable ['f_wound_dragging',nil];
@@ -24,7 +24,7 @@ _drag_action_cond = str {
 //hacky method to remove the braces at the beginning and end, so that it's the format that addAction expects.
 _drag_action_cond = _drag_action_cond select [1, count _drag_action_cond - 2];
 
-_drag_exec_code = {
+private _drag_exec_code = {
 	 _this remoteExec ["f_fnc_OnDrag", [_this select 1]]; //Dragger
 	 _this remoteExec ["f_fnc_OnDrag", [_this select 0]]; //Target
 };
