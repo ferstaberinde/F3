@@ -74,100 +74,44 @@ if F_NT_MOD_CBA then
 	] call CBA_Settings_fnc_init;
 
 	//	Setting to flip drawcursoronly.
-	if (!F_NT_DRAWCURSORONLY) then
-	{
-		[
-			"F_NT_DRAWCURSORONLY",		// Internal setting name and value set.
-			"CHECKBOX", 				// Setting type.
-			"Cursor Only (Saves FPS)",	// Name shown in menu.
-			"F3 Nametags", 				// Category shown in menu.
-			false 						// Setting type-specific data.
-		] call CBA_Settings_fnc_init;
-	}
-	//	Changes the default if the missionmaker changes it.
-	else
-	{
-		[
-			"F_NT_DRAWCURSORONLY",		// Internal setting name and value set.
-			"CHECKBOX", 				// Setting type.
-			"Cursor Only (Saves FPS)",	// Name shown in menu.
-			"F3 Nametags", 				// Category shown in menu.
-			true 						// Setting type-specific data.
-		] call CBA_Settings_fnc_init;
-	};
+	[
+		"F_NT_DRAWCURSORONLY",		// Internal setting name and value set.
+		"CHECKBOX", 				// Setting type.
+		"Cursor Only (Saves FPS)",	// Name shown in menu.
+		"F3 Nametags", 				// Category shown in menu.
+		F_NT_DRAWCURSORONLY 		// Setting type-specific data.
+	] call CBA_Settings_fnc_init;
 
-	//	Changes whether nametags draw the role and group when under cursor.
-	//	Missionmaker can force these off in nametagCONFIG.
-	if (F_NT_SHOW_ROLE || {F_NT_SHOW_GROUP}) then 
-	{
-		switch true do
-		{
-			case (F_NT_SHOW_ROLE && F_NT_SHOW_GROUP):
-			{
-				//	Option to not show role and group tags.
-				[
-					"F_NT_SHOW_ROLEANDGROUP",	// Internal setting name and value set.
-					"CHECKBOX", 				// Setting type.
-					"Show Role and Group",		// Name shown in menu.
-					"F3 Nametags", 				// Category shown in menu.
-					true, 						// Setting type-specific data.
-					nil, 						// Nil or 0 for changeable.
-					{
-						if F_NT_SHOW_ROLEANDGROUP 
-						then { F_NT_SHOW_ROLE = true; F_NT_SHOW_GROUP = true; } 
-						else { F_NT_SHOW_ROLE = false; F_NT_SHOW_GROUP = false; };
-					}
-				] call CBA_Settings_fnc_init;
-			};
-			case (!F_NT_SHOW_ROLE&& F_NT_SHOW_GROUP):
-			{
-				//	Option to not show group tags.
-				[
-					"F_NT_SHOW_GROUP",			// Internal setting name and value set.
-					"CHECKBOX", 				// Setting type.
-					"Show Group Names",			// Name shown in menu.
-					"F3 Nametags", 				// Category shown in menu.
-					true, 						// Setting type-specific data.
-					nil, 						// Nil or 0 for changeable.
-					{}
-				] call CBA_Settings_fnc_init;
-			};
-			case (F_NT_SHOW_ROLE &&!F_NT_SHOW_GROUP):
-			{
-				//	Option to not show role tags.
-				[
-					"F_NT_SHOW_ROLE",			// Internal setting name and value set.
-					"CHECKBOX", 				// Setting type.
-					"Show Unit Roles",			// Name shown in menu.
-					"F3 Nametags", 				// Category shown in menu.
-					true, 						// Setting type-specific data.
-					nil, 						// Nil or 0 for changeable.
-					{}
-				] call CBA_Settings_fnc_init;
-			};
-		};
-	};
+
+	//	Option to not show group tags.
+	[
+		"F_NT_SHOW_GROUP",			// Internal setting name and value set.
+		"CHECKBOX", 				// Setting type.
+		"Show Group Names",			// Name shown in menu.
+		"F3 Nametags", 				// Category shown in menu.
+		F_NT_SHOW_GROUP, 						// Setting type-specific data.
+		nil, 						// Nil or 0 for changeable.
+		{}
+	] call CBA_Settings_fnc_init;
+
+	//	Option to not show role tags.
+	[
+		"F_NT_SHOW_ROLE",			// Internal setting name and value set.
+		"CHECKBOX", 				// Setting type.
+		"Show Unit Roles",			// Name shown in menu.
+		"F3 Nametags", 				// Category shown in menu.
+		F_NT_SHOW_ROLE, 			// Setting type-specific data.
+		nil, 						// Nil or 0 for changeable.
+		{}
+	] call CBA_Settings_fnc_init;
 
 	//	Attaches nametags to player heads, like ACE.
 	//	Missionmaker can change the default setting.
-	if !F_NT_FONT_HEIGHT_ONHEAD then
-	{
-		[
-		"F_NT_FONT_HEIGHT_ONHEAD",	// Internal setting name and value set.
-		"CHECKBOX", 				// Setting type.
-		"Show Above Head",			// Name shown in menu.
-		"F3 Nametags", 				// Category shown in menu.
-		false 						// Setting type-specific data.
-		] call CBA_Settings_fnc_init;
-	}
-	else
-	{
-		[
-		"F_NT_FONT_HEIGHT_ONHEAD",	// Internal setting name and value set.
-		"CHECKBOX", 				// Setting type.
-		"Show Above Head",			// Name shown in menu.
-		"F3 Nametags", 				// Category shown in menu.
-		true 						// Setting type-specific data.
-		] call CBA_Settings_fnc_init;
-	};
+	[
+	"F_NT_FONT_HEIGHT_ONHEAD",	// Internal setting name and value set.
+	"CHECKBOX", 				// Setting type.
+	"Show Above Head",			// Name shown in menu.
+	"F3 Nametags", 				// Category shown in menu.
+	F_NT_FONT_HEIGHT_ONHEAD 	// Setting type-specific data.
+	] call CBA_Settings_fnc_init;
 };
