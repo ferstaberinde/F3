@@ -28,7 +28,7 @@ F_NT_NIGHT = true;				//	Whether night will affect tag visibility.	(true)
 
 //	Information Shown
 F_NT_SHOW_GROUP 		= true;	//	Show group name under unit's name. 			(true)
-F_NT_SHOW_ROLE			= true; //	Show unit's role (rifleman, driver). 		(true)
+F_NT_SHOW_ROLE			= false;//	Show unit's role (rifleman, driver). 		(true)
 F_NT_SHOW_VEHICLEINFO 	= true;	//	Show vehicle info. Requires SHOW_ROLE.		(true)
 
 //	Draw Distances
