@@ -42,6 +42,10 @@ _player = player;
 //	Get distance from player to target.
 //------------------------------------------------------------------------------------
 
+// HOTFIX: _locationData is sometimes not code. https://puu.sh/yy2QG/5a79f349f7.png
+// If this happens, skip drawing the nametag
+if (!(_locationData isEqualType  {})) exitWith {};
+
 //	Find position tag will be rendered at using location data.
 _targetPositionAGL = call _locationData;
 
@@ -67,8 +71,8 @@ if (_unit getVariable ["wh_nt_isSpeaking", false]) then
 	else
 	{ ">" + _name + "<" };
 };
-					
-					
+
+
 //------------------------------------------------------------------------------------
 //	Applying initial transparency to tag depending on distance and time of day.
 //------------------------------------------------------------------------------------
@@ -116,7 +120,7 @@ if (_drawRoleAndGroup && {!(_isPassenger)}) then
 		_nameColor set [3, (_namecolor select 3) * _alphaCoef];
 		_color     set [3, (_color select 3)     * _alphaCoef];
 	};
-	
+
 	//--------------------------------------------------------------------------------
 	//	Use space magic to realign the tags with the player's view.
 	//	IE: If the player is above the target, normally the nametags (which are stacked -
@@ -130,12 +134,12 @@ if (_drawRoleAndGroup && {!(_isPassenger)}) then
 	//	TODO: Move up to update scope.
 	_vectorDir = _cameraPositionAGL vectorFromTo (positionCameraToWorld[0,0,1]);
 
-	//	Second, and the biggest step, get the normal (magnitude 1) vector going upwards 
+	//	Second, and the biggest step, get the normal (magnitude 1) vector going upwards
 	//		along the player's screen (visually) by taking the cross product of the player's
 	//		model upward vector and the player's view vector, and then take the cross product
 	//		of that and a vector going directly from the camera to the nametag.
 
-	//	Better explanation here 
+	//	Better explanation here
 	//		( forums.bistudio.com/forums/topic/206072-multi-line-text-in-drawicon3d )
 
 	//	TODO: Simplify this code if possible.
@@ -144,11 +148,11 @@ if (_drawRoleAndGroup && {!(_isPassenger)}) then
 	_vectorDiff = (vectorNormalized (((_vectorDir) vectorCrossProduct (vectorUp _player)) vectorCrossProduct (_targetPositionAGL vectorDiff _cameraPositionAGL)));
 
 	//	Take that new normal vector and multiply it by the distance, then divide it by the zoom.
-	
+
 	_targetPositionAGLTop =    _targetPositionAGL vectorAdd (_vectorDiff vectorMultiply (F_NT_FONT_SPREAD_TOP_MULTI * _camDistance / _zoom));
 	_targetPositionAGLBottom = _targetPositionAGL vectorAdd ((_vectorDiff vectorMultiply (F_NT_FONT_SPREAD_BOTTOM_MULTI * _camDistance / _zoom)) vectorMultiply -1);
 
-	
+
 	//--------------------------------------------------------------------------------
 	//	Render the nametags.
 	//--------------------------------------------------------------------------------
@@ -156,22 +160,21 @@ if (_drawRoleAndGroup && {!(_isPassenger)}) then
 	//	Role tag (top).
 	if ( !(_role isEqualTo "") && {F_NT_SHOW_ROLE} ) then
 	{
-		drawIcon3D ["", _color, _targetPositionAGLTop, 
+		drawIcon3D ["", _color, _targetPositionAGLTop,
 		0, 0, 0, _role,F_NT_FONT_SHADOW,_sizeSecondary,F_NT_FONT_FACE_SEC];
 	};
 
 	//	Group tag (bottom).
 	if ( !(_groupName isEqualTo "") && {F_NT_SHOW_GROUP} ) then
 	{
-		drawIcon3D ["", _color, _targetPositionAGLBottom, 
+		drawIcon3D ["", _color, _targetPositionAGLBottom,
 		0, 0, 0, _groupName,F_NT_FONT_SHADOW,_sizeSecondary,F_NT_FONT_FACE_SEC];
 	};
 };
-	
+
 //	TODO: Remove this testing thing
 //	Name tag (middle).
 //drawIcon3D ["\A3\ui_f\data\map\markers\flags\AAF_ca.paa", [0,0,0,1], _targetPositionAGL, 1, 1, 0, "",0,(_sizeMain+(_sizeMain*0.2)),F_NT_FONT_FACE_MAIN];
 
 //	Name tag (middle).
 drawIcon3D ["", _nameColor, _targetPositionAGL, 0,0,0, _name,F_NT_FONT_SHADOW,_sizeMain,F_NT_FONT_FACE_MAIN];
-
