@@ -18,30 +18,7 @@ private _action = {
 		
 		// Pull the unit out if they are down
 		if (IS_DISABLED(_unit)) then {
-			// Hack: Despite the wiki claiming 'moveOut' works on unconscious players, it doesn't
-			// So make them conscious again until they are out
-			_unit setUnconscious false;
-			
-			// Eject the downed player from the vehicle
-			moveOut _unit;
-			
-			// Hack
-			_unit setUnconscious true;
-			
-			// Move them away from the vehicle slightly once they are out
-			[] spawn {
-				sleep 0.2;
-				(_unit) setPosATL (_unit getPos [0.6, direction _unit]);
-			};
-			
-			// Make them draggable
-			[_unit] spawn {
-				params ["_unit"];
-				waitUntil{ sleep 0.1; animationState _unit ==  "unconsciousrevivedefault"};
-				_unit setVariable ["f_wound_draggable", true, true];
-				waitUntil{ sleep 0.1; animationState _unit !=  "unconsciousrevivedefault"};
-				_unit setVariable ["f_wound_draggable", false, true];
-			};
+			[_unit] remoteExec ["f_fnc_pullOutUnit", _unit];
 		}
 	} forEach crew _target;
 };
@@ -49,10 +26,10 @@ private _action = {
 _actionId = [
 	_vehicle,
 	"Pull out wounded",
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
-	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",
-	"[_target] call f_fnc_vehicleHasWounded",
-	"",
+	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unbind_ca.paa",
+	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unbind_ca.paa",
+	"(_this distance _target < 5) && {[_target] call f_fnc_vehicleHasWounded}",
+	"(_caller distance _target < 5) && {[_target] call f_fnc_vehicleHasWounded}",
 	{},
 	{},
 	_action,

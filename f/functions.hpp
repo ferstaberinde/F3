@@ -106,6 +106,7 @@ class F // Defines the "owner"
 		class findDeadAnim {};
 		class addPullOutAction {};
 		class vehicleHasWounded {};
+		class pullOutUnit {};
 	};
 	class disableThermals
 	{
