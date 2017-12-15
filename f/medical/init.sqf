@@ -1,9 +1,9 @@
 // FA3 - Wounding System
 // Uses the standard Arma 3 revive system with a few modifications:
 // - Restores vanilla behaviour of FAKs and medkits
-// - Reviving no longer heals a player
-// - Replace the "Force Respawn" hold action while downed with a "Wait to be revived" "infinite" hold-action
-// - Players can be downed in vehicles and pulled out
+// - Reviving no only heals a player as much as a FAK
+// - Replace the "Force Respawn" hold action while downed with a "Wait to be revived" "infinite" hold-action (keeps icon animation)
+// - Players can be downed in vehicles, will bleed out in them, and can be pulled out
 // - Downed players can be dragged
 
 // ====================================================================================
@@ -23,33 +23,19 @@ if (!hasInterface) exitWith {};
 	player setVariable ["bis_revive_ehHandleHeal", nil];
 };
 
-// Make revives not heal the player.
-// More accurately, undo the damage reset
+// Make revives only heal the player to the level of a AFK
+// More accurately, damage the player a little once they are revived
 [] spawn {
 	while {true} do {
 		// Wait until the player is downed and being revived
 		waitUntil {sleep 1;IS_DISABLED(player) && {IS_BEING_REVIVED(player)}};
 		
-		// Store current damage state
-		private _damage = damage player;
-		private _hitPartDamageAssocArray = [];
-		{
-			_hitPartDamageAssocArray pushBack [_x, player getHitPointDamage _x];
-		} forEach (getAllHitPointsDamage player select 0);
-		
 		// Wait until the player has been revived
 		// This is a busy wait to ensure the reset is being done as soon as the reset as possible
 		waitUntil {IS_ACTIVE(player)};
 		
-		// Wait the damage has been reset
-		// This is a busy wait to ensure the reset is being done as soon as the reset as possible
-		waitUntil {(damage player) > _damage};
-		
-		// Reset the damage reset
-		player setDamage _damage;
-		{
-			player setHitPointDamage _x;
-		} forEach (_hitPartDamageAssocArray);
+		// Put damage down to FAK levels
+		player setDamage 0.25;
 	};
 };
 
