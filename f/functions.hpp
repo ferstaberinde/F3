@@ -101,14 +101,12 @@ class F // Defines the "owner"
 	{
 		file = "f\medical";
 		class reviveEhDammaged {};
-		class findDeadAnim {};
-		class reviveEhKilledInVeh {};
 		class addDragAction {};
-		class reinhabitBody {};
 		class onDrag {};
-		class HasWounded {};
-		class EjectWounded {};
-		class addEject {};
+		class findDeadAnim {};
+		class addPullOutAction {};
+		class vehicleHasWounded {};
+		class pullOutUnit {};
 	};
 	class disableThermals
 	{
