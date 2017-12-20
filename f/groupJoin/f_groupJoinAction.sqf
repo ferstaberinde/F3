@@ -18,13 +18,13 @@ if (!isDedicated && (isNull player)) then
 
 // ====================================================================================
 
-private ["_nearUnit", "_nearGroup", "_actionDistance", "_allowDifferentSide", "_actionString", "_unit", "_grp"];
+private ["_nearUnit", "_nearGroup", "_actionDistance", "_actionString", "_unit", "_grp"];
 
 // How many meters player needs to be from another group's leader for the join action to be shown
 _actionDistance = 2.5;
 
 // Check if script caller wants to enable joining of groups on different sides, default to false
-_allowDifferentSide = [_this,0,false] call bis_fnc_param;
+params [["_allowDifferentSide", false, [false]]];
 
 // Main loop to detect whether the action should be displayed
 while {true} do {
@@ -40,9 +40,9 @@ while {true} do {
 		// Using curly braces makes the if statement cheaper to evaluate
 		if (group player != _nearGroup && alive _nearUnit && {(_allowDifferentSide || side player == side _nearGroup)}) then {
 
-				_actionString = format["Join %1 (%2)", name _nearUnit,_nearGroup];
+			_actionString = format["Join %1 (%2)", name _nearUnit,_nearGroup];
 
-				f_groupJoinAction = player addAction [_actionString, {
+			f_groupJoinAction = player addAction [_actionString, {
 
 				_unit = player;
 				_grp = (_this select 3);

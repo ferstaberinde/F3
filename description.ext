@@ -28,7 +28,7 @@ ReviveRequiredTrait = 0;
 ReviveRequiredItems = 2;
 ReviveRequiredItemsFakConsumed = 1;
 ReviveMedicSpeedMultiplier = 2;
-reviveDelay = 6;
+reviveDelay = 15;
 reviveForceRespawnDelay = 99999;
 reviveBleedOutDelay = 240;
 // F3 - Start of Notifications block.

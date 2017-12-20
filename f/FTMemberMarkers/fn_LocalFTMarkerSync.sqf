@@ -45,7 +45,7 @@ while{_unit == (leader _grp) && alive _unit} do
 if(!isnil "_grp") then
 {
 	// get the new leader
-	_x = leader _grp;
+	private _leader = leader _grp;
 	// tell him to start running the sync.
-	[_grp,_x] remoteExec ["f_fnc_LocalFTMarkerSync", _x];
+	[_grp,_leader] remoteExec ["f_fnc_LocalFTMarkerSync", _leader];
 };

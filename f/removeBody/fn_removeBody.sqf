@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_body","_wait","_group","_distance","_pos","_nearPlayers","_nearUnits","_check","_loop"];
+private ["_body","_wait","_group","_distance","_check","_loop"];
 
 // ====================================================================================
 
@@ -22,9 +22,6 @@ _distance = f_var_removeBodyDistance;
 
 waitUntil  {!isNull _body};
 
-_pos = getPos _body;
-_nearPlayers = [objNull];
-
 // ====================================================================================
 
 // WAITING UNTIL ALL CONDITIONS ARE MET
@@ -35,7 +32,6 @@ while {_loop} do {
 	sleep _wait;
 	_loop = [_body,_distance] call f_fnc_nearPlayer;
 };
-
 
 // ====================================================================================
 

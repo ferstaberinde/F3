@@ -64,7 +64,7 @@ while {alive _unt} do
 // If respawn is enabled we need to reset the marker should the unit die
 
 // Sleep for the set respawn delay plus a small grace period
-sleep (getNumber (missionconfigfile >> "RespawnDelay")) + 3;
+sleep ((getNumber (missionconfigfile >> "RespawnDelay")) + 3);
 
 // Re-compile the unit variable using the initially passed string
 waitUntil { sleep 0.1; _unt = missionNamespace getVariable [_untName,objNull]; !(isNull _unt) };
@@ -73,4 +73,3 @@ waitUntil { sleep 0.1; _unt = missionNamespace getVariable [_untName,objNull]; !
 if (alive _unt) exitWith {
 	[_untName, _mkrType, _mkrText, _mkrColor] spawn f_fnc_localSpecialistMarker;
 };
-

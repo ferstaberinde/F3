@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES
 
-private ["_curator","_mode","_addons","_cfgPatches","_class"];
+private ["_addons","_cfgPatches","_class"];
 
 // ====================================================================================
 
@@ -18,8 +18,10 @@ if !(isServer) exitWith {};
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-_curator = [_this,0,objNull] call bis_fnc_param;
-_mode = [_this,1,true,["",true,[]]] call bis_fnc_param;
+params [
+	["_curator", objNull],
+	["_mode", true, ["",true,[]]]
+];
 
 // ====================================================================================
 

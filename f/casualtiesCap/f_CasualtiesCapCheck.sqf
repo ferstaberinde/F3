@@ -18,7 +18,7 @@ sleep 0.1;
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_grps","_pc","_end","_started","_remaining","_grpstemp","_alive","_faction","_temp_grp","_temp_grp2","_type","_onlyPlayers","_grpsno","_counter", "_grp", "_Tgrp"];
+private ["_grps","_pc","_end","_started","_remaining","_grpstemp","_alive","_faction","_onlyPlayers","_grp", "_Tgrp"];
 
 // ====================================================================================
 
@@ -48,7 +48,7 @@ _faction = if (count _this > 4) then {_this select 4} else {[]};
 
 _grps = [];
 
-if(typeName _grpstemp == "SIDE") then // if the variable is any of the side variables use it to consturct a list of groups in that faction.
+if(_grpstemp isEqualType sideUnknown) then // if the variable is any of the side variables use it to consturct a list of groups in that faction.
 {
 
 	{
@@ -152,11 +152,11 @@ while {true} do
 // END CASCAP
 // Depending on input, either MPEnd or the parsed code itself is called
 
-if (typeName _end == typeName 0) exitWith {
+if (_end isEqualType 0) exitWith {
 	[_end] call f_fnc_mpEnd;
 };
 
-if (typeName _end == typeName {}) exitWith {
+if (_end isEqualType {}) exitWith {
 	_end remoteExec ["bis_fnc_spawn", 0];
 };
 

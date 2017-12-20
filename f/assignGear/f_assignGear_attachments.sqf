@@ -1,4 +1,4 @@
-if (typeName _attachments == typeName []) then {
+if (_attachments isEqualType []) then {
 	removeAllPrimaryWeaponItems _unit;
 	{
 		// loop trough the attachments and add them to the weapon
@@ -7,7 +7,7 @@ if (typeName _attachments == typeName []) then {
 };
 
 // Handle handgun attachments
-if (typeName _hg_attachments == typeName []) then {
+if (_hg_attachments isEqualType []) then {
 	removeAllHandgunItems _unit;
 	{
 		// loop trough the attachments and add them to the weapon

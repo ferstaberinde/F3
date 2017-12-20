@@ -15,8 +15,12 @@ if (!isServer) exitWith {};
 // SET ENDING & BROADCAST
 // The desired ending # is taken from the arguments passed to this script.
 // Using remoteExec the function mpEndReceiver is being spawned on all clients (and server),
-// with the passed ending # as parameter
+// with the passed ending # as parameter.
+// Once an ending has been triggered, no other ending is possible.
 
+if (isNil "f_var_EndingTriggered") then {
 	_this remoteExec ["f_fnc_mpEndReceiver", 0];
+};
+f_var_EndingTriggered = true;
 
 // ====================================================================================

@@ -170,6 +170,8 @@ f_var_civAI = independent; 		// Optional: The civilian AI will use this side's s
 
 // [side,ObjectName or "MarkerName",100,1] execVM "f\EandEcheck\f_EandECheckLoop.sqf";
 // [["Grp1","Grp2"],ObjectName or "MarkerName",100,1] execVM "f\EandEcheck\f_EandECheckLoop.sqf";
+// Note: If the 3rd parameter is <= 0 then the 2nd parameter will be used for inArea:
+// [side,inArea argument,0,1] execVM "f\EandEcheck\f_EandECheckLoop.sqf";
 
 // ====================================================================================
 

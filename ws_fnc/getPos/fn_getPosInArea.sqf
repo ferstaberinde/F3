@@ -34,7 +34,7 @@ switch (typeName _area) do {
 	case "STRING":{ _center = getMarkerPos _area; _shape = MarkerShape _area; _dir = markerDir _area;_area = markerSize _area;};
 };
 
-if (_shape isEqualType "STRING") then {
+if (_shape isEqualType "") then {
 	switch (_shape) do {
 		case "RECTANGLE": {_shape = true;};
 		case "ELLIPSE": {_shape = false;};

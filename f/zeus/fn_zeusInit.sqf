@@ -11,17 +11,19 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES
 
-private ["_unit","_addons","_objects","_curator","_createModule","_announce"];
+private ["_curator"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-_unit = [_this,0,objNull] call bis_fnc_param;
-_addons = [_this,1,true,["",true,[]]] call bis_fnc_param;
-_objects = [_this,2,[],[objNull,true,[],west]] call bis_fnc_param;
-_announce = [_this,3,false] call bis_fnc_param;
+params [
+	["_unit", objNull],
+	["_addons", true, ["",true,[]]],
+	["_objects", [], [objNull,true,[],west]],
+	["_announce", false, [true]]
+];
 
 // ====================================================================================
 
@@ -49,7 +51,7 @@ if (isNil "f_var_sideCenter") then {
 };
 
 // Create a new curator logic
-_curator = (createGroup f_var_sideCenter) createUnit ["ModuleCurator_F",[0,0,0] , [], 0, ""];
+_curator = (createGroup f_var_sideCenter) createUnit ["ModuleCurator_F", [0,0,0], [], 0, "NONE"];
 
 // Assign the passed unit as curator
 _unit assignCurator _curator;

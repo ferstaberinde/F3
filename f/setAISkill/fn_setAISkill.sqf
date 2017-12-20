@@ -30,7 +30,7 @@ if (_unit getVariable ["f_setAISkill",false]) exitWith {};
 // ====================================================================================
 
 // If no skill-array was passed, set it to the relevant side's skill-level at first
-if (typeName _skillset == typeName false) then {
+if (_skillset isEqualType false) then {
 	_skillset =
 	switch (side _unit) do {
 			case west: {f_var_skillBLU};
@@ -47,12 +47,12 @@ if (typeName _skillset == typeName false) then {
 // ====================================================================================
 
 // If the faction's skill level is not configured, exit and ignore the unit from now on
-if (typename _skillset == typename 0 && {_skillset == 99}) exitWith {_unit setVariable ["f_setAISkill",true];};
+if (_skillset isEqualType 0 && {_skillset == 99}) exitWith {_unit setVariable ["f_setAISkill",true];};
 
 // ====================================================================================
 
 // If a specific skill level was passed, populate _skillArray using the new value.
-if (typename _skillset == typename 0) then {
+if (_skillset isEqualType 0) then {
 	_skill = _skillset;
 	_skillArray = [];
 	for '_x' from 0 to 8 do {

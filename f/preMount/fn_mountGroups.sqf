@@ -9,7 +9,7 @@ if (!isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_objects","_crew","_vehs","_grps","_units","_grp","_fill"];
+private ["_crew","_vehs","_grps","_grp","_fill"];
 
 // ====================================================================================
 
