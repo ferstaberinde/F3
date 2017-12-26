@@ -9,13 +9,15 @@
 // 		["MAIN"] call f_fnc_GetMarkerColor;
 //
 // ====================================================================================
+params [["_team", "MAIN", [""]]];
+
 private _color = "ColorWhite";
-switch ((_this select 0)) do
+switch (_team) do
 {
-  case "MAIN": {_color = "ColorWhite"};
-  case "RED": {_color = "ColorRed"};
-  case "GREEN": {_color = "ColorGreen"};
-  case "BLUE": {_color = "ColorBlue"};
-  case "YELLOW": {_color = "ColorYellow"};
+	case "MAIN": {_color = "ColorWhite"};
+	case "RED": {_color = "ColorRed"};
+	case "GREEN": {_color = "ColorGreen"};
+	case "BLUE": {_color = "ColorBlue"};
+	case "YELLOW": {_color = "ColorYellow"};
 };
 _color

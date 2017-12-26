@@ -8,14 +8,16 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_timeOfDay","_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time","_result","_date"];
+private ["_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time","_result","_date"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
-_timeOfDay = _this select 0;
+params [
+	["_timeOfDay", 0, [0]]
+];
 
 // Exit when using mission settings
 if ( _timeOfDay == 8 ) exitWith {};

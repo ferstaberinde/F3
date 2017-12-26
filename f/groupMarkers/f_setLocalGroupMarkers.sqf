@@ -4,7 +4,7 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_unitfaction", "_hq", "_ft", "_sup", "_lau", "_mor", "_eng", "_ifv", "_tnk", "_rec", "_hel", "_pla", "_art", "_med", "_uav"];
+private ["_hq", "_ft", "_sup", "_lau", "_mor", "_eng", "_ifv", "_tnk", "_rec", "_hel", "_pla", "_art", "_med", "_uav"];
 
 
 // ====================================================================================
@@ -21,17 +21,9 @@ if (!isDedicated && (isNull player)) then
 // DETECT PLAYER FACTION
 // The following code detects what faction the player's slot belongs to, and stores
 // it in the private variable _unitfaction
-if(count _this == 0) then
-{
-	_unitfaction = toLower (faction player);
-
-	// If the unitfaction is different from the 	group leader's faction, the latters faction is used
-	if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction = toLower (faction (leader group player))};
-}
-else
-{
-	_unitfaction = (_this select 0);
-};
+params [
+	["_unitfaction", toLower (faction (leader group player))]
+];
 
 // ====================================================================================
 

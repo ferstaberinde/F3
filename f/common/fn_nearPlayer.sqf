@@ -3,18 +3,19 @@
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
-private ["_distance","_pos","_players"];
-_pos = getPosATL (_this select 0);
-_distance = _this select 1;
+private ["_pos","_players"];
+
+params [
+	["_obj", objNull, [objNull]], 
+	["_distance", 0, [0]]
+];
+
+_pos = getPosATL _obj;
 
 // ====================================================================================
 
 // Create a list of all players
-_players = [];
-
-{
-   if (isPlayer _x) then {_players pushBack _x};
-} forEach playableUnits;
+_players = playableUnits select {isPlayer _x};
 
 // ====================================================================================
 
