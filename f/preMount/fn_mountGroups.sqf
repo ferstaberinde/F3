@@ -9,74 +9,46 @@ if (!isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_crew","_vehs","_grps","_grp","_fill"];
+private ["_crew","_vehs","_grps","_all_grps","_fill"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using the arguments passed to the script, we first define some local variables.
 
-params ["_vehs", "_grps", ["_crew", true], ["_fill", false]];
-//_vehs: Array of vehicles    (objects)
-//_grps: Array of group names (as strings)
+params [["_objects", []], ["_crew", true], ["_fill", false]];
+//_objects: Vehicles and units.
 //_crew: Mount into crew positions? (optional - default:true)
 //_fill: Ignore fireteam cohesion in favor of filling vehicles? (optional - default:false)
 
 // ====================================================================================
 
-// CLEAN THE GROUP ARRAY
-// First we check if there are illegal groups (non-existent) in the array and remove them.
+// PROCESS UNITS/GROUPS
 
-if ({isNil _x} count _grps > 0) then {
-	{
-		if (isNil _x) then {
-			_grps set [_forEachIndex,grpNull];
-		};
-	} forEach _grps;
-};
-
-_grps = _grps - [grpNull];
-
-// ====================================================================================
-
-// PROCESS GROUPS
-// Check the passed groups to make sure none of them is empty and they have at least one unit that's not inside a vehicle
-{
-	_grp = call compile format ["%1",_x];
-	_grps set [_forEachIndex,_grp];
-
-	if (count (units _grp) == 0 || {isNull (assignedVehicle _x)} count (units _grp) == 0) then {
-		_grps set [_forEachIndex,grpNull];
-	};
-
-} forEach _grps;
-
-_grps = _grps - [grpNull];
+//Get all non-vehicle groups
+_all_grps = _objects select {_x isKindOf "CAManBase"} apply {group _x};
+//remove duplicates
+_all_grps = _all_grps arrayintersect _all_grps;
+//only take groups where at least one unit is not in a vehicle
+_grps = _all_grps select { count (units _x) > 0 && {isNull (assignedVehicle _x)} count (units _x) > 0 };
 
 // ====================================================================================
 
 // PROCESS VEHICLES
-// We make sure that there are only vehicles in the vehicle array
-// If a soldier-unit is in the array then we check if we can use the vehicle he's in
+
+//Get all vehicles
+_vehs = _objects select {!(_x isKindOf "CAManBase")};
+//remove duplicates
+_vehs = _vehs arrayintersect _vehs;
+//Add vehicles from synced units
 {
- if (_x isKindOf "CAManBase") then {
-     if (vehicle _x != _x) then {
-         _vehs set [_forEachIndex,vehicle _x];
-     } else {
-         _vehs = _vehs - [_x];
-     };
- };
-} forEach _vehs;
-
-// ====================================================================================
-
-// CHECK ARRAY COUNT
-// If any of the arrays is empty we don't need to execute the function and exit with a warning message.
-
-if (count _vehs == 0 || count _grps == 0) exitWith {
-	player globalchat format ["f_fnc_preMount DBG: No vehicles and/or groups were parsed! _vehicles: %1,_grps: %2",_vehs,_grps];
-	diag_log format ["f_fnc_preMount DBG: No vehicles and/or groups were parsed! _vehicles: %1,_grps: %2",_vehs,_grps];
-};
+	{
+		private _veh = assignedVehicle _x;
+		if (!isNull _veh) then {
+			_vehs pushBackUnique _veh;
+		};
+	} forEach (units _x);
+} forEach _all_grps;
 
 // ====================================================================================
 
