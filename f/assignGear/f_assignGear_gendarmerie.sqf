@@ -349,6 +349,10 @@ switch (_typeofUnit) do
 		_unit addItemCargoGlobal [_medkit,1];
 	};
 
+
+	// Include the default case for error handling
+	#include "f_assignGear_default.sqf";
+
 // ====================================================================================
 
 // END SWITCH FOR DEFINE UNIT TYPE LOADOUTS

@@ -522,6 +522,9 @@ switch (_typeofUnit) do
 // Include the loadouts for vehicles and crates:
 #include "f_assignGear_ctrg_v.sqf";
 
+// Include the default case for error handling
+#include "f_assignGear_default.sqf";
+
 // ====================================================================================
 
 // END SWITCH FOR DEFINE UNIT TYPE LOADOUTS
