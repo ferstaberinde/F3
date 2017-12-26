@@ -125,6 +125,7 @@ switch (_typeofUnit) do
 // Medic Loadout:
 	case "m":
 	{
+		_unit setUnitTrait ["medic",true]; // Can use medkit
 		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
