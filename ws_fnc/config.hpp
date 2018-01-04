@@ -75,13 +75,5 @@ class WS
 			class setAIMode {};
 			class setInsidePos {};
 		};
-		class cache
-		{
-			file = "ws_fnc\cache";
-			class cInit {};
-			class gCache {};
-			class gUncache {};
-			class cTracker {};
-		};
 
 	};
