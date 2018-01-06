@@ -25,15 +25,15 @@ EXAMPLES
 
 */
 
-private ["_obj","_color","_duration","_offset","_mpoint","_chm"];
+params [
+	["_obj", objNull, [objNull]],
+	["_color", "red", [""]],
+	["_duration", 0, [0]],
+	["_offset", [0,0,0], [[]], 3],
+	["_mpoint", "", [""]]
+];
 
-_obj = _this select 0;
-_color = toLower(_this select 1);
-_duration = if (count _this > 2) then {_this select 2} else {0};
-_offset = if (count _this > 3) then {_this select 3} else {[0,0,0]};
-_mpoint = if (count _this > 4) then {_this select 4} else {""};
-
-_chm = (format ["Chemlight_%1",_color]) createVehicle [0,0,0];
+private _chm = (format ["Chemlight_%1",toLower _color]) createVehicle [0,0,0];
 _chm attachTo [_obj, _offset, _mpoint];
 _chm setDir (getDir _obj);
 _chm setVectorDir (vectorDir _obj);

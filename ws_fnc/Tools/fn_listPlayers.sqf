@@ -1,6 +1,5 @@
 /*
 ws_fnc_listPlayers
-Latest: 16.01.2014
 
 FEATURE
 Lists all players
@@ -12,10 +11,4 @@ RETURNS
 array containing all players
 */
 
-_players = [];
-
-{
-	if (isPlayer _x) then {_players append (_x)};
-} forEach playableUnits;
-
-_players
+playableUnits select {isPlayer _x}

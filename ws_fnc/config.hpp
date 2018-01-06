@@ -27,7 +27,6 @@ class WS
 			class setGVar {};
 			class isWallInDir {};
 			class getObjectClasses {};
-			class shuffleArray {};
 		};
 		class effects
 		{

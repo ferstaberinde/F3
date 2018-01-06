@@ -23,7 +23,7 @@ switch (typename _e) do {
 	case "GROUP": {_pos = getPosATL (leader _e)};
 	case "LOCATION": {_pos = position _e};
 	case "ARRAY": {_pos = _e;};
-	default {[_e,["ARRAY","OBJECT","STRING","GROUP"],"ws_fnc_getEPos"] call ws_fnc_typecheck;};
+	default {[_e,["ARRAY","OBJECT","STRING","GROUP","LOCATION"],"ws_fnc_getEPos"] call ws_fnc_typecheck;};
 };
 
 _pos

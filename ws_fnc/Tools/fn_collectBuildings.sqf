@@ -21,18 +21,22 @@ RETURNS
 Array of useable buildings
 */
 
-private ["_pos","_radius","_flag1","_flag2","_buildings","_bp"];
+private ["_buildings","_bp"];
 
-_pos = (_this select 0) call ws_fnc_getEPos;
-_radius = _this select 1;
-_flag1 = if (count _this > 2) then {_this select 2} else {true};
-_flag2 = if (count _this > 3) then {_this select 3} else {false};
+params [
+	["_pos", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_radius", 0, [0]],
+	["_flag1", true, [true]],
+	["_flag2", false, [false]]
+];
+
+_pos = _pos call ws_fnc_getEPos;
 
 _buildings = [];
 
 //Fill buildings array with classes shared by both games
 {
-_buildings append nearestObjects [_pos,[_x],_radius];
+	_buildings append nearestObjects [_pos,[_x],_radius];
 } forEach ["Fortress", "House","House_Small"];
 
 //Add buildings specific to the game version

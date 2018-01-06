@@ -17,7 +17,7 @@ EXAMPLE
 ["mkrCache","mkrHouse"] call ws_fnc_collectMarkers - returns an array with all markers named mkrCache and mkrHouse ["mkrCache","mkrCache_1","mkrCache_2","mkrHouse_Defend","mkrHouse_Hold"]
 */
 
-private ["_arr"];
+private ["_arr", "_marker"];
 
 _arr = [];
 
@@ -28,9 +28,9 @@ if (!(_this isEqualType [])) then {
 {
 	_marker = _x;
 	{
-	    if (_x find _marker != -1) then {
-	       _arr append [_x];
-	    };
+		if (_x find _marker != -1) then {
+			_arr append [_x];
+		};
 	} forEach allMapMarkers;
 } forEach _this;
 

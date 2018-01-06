@@ -20,16 +20,16 @@ EXAMPLE
 ["Cache","Church"] call ws_fnc_collectObjects - returns an array with all objects with "Cache" and "Church" in their name: [Cache,Cache_1,Cache_2,Church_Attack,Church_Hold]
 */
 
-private ["_arr"];
+private ["_arr", "_obj"];
 
 _arr = [];
 
 {
 	_obj = _x;
 	{
-	    if (((format ["%1",_x]) find _obj) != -1) then {
-	       _arr append [_x];
-	    };
+		if (((format ["%1",_x]) find _obj) != -1) then {
+			_arr append [_x];
+		};
 	} forEach allMissionObjects "ALL";
 } forEach _this;
 

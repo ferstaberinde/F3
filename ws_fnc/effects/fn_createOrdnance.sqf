@@ -19,13 +19,18 @@ RETURNS
 true
 */
 
-private ["_pos","_class","_type","_dir","_dummy"];
+private ["_dummy"];
 
-_pos = (_this select 0) call ws_fnc_getEPos;
-_class = (_this select 1);
+params [
+	["_pos", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_class", "", [""]]
+];
+
+_pos = _pos call ws_fnc_getEpos;
 
 _dummy = "LaserTargetCBase" createVehicle _pos;
-_dummy enableSimulation false; _dummy hideObject true;
+_dummy enableSimulation false;
+_dummy hideObject true;
 _dummy setVariable ["type",_class];
 
 [_dummy,nil,true] call BIS_fnc_moduleProjectile;

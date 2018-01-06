@@ -22,19 +22,18 @@ PARAMETERS
 5. Attachpoint of the light (offset to the object it is attached to as array [x,y,z]) 	| OPTIONAL - default is [0,0,0]
 */
 
-private ["_count","_obj","_flare","_brightness","_color","_haze","_attach"];
+params [
+	["_obj", objNull, [objNull]],
+	["_brightness", 0.6, [0]],
+	["_color", [1.0, 1.0, 1.0], [[]], 3],
+	["_haze", [1.0, 0.2, 0.2], [[]], 3],
+	["_offset", [0,0,0], [[]], 3]
+];
 
-_count = count _this;
-_obj = _this select 0;
- if (_count > 1) then {_brightness = _this select 1} else {_brigthness = 0.6};
- if (_count > 2) then {_color = _this select 2} else {_color = [1.0, 1.0, 1.0]};		//Color of the Light
- if (_count > 3) then {_haze = _this select 3} else {_haze = [1.0, 0.2, 0.2]};		//Haze around the light source
- if (_count > 4) then {_attach = _this select 4} else {_attach = [0,0,0]};
-
-_flare = "#lightpoint" createVehicle (getPos _obj);
+private _flare = "#lightpoint" createVehicle (getPos _obj);
 _flare setLightBrightness _brightness;
 _flare setLightAmbient _color;
 _flare setLightColor _haze;
-_flare lightAttachObject [_obj,_attach];
+_flare lightAttachObject [_obj,_offset];
 
 true

@@ -17,7 +17,7 @@ RETURNS
 true
 */
 
-private ["_u","_b","_udir","_inside","_facingwall","_dirtob","_dir","_nb","_x"];
+private ["_u","_b","_udir","_inside","_facingwall","_dirtob","_dir","_nb"];
 
 _u = _this;
 _nb = (nearestObjects [_u,["BagBunker_base_F","HouseBase"],50]);
@@ -44,7 +44,7 @@ if !(_inside) then {
 if (_facingwall) then {
 
 	// First check if there's a window nearby
-	for [{_x=0},{_x<=360},{_x=_x+5}] do {
+	for "_x" from 0 to 360 step 5 do {
 		_dir = _x;
 		if !([_u,_dir] call ws_fnc_isWallInDir) exitWith {_udir = _dir;_facingwall = false};
 	};

@@ -34,20 +34,23 @@ nul = [vehicle (leader group this),position this,30,"mkrExtract"] spawn ws_fnc_t
 
 if !(ws_game_a3) exitWith {["ws_fnc_taskLand:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
-private ["_debug","_helo","_pos","_wait","_extract","_pilot","_grp","_hp","_wp"];
+private ["_debug","_pilot","_grp","_hp","_wp"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
 _debug = false;  if !(isNil "ws_debug") then {_debug = ws_debug};
 
 // Parse parameters
-_helo = _this select 0;
-_pos = (_this select 1) call ws_fnc_getEpos;
-_wait = if (count _this > 2) then [{_this select 2},{15}];
-_extract = if (count _this > 3) then [{_this select 3},{getPosATL _helo}];
+params [
+	["_helo", objNull, [objNull]],
+	["_pos", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_wait", 15, [0]],
+	["_extract", "", ["", objNull, []]]
+];
 
-{[_x,["OBJECT"],"ws_fnc_taskLand"] call ws_fnc_typecheck;} forEach [_helo];
-{[_x,["SCALAR"],"ws_fnc_taskLand"] call ws_fnc_typecheck;} forEach [_wait];
-{[_x,["ARRAY"],"ws_fnc_taskLand"] call ws_fnc_typecheck;} forEach [_pos];
+_pos = _pos call ws_fnc_getEpos;
+if (_extract isEqualTo "") then {
+    _extract = getPosATL _helo;
+};
 
 if !(_helo isKindOf "Helicopter") exitWith {["ws_fnc_taskLand:",[_helo]," must be a helicopter!"] call ws_fnc_debugtext};
 

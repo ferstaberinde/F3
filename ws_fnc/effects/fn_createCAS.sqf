@@ -17,12 +17,16 @@ RETURNS
 true
 */
 
-private ["_pos","_class","_type","_dir","_dummy"];
+private ["_dummy"];
 
-_pos = (_this select 0) call ws_fnc_getEPos;
-_dir = (_this select 1);
-_type = if (count _this > 2) then {(_this select 2)} else {0};
-_class = if (count _this > 3) then {(_this select 3)} else {"B_Plane_CAS_01_F"};
+params [
+	["_pos", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_dir", 0, [0]],
+	["_type", 0, [0]],
+	["_class", "B_Plane_CAS_01_F", [""]]
+];
+
+_pos = _pos call ws_fnc_getEpos;
 
 _dummy = "LaserTargetCBase" createVehicle _pos;
 _dummy enableSimulationGlobal false; _dummy hideObjectGlobal true;

@@ -13,26 +13,27 @@ RETURNS
 positional array
 */
 
-private ["_i","_distance","_increment","_roads","_done"];
+private ["_i","_done","_pos2"];
 
-_pos = _this select 0;
+params [
+	["_pos", [0,0,0], [[]], [2,3]],
+	["_distance", 10, [0]],
+	["_increment", 50, [0]]
+];
 
 _i = 0;
-_distance = 10;
-if (count _this > 1) then {_distance = _this select 1};
-_increment = 50;
-if (count _this > 2) then {_increment = _this select 2};
-
 _done = false;
+
+if !(surfaceIsWater _pos) exitWith {_pos};
+
 while {!_done && _i <= 50} do {
+	_distance = _distance + _increment;
 	for "_x" from 0 to 340 step 20 do {
-		_distance = _distance + _increment;
-		_pos set [0,_posX + (_distance * sin _x)];
-		_pos set [1,_posY + (_distance * cos _x)];
-		if !(surfaceIsWater _pos) exitWith {_done = true};
+		_pos2 = _pos vectorAdd [_distance * sin _x, _distance * cos _x, 0];
+		if !(surfaceIsWater _pos2) exitWith {_pos = _pos2;_done = true};
 	};
 	_i = _i + 1;
-	if (_i == 50) exitWith {_pos = _this select 0; ["ws_fnc_NearestLandPos ERROR: No dry land found in radius of",(_increment*20),""] call ws_fnc_DebugText};
+	if (_i == 50) exitWith {["ws_fnc_NearestLandPos ERROR: No dry land found in radius of",_distance,""] call ws_fnc_DebugText};
 };
 
 _pos
