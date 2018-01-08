@@ -35,7 +35,7 @@ params ["_unit","_vehicle","_name","_nameColor","_locationData","_role","_groupN
 
 //	Get player from global player setting.
 //	This is necessary for Zeus remote control support.
-_player = player;
+private _player = player;
 
 
 //------------------------------------------------------------------------------------
@@ -47,11 +47,11 @@ _player = player;
 if (!(_locationData isEqualType  {})) exitWith {};
 
 //	Find position tag will be rendered at using location data.
-_targetPositionAGL = call _locationData;
+private _targetPositionAGL = call _locationData;
 
 //	Find the distance from the player camera to this location.
-_camDistance = _cameraPositionAGL distance _targetPositionAGL;
-_distance = _player distance _targetPositionAGL;
+private _camDistance = _cameraPositionAGL distance _targetPositionAGL;
+private _distance = _player distance _targetPositionAGL;
 
 
 //------------------------------------------------------------------------------------
@@ -63,7 +63,7 @@ _distance = _player distance _targetPositionAGL;
 
 if (_unit getVariable ["wh_nt_isSpeaking", false]) then
 {
-	_timeEven = ((round time) % 2 == 0);
+	private _timeEven = ((round time) % 2 == 0);
 	_nameColor set [3,0.90];
 	_name =
 	if _timeEven then
@@ -77,7 +77,7 @@ if (_unit getVariable ["wh_nt_isSpeaking", false]) then
 //	Applying initial transparency to tag depending on distance and time of day.
 //------------------------------------------------------------------------------------
 
-_alpha =
+private _alpha =
 if (!_drawRoleAndGroup || {!(_isCommander)})
 then { 	linearConversion[F_NT_DRAWDISTANCE_NEAR/1.3,F_NT_DRAWDISTANCE_NEAR,
 		(_distance / F_NT_VAR_NIGHT),1,0,true] }
@@ -94,12 +94,12 @@ _nameColor set [3, (_nameColor select 3) * _alpha];
 
 //	TODO: Move up to Update scope.
 //	Max out zoom at 1.67 regardless to avoid HUGE text.
-_zmin = _zoom min 1.67;
+private _zmin = _zoom min 1.67;
 
 //	Adjust font sizes.
-_sizeMain 		= F_NT_FONT_SIZE_MAIN* _zmin;
-_sizeSecondary 	= F_NT_FONT_SIZE_SEC * _zmin;
-_sizeVehicle 	= F_NT_FONT_SIZE_VEH * _zmin;
+private _sizeMain 		= F_NT_FONT_SIZE_MAIN* _zmin;
+private _sizeSecondary 	= F_NT_FONT_SIZE_SEC * _zmin;
+private _sizeVehicle 	= F_NT_FONT_SIZE_VEH * _zmin;
 
 
 //------------------------------------------------------------------------------------
@@ -109,14 +109,14 @@ _sizeVehicle 	= F_NT_FONT_SIZE_VEH * _zmin;
 if (_drawRoleAndGroup && {!(_isPassenger)}) then
 {
 	//	Set the color for secondary tags.
-	_color =+ F_NT_FONT_COLOR_OTHER;
+	private _color =+ F_NT_FONT_COLOR_OTHER;
 	_color set [3, (_color select 3) * _alpha];
 
 	//	If we're working with a fading tag, fade it out according to the difference
 	//	between the start time and now.
 	if (!isNil "_startTime") then
 	{
-		_alphaCoef = (((_startTime + F_NT_FADETIME) - _time)/F_NT_FADETIME);
+		private _alphaCoef = (((_startTime + F_NT_FADETIME) - _time)/F_NT_FADETIME);
 		_nameColor set [3, (_namecolor select 3) * _alphaCoef];
 		_color     set [3, (_color select 3)     * _alphaCoef];
 	};
@@ -132,7 +132,7 @@ if (_drawRoleAndGroup && {!(_isPassenger)}) then
 
 	//	First, get vector pointing directly forward from the player's view, wherever it is.
 	//	TODO: Move up to update scope.
-	_vectorDir = _cameraPositionAGL vectorFromTo (positionCameraToWorld[0,0,1]);
+	private _vectorDir = _cameraPositionAGL vectorFromTo (positionCameraToWorld[0,0,1]);
 
 	//	Second, and the biggest step, get the normal (magnitude 1) vector going upwards
 	//		along the player's screen (visually) by taking the cross product of the player's
@@ -145,12 +145,12 @@ if (_drawRoleAndGroup && {!(_isPassenger)}) then
 	//	TODO: Simplify this code if possible.
 	//	If not possible, cache what you can (vectorUp player vectorCrossProduct _vectorDir)
 	//	in nametagUpdate.
-	_vectorDiff = (vectorNormalized (((_vectorDir) vectorCrossProduct (vectorUp _player)) vectorCrossProduct (_targetPositionAGL vectorDiff _cameraPositionAGL)));
+	private _vectorDiff = (vectorNormalized (((_vectorDir) vectorCrossProduct (vectorUp _player)) vectorCrossProduct (_targetPositionAGL vectorDiff _cameraPositionAGL)));
 
 	//	Take that new normal vector and multiply it by the distance, then divide it by the zoom.
 
-	_targetPositionAGLTop =    _targetPositionAGL vectorAdd (_vectorDiff vectorMultiply (F_NT_FONT_SPREAD_TOP_MULTI * _camDistance / _zoom));
-	_targetPositionAGLBottom = _targetPositionAGL vectorAdd ((_vectorDiff vectorMultiply (F_NT_FONT_SPREAD_BOTTOM_MULTI * _camDistance / _zoom)) vectorMultiply -1);
+	private _targetPositionAGLTop =    _targetPositionAGL vectorAdd (_vectorDiff vectorMultiply (F_NT_FONT_SPREAD_TOP_MULTI * _camDistance / _zoom));
+	private _targetPositionAGLBottom = _targetPositionAGL vectorAdd ((_vectorDiff vectorMultiply (F_NT_FONT_SPREAD_BOTTOM_MULTI * _camDistance / _zoom)) vectorMultiply -1);
 
 
 	//--------------------------------------------------------------------------------

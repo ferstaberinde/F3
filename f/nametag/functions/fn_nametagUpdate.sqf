@@ -15,30 +15,32 @@
 //------------------------------------------------------------------------------------
 // TODO: all of this only if there's something to draw
 //	Store the player and the player's group.
-_player = player;
-_playerGroup = group _player;
+private _player = player;
+private _playerGroup = group _player;
 //	TODO: Maybe just use playerSide?
 
 //	Find player camera's position.
-_cameraPositionAGL = positionCameraToWorld[0,0,0];
-_cameraPositionASL = AGLtoASL _cameraPositionAGL;
+private _cameraPositionAGL = positionCameraToWorld[0,0,0];
+private _cameraPositionASL = AGLtoASL _cameraPositionAGL;
 
 //	Get zoom, which will be used to adjust size and spacing of text.
-_zoom = call f_fnc_getZoom;
+private _zoom = call f_fnc_getZoom;
 
 //	Make a copy of the global cache containing nearby entities and their data.
-_toDraw =+ F_NT_CACHE;
+private _toDraw =+ F_NT_CACHE;
 
 //	Initialize other variables to be used.
-_time = time;
+private _time = time;
 
+//For performance reasons, create private variables used in loops:
+private ["_index", "_unitData", "_startTime"];
 
 //------------------------------------------------------------------------------------
 //	Collect player cursor target for drawing tags.
 //------------------------------------------------------------------------------------
 
 //	Only collect the cursor target if it's within range and on the player's side.
-_cursorObject = 
+private _cursorObject = 
 if ( (_player distance cursorTarget) <= (((F_NT_DRAWDISTANCE_CURSOR) * F_NT_VAR_NIGHT) * _zoom) &&
 	{(side group cursorTarget isEqualTo side _playerGroup)} ) 
 then { cursorTarget }
@@ -53,8 +55,8 @@ else { objNull };
 if !( isNull _cursorObject ) then
 {
 	//	Clean out any previous data.
-	_newData = [[],[]];
-	_cursorInCache = false;
+	private _newData = [[],[]];
+	private _cursorInCache = false;
 	{
 		//	If the cursor target is already in the global cache (ie: cursor target
 		//	is nearby)...

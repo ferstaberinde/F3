@@ -13,7 +13,7 @@
 {
 	waitUntil {scriptDone f_script_briefing};
 
-	_bstr = format ["<font size='18'>FA NAMETAGS</font><br/><br/>Toggle name tags for friendly units by pressing %1.<br/><br/>Name tags are displayed when aiming at individual units up to and above %3m away, and constantly for all units within %2m.<br/><br/>Note that using CBA will disable this menu and replace it with an enchanced and expanded one under ADDON OPTIONS. Code contributed by Whale#5963.
+	private _bstr = format ["<font size='18'>FA NAMETAGS</font><br/><br/>Toggle name tags for friendly units by pressing %1.<br/><br/>Name tags are displayed when aiming at individual units up to and above %3m away, and constantly for all units within %2m.<br/><br/>Note that using CBA will disable this menu and replace it with an enchanced and expanded one under ADDON OPTIONS. Code contributed by Whale#5963.
 	",F_NT_ACTIONKEY_KEYNAMES, F_NT_DRAWDISTANCE_NEAR,F_NT_DRAWDISTANCE_CURSOR];
 
 	if !F_NT_MOD_CBA then
