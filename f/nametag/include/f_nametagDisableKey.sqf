@@ -20,8 +20,8 @@ if (!isNil "F_NT_ACTIONKEY") then
 	//	Function that will determine when the disableKey is depressed.
 	F_NT_KEYDOWN = 
 	{
-		_key = _this select 1;
-		_handled = false;
+		private _key = _this select 1;
+		private _handled = false;
 		if(_key in F_NT_ACTIONKEY_KEYS) then
 		{
 			F_NT_NAMETAGS_ON = !F_NT_NAMETAGS_ON;
@@ -33,8 +33,8 @@ if (!isNil "F_NT_ACTIONKEY") then
 	//	Function that will determine when the disableKey is released.
 	F_NT_KEYUP = 
 	{
-		_key = _this select 1;
-		_handled = false;
+		private _key = _this select 1;
+		private _handled = false;
 		if(_key in F_NT_ACTIONKEY_KEYS) then
 		{
 			_handled = true;
