@@ -96,6 +96,7 @@ class F // Defines the "owner"
 	{
 		file = "f\spect";
 		class activateSpectator{};
+		class terminateSpectator{};
 	};
 	class woundingsystem
 	{
