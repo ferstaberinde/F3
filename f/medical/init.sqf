@@ -53,28 +53,11 @@ if (!hasInterface) exitWith {};
 		[player, (player getVariable [VAR_ACTION_ID_RESPAWN,-1])] call bis_fnc_holdActionRemove;
 		
 		// Reset 'forcing respawn' flags incase the player started the action before it was removed
-        if (IS_FORCING_RESPAWN(player)) then {
+		if (IS_FORCING_RESPAWN(player)) then {
 			SET_FORCING_RESPAWN(player, false);
 		};
-		
-		// Add "Wait to be revived" hold-action
-		[player,
-		"Wait to be revived",
-		bis_fnc_reviveGetActionIcon,
-		bis_fnc_reviveGetActionIcon,
-		"lifeState player == 'INCAPACITATED'",
-		"lifeState player == 'INCAPACITATED'",
-		{},
-		{},
-		{},
-		{},
-		[],
-		999999, // basically infinite
-		1000,
-		true,
-		true] call BIS_fnc_holdActionAdd;
-		
-		// Wait until the player's state changes to avoid adding the hold-action multiple times
+
+		// Wait until the player's state changes
 		private _prevState = GET_STATE(player);
 		waitUntil{sleep 1; GET_STATE(player) != _prevState};
 	};

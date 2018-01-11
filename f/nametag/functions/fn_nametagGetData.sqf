@@ -19,7 +19,12 @@
 //------------------------------------------------------------------------------------
 
 params ["_player","_playerGroup","_cameraPositionAGL","_cameraPositionASL",
-		"_entities","_isCursor"];
+        "_entities","_isCursor"];
+
+private ["_team","_entity","_locationData","_role","_show","_drawRoleAndGroup",
+        "_isCommander","_isPassenger","_targetPositionAGL","_targetPositionASL",
+        "_vehicle","_vehicleName","_maxSlots","_freeSlots","_name","_nameColor",
+        "_unitGroup","_sameGroup","_groupName","_unitData"];
 
 // _player (object CAManBase): Current player that will be rendering tags.
 // _playerGroup: Group of said player.
@@ -33,7 +38,6 @@ params ["_player","_playerGroup","_cameraPositionAGL","_cameraPositionASL",
 //	Establishing arrays to be filled with unit names and unit data, respectively.
 //------------------------------------------------------------------------------------
 
-// TODO: Do these need to be private?
 private _names= [];
 private _data = [];
 
@@ -52,7 +56,7 @@ private _zoom = 1;
 	//	each of the "vehicles" (or units) "crew" (or self).
 	_entity = _x;
 	
-	if !(_entity in allUnitsUAV) then // TODO: Find a better solution for this.
+	if (! (isNil "_entity" || {_entity in allUnitsUAV} ) ) then // TODO: Find a better solution for this.
 	{
 		{
 			//	Reset variables used for each unit.
@@ -63,7 +67,7 @@ private _zoom = 1;
 			_isCommander = false;
 			_isPassenger = false; // TODO : Find a smoother solution for this.
 			
-			if !(_x isEqualTo _player) then
+			if ( ! (isNil "_x" || {_x isEqualTo _player} ) ) then
 			{
 				//	If the unit is NOT in a vehicle...
 				if (isNull objectParent _x) then
@@ -111,7 +115,10 @@ private _zoom = 1;
 				else
 				{
 					//	The vehicle is the thing we're processing the crew for.
-					_vehicle = vehicle _x; //objectParent _x
+					_vehicle = vehicle _x; //objectParent _x  //Note: may be nil
+					if( isNil "_vehicle") then {
+						_vehicle = objNull;
+					};
 					
 					//	Depending on where the unit is in a vehicle, store it's 'role.'
 					_role = call
@@ -218,18 +225,24 @@ private _zoom = 1;
 				if _show then
 				{
 					//	Get the unit's name.
-					_name = name _x;
+					_name = name _x; //Note: may be nil
+					if( isNil "_name") then {
+						_name = "";
+					};
 					
 					//	Default the unit's nametag color to the mission default.
 					_nameColor =+ F_NT_FONT_COLOR_DEFAULT;
 					
 					//	Get the unit's group.
-					_unitGroup = group _x;
+					_unitGroup = group _x; //Note: may be nil
+					if( isNil "_unitGroup") then {
+						_unitGroup = grpNull;
+					};
 					
 					//	If the unit is in the same group as the player,
 					//	then erase the group tag. It does not need to be shown.
-					_sameGroup = (_unitGroup isEqualTo _playerGroup);
-					_groupName = if !_sameGroup then { groupID _unitGroup } else { "" };
+					_sameGroup = ( _unitGroup isEqualTo _playerGroup );
+					_groupName = if ( ! _sameGroup ) then { groupID _unitGroup } else { "" };
 
 					//	...For normal people...
 					if (_role isEqualTo "") then 							
@@ -245,7 +258,10 @@ private _zoom = 1;
 					//	For units in the same group as the player, set their color according to color team.
 					if _sameGroup then 
 					{
-						_team = assignedTeam _x;
+						_team = assignedTeam _x; //Note: may be nil
+						if( isNil "_team") then {
+							_team = "";
+						};
 						_nameColor = switch _team do 
 						{
 							case "RED": 	{	+F_NT_FONT_COLOR_GROUPR	};

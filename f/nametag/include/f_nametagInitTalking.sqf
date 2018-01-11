@@ -25,8 +25,8 @@ if F_NT_MOD_CBA then
 		private _new = (!(isNull findDisplay 55));
 		
 		//	Broadcast variable across server.
-		if (!(_oldSetting isEqualTo _newSetting)) then 
-		{ player setVariable ["wh_nt_isSpeaking", _newSetting, true] };
+		if (!(_old isEqualTo _new)) then 
+		{ player setVariable ["wh_nt_isSpeaking", _new, true] };
 	} , 0.25, []] call CBA_fnc_addPerFrameHandler;
 }
 
@@ -38,7 +38,7 @@ else
 {
 	F_NT_TALKING_LOOP = [] spawn
 	{
-		_delay = 0.25;
+		private _delay = 0.25;
 		F_NT_TALKING_LOOP_RUN = true;
 		
 		//	While the above variable is true, run the loop.
@@ -49,8 +49,8 @@ else
 			private _new = (!(isNull findDisplay 55));
 			
 			//	Broadcast variable across server.
-			if (!(_oldSetting isEqualTo _newSetting)) then 
-			{ player setVariable ["wh_nt_isSpeaking", _newSetting, true] };
+			if (!(_old isEqualTo _new)) then 
+			{ player setVariable ["wh_nt_isSpeaking", _new, true] };
 			
 			//	...and then wait for the delay before doing it again.
 			sleep _delay;

@@ -15,7 +15,7 @@
 
 //	Spacing may very between fonts greatly. Etelka is especially broken.
 //	Format: [Primary font, secondary font, spacing top, spacing bottom, shadow]
-_fontData =
+private _fontData =
 switch F_NT_FONT_FACE do
 {
 	case "Roboto": 		{["RobotoCondensedBold","RobotoCondensed",0.50,0.65,2]};
@@ -39,7 +39,7 @@ F_NT_FONT_SHADOW	 = (_fontData select 4);
 //	Spacing may very between fonts greatly. Etelka is especially broken.
 //	Format: [Main color, secondary color, crew color, same group team white color,
 //			team red color, team green color, team blue color, team yellow color]
-_colorData =
+private _colorData =
 switch F_NT_FONT_COLOR do
 {
 	case "WHGreen": 		
@@ -104,11 +104,11 @@ F_NT_FONT_SIZE_SEC	 = F_NT_FONT_SIZE_MAIN * F_NT_FONT_SIZE_SEC_MULTI;
 //	Update global font spread.
 //------------------------------------------------------------------------------------
 
-_spacingMultiplier = F_NT_FONT_SPREAD_MULTI * F_NT_FONT_SIZE_SEC;
+private _spacingMultiplier = F_NT_FONT_SPREAD_MULTI * F_NT_FONT_SIZE_SEC;
 
 //	Coefficients are used. Should be changed if you change the default font, probably.
-_topMultiplier    = (_fontData select 2); // Default: (0.50)
-_bottomMultiplier = (_fontData select 3); // Default: (0.65)
+private _topMultiplier    = (_fontData select 2); // Default: (0.50)
+private _bottomMultiplier = (_fontData select 3); // Default: (0.65)
 
 // Top and bottom are separate to avoid a wonky appearance.
 F_NT_FONT_SPREAD_TOP_MULTI		= _spacingMultiplier * _topMultiplier;

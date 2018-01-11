@@ -37,7 +37,7 @@ else
 {
 	F_NT_CACHE_LOOP = [] spawn
 	{
-		_delay = 0.5;
+		private _delay = 0.5;
 		F_NT_CACHE_LOOP_RUN = true;
 		
 		//	While the above variable is true, run the loop.
