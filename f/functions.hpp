@@ -32,6 +32,14 @@ class F // Defines the "owner"
 		class SetWeather{};
 		class SetWind{};
 	};
+	class cache
+	{
+		file = "f\cache";
+		class cInit {};
+		class cTracker {};
+		class gCache {};
+		class gUncache {};
+	};
 	class groupMarkers {
 		file = "f\groupMarkers";
 		class localGroupMarker{};
