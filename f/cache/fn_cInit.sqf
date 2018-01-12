@@ -7,17 +7,26 @@ if (isNil "f_param_caching" || {f_param_caching == 0}) exitWith {};
 
 // ====================================================================================
 
+// DECLARE VARIABLES AND FUNCTIONS
+private ["_range", "_str1"];
+
+params [
+	["_sleep", 0, [0]]
+];
+
+// ====================================================================================
+
 // Wait for the mission to have launched before starting to cache.
 sleep 0.1;
 
 // Wait up to the desired time into the mission to give AI and players time to settle
-waitUntil {time > (_this select 0)};
+waitUntil {sleep 0.1; time > _sleep};
 
 // ====================================================================================
 
 // Player and the headless client's (if present) groups are always excluded from being cached
 if (!isDedicated && !(group player getVariable ["f_cacheExcl", false])) then {
-        (group player) setVariable ["f_cacheExcl", true, true];
+	(group player) setVariable ["f_cacheExcl", true, true];
 };
 
 // ====================================================================================
@@ -55,14 +64,14 @@ if (f_param_debugMode == 1) then {
 	sleep (f_var_cacheSleep * 1.1);
 
 		while {f_var_cacheRun} do {
-			_str1 = "f_fnc_cache DBG:<br/>";
-			_str2 = format["Total groups: %1<br/>",count allGroups];
-			_str3 = format ["Cached groups:%1<br/>",{_x getvariable "f_cached"} count allGroups];
-			_str4 = format ["Activated groups:%1<br/>",{!(_x getvariable "f_cached")} count allGroups];
-			_str5 = format ["Excluded groups:%1<br/>",{(_x getvariable "f_cacheExcl")} count allGroups];
+			_str1 = "f_fnc_cache DBG:<br/>"
+			      + format ["Total groups: %1<br/>",count allGroups]
+			      + format ["Cached groups:%1<br/>",{_x getvariable "f_cached"} count allGroups]
+			      + format ["Activated groups:%1<br/>",{!(_x getvariable "f_cached")} count allGroups]
+			      + format ["Excluded groups:%1<br/>",{(_x getvariable "f_cacheExcl")} count allGroups];
 
-			hintsilent parseText (_str1+_str2+_str3+_str4+_str5);
-			diag_log (_str1+_str2+_str3+_str4+_str5);
+			hintsilent parseText (_str1);
+			diag_log (_str1);
 
 			sleep f_var_cacheSleep;
 		};
