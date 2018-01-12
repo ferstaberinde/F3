@@ -227,12 +227,12 @@ class Params
 // F3 - Caching
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-	class f_param_caching
-	{
-		title = "Cache AI outside distance (m)";
-		values[] = {0,600,800,1000,1500,2000};
-		default = 0;
-	};
+//	class f_param_caching
+//	{
+//		title = "Cache AI outside distance (m)";
+//		values[] = {0,600,800,1000,1500,2000};
+//		default = 0;
+//	};
 
 // ============================================================================================
 
