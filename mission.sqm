@@ -552,7 +552,7 @@ class Mission
 				name="VehNATO_AH1";
 			};
 			id=14;
-			type="B_Heli_Attack_01_F";
+			type="B_Heli_Attack_01_dynamicLoadout_F";
 			atlOffset=0.009988308;
 		};
 		class Item15
@@ -839,7 +839,7 @@ class Mission
 				textures="Opfor";
 			};
 			id=29;
-			type="O_Heli_Attack_02_black_F";
+			type="O_Heli_Attack_02_dynamicLoadout_F";
 		};
 		class Item30
 		{
@@ -984,7 +984,7 @@ class Mission
 				name="VehAAF_AH1";
 			};
 			id=37;
-			type="I_Heli_light_03_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item38
 		{
@@ -2972,7 +2972,7 @@ class Mission
 				skill=0.60000002;
 			};
 			id=117;
-			type="B_Heli_Light_01_armed_F";
+			type="B_Heli_Light_01_dynamicLoadout_F";
 			atlOffset=-0.37890196;
 		};
 		class Item99
@@ -3283,7 +3283,7 @@ class Mission
 				skill=0.60000002;
 			};
 			id=127;
-			type="B_Heli_Light_01_armed_F";
+			type="B_Heli_Light_01_dynamicLoadout_F";
 			atlOffset=0.009534359;
 		};
 		class Item104
@@ -3594,7 +3594,7 @@ class Mission
 				skill=0.60000002;
 			};
 			id=137;
-			type="B_Heli_Light_01_armed_F";
+			type="B_Heli_Light_01_dynamicLoadout_F";
 			atlOffset=0.20958662;
 		};
 		class Item109
@@ -4443,7 +4443,7 @@ class Mission
 				skill=0.60000002;
 			};
 			id=164;
-			type="I_Heli_light_03_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item122
 		{
@@ -4747,7 +4747,7 @@ class Mission
 				skill=0.60000002;
 			};
 			id=174;
-			type="I_Heli_light_03_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item127
 		{
@@ -5118,7 +5118,7 @@ class Mission
 				skill=0.60000002;
 			};
 			id=187;
-			type="B_Heli_Light_01_armed_F";
+			type="B_Heli_Light_01_dynamicLoadout_F";
 			atlOffset=-0.37890196;
 		};
 		class Item134
@@ -30043,7 +30043,7 @@ class Mission
 				textures="Green";
 			};
 			id=968;
-			type="I_Heli_light_03_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item337
 		{
@@ -30517,7 +30517,7 @@ class Mission
 				textures="Green";
 			};
 			id=978;
-			type="I_Heli_light_03_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item344
 		{
