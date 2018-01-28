@@ -120,6 +120,7 @@ switch (_typeofUnit) do
 // Medic Loadout:
 	case "m":
 	{
+		_unit setUnitTrait ["medic",true]; // Can use medkit
 		_unit addBackpack _bag;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
@@ -514,6 +515,9 @@ switch (_typeofUnit) do
 
 // Include the loadouts for vehicles and crates:
 #include "f_assignGear_aaf_v.sqf";
+
+// Include the default case for error handling
+#include "f_assignGear_default.sqf";
 
 // ====================================================================================
 

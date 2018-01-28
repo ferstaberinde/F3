@@ -225,8 +225,6 @@ _APmine2 = "APERSMine_Range_Mag";
 // Define classes. This defines which gear class gets which uniform
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
-_light = [];
-_heavy =  ["eng","engm"];
 _diver = ["div"];
 _pilot = ["pp","pcc","pc"];
 _crew = ["vc","vg","vd"];

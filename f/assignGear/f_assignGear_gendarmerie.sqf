@@ -111,7 +111,6 @@ _DMriflemag = "20Rnd_762x51_Mag";
 // Define classes. This defines which gear class gets which uniform
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
-_light = [];
 _pilot = ["pp","pcc"];
 _specOp = ["nf"];
 
@@ -349,6 +348,10 @@ switch (_typeofUnit) do
 		_unit addItemCargoGlobal [_firstaid,4];
 		_unit addItemCargoGlobal [_medkit,1];
 	};
+
+
+	// Include the default case for error handling
+	#include "f_assignGear_default.sqf";
 
 // ====================================================================================
 
