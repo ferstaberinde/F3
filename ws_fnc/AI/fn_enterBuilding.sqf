@@ -35,7 +35,7 @@ while {count _units > 0 && count _barray > 0} do {
 
 		// Get variables to check if building can be used
 		_bUnits = _building getVariable ["ws_bUnits",0];
-		_bposleft = _building getVariable ["ws_bPosLeft",_bposarray];
+		_bposleft = _building getVariable ["ws_bPosLeft",+_bposarray];
 
 		// Loop until we find a good building
 		while {count _barray > 0 && {count _bposLeft == 0 || (_bUnits / (count _bposarray) >= _threshold)}} do {
@@ -43,11 +43,11 @@ while {count _units > 0 && count _barray > 0} do {
 
 			_building = selectRandom _barray;
 			_bposarray = _building getVariable ["ws_bPos",[]];
-			if (count _bposleft == 0) then {_bposarray = [_building] call ws_fnc_getBpos;};
+			if (count _bposarray == 0) then {_bposarray = [_building] call ws_fnc_getBpos;};
 
 			// Get variables in order to check if building can be used
 			_bUnits = _building getVariable ["ws_bUnits",0];
-			_bposleft = _building getVariable ["ws_bPosLeft",_bposarray];
+			_bposleft = _building getVariable ["ws_bPosLeft",+_bposarray];
 		};
 
 		// If no good building was found, exit.
@@ -113,7 +113,7 @@ while {count _units > 0 && count _barray > 0} do {
 		};
 
 		// If the building doesn't have any bpos or is filled, it's removed from the building-array
-		if (count _bposleft == 0 || (_bUnits+1)/count _bposarray >= _threshold) then {_barray = _barray - [_building]};
+		if (count _bposleft == 0 || {(_bUnits+1)/count _bposarray >= _threshold}) then {_barray = _barray - [_building]};
 
 	};
 };
