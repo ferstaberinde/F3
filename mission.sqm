@@ -32681,6 +32681,7 @@ class Mission
 				position[]={2900,5,800};
 			};
 			name="F3_Spectator";
+			init="if(isServer)then{" \n "  {" \n "     this setVariable [_x, this getVariable _x, true];" \n "  } forEach [""AllowFreeCamera"", ""WhitelistedSides"", ""ShowFocusInfo"", ""AllowAi"", ""Allow3PPCamera""];" \n "};";
 			isPlayable=1;
 			description="Spectator Slot";
 			id=1130;
@@ -32792,6 +32793,7 @@ class Mission
 				position[]={2900,5,766};
 			};
 			name="F3_Spectator_1";
+			init="if(isServer)then{" \n "  {" \n "     this setVariable [_x, this getVariable _x, true];" \n "  } forEach [""AllowFreeCamera"", ""WhitelistedSides"", ""ShowFocusInfo"", ""AllowAi"", ""Allow3PPCamera""];" \n "};";
 			isPlayable=1;
 			description="Spectator Slot";
 			id=1131;
@@ -32903,6 +32905,7 @@ class Mission
 				position[]={2900,5,733};
 			};
 			name="F3_Spectator_2";
+			init="if(isServer)then{" \n "  {" \n "     this setVariable [_x, this getVariable _x, true];" \n "  } forEach [""AllowFreeCamera"", ""WhitelistedSides"", ""ShowFocusInfo"", ""AllowAi"", ""Allow3PPCamera""];" \n "};";
 			isPlayable=1;
 			description="Spectator Slot";
 			id=1132;
@@ -33014,6 +33017,7 @@ class Mission
 				position[]={2900,5,700};
 			};
 			name="F3_Spectator_3";
+			init="if(isServer)then{" \n "  {" \n "     this setVariable [_x, this getVariable _x, true];" \n "  } forEach [""AllowFreeCamera"", ""WhitelistedSides"", ""ShowFocusInfo"", ""AllowAi"", ""Allow3PPCamera""];" \n "};";
 			isPlayable=1;
 			description="Spectator Slot";
 			id=1133;
