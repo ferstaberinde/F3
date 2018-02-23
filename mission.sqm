@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=1;
@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1130;
+		nextID=1134;
 	};
 	class Camera
 	{
@@ -57,145 +57,153 @@ addons[]=
 	"A3_Soft_F_Exp_Van_01",
 	"A3_Soft_F_Exp_Offroad_01",
 	"A3_Soft_F_Gamma_SUV_01",
-	"A3_Modules_F"
+	"A3_Modules_F",
+	"A3_Data_F_Exp_A_Virtual"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			className="A3_Air_F_Heli";
-			name="Arma 3 Helicopters - Aircrafts";
+			name="Arma 3 Helicopters - Aircraft";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Air_F_Beta";
-			name="Arma 3 Beta - Aircrafts";
+			name="Arma 3 Beta - Aircraft";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Armor_F_Beta";
 			name="Arma 3 Beta - Armored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Air_F";
-			name="Arma 3 Alpha - Aircrafts";
+			name="Arma 3 Alpha - Aircraft";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item4
 		{
 			className="A3_Armor_F_EPC";
 			name="Arma 3 Win Episode - Armored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item5
 		{
 			className="A3_Armor_F_Gamma";
 			name="Arma 3 - Armored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item6
 		{
 			className="A3_Armor_F_EPB";
 			name="Arma 3 Adapt Episode - Armored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item7
 		{
 			className="A3_Air_F_EPB";
-			name="Arma 3 Adapt Episode - Aircrafts";
+			name="Arma 3 Adapt Episode - Aircraft";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item8
 		{
 			className="A3_Soft_F_Beta";
 			name="Arma 3 Beta - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item9
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item10
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item11
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item12
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item13
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item14
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item15
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item16
 		{
 			className="A3_Data_F_Curator";
 			name="Arma 3 Zeus Update - Main Configuration";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item17
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item18
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
+		};
+		class Item19
+		{
+			className="A3_Data_F_Exp_A";
+			name="Arma 3 Nexus Update - Main Configuration";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -262,7 +270,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=390;
+		items=394;
 		class Item0
 		{
 			dataType="Object";
@@ -356,6 +364,7 @@ class Mission
 			};
 			id=4;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item5
 		{
@@ -375,6 +384,7 @@ class Mission
 			};
 			id=5;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item6
 		{
@@ -394,6 +404,7 @@ class Mission
 			};
 			id=6;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item7
 		{
@@ -413,6 +424,7 @@ class Mission
 			};
 			id=7;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item8
 		{
@@ -431,6 +443,7 @@ class Mission
 			};
 			id=8;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item9
 		{
@@ -449,6 +462,7 @@ class Mission
 			};
 			id=9;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item10
 		{
@@ -539,6 +553,7 @@ class Mission
 			};
 			id=14;
 			type="B_Heli_Attack_01_F";
+			atlOffset=0.009988308;
 		};
 		class Item15
 		{
@@ -1283,6 +1298,7 @@ class Mission
 			};
 			id=54;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item55
 		{
@@ -1302,6 +1318,7 @@ class Mission
 			};
 			id=55;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item56
 		{
@@ -1321,6 +1338,7 @@ class Mission
 			};
 			id=56;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item57
 		{
@@ -2165,6 +2183,7 @@ class Mission
 			};
 			id=87;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item88
 		{
@@ -2184,6 +2203,7 @@ class Mission
 			};
 			id=88;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item89
 		{
@@ -2203,6 +2223,7 @@ class Mission
 			};
 			id=89;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item90
 		{
@@ -2935,6 +2956,7 @@ class Mission
 				};
 			};
 			id=116;
+			atlOffset=-0.37890196;
 		};
 		class Item98
 		{
@@ -2951,6 +2973,7 @@ class Mission
 			};
 			id=117;
 			type="B_Heli_Light_01_armed_F";
+			atlOffset=-0.37890196;
 		};
 		class Item99
 		{
@@ -3244,7 +3267,7 @@ class Mission
 				};
 			};
 			id=126;
-			atlOffset=0.38843632;
+			atlOffset=0.009534359;
 		};
 		class Item103
 		{
@@ -3254,14 +3277,14 @@ class Mission
 				position[]={431.92221,6.7886786,748.25006};
 			};
 			side="West";
-			flags=2;
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=127;
 			type="B_Heli_Light_01_armed_F";
-			atlOffset=0.38843632;
+			atlOffset=0.009534359;
 		};
 		class Item104
 		{
@@ -3555,7 +3578,7 @@ class Mission
 				};
 			};
 			id=136;
-			atlOffset=0.58848858;
+			atlOffset=0.20958662;
 		};
 		class Item108
 		{
@@ -3565,14 +3588,14 @@ class Mission
 				position[]={432.80014,6.9887309,724.45416};
 			};
 			side="West";
-			flags=2;
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=137;
 			type="B_Heli_Light_01_armed_F";
-			atlOffset=0.58848858;
+			atlOffset=0.20958662;
 		};
 		class Item109
 		{
@@ -5079,6 +5102,7 @@ class Mission
 				};
 			};
 			id=186;
+			atlOffset=-0.37890196;
 		};
 		class Item133
 		{
@@ -5095,6 +5119,7 @@ class Mission
 			};
 			id=187;
 			type="B_Heli_Light_01_armed_F";
+			atlOffset=-0.37890196;
 		};
 		class Item134
 		{
@@ -9271,6 +9296,7 @@ class Mission
 				};
 			};
 			id=329;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9445,6 +9471,7 @@ class Mission
 				};
 			};
 			id=334;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9619,6 +9646,7 @@ class Mission
 				};
 			};
 			id=339;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9793,6 +9821,7 @@ class Mission
 				};
 			};
 			id=344;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9967,6 +9996,7 @@ class Mission
 				};
 			};
 			id=349;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10141,6 +10171,7 @@ class Mission
 				};
 			};
 			id=354;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10252,6 +10283,7 @@ class Mission
 				};
 			};
 			id=359;
+			atlOffset=0.009988308;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -29465,6 +29497,7 @@ class Mission
 			};
 			id=953;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item324
 		{
@@ -29484,6 +29517,7 @@ class Mission
 			};
 			id=954;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item325
 		{
@@ -29503,6 +29537,7 @@ class Mission
 			};
 			id=955;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item326
 		{
@@ -29522,6 +29557,7 @@ class Mission
 			};
 			id=956;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item327
 		{
@@ -29541,6 +29577,7 @@ class Mission
 			};
 			id=957;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item328
 		{
@@ -29560,6 +29597,7 @@ class Mission
 			};
 			id=958;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item329
 		{
@@ -32321,7 +32359,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1099;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item366
 		{
@@ -32334,7 +32372,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1105;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item367
 		{
@@ -32347,7 +32385,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1106;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item368
 		{
@@ -32360,7 +32398,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1107;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item369
 		{
@@ -32373,7 +32411,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1108;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item370
 		{
@@ -32386,7 +32424,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1110;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item371
 		{
@@ -32399,7 +32437,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1111;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item372
 		{
@@ -32412,7 +32450,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1112;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item373
 		{
@@ -32425,7 +32463,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1113;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item374
 		{
@@ -32438,7 +32476,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1114;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item375
 		{
@@ -32451,7 +32489,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1115;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item376
 		{
@@ -32464,7 +32502,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1116;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item377
 		{
@@ -32477,7 +32515,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1117;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item378
 		{
@@ -32490,7 +32528,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1118;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item379
 		{
@@ -32503,7 +32541,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1119;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item380
 		{
@@ -32516,7 +32554,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1120;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item381
 		{
@@ -32529,7 +32567,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1121;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item382
 		{
@@ -32542,7 +32580,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1122;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item383
 		{
@@ -32555,7 +32593,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1123;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item384
 		{
@@ -32568,7 +32606,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1124;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item385
 		{
@@ -32581,7 +32619,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1125;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item386
 		{
@@ -32594,7 +32632,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1126;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item387
 		{
@@ -32607,7 +32645,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1127;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item388
 		{
@@ -32620,7 +32658,7 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1128;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
 		};
 		class Item389
 		{
@@ -32633,7 +32671,451 @@ class Mission
 			init="[synchronizedObjects this,true,false] call f_fnc_mountGroups;";
 			id=1129;
 			type="Logic";
-			atlOffset=185.97;
+			atlOffset=-5;
+		};
+		class Item390
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2900,5,800};
+			};
+			name="F3_Spectator";
+			isPlayable=1;
+			description="Spectator Slot";
+			id=1130;
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item391
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2900,5,766};
+			};
+			name="F3_Spectator_1";
+			isPlayable=1;
+			description="Spectator Slot";
+			id=1131;
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item392
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2900,5,733};
+			};
+			name="F3_Spectator_2";
+			isPlayable=1;
+			description="Spectator Slot";
+			id=1132;
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item393
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2900,5,700};
+			};
+			name="F3_Spectator_3";
+			isPlayable=1;
+			description="Spectator Slot";
+			id=1133;
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
 		};
 	};
 	class Connections
