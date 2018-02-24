@@ -5,7 +5,9 @@
 //Exit if server
 if(isDedicated) exitwith {};
 
-switch (_this select 0) do
+params [["_enableSafeStart", true, [true]]];
+
+switch (_enableSafeStart) do
 {
 	//Turn safety on
 	case true:

@@ -11,7 +11,15 @@ if (f_param_debugMode == 1) then {
 
 if (_isDragger) then {
 	// the dragger gets a release option.
-	_actionIdx = _dragger addAction [format["Release %1",name _unit],{(_this select 1) setVariable ["f_wound_dragging",nil,true];}, nil, 6, false, true, "", "true"];
+	_actionIdx = _dragger addAction [format["Release %1",name _unit],{
+		params [
+			["_target", objNull, [objNull]],
+			["_caller", objNull, [objNull]],
+			["_ID", -1, [0]],
+			["_arguments", nil]
+		];
+		_caller setVariable ["f_wound_dragging",nil,true];
+	}, nil, 6, false, true, "", "true"];
 	_dragger playMoveNow "AcinPknlMstpSnonWnonDnon";
 } else {
 	_unit attachTo [_dragger, [0, 1.1, 0.092]];

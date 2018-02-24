@@ -42,14 +42,20 @@ if (isNil "f_var_doNotRemoveBodies") then {f_var_doNotRemoveBodies = []};
 // A killed event handler is added to all units in the array _men that are not part of the exempt group
 
 {
-_handle = _x getVariable ["f_removeBodyEH",false];
-if !(_handle && local _x) then {
-	_x addEventHandler ["killed", {(_this select 0) spawn f_fnc_removeBody}];
-	_x setVariable ["f_removeBodyEH",true];
+	_handle = _x getVariable ["f_removeBodyEH",false];
+	if !(_handle && local _x) then {
+		_x addEventHandler ["Killed", {
+			params [
+				["_unit", objNull, [objNull]],
+				["_killer", objNull, [objNull]],
+				["_instigator", objNull, [objNull]],
+				["_useEffects", true, [true]]
+			];
+			_unit spawn f_fnc_removeBody
+		}];
+		_x setVariable ["f_removeBodyEH",true];
 	};
 } forEach _men;
 
 
 // ====================================================================================
-
-

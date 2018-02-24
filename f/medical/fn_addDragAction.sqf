@@ -25,8 +25,14 @@ private _drag_action_cond = str {
 _drag_action_cond = _drag_action_cond select [1, count _drag_action_cond - 2];
 
 private _drag_exec_code = {
-	 _this remoteExec ["f_fnc_OnDrag", [_this select 1]]; //Dragger
-	 _this remoteExec ["f_fnc_OnDrag", [_this select 0]]; //Target
+	params [
+		["_target", objNull, [objNull]],
+		["_caller", objNull, [objNull]],
+		["_ID", -1, [0]],
+		["_arguments", nil]
+	];
+	 _this remoteExec ["f_fnc_OnDrag", [_caller]]; //Dragger
+	 _this remoteExec ["f_fnc_OnDrag", [_target]]; //Target
 };
 
 private _resultId = _unit addAction [
