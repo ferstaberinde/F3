@@ -4,14 +4,15 @@
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_unit","_mkrName","_mkr","_mkrBorder","_pos","_mkrborderName","_dir"];
+private ["_mkrName","_mkr","_mkrBorder","_pos","_mkrborderName","_dir"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-_unit = _this select 0;
+params ["_unit"];
+
 _mkrName = Format ["mkr_%1",_unit];
 _mkrborderName = Format ["mkrB_%1",_unit];
 
@@ -35,7 +36,6 @@ _mkr setMarkerTypeLocal "MIL_TRIANGLE";
 _mkr setMarkerColorLocal (_unit getvariable ["assignedTeam","ColorWhite"]);
 _mkr setMarkerSizeLocal [0.45, 0.45];
 _mkr setMarkerDirLocal (direction _unit);
-
 
 
 // ====================================================================================

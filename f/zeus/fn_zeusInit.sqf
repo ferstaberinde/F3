@@ -68,7 +68,15 @@ _curator setCuratorWaypointCost 0;
 
 // Check if F3 AI Skill Selector is active and assign corresponding event-handler
 if({!isNil _x} count ["f_param_AISkill_BLUFOR","f_param_AISkill_INDP","f_param_AISkill_OPFOR"] > 0) then {
-    _curator addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISkill;} forEach crew(_this select 1)}];
+	_curator addEventHandler ['CuratorObjectPlaced',{
+		params[
+			["_curator", objNull, [objNull]],
+			["_entity", objNull, [objNull]]
+		];
+		{
+			[_x] call f_fnc_setAISkill;
+		} forEach crew _entity;
+	}];
 };
 
 // Setup

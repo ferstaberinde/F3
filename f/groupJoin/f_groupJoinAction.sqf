@@ -43,9 +43,14 @@ while {true} do {
 			_actionString = format["Join %1 (%2)", name _nearUnit,_nearGroup];
 
 			f_groupJoinAction = player addAction [_actionString, {
+				params [
+					["_target", objNull, [objNull]],
+					["_caller", objNull, [objNull]],
+					["_ID", -1, [0]],
+					["_grp", grpNull, [grpNull]]
+				];
 
 				_unit = player;
-				_grp = (_this select 3);
 
 				// Player joins new group
 				[player] joinSilent _grp;

@@ -1,4 +1,5 @@
 
+params [["_seagull", objNull, [objNull]]];
 
 [] spawn {
 
@@ -19,5 +20,6 @@ if (f_param_debugMode == 1) then {
     sleep 3;
     ["Initialize", [player, [], true, true, true, false, true, true, true, true]] call BIS_fnc_EGSpectator;
 };
+
 //Remove the bird
-deleteVehicle (_this select 0);
+deleteVehicle _seagull;
