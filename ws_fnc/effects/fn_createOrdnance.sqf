@@ -36,9 +36,9 @@ _dummy setVariable ["type",_class];
 [_dummy,nil,true] call BIS_fnc_moduleProjectile;
 
 [_dummy] spawn {
+	params [["_object", objNull, [objNull]]];
 	sleep 10;
-
-	deleteVehicle (_this select 0);
+	deleteVehicle _object;
 };
 
 true

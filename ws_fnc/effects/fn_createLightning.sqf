@@ -23,9 +23,9 @@ _dummy enableSimulationGlobal false; _dummy hideObjectGlobal true;
 [_dummy,nil,true] call BIS_fnc_moduleLightning;
 
 [_dummy] spawn {
+	params [["_object", objNull, [objNull]]];
 	sleep 10;
-
-	deleteVehicle (_this select 0);
+	deleteVehicle _object;
 };
 
 true

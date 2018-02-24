@@ -24,7 +24,7 @@ params [
 	["_threshold", 1.0, [0]] //Fraction of building positions that can be taken before building is considered "full"
 ];
 
-if (!(_barray isEqualType [])) then {_barray = [_this select 1]};
+if (!(_barray isEqualType [])) then {_barray = [_barray]};
 if (_threshold <= 0) then {_threshold = 0.8};
 
 // As long we have units and a more than one building we loop through either
