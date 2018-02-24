@@ -27,17 +27,18 @@ C) nul = [MyGroup,MyGroup] spawn ws_fnc_taskAmbush: The group named MyGroup will
 
 if !(ws_game_a3) exitWith {["ws_fnc_taskAmbush DBG:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
-private ["_debug","_grp","_pos","_nPos","_killzone","_radius","_mindis","_sidesEnemy","_wp","_mkr","_count","_ambush","_owatch","_npos","_trg"];
+private ["_debug","_pos","_nPos","_radius","_mindis","_sidesEnemy","_wp","_mkr","_npos","_trg"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
 _debug = if !(isNil "ws_debug") then {ws_debug} else {false};
 
 // Interpret arguments
-_count = count _this;
-_grp = _this select 0;
-_ambush = _this select 1;
-_killzone = if (_count > 2) then [{_this select 2},{[]}];
-_owatch = if (_count > 3) then [{_this select 3},{[50,200]}];
+params [
+	["_grp", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_ambush", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_killzone", [], [[]]],
+	["_owatch", [50,200], [[]], [0,2]]
+];
 
 // Get positions for group and ambush location
 _pos = _ambush call ws_fnc_getEPos;

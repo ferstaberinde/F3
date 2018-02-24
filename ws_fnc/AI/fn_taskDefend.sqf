@@ -34,9 +34,19 @@ EXAMPLE
 
 */
 
-private ["_debug","_game","_count","_milarrayA2","_badarrayA2","_badarrayA3","_milarrayA3",
-"_group","_newGroup","_pos","_radius","_guns","_garrison","_civil",
-"_buildings","_vehicles","_milbuildings","_staticarray","_badarray","_milarray","_units","_static","_mkr"];
+private ["_debug","_milarrayA2","_badarrayA3","_milarrayA3","_badarrayA2",
+"_mthreshold","_cthreshold","_buildings","_milbuildings","_badarray","_milarray","_units","_mkr"];
+
+params [
+	["_group", grpNull, [grpNull]],
+	["_pos", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_radius", 0, [0]],
+	["_guns", true, [true]],
+	["_garrison", true, [true]],
+	["_civil", true, [true]]
+];
+
+_pos = _pos call ws_fnc_getEPos;
 
 //Customizable Variables
 _mthreshold = 1; // Percentage of building positions to occupy in military buildings (1=all)
@@ -57,19 +67,6 @@ _badarrayA3 = [];
 //Debug mode. If ws_debug is globally defined it overrides _debug
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
 
-//Declaring variables
-_count = count _this;
-
-_group = _this select 0;
-_pos = (_this select 1) call ws_fnc_getEPos;
-_radius = _this select 2;
-_guns = true;				//Man statics?
-_garrison = true;			//Garrison military structures? - defined in _milarray
-_civil = true;				//Garrison civilian buildings?
-if (_count > 3) then {_guns = _this select 3};
-if (_count > 4) then {_garrison = _this select 4};
-if (_count > 5) then {_civil  = _this select 5};
-
 _buildings = [_pos,_radius] call ws_fnc_collectBuildings;
 _milarray = [];
 _badarray = [];
@@ -78,7 +75,7 @@ _milbuildings = [];
 //Add buildings specific to the game version
 if !(ws_game_a3) then {
 	_milarray = _milarrayA2;
-	_badarray = _badarrayA3;
+	_badarray = _badarrayA2;
 };
 
 if (ws_game_a3) then {
@@ -125,4 +122,3 @@ if (count _units >= 1) then {
 };
 
 _units
-

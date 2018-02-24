@@ -28,10 +28,8 @@ Accepted Strings:
 "FULL" "NORMAL" "LIMITED"
 */
 
-private ["_grp","_modes"];
-
-_grp = _this select 0;
-_modes = _this - [_this select 0];
+private _grp = param [0, grpNull, [grpNull, objNull]];
+private _modes = _this - [_grp];
 
 {
 switch (_x) do {

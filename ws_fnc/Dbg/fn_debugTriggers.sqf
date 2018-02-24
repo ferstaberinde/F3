@@ -1,7 +1,7 @@
 //WS_fnc_debugTriggers
 //Creates various triggers to be used ingame. Does not need to run twice
 
-_debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
+private _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
 if !(_debug) exitWith {};
 if !(isNil "ws_dbg_trg") exitWith {};
 

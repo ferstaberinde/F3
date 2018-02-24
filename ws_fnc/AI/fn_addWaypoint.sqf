@@ -37,8 +37,7 @@ EXAMPLES
 [GrpUS_CO,[5,8,0],["sad",250],["COMBAT","RED","FULL"],"hint 'reinforcements have arrived'"] call ws_fnc_addWaypoint	|  move the group named "GrpUS_CO" to [5,8,0] with full speed and have them start a sweep in a radius of 250. When they reach the waypoint the hint "reinforcements have arrived!" will be displayed
 */
 
-private ["_debug",
-"_pos","_modes","_wp","_mkr"];
+private ["_debug","_modes","_wp","_mkr"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};  //Debug mode. If ws_debug is globally defined it overrides _debug
 
@@ -63,7 +62,11 @@ _marray params [
 	["_road", false, [false]]
 ];
 
-_pos = if !(_road) then {(_pos) call ws_fnc_getEPos;} else {[(_pos),150,5] call ws_fnc_NearestRoadPos};
+if !(_road) then {
+	_pos = (_pos) call ws_fnc_getEPos;
+} else {
+	_pos = [(_pos),150,5] call ws_fnc_NearestRoadPos;
+};
 
 //Fault checks
 //Checking the variables we have enough against what we should have

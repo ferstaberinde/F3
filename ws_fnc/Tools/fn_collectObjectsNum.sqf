@@ -17,13 +17,12 @@ EXAMPLE
 [Cache,Church] call ws_fnc_collectObjectsNum - returns an array with all objects with "Cache" and "Church" and those following in a numeric order: [Cache,Cache_1,Cache_2,Church,Church_1,Church_2]
 */
 
-private ["_arr","_done"];
+private ["_arr", "_i", "_obj"];
 
 _arr = [];
 
 //Start the loop
 _i = 0;
-_done = false;
 
 if (!(_this isEqualType [])) then {
 	_this = [_this];

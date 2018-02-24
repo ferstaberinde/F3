@@ -15,14 +15,16 @@ RETURNS
 Units that haven't been put into a building position
 */
 
-private ["_debug","_units","_building","_threshold","_barray","_bpos","_bposarray","_bposleft","_bUnits","_occupied","_mkr"];
+private ["_debug","_building","_bpos","_bposarray","_bposleft","_bUnits","_mkr","_unit","_i"];
 _debug = if !(isNil "ws_debug") then {ws_debug} else {false};
 
-_units = _this select 0;
-_barray = _this select 1;
-_threshold = if (count _this > 2) then [{_this select 2},{1}];	//Percentage of building positions that can be taken before building is considered "full"
+params [
+	["_units", [], [[]]],
+	["_barray", [], [[]]],
+	["_threshold", 1.0, [0]] //Fraction of building positions that can be taken before building is considered "full"
+];
 
-if (!(_barray isEqualType [])) then {_barray = [_this select 1]};
+if (!(_barray isEqualType [])) then {_barray = [_barray]};
 if (_threshold <= 0) then {_threshold = 0.8};
 
 // As long we have units and a more than one building we loop through either
@@ -67,11 +69,8 @@ while {count _units > 0 && count _barray > 0} do {
 		_building setVariable ["ws_bUnits",_bUnits+1,true];
 
 		// For the unit spawn code to have it enter the building
-		[_unit,_bpos,_building] spawn {
-			private ["_unit","_pos","_dir"];
-
-			_unit = _this select 0;
-			_pos = _this select 1;
+		[_unit,_bpos] spawn {
+			params ["_unit","_pos"];
 
 			_unit setVariable ["ws_bpos",_pos,true];
 			_unit doMove _pos;
@@ -88,7 +87,8 @@ while {count _units > 0 && count _barray > 0} do {
 
 			//Check the distance to the building position and the distance between z-levels (if the unit got stuck)
 			if (((getPosATL _unit) select 2) - (_pos select 2) < 0.2) then {
-				_unit setPosATL _pos;_unit moveTo _pos;
+				_unit setPosATL _pos;
+				_unit moveTo _pos;
 
 					// Wait another 10 seconds for the unit to get ready
 					for "_i" from 0 to 10 do {

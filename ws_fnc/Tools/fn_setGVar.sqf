@@ -21,12 +21,14 @@ RETURNS
 nothing
 */
 
-private ["_var","_val","_pub","_force","_debug"];
+private ["_debug"];
 
-_var = _this select 0;
-_val = _this select 1;
-_pub = if (count _this > 2) then [{_this select 2},{false}];
-_force = if (count _this > 3) then [{_this select 3},{false}];
+params [
+	["_var", "", [""]],
+	["_val", 0],
+	["_pub", false, [false]],
+	["_force", false, [false]]
+];
 
 _debug = if !(isNil "ws_debug") then [{ws_debug},{false}];
 

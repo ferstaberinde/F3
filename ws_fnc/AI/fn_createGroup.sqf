@@ -1,5 +1,4 @@
 // WS_fnc_createGroup
-// v1 (13.04.2013)
 // By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 //
 // FEATURE
@@ -23,50 +22,41 @@
 // 	4.2 Array of classes that fill up the group after all forced classes are used		| MANDATORY
 // 5. code that is executed after the group is spawned						| OPTIONAL - executed as [_grp,_this] spawn _code, code has to be string or code
 
-private ["_debug","_count",
-"_faction","_spawn","_waypoint","_classes_array","_commonclasses","_forcedclasses","_rareclasses","_rarechance","_respawns",
-"_side","_pos","_behaviour","_code","_grp","_wp","_mkr"];
+private ["_debug","_grp","_mkr"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug}; //Debug mode. If ws_debug is globally defined it overrides _debug
 
+params [
+	["_pos", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_side", sideUnknown, [sideUnknown]],
+	["_size", 0, [0]],
+	["_classes", [], [[]]],
+	["_code", {}, [{},""]]
+];
+_pos = _pos call ws_fnc_getEpos;
+
 //Declaring variables
-_count = count _this;
-_pos = (_this select 0) call ws_fnc_getEPos;
-_side = _this select 1;
-_size = _this select 2;
-_forcedclasses = (_this select 3) select 0;
-_commonclasses = (_this select 3) select 1;
-
-_code = {};
-
-//Optional parameters parsed with the call
-if (_count > 4) then {_code = _this select 4;};
+_classes params [
+	["_forcedclasses", [], [[]]],
+	["_commonclasses", [], [[]]]
+];
 
 if (_debug) then {
 	["ws_fnc_createGroup DBG: running with: ",_this,""] call ws_fnc_debugText;
 };
 
-//Fault checks
-//Checking the variables we have enough against what we should have
-{[_x,["SIDE"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_side];
-{[_x,["ARRAY"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_commonclasses,_forcedclasses];
-{[_x,["SCALAR"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_size];
-{[_x,["STRING","CODE"],"ws_fnc_spawnGroup"] call ws_fnc_typecheck;} forEach [_code];
-
-
 //Creating the group
 _grp = createGroup _side;
 
-//REWRITE: assign folk gear ?
 //Create the group leader around who the group assembles
-_unit = _grp createUnit [_forcedclasses select 0,_pos,[],0,"NONE"];
+_grp createUnit [_forcedclasses select 0,_pos,[],0,"NONE"];
 
 for "_x" from 2 to (_size) do {
-  if (_x <= (count _forcedclasses)) then {
-  _unit = _grp createUnit [_forcedclasses select (_x - 1),_pos,[],5,"NONE"];
-  } else {
-	 _unit = _grp createUnit [selectRandom _commonclasses,_pos,[],5,"NONE"];
-	 };
+	if (_x <= (count _forcedclasses)) then {
+		_grp createUnit [_forcedclasses select (_x - 1),_pos,[],5,"NONE"];
+	} else {
+		_grp createUnit [selectRandom _commonclasses,_pos,[],5,"NONE"];
+	};
 };
 
 //Weird step necessary to get the correct side for the group
@@ -82,25 +72,23 @@ for "_x" from 2 to (_size) do {
 //DEBUG
 //Debug creates various markers and text messages helping to indicate where/when groups are spawned.
 if (_debug) then {
-player globalchat format ["DEBUG: ws_fnc_createGroup done. _grp:%1 of size: %2 and side %3",_grp,count (units _grp),side leader _grp];
+	player globalchat format ["DEBUG: ws_fnc_createGroup done. _grp:%1 of size: %2 and side %3",_grp,count (units _grp),side leader _grp];
 
-  _mkr = createMarker [format ["Grp_%1",_grp], _pos];
-  _mkr setMarkerType "n_inf";
-  _mkr setMarkerColor "ColorBlue";
-  _mkr setMarkerText format ["DBG:Grp %1",_grp];
-  _mkr setMarkerSize [0.5,0.5];
+	_mkr = createMarker [format ["Grp_%1",_grp], _pos];
+	_mkr setMarkerType "n_inf";
+	_mkr setMarkerColor "ColorBlue";
+	_mkr setMarkerText format ["DBG:Grp %1",_grp];
+	_mkr setMarkerSize [0.5,0.5];
 
-  [_grp,_mkr] spawn {
-	 _check = count (units (_this select 0));
-	 while {_check > 0} do {
-		_check = {alive _x} count (units (_this select 0));
-		 sleep 5;
-		 (_this select 1) setMarkerPos (getPos (leader (_this select 0)));
-		 };
-
-	 (_this select 1) setMarkerColor "ColorRed";
-	 (_this select 1) setMarkerText format ["DBG:Grp %1 dead",_this select 0];
-   };
+	[_grp,_mkr] spawn {
+		params ["_grp","_mkr"];
+		while { {alive _x} count (units _grp) > 0 } do {
+			sleep 5;
+			_mkr setMarkerPos (getPos (leader _grp));
+		};
+	_mkr setMarkerColor "ColorRed";
+	_mkr setMarkerText format ["DBG:Grp %1 dead",_grp];
+	};
 };
 
 //Output the created group and parameters
