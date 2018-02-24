@@ -476,7 +476,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_AV";
 			};
 			id=10;
@@ -494,7 +494,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_BV";
 			};
 			id=11;
@@ -512,7 +512,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_CV";
 			};
 			id=12;
@@ -530,7 +530,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_COV";
 			};
 			id=13;
@@ -548,7 +548,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_helo_a"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_helo_a"",this] call f_fnc_assignGear;";
 				name="VehNATO_AH1";
 			};
 			id=14;
@@ -758,7 +758,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_COV";
 				textures="Hex";
 			};
@@ -777,7 +777,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_AV";
 				textures="Hex";
 			};
@@ -796,7 +796,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_BV";
 				textures="Hex";
 			};
@@ -815,7 +815,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_CV";
 				textures="Hex";
 			};
@@ -834,7 +834,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_helo_a"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_helo_a"",this] call f_fnc_assignGear;";
 				name="VehCSAT_AH1";
 				textures="Opfor";
 			};
@@ -853,7 +853,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_tank"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_tank"",this] call f_fnc_assignGear;";
 				name="VehNATO_TNK1";
 			};
 			id=30;
@@ -871,7 +871,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_COV";
 			};
 			id=31;
@@ -889,7 +889,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_AV";
 			};
 			id=32;
@@ -907,7 +907,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_BV";
 			};
 			id=33;
@@ -925,7 +925,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_CV";
 			};
 			id=34;
@@ -943,7 +943,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_tank"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_tank"",this] call f_fnc_assignGear;";
 				name="VehCSAT_TNK1";
 				textures="Hex";
 			};
@@ -962,7 +962,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_tank"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_tank"",this] call f_fnc_assignGear;";
 				name="VehAAF_TNK1";
 			};
 			id=36;
@@ -1918,7 +1918,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_IFV1";
 			};
 			id=73;
@@ -1936,7 +1936,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_IFV2";
 			};
 			id=74;
@@ -1990,7 +1990,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_IFV1";
 				textures="Hex";
 			};
@@ -2009,7 +2009,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_IFV2";
 				textures="Hex";
 			};
@@ -2066,7 +2066,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_IFV1";
 			};
 			id=81;
@@ -2085,7 +2085,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_IFV2";
 			};
 			id=82;
