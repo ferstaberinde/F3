@@ -1,3 +1,5 @@
+fa3_version[] = {3,5,1}; // WARNING: DO NOT CHANGE THIS LINE
+
 // ============================================================================================
 // F3 - Loading Screen
 // Set Author, overview image/text, loading image/text from Eden Editor
