@@ -8,25 +8,33 @@ if !(isServer) exitWith {};
 // Redundant sleep to give everything a second to settle
 sleep 2;
 
+//Intervals for checking the timer and for sending notifications
+private _intervalCheck = 10;
+private _intervalNotification = _intervalCheck * 6; //Must be a multiple of _intervalCheck
+
+private _started = false;
 while {f_param_mission_timer > 0} do {
 
 	// Broadcast remaining time to players
-	["SafeStart",[format["Time Remaining: %1 min",f_param_mission_timer]]] remoteExec ["bis_fnc_showNotification", 0];
+	if (!_started || f_param_mission_timer % _intervalNotification == 0) then {
+		["SafeStart",[format["Time Remaining: %1 min",(f_param_mission_timer / 60) toFixed 1]]] remoteExec ["bis_fnc_showNotification", 0];
+		_started = true;
+	};
 
-	uisleep 60; // Sleep 60 seconds
+	uisleep _intervalCheck; // Sleep _intervalCheck seconds
 
 	// If mission timer has been terminated by admin briefing, simply exit
 	if (f_param_mission_timer < 0) exitWith {};
 
-	// Reduce the mission timer by one
-	f_param_mission_timer = f_param_mission_timer - 1;
+	// Reduce the mission timer by _intervalCheck seconds
+	f_param_mission_timer = f_param_mission_timer - _intervalCheck;
 	publicVariable "f_param_mission_timer";
 };
 
 //Once the mission timer has reached 0, disable the safeties
 if (f_param_mission_timer == 0) then {
 		// Broadcast message to players
-		["SafeStartMissionStarting",["Mission starting now!"]] remoteExec ["bis_fnc_showNotification", 0];
+		["SafeStartMissionStarting",["Safe start ended!"]] remoteExec ["bis_fnc_showNotification", 0];
 
 		// Remotely execute script to disable safety for all selectable units
 		[false] remoteExec ["f_fnc_safety", playableUnits + switchableUnits];
