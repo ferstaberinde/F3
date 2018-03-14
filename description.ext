@@ -1,3 +1,5 @@
+fa3_version[] = {3,5,1}; // WARNING: DO NOT CHANGE THIS LINE
+
 // ============================================================================================
 // F3 - Loading Screen
 // Set Author, overview image/text, loading image/text from Eden Editor
@@ -221,6 +223,18 @@ class Params
 		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
 		default = 1;
 	};
+
+// ============================================================================================
+
+// F3 - Caching
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+//	class f_param_caching
+//	{
+//		title = "Cache AI outside distance (m)";
+//		values[] = {0,600,800,1000,1500,2000};
+//		default = 0;
+//	};
 
 // ============================================================================================
 

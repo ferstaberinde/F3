@@ -32,6 +32,14 @@ class F // Defines the "owner"
 		class SetWeather{};
 		class SetWind{};
 	};
+	class cache
+	{
+		file = "f\cache";
+		class cInit {};
+		class cTracker {};
+		class gCache {};
+		class gUncache {};
+	};
 	class groupMarkers {
 		file = "f\groupMarkers";
 		class localGroupMarker{};
@@ -64,6 +72,7 @@ class F // Defines the "owner"
 		file = "f\mapClickTeleport";
 		class mapClickTeleportUnit{};
 		class mapClickTeleportGroup{};
+		class mapClickTeleportParachute{};
 	};
 	class nametag
 	{
@@ -113,5 +122,10 @@ class F // Defines the "owner"
 	{
 		file = "f\disableThermals";
 		class disableThermals {};
+	};
+	class dynamicViewDistance
+	{
+		file = "f\dynamicViewDistance";
+		class ehSetViewDistance {};
 	};
 };

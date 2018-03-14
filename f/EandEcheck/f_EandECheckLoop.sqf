@@ -56,12 +56,12 @@ if (_objects isEqualType sideUnknown) then {
 			if (_temp isEqualType grpNull) then {
 				{
 					if !(_x in _units) then {
-						_units set [count _units,_x];
+						_units pushBack _x;
 					};
 				} forEach units _temp;
 			} else {
 				if !(_x in _units) then {
-					_units set [count _units,_temp];
+					_units pushBack _temp;
 				};
 			};
 		};

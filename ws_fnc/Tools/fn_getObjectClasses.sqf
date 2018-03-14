@@ -5,15 +5,12 @@ FEATURE
 Returns array of object classes
 
 USAGE
-[ojects] call ws_fnc_getObjectClasses
+[objects] call ws_fnc_getObjectClasses
 
 */
 
-params["_objects"];
-private _arr = [];
+params[
+	["_objects", [], [[]]]
+];
 
-{
-	_arr pushback (typeOf _x);
-} forEach _objects;
-
-_arr
+_objects apply {typeOf _x}

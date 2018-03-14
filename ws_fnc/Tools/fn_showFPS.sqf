@@ -15,6 +15,8 @@ NOTE
 ARMA 3 only
 */
 
-params [["_time", 60, [0]]];
+params [
+	["_time", 60, [0]]
+];
 
 [_time,[format ["%1",name player]]] call BIS_fnc_FPS;

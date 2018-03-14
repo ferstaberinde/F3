@@ -9,7 +9,7 @@ RETURNS
 true/false for HC/not-HC
 */
 
-_hc = false;
+private _hc = false;
 ws_var_isHC = false;
 ["ws_var_HCs",[],true] call ws_fnc_setGVar;
 

@@ -1,5 +1,4 @@
 /* ws_fnc_NearestRoadPos
-Latest: 10.10.2013
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 
 USAGE
@@ -14,15 +13,17 @@ RETURNS
 positional array
 */
 
-private ["_i","_distance","_increment","_roads","_done"];
+private ["_i","_roads","_done"];
 
-_pos = (_this select 0) call ws_fnc_getEPos;
+params [
+	["_pos", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_distance", 10, [0]],
+	["_increment", 50, [0]]
+];
+
+_pos = _pos call ws_fnc_getEPos;
 
 _i = 0;
-_distance = 10;
-if (count _this > 1) then {_distance = _this select 1};
-_increment = 50;
-if (count _this > 2) then {_increment = _this select 2};
 _done = false;
 
 while {!_done && _i <= 20} do {
@@ -31,9 +32,9 @@ while {!_done && _i <= 20} do {
 		_pos = getPosATL (selectRandom _roads);
 		_done = true;
 	} else {
-	_distance = _distance + _increment;
-	_i = _i + 1;
-	if (_i == 20) exitWith {_pos = _this select 0; ["ws_fnc_NearestRoadPos ERROR: No roads found in radius of",(_increment*20),""] call ws_fnc_DebugText};
+		_distance = _distance + _increment;
+		_i = _i + 1;
+		if (_i == 20) exitWith {["ws_fnc_NearestRoadPos ERROR: No roads found in radius of",(_increment*20),""] call ws_fnc_DebugText};
 	};
 };
 

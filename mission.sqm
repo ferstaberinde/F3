@@ -1,4 +1,4 @@
-version=52;
+version=53;
 class EditorData
 {
 	moveGridStep=1;
@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1099;
+		nextID=1134;
 	};
 	class Camera
 	{
@@ -56,145 +56,154 @@ addons[]=
 	"A3_Soft_F_Exp_Offroad_02",
 	"A3_Soft_F_Exp_Van_01",
 	"A3_Soft_F_Exp_Offroad_01",
-	"A3_Soft_F_Gamma_SUV_01"
+	"A3_Soft_F_Gamma_SUV_01",
+	"A3_Modules_F",
+	"A3_Data_F_Exp_A_Virtual"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			className="A3_Air_F_Heli";
-			name="Arma 3 Helicopters - Aircrafts";
+			name="Arma 3 Helicopters - Aircraft";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item1
 		{
 			className="A3_Air_F_Beta";
-			name="Arma 3 Beta - Aircrafts";
+			name="Arma 3 Beta - Aircraft";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item2
 		{
 			className="A3_Armor_F_Beta";
 			name="Arma 3 Beta - Armored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item3
 		{
 			className="A3_Air_F";
-			name="Arma 3 Alpha - Aircrafts";
+			name="Arma 3 Alpha - Aircraft";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item4
 		{
 			className="A3_Armor_F_EPC";
 			name="Arma 3 Win Episode - Armored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item5
 		{
 			className="A3_Armor_F_Gamma";
 			name="Arma 3 - Armored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item6
 		{
 			className="A3_Armor_F_EPB";
 			name="Arma 3 Adapt Episode - Armored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item7
 		{
 			className="A3_Air_F_EPB";
-			name="Arma 3 Adapt Episode - Aircrafts";
+			name="Arma 3 Adapt Episode - Aircraft";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item8
 		{
 			className="A3_Soft_F_Beta";
 			name="Arma 3 Beta - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item9
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item10
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item11
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item12
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item13
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item14
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item15
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item16
 		{
 			className="A3_Data_F_Curator";
 			name="Arma 3 Zeus Update - Main Configuration";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item17
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
 		};
 		class Item18
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
-			url="http://www.arma3.com";
+			url="https://www.arma3.com";
+		};
+		class Item19
+		{
+			className="A3_Data_F_Exp_A";
+			name="Arma 3 Nexus Update - Main Configuration";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -237,7 +246,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="fa f3 3.5.0 release";
+		briefingName="fa3-5-1";
 		resistanceWest=0;
 		timeOfChanges=28800;
 		startWeather=0.50001526;
@@ -261,7 +270,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=365;
+		items=394;
 		class Item0
 		{
 			dataType="Object";
@@ -355,6 +364,7 @@ class Mission
 			};
 			id=4;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item5
 		{
@@ -374,6 +384,7 @@ class Mission
 			};
 			id=5;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item6
 		{
@@ -393,6 +404,7 @@ class Mission
 			};
 			id=6;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item7
 		{
@@ -412,6 +424,7 @@ class Mission
 			};
 			id=7;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item8
 		{
@@ -430,6 +443,7 @@ class Mission
 			};
 			id=8;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item9
 		{
@@ -448,6 +462,7 @@ class Mission
 			};
 			id=9;
 			type="B_Heli_Transport_01_F";
+			atlOffset=-1.2397766e-005;
 		};
 		class Item10
 		{
@@ -461,7 +476,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_AV";
 			};
 			id=10;
@@ -479,7 +494,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_BV";
 			};
 			id=11;
@@ -497,7 +512,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_CV";
 			};
 			id=12;
@@ -515,7 +530,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_COV";
 			};
 			id=13;
@@ -533,11 +548,12 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_helo_a"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_helo_a"",this] call f_fnc_assignGear;";
 				name="VehNATO_AH1";
 			};
 			id=14;
-			type="B_Heli_Attack_01_F";
+			type="B_Heli_Attack_01_dynamicLoadout_F";
+			atlOffset=0.009988308;
 		};
 		class Item15
 		{
@@ -742,7 +758,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_COV";
 				textures="Hex";
 			};
@@ -761,7 +777,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_AV";
 				textures="Hex";
 			};
@@ -780,7 +796,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_BV";
 				textures="Hex";
 			};
@@ -799,7 +815,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_CV";
 				textures="Hex";
 			};
@@ -818,12 +834,12 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_helo_a"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_helo_a"",this] call f_fnc_assignGear;";
 				name="VehCSAT_AH1";
 				textures="Opfor";
 			};
 			id=29;
-			type="O_Heli_Attack_02_black_F";
+			type="O_Heli_Attack_02_dynamicLoadout_F";
 		};
 		class Item30
 		{
@@ -837,7 +853,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_tank"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_tank"",this] call f_fnc_assignGear;";
 				name="VehNATO_TNK1";
 			};
 			id=30;
@@ -855,7 +871,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_COV";
 			};
 			id=31;
@@ -873,7 +889,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_AV";
 			};
 			id=32;
@@ -891,7 +907,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_BV";
 			};
 			id=33;
@@ -909,7 +925,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_CV";
 			};
 			id=34;
@@ -927,7 +943,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_tank"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_tank"",this] call f_fnc_assignGear;";
 				name="VehCSAT_TNK1";
 				textures="Hex";
 			};
@@ -946,7 +962,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_tank"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_tank"",this] call f_fnc_assignGear;";
 				name="VehAAF_TNK1";
 			};
 			id=36;
@@ -968,7 +984,7 @@ class Mission
 				name="VehAAF_AH1";
 			};
 			id=37;
-			type="I_Heli_light_03_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item38
 		{
@@ -1029,7 +1045,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1403.2681,6.8319178,763.35657};
+				position[]={1400.7506,6.8319178,763.49799};
 			};
 			side="Empty";
 			flags=4;
@@ -1282,6 +1298,7 @@ class Mission
 			};
 			id=54;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item55
 		{
@@ -1301,6 +1318,7 @@ class Mission
 			};
 			id=55;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item56
 		{
@@ -1320,13 +1338,14 @@ class Mission
 			};
 			id=56;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item57
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1403.5269,6.8319178,734.76477};
+				position[]={1400.9404,6.8319178,734.03149};
 			};
 			side="Empty";
 			flags=4;
@@ -1899,7 +1918,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_IFV1";
 			};
 			id=73;
@@ -1917,7 +1936,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehNATO_IFV2";
 			};
 			id=74;
@@ -1971,7 +1990,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_IFV1";
 				textures="Hex";
 			};
@@ -1990,7 +2009,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehCSAT_IFV2";
 				textures="Hex";
 			};
@@ -2047,7 +2066,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_IFV1";
 			};
 			id=81;
@@ -2066,7 +2085,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="[""v_ifv"",this] call f_fnc_assignGear; this disableTIEquipment true;";
+				init="[""v_ifv"",this] call f_fnc_assignGear;";
 				name="VehAAF_IFV2";
 			};
 			id=82;
@@ -2164,6 +2183,7 @@ class Mission
 			};
 			id=87;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item88
 		{
@@ -2183,6 +2203,7 @@ class Mission
 			};
 			id=88;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item89
 		{
@@ -2202,6 +2223,7 @@ class Mission
 			};
 			id=89;
 			type="B_G_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item90
 		{
@@ -2934,6 +2956,7 @@ class Mission
 				};
 			};
 			id=116;
+			atlOffset=-0.37890196;
 		};
 		class Item98
 		{
@@ -2949,7 +2972,8 @@ class Mission
 				skill=0.60000002;
 			};
 			id=117;
-			type="B_Heli_Light_01_armed_F";
+			type="B_Heli_Light_01_dynamicLoadout_F";
+			atlOffset=-0.37890196;
 		};
 		class Item99
 		{
@@ -3243,7 +3267,7 @@ class Mission
 				};
 			};
 			id=126;
-			atlOffset=0.38843632;
+			atlOffset=0.009534359;
 		};
 		class Item103
 		{
@@ -3253,14 +3277,14 @@ class Mission
 				position[]={431.92221,6.7886786,748.25006};
 			};
 			side="West";
-			flags=2;
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=127;
-			type="B_Heli_Light_01_armed_F";
-			atlOffset=0.38843632;
+			type="B_Heli_Light_01_dynamicLoadout_F";
+			atlOffset=0.009534359;
 		};
 		class Item104
 		{
@@ -3554,7 +3578,7 @@ class Mission
 				};
 			};
 			id=136;
-			atlOffset=0.58848858;
+			atlOffset=0.20958662;
 		};
 		class Item108
 		{
@@ -3564,14 +3588,14 @@ class Mission
 				position[]={432.80014,6.9887309,724.45416};
 			};
 			side="West";
-			flags=2;
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
 			};
 			id=137;
-			type="B_Heli_Light_01_armed_F";
-			atlOffset=0.58848858;
+			type="B_Heli_Light_01_dynamicLoadout_F";
+			atlOffset=0.20958662;
 		};
 		class Item109
 		{
@@ -4419,7 +4443,7 @@ class Mission
 				skill=0.60000002;
 			};
 			id=164;
-			type="I_Heli_light_03_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item122
 		{
@@ -4723,7 +4747,7 @@ class Mission
 				skill=0.60000002;
 			};
 			id=174;
-			type="I_Heli_light_03_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item127
 		{
@@ -5078,6 +5102,7 @@ class Mission
 				};
 			};
 			id=186;
+			atlOffset=-0.37890196;
 		};
 		class Item133
 		{
@@ -5093,7 +5118,8 @@ class Mission
 				skill=0.60000002;
 			};
 			id=187;
-			type="B_Heli_Light_01_armed_F";
+			type="B_Heli_Light_01_dynamicLoadout_F";
+			atlOffset=-0.37890196;
 		};
 		class Item134
 		{
@@ -9270,6 +9296,7 @@ class Mission
 				};
 			};
 			id=329;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9444,6 +9471,7 @@ class Mission
 				};
 			};
 			id=334;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9618,6 +9646,7 @@ class Mission
 				};
 			};
 			id=339;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9792,6 +9821,7 @@ class Mission
 				};
 			};
 			id=344;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9966,6 +9996,7 @@ class Mission
 				};
 			};
 			id=349;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10140,6 +10171,7 @@ class Mission
 				};
 			};
 			id=354;
+			atlOffset=-1.2397766e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10251,6 +10283,7 @@ class Mission
 				};
 			};
 			id=359;
+			atlOffset=0.009988308;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -29464,6 +29497,7 @@ class Mission
 			};
 			id=953;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item324
 		{
@@ -29483,6 +29517,7 @@ class Mission
 			};
 			id=954;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item325
 		{
@@ -29502,6 +29537,7 @@ class Mission
 			};
 			id=955;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item326
 		{
@@ -29521,6 +29557,7 @@ class Mission
 			};
 			id=956;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item327
 		{
@@ -29540,6 +29577,7 @@ class Mission
 			};
 			id=957;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item328
 		{
@@ -29559,6 +29597,7 @@ class Mission
 			};
 			id=958;
 			type="I_C_Van_01_transport_F";
+			atlOffset=0.00011968613;
 		};
 		class Item329
 		{
@@ -30004,7 +30043,7 @@ class Mission
 				textures="Green";
 			};
 			id=968;
-			type="I_Heli_light_03_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item337
 		{
@@ -30478,7 +30517,7 @@ class Mission
 				textures="Green";
 			};
 			id=978;
-			type="I_Heli_light_03_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item344
 		{
@@ -32309,16 +32348,789 @@ class Mission
 			id=1098;
 			type="C_SUV_01_F";
 		};
+		class Item365
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={473.59708,0,776.08887};
+			};
+			name="F3_preMount_FIA";
+			init="[synchronizedObjects this, [""GrpFIA_ASL"",""GrpFIA_A1"",""GrpFIA_A2""], true, false] call f_fnc_mountGroups;";
+			id=1099;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item366
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={517.23132,0,778.17627};
+			};
+			name="F3_preMount_FIA_1";
+			init="[synchronizedObjects this, [""GrpFIA_BSL"",""GrpFIA_B1"",""GrpFIA_B2""], true, false] call f_fnc_mountGroups;";
+			id=1105;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item367
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={558.604,0,780.34607};
+			};
+			name="F3_preMount_FIA_2";
+			init="[synchronizedObjects this, [""GrpFIA_CSL"",""GrpFIA_C1"",""GrpFIA_C2""], true, false] call f_fnc_mountGroups;";
+			id=1106;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item368
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={435.57681,0,770.43823};
+			};
+			name="F3_preMount_FIA_3";
+			init="[synchronizedObjects this, [""GrpFIA_CO""], true, false] call f_fnc_mountGroups;";
+			id=1107;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item369
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={437.03455,0,744.61487};
+			};
+			name="F3_preMount_FIA_4";
+			init="[synchronizedObjects this, [""GrpFIA_DC""], true, false] call f_fnc_mountGroups;";
+			id=1108;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item370
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1441.297,0,786.68701};
+			};
+			name="F3_preMount_AAF";
+			init="[synchronizedObjects this, [""GrpAAF_ASL"",""GrpAAF_A1"",""GrpAAF_A2""], true, false] call f_fnc_mountGroups;";
+			id=1110;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item371
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1485.2041,0,788.32947};
+			};
+			name="F3_preMount_AAF_1";
+			init="[synchronizedObjects this, [""GrpAAF_BSL"",""GrpAAF_B1"",""GrpAAF_B2""], true, false] call f_fnc_mountGroups;;";
+			id=1111;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item372
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1528.1724,0,788.09692};
+			};
+			name="F3_preMount_AAF_2";
+			init="[synchronizedObjects this, [""GrpAAF_CSL"",""GrpAAF_C1"",""GrpAAF_C2""], true, false] call f_fnc_mountGroups;";
+			id=1112;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item373
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1398.5631,0,781.28723};
+			};
+			name="F3_preMount_AAF_3";
+			init="[synchronizedObjects this, [""GrpAAF_CO""], true, false] call f_fnc_mountGroups;";
+			id=1113;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item374
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1397.389,0,753.11096};
+			};
+			name="F3_preMount_AAF_4";
+			init="[synchronizedObjects this, [""GrpAAF_DC""], true, false] call f_fnc_mountGroups;";
+			id=1114;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item375
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={465.21799,0,1396.6851};
+			};
+			name="F3_preMount_NATO";
+			init="[synchronizedObjects this, [""GrpNATO_ASL"",""GrpNATO_A1"",""GrpNATO_A2""], true, false] call f_fnc_mountGroups;";
+			id=1115;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item376
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={507.88394,0,1396.3147};
+			};
+			name="F3_preMount_NATO_1";
+			init="[synchronizedObjects this, [""GrpNATO_BSL"",""GrpNATO_B1"",""GrpNATO_B2""], true, false] call f_fnc_mountGroups;";
+			id=1116;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item377
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={551.10376,0,1396.1316};
+			};
+			name="F3_preMount_NATO_2";
+			init="[synchronizedObjects this, [""GrpNATO_CSL"",""GrpNATO_C1"",""GrpNATO_C2""], true, false] call f_fnc_mountGroups;";
+			id=1117;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item378
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={418.67398,0,1384.4952};
+			};
+			name="F3_preMount_NATO_3";
+			init="[synchronizedObjects this, [""GrpNATO_CO""], true, false] call f_fnc_mountGroups;";
+			id=1118;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item379
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={415.53409,0,1358.0823};
+			};
+			name="F3_preMount_NATO_4";
+			init="[synchronizedObjects this, [""GrpNATO_DC""], true, false] call f_fnc_mountGroups;";
+			id=1119;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item380
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1413.598,0,1409.447};
+			};
+			name="F3_preMount_SYN";
+			init="[synchronizedObjects this, [""GrpSYN_ASL"",""GrpSYN_A1"",""GrpSYN_A2""], true, false] call f_fnc_mountGroups;";
+			id=1120;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item381
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1450.3208,0,1411.637};
+			};
+			name="F3_preMount_SYN_1";
+			init="[synchronizedObjects this, [""GrpSYN_BSL"",""GrpSYN_B1"",""GrpSYN_B2""], true, false] call f_fnc_mountGroups;";
+			id=1121;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item382
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1492.4077,0,1411.3385};
+			};
+			name="F3_preMount_SYN_2";
+			init="[synchronizedObjects this, [""GrpSYN_CSL"",""GrpSYN_C1"",""GrpSYN_C2""], true, false] call f_fnc_mountGroups;";
+			id=1122;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item383
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1360.4757,0,1389.549};
+			};
+			name="F3_preMount_SYN_3";
+			init="[synchronizedObjects this, [""GrpSYN_CO""], true, false] call f_fnc_mountGroups;";
+			id=1123;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item384
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1362.8638,0,1356.7145};
+			};
+			name="F3_preMount_SYN_4";
+			init="[synchronizedObjects this, [""GrpSYN_DC""], true, false] call f_fnc_mountGroups;";
+			id=1124;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item385
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2417.865,0,1411.641};
+			};
+			name="F3_preMount_CSAT";
+			init="[synchronizedObjects this, [""GrpCSAT_ASL"",""GrpCSAT_A1"",""GrpCSAT_A2""], true, false] call f_fnc_mountGroups;";
+			id=1125;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item386
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2467.3704,0,1409.2566};
+			};
+			name="F3_preMount_CSAT_1";
+			init="[synchronizedObjects this, [""GrpCSAT_BSL"",""GrpCSAT_B1"",""GrpCSAT_B2""], true, false] call f_fnc_mountGroups;";
+			id=1126;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item387
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2523.2297,0,1408.4637};
+			};
+			name="F3_preMount_CSAT_2";
+			init="[synchronizedObjects this, [""GrpCSAT_CSL"",""GrpCSAT_C1"",""GrpCSAT_C2""], true, false] call f_fnc_mountGroups;";
+			id=1127;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item388
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2371.0068,0,1392.3138};
+			};
+			name="F3_preMount_CSAT_3";
+			init="[synchronizedObjects this, [""GrpCSAT_CO""], true, false] call f_fnc_mountGroups;";
+			id=1128;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item389
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2368.0945,0,1361.6034};
+			};
+			name="F3_preMount_CSAT_4";
+			init="[synchronizedObjects this, [""GrpCSAT_DC""], true, false] call f_fnc_mountGroups;";
+			id=1129;
+			type="Logic";
+			atlOffset=-5;
+		};
+		class Item390
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2900,5,800};
+			};
+			name="F3_Spectator";
+			init="if(isServer)then{" \n "  {" \n "     this setVariable [_x, this getVariable _x, true];" \n "  } forEach [""AllowFreeCamera"", ""WhitelistedSides"", ""ShowFocusInfo"", ""AllowAi"", ""Allow3PPCamera""];" \n "};";
+			isPlayable=1;
+			description="Spectator Slot";
+			id=1130;
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item391
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2900,5,766};
+			};
+			name="F3_Spectator_1";
+			init="if(isServer)then{" \n "  {" \n "     this setVariable [_x, this getVariable _x, true];" \n "  } forEach [""AllowFreeCamera"", ""WhitelistedSides"", ""ShowFocusInfo"", ""AllowAi"", ""Allow3PPCamera""];" \n "};";
+			isPlayable=1;
+			description="Spectator Slot";
+			id=1131;
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item392
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2900,5,733};
+			};
+			name="F3_Spectator_2";
+			init="if(isServer)then{" \n "  {" \n "     this setVariable [_x, this getVariable _x, true];" \n "  } forEach [""AllowFreeCamera"", ""WhitelistedSides"", ""ShowFocusInfo"", ""AllowAi"", ""Allow3PPCamera""];" \n "};";
+			isPlayable=1;
+			description="Spectator Slot";
+			id=1132;
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item393
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2900,5,700};
+			};
+			name="F3_Spectator_3";
+			init="if(isServer)then{" \n "  {" \n "     this setVariable [_x, this getVariable _x, true];" \n "  } forEach [""AllowFreeCamera"", ""WhitelistedSides"", ""ShowFocusInfo"", ""AllowAi"", ""Allow3PPCamera""];" \n "};";
+			isPlayable=1;
+			description="Spectator Slot";
+			id=1133;
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=50;
+			nextID=81;
 		};
 		class Links
 		{
-			items=50;
+			items=81;
 			class Item0
 			{
 				linkID=0;
@@ -32814,6 +33626,316 @@ class Mission
 				linkID=49;
 				item0=839;
 				item1=974;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item50
+			{
+				linkID=50;
+				item0=54;
+				item1=1099;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item51
+			{
+				linkID=51;
+				item0=55;
+				item1=1099;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item52
+			{
+				linkID=52;
+				item0=51;
+				item1=1107;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item53
+			{
+				linkID=53;
+				item0=56;
+				item1=1105;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item54
+			{
+				linkID=54;
+				item0=87;
+				item1=1105;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item55
+			{
+				linkID=55;
+				item0=88;
+				item1=1106;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item56
+			{
+				linkID=56;
+				item0=89;
+				item1=1106;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item57
+			{
+				linkID=57;
+				item0=52;
+				item1=1108;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item58
+			{
+				linkID=58;
+				item0=59;
+				item1=1119;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item59
+			{
+				linkID=59;
+				item0=42;
+				item1=1118;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item60
+			{
+				linkID=60;
+				item0=43;
+				item1=1115;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item61
+			{
+				linkID=61;
+				item0=44;
+				item1=1116;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item62
+			{
+				linkID=62;
+				item0=45;
+				item1=1117;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item63
+			{
+				linkID=63;
+				item0=57;
+				item1=1114;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item64
+			{
+				linkID=64;
+				item0=41;
+				item1=1113;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item65
+			{
+				linkID=65;
+				item0=38;
+				item1=1110;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item66
+			{
+				linkID=66;
+				item0=39;
+				item1=1111;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item67
+			{
+				linkID=67;
+				item0=40;
+				item1=1112;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item68
+			{
+				linkID=68;
+				item0=952;
+				item1=1124;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item69
+			{
+				linkID=69;
+				item0=951;
+				item1=1123;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item70
+			{
+				linkID=70;
+				item0=953;
+				item1=1120;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item71
+			{
+				linkID=71;
+				item0=954;
+				item1=1120;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item72
+			{
+				linkID=72;
+				item0=955;
+				item1=1121;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item73
+			{
+				linkID=73;
+				item0=956;
+				item1=1121;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item74
+			{
+				linkID=74;
+				item0=957;
+				item1=1122;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item75
+			{
+				linkID=75;
+				item0=958;
+				item1=1122;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item76
+			{
+				linkID=76;
+				item0=58;
+				item1=1129;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item77
+			{
+				linkID=77;
+				item0=46;
+				item1=1128;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item78
+			{
+				linkID=78;
+				item0=47;
+				item1=1125;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item79
+			{
+				linkID=79;
+				item0=48;
+				item1=1126;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item80
+			{
+				linkID=80;
+				item0=49;
+				item1=1127;
 				class CustomData
 				{
 					type="Sync";

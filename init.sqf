@@ -100,6 +100,19 @@ f_script_briefing = [] execVM "briefing.sqf";
 
 // ====================================================================================
 
+// F3 - AI Unit Caching
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+//[30] spawn f_fnc_cInit;
+
+// Note: Caching aggressiveness is set using the f_var_cachingAggressiveness variable; possible values:
+// 1 - cache only non-leaders and non-drivers
+// 2 - cache all non-moving units, always exclude vehicle drivers
+// 3 - cache all units, incl. group leaders and vehicle drivers
+//f_var_cachingAggressiveness = 2;
+
+// ====================================================================================
+
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
@@ -128,13 +141,13 @@ f_var_civAI = independent; 		// Optional: The civilian AI will use this side's s
 // F3 - Dynamic View Distance
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_viewDistance_default = 1250;
-// f_var_viewDistance_tank = 2000;
-// f_var_viewDistance_car = 2000;
-// f_var_viewDistance_rotaryWing = 2500;
-// f_var_viewDistance_fixedWing = 5000;
-// f_var_viewDistance_crewOnly = true;
-// [] execVM "f\dynamicViewDistance\f_setViewDistanceLoop.sqf";
+f_var_viewDistance_default = 1600;
+f_var_viewDistance_tank = 2500;
+f_var_viewDistance_car = 2000;
+f_var_viewDistance_rotaryWing = 3000;
+f_var_viewDistance_fixedWing = 5000;
+f_var_viewDistance_crewOnly = true;
+[] execVM "f\dynamicViewDistance\f_setViewDistanceInit.sqf";
 
 // ====================================================================================
 
@@ -190,7 +203,11 @@ f_var_civAI = independent; 		// Optional: The civilian AI will use this side's s
 // INDEPENDENT > AAF
 // [INDEPENDENT,100,1] execVM "f\casualtiesCap\f_CasualtiesCapCheck.sqf";
 
+// ====================================================================================
+
 // F3 - Disable Thermals
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 [] spawn f_fnc_disableThermals;
 // [[UnitName1, "UnitClass1"]] spawn f_fnc_disableThermals;
+
+// ====================================================================================

@@ -56,7 +56,6 @@ These endings are available. To trigger an ending click on its link.<br/><br/>
 ";
 
 {
-	_end = _this select 0;
 	_briefing = _briefing + format [
 	"<execute expression=""[%1] remoteExec ['f_fnc_mpEnd', 2];"">'end%1'</execute> - %2:<br/>
 	%3<br/><br/>"

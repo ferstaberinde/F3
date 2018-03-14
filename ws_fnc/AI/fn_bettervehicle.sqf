@@ -20,20 +20,16 @@
 
 if !(isServer) exitWith {};
 
-private ["_debug","_side","_alloweddamage","_vehicles","_handle"];
+private ["_debug","_vehicles","_handle","_unit"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};   //Debug mode. If ws_debug is globally defined it overrides _debug
 
-_side = _this select 0;
-_alloweddamage = if(count _this > 1) then {_this select 1} else {0.8}; //damage allowed before the group bails no matter what
-_vehicles = [];
+params [
+	["_side", sideUnknown, [sideUnknown,[],objNull]],
+	["_alloweddamage", 0.8, [0]]
+];
 
-//Fault checks
-//Checking the variables we have against what we should have
-if !(isNil "ws_fnc_typecheck") then {
-	[_side,["ARRAY","OBJECT","SIDE"],"ws_fnc_betterVehicle"] call ws_fnc_typecheck;
-	[_alloweddamage,["SCALAR"],"ws_fnc_betterVehicle"] call ws_fnc_typecheck;
-};
+_vehicles = [];
 
 ["ws_fnc_betterVehicle: ",[_side,typename _side],""] call ws_fnc_debugText;
 
@@ -52,47 +48,28 @@ switch (typename _side) do {
 	};
 };
 
-
 {
-_handle = _x getVariable "ws_better_vehicle";
-if (isNil "_handle") then {
-	if _debug then {player sidechat format ["ws_bettervehicles DBG: Improving: %1",_x]};
+	_handle = _x getVariable "ws_better_vehicle";
+	if (isNil "_handle") then {
+		if _debug then {player sidechat format ["ws_bettervehicles DBG: Improving: %1",_x]};
 
-	/*[_x,_alloweddamage,_debug] spawn {
-		private ["_unit","_alloweddamage"];
-		_unit = _this select 0;
+		_unit = _x;
 		_unit allowCrewInImmobile true;
-		_unit setvariable ["ws_better_vehicle",1];
-		_alloweddamage = _this select 1;
-		while {damage _unit < _alloweddamage && canFire _unit} do
-		{
-			sleep 2.5;
-		};
-		_unit allowCrewInImmobile false;
-		{_x action ["eject", _unit];} forEach crew _unit;
+		_unit setvariable ["ws_better_vehicle",_alloweddamage,true];
 
-		if (_this select 2) then {player sidechat format ["ws_bettervehicles DBG: %1 has taken enough damage or can't fire any more. crew bailing",_unit]};
-	   };*/
+		_unit addEventHandler ["Hit", {
+			params ["_unit"];
+			private _damage = getDammage _unit;
 
-	_unit = _x;
-	_unit allowCrewInImmobile true;
-	_unit setvariable ["ws_better_vehicle",_alloweddamage,true];
+			 if (_damage > (_unit getVariable "ws_better_vehicle") || !(canFire _unit)) then {
+				_unit allowCrewInImmobile false;
+				{_x action ["eject", _unit];} forEach crew _unit;
+				_unit removeEventHandler ["Hit",0];
+				if (ws_debug) then {player sidechat format ["ws_bettervehicles DBG: %1 has taken enough damage or can't fire any more. crew bailing",_unit]};
+			};
+		}];
 
-	_unit addEventHandler [
-		"Hit",
-	{
-	 _unit = _this select 0;
-	 _damage = getDammage _unit;
-
-	 if (_damage > (_unit getVariable "ws_better_vehicle") || !(canFire _unit)) then {
- 		_unit allowCrewInImmobile false;
- 		{_x action ["eject", _unit];} forEach crew _unit;
- 		_unit removeEventHandler ["Hit",0];
- 		if (ws_debug) then {player sidechat format ["ws_bettervehicles DBG: %1 has taken enough damage or can't fire any more. crew bailing",_unit]};
- 	};
-	}];
-
-   };
+	};
 } forEach _vehicles;
 
 if _debug then {player sidechat format ["ws_bettervehicles DBG: Exiting. Improved vehicles: %1",_vehicles]};

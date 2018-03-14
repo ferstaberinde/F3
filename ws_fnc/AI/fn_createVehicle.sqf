@@ -37,49 +37,31 @@
 [getPos t2,GrpOpfHQ,"BMP3",["lockturret","clearcargo"],[5,["RU_Soldier_2","RU_Soldier_1"],true]] call ws_fnc_createVehicle; - Spawn a BMP3 at object t2 that belongs to the group GrpOPFHQ, has a locked turret and empty cargo and 5 soldiers loaded inside.
 */
 
-private ["_debug",
-"_count","_pos","_side","_type","_modarray","_behaviour",
-"_guardarray","_guards","_guardclasses","_load","_code",
-"_veh","_grp","_mod","_vehgrp"];
+private ["_debug","_veh","_grp","_mod","_vehgrp","_crew","_crewman","_mkr"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};  //Debug mode. If ws_debug is globally defined it overrides _debug
 
+params [
+	["_pos", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_side", sideUnknown, [grpNull, sideUnknown]],
+	["_type", "", [""]],
+	["_modarray", [], [[]]],
+	["_guardarray", [], [[]], [0,3]],
+	["_code", {}, [{},""]]
+];
+
 //Declare variables
-_count = count _this;
-_pos = [(_this select 0)] call ws_fnc_getPos;
-_side = _this select 1;
-_type = _this select 2;
-_modarray = [];
-
-//The default behaviour
-//_behaviour = ["AWARE","YELLOW"];
-
-_guardarray = [];
-_guards = 0;
-_guardclasses = [];
-_load = false;
-_code = {};
-
-//Optinal parameters
-if (_count > 3) then {_modarray = _this select 3};
-if (_count > 4) then {
-	_guardarray = _this select 4;
-	if (count _guardarray == 3) then {
-	_guards = _guardarray select 0; //Number of troops spawned
-	_guardclasses = _guardarray select 1; //Classes of troops spawned
-	_load = _guardarray select 2;	//if troops are loaded in
-	};
-};
-if (_count > 5) then {_code = _this select 5};
+_pos = [_pos] call ws_fnc_getPos;
+_guardarray params [
+	["_guards", 0, [0]], //Number of troops spawned
+	["_guardclasses", [], [[]]], //Classes of troops spawned
+	["_load", false, [false]] //if troops are loaded in
+];
 
 //Fault checks
 //Checking the variables we have enough against what we should have
-{[_x,["SIDE","GROUP"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_side];
-{[_x,["STRING"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_type];
-{[_x,["ARRAY"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_pos,_guardarray,_guardclasses,_modarray];
-{[_x,["BOOL"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_load];
-{[_x,["SCALAR"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_guards,_pos select 0,_pos select 1];
-{[_x,["STRING","CODE"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_code];
+{[_x,["ARRAY"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_pos];
+{[_x,["SCALAR"],"ws_fnc_createVehicle"] call ws_fnc_typecheck;} forEach [_pos select 0,_pos select 1];
 
 if (_side isEqualType sideUnknown) then {
 _grp = createGroup _side;} else
@@ -114,7 +96,7 @@ if (_guards > 0) then {
 	_grp = createGroup _side;
 
 	for "_x" from 1 to _guards do {
-		_unit = _grp createUnit [selectRandom _guardclasses, getPos _veh, [], 2, "NONE"];
+		_grp createUnit [selectRandom _guardclasses, getPos _veh, [], 2, "NONE"];
 	};
 
 	if (_load) then {
@@ -165,13 +147,14 @@ if (_debug) then {
 	_mkr setMarkerSize [0.5,0.5];
 
 	[_veh,_mkr] spawn {
-		  while {alive (_this select 0)} do {
-		 sleep 5;
-		 (_this select 1) setMarkerPos (getPos (_this select 0));
-		 };
+		params ["_veh","_mkr"];
+		while {alive _veh} do {
+			 sleep 5;
+			 _mkr setMarkerPos (getPos _veh);
+		};
 
-	 (_this select 1) setMarkerColor "ColorRed";
-	 (_this select 1) setMarkerText format ["DBG:Grp %1 dead",_this select 0];
+		 _mkr setMarkerColor "ColorRed";
+		 _mkr setMarkerText format ["DBG:Grp %1 dead",_veh];
 	};
 };
 

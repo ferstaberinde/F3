@@ -7,17 +7,17 @@ if (!isServer) exitWith {};
 
 // ====================================================================================
 
-// DECLARE VARIABLES AND FUNCTIONS
-
-private ["_crew","_vehs","_grps","_grp","_fill"];
-
-// ====================================================================================
-
 // SET KEY VARIABLES
 // Using the arguments passed to the script, we first define some local variables.
 
-params ["_vehs", "_grps", ["_crew", true], ["_fill", false]];
-//_vehs: Array of vehicles    (objects)
+params [
+	["_vehs", [], [[]]],
+	["_grps", [], [[]]],
+	["_crew", true, [true]],
+	["_fill", false, [false]]
+];
+
+//_vehs: Array of vehicles    (objects) 
 //_grps: Array of group names (as strings)
 //_crew: Mount into crew positions? (optional - default:true)
 //_fill: Ignore fireteam cohesion in favor of filling vehicles? (optional - default:false)
@@ -25,33 +25,15 @@ params ["_vehs", "_grps", ["_crew", true], ["_fill", false]];
 // ====================================================================================
 
 // CLEAN THE GROUP ARRAY
+
 // First we check if there are illegal groups (non-existent) in the array and remove them.
-
-if ({isNil _x} count _grps > 0) then {
-	{
-		if (isNil _x) then {
-			_grps set [_forEachIndex,grpNull];
-		};
-	} forEach _grps;
-};
-
-_grps = _grps - [grpNull];
-
-// ====================================================================================
-
-// PROCESS GROUPS
-// Check the passed groups to make sure none of them is empty and they have at least one unit that's not inside a vehicle
-{
-	_grp = call compile format ["%1",_x];
-	_grps set [_forEachIndex,_grp];
-
-	if (count (units _grp) == 0 || {isNull (assignedVehicle _x)} count (units _grp) == 0) then {
-		_grps set [_forEachIndex,grpNull];
-	};
-
-} forEach _grps;
-
-_grps = _grps - [grpNull];
+_grps = _grps select {!isNil _x};
+// Remove duplicates
+_grps = _grps arrayintersect _grps;
+// Transform list of strings to list of groups
+_grps = _grps apply {call compile format ["%1",_x]};
+// Only take groups where at least one unit is not in a vehicle
+_grps = _grps select { count (units _x) > 0 && {isNull (assignedVehicle _x)} count (units _x) > 0 };
 
 // ====================================================================================
 
@@ -59,24 +41,17 @@ _grps = _grps - [grpNull];
 // We make sure that there are only vehicles in the vehicle array
 // If a soldier-unit is in the array then we check if we can use the vehicle he's in
 {
- if (_x isKindOf "CAManBase") then {
-     if (vehicle _x != _x) then {
-         _vehs set [_forEachIndex,vehicle _x];
-     } else {
-         _vehs = _vehs - [_x];
-     };
- };
+	if (_x isKindOf "CAManBase") then {
+		if (vehicle _x != _x) then {
+			_vehs set [_forEachIndex,vehicle _x];
+		} else {
+			_vehs = _vehs - [_x];
+		};
+	};
 } forEach _vehs;
 
-// ====================================================================================
-
-// CHECK ARRAY COUNT
-// If any of the arrays is empty we don't need to execute the function and exit with a warning message.
-
-if (count _vehs == 0 || count _grps == 0) exitWith {
-	player globalchat format ["f_fnc_preMount DBG: No vehicles and/or groups were parsed! _vehicles: %1,_grps: %2",_vehs,_grps];
-	diag_log format ["f_fnc_preMount DBG: No vehicles and/or groups were parsed! _vehicles: %1,_grps: %2",_vehs,_grps];
-};
+//remove duplicates
+_vehs = _vehs arrayintersect _vehs;
 
 // ====================================================================================
 
@@ -93,28 +68,20 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 	_vehicleRoles = (typeOf _veh) call bis_fnc_vehicleRoles;	// All available roles for the vehicle
 
 	// Temporary group array
-	_grpsT = _grps;
+	_grpsT = +_grps;
 	// As long there are spare seats and groups left
 
 	while {_emptyPositions > 0 && count _grpsT > 0 && locked _veh != 2} do {
 
-		private ["_grp","_units","_run","_unit","_slot","_path"];
+		private ["_grp","_units","_unit","_slot","_path"];
 
 		_grp = _grpsT select 0;
 		_units = units _grp;
-		_run = true;
 
 		// If fireteam cohesion should be kept count the available vehicle slots, compared to the units in the group that would need a seat
 		if (!_fill && {{isNull assignedVehicle _x} count _units > _emptyPositions}) then {
-
-			_run = false;
-
-			//Remove groups that would need to be split up
-			_grpsT = _grpsT - [_grp];
-		};
-
-		if (_run) then {
-
+			//Don't process group that would need to be split up, simply remove it from the array.
+		} else {
 			// Loop through all vehicle roles and place the units in them accordingly
 			{
 				_unit = _units select 0;
@@ -140,10 +107,10 @@ if (count _vehs == 0 || count _grps == 0) exitWith {
 				if (count _units == 0) exitWith {};
 
 			} forEach _vehicleRoles;
-
-			// Remove the processed group from the temporary array
-			_grpsT = _grpsT - [_grp];
 		};
+
+		// Remove the processed/skipped group from the temporary array
+		_grpsT = _grpsT - [_grp];
 
 		// Check if all units in the group have been assigned a vehicle, remove group from both group arrays
 		if ({isNull assignedVehicle _x} count (units _grp) == 0) then {_grpsT = _grpsT - [_grp];_grps = _grps - [_grp]};

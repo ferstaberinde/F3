@@ -22,17 +22,18 @@ EXAMPLES
 [UnitNATO_CO,[-0.05,0.05,0.1],"Spine3"] spawn ws_fnc_attachIR - attaches an IR to the left shoulder of UnitNATO_CO
 */
 
-private ["_obj","_duration","_offset","_mpoint","_class","_ir"];
+private ["_class","_ir"];
 
-_obj = _this select 0;
-_offset = if (count _this > 1) then {_this select 1} else {[0,0,0]};
-_mpoint = if (count _this > 2) then {_this select 2} else {""};
+params [
+	["_obj", objNull, [objNull]],
+	["_offset", [0,0,0], [[]], 3],
+	["_mpoint", "", [""]]
+];
 
-_class = "I_IR_Grenade";
 switch (side _obj) do {
-	case west: 	{_class = "B_IRStrobe"};
-	case east: 	{_class = "O_IRStrobe"};
-	default {_class = "I_IRStrobe";};
+	case west: 	{_class = "B_IRStrobe";};
+	case east: 	{_class = "O_IRStrobe";};
+	default     {_class = "I_IRStrobe";};
 };
 
 _ir = _class createVehicle [0,0,0];

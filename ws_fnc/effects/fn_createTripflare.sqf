@@ -17,15 +17,19 @@ EXAMPLE
 if (isServer) then {[thisTrigger,"red"] spawn ws_fnc_createTripflare}; - in a trigger's on activation field will create a tripflare at the trigger's center when the trigger's conditions have been met
 */
 
-private ["_color","_flare","_smk","_duration"];
+private ["_smk"];
 
-_pos = (_this select 0) call ws_fnc_getEpos;
-_color = toLower(_this select 1);
-_duration = if (count _this > 2) then {_this select 2} else {0};
+params [
+	["_pos", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_color", "", [""]]
+];
+
+_pos = _pos call ws_fnc_getEpos;
+_color = toLower _color;
 
 if !(_color in ["green","red","yellow","white"]) exitWith {["ws_fnc_tripFlare DBG: ",[_color]," is not one of: [""green"",red","yellow","white""]"] call ws_fnc_debugtext};
 
-_flare = (format ["F_40mm%1","_"+_color]) createVehicle _pos;
+(format ["F_40mm%1","_"+_color]) createVehicle _pos;
 uisleep 0.5;
 if (_color == "white") then {_color =""};
 _smk = (format ["Smokeshell%1",_color]) createVehicle _pos;
@@ -34,7 +38,7 @@ _smk setVectorUp [1,0,0];
 while {!isNull _smk} do {
 	uisleep 21.5; // A flare takes roughly 25seconds to die off. As there's a delay between creating and illumination, the sleep is slightly shorter
 	if (!isNull _smk) then {
-		_flare = (format ["F_40mm%1","_"+_color]) createVehicle _pos;
+		(format ["F_40mm%1","_"+_color]) createVehicle _pos;
 	};
 	uisleep 0.01;
 };

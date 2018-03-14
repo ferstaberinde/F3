@@ -11,10 +11,13 @@ RETURNS
 Array of units that didn't take a gunner seat
 */
 
-private ["_group","_radius","_pos","_vehicles","_staticarray","_units2","_locked"];
+private ["_pos","_vehicles","_staticarray","_units2","_locked","_units","_unit"];
 
-_group = _this select 0;
-_radius = _this select 1;
+params [
+	["_group", grpNull, [grpNull]],
+	["_radius", 0, [0]]
+];
+
 _pos = (_group) call ws_fnc_getEPos;
 
 //Get nearby vehicles to start populating the static weapons

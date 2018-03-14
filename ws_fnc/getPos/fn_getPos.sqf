@@ -1,5 +1,4 @@
 // GetPos function
-// Latest: 11.11.2013
 // By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 // Thanks to Shuko for SHK_pos
 //
@@ -30,41 +29,26 @@
 // [church,250] call ws_fnc_getPos; - gets a position in 250m radius to the object named "church"
 // [v1,500,100,180,false,true] call ws_fnc_getPos; - gets a position in 500m radius, 100m minimal distance and a 180° angle to the object named "v1" and also allows position to be on a building
 
-private ["_debug","_count","_posloc","_pos","_posradius","_mindis","_dir","_road","_building","_water","_posX","_posY"];
+private ["_debug","_pos","_newX","_newY","_oldPos","_i","_distance","_done","_mkr"];
 
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};   //Debug mode. If ws_debug is globally defined it overrides _debug
 
-//Declaring variables
-_count = count _this;
-_posloc = _this select 0;
-_pos = [0,0,0];
-_posradius = 0;
-_mindis = 0;
-_dir = random 360;
-_road = false;
-_building = false;
-_water = false;
-
-//Optional variables parsed
-if (_count > 1) then {_posradius = _this select 1;};
-if (_count > 2) then {_mindis = _this select 2;};
-if (_count > 3) then {_dir = (_this select 3)};
-if (_count > 4) then {_road = _this select 4;};
-if (_count > 5) then {_building = _this select 5;};
-if (_count > 6) then {_water = _this select 6;};
+params [
+	["_posloc", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_posradius", 0, [0,false]],
+	["_mindis", 0, [0]],
+	["_dir", random 360, [0]],
+	["_road", false, [false]],
+	["_building", false, [false]],
+	["_water", false, [false]]
+];
 
 //Interpreting variables
 _pos = _posloc call ws_fnc_getEpos;
-
-_posX = (_pos select 0);
-_posY = (_pos select 1);
-
-//Fault checks
-//Checking the variables we have against what we should have
-{[_x,["ARRAY"],"ws_fnc_getPos"] call ws_fnc_typecheck;}  forEach [_pos];
-[_posradius,["SCALAR","BOOL"],"ws_fnc_getPos"] call ws_fnc_typecheck;
-{[_x,["SCALAR"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_mindis,_dir,_posX,_posY];
-{[_x,["BOOL"],"ws_fnc_getPos"] call ws_fnc_typecheck;} forEach [_road,_water];
+_pos params [
+	["_posX", 0, [0]],
+	["_posY", 0, [0]]
+];
 
 switch (typename _posradius) do {
 	case "SCALAR": {
@@ -123,11 +107,11 @@ if (_road) then {
 };
 
 if (_debug) then {
-player globalchat format ["DEBUG: ws_fnc_getPos done. Pos is %1, direction is %2",_pos,_dir];
-  _mkr = createMarker [format ["%1",_pos], _pos];
-  _mkr setMarkerType "mil_dot";
-  _mkr setMarkerColor "ColorGreen";
-  _mkr setMarkerSize [0.5,0.5];
+	player globalchat format ["DEBUG: ws_fnc_getPos done. Pos is %1, direction is %2",_pos,_dir];
+	_mkr = createMarker [format ["%1",_pos], _pos];
+	_mkr setMarkerType "mil_dot";
+	_mkr setMarkerColor "ColorGreen";
+	_mkr setMarkerSize [0.5,0.5];
 };
 
 //Return the new position

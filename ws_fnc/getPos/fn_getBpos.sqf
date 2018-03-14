@@ -13,17 +13,15 @@ RETURNS
 array containing all building positions
 */
 
-private ["_debug","_building","_bposarray","_occupied"];
+private ["_debug","_bposarray","_mkr"];
 _debug = false; if !(isNil "ws_debug") then {_debug = ws_debug};
 
-// Buildings to ignore
-_badarray = [];
-
-_building = _this select 0;
+params [
+	["_building", objNull, [objNull]]
+];
 
 if isNil "_building" exitWith {};
 _bposarray = _building getVariable ["ws_bPos",false];
-[_building,["OBJECT"],format ["ws_fnc_getBpos: %1",_building]] call ws_fnc_typecheck;
 
 if (!(_bposarray isEqualType [])) then {
 
@@ -33,7 +31,5 @@ if (!(_bposarray isEqualType [])) then {
 
 	_building setVariable ["ws_bPos",_bposarray,true];
 };
-
-//["ws_fnc_getBpos DBG1: ",[_building,(_building getVariable "ws_bpos"),_occupied],""] call ws_fnc_debugText;
 
 _bposarray

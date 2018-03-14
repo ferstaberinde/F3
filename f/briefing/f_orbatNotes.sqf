@@ -5,7 +5,7 @@
 if (!hasInterface) exitWith {}; //Exit if not a player.
 
 // Group IDs need to be set before the ORBAT listing can be created
-// waitUntil {scriptDone f_script_setGroupIDs};
+waitUntil {scriptDone f_script_setGroupIDs};
 
 // Define needed variables
 private ["_orbatText", "_groups", "_precompileGroups","_maxSlots","_freeSlots","_hiddenGroups","_color","_veharray","_vehName","_veh","_crewrole","_groupList"];
@@ -60,15 +60,13 @@ _groups = _groups - _hiddenGroups;
 
 _veharray = [];
 {
-
 	if ({vehicle _x != _x} count units _x > 0 ) then {
 		{
-			if (vehicle _x != _x && {!(vehicle _x in _veharray)}) then {
-			_veharray set [count _veharray,vehicle _x];
+			if (vehicle _x != _x) then {
+				_veharray pushBackUnique (vehicle _x);
 			};
 		} forEach units _x;
 	};
-
 } forEach _groups;
 
 if (count _veharray > 0) then {
@@ -112,7 +110,7 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 
 		{
 			if (!(group _x in _groupList) && {(assignedVehicleRole _x select 0) == "CARGO"} count (units group _x) > 0) then {
-				_groupList set [count _groupList,group _x];
+				_groupList pushBack (group _x);
 			};
 		} forEach crew _x;
 

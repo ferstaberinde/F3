@@ -4,14 +4,17 @@
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_unit","_pos","_dispersion","_string"];
+private ["_dispersion","_string"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 
-_unit = _this select 0;
-_pos = _this select 1;
+params [
+	"_unit",
+	["_pos", [0,0,0], [[]], 3]
+];
+
 _dispersion = 100; // The maximum dispersion for units when HALO jumping
 
 _string = if (f_var_mapClickTeleport_Height == 0) then {"Teleport"} else {"HALO"};
@@ -44,21 +47,5 @@ if (_unit == vehicle player) then {["MapClickTeleport",[f_var_mapClickTeleport_t
 // If unit is parajumping, spawn the following code to add a parachute and restore the old backpack after landing
 
 if (f_var_mapClickTeleport_Height > 0) then {
-	[_unit] spawn {
-		private ["_unit","_bp","_bpi"];
-		_unit = _this select 0;
-		_bp = backpack _unit;
-		_bpi = backPackItems _unit;
-
-		removeBackpack _unit;
-		_unit addBackpack "B_parachute";
-		waitUntil {sleep 0.1;isTouchingGround _unit;};
-		if (alive _unit) then {
-			removeBackpack _unit;
-			_unit addBackPack _bp;
-			{
-			   (unitbackpack _unit) addItemCargoGlobal [_x,1];
-			} forEach _bpi;
-		};
-	};
+	[_unit] spawn f_fnc_mapClickTeleportParachute;
 };

@@ -32,7 +32,6 @@ true
 
 if !(ws_game_a3) exitWith {["ws_fnc_taskArtilleryFire DBG:",[]," Must be ARMA 3!"] call ws_fnc_debugtext};
 
-private ["_targetPos"];
 
 params [
 	["_art", objNull, [objNull, []]],
@@ -56,6 +55,7 @@ if ({isNull _x} count _art > 1 || str _target == "[0,0,0]" || count (getArtiller
 {
 	// Spawn a seperate fire mission for each artillery piece
 	[_x,_target,_dispersion,_fireMission,_sleep,_ammo] spawn {
+		private ["_targetPos"];
 		params ["_artpiece", "_target", "_dispersion", "_fireMission", "_sleep", "_ammo"];
 
 		// Select the ammo
