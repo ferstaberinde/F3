@@ -2232,7 +2232,7 @@ class Mission
 			{
 				position[]={2281.6389,5.3882694,729.50195};
 			};
-			init="this addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISKill} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
+			init="[this, true, allUnits] call f_fnc_zeusInit;";
 			id=106;
 			type="ModuleCurator_F";
 			atlOffset=0.38826942;
@@ -2343,7 +2343,7 @@ class Mission
 			{
 				position[]={2282.2229,5.3580265,718.42773};
 			};
-			init="this addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISKill} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
+			init="[this, true, allUnits] call f_fnc_zeusInit;";
 			id=107;
 			type="ModuleCurator_F";
 			atlOffset=0.3580265;
@@ -2454,7 +2454,7 @@ class Mission
 			{
 				position[]={2282.3342,5.6426582,707.78223};
 			};
-			init="this addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISKill} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
+			init="[this, true, allUnits] call f_fnc_zeusInit;";
 			id=108;
 			type="ModuleCurator_F";
 			atlOffset=0.64265823;
@@ -2565,7 +2565,7 @@ class Mission
 			{
 				position[]={2284.1614,6.0756798,697.16992};
 			};
-			init="this addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISKill} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
+			init="[this, true, allUnits] call f_fnc_zeusInit;";
 			id=109;
 			type="ModuleCurator_F";
 			atlOffset=1.0756798;
