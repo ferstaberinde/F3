@@ -15,7 +15,7 @@
 if (!hasInterface) exitWith {};
 
 //	Global variable that will be flipped on and off using the disableKey and CBA.
-F_NT_NAMETAGS_ON = true; 
+F_NT_NAMETAGS_ON = true;
 
 //	Determine which mods are active.
 #include "include\f_nametagCheckMods.sqf";
@@ -39,6 +39,9 @@ F_NT_NAMETAGS_ON = true;
 //	Let the player initialize properly.
 waitUntil{!isNull player};
 waitUntil{player == player};
+
+// Don't run this for zeus and virtual spectators
+if (side player isEqualto sideLogic) exitWith {};
 
 //	Reset font spacing and size to (possibly) new conditions.
 call f_fnc_nametagResetFont;
@@ -66,8 +69,8 @@ waitUntil {!isNull (findDisplay 46)};
 //	Render nametags from the cache every frame.
 //------------------------------------------------------------------------------------
 
-F_NT_EVENTHANDLER = addMissionEventHandler 
-["Draw3D", 
+F_NT_EVENTHANDLER = addMissionEventHandler
+["Draw3D",
 {
 	if F_NT_NAMETAGS_ON then
 	{	call f_fnc_nametagUpdate	};

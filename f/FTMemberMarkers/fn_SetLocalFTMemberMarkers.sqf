@@ -16,6 +16,9 @@ if (!isDedicated && (isNull player)) then
 	waitUntil {sleep 0.1; !isNull player};
 };
 
+// Don't run this for zeus and virtual spectators
+if (side player isEqualto sideLogic) exitWith {};
+
 // ====================================================================================
 
 // DEFINE HELPER-FUNCTION
