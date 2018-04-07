@@ -56,10 +56,10 @@ while {true} do {
 				[player] joinSilent _grp;
 
 				//Display notifications about new group member to the whole group
-				["JIP",[format ["You have joined %1 (%2).",name leader _grp,_grp]]] call BIS_fnc_showNotification;
+				["GroupJoin",[format ["You have joined %1 (%2).",name leader _grp,_grp]]] call BIS_fnc_showNotification;
 
 				{
-					if (isPlayer _x) then {["JIP",[format ["%1 has joined your group.",name _unit]]] remoteExec ["BIS_fnc_showNotification", _x]};
+					if (isPlayer _x) then {["GroupJoin",[format ["%1 has joined your group.",name _unit]]] remoteExec ["BIS_fnc_showNotification", _x]};
 				} forEach (units _grp - [_unit]); // Done using a forEach loop to avoid message spam should the group leader be controlling AI
 
 				// Make sure the group leader is synchronized properly accross the network

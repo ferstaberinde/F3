@@ -234,9 +234,6 @@
       <Key ID="STR_f_mapClickHALODone">
         <English> You have been moved to the selected location. </English>
       </Key>
-      <Key ID="STR_f_JIP_reinforcementOptionsAction">
-        <English> Select Reinforcement Options</English>
-      </Key>
       <Key ID="STR_f_param_mission_timer">
         <English> Safe Start (mins) </English>
       </Key>
