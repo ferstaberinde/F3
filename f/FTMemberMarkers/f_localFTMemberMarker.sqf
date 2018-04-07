@@ -11,7 +11,7 @@ private ["_mkrName","_mkr","_mkrBorder","_pos","_mkrborderName","_dir"];
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
 _mkrName = Format ["mkr_%1",_unit];
 _mkrborderName = Format ["mkrB_%1",_unit];

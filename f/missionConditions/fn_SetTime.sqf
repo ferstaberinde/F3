@@ -46,18 +46,20 @@ _sunset = [floor (_sunsetSunrise select 1), floor (((_sunsetSunrise select 1) % 
 
 // function for correcting adding hours and minutes to hours and minutes
 _addTime = {
-    params ["_time1","_time2"];
-    _result = [_time1,_time2] call BIS_fnc_vectorAdd;
-    while { _result select 1 > 60 } do { // convert extra minutes into hours
-        _result set [1,(_result select 1) - 60];
-        _result set [0,(_result select 0) + 1];
-    };
-    // make sure hour is in range [0,23]
-    _result set [0,(_result select 0) % 24];
-    if (_result select 0 < 0) then {
-        _result set [0,(_result select 0) + 24];
-    };
-    _result
+	params [
+		["_time1", [], [[]], 2],
+		["_time2", [], [[]], 2]
+	];
+	_result = _time1 vectorAdd _time2;
+	while { _result select 1 > 60 } do { // convert extra minutes into hours
+		_result = _result vectorAdd [1,-60];
+	};
+	// make sure hour is in range [0,23]
+	_result set [0,(_result select 0) % 24];
+	if (_result select 0 < 0) then {
+		_result = _result vectorAdd [24,0];
+	};
+	_result
 };
 
 // ====================================================================================

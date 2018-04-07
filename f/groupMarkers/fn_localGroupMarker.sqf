@@ -2,14 +2,15 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// DECLARE PRIVATE VARIABLES
-
-// ====================================================================================
-
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-params["_grpName",["_mkrType","b_hq"],"_mkrText",["_mkrColor","ColorBlack"]];
+params [
+	["_grpName", "", [""]],
+	["_mkrType", "b_hq", [""]],
+	["_mkrText", "", [""]],
+	["_mkrColor","ColorBlack", [""]]
+];
 
 private _grp = missionNamespace getVariable [_grpName,grpNull];
 private _mkrName = format ["mkr_%1",_grpName];

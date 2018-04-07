@@ -17,7 +17,11 @@ params [
 	["_restrictcargo", false, [false]]
 ];
 
-_fromEH params ["_vehicle", "_vehicleRole", "_unitToCheck"];
+_fromEH params [
+	["_vehicle", objNull, [objNull]],
+	["_vehicleRole", "", [""]],
+	["_unitToCheck", objNull, [objNull]]
+];
 
 _warningMsg = localize "STR_f_UnauthorisedCrew_Warning";
 

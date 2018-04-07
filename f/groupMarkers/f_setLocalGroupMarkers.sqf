@@ -22,7 +22,7 @@ if (!isDedicated && (isNull player)) then
 // The following code detects what faction the player's slot belongs to, and stores
 // it in the private variable _unitfaction
 params [
-	["_unitfaction", toLower (faction (leader group player))]
+	["_unitfaction", toLower (faction (leader group player)), [""]]
 ];
 
 // ====================================================================================
