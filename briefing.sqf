@@ -11,6 +11,14 @@ if (!isDedicated && (isNull player)) then
     waitUntil {sleep 0.1; !isNull player};
 };
 
+// DEBUG HELPER FUNCTION
+private _fnc_debug = {
+	params [["_faction", "", [""]]];
+	if (f_param_debugMode == 1) then
+	{
+		player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 selected.",_faction];
+	};
+};
 
 // ====================================================================================
 
@@ -20,14 +28,16 @@ if (!isDedicated && (isNull player)) then
 
 private _unitfaction = toLower (faction player);
 
-// If the unitfaction is different from the group leader's faction, the latters faction is used
-if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction = toLower (faction (leader group player))};
+// If the unitfaction is different from the group leader's faction, the latter faction is used
+if (_unitfaction != toLower (faction (leader group player))) then {
+	_unitfaction = toLower (faction (leader group player))
+};
 
 // DEBUG
-	if (f_param_debugMode == 1) then
-	{
+if (f_param_debugMode == 1) then
+{
 	player sideChat format ["DEBUG (briefing.sqf): Player faction: %1",_unitfaction];
-	};
+};
 
 // ====================================================================================
 
@@ -39,11 +49,8 @@ if (serverCommandAvailable "#kick") then {
 
 #include "f\briefing\f_briefing_admin.sqf"
 
-// DEBUG
-	if (f_param_debugMode == 1) then
-	{
-		player sideChat format ["DEBUG (briefing.sqf): Briefing for host selected.",_unitfaction];
-	};
+	// DEBUG
+	["host"] call _fnc_debug;
 };
 
 // ====================================================================================
@@ -56,11 +63,8 @@ if (_unitfaction in ["blu_f","blu_t_f"]) exitwith {
 
 #include "f\briefing\f_briefing_nato.sqf"
 
-// DEBUG
-	if (f_param_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
+	// DEBUG
+	[_unitfaction] call _fnc_debug;
 };
 
 // ====================================================================================
@@ -73,11 +77,8 @@ if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f"]) exitwith {
 
 #include "f\briefing\f_briefing_fia.sqf"
 
-// DEBUG
-	if (f_param_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
+	// DEBUG
+	[_unitfaction] call _fnc_debug;
 };
 
 // ====================================================================================
@@ -90,11 +91,8 @@ if (_unitfaction in ["blu_gen_f"]) exitwith {
 
 #include "f\briefing\f_briefing_gendarmerie.sqf"
 
-// DEBUG
-	if (f_param_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
+	// DEBUG
+	[_unitfaction] call _fnc_debug;
 };
 
 // ====================================================================================
@@ -107,11 +105,8 @@ if (_unitfaction in ["opf_f","opf_t_f"]) exitwith {
 
 #include "f\briefing\f_briefing_csat.sqf"
 
-// DEBUG
-	if (f_param_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
+	// DEBUG
+	[_unitfaction] call _fnc_debug;
 };
 
 // ====================================================================================
@@ -124,11 +119,8 @@ if (_unitfaction in ["ind_f"]) exitwith {
 
 #include "f\briefing\f_briefing_aaf.sqf"
 
-// DEBUG
-	if (f_param_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
+	// DEBUG
+	[_unitfaction] call _fnc_debug;
 };
 
 // ====================================================================================
@@ -141,11 +133,8 @@ if (_unitfaction in ["ind_c_f"]) exitwith {
 
 #include "f\briefing\f_briefing_syndikat.sqf"
 
-// DEBUG
-	if (f_param_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
+	// DEBUG
+	[_unitfaction] call _fnc_debug;
 };
 
 // ====================================================================================
@@ -158,11 +147,8 @@ if (_unitfaction in ["blu_ctrg_f"]) exitwith {
 
 #include "f\briefing\f_briefing_ctrg.sqf"
 
-// DEBUG
-	if (f_param_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
+	// DEBUG
+	[_unitfaction] call _fnc_debug;
 };
 
 // ====================================================================================
@@ -175,29 +161,30 @@ if (_unitfaction in ["civ_f", "civ_idap_f"]) exitwith {
 
 #include "f\briefing\f_briefing_civ.sqf"
 
-// DEBUG
-	if (f_param_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
+	// DEBUG
+	[_unitfaction] call _fnc_debug;
 };
 
 // ====================================================================================
 
 // BRIEFING: ZEUS
-// The following block of code executes only if the player is in a ZEUS (Gamelogic) slot; it automatically includes a file which contains the appropriate briefing data.
+// The following block of code executes only if the player is in a ZEUS (Gamelogic) 
+// slot; it automatically includes a file which contains the appropriate briefing data.
 
-if (_unitfaction == "") exitwith {
+if (_unitfaction == "" && ! (typeOf player isEqualTo "VirtualSpectator_F")) exitwith {
 
 #include "f\briefing\f_briefing_zeus.sqf"
 
-// DEBUG
-	if (f_param_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
+	// DEBUG
+	["zeus"] call _fnc_debug;
 };
 
+// ====================================================================================
+
+// BRIEFING: Virtual Spectator
+// This is needed to prevent the "Faction not defined" error message.
+
+if (typeOf player isEqualTo "VirtualSpectator_F") exitwith {};
 
 // ====================================================================================
 
