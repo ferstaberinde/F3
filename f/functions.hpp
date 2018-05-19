@@ -55,7 +55,6 @@ class F // Defines the "owner"
 		file = "f\FTMemberMarkers";
 		class SetLocalFTMemberMarkers{};
 		class GetMarkerColor{};
-		class LocalFTMarkerSync{};
 	};
 	class bodyRemoval
 	{
