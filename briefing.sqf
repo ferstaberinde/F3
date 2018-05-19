@@ -179,6 +179,12 @@ if (_unitfaction == "" && ! (typeOf player isEqualTo "VirtualSpectator_F")) exit
 	["zeus"] call _fnc_debug;
 };
 
+// ====================================================================================
+
+// BRIEFING: Virtual Spectator
+// This is needed to prevent the "Faction not defined" error message.
+
+if (typeOf player isEqualTo "VirtualSpectator_F") exitwith {};
 
 // ====================================================================================
 
