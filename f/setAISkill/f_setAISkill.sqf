@@ -9,18 +9,11 @@ sleep 2;
 
 // ====================================================================================
 
-// DECLARE VARIABLES AND FUNCTIONS
-
-// If an array of units was passed, the skill change will apply only to the units in the array
-params [["_units", [], [[]]]];
-
-// ====================================================================================
-
 // RUN THE SCRIPT ONLY SERVER SIDE
 
-//If _units is empty, then it is called from init.sqf and should only run on the server.
+//If the argument is an empty array, then it is called from init.sqf and should only run on the server.
 //Otherwise it should be allowed to run on the server or on the headless client.
-if (count _units == 0) then {
+if (count _this == 0) then {
 	if (!isServer) exitWith {};
 } else {
 	if (!isServer && hasInterface) exitWith {};
@@ -30,9 +23,7 @@ if (count _units == 0) then {
 
 // SET KEY VARIABLES
 // If an array of units was passed, the skill change will apply only to the units in the array
-if (count _units == 0) then {
-	_units = allUnits;
-};
+private _units = if (count _this > 0) then [{_this},{allUnits}];
 
 // ====================================================================================
 
