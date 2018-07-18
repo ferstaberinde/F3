@@ -157,7 +157,7 @@
         <English> Heavy Fog </English>
       </Key>
       <Key ID="STR_f_param_fog_Option4">
-        <English> Use default </English>
+        <English> Use mission setting </English>
       </Key>
       <Key ID="STR_f_param_wind">
         <English> Override Wind </English>
@@ -172,7 +172,7 @@
         <English> Heavy Wind </English>
       </Key>
       <Key ID="STR_f_param_wind_Option4">
-        <English> Use default </English>
+        <English> Use mission setting </English>
       </Key>
       <Key ID="STR_f_param_AISkill_BLUFOR">
         <English> AI Skill (BLUFOR) </English>
