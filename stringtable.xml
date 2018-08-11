@@ -84,7 +84,7 @@
         <French> Nuit </French>
       </Key>
       <Key ID="STR_f_param_timeOfDay_Option8">
-        <English> Use mission settings </English>
+        <English> Use mission setting </English>
       </Key>
       <Key ID="STR_f_param_weather">
         <English> Weather </English>
@@ -143,6 +143,36 @@
         <Russian> Густой туман </Russian>
         <Spanish> Niebla </Spanish>
         <French> Brouillard </French>
+      </Key>
+      <Key ID="STR_f_param_fog">
+        <English> Override Fog </English>
+      </Key>
+      <Key ID="STR_f_param_fog_Option0">
+        <English> No Fog </English>
+      </Key>
+      <Key ID="STR_f_param_fog_Option1">
+        <English> Light Fog </English>
+      </Key>
+      <Key ID="STR_f_param_fog_Option2">
+        <English> Heavy Fog </English>
+      </Key>
+      <Key ID="STR_f_param_fog_Option4">
+        <English> Use mission setting </English>
+      </Key>
+      <Key ID="STR_f_param_wind">
+        <English> Override Wind </English>
+      </Key>
+      <Key ID="STR_f_param_wind_Option0">
+        <English> No Wind </English>
+      </Key>
+      <Key ID="STR_f_param_wind_Option1">
+        <English> Light Wind </English>
+      </Key>
+      <Key ID="STR_f_param_wind_Option2">
+        <English> Heavy Wind </English>
+      </Key>
+      <Key ID="STR_f_param_wind_Option4">
+        <English> Use mission setting </English>
       </Key>
       <Key ID="STR_f_param_AISkill_BLUFOR">
         <English> AI Skill (BLUFOR) </English>
