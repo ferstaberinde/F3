@@ -109,13 +109,8 @@ class F // Defines the "owner"
 	class woundingsystem
 	{
 		file = "f\medical";
-		class reviveEhDammaged {};
 		class addDragAction {};
 		class onDrag {};
-		class findDeadAnim {};
-		class addPullOutAction {};
-		class vehicleHasWounded {};
-		class pullOutUnit {};
 	};
 	class disableThermals
 	{

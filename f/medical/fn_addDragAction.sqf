@@ -7,17 +7,12 @@ waitUntil {sleep 0.1; !isNull player};
 if (_unit == player) exitWith {};
 if (_unit getVariable ["#revDragId", -1] != -1) exitWith {};
 
-//TODO maybe add a side-check: {side group _this getFriend side group _target >= 0.6} (just like the bis revive thing)
 private _drag_action_cond = str {
 	//_target (object to which action is attached to)
 	// _this (caller/executing person)
-	private _var = _this getVariable ['f_wound_dragging',nil];
 	_target distance _this < 2 && {
-		isNil '_var' && {
-			GET_STATE(_target) == STATE_INCAPACITATED && {
-				(_target getVariable ['f_wound_draggable',false])
-			    && !(_target getVariable ['f_wound_being_dragged',false])
-			}
+		GET_STATE(_target) == STATE_INCAPACITATED && {
+			!(_target getVariable ['f_wound_being_dragged',false])
 		}
 	}
 };

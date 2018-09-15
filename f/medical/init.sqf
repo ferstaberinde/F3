@@ -2,8 +2,7 @@
 // Uses the standard Arma 3 revive system with a few modifications:
 // - Restores vanilla behaviour of FAKs and medkits
 // - Reviving no only heals a player as much as a FAK
-// - Replace the "Force Respawn" hold action while downed with a "Wait to be revived" "infinite" hold-action (keeps icon animation)
-// - Players can be downed in vehicles, will bleed out in them, and can be pulled out
+// - Removes the "Force Respawn"
 // - Downed players can be dragged
 
 // ====================================================================================
@@ -39,7 +38,7 @@ if (!hasInterface) exitWith {};
 	};
 };
 
-// Remove the "Force Respawn" hold-action and replace with "Wait to be revived"
+// Remove the "Force Respawn" hold-action
 [] spawn {
 	while {true} do {
 		// Wait until the player is downed and being revived
@@ -61,16 +60,6 @@ if (!hasInterface) exitWith {};
 		private _prevState = GET_STATE(player);
 		waitUntil{sleep 1; GET_STATE(player) != _prevState};
 	};
-};
-
-// Replace the damage handler to change vehicle behaviour
-[] spawn {
-	// Wait until the event handler has been set
-	waitUntil {sleep 1; (player getVariable ["bis_revive_ehDammaged", -1]) != -1};
-	
-	// Remove the event handler and unset the variable
-	player removeEventHandler ["Dammaged", player getVariable "bis_revive_ehDammaged"];
-	player setVariable ["bis_revive_ehHandleDamage", player addEventHandler ["Dammaged", f_fnc_reviveEhDammaged]];
 };
 
 // Make downed players draggable
