@@ -89,12 +89,10 @@ if (_curatorEH == -1) then {
 		];
 		{
 			[_x] call f_fnc_setAISkill;
-
-			if(!isNil "f_var_disableThermals_enabled" && {f_var_disableThermals_enabled}) then {
-				_x disableTIEquipment true;
-			}
-
 		} forEach crew _entity;
+		if(!isNil "f_var_disableThermals_enabled" && {f_var_disableThermals_enabled}) then {
+			_entity disableTIEquipment true;
+		}
 	}];
 	_curator setVariable ["f_curator_EH", _curatorEH];
 };
