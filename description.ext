@@ -15,7 +15,7 @@ onLoadName = "*** Insert Mission Name Here. ***";
 respawn = 1;
 respawndelay = 3;
 respawnOnStart = 0;
-respawnTemplates[] = {"Seagull"};
+respawnTemplates[] = {"F_Spectator"};
 
 // ============================================================================================
 
@@ -323,7 +323,7 @@ class CfgDebriefing
 // ============================================================================================
 class CfgRespawnTemplates
 {
-    class Seagull
+    class F_Spectator
     {
 		onPlayerRespawn = "f\spect\fn_activateSpectator.sqf";
     };
@@ -349,12 +349,12 @@ class CfgUnitInsignia {
 	#include "f\assignGear\insignia\define.hpp"
 };
 class CfgRemoteExec
-{        
+{
        // List of script functions allowed to be sent from client via remoteExec
        class Functions
        {
                mode = 2;
-       };        
+       };
        // List of script commands allowed to be sent from client via remoteExec
        class Commands
        {
