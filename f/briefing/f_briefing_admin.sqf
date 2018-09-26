@@ -78,8 +78,6 @@ Decrease Safe Start timer by 30 seconds</execute><br/>
 Begin Safe Start timer</execute><br/>
 
 |- <execute expression=""f_param_mission_timer = -1; publicVariable 'f_param_mission_timer';
-['SafeStartMissionStarting',['Mission starting now!']] remoteExec ['bis_fnc_showNotification', 0];
-[false] remoteExec ['f_fnc_safety', playableUnits + switchableUnits];
 hintsilent 'Safe Start ended!';"">
 End Safe Start timer</execute><br/>
 
