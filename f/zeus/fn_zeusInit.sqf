@@ -79,22 +79,16 @@ if (_unitIsCurator) then {
 _curator setCuratorWaypointCost 0;
 {_curator setCuratorCoef [_x,0];} forEach ["place","edit","delete","destroy","group","synchronize"];
 
-// Add event-handler for setAISkill
-private _curatorEH = _curator getVariable ["f_curator_EH", -1];
-if (_curatorEH == -1) then {
-	_curatorEH = _curator addEventHandler ['CuratorObjectPlaced',{
-		params[
-			["_curator", objNull, [objNull]],
-			["_entity", objNull, [objNull]]
-		];
-		{
-			[_x] call f_fnc_setAISkill;
-		} forEach crew _entity;
-		if(!isNil "f_var_disableThermals_enabled" && {f_var_disableThermals_enabled}) then {
-			_entity disableTIEquipment true;
-		}
-	}];
-	_curator setVariable ["f_curator_EH", _curatorEH];
+// Wait until the curator module is linked with its (playable) unit:
+[_curator] spawn {
+	params [
+		["_curator", objNull]
+	];
+
+	waitUntil {sleep 1; ! isNull getAssignedCuratorUnit _curator};
+
+	// Run local code. e.g. event handler for placed units
+	[_curator] remoteExec ['f_fnc_zeusInitLocal', _curator, true];
 };
 
 // If announce is set to true, the new curator will be announced to all players
