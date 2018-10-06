@@ -646,10 +646,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH3";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=19;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item20
 		{
@@ -665,10 +665,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH4";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=20;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item21
 		{
@@ -684,10 +684,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH5";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=21;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item22
 		{
@@ -703,10 +703,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH6";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=22;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item23
 		{
@@ -722,10 +722,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH7";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=23;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item24
 		{
@@ -741,10 +741,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH8";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=24;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item25
 		{
@@ -754,7 +754,7 @@ class Mission
 				position[]={2381.1594,7.5568428,1301.3188};
 			};
 			side="East";
-			flags=6;
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -763,7 +763,7 @@ class Mission
 				textures="Hex";
 			};
 			id=25;
-			type="O_APC_Wheeled_02_rcws_F";
+			type="O_APC_Wheeled_02_rcws_v2_F";
 		};
 		class Item26
 		{
@@ -773,7 +773,7 @@ class Mission
 				position[]={2423.8577,7.5568428,1301.0942};
 			};
 			side="East";
-			flags=6;
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -782,7 +782,7 @@ class Mission
 				textures="Hex";
 			};
 			id=26;
-			type="O_APC_Wheeled_02_rcws_F";
+			type="O_APC_Wheeled_02_rcws_v2_F";
 		};
 		class Item27
 		{
@@ -792,7 +792,7 @@ class Mission
 				position[]={2475.9973,7.5568428,1300.3062};
 			};
 			side="East";
-			flags=6;
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -801,7 +801,7 @@ class Mission
 				textures="Hex";
 			};
 			id=27;
-			type="O_APC_Wheeled_02_rcws_F";
+			type="O_APC_Wheeled_02_rcws_v2_F";
 		};
 		class Item28
 		{
@@ -811,7 +811,7 @@ class Mission
 				position[]={2529.1165,7.5568428,1300.1157};
 			};
 			side="East";
-			flags=6;
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -820,7 +820,7 @@ class Mission
 				textures="Hex";
 			};
 			id=28;
-			type="O_APC_Wheeled_02_rcws_F";
+			type="O_APC_Wheeled_02_rcws_v2_F";
 		};
 		class Item29
 		{
@@ -3831,10 +3831,10 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				textures="Opfor";
+				pylons="PylonWeapon_2000Rnd_65x39_belt;PylonRack_12Rnd_missiles;";
 			};
 			id=144;
-			type="O_Heli_Light_02_v2_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item112
 		{
@@ -4136,10 +4136,10 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				textures="Opfor";
+				pylons="PylonWeapon_2000Rnd_65x39_belt;PylonRack_12Rnd_missiles;";
 			};
 			id=154;
-			type="O_Heli_Light_02_v2_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item117
 		{
@@ -10670,52 +10670,8 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2381.1594,5.0014391,1301.3689};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_COV_C";
-						description="CSAT Command Vehicle Commander";
-						isPlayable=1;
-					};
-					id=378;
-					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10736,7 +10692,7 @@ class Mission
 					id=379;
 					type="O_crew_F";
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10744,7 +10700,7 @@ class Mission
 						position[]={2381.1594,5.0014391,1301.3689};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -10765,25 +10721,14 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=3;
+					nextID=2;
 				};
 				class Links
 				{
-					items=3;
+					items=2;
 					class Item0
 					{
 						linkID=0;
-						item0=378;
-						item1=25;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=379;
 						item1=25;
 						class CustomData
@@ -10792,9 +10737,9 @@ class Mission
 							turretPath[]={0};
 						};
 					};
-					class Item2
+					class Item1
 					{
-						linkID=2;
+						linkID=1;
 						item0=380;
 						item1=25;
 						class CustomData
@@ -11571,52 +11516,8 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2423.8577,5.0014391,1301.1443};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_AV_C";
-						description="CSAT Alpha Vehicle Commander";
-						isPlayable=1;
-					};
-					id=399;
-					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -11637,7 +11538,7 @@ class Mission
 					id=400;
 					type="O_crew_F";
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -11645,7 +11546,7 @@ class Mission
 						position[]={2423.8577,5.0014391,1301.1443};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -11666,25 +11567,14 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=3;
+					nextID=2;
 				};
 				class Links
 				{
-					items=3;
+					items=2;
 					class Item0
 					{
 						linkID=0;
-						item0=399;
-						item1=26;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=400;
 						item1=26;
 						class CustomData
@@ -11693,9 +11583,9 @@ class Mission
 							turretPath[]={0};
 						};
 					};
-					class Item2
+					class Item1
 					{
-						linkID=2;
+						linkID=1;
 						item0=401;
 						item1=26;
 						class CustomData
@@ -12472,52 +12362,8 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2475.9973,5.0014391,1300.3562};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_BV_C";
-						description="CSAT Bravo Vehicle Commander";
-						isPlayable=1;
-					};
-					id=420;
-					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12561,7 +12407,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12569,7 +12415,7 @@ class Mission
 						position[]={2475.9973,5.0014391,1300.3562};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -12590,25 +12436,14 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=3;
+					nextID=2;
 				};
 				class Links
 				{
-					items=3;
+					items=2;
 					class Item0
 					{
 						linkID=0;
-						item0=420;
-						item1=27;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=421;
 						item1=27;
 						class CustomData
@@ -12617,9 +12452,9 @@ class Mission
 							turretPath[]={0};
 						};
 					};
-					class Item2
+					class Item1
 					{
-						linkID=2;
+						linkID=1;
 						item0=422;
 						item1=27;
 						class CustomData
@@ -13396,52 +13231,8 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2529.1165,5.0014391,1300.1658};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_CV_C";
-						description="CSAT Charlie Vehicle Commander";
-						isPlayable=1;
-					};
-					id=441;
-					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -13462,7 +13253,7 @@ class Mission
 					id=442;
 					type="O_crew_F";
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -13470,7 +13261,7 @@ class Mission
 						position[]={2529.1165,5.0014391,1300.1658};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -13491,25 +13282,14 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=3;
+					nextID=2;
 				};
 				class Links
 				{
-					items=3;
+					items=2;
 					class Item0
 					{
 						linkID=0;
-						item0=441;
-						item1=28;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=442;
 						item1=28;
 						class CustomData
@@ -13518,9 +13298,9 @@ class Mission
 							turretPath[]={0};
 						};
 					};
-					class Item2
+					class Item1
 					{
-						linkID=2;
+						linkID=1;
 						item0=443;
 						item1=28;
 						class CustomData
@@ -30722,9 +30502,11 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_l"",this,""syndikat""] call f_fnc_assignGear";
 				name="VehSyn_TH1_1";
+				textures="Green";
+				pylons=";;";
 			};
 			id=1027;
-			type="I_Heli_light_03_unarmed_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item349
 		{
