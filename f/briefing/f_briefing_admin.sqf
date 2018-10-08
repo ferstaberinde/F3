@@ -68,18 +68,16 @@ These endings are available. To trigger an ending click on its link.<br/><br/>
 
 _briefing = _briefing + "
 <font size='18'>SAFE START CONTROL</font><br/>
-|- <execute expression=""f_param_mission_timer = f_param_mission_timer + 1; publicVariable 'f_param_mission_timer'; hintsilent format ['Mission Timer: %1',f_param_mission_timer];"">
-Increase Safe Start timer by 1 minute</execute><br/>
+|- <execute expression=""f_param_mission_timer = f_param_mission_timer + 30; publicVariable 'f_param_mission_timer'; hintsilent format ['Mission Timer: %1',f_param_mission_timer];"">
+Increase Safe Start timer by 30 seconds</execute><br/>
 
-|- <execute expression=""f_param_mission_timer = f_param_mission_timer - 1; publicVariable 'f_param_mission_timer'; hintsilent format ['Mission Timer: %1',f_param_mission_timer];"">
-Decrease Safe Start timer by 1 minute</execute><br/>
+|- <execute expression=""f_param_mission_timer = f_param_mission_timer - 30; publicVariable 'f_param_mission_timer'; hintsilent format ['Mission Timer: %1',f_param_mission_timer];"">
+Decrease Safe Start timer by 30 seconds</execute><br/>
 
 |- <execute expression=""[[],'f\safeStart\f_safeStart.sqf'] remoteExec ['BIS_fnc_execVM', 0]; hintsilent 'Safe Start started!';"">
 Begin Safe Start timer</execute><br/>
 
 |- <execute expression=""f_param_mission_timer = -1; publicVariable 'f_param_mission_timer';
-['SafeStartMissionStarting',['Mission starting now!']] remoteExec ['bis_fnc_showNotification', 0];
-[false] remoteExec ['f_fnc_safety', playableUnits + switchableUnits];
 hintsilent 'Safe Start ended!';"">
 End Safe Start timer</execute><br/>
 
