@@ -11,6 +11,8 @@ private ["_allowedList", "_allowedTypes", "_allowedUnits"];
 
 params [["_allowedList", [], [[]]]];
 
+f_var_disableThermals_enabled = true;
+
 // INTERPRET RESTRICTED ARRAY
 // Loop through the array containing the allowed classes and units and split them into two
 
@@ -26,7 +28,7 @@ _allowedUnits = [];
 if (isServer) then {
 	{
 		private _vehicleToCheck = _x;
-		
+
 		if (_vehicleToCheck in _allowedUnits || {{_vehicleToCheck isKindOf _x} count _allowedTypes > 0}) then {
 			// This is an allowed vehicle, ignore it
 		} else {

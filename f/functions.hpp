@@ -94,6 +94,7 @@ class F // Defines the "owner"
 		class zeusInit{};
 		class zeusAddAddons{};
 		class zeusAddObjects{};
+		class zeusInitLocal{};
 	};
 	class safeStart
 	{

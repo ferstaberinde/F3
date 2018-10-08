@@ -104,7 +104,7 @@ if !(isNull (getAssignedCuratorLogic player)) then {hintsilent 'ZEUS already ass
 };"">Assign ZEUS to host</execute>.<br/>
 
 |- <execute expression=""
-if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {[player, playableUnits] remoteExec ['f_fnc_zeusAddObjects', 2]; hintsilent 'Added playable units.'};"">Add players and playable units to ZEUS object list</execute>.<br/>
+if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {[player, allUnits] remoteExec ['f_fnc_zeusAddObjects', 2]; hintsilent 'Added all units.'};"">Add all units to ZEUS object list</execute>.<br/>
 
 |- <execute expression=""
 if (isNull (getAssignedCuratorLogic player)) then {hintsilent 'Assign ZEUS first!'} else {
