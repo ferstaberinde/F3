@@ -56,11 +56,6 @@ class F // Defines the "owner"
 		class SetLocalFTMemberMarkers{};
 		class GetMarkerColor{};
 	};
-	class bodyRemoval
-	{
-		file = "f\removeBody";
-		class removeBody{};
-	};
 	class setAISkill
 	{
 		file = "f\setAISKill";
