@@ -3,7 +3,7 @@ class WS
 
 		class debug
 		{
-			file = "ws_fnc\dbg";
+			file = "ws_fnc\Dbg";
 			class debugText {};
 			class typeCheck {};
 			class clipboardCode {};
