@@ -5,7 +5,9 @@
 //add aparachute as backpack and restore the old backpack on landing
 
 private ["_bp","_bpi"];
-params ["_unit"];
+params [
+	["_unit", objNull, [objNull]]
+];
 _bp = backpack _unit;
 _bpi = backPackItems _unit;
 

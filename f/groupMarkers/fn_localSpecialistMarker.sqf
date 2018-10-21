@@ -11,7 +11,12 @@ private ["_mkr"];
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-params["_untName",["_mkrType","b_hq"],"_mkrText",["_mkrColor","ColorBlack"]];
+params [
+	["_untName", "", [""]],
+	["_mkrType", "b_hq", [""]],
+	["_mkrText", "", [""]],
+	["_mkrColor","ColorBlack", [""]]
+];
 
 private _mkrName = format ["mkr_%1",_untName];
 private _unt = missionNamespace getVariable [_untName, objNull];

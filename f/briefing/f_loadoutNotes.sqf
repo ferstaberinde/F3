@@ -11,7 +11,7 @@ private ["_text","_weps","_items","_fnc_wepMags","_mags","_bp","_maxload","_atta
 // Local function to set the proper magazine count.
 _fnc_wepMags = {
 	private ["_wepMags","_magArr","_s"];
-	params ["_w"];
+	params [["_w", "", [""]]];
 
 	//Get possible magazines for weapon
 	_wepMags = getArray (configFile >> "CfgWeapons" >> _w >> "magazines");

@@ -5,7 +5,10 @@
 // DECLARE VARIABLES
 private ["_grp"];
 
-params ["_grp_var", "_grp_id"];
+params [
+	["_grp_var", "", [""]],
+	["_grp_id", "", [""]]
+];
 
 // Check first if the group exists
 

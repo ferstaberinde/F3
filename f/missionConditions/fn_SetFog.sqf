@@ -11,7 +11,10 @@ private ["_strength","_decay","_base"];
 // SET KEY VARIABLES
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
-params ["_fog", ["_transition",0]];
+params [
+	["_fog", 0, [0]],
+	["_transition", 0, [0]]
+];
 
 // Exit when using mission settings
 if ( _fog == 4 ) exitWith {};
