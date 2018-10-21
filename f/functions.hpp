@@ -58,8 +58,8 @@ class F // Defines the "owner"
 	};
 	class setAISkill
 	{
-		file = "f\setAISKill";
-		class setAISKill{};
+		file = "f\setAISkill";
+		class setAISkill{};
 	};
 	class mapClickTeleport
 	{
