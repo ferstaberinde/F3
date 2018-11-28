@@ -6,18 +6,6 @@
 
 // ====================================================================================
 
-// NOTES: CREDITS
-// The code below creates the administration sub-section of notes.
-
-_cre = player createDiaryRecord ["diary", ["Credits","
-<br/>
-*** Insert mission credits here. ***
-<br/><br/>
-Made with F3 (http://www.ferstaberinde.com/f3/en/)
-"]];
-
-// ====================================================================================
-
 // NOTES: ADMINISTRATION
 // The code below creates the administration sub-section of notes.
 

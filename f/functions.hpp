@@ -8,6 +8,11 @@ class F // Defines the "owner"
 		class processParamsArray{preInit = 1; postInit=1;};
 		class nearPlayer{};
 	};
+	class briefing
+	{
+		file = "f\briefing";
+		class createBriefing{};
+	};
 	class mpEnd
 	{
 		file = "f\mpEnd";
@@ -44,6 +49,7 @@ class F // Defines the "owner"
 		file = "f\groupMarkers";
 		class localGroupMarker{};
 		class localSpecialistMarker{};
+		class groupData{preInit = 1;};
 	};
 	class authorisedCrew
 	{

@@ -76,7 +76,7 @@ f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
 // F3 - Briefing
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_briefing = [] execVM "briefing.sqf";
+f_script_briefing = [] spawn f_fnc_createBriefing;
 
 // ====================================================================================
 

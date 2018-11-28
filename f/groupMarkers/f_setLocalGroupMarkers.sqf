@@ -2,18 +2,11 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// DECLARE VARIABLES AND FUNCTIONS
-
-private ["_hq", "_ft", "_sup", "_lau", "_mor", "_eng", "_ifv", "_tnk", "_rec", "_hel", "_pla", "_art", "_med", "_uav"];
-
-
-// ====================================================================================
-
 // MAKE SURE THE PLAYER INITIALIZES PROPERLY
 
 if (!isDedicated && (isNull player)) then
 {
-    waitUntil {sleep 0.1; !isNull player};
+	waitUntil {sleep 0.1; !isNull player};
 };
 
 // ====================================================================================
@@ -27,56 +20,59 @@ params [
 
 // ====================================================================================
 
-// CONFIGURE MARKER TYPES
-// Using the marker classes (https://community.bistudio.com/wiki/cfgMarkers) we setup a number of variables to define which type of marker should be used for which group
-// Note: They can be overriden for each group individually
+private _groups = [];
 
-// Groups
-_hq = "b_hq";			// Command elements
-_ft = "b_inf";			// Fireteams
-_sup = "b_support";		// Support units (MMG,HMG)
-_lau = "b_motor_inf";	// Launchers (MAT, HAT)
-_mor = "b_mortar";		// Mortars
-_eng = "b_maint";		// Engineers
-_ifv = "b_mech_inf";	// IFVs & APCs
-_tnk = "b_armor";		// Tanks
-_rec = "b_recon";		// Recon (ST)
-_hel = "b_air";			// Helicopters
-_pla = "b_plane";		// Planes
-_art = "b_art";			// Artillery
+// Markers seen by players in NATO, NATO (Pacific) & CTRG slots.
+if (_unitfaction in ["blu_f","blu_t_f","blu_ctrg_f"]) then {
+	_groups = f_var_groupData_blufor_nato;
+};
 
-// Specialists
-_med = "b_med";			// Medic
-_uav = "b_uav";			// UAV
+// Markers seen by players in FIA & CTRG slots.
+if (_unitfaction in ["blu_g_f","blu_ctrg_f"]) then {
+	_groups = f_var_groupData_blufor_fia;
+};
 
-// ====================================================================================
+// Markers seen by players in gendarmerie slots.
+if (_unitfaction in ["blu_gen_f"]) then {
+	_groups = f_var_groupData_blufor_gen;
+};
 
-// INCLUDE GROUP MARKER SCRIPTS
-// Due to the amount of markers the script is split into various sub-scripts (by side)
-// which are now included to create the complete script
+// Markers seen by players in CSAT & CSAT (Pacific) slots.
+if (_unitfaction in ["opf_f","opf_t_f"]) then {
+	_groups = f_var_groupData_opfor_csat;
+};
 
-// MARKERS: BLUFOR
-// Markers seen by players in BLUFOR slots
+// Markers seen by players in OPFOR-FIA slots.
+if (_unitfaction in ["opf_g_f"]) then {
+	_groups = f_var_groupData_opfor_fia;
+};
 
-#include "f_setLocalGroupMarkers_Blufor.sqf"
+// Markers seen by players in AAF slots.
+if (_unitfaction in ["ind_f"]) then {
+	_groups = f_var_groupData_indfor_aaf;
+};
 
-// ====================================================================================
+// Markers seen by players in INDEPENDENT-FIA slots.
+if (_unitfaction in ["ind_g_f"]) then {
+	_groups = f_var_groupData_indfor_fia;
+};
 
-// MARKERS: OPFOR
-// Markers seen by players in OPFOR slots
-
-#include "f_setLocalGroupMarkers_Opfor.sqf"
-
-// ====================================================================================
-
-// MARKERS: INDFOR
-// Markers seen by players in INDEPENDENT slots
-
-#include "f_setLocalGroupMarkers_Indfor.sqf"
+// Markers seen by players in SYNDIKAT slots.
+if (_unitfaction in ["ind_c_f"]) then {
+	_groups = f_var_groupData_indfor_syn;
+};
 
 // ====================================================================================
 
-// MARKERS: ALL
-// Markers spawned here can be seen by all units
+{
+	_x params ["_group", "_icon", "_markerText", "_color", "_id"];
+	if (_icon != "") then {
+		if (_group find "Unit" >= 0) then {
+			_x spawn f_fnc_localSpecialistMarker;
+		} else {
+			_x spawn f_fnc_localGroupMarker;
+		};
+	};
+} forEach _groups;
 
 // ====================================================================================
