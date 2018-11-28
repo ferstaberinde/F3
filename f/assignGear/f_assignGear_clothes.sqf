@@ -16,7 +16,7 @@ removeVest _unit;
 
 // Assign default clothes
 _uniform = _baseUniform;
-_helmet = _baseHelmet;
+_helmet  = _baseHelmet;
 _glasses = _baseGlasses;
 
 // Select the default rig
@@ -30,41 +30,50 @@ _rig = switch (f_param_loadouts) do {
 
 // Pilot
 if (_typeOfUnit in _pilot) then {
-	_helmet = _pilotHelmet;
+	_helmet  = _pilotHelmet;
 	_uniform = _pilotUniform;
-	_rig = _pilotRig;
-	_glasses = _pilotGlasses
+	_rig     = _pilotRig;
+	_glasses = _pilotGlasses;
+};
+
+// Jet Pilot
+if (_typeOfUnit in _jet) then {
+	_helmet  = _jetHelmet;
+	_uniform = _jetUniform;
+	_rig     = _jetRig;
+	_glasses = _jetGlasses;
+	_nvg     = ""; //Do not assign NVG, otherwise the jet helmet gets removed.
 };
 
 // Crew
 if (_typeOfUnit in _crew) then {
-	_helmet = _crewHelmet;
+	_helmet  = _crewHelmet;
 	_uniform = _crewUniform;
-	_rig = _crewRig;
+	_rig     = _crewRig;
 	_glasses = _crewGlasses;
 };
 
 // Diver
 if (_typeOfUnit in _diver) then {
-	_helmet = _diverHelmet;
+	_helmet  = _diverHelmet;
 	_uniform = _diverUniform;
-	_rig = _diverRig;
+	_rig     = _diverRig;
 	_glasses = _diverGlasses;
 };
 
 // Ghillie
 if (_typeOfUnit in _ghillie) then {
-	_helmet = _ghillieHelmet;
+	_helmet  = _ghillieHelmet;
 	_uniform = _ghillieUniform;
-	_rig = _ghillieRig;
+	_rig     = _ghillieRig;
 	_glasses = _ghillieGlasses;
 };
 
 // Spec Op
 if (_typeOfUnit in _specOp) then {
-	_helmet = _sfHelmet;
+	_helmet  = _sfHelmet;
 	_uniform = _sfUniform;
-	_rig = _sfRig;
+	_rig     = _sfRig;
 	_glasses = _sfGlasses;
 };
 
@@ -86,6 +95,6 @@ if(count _rig > 0) then
 
 if(count _glasses > 0) then
 {
-    removeGoggles _unit;
+	removeGoggles _unit;
 	_unit addGoggles (selectRandom _glasses);
 };

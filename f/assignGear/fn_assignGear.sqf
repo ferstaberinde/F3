@@ -2,8 +2,15 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// DECLARE VARIABLES AND FUNCTIONS
+// INTERPRET PASSED VARIABLES
 
+// The following interprets what has been passed to this script
+params[
+	["_typeofUnit", "", [""]],
+	["_unit", objNull, [objNull]]
+];
+private _isMan = _unit isKindOf "CAManBase"; // We check if we're dealing with a soldier or a vehicle
+_typeofUnit = toLower _typeofUnit; // Tidy input for SWITCH/CASE statements, expecting something like : r = Rifleman, co = Commanding Officer, rat = Rifleman (AT)
 
 // ====================================================================================
 
@@ -11,12 +18,7 @@
 // The following code detects what faction the unit's slot belongs to, and stores
 // it in the private variable _faction. It can also be passed as an optional parameter.
 
-
-params["_typeofUnit","_unit"];
-private _faction = toLower (faction _unit);
-
-_typeofUnit = toLower _typeofUnit;
-_faction = toLower (param[2, (faction _unit)]);
+private _faction = toLower (param[2, (faction _unit)]);
 
 // ====================================================================================
 
@@ -54,7 +56,7 @@ _unit setVariable ["f_var_assignGear",_typeofUnit,true];
 // DECLARE VARIABLES AND FUNCTIONS 2
 // Used by the faction-specific scripts
 
-private ["_attach1","_attach2","_silencer1","_silencer2","_scope1","_scope2","_scope3","_bipod1","_bipod2","_attachments","_silencer","_hg_silencer1","_hg_scope1","_hg_attachments","_rifle","_riflemag","_riflemag_tr","_carbine","_carbinemag","_carbinemag_tr","_smg","_smgmag","_smgmag_tr","_diverWep","_diverMag1","_diverMag2","_glrifle","_glriflemag","_glriflemag_tr","_glmag","_glsmokewhite","_glsmokegreen","_glsmokered","_glflarewhite","_glflarered","_glflareyellow","_glflaregreen","_pistol","_pistolmag","_grenade","_Mgrenade","_smokegrenade","_smokegrenadegreen","_firstaid","_medkit","_nvg","_uavterminal","_chemgreen","_chemred","_chemyellow","_chemblue","_bagsmall","_bagmedium","_baglarge","_bagmediumdiver","_baguav","_baghmgg","_baghmgag","_baghatg","_baghatag","_bagmtrg","_bagmtrag","_baghsamg","_baghsamag","_AR","_ARmag","_ARmag_tr","_MMG","_MMGmag","_MMGmag_tr","_Tracer","_DMrifle","_DMriflemag","_RAT","_RATmag","_MAT","_MATmag1","_MATmag2","_SAM","_SAMmag","_HAT","_HATmag1","_HATmag2","_SNrifle","_SNrifleMag","_ATmine","_satchel","_APmine1","_APmine2","_diver","_pilot","_crew","_ghillie","_specOp","_baseUniform","_baseHelmet","_baseGlasses","_lightRig","_mediumRig","_heavyRig","_diverUniform","_diverHelmet","_diverRig","_diverGlasses","_pilotUniform","_pilotHelmet","_pilotRig","_pilotGlasses","_crewUniform","_crewHelmet","_crewRig","_crewGlasses","_ghillieUniform","_ghillieHelmet","_ghillieRig","_ghillieGlasses","_sfuniform","_sfhelmet","_sfRig","_sfGlasses","_typeofUnit","_unit","_isMan","_backpack","_typeofBackPack","_loadout","_COrifle","_mgrenade","_DC","_SLrifle","_JTACrifle","_ftlrifle","_grenrifle","_typeofunit"];
+private ["_attach1","_attach2","_silencer1","_silencer2","_scope1","_scope2","_scope3","_bipod1","_bipod2","_attachments","_silencer","_hg_silencer1","_hg_scope1","_hg_attachments","_rifle","_riflemag","_riflemag_tr","_carbine","_carbinemag","_carbinemag_tr","_smg","_smgmag","_smgmag_tr","_diverWep","_diverMag1","_diverMag2","_glrifle","_glriflemag","_glriflemag_tr","_glmag","_glsmokewhite","_glsmokegreen","_glsmokered","_glflarewhite","_glflarered","_glflareyellow","_glflaregreen","_pistol","_pistolmag","_grenade","_Mgrenade","_smokegrenade","_smokegrenadegreen","_firstaid","_medkit","_nvg","_uavterminal","_chemgreen","_chemred","_chemyellow","_chemblue","_bag","_bagLarge","_bagmediumdiver","_baguav","_baghmgg","_baghmgag","_baghatg","_baghatag","_bagmtrg","_bagmtrag","_baghsamg","_baghsamag","_AR","_ARmag","_ARmag_tr","_MMG","_MMGmag","_MMGmag_tr","_Tracer","_DMrifle","_DMriflemag","_RAT","_RATmag1","_RATmag2","_MAT","_MATmag1","_MATmag2","_SAM","_SAMmag","_HAT","_HATmag1","_HATmag2","_SNrifle","_SNrifleMag","_ATmine","_satchel","_APmine1","_APmine2","_diver","_pilot","_crew","_ghillie","_specOp","_baseUniform","_baseHelmet","_baseGlasses","_lightRig","_mediumRig","_heavyRig","_diverUniform","_diverHelmet","_diverRig","_diverGlasses","_pilotUniform","_pilotHelmet","_pilotRig","_pilotGlasses","_crewUniform","_crewHelmet","_crewRig","_crewGlasses","_ghillieUniform","_ghillieHelmet","_ghillieRig","_ghillieGlasses","_sfuniform","_sfhelmet","_sfRig","_sfGlasses","_backpack","_typeofBackPack","_loadout","_COrifle","_mgrenade","_DC","_SLrifle","_JTACrifle","_ftlrifle","_grenrifle","_typeofunit","_jet","_jetUniform","_jetHelmet","_jetRig","_jetGlasses"];
 
 // ====================================================================================
 
@@ -166,14 +168,33 @@ if (_faction in ["ind_c_f","syndikat"]) then {
 
 // ====================================================================================
 
+// Handle weapon switching, weapon attachments, etc
+
+// This block needs only to be run on an infantry unit
+if (_isMan) then {
+
+	// Add extra FAKs, 
+	// because the assignGear files were made when the sws was still existing.
+	private _numExtraFAK = 2;
+	for "_i" from 1 to _numExtraFAK do {
+		_unit addItem _firstaid;
+	};
+
+	// Handle weapon attachments
+	#include "f_assignGear_attachments.sqf";
+
+	// ENSURE UNIT HAS CORRECT WEAPON SELECTED ON SPAWNING
+	_unit selectweapon primaryweapon _unit;
+
+};
+
+
+// ====================================================================================
+
 // This variable simply tracks the progress of the gear assignation process, for other
 // scripts to reference.
 
 _unit setVariable ["f_var_assignGear_done",true,true];
-
-// ====================================================================================
-
-// DEBUG
 
 // ====================================================================================
 
