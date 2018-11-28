@@ -64,9 +64,11 @@ class F // Defines the "owner"
 	class mapClickTeleport
 	{
 		file = "f\mapClickTeleport";
-		class mapClickTeleportUnit{};
-		class mapClickTeleportGroup{};
+		class mapClickTeleportAction{};
+		class mapClickTeleportSetPos{};
 		class mapClickTeleportParachute{};
+		class mapClickTeleportRemoveAction{};
+		class mapClickTeleportBriefing{};
 	};
 	class nametag
 	{
