@@ -242,6 +242,6 @@ private _text_group = "" + _text_notice;
 } forEach _units;
 // ====================================================================================
 // Create Loadout pages
-player createDiaryRecord ["diary", ["Loadout", _text]];
 player createDiaryRecord ["diary", ["Loadout Team", _text_group]];
+player createDiaryRecord ["diary", ["Loadout", _text]];
 // ====================================================================================
