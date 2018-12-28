@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=641;
 	class ItemIDProvider
 	{
-		nextID=1234;
+		nextID=1240;
 	};
 	class Camera
 	{
@@ -31370,16 +31370,16 @@ class Mission
 						position[]={509.84177,5.0014391,1044.8337};
 					};
 					side="West";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
-						rank="CORPORAL";
+						rank="SERGEANT";
 						init="[""pat"",this] call f_fnc_assignGear;";
-						name="UnitGEN_A_G1";
-						description="Gendarmerie Alpha Gendarme";
+						name="UnitGEN_A_Sgt";
+						description="Gendarmerie Alpha Sergeant";
 						isPlayable=1;
 					};
-					id=1066;
+					id=1067;
 					type="B_GEN_Soldier_F";
 					class CustomAttributes
 					{
@@ -31413,16 +31413,16 @@ class Mission
 						position[]={509.84177,5.0014391,1044.8337};
 					};
 					side="West";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="[""pat"",this] call f_fnc_assignGear;";
-						name="UnitGEN_A_Sgt";
-						description="Gendarmerie Alpha Sergeant";
+						name="UnitGEN_A_G1";
+						description="Gendarmerie Alpha Gendarme";
 						isPlayable=1;
 					};
-					id=1067;
+					id=1235;
 					type="B_GEN_Soldier_F";
 					class CustomAttributes
 					{
@@ -31465,7 +31465,7 @@ class Mission
 						description="Gendarmerie Alpha Gendarme";
 						isPlayable=1;
 					};
-					id=1068;
+					id=1237;
 					type="B_GEN_Soldier_F";
 					class CustomAttributes
 					{
@@ -31507,7 +31507,7 @@ class Mission
 						description="Gendarmerie Alpha Gendarme";
 						isPlayable=1;
 					};
-					id=1069;
+					id=1238;
 					type="B_GEN_Soldier_F";
 					class CustomAttributes
 					{
@@ -31550,39 +31550,39 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=1066;
+						item0=1067;
+						item1=1090;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1235;
 						item1=1090;
 						class CustomData
 						{
 							role=1;
 						};
 					};
-					class Item1
-					{
-						linkID=1;
-						item0=1067;
-						item1=1090;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=0;
-						};
-					};
 					class Item2
 					{
 						linkID=2;
-						item0=1068;
+						item0=1237;
 						item1=1091;
 						class CustomData
 						{
-							role=3;
-							cargoIndex=0;
+							role=2;
+							turretPath[]={0};
 						};
 					};
 					class Item3
 					{
 						linkID=3;
-						item0=1069;
+						item0=1238;
 						item1=1091;
 						class CustomData
 						{
