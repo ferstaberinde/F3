@@ -48,7 +48,7 @@ private _isFireteam = false;
 if(!_isFireteam) exitWith {};
 
 // Only run this for the group leader:
-if((leader (group player) != player)) exitWith {};
+if((((units group player) select {isPlayer _x}) #0) != player) exitWith {};
 
 // ====================================================================================
 
