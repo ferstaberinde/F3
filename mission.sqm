@@ -31146,7 +31146,7 @@ class Mission
 			{
 				skill=0.60000002;
 				init="[""v_helo_l"",this,""syndikat""] call f_fnc_assignGear";
-				name="VehSyn_TH1_1";
+				name="VehSyn_TH1";
 				textures="Green";
 				pylons=";;";
 			};
