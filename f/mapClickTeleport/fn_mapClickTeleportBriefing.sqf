@@ -2,17 +2,12 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-params [["_unit", objNull, [objNull]]];
-
 if (!hasInterface) exitWith {};
 
 if (!isDedicated && (isNull player)) then
 {
 	waitUntil {sleep 0.1; !isNull player};
 };
-
-if (_unit != player) exitWith {};
-
 
 player createDiaryRecord ["diary", ["HALO Jumping 101",
 format ["<font size='16'>TL/DR - OPEN YOUR PARACHUTE AT 200 METERS</font>
