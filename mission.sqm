@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=641;
 	class ItemIDProvider
 	{
-		nextID=1134;
+		nextID=1240;
 	};
 	class Camera
 	{
@@ -58,13 +58,16 @@ addons[]=
 	"A3_Soft_F_Exp_Offroad_01",
 	"A3_Soft_F_Gamma_SUV_01",
 	"A3_Modules_F",
-	"A3_Data_F_Exp_A_Virtual"
+	"A3_Data_F_Exp_A_Virtual",
+	"A3_Air_F_EPC_Plane_CAS_01",
+	"A3_Air_F_Gamma_Plane_Fighter_03",
+	"A3_Air_F_EPC_Plane_CAS_02"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=20;
+		items=22;
 		class Item0
 		{
 			className="A3_Air_F_Heli";
@@ -205,6 +208,20 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item20
+		{
+			className="A3_Air_F_EPC";
+			name="Arma 3 Win Episode - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item21
+		{
+			className="A3_Air_F_Gamma";
+			name="Arma 3 - Aircraft";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=1116085;
@@ -246,7 +263,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="fa3-5-1";
+		briefingName="fa3-5-2";
 		resistanceWest=0;
 		timeOfChanges=28800;
 		startWeather=0.50001526;
@@ -270,7 +287,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=394;
+		items=400;
 		class Item0
 		{
 			dataType="Object";
@@ -646,10 +663,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH3";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=19;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item20
 		{
@@ -665,10 +682,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH4";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=20;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item21
 		{
@@ -684,10 +701,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH5";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=21;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item22
 		{
@@ -703,10 +720,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH6";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=22;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item23
 		{
@@ -722,10 +739,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH7";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=23;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item24
 		{
@@ -741,10 +758,10 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH8";
-				textures="Opfor";
+				pylons=";;";
 			};
 			id=24;
-			type="O_Heli_Light_02_unarmed_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item25
 		{
@@ -754,7 +771,7 @@ class Mission
 				position[]={2381.1594,7.5568428,1301.3188};
 			};
 			side="East";
-			flags=6;
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -763,7 +780,7 @@ class Mission
 				textures="Hex";
 			};
 			id=25;
-			type="O_APC_Wheeled_02_rcws_F";
+			type="O_APC_Wheeled_02_rcws_v2_F";
 		};
 		class Item26
 		{
@@ -773,7 +790,7 @@ class Mission
 				position[]={2423.8577,7.5568428,1301.0942};
 			};
 			side="East";
-			flags=6;
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -782,7 +799,7 @@ class Mission
 				textures="Hex";
 			};
 			id=26;
-			type="O_APC_Wheeled_02_rcws_F";
+			type="O_APC_Wheeled_02_rcws_v2_F";
 		};
 		class Item27
 		{
@@ -792,7 +809,7 @@ class Mission
 				position[]={2475.9973,7.5568428,1300.3062};
 			};
 			side="East";
-			flags=6;
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -801,7 +818,7 @@ class Mission
 				textures="Hex";
 			};
 			id=27;
-			type="O_APC_Wheeled_02_rcws_F";
+			type="O_APC_Wheeled_02_rcws_v2_F";
 		};
 		class Item28
 		{
@@ -811,7 +828,7 @@ class Mission
 				position[]={2529.1165,7.5568428,1300.1157};
 			};
 			side="East";
-			flags=6;
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -820,7 +837,7 @@ class Mission
 				textures="Hex";
 			};
 			id=28;
-			type="O_APC_Wheeled_02_rcws_F";
+			type="O_APC_Wheeled_02_rcws_v2_F";
 		};
 		class Item29
 		{
@@ -2232,7 +2249,7 @@ class Mission
 			{
 				position[]={2281.6389,5.3882694,729.50195};
 			};
-			init="this addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISKill} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
+			init="[this, true, allUnits] call f_fnc_zeusInit;";
 			id=106;
 			type="ModuleCurator_F";
 			atlOffset=0.38826942;
@@ -2343,7 +2360,7 @@ class Mission
 			{
 				position[]={2282.2229,5.3580265,718.42773};
 			};
-			init="this addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISKill} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
+			init="[this, true, allUnits] call f_fnc_zeusInit;";
 			id=107;
 			type="ModuleCurator_F";
 			atlOffset=0.3580265;
@@ -2454,7 +2471,7 @@ class Mission
 			{
 				position[]={2282.3342,5.6426582,707.78223};
 			};
-			init="this addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISKill} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
+			init="[this, true, allUnits] call f_fnc_zeusInit;";
 			id=108;
 			type="ModuleCurator_F";
 			atlOffset=0.64265823;
@@ -2565,7 +2582,7 @@ class Mission
 			{
 				position[]={2284.1614,6.0756798,697.16992};
 			};
-			init="this addEventHandler ['CuratorObjectPlaced',{{[_x] call f_fnc_setAISKill} forEach crew(_this select 1)}];this addCuratorEditableObjects [playableUnits,true];";
+			init="[this, true, allUnits] call f_fnc_zeusInit;";
 			id=109;
 			type="ModuleCurator_F";
 			atlOffset=1.0756798;
@@ -3831,10 +3848,10 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				textures="Opfor";
+				pylons="PylonWeapon_2000Rnd_65x39_belt;PylonRack_12Rnd_missiles;";
 			};
 			id=144;
-			type="O_Heli_Light_02_v2_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item112
 		{
@@ -4136,10 +4153,10 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				textures="Opfor";
+				pylons="PylonWeapon_2000Rnd_65x39_belt;PylonRack_12Rnd_missiles;";
 			};
 			id=154;
-			type="O_Heli_Light_02_v2_F";
+			type="O_Heli_Light_02_dynamicLoadout_F";
 		};
 		class Item117
 		{
@@ -7340,13 +7357,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={621.67786,5.0014391,1372.7942};
+						position[]={621.67798,5.0014391,1372.7941};
 					};
 					side="West";
 					flags=6;
@@ -7354,8 +7371,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""mmgag"",this] call f_fnc_assignGear;";
-						name="UnitNATO_MMG1_AG";
+						init="[""mmgl"",this] call f_fnc_assignGear;";
+						name="UnitNATO_MMG1_TL";
 						description="NATO Medium MG Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -7381,6 +7398,27 @@ class Mission
 					};
 					id=269;
 					type="B_soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={617.51489,5.0014391,1371.1731};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""mmgag"",this] call f_fnc_assignGear;";
+						name="UnitNATO_MMG1_AG";
+						description="NATO Medium MG Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1209;
+					type="B_soldier_AAR_F";
 				};
 			};
 			class Attributes
@@ -7418,13 +7456,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={621.31165,5.0014391,1361.0022};
+						position[]={621.31201,5.0014391,1361.0021};
 					};
 					side="West";
 					flags=6;
@@ -7432,8 +7470,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""mmgag"",this] call f_fnc_assignGear;";
-						name="UnitNATO_MMG2_AG";
+						init="[""mmgl"",this] call f_fnc_assignGear;";
+						name="UnitNATO_MMG2_TL";
 						description="NATO Medium MG Team 2 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -7459,6 +7497,27 @@ class Mission
 					};
 					id=272;
 					type="B_soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={617.14893,5.0014391,1359.3811};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""mmgag"",this] call f_fnc_assignGear;";
+						name="UnitNATO_MMG2_AG";
+						description="NATO Medium MG Team 2 Assistant";
+						isPlayable=1;
+					};
+					id=1210;
+					type="B_soldier_AAR_F";
 				};
 			};
 			class Attributes
@@ -7496,13 +7555,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={621.51672,5.0014391,1349.5032};
+						position[]={621.51703,5.0014391,1349.5031};
 					};
 					side="West";
 					flags=6;
@@ -7510,8 +7569,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""matag"",this] call f_fnc_assignGear;      ";
-						name="UnitNATO_MAT1_AG";
+						init="[""matl"",this] call f_fnc_assignGear;      ";
+						name="UnitNATO_MAT1_TL";
 						description="NATO Medium AT Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -7538,6 +7597,27 @@ class Mission
 					id=275;
 					type="B_soldier_AT_F";
 					atlOffset=0.035766125;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={617.354,5.0014391,1347.8821};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""matag"",this] call f_fnc_assignGear;      ";
+						name="UnitNATO_MAT1_AG";
+						description="NATO Medium AT Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1211;
+					type="B_soldier_AAT_F";
 				};
 			};
 			class Attributes
@@ -7575,13 +7655,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={621.82825,5.0014391,1337.9661};
+						position[]={621.828,5.0014391,1337.9661};
 					};
 					side="West";
 					flags=6;
@@ -7589,8 +7669,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""matag"",this] call f_fnc_assignGear; ";
-						name="UnitNATO_MAT2_AG";
+						init="[""matl"",this] call f_fnc_assignGear; ";
+						name="UnitNATO_MAT2_TL";
 						description="NATO Medium AT Team 2 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -7617,6 +7697,27 @@ class Mission
 					};
 					id=278;
 					type="B_soldier_AT_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={617.66602,5.0014391,1336.3441};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""matag"",this] call f_fnc_assignGear; ";
+						name="UnitNATO_MAT2_AG";
+						description="NATO Medium AT Team 2 Assistant";
+						isPlayable=1;
+					};
+					id=1212;
+					type="B_soldier_AAT_F";
 				};
 			};
 			class Attributes
@@ -7669,7 +7770,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""hmgag"",this] call f_fnc_assignGear;      ";
-						name="UnitNATO_HMG1_AG";
+						name="UnitNATO_HMG1_TL";
 						description="NATO Heavy MG Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -7732,13 +7833,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={621.42981,5.0014391,1314.5901};
+						position[]={621.42999,5.0014391,1314.5901};
 					};
 					side="West";
 					flags=6;
@@ -7746,8 +7847,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""hatag"",this] call f_fnc_assignGear; ";
-						name="UnitNATO_HAT1_AG";
+						init="[""hatl"",this] call f_fnc_assignGear; ";
+						name="UnitNATO_HAT1_TL";
 						description="NATO Heavy AT Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -7774,6 +7875,27 @@ class Mission
 					};
 					id=284;
 					type="B_soldier_AT_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={617.26697,5.0014391,1312.968};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""hatag"",this] call f_fnc_assignGear; ";
+						name="UnitNATO_HAT1_AG";
+						description="NATO Heavy AT Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1213;
+					type="B_soldier_AAT_F";
 				};
 			};
 			class Attributes
@@ -7826,7 +7948,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""mtrag"",this] call f_fnc_assignGear; ";
-						name="UnitNATO_MTR1_AG";
+						name="UnitNATO_MTR1_TL";
 						description="NATO Mortar Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -7892,13 +8014,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={621.65149,5.7161484,1290.2786};
+						position[]={621.651,5.7164392,1290.2791};
 					};
 					side="West";
 					flags=2;
@@ -7906,8 +8028,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""msamag"",this] call f_fnc_assignGear; ";
-						name="UnitNATO_MSAM1_AG";
+						init="[""msaml"",this] call f_fnc_assignGear; ";
+						name="UnitNATO_MSAM1_TL";
 						description="NATO Medium SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -7935,6 +8057,27 @@ class Mission
 					id=290;
 					type="B_soldier_AA_F";
 					atlOffset=0.79047394;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={617.48901,5.7164392,1288.6571};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""msamag"",this] call f_fnc_assignGear; ";
+						name="UnitNATO_MSAM1_AG";
+						description="NATO Medium SAM Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1160;
+					type="B_soldier_AAA_F";
+					atlOffset=0.71500015;
 				};
 			};
 			class Attributes
@@ -7988,7 +8131,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""hsamag"",this] call f_fnc_assignGear; ";
-						name="UnitNATO_HSAM1_AG";
+						name="UnitNATO_HSAM1_TL";
 						description="NATO Heavy SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -8818,7 +8961,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_P";
 						description="NATO Transport Helo 1 Pilot";
 						isPlayable=1;
@@ -8839,7 +8982,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_CP";
 						description="NATO Transport Helo 1 Co-Pilot";
 						isPlayable=1;
@@ -8860,9 +9003,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH1_G1";
-						description="NATO Transport Helo 1 Crew Chief (Repair)";
+						description="NATO Transport Helo 1 Crew Chief";
 						isPlayable=1;
 					};
 					id=322;
@@ -8992,7 +9135,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_P";
 						description="NATO Transport Helo 2 Pilot";
 						isPlayable=1;
@@ -9013,7 +9156,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_CP";
 						description="NATO Transport Helo 2 Co-Pilot";
 						isPlayable=1;
@@ -9034,9 +9177,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH2_G1";
-						description="NATO Transport Helo 2 Crew Chief (Repair)";
+						description="NATO Transport Helo 2 Crew Chief";
 						isPlayable=1;
 					};
 					id=327;
@@ -9166,7 +9309,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_P";
 						description="NATO Transport Helo 3 Pilot";
 						isPlayable=1;
@@ -9187,7 +9330,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_CP";
 						description="NATO Transport Helo 3 Co-Pilot";
 						isPlayable=1;
@@ -9208,9 +9351,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH3_G1";
-						description="NATO Transport Helo 3 Crew Chief (Repair)";
+						description="NATO Transport Helo 3 Crew Chief";
 						isPlayable=1;
 					};
 					id=332;
@@ -9341,7 +9484,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_P";
 						description="NATO Transport Helo 4 Pilot";
 						isPlayable=1;
@@ -9362,7 +9505,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_CP";
 						description="NATO Transport Helo 4 Co-Pilot";
 						isPlayable=1;
@@ -9383,9 +9526,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH4_G1";
-						description="NATO Transport Helo 4 Crew Chief (Repair)";
+						description="NATO Transport Helo 4 Crew Chief";
 						isPlayable=1;
 					};
 					id=337;
@@ -9516,7 +9659,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_P";
 						description="NATO Transport Helo 5 Pilot";
 						isPlayable=1;
@@ -9537,7 +9680,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_CP";
 						description="NATO Transport Helo 5 Co-Pilot";
 						isPlayable=1;
@@ -9558,9 +9701,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH5_G1";
-						description="NATO Transport Helo 5 Crew Chief (Repair)";
+						description="NATO Transport Helo 5 Crew Chief";
 						isPlayable=1;
 					};
 					id=342;
@@ -9691,7 +9834,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_P";
 						description="NATO Transport Helo 6 Pilot";
 						isPlayable=1;
@@ -9712,7 +9855,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_CP";
 						description="NATO Transport Helo 6 Co-Pilot";
 						isPlayable=1;
@@ -9733,9 +9876,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH6_G1";
-						description="NATO Transport Helo 6 Crew Chief (Repair)";
+						description="NATO Transport Helo 6 Crew Chief";
 						isPlayable=1;
 					};
 					id=347;
@@ -9866,7 +10009,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_P";
 						description="NATO Transport Helo 7 Pilot";
 						isPlayable=1;
@@ -9887,7 +10030,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_CP";
 						description="NATO Transport Helo 7 Co-Pilot";
 						isPlayable=1;
@@ -9908,9 +10051,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH7_G1";
-						description="NATO Transport Helo 7 Crew Chief (Repair)";
+						description="NATO Transport Helo 7 Crew Chief";
 						isPlayable=1;
 					};
 					id=352;
@@ -10041,7 +10184,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_P";
 						description="NATO Transport Helo 8 Pilot";
 						isPlayable=1;
@@ -10062,7 +10205,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_CP";
 						description="NATO Transport Helo 8 Co-Pilot";
 						isPlayable=1;
@@ -10083,9 +10226,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_TH8_G1";
-						description="NATO Transport Helo 8 Crew Chief (Repair)";
+						description="NATO Transport Helo 8 Crew Chief";
 						isPlayable=1;
 					};
 					id=357;
@@ -10216,7 +10359,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_AH1_P";
 						description="NATO Attack Helo 1 Pilot";
 						isPlayable=1;
@@ -10237,9 +10380,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitNATO_AH1_CP";
-						description="NATO Attack Helo 1 Gunner (Repair)";
+						description="NATO Attack Helo 1 Gunner";
 						isPlayable=1;
 					};
 					id=361;
@@ -10670,52 +10813,8 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2381.1594,5.0014391,1301.3689};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_COV_C";
-						description="CSAT Command Vehicle Commander";
-						isPlayable=1;
-					};
-					id=378;
-					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.97000003;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10736,7 +10835,7 @@ class Mission
 					id=379;
 					type="O_crew_F";
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10744,7 +10843,7 @@ class Mission
 						position[]={2381.1594,5.0014391,1301.3689};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -10765,25 +10864,14 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=3;
+					nextID=2;
 				};
 				class Links
 				{
-					items=3;
+					items=2;
 					class Item0
 					{
 						linkID=0;
-						item0=378;
-						item1=25;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=379;
 						item1=25;
 						class CustomData
@@ -10792,9 +10880,9 @@ class Mission
 							turretPath[]={0};
 						};
 					};
-					class Item2
+					class Item1
 					{
-						linkID=2;
+						linkID=1;
 						item0=380;
 						item1=25;
 						class CustomData
@@ -11571,52 +11659,8 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2423.8577,5.0014391,1301.1443};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_AV_C";
-						description="CSAT Alpha Vehicle Commander";
-						isPlayable=1;
-					};
-					id=399;
-					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -11637,7 +11681,7 @@ class Mission
 					id=400;
 					type="O_crew_F";
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -11645,7 +11689,7 @@ class Mission
 						position[]={2423.8577,5.0014391,1301.1443};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -11666,25 +11710,14 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=3;
+					nextID=2;
 				};
 				class Links
 				{
-					items=3;
+					items=2;
 					class Item0
 					{
 						linkID=0;
-						item0=399;
-						item1=26;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=400;
 						item1=26;
 						class CustomData
@@ -11693,9 +11726,9 @@ class Mission
 							turretPath[]={0};
 						};
 					};
-					class Item2
+					class Item1
 					{
-						linkID=2;
+						linkID=1;
 						item0=401;
 						item1=26;
 						class CustomData
@@ -12472,52 +12505,8 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2475.9973,5.0014391,1300.3562};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_BV_C";
-						description="CSAT Bravo Vehicle Commander";
-						isPlayable=1;
-					};
-					id=420;
-					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1.01;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12561,7 +12550,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -12569,7 +12558,7 @@ class Mission
 						position[]={2475.9973,5.0014391,1300.3562};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -12590,25 +12579,14 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=3;
+					nextID=2;
 				};
 				class Links
 				{
-					items=3;
+					items=2;
 					class Item0
 					{
 						linkID=0;
-						item0=420;
-						item1=27;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=421;
 						item1=27;
 						class CustomData
@@ -12617,9 +12595,9 @@ class Mission
 							turretPath[]={0};
 						};
 					};
-					class Item2
+					class Item1
 					{
-						linkID=2;
+						linkID=1;
 						item0=422;
 						item1=27;
 						class CustomData
@@ -13396,52 +13374,8 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2529.1165,5.0014391,1300.1658};
-					};
-					side="East";
-					flags=6;
-					class Attributes
-					{
-						skill=0.60000002;
-						rank="SERGEANT";
-						init="[""vc"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_CV_C";
-						description="CSAT Charlie Vehicle Commander";
-						isPlayable=1;
-					};
-					id=441;
-					type="O_crew_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.95999998;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -13462,7 +13396,7 @@ class Mission
 					id=442;
 					type="O_crew_F";
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -13470,7 +13404,7 @@ class Mission
 						position[]={2529.1165,5.0014391,1300.1658};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -13491,25 +13425,14 @@ class Mission
 			{
 				class LinkIDProvider
 				{
-					nextID=3;
+					nextID=2;
 				};
 				class Links
 				{
-					items=3;
+					items=2;
 					class Item0
 					{
 						linkID=0;
-						item0=441;
-						item1=28;
-						class CustomData
-						{
-							role=2;
-							turretPath[]={1};
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=442;
 						item1=28;
 						class CustomData
@@ -13518,9 +13441,9 @@ class Mission
 							turretPath[]={0};
 						};
 					};
-					class Item2
+					class Item1
 					{
-						linkID=2;
+						linkID=1;
 						item0=443;
 						item1=28;
 						class CustomData
@@ -13561,13 +13484,13 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2595.7317,5.0014391,1375.5728};
+						position[]={2595.7319,5.0014391,1375.573};
 					};
 					side="East";
 					flags=6;
@@ -13576,8 +13499,8 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						lock="UNLOCKED";
-						init="[""mmgag"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_MMG1_AG";
+						init="[""mmgl"",this] call f_fnc_assignGear;";
+						name="UnitCSAT_MMG1_TL";
 						description="CSAT Medium MG Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -13651,6 +13574,28 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2591.5688,5.0014391,1373.951};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						lock="UNLOCKED";
+						init="[""mmgag"",this] call f_fnc_assignGear;";
+						name="UnitCSAT_MMG1_AG";
+						description="CSAT Medium MG Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1229;
+					type="O_Soldier_AAR_F";
+				};
 			};
 			class Attributes
 			{
@@ -13687,13 +13632,13 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2595.9475,5.0014391,1361.355};
+						position[]={2595.948,5.0014391,1361.3551};
 					};
 					side="East";
 					flags=6;
@@ -13702,8 +13647,8 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						lock="UNLOCKED";
-						init="[""mmgag"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_MMG2_AG";
+						init="[""mmgl"",this] call f_fnc_assignGear;";
+						name="UnitCSAT_MMG2_TL";
 						description="CSAT Medium MG Team 2 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -13777,6 +13722,28 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2591.7849,5.0014391,1359.733};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						lock="UNLOCKED";
+						init="[""mmgag"",this] call f_fnc_assignGear;";
+						name="UnitCSAT_MMG2_AG";
+						description="CSAT Medium MG Team 2 Assistant";
+						isPlayable=1;
+					};
+					id=1230;
+					type="O_Soldier_AAR_F";
+				};
 			};
 			class Attributes
 			{
@@ -13813,13 +13780,13 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2595.6252,5.0014391,1349.7603};
+						position[]={2595.625,5.0014391,1349.76};
 					};
 					side="East";
 					flags=6;
@@ -13827,8 +13794,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""matag"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_MAT1_AG";
+						init="[""matl"",this] call f_fnc_assignGear;";
+						name="UnitCSAT_MAT1_TL";
 						description="CSAT Medium AT Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -13901,6 +13868,27 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2591.4629,5.0014391,1348.139};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""matag"",this] call f_fnc_assignGear;";
+						name="UnitCSAT_MAT1_AG";
+						description="CSAT Medium AT Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1231;
+					type="O_Soldier_AAT_F";
+				};
 			};
 			class Attributes
 			{
@@ -13937,13 +13925,13 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2596.1155,5.0014391,1336.8003};
+						position[]={2596.115,5.0014391,1336.8};
 					};
 					side="East";
 					flags=6;
@@ -13951,8 +13939,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""matag"",this] call f_fnc_assignGear; ";
-						name="UnitCSAT_MAT2_AG";
+						init="[""matl"",this] call f_fnc_assignGear; ";
+						name="UnitCSAT_MAT2_TL";
 						description="CSAT Medium AT Team 2 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -14025,6 +14013,27 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2591.9529,5.0014391,1335.1791};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""matag"",this] call f_fnc_assignGear; ";
+						name="UnitCSAT_MAT2_AG";
+						description="CSAT Medium AT Team 2 Assistant";
+						isPlayable=1;
+					};
+					id=1232;
+					type="O_Soldier_AAT_F";
+				};
 			};
 			class Attributes
 			{
@@ -14076,7 +14085,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""hmgag"",this] call f_fnc_assignGear;";
-						name="UnitCSAT_HMG1_AG";
+						name="UnitCSAT_HMG1_TL";
 						description="CSAT Heavy MG Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -14185,13 +14194,13 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2595.6624,5.0014391,1312.0134};
+						position[]={2595.6621,5.0014391,1312.0131};
 					};
 					side="East";
 					flags=6;
@@ -14199,8 +14208,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""hatag"",this] call f_fnc_assignGear; ";
-						name="UnitCSAT_HAT1_AG";
+						init="[""hatl"",this] call f_fnc_assignGear; ";
+						name="UnitCSAT_HAT1_TL";
 						description="CSAT Heavy AT Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -14273,6 +14282,27 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2591.5,5.0014391,1310.3921};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""hatag"",this] call f_fnc_assignGear; ";
+						name="UnitCSAT_HAT1_AG";
+						description="CSAT Heavy AT Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1233;
+					type="O_Soldier_AAT_F";
+				};
 			};
 			class Attributes
 			{
@@ -14324,7 +14354,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""mtrag"",this] call f_fnc_assignGear; ";
-						name="UnitCSAT_MTR1_AG";
+						name="UnitCSAT_MTR1_TL";
 						description="CSAT Mortar Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -14433,13 +14463,13 @@ class Mission
 			side="East";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2596.1624,5.0014391,1288.1716};
+						position[]={2596.1621,5.0014391,1288.172};
 					};
 					side="East";
 					flags=6;
@@ -14447,8 +14477,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""msamag"",this] call f_fnc_assignGear; ";
-						name="UnitCSAT_MSAM1_AG";
+						init="[""msaml"",this] call f_fnc_assignGear; ";
+						name="UnitCSAT_MSAM1_TL";
 						description="CSAT Medium SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -14521,6 +14551,27 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2592,5.0014391,1286.55};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""msamag"",this] call f_fnc_assignGear; ";
+						name="UnitCSAT_MSAM1_AG";
+						description="CSAT Medium SAM Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1208;
+					type="O_Soldier_AAA_F";
+				};
 			};
 			class Attributes
 			{
@@ -14572,7 +14623,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""hsamag"",this] call f_fnc_assignGear; ";
-						name="UnitCSAT_HSAM1_AG";
+						name="UnitCSAT_HSAM1_TL";
 						description="CSAT Heavy SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -15691,7 +15742,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH1_P";
 						description="CSAT Transport Helo 1 Pilot";
 						isPlayable=1;
@@ -15712,9 +15763,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH1_CP";
-						description="CSAT Transport Helo 1 Co-Pilot (Repair)";
+						description="CSAT Transport Helo 1 Co-Pilot";
 						isPlayable=1;
 					};
 					id=498;
@@ -15857,7 +15908,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH2_P";
 						description="CSAT Transport Helo 2 Pilot";
 						isPlayable=1;
@@ -15878,9 +15929,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH2_CP";
-						description="CSAT Transport Helo 2 Co-Pilot (Repair)";
+						description="CSAT Transport Helo 2 Co-Pilot";
 						isPlayable=1;
 					};
 					id=502;
@@ -16023,7 +16074,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH3_P";
 						description="CSAT Transport Helo 3 Pilot";
 						isPlayable=1;
@@ -16044,9 +16095,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH3_CP";
-						description="CSAT Transport Helo 3 Co-Pilot (Repair)";
+						description="CSAT Transport Helo 3 Co-Pilot";
 						isPlayable=1;
 					};
 					id=506;
@@ -16134,7 +16185,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH4_P";
 						description="CSAT Transport Helo 4 Pilot";
 						isPlayable=1;
@@ -16155,9 +16206,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH4_CP";
-						description="CSAT Transport Helo 4 Co-Pilot (Repair)";
+						description="CSAT Transport Helo 4 Co-Pilot";
 						isPlayable=1;
 					};
 					id=509;
@@ -16245,7 +16296,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH5_P";
 						description="CSAT Transport Helo 5 Pilot";
 						isPlayable=1;
@@ -16266,9 +16317,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH5_CP";
-						description="CSAT Transport Helo 5 Co-Pilot (Repair)";
+						description="CSAT Transport Helo 5 Co-Pilot";
 						isPlayable=1;
 					};
 					id=512;
@@ -16356,7 +16407,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH6_P";
 						description="CSAT Transport Helo 6 Pilot";
 						isPlayable=1;
@@ -16377,9 +16428,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH6_CP";
-						description="CSAT Transport Helo 6 Co-Pilot (Repair)";
+						description="CSAT Transport Helo 6 Co-Pilot";
 						isPlayable=1;
 					};
 					id=515;
@@ -16467,7 +16518,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH7_P";
 						description="CSAT Transport Helo 7 Pilot";
 						isPlayable=1;
@@ -16488,9 +16539,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH7_CP";
-						description="CSAT Transport Helo 7 Co-Pilot (Repair)";
+						description="CSAT Transport Helo 7 Co-Pilot";
 						isPlayable=1;
 					};
 					id=518;
@@ -16578,7 +16629,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH8_P";
 						description="CSAT Transport Helo 8 Pilot";
 						isPlayable=1;
@@ -16599,9 +16650,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_TH8_CP";
-						description="CSAT Transport Helo 8 Co-Pilot (Repair)";
+						description="CSAT Transport Helo 8 Co-Pilot";
 						isPlayable=1;
 					};
 					id=521;
@@ -16689,7 +16740,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_AH1_P";
 						description="CSAT Attack Helo 1 Pilot";
 						isPlayable=1;
@@ -16733,9 +16784,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_AH1_CP";
-						description="CSAT Attack Helo 1 Gunner (Repair)";
+						description="CSAT Attack Helo 1 Gunner";
 						isPlayable=1;
 					};
 					id=524;
@@ -18816,13 +18867,13 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1594.4077,5.0014391,761.87903};
+						position[]={1594.408,5.0014391,761.87897};
 					};
 					side="Independent";
 					flags=6;
@@ -18830,8 +18881,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""mmgag"",this] call f_fnc_assignGear;";
-						name="UnitAAF_MMG1_AG";
+						init="[""mmgl"",this] call f_fnc_assignGear;";
+						name="UnitAAF_MMG1_TL";
 						description="AAF Medium MG Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -18857,6 +18908,27 @@ class Mission
 					};
 					id=609;
 					type="I_Soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1590.245,5.0014391,760.25702};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""mmgag"",this] call f_fnc_assignGear;";
+						name="UnitAAF_MMG1_AG";
+						description="AAF Medium MG Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1224;
+					type="I_Soldier_AAR_F";
 				};
 			};
 			class Attributes
@@ -18894,13 +18966,13 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1594.4331,5.0014391,747.13684};
+						position[]={1594.433,5.0014391,747.13696};
 					};
 					side="Independent";
 					flags=6;
@@ -18908,8 +18980,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""mmgag"",this] call f_fnc_assignGear;";
-						name="UnitAAF_MMG2_AG";
+						init="[""mmgl"",this] call f_fnc_assignGear;";
+						name="UnitAAF_MMG2_TL";
 						description="AAF Medium MG Team 2 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -18935,6 +19007,27 @@ class Mission
 					};
 					id=612;
 					type="I_Soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1590.271,5.0014391,745.51501};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""mmgag"",this] call f_fnc_assignGear;";
+						name="UnitAAF_MMG2_AG";
+						description="AAF Medium MG Team 2 Assistant";
+						isPlayable=1;
+					};
+					id=1225;
+					type="I_Soldier_AAR_F";
 				};
 			};
 			class Attributes
@@ -18972,14 +19065,14 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1594.5386,5.0014391,733.86145};
-						angles[]={0,0.030932644,0};
+						position[]={1594.5389,5.0014391,733.86096};
+						angles[]={0,0.030927233,0};
 					};
 					side="Independent";
 					flags=6;
@@ -18987,8 +19080,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""matag"",this] call f_fnc_assignGear;  ";
-						name="UnitAAF_MAT1_AG";
+						init="[""matl"",this] call f_fnc_assignGear;  ";
+						name="UnitAAF_MAT1_TL";
 						description="AAF Medium AT Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -19014,6 +19107,28 @@ class Mission
 					};
 					id=615;
 					type="I_Soldier_AT_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1590.376,5.0014391,732.23999};
+						angles[]={0,0.030927233,0};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""matag"",this] call f_fnc_assignGear;  ";
+						name="UnitAAF_MAT1_AG";
+						description="AAF Medium AT Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1226;
+					type="I_Soldier_AAT_F";
 				};
 			};
 			class Attributes
@@ -19051,13 +19166,13 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1594.9575,5.0014391,722.32629};
+						position[]={1594.958,5.0014391,722.32599};
 					};
 					side="Independent";
 					flags=6;
@@ -19065,8 +19180,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""matag"",this] call f_fnc_assignGear; ";
-						name="UnitAAF_MAT2_AG";
+						init="[""matl"",this] call f_fnc_assignGear; ";
+						name="UnitAAF_MAT2_TL";
 						description="AAF Medium AT Team 2 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -19092,6 +19207,27 @@ class Mission
 					};
 					id=618;
 					type="I_Soldier_AT_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1590.7949,5.0014391,720.70502};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""matag"",this] call f_fnc_assignGear; ";
+						name="UnitAAF_MAT2_AG";
+						description="AAF Medium AT Team 2 Assistant";
+						isPlayable=1;
+					};
+					id=1227;
+					type="I_Soldier_AAT_F";
 				};
 			};
 			class Attributes
@@ -19144,7 +19280,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""hmgag"",this] call f_fnc_assignGear;  ";
-						name="UnitAAF_HMG1_AG";
+						name="UnitAAF_HMG1_TL";
 						description="AAF Heavy MG Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -19207,13 +19343,13 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1594.8901,5.0014391,697.82727};
+						position[]={1594.89,5.0014391,697.82697};
 					};
 					side="Independent";
 					flags=6;
@@ -19221,8 +19357,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""hatag"",this] call f_fnc_assignGear; ";
-						name="UnitAAF_HAT1_AG";
+						init="[""hatl"",this] call f_fnc_assignGear; ";
+						name="UnitAAF_HAT1_TL";
 						description="AAF Heavy AT Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -19248,6 +19384,27 @@ class Mission
 					};
 					id=624;
 					type="I_Soldier_AT_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1590.7279,5.0014391,696.20599};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""hatag"",this] call f_fnc_assignGear; ";
+						name="UnitAAF_HAT1_AG";
+						description="AAF Heavy AT Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1228;
+					type="I_Soldier_AAT_F";
 				};
 			};
 			class Attributes
@@ -19300,7 +19457,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""mtrag"",this] call f_fnc_assignGear; ";
-						name="UnitAAF_MTR1_AG";
+						name="UnitAAF_MTR1_TL";
 						description="AAF Mortar Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -19363,13 +19520,13 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1594.6802,5.0014391,673.71008};
+						position[]={1594.6801,5.0014391,673.70996};
 					};
 					side="Independent";
 					flags=6;
@@ -19377,8 +19534,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""msamag"",this] call f_fnc_assignGear; ";
-						name="UnitAAF_MSAM1_AG";
+						init="[""msaml"",this] call f_fnc_assignGear; ";
+						name="UnitAAF_MSAM1_TL";
 						description="AAF Medium SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -19404,6 +19561,27 @@ class Mission
 					};
 					id=630;
 					type="I_Soldier_AA_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1590.5179,5.0014391,672.08801};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""msamag"",this] call f_fnc_assignGear; ";
+						name="UnitAAF_MSAM1_AG";
+						description="AAF Medium SAM Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1196;
+					type="I_Soldier_AAA_F";
 				};
 			};
 			class Attributes
@@ -19456,7 +19634,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""hsamag"",this] call f_fnc_assignGear; ";
-						name="UnitAAF_HSAM1_AG";
+						name="UnitAAF_HSAM1_TL";
 						description="AAF Heavy SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -20279,7 +20457,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH1_P";
 						description="AAF Transport Helo 1 Pilot";
 						isPlayable=1;
@@ -20300,9 +20478,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH1_CP";
-						description="AAF Transport Helo 1 Co-Pilot (Repair)";
+						description="AAF Transport Helo 1 Co-Pilot";
 						isPlayable=1;
 					};
 					id=661;
@@ -20391,7 +20569,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH2_P";
 						description="AAF Transport Helo 2 Pilot";
 						isPlayable=1;
@@ -20412,9 +20590,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH2_CP";
-						description="AAF Transport Helo 2 Co-Pilot (Repair)";
+						description="AAF Transport Helo 2 Co-Pilot";
 						isPlayable=1;
 					};
 					id=664;
@@ -20503,7 +20681,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH3_P";
 						description="AAF Transport Helo 3 Pilot";
 						isPlayable=1;
@@ -20524,9 +20702,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH3_CP";
-						description="AAF Transport Helo 3 Co-Pilot (Repair)";
+						description="AAF Transport Helo 3 Co-Pilot";
 						isPlayable=1;
 					};
 					id=667;
@@ -20615,7 +20793,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH4_P";
 						description="AAF Transport Helo 4 Pilot";
 						isPlayable=1;
@@ -20636,9 +20814,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_TH4_CP";
-						description="AAF Transport Helo 4 Co-Pilot (Repair)";
+						description="AAF Transport Helo 4 Co-Pilot";
 						isPlayable=1;
 					};
 					id=670;
@@ -20727,7 +20905,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_AH1_P";
 						description="AAF Attack Helo 1 Pilot";
 						isPlayable=1;
@@ -20748,9 +20926,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitAAF_AH1_CP";
-						description="AAF Attack Helo 1 Co-Pilot (Repair)";
+						description="AAF Attack Helo 1 Co-Pilot";
 						isPlayable=1;
 					};
 					id=673;
@@ -22754,13 +22932,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={602.96912,5.153121,756.11713};
+						position[]={602.96899,5.153439,756.117};
 					};
 					side="West";
 					flags=6;
@@ -22768,8 +22946,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""mmgag"",this] call f_fnc_assignGear;";
-						name="UnitFIA_MMG1_AG";
+						init="[""mmgl"",this] call f_fnc_assignGear;";
+						name="UnitFIA_MMG1_TL";
 						description="FIA Medium MG Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -22797,6 +22975,28 @@ class Mission
 					id=742;
 					type="B_G_Soldier_AR_F";
 					atlOffset=0.24621964;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={598.80688,5.153439,754.49603};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""mmgag"",this] call f_fnc_assignGear;";
+						name="UnitFIA_MMG1_AG";
+						description="FIA Medium MG Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1214;
+					type="B_G_Soldier_lite_F";
+					atlOffset=0.15199995;
 				};
 			};
 			class Attributes
@@ -22835,13 +23035,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={602.82947,5.0014391,744.77826};
+						position[]={602.82898,5.0014391,744.77802};
 					};
 					side="West";
 					flags=6;
@@ -22849,8 +23049,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""mmgag"",this] call f_fnc_assignGear;";
-						name="UnitFIA_MMG2_AG";
+						init="[""mmgl"",this] call f_fnc_assignGear;";
+						name="UnitFIA_MMG2_TL";
 						description="FIA Medium MG Team 2 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -22876,6 +23076,27 @@ class Mission
 					};
 					id=745;
 					type="B_G_Soldier_AR_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={598.66699,5.0014391,743.15698};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""mmgag"",this] call f_fnc_assignGear;";
+						name="UnitFIA_MMG2_AG";
+						description="FIA Medium MG Team 2 Assistant";
+						isPlayable=1;
+					};
+					id=1215;
+					type="B_G_Soldier_lite_F";
 				};
 			};
 			class Attributes
@@ -22913,13 +23134,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={603.17322,5.0014391,734.07025};
+						position[]={603.17297,5.0014391,734.07001};
 					};
 					side="West";
 					flags=6;
@@ -22927,8 +23148,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""matag"",this] call f_fnc_assignGear;      ";
-						name="UnitFIA_MAT1_AG";
+						init="[""matl"",this] call f_fnc_assignGear;      ";
+						name="UnitFIA_MAT1_TL";
 						description="FIA Medium AT Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -22953,6 +23174,27 @@ class Mission
 						isPlayable=1;
 					};
 					id=748;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={599.01099,5.0014391,732.44897};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""matag"",this] call f_fnc_assignGear;      ";
+						name="UnitFIA_MAT1_AG";
+						description="FIA Medium AT Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1216;
 					type="B_G_Soldier_LAT_F";
 				};
 			};
@@ -22991,13 +23233,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={603.0863,5.0014391,722.08783};
+						position[]={603.086,5.0014391,722.08801};
 					};
 					side="West";
 					flags=6;
@@ -23005,8 +23247,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""matag"",this] call f_fnc_assignGear; ";
-						name="UnitFIA_MAT2_AG";
+						init="[""matl"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MAT2_TL";
 						description="FIA Medium AT Team 2 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -23032,6 +23274,27 @@ class Mission
 						isPlayable=1;
 					};
 					id=751;
+					type="B_G_Soldier_LAT_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={598.92395,5.0014391,720.466};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""matag"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MAT2_AG";
+						description="FIA Medium AT Team 2 Assistant";
+						isPlayable=1;
+					};
+					id=1217;
 					type="B_G_Soldier_LAT_F";
 				};
 			};
@@ -23085,7 +23348,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""hmgag"",this] call f_fnc_assignGear;      ";
-						name="UnitFIA_HMG1_AG";
+						name="UnitFIA_HMG1_TL";
 						description="FIA Heavy MG Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -23148,13 +23411,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={603.3988,5.0014391,698.78607};
+						position[]={603.39899,5.0014391,698.78601};
 					};
 					side="West";
 					flags=6;
@@ -23162,8 +23425,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""hatag"",this] call f_fnc_assignGear; ";
-						name="UnitFIA_HAT1_AG";
+						init="[""hatl"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_HAT1_TL";
 						description="FIA Heavy AT Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -23191,6 +23454,27 @@ class Mission
 					id=757;
 					type="B_G_Soldier_LAT_F";
 					atlOffset=0.22868824;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={599.23596,5.0014391,697.164};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""hatag"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_HAT1_AG";
+						description="FIA Heavy AT Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1218;
+					type="B_G_Soldier_LAT_F";
 				};
 			};
 			class Attributes
@@ -23243,7 +23527,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""mtrag"",this] call f_fnc_assignGear; ";
-						name="UnitFIA_MTR1_AG";
+						name="UnitFIA_MTR1_TL";
 						description="FIA Mortar Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -23307,13 +23591,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={603.39978,5.0014391,674.49994};
+						position[]={603.40002,5.0014391,674.5};
 					};
 					side="West";
 					flags=6;
@@ -23321,8 +23605,8 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""msamag"",this] call f_fnc_assignGear; ";
-						name="UnitFIA_MSAM1_AG";
+						init="[""msaml"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MSAM1_TL";
 						description="FIA Medium SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -23349,6 +23633,27 @@ class Mission
 					id=763;
 					type="B_G_Soldier_LAT_F";
 					atlOffset=0.53992844;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={599.23694,5.0014391,672.87799};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="[""msamag"",this] call f_fnc_assignGear; ";
+						name="UnitFIA_MSAM1_AG";
+						description="FIA Medium SAM Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1172;
+					type="B_G_Soldier_LAT_F";
 				};
 			};
 			class Attributes
@@ -23401,7 +23706,7 @@ class Mission
 						skill=0.60000002;
 						rank="CORPORAL";
 						init="[""hsamag"",this] call f_fnc_assignGear; ";
-						name="UnitFIA_HSAM1_AG";
+						name="UnitFIA_HSAM1_TL";
 						description="FIA Heavy SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -23676,7 +23981,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitFIA_TH1_P";
 						description="FIA Transport Helo 1 Pilot";
 						isPlayable=1;
@@ -23697,9 +24002,9 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitFIA_TH1_CP";
-						description="FIA Transport Helo 1 Co-Pilot (Repair)";
+						description="FIA Transport Helo 1 Co-Pilot";
 						isPlayable=1;
 					};
 					id=777;
@@ -27520,21 +27825,21 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1559.0209,5.0014391,1369.0061};
+						position[]={1559.021,5.0014391,1369.0061};
 					};
 					side="Independent";
-					flags=7;
+					flags=6;
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="[""mmgag"",this] call f_fnc_assignGear;";
-						name="UnitSyn_MMG1_AG";
+						init="[""mmgl"",this] call f_fnc_assignGear;";
+						name="UnitSyn_MMG1_TL";
 						description="Syndikat Medium MG Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -27606,6 +27911,26 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1554.8589,5.0014391,1367.384};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""mmgag"",this] call f_fnc_assignGear;";
+						name="UnitSyn_MMG1_AG";
+						description="Syndikat Medium MG Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1219;
+					type="I_C_Soldier_Para_4_F";
+				};
 			};
 			class Attributes
 			{
@@ -27642,21 +27967,21 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1558.8353,5.0014391,1356.4192};
+						position[]={1558.835,5.0014391,1356.4191};
 					};
 					side="Independent";
-					flags=7;
+					flags=6;
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="[""mmgag"",this] call f_fnc_assignGear;";
-						name="UnitSyn_MMG2_AG";
+						init="[""mmgl"",this] call f_fnc_assignGear;";
+						name="UnitSyn_MMG2_TL";
 						description="Syndikat Medium MG Team 2 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -27694,7 +28019,7 @@ class Mission
 						position[]={1563.7787,5.0014391,1354.2551};
 					};
 					side="Independent";
-					flags=5;
+					flags=4;
 					class Attributes
 					{
 						init="[""mmgg"",this] call f_fnc_assignGear;";
@@ -27727,6 +28052,26 @@ class Mission
 						};
 						nAttributes=1;
 					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1554.673,5.0014391,1354.7981};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""mmgag"",this] call f_fnc_assignGear;";
+						name="UnitSyn_MMG2_AG";
+						description="Syndikat Medium MG Team 2 Assistant";
+						isPlayable=1;
+					};
+					id=1220;
+					type="I_C_Soldier_Para_4_F";
 				};
 			};
 			class Attributes
@@ -27764,21 +28109,21 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1558.8588,5.0014391,1345.2571};
+						position[]={1558.859,5.0014391,1345.2571};
 					};
 					side="Independent";
-					flags=7;
+					flags=6;
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="[""matag"",this] call f_fnc_assignGear;";
-						name="UnitSyn_MAT1_AG";
+						init="[""matl"",this] call f_fnc_assignGear;";
+						name="UnitSyn_MAT1_TL";
 						description="Syndikat Medium AT Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -27850,6 +28195,26 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1554.6959,5.0014391,1343.635};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""matag"",this] call f_fnc_assignGear;";
+						name="UnitSyn_MAT1_AG";
+						description="Syndikat Medium AT Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1221;
+					type="I_C_Soldier_Para_5_F";
+				};
 			};
 			class Attributes
 			{
@@ -27886,21 +28251,21 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1559.0814,5.0014391,1333.7102};
+						position[]={1559.0811,5.0014391,1333.7101};
 					};
 					side="Independent";
-					flags=7;
+					flags=6;
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="[""matag"",this] call f_fnc_assignGear;";
-						name="UnitSyn_MAT2_AG";
+						init="[""matl"",this] call f_fnc_assignGear;";
+						name="UnitSyn_MAT2_TL";
 						description="Syndikat Medium AT Team 2 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -27972,6 +28337,26 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1554.9189,5.0014391,1332.0891};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""matag"",this] call f_fnc_assignGear;";
+						name="UnitSyn_MAT2_AG";
+						description="Syndikat Medium AT Team 2 Assistant";
+						isPlayable=1;
+					};
+					id=1222;
+					type="I_C_Soldier_Para_5_F";
+				};
 			};
 			class Attributes
 			{
@@ -28017,12 +28402,12 @@ class Mission
 						position[]={1559.0209,5.0014391,1323.0881};
 					};
 					side="Independent";
-					flags=7;
+					flags=6;
 					class Attributes
 					{
 						rank="CORPORAL";
 						init="[""hmgag"",this] call f_fnc_assignGear;";
-						name="UnitSyn_HMG1_AG";
+						name="UnitSyn_HMG1_TL";
 						description="Syndikat Heavy MG Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -28130,21 +28515,21 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1558.8158,5.0014391,1310.2874};
+						position[]={1558.816,5.0014391,1310.2871};
 					};
 					side="Independent";
-					flags=7;
+					flags=6;
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="[""hatag"",this] call f_fnc_assignGear;";
-						name="UnitSyn_HAT1_AG";
+						init="[""hatl"",this] call f_fnc_assignGear;";
+						name="UnitSyn_HAT1_TL";
 						description="Syndikat Heavy AT Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -28216,6 +28601,26 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1554.6539,5.0014391,1308.666};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""hatag"",this] call f_fnc_assignGear;";
+						name="UnitSyn_HAT1_AG";
+						description="Syndikat Heavy AT Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1223;
+					type="I_C_Soldier_Para_5_F";
+				};
 			};
 			class Attributes
 			{
@@ -28266,7 +28671,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						init="[""mtrag"",this] call f_fnc_assignGear;";
-						name="UnitSyn_MTR1_AG";
+						name="UnitSyn_MTR1_TL";
 						description="Syndikat Mortar Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -28374,21 +28779,21 @@ class Mission
 			side="Independent";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1559.0326,5.0014391,1285.1262};
+						position[]={1559.033,5.0014391,1285.1261};
 					};
 					side="Independent";
 					flags=6;
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="[""msamag"",this] call f_fnc_assignGear;";
-						name="UnitSyn_MSAM1_AG";
+						init="[""msaml"",this] call f_fnc_assignGear;";
+						name="UnitSyn_MSAM1_TL";
 						description="Syndikat Medium SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -28460,6 +28865,26 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1554.0341,5.0014391,1283.089};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						rank="CORPORAL";
+						init="[""msamag"",this] call f_fnc_assignGear;";
+						name="UnitSyn_MSAM1_AG";
+						description="Syndikat Medium SAM Team 1 Assistant";
+						isPlayable=1;
+					};
+					id=1184;
+					type="I_C_Soldier_Para_5_F";
+				};
 			};
 			class Attributes
 			{
@@ -28510,7 +28935,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						init="[""hsamag"",this] call f_fnc_assignGear;";
-						name="UnitSyn_HSAM1_AG";
+						name="UnitSyn_HSAM1_TL";
 						description="Syndikat Heavy SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
 					};
@@ -28959,7 +29384,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitSyn_TH1_P";
 						description="Syndikat Transport Helo 1 Pilot";
 						isPlayable=1;
@@ -29002,9 +29427,9 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="[""pcc"",this] call f_fnc_assignGear; ";
+						init="[""pc"",this] call f_fnc_assignGear; ";
 						name="UnitSyn_TH1_CP";
-						description="Syndikat Transport Helo 1 Co-Pilot (Repair)";
+						description="Syndikat Transport Helo 1 Co-Pilot";
 						isPlayable=1;
 					};
 					id=941;
@@ -30721,10 +31146,12 @@ class Mission
 			{
 				skill=0.60000002;
 				init="[""v_helo_l"",this,""syndikat""] call f_fnc_assignGear";
-				name="VehSyn_TH1_1";
+				name="VehSyn_TH1";
+				textures="Green";
+				pylons=";;";
 			};
 			id=1027;
-			type="I_Heli_light_03_unarmed_F";
+			type="I_Heli_light_03_dynamicLoadout_F";
 		};
 		class Item349
 		{
@@ -30943,16 +31370,16 @@ class Mission
 						position[]={509.84177,5.0014391,1044.8337};
 					};
 					side="West";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
-						rank="CORPORAL";
+						rank="SERGEANT";
 						init="[""pat"",this] call f_fnc_assignGear;";
-						name="UnitGEN_A_G1";
-						description="Gendarmerie Alpha Gendarme";
+						name="UnitGEN_A_Sgt";
+						description="Gendarmerie Alpha Sergeant";
 						isPlayable=1;
 					};
-					id=1066;
+					id=1067;
 					type="B_GEN_Soldier_F";
 					class CustomAttributes
 					{
@@ -30986,16 +31413,16 @@ class Mission
 						position[]={509.84177,5.0014391,1044.8337};
 					};
 					side="West";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
-						rank="SERGEANT";
+						rank="CORPORAL";
 						init="[""pat"",this] call f_fnc_assignGear;";
-						name="UnitGEN_A_Sgt";
-						description="Gendarmerie Alpha Sergeant";
+						name="UnitGEN_A_G1";
+						description="Gendarmerie Alpha Gendarme";
 						isPlayable=1;
 					};
-					id=1067;
+					id=1235;
 					type="B_GEN_Soldier_F";
 					class CustomAttributes
 					{
@@ -31038,7 +31465,7 @@ class Mission
 						description="Gendarmerie Alpha Gendarme";
 						isPlayable=1;
 					};
-					id=1068;
+					id=1237;
 					type="B_GEN_Soldier_F";
 					class CustomAttributes
 					{
@@ -31080,7 +31507,7 @@ class Mission
 						description="Gendarmerie Alpha Gendarme";
 						isPlayable=1;
 					};
-					id=1069;
+					id=1238;
 					type="B_GEN_Soldier_F";
 					class CustomAttributes
 					{
@@ -31123,39 +31550,39 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=1066;
+						item0=1067;
+						item1=1090;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1235;
 						item1=1090;
 						class CustomData
 						{
 							role=1;
 						};
 					};
-					class Item1
-					{
-						linkID=1;
-						item0=1067;
-						item1=1090;
-						class CustomData
-						{
-							role=3;
-							cargoIndex=0;
-						};
-					};
 					class Item2
 					{
 						linkID=2;
-						item0=1068;
+						item0=1237;
 						item1=1091;
 						class CustomData
 						{
-							role=3;
-							cargoIndex=0;
+							role=2;
+							turretPath[]={0};
 						};
 					};
 					class Item3
 					{
 						linkID=3;
-						item0=1069;
+						item0=1238;
 						item1=1091;
 						class CustomData
 						{
@@ -32074,7 +32501,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitGEN_TH1_P";
 						description="Gendarmerie Transport Helo 1 Pilot";
 						isPlayable=1;
@@ -32117,9 +32544,9 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="[""pp"",this] call f_fnc_assignGear;";
+						init="[""pc"",this] call f_fnc_assignGear;";
 						name="UnitGEN_TH1_CP";
-						description="Gendarmerie Transport Helo 1 Co-Pilot (Repair)";
+						description="Gendarmerie Transport Helo 1 Co-Pilot";
 						isPlayable=1;
 					};
 					id=1086;
@@ -33120,6 +33547,359 @@ class Mission
 				};
 				nAttributes=5;
 			};
+		};
+		class Item394
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={393.79614,7.380455,1306.8588};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[""v_jet"",this] call f_fnc_assignGear;";
+				name="VehNATO_CAS1";
+			};
+			id=1134;
+			type="B_Plane_CAS_01_dynamicLoadout_F";
+		};
+		class Item395
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={390.034,5.0014391,1312.3861};
+						angles[]={0,1.4669667,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="[""jp"",this] call f_fnc_assignGear;";
+						name="UnitNATO_CAS1_P";
+						description="NATO CAS1 Pilot";
+						isPlayable=1;
+					};
+					id=1136;
+					type="B_Helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpNATO_CAS1";
+			};
+			id=1135;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NATO CAS1 -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item396
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1383.8635,7.4227982,675.79047};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[""v_jet"",this] call f_fnc_assignGear;";
+				name="VehAAF_CAS1";
+			};
+			id=1139;
+			type="I_Plane_Fighter_03_dynamicLoadout_F";
+		};
+		class Item397
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1380.6572,5.0014391,679.09668};
+						angles[]={-0,1.7658945,0};
+					};
+					side="Independent";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="[""jp"",this] call f_fnc_assignGear;";
+						name="UnitAAF_CAS1_P";
+						description="AAF CAS1 Pilot";
+						isPlayable=1;
+					};
+					id=1143;
+					type="I_helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male04GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpAAF_CAS1";
+			};
+			id=1142;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="AAF CAS1 -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item398
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2342.749,5.0014391,1312.0121};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="[""jp"",this] call f_fnc_assignGear;";
+						name="UnitCSAT_CAS1_P";
+						description="CSAT CAS1 Pilot";
+						isPlayable=1;
+					};
+					id=1145;
+					type="O_helipilot_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="GrpCSAT_CAS1";
+			};
+			id=1144;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CSAT CAS1 -";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item399
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2347.4487,7.9799161,1306.9673};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[""v_jet"",this] call f_fnc_assignGear;";
+				name="VehCSAT_CAS1";
+			};
+			id=1146;
+			type="O_Plane_CAS_02_dynamicLoadout_F";
 		};
 	};
 	class Connections

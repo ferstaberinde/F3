@@ -14,16 +14,20 @@
 //		aar			- assistant automatic rifleman
 //		rat			- rifleman (AT)
 //		dm			- designated marksman
+//		mmgl		- medium mg team leader
 //		mmgg		- medium mg gunner
 //		mmgag		- medium mg assistant
+//		matl		- medium AT team leader
 //		matg		- medium AT gunner
 //		matag		- medium AT assistant
 //		hmgg		- heavy mg gunner (deployable)
 //		hmgag		- heavy mg assistant (deployable)
-//		hatg		- heavy AT gunner (deployable)
-//		hatag		- heavy AT assistant (deployable)
+//		hatl		- heavy AT team leader
+//		hatg		- heavy AT gunner
+//		hatag		- heavy AT assistant
 //		mtrg		- mortar gunner (deployable)
 //		mtrag		- mortar assistant (deployable)
+//		msaml		- medium SAM team leader
 //		msamg		- medium SAM gunner
 //		msamag		- medium SAM assistant gunner
 //		hsamg		- heavy SAM gunner (deployable)
@@ -33,9 +37,8 @@
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
-//		pp			- air vehicle pilot / co-pilot (repair)
-//		pcc			- air vehicle co-pilot (repair) / crew chief (repair)
 //		pc			- air vehicle crew
+//		jp			- jet pilot
 //		eng			- engineer (demo)
 //		engm		- engineer (mines)
 //		uav			- UAV operator
@@ -49,6 +52,12 @@
 //		v_car		- car/4x4
 //		v_tr		- truck
 //		v_ifv		- ifv
+//		v_tank		- tank
+//		v_helo_l	- Rotary Transport Light
+//		v_helo_m	- Rotary Transport Medium
+//		v_helo_h	- Rotary Transport Heavy
+//		v_helo_a	- Rotary Attack
+//		v_jet		- Jet
 //
 //		crate_small	- small ammocrate
 //		crate_med	- medium ammocrate
@@ -166,7 +175,7 @@ _chemblue = "Chemlight_blue";
 
 // Backpacks
 _bag = "B_AssaultPack_tna_F";
-_baglarge = "B_Kitbag_rgr";
+_bagLarge = "B_Kitbag_rgr";
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "B_UAV_01_backpack_F";			// used by UAV operator
 _baghmgg = "B_HMG_01_weapon_F";			// used by Heavy MG gunner
@@ -203,13 +212,14 @@ _DMriflemag = "30Rnd_65x39_caseless_mag";
 _DMriflemag_tr = "30Rnd_65x39_caseless_mag_Tracer";
 
 // Rifleman AT
-_RAT = "launch_NLAW_F";
-_RATmag = "NLAW_F";
+_RAT = "launch_MRAWS_green_F";
+_RATmag1 = "MRAWS_HEAT_F";
+_RATmag2 = "MRAWS_HE_F";
 
 // Medium AT
-_MAT = "launch_NLAW_F";
-_MATmag1 = "NLAW_F";
-_MATmag2 = "NLAW_F";
+_MAT = "launch_MRAWS_green_F";
+_MATmag1 = "MRAWS_HEAT_F";
+_MATmag2 = "MRAWS_HE_F";
 
 // Surface Air
 _SAM = "launch_B_Titan_tna_F";
@@ -243,6 +253,7 @@ _pilot = ["pp","pcc","pc"];
 _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
+_jet = ["jp"];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -251,7 +262,7 @@ _baseHelmet = ["H_HelmetB_tna_F"];
 _baseGlasses = [];
 
 // Vests
-_lightRig = ["V_Chestrig_oli"];
+_lightRig = ["V_PlateCarrier2_tna_F"];
 _standardRig = ["V_PlateCarrier2_tna_F"];
 
 // Diver
@@ -266,6 +277,12 @@ _pilotHelmet = ["H_PilotHelmetHeli_B"];
 _pilotRig = ["V_TacVest_blk"];
 _pilotGlasses = [];
 
+// Jet Pilot
+_jetUniform = ["U_B_PilotCoveralls"];
+_jetHelmet = ["H_PilotHelmetFighter_B"];
+_jetRig = [];
+_jetGlasses = [];
+
 // Crewman
 _crewUniform = ["U_B_T_Soldier_SL_F"];
 _crewHelmet = ["H_HelmetCrew_B"];
@@ -279,19 +296,10 @@ _ghillieRig = ["V_Chestrig_oli"];
 _ghillieGlasses = [];
 
 // Spec Op
-// _sfuniform = ["U_B_SpecopsUniform_sgg"];
-// _sfhelmet = ["H_HelmetSpecB","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecB_blk"];
-// _sfRig = ["V_PlateCarrierSpec_rgr"];
-// _sfGlasses = [];
-
-// ====================================================================================
-
-// INTERPRET PASSED VARIABLES
-// The following interprets what has been passed to this script element
-
-_typeofUnit = toLower (_this select 0);	// Tidy input for SWITCH/CASE statements, expecting something like : r = Rifleman, co = Commanding Officer, rat = Rifleman (AT)
-_unit = _this select 1;					// expecting name of unit; originally passed by using 'this' in unit init
-_isMan = _unit isKindOf "CAManBase";	// We check if we're dealing with a soldier or a vehicle
+_sfuniform = ["U_B_SpecopsUniform_sgg"];
+_sfhelmet = ["H_HelmetSpecB","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecB_blk"];
+_sfRig = ["V_PlateCarrierSpec_rgr"];
+_sfGlasses = [];
 
 // ====================================================================================
 
@@ -346,16 +354,3 @@ if (_loadout == 1) then {
 };
 
 // ====================================================================================
-
-// If this isn't run on an infantry unit we can exit
-if !(_isMan) exitWith {};
-
-// ====================================================================================
-
-// Handle weapon attachments
-#include "f_assignGear_attachments.sqf";
-
-// ====================================================================================
-
-// ENSURE UNIT HAS CORRECT WEAPON SELECTED ON SPAWNING
-_unit selectweapon primaryweapon _unit;

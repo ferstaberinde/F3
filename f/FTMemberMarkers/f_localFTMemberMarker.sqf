@@ -11,7 +11,7 @@ private ["_mkrName","_mkr","_mkrBorder","_pos","_mkrborderName","_dir"];
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
 _mkrName = Format ["mkr_%1",_unit];
 _mkrborderName = Format ["mkrB_%1",_unit];
@@ -54,7 +54,7 @@ while{alive _unit && (_unit in f_var_HandlerGroup)} do
 		_mkr setMarkerDirLocal _dir;
 		// makes a call to the function defined in f_setLocalFTMemberMarkers.sqf
 		// retreives the stored color from the unit.
-		_mkr setMarkerColorLocal (_unit getvariable ["assignedTeam","ColorWhite"]);
+		_mkr setMarkerColorLocal ([_unit] call f_fnc_GetUpdatedTeamValue);
 	} else {
 		f_var_HandlerGroup = f_var_HandlerGroup - [_unit];
 	};

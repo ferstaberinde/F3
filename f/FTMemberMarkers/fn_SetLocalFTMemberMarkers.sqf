@@ -10,22 +10,42 @@
 //
 // ====================================================================================
 
+if (!hasInterface) exitWith {};
+
 // MAKE SURE THE PLAYER INITIALIZES PROPERLY
 if (!isDedicated && (isNull player)) then
 {
 	waitUntil {sleep 0.1; !isNull player};
 };
 
+// Don't run this for zeus and virtual spectators
+if (side player isEqualto sideLogic) exitWith {};
+
 // ====================================================================================
 
 // DEFINE HELPER-FUNCTION
-// Define a small function to set a unit's team color
+// Define a small function to get/set a unit's team color
+// This function updates the assignedTeam variable
+// if assignedTeam returns a new team(color).
 
-f_fnc_SetTeamValue =
+f_fnc_GetUpdatedTeamValue =
 {
-	params["_unit", "_color"];
-	_unit setvariable ["assignedTeam",_color];
+	params["_unit"];
+	private _team = assignedTeam _unit;
+	private _color = _unit getvariable ["assignedTeam","ColorWhite"];
+	//_team can be nil if the player is controlling another unit (uav, zeus).
+	if(!isNil "_team") then
+	{
+		private _colorNew = [_team] call f_fnc_GetMarkerColor;
+		if(_color != _colorNew) then
+		{
+			_unit setVariable ["assignedTeam",_colorNew];
+			_color = _colorNew;
+		};
+	};
+	_color
 };
+
 
 // ====================================================================================
 
@@ -46,14 +66,4 @@ f_fnc_SetTeamValue =
 		} forEach units (group player);
 		sleep 5;
 	};
-};
-
-// ====================================================================================
-
-// SYNCHRONIZE TEAM COLORS
-// If the player is the groupleader he will take charge of updateing the other units of the colorvalue.
-
-if(player == leader (group player)) then
-{
-	[group player,player] spawn f_fnc_LocalFTMarkerSync;
 };

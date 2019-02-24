@@ -17,8 +17,9 @@ NOTE
 Make sure to call this only on the server or headless client. The function itself does not check where it is run.
 
 PARAMETERS:
-1. Center of town. Can be marker, object or location                                   | MANDATORY - string (markername) or object name
-2. Radius of area to be considered                                                     | MANDATORY - int
+1. Center of town. Can be marker, object, location or list of buildings                | MANDATORY - string (markername) or object name or list of buildings
+2. Radius of area to be considered                                                     | MANDATORY - int (will be ignored if list of buildings is provided)
+2. ALTERNATIVE: Array with min and max radius. e.g. [50,100]                           | MANDATORY - array of two numbers.
 3. Side of units to spawn                                                              | MANDATORY - side (east, west, independent, civilian)
 4. Number of units.                                                                    | OPTIONAL - number - default is No. of available buildings/4
 5. threshold of building positions that can be occupied in the buildings in the area   | OPTIONAL - number between 1 (=100%) and 0, default is set below
@@ -51,7 +52,7 @@ private ["_debug","_buildings","_grp"];
 // PARAMETERS
 params [
 	["_area", "", ["", objNull, grpNull, locationNull, []]],
-	["_radius", 50, [0]],
+	["_radius", 50, [0, []]],
 	["_side", sideEmpty, [sideEmpty]],
 	["_int", 0, [0]],
 	["_thrsh", 0.8, [0]],
@@ -59,9 +60,11 @@ params [
 	["_onlyEmptyBuildings", false, [false]]
 ];
 
-//Process parameters
-_area = _area call ws_fnc_getEPos;
-_classes = toLower _classes;
+//Process radius paramter
+if (_radius isEqualType 0) then {
+	_radius = [0, _radius];
+};
+_radius params ["_radius_min","_radius_max"];
 
 // Debug. If ws_debug is globally defined it overrides _debug
 _debug = if !(isNil "ws_debug") then {ws_debug} else {false};
@@ -81,6 +84,7 @@ if (count _classes == 0) then {
 
 // To change which units are spawned for which faction, replace the array or add additional units to it
 if (_classes isEqualType "") then {
+	_classes = toLower _classes;
 	_classes = switch (true) do {
 		case (_classes in ["blu_f","nato"]): { // NATO
 			["B_Soldier_lite_F","B_Soldier_F"]
@@ -118,8 +122,23 @@ if (_classes isEqualType "") then {
 	};
 };
 
-// Collect buildings and assign building positions
-_buildings = [_area,_radius,true,true] call ws_fnc_collectBuildings;
+//prepare and check buildings:
+
+//check if _area is a list of buildings, if not: find buildings
+_buildings = [];
+if ( typename _area == "ARRAY" && {count _area > 0} && {typename (_area select 0) == "OBJECT"} && {_area select 0 isKindOf "House"} ) then {
+	_buildings = _area;
+	//Set BPos if not already set:
+	{ [_x] call ws_fnc_getBPos } forEach _buildings;
+} else {
+	// Collect buildings and assign building positions
+	_area = _area call ws_fnc_getEPos;
+	_buildings = [_area,_radius_max,true,true] call ws_fnc_collectBuildings;
+	if (_radius_min > 0) then {
+		private _buildingsToRemove = [_area,_radius_min,true,true] call ws_fnc_collectBuildings;
+		_buildings = _buildings - _buildingsToRemove;
+	};
+};
 
 if (_onlyEmptyBuildings) then {
 	//only use buildings that haven't been garrisoned yet! (this is useful when having overlapping garrison areas)
@@ -129,7 +148,12 @@ if (_onlyEmptyBuildings) then {
 //remove buildings without building positions
 _buildings = _buildings select { count (_x getVariable ["ws_bPos", []]) > 0};
 
-if (count _buildings == 0) exitWith {["ws_fnc_createGarrison DBG: no buildings found at ",[_area],""] call ws_fnc_debugText};
+if (count _buildings == 0) exitWith {
+	if(_debug) then {
+		["ws_fnc_createGarrison DBG: no buildings found",[],""] call ws_fnc_debugText;
+	};
+	[]
+};
 //Note: At this point we have at least one building with at least one building position
 
 // If no amount of units is set, calculate default
@@ -143,7 +167,7 @@ if (_thrsh <= 0) then {_thrsh = 0.1};
 _grp = createGroup _side;
 
 // Give the group a hold waypoint as otherwise ASR_AI might call them outside
-[_grp,_area,["hold"]] call ws_fnc_addWaypoint;
+[_grp, getPos (_buildings select 0), ["hold"]] call ws_fnc_addWaypoint;
 
 for "_x" from 1 to _int do {
 	private ["_b","_bpa","_bpl","_bu","_i","_bp","_u","_mkr"];
@@ -157,7 +181,7 @@ for "_x" from 1 to _int do {
 	while { count _bpl == 0 || {(_bu / (count _bpa)) >= _thrsh} } do {
 		_buildings = _buildings - [_b];
 
-		if (count _buildings == 0) exitWith {};
+		if (count _buildings == 0) exitWith {[]};
 
 		_b = selectRandom _buildings;
 		_bpa = _b getVariable "ws_bPos";
@@ -166,7 +190,7 @@ for "_x" from 1 to _int do {
 	};
 
 	// If no buildings are left, exit
-	if (count _buildings == 0) exitWith {};
+	if (count _buildings == 0) exitWith {[]};
 
 	// Get a building position
 	_i = floor (random (count _bpl));

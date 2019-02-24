@@ -3,12 +3,13 @@
 
 // Parameters
 // Note: _oldCameraOn, _newCameraOn, and _uav are only used for the PlayerViewChanged event.
-params [ ["_unit", player],
-         ["_unit2_or_position", nil],
-         ["_veh", vehicle player],
-         ["_oldCameraOn", objNull],
-         ["_newCameraOn", objNull],
-         ["_uav", objNull]
+params [
+	["_unit", player, [objNull]],
+	["_unit2_or_position", nil],
+	["_veh", vehicle player, [objNull]],
+	["_oldCameraOn", nil],
+	["_newCameraOn", nil],
+	["_uav", objNull, [objNull]]
 ];
 
 private _vd = f_var_viewDistance_default;

@@ -8,6 +8,11 @@ class F // Defines the "owner"
 		class processParamsArray{preInit = 1; postInit=1;};
 		class nearPlayer{};
 	};
+	class briefing
+	{
+		file = "f\briefing";
+		class createBriefing{};
+	};
 	class mpEnd
 	{
 		file = "f\mpEnd";
@@ -44,6 +49,7 @@ class F // Defines the "owner"
 		file = "f\groupMarkers";
 		class localGroupMarker{};
 		class localSpecialistMarker{};
+		class groupData{preInit = 1;};
 	};
 	class authorisedCrew
 	{
@@ -55,24 +61,20 @@ class F // Defines the "owner"
 		file = "f\FTMemberMarkers";
 		class SetLocalFTMemberMarkers{};
 		class GetMarkerColor{};
-		class LocalFTMarkerSync{};
-	};
-	class bodyRemoval
-	{
-		file = "f\removeBody";
-		class removeBody{};
 	};
 	class setAISkill
 	{
-		file = "f\setAISKill";
-		class setAISKill{};
+		file = "f\setAISkill";
+		class setAISkill{};
 	};
 	class mapClickTeleport
 	{
 		file = "f\mapClickTeleport";
-		class mapClickTeleportUnit{};
-		class mapClickTeleportGroup{};
+		class mapClickTeleportAction{};
+		class mapClickTeleportSetPos{};
 		class mapClickTeleportParachute{};
+		class mapClickTeleportRemoveAction{};
+		class mapClickTeleportBriefing{};
 	};
 	class nametag
 	{
@@ -95,6 +97,7 @@ class F // Defines the "owner"
 		class zeusInit{};
 		class zeusAddAddons{};
 		class zeusAddObjects{};
+		class zeusInitLocal{};
 	};
 	class safeStart
 	{
@@ -110,13 +113,8 @@ class F // Defines the "owner"
 	class woundingsystem
 	{
 		file = "f\medical";
-		class reviveEhDammaged {};
 		class addDragAction {};
 		class onDrag {};
-		class findDeadAnim {};
-		class addPullOutAction {};
-		class vehicleHasWounded {};
-		class pullOutUnit {};
 	};
 	class disableThermals
 	{

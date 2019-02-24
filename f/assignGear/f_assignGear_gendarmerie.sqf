@@ -94,7 +94,7 @@ _chemblue = "Chemlight_blue";
 
 // Backpacks
 _bag = "B_AssaultPack_blk";
-_baglarge = "B_Kitbag_blk";
+_bagLarge = "B_Kitbag_blk";
 
 // ====================================================================================
 
@@ -111,7 +111,7 @@ _DMriflemag = "20Rnd_762x51_Mag";
 // Define classes. This defines which gear class gets which uniform
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
-_pilot = ["pp","pcc"];
+_pilot = ["pp","pcc","pc"];
 _specOp = ["nf"];
 
 // Basic clothing
@@ -136,16 +136,6 @@ _sfuniform = ["U_B_GEN_Commander_F"];
 _sfhelmet = ["H_Helmet_Skate"];
 _sfRig = ["V_PlateCarrier1_blk"];
 _sfGlasses = ["G_Balaclava_blk"];
-
-
-// ====================================================================================
-
-// INTERPRET PASSED VARIABLES
-// The following interprets what has been passed to this script element
-
-_typeofUnit = toLower (_this select 0);	// Tidy input for SWITCH/CASE statements, expecting something like : r = Rifleman, co = Commanding Officer, rat = Rifleman (AT)
-_unit = _this select 1;					// expecting name of unit; originally passed by using 'this' in unit init
-_isMan = _unit isKindOf "CAManBase";	// We check if we're dealing with a soldier or a vehicle
 
 // ====================================================================================
 
@@ -252,8 +242,10 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 	};
-// Heli Pilot Loadout:
-	case "pp":
+// Helicopter Crew Loadout:
+	case "pp";
+	case "pcc";
+	case "pc":
 	{
 		_unit setUnitTrait ["medic",true]; // Can use medkit
 		_unit setUnitTrait ["engineer",true]; // Can repair
@@ -303,7 +295,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag, 1];
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
-		_unit addItem _firstaid ;
+		_unit addItem _firstaid;
 		_unit addmagazines [_riflemag, 7];
 		_attachments pushback (_silencer1); // Adds silencer
 		_hg_attachments pushback (_hg_silencer1); // Adds pistol silencer
@@ -359,16 +351,3 @@ switch (_typeofUnit) do
 };
 
 // ====================================================================================
-
-// If this isn't run on an infantry unit we can exit
-if !(_isMan) exitWith {};
-
-// ====================================================================================
-
-// Handle weapon attachments
-#include "f_assignGear_attachments.sqf";
-
-// ====================================================================================
-
-// ENSURE UNIT HAS CORRECT WEAPON SELECTED ON SPAWNING
-_unit selectweapon primaryweapon _unit;

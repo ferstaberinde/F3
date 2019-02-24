@@ -76,7 +76,7 @@ f_script_setTeamColours = [] execVM "f\setTeamColours\f_setTeamColours.sqf";
 // F3 - Briefing
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_script_briefing = [] execVM "briefing.sqf";
+f_script_briefing = [] spawn f_fnc_createBriefing;
 
 // ====================================================================================
 
@@ -114,12 +114,10 @@ f_script_briefing = [] execVM "briefing.sqf";
 // ====================================================================================
 
 // F3 - Automatic Body Removal
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-f_var_removeBodyDelay = 180;
-f_var_removeBodyDistance = 500;
-f_var_doNotRemoveBodies = [];
-[] execVM "f\removeBody\f_addRemoveBodyEH.sqf";
+//Exclude units from automatic body/wreck removal:
+removeFromRemainsCollector playableUnits;
+//removeFromRemainsCollector [unit1, unit2, vehicle1];
 
 // ====================================================================================
 
@@ -162,12 +160,13 @@ f_var_viewDistance_crewOnly = true;
 // F3 - MapClick Teleport
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
-// f_var_mapClickTeleport_Uses = 0;					// How often the teleport action can be used. 0 = infinite usage.
-// f_var_mapClickTeleport_TimeLimit = 0; 			// If higher than 0 the action will be removed after the given time.
-// f_var_mapClickTeleport_GroupTeleport = false; 	// False: everyone can teleport. True: Only group leaders can teleport and will move their entire group.
-// f_var_mapClickTeleport_Units = [];				// Restrict map click teleport to these units
-// f_var_mapClickTeleport_Height = 0;				// If > 0 map click teleport will act as a HALO drop and automatically assign parachutes to units
-// [] execVM "f\mapClickTeleport\f_mapClickTeleportAction.sqf";
+// f_var_mapClickTeleport_Uses = 1;                 // How often the teleport action can be used. 0 = infinite usage.
+// f_var_mapClickTeleport_TimeLimit = 0;            // If higher than 0 the action will be removed after the given time.
+// f_var_mapClickTeleport_GroupTeleport = true;     // False: everyone can teleport. True: Only group leaders can teleport and will move their entire group.
+// f_var_mapClickTeleport_Units = [];               // Restrict map click teleport to these units.
+// f_var_mapClickTeleport_Height = 0;               // If > 0 map click teleport will act as a HALO drop and automatically assign parachutes to units.
+// f_var_mapClickTeleport_SaferVehicleHALO = false; // If HALO-ing (f_var_mapClickTeleport_Height > 0), False: crew remain in vehicle during drop. True: crew drop separately with their own parachutes.
+// [] execVM "f\mapClickTeleport\f_mapClickTeleport.sqf";
 
 // ====================================================================================
 
