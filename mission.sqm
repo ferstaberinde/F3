@@ -33592,7 +33592,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=1136;
-					type="B_Helipilot_F";
+					type="B_Fighter_Pilot_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -33710,7 +33710,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=1143;
-					type="I_helipilot_F";
+					type="I_Fighter_Pilot_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -33810,7 +33810,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=1145;
-					type="O_helipilot_F";
+					type="O_Fighter_Pilot_F";
 					class CustomAttributes
 					{
 						class Attribute0
