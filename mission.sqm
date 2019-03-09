@@ -15481,7 +15481,7 @@ class Mission
 						rank="CORPORAL";
 						init="[""vg"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_IFV2_G";
-						description="CSAT IFV2 Gunner";
+						description="CSAT IFV 2 Gunner";
 						isPlayable=1;
 					};
 					id=490;
@@ -33588,7 +33588,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="[""jp"",this] call f_fnc_assignGear;";
 						name="UnitNATO_CAS1_P";
-						description="NATO CAS1 Pilot";
+						description="NATO CAS 1 Pilot";
 						isPlayable=1;
 					};
 					id=1136;
@@ -33706,7 +33706,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="[""jp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CAS1_P";
-						description="AAF CAS1 Pilot";
+						description="AAF CAS 1 Pilot";
 						isPlayable=1;
 					};
 					id=1143;
@@ -33806,7 +33806,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="[""jp"",this] call f_fnc_assignGear;";
 						name="UnitCSAT_CAS1_P";
-						description="CSAT CAS1 Pilot";
+						description="CSAT CAS 1 Pilot";
 						isPlayable=1;
 					};
 					id=1145;
