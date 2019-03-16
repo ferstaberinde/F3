@@ -116,7 +116,6 @@ _carbinemag_tr = "30Rnd_580x42_Mag_Tracer_F";
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
 _smg = "SMG_02_F";
 _smgmag = "30Rnd_9x21_Mag";
-_smgmag_tr = "30Rnd_9x21_Mag";
 
 // Diver
 _diverWep = "arifle_SDAR_F";
@@ -208,10 +207,12 @@ _MMGmag_tr = "150Rnd_93x64_Mag";
 // Marksman rifle
 _DMrifle = "srifle_DMR_07_blk_F";
 _DMriflemag = "20Rnd_650x39_Cased_Mag_F";
+_DMriflemag_tr = "20Rnd_650x39_Cased_Mag_F";
 
 // ASP1-KIR
 // _DMrifle = "srifle_DMR_04_F";
 // _DMriflemag = "10Rnd_127x54_Mag";
+// _DMriflemag_tr = "10Rnd_127x54_Mag";
 
 // Rifleman AT
 _RAT = "launch_RPG32_ghex_F";

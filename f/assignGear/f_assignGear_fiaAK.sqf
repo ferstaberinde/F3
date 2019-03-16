@@ -68,7 +68,7 @@
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
 // ATTACHMENTS - PRIMARY
-_attach1 = "acc_pointer_IR";	// IR Laser
+_attach1 = "";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
 _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
@@ -94,7 +94,7 @@ _attachments = [_scope1]; 		// The default attachment set for most units, overwr
 // ATTACHMENTS - HANDGUN
 _hg_silencer1 = "";				// PM 9MM does not accept a suppressor
 
-_hg_scope1 = "optic_mrd";		// MRD
+_hg_scope1 = "optic_MRD";			// MRD
 
 // Default setup
 _hg_attachments= []; // The default attachment set for handguns, overwritten in the individual unitType
@@ -116,7 +116,6 @@ _carbinemag_tr = "30Rnd_545x39_Mag_Tracer_F";
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
 _smg = "hgun_PDW2000_F";
 _smgmag = "30Rnd_9x21_Mag";
-_smgmag_tr = "30Rnd_9x21_Mag";
 
 // Diver
 _diverWep = "arifle_SDAR_F";
@@ -210,6 +209,7 @@ _MMGmag_tr = "150Rnd_762x54_Box_Tracer";
 // Marksman rifle
 _DMrifle = "srifle_DMR_06_olive_F";
 _DMriflemag = "20Rnd_762x51_Mag";
+_DMriflemag_tr = "20Rnd_762x51_Mag";
 
 // Rifleman AT
 _RAT = "launch_RPG7_F";

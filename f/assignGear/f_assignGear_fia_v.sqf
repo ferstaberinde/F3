@@ -7,7 +7,7 @@
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [(selectRandom _carbine), 2];
+		_unit addWeaponCargoGlobal [_carbine, 2];
 		_unit addMagazineCargoGlobal [_riflemag, 8];
 		_unit addMagazineCargoGlobal [_glriflemag, 8];
 		_unit addMagazineCargoGlobal [_carbinemag, 10];
@@ -28,8 +28,7 @@
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-
-		_unit addWeaponCargoGlobal [(selectRandom _carbine), 4];
+		_unit addWeaponCargoGlobal [_carbine, 4];
 		_unit addMagazineCargoGlobal [_riflemag, 20];
 		_unit addMagazineCargoGlobal [_glriflemag, 20];
 		_unit addMagazineCargoGlobal [_carbinemag, 20];
@@ -51,8 +50,7 @@
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-
-		_unit addWeaponCargoGlobal [(selectRandom _carbine), 2];
+		_unit addWeaponCargoGlobal [_carbine, 2];
 		_unit addMagazineCargoGlobal [_riflemag, 10];
 		_unit addMagazineCargoGlobal [_glriflemag, 10];
 		_unit addMagazineCargoGlobal [_carbinemag, 12];
@@ -107,7 +105,7 @@
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [(selectRandom _carbine), 2];
+		_unit addWeaponCargoGlobal [_carbine, 2];
 		_unit addWeaponCargoGlobal [_rat,1];
 		_unit addMagazineCargoGlobal [_riflemag,10];
 		_unit addMagazineCargoGlobal [_glriflemag,10];
@@ -133,7 +131,7 @@
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [(selectRandom _carbine), 8];
+		_unit addWeaponCargoGlobal [_carbine, 8];
 		_unit addWeaponCargoGlobal [_rat,2];
 		_unit addMagazineCargoGlobal [_riflemag,20];
 		_unit addMagazineCargoGlobal [_glriflemag,20];

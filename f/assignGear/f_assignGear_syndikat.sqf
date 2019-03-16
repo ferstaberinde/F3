@@ -68,7 +68,7 @@
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
 // ATTACHMENTS - PRIMARY
-_attach1 = "acc_pointer_IR";	// IR Laser
+_attach1 = "";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
 _silencer1 = "mmuzzle_snds_B";	// 7.62 suppressor
@@ -94,7 +94,7 @@ _attachments = [_scope1]; // The default attachment set for most units, overwrit
 // ATTACHMENTS - HANDGUN
 _hg_silencer1 = "";					// No suppressor for Zubr
 
-_hg_scope1 = "optic_mrd";			// MRD
+_hg_scope1 = "optic_MRD";			// MRD
 
 // Default setup
 _hg_attachments= []; // The default attachment set for handguns, overwritten in the individual unitType
@@ -200,6 +200,7 @@ _MMGmag_tr = "150Rnd_762x54_Box_Tracer";
 // Marksman rifle
 _DMrifle = "srifle_DMR_03_F";
 _DMriflemag = "20Rnd_762x51_Mag";
+_DMriflemag_tr = "20Rnd_762x51_Mag";
 
 // Rifleman AT
 _RAT = "launch_RPG32_ghex_F";
