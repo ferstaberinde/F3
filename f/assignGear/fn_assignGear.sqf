@@ -168,6 +168,18 @@ if (_faction in ["ind_c_f","syndikat"]) then {
 
 // ====================================================================================
 
+// GEAR: 3IFB
+// The following block of code executes only if the unit is manually assigned the 3IFB 'faction'; it
+// automatically includes a file which contains the appropriate equipment data.
+// Note the this faction doesn't exist in the game and so is a 'pseudo-faction'; in particular other faction
+// sensitive components, such as briefings, are not aware of this 'pseudo-faction' and will use the
+// underlying game faction of the unit
+if (_faction in ["3ifb"]) then {
+	#include "f_assignGear_3IFB.sqf"
+};
+
+// ====================================================================================
+
 // Handle weapon switching, weapon attachments, etc
 
 // This block needs only to be run on an infantry unit
