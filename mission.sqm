@@ -581,6 +581,7 @@ class Mission
 				init="[""v_helo_a"",this] call f_fnc_assignGear;";
 				name="VehNATO_AH1";
 				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
 			};
 			id=14;
 			type="B_Heli_Attack_01_dynamicLoadout_F";
@@ -677,6 +678,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH3";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=19;
@@ -696,6 +698,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH4";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=20;
@@ -715,6 +718,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH5";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=21;
@@ -734,6 +738,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH6";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=22;
@@ -753,6 +758,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH7";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=23;
@@ -772,6 +778,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH8";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=24;
@@ -869,6 +876,7 @@ class Mission
 				name="VehCSAT_AH1";
 				textures="Opfor";
 				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
 			};
 			id=29;
 			type="O_Heli_Attack_02_dynamicLoadout_F";
@@ -1017,6 +1025,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_a"",this] call f_fnc_assignGear";
 				name="VehAAF_AH1";
+				receiveRemoteTargets=1;
 			};
 			id=37;
 			type="I_Heli_light_03_dynamicLoadout_F";
@@ -3020,6 +3029,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=117;
 			type="B_Heli_Light_01_dynamicLoadout_F";
@@ -3331,6 +3341,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=127;
 			type="B_Heli_Light_01_dynamicLoadout_F";
@@ -3642,6 +3653,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=137;
 			type="B_Heli_Light_01_dynamicLoadout_F";
@@ -3881,6 +3893,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 				pylons="PylonWeapon_2000Rnd_65x39_belt;PylonRack_12Rnd_missiles;";
 			};
 			id=144;
@@ -4186,6 +4199,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 				pylons="PylonWeapon_2000Rnd_65x39_belt;PylonRack_12Rnd_missiles;";
 			};
 			id=154;
@@ -4491,6 +4505,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=164;
 			type="I_Heli_light_03_dynamicLoadout_F";
@@ -4795,6 +4810,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=174;
 			type="I_Heli_light_03_dynamicLoadout_F";
@@ -5166,6 +5182,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=187;
 			type="B_Heli_Light_01_dynamicLoadout_F";
@@ -31061,6 +31078,7 @@ class Mission
 			{
 				skill=0.60000002;
 				textures="Green";
+				receiveRemoteTargets=1;
 			};
 			id=968;
 			type="I_Heli_light_03_dynamicLoadout_F";
@@ -31535,6 +31553,7 @@ class Mission
 			{
 				skill=0.60000002;
 				textures="Green";
+				receiveRemoteTargets=1;
 			};
 			id=978;
 			type="I_Heli_light_03_dynamicLoadout_F";
@@ -31743,6 +31762,7 @@ class Mission
 				init="[""v_helo_l"",this,""syndikat""] call f_fnc_assignGear";
 				name="VehSyn_TH1";
 				textures="Green";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=1027;
@@ -34178,6 +34198,7 @@ class Mission
 			{
 				init="[""v_jet"",this] call f_fnc_assignGear;";
 				name="VehNATO_CAS1";
+				receiveRemoteTargets=1;
 			};
 			id=1134;
 			type="B_Plane_CAS_01_dynamicLoadout_F";
@@ -34297,6 +34318,7 @@ class Mission
 			{
 				init="[""v_jet"",this] call f_fnc_assignGear;";
 				name="VehAAF_CAS1";
+				receiveRemoteTargets=1;
 			};
 			id=1139;
 			type="I_Plane_Fighter_03_dynamicLoadout_F";
@@ -34517,6 +34539,7 @@ class Mission
 			{
 				init="[""v_jet"",this] call f_fnc_assignGear;";
 				name="VehCSAT_CAS1";
+				receiveRemoteTargets=1;
 			};
 			id=1146;
 			type="O_Plane_CAS_02_dynamicLoadout_F";
