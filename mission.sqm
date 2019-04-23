@@ -580,6 +580,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_a"",this] call f_fnc_assignGear;";
 				name="VehNATO_AH1";
+				reportRemoteTargets=1;
 			};
 			id=14;
 			type="B_Heli_Attack_01_dynamicLoadout_F";
@@ -867,6 +868,7 @@ class Mission
 				init="[""v_helo_a"",this] call f_fnc_assignGear;";
 				name="VehCSAT_AH1";
 				textures="Opfor";
+				reportRemoteTargets=1;
 			};
 			id=29;
 			type="O_Heli_Attack_02_dynamicLoadout_F";
@@ -1090,6 +1092,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_car"",this] call f_fnc_assignGear";
 				name="VehAAF_CAR1";
+				reportRemoteTargets=1;
 			};
 			id=41;
 			type="I_MRAP_03_F";
@@ -1393,6 +1396,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_car"",this] call f_fnc_assignGear";
 				name="VehAAF_CAR2";
+				reportRemoteTargets=1;
 			};
 			id=57;
 			type="I_MRAP_03_F";
@@ -2149,6 +2153,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_car"",this] call f_fnc_assignGear";
 				name="VehAAF_CAR3";
+				reportRemoteTargets=1;
 			};
 			id=83;
 			type="I_MRAP_03_F";
@@ -2167,6 +2172,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_car"",this] call f_fnc_assignGear";
 				name="VehAAF_CAR4";
+				reportRemoteTargets=1;
 			};
 			id=84;
 			type="I_MRAP_03_F";
