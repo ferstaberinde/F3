@@ -39,6 +39,7 @@ addons[]=
 	"A3_Soft_F_Beta_MRAP_03",
 	"A3_Soft_F_MRAP_01",
 	"A3_Soft_F_Beta_Truck_01",
+	"A3_Soft_F_Exp_Truck_01",
 	"A3_Soft_F_MRAP_02",
 	"A3_Soft_F_Offroad_01",
 	"A3_Soft_F_Gamma_Van_01",
@@ -60,6 +61,7 @@ addons[]=
 	"A3_Modules_F",
 	"A3_Data_F_Exp_A_Virtual",
 	"A3_Air_F_EPC_Plane_CAS_01",
+	"A3_Characters_F_Jets",
 	"A3_Air_F_Gamma_Plane_Fighter_03",
 	"A3_Air_F_EPC_Plane_CAS_02"
 };
@@ -67,7 +69,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=22;
+		items=23;
 		class Item0
 		{
 			className="A3_Air_F_Heli";
@@ -140,64 +142,64 @@ class AddonsMetaData
 		};
 		class Item10
 		{
+			className="A3_Soft_F_Exp";
+			name="Arma 3 Apex - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item11
+		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item12
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item13
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item14
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item15
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item16
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item17
 		{
 			className="A3_Data_F_Curator";
 			name="Arma 3 Zeus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item18
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item18
-		{
-			className="A3_Soft_F_Exp";
-			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -216,6 +218,13 @@ class AddonsMetaData
 			url="https://www.arma3.com";
 		};
 		class Item21
+		{
+			className="A3_Characters_F_Jets";
+			name="Arma 3 Jets - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item22
 		{
 			className="A3_Air_F_Gamma";
 			name="Arma 3 - Aircraft";
@@ -342,7 +351,7 @@ class Mission
 			};
 			id=2;
 			type="I_Heli_Transport_02_F";
-			atlOffset=-4.7683716e-007;
+			atlOffset=-0.024078369;
 		};
 		class Item3
 		{
@@ -498,6 +507,7 @@ class Mission
 			};
 			id=10;
 			type="B_APC_Tracked_01_rcws_F";
+			atlOffset=-0.17999983;
 		};
 		class Item11
 		{
@@ -516,6 +526,7 @@ class Mission
 			};
 			id=11;
 			type="B_APC_Tracked_01_rcws_F";
+			atlOffset=-0.17999983;
 		};
 		class Item12
 		{
@@ -534,6 +545,7 @@ class Mission
 			};
 			id=12;
 			type="B_APC_Tracked_01_rcws_F";
+			atlOffset=-0.17999983;
 		};
 		class Item13
 		{
@@ -552,6 +564,7 @@ class Mission
 			};
 			id=13;
 			type="B_APC_Tracked_01_rcws_F";
+			atlOffset=-0.17999983;
 		};
 		class Item14
 		{
@@ -567,6 +580,8 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_a"",this] call f_fnc_assignGear;";
 				name="VehNATO_AH1";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
 			};
 			id=14;
 			type="B_Heli_Attack_01_dynamicLoadout_F";
@@ -589,7 +604,7 @@ class Mission
 			};
 			id=15;
 			type="I_Heli_Transport_02_F";
-			atlOffset=-4.7683716e-007;
+			atlOffset=-0.024078369;
 		};
 		class Item16
 		{
@@ -608,7 +623,7 @@ class Mission
 			};
 			id=16;
 			type="I_Heli_Transport_02_F";
-			atlOffset=-4.7683716e-007;
+			atlOffset=-0.024078369;
 		};
 		class Item17
 		{
@@ -628,7 +643,7 @@ class Mission
 			};
 			id=17;
 			type="I_Heli_Transport_02_F";
-			atlOffset=-4.7683716e-007;
+			atlOffset=-0.024078369;
 		};
 		class Item18
 		{
@@ -663,6 +678,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH3";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=19;
@@ -682,6 +698,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH4";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=20;
@@ -701,6 +718,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH5";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=21;
@@ -720,6 +738,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH6";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=22;
@@ -739,6 +758,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH7";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=23;
@@ -758,6 +778,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_m"",this] call f_fnc_assignGear";
 				name="VehCSAT_TH8";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=24;
@@ -854,6 +875,8 @@ class Mission
 				init="[""v_helo_a"",this] call f_fnc_assignGear;";
 				name="VehCSAT_AH1";
 				textures="Opfor";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
 			};
 			id=29;
 			type="O_Heli_Attack_02_dynamicLoadout_F";
@@ -875,6 +898,7 @@ class Mission
 			};
 			id=30;
 			type="B_MBT_01_TUSK_F";
+			atlOffset=-0.18917751;
 		};
 		class Item31
 		{
@@ -966,6 +990,7 @@ class Mission
 			};
 			id=35;
 			type="O_MBT_02_cannon_F";
+			atlOffset=-0.18066597;
 		};
 		class Item36
 		{
@@ -984,6 +1009,7 @@ class Mission
 			};
 			id=36;
 			type="I_MBT_03_cannon_F";
+			atlOffset=-0.18000031;
 		};
 		class Item37
 		{
@@ -999,6 +1025,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_helo_a"",this] call f_fnc_assignGear";
 				name="VehAAF_AH1";
+				receiveRemoteTargets=1;
 			};
 			id=37;
 			type="I_Heli_light_03_dynamicLoadout_F";
@@ -1020,6 +1047,7 @@ class Mission
 			};
 			id=38;
 			type="I_Truck_02_transport_F";
+			atlOffset=-5.3405762e-005;
 		};
 		class Item39
 		{
@@ -1038,6 +1066,7 @@ class Mission
 			};
 			id=39;
 			type="I_Truck_02_transport_F";
+			atlOffset=-5.3405762e-005;
 		};
 		class Item40
 		{
@@ -1056,6 +1085,7 @@ class Mission
 			};
 			id=40;
 			type="I_Truck_02_transport_F";
+			atlOffset=-5.3405762e-005;
 		};
 		class Item41
 		{
@@ -1071,6 +1101,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_car"",this] call f_fnc_assignGear";
 				name="VehAAF_CAR1";
+				reportRemoteTargets=1;
 			};
 			id=41;
 			type="I_MRAP_03_F";
@@ -1183,6 +1214,7 @@ class Mission
 			};
 			id=47;
 			type="O_Truck_02_transport_F";
+			atlOffset=-5.3405762e-005;
 		};
 		class Item48
 		{
@@ -1201,6 +1233,7 @@ class Mission
 			};
 			id=48;
 			type="O_Truck_02_transport_F";
+			atlOffset=-5.3405762e-005;
 		};
 		class Item49
 		{
@@ -1219,6 +1252,7 @@ class Mission
 			};
 			id=49;
 			type="O_Truck_02_transport_F";
+			atlOffset=-5.3405762e-005;
 		};
 		class Item50
 		{
@@ -1371,6 +1405,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_car"",this] call f_fnc_assignGear";
 				name="VehAAF_CAR2";
+				reportRemoteTargets=1;
 			};
 			id=57;
 			type="I_MRAP_03_F";
@@ -1940,6 +1975,7 @@ class Mission
 			};
 			id=73;
 			type="B_APC_Wheeled_01_cannon_F";
+			atlOffset=-0.076682091;
 		};
 		class Item74
 		{
@@ -1958,6 +1994,7 @@ class Mission
 			};
 			id=74;
 			type="B_APC_Wheeled_01_cannon_F";
+			atlOffset=-0.076682091;
 		};
 		class Item75
 		{
@@ -2013,6 +2050,7 @@ class Mission
 			};
 			id=77;
 			type="O_APC_Tracked_02_cannon_F";
+			atlOffset=-0.18001461;
 		};
 		class Item78
 		{
@@ -2032,6 +2070,7 @@ class Mission
 			};
 			id=78;
 			type="O_APC_Tracked_02_cannon_F";
+			atlOffset=-0.18001461;
 		};
 		class Item79
 		{
@@ -2088,7 +2127,7 @@ class Mission
 			};
 			id=81;
 			type="I_APC_tracked_03_cannon_F";
-			atlOffset=0.19695234;
+			atlOffset=0.17517948;
 		};
 		class Item82
 		{
@@ -2107,6 +2146,7 @@ class Mission
 			};
 			id=82;
 			type="I_APC_tracked_03_cannon_F";
+			atlOffset=-0.021772861;
 		};
 		class Item83
 		{
@@ -2122,6 +2162,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_car"",this] call f_fnc_assignGear";
 				name="VehAAF_CAR3";
+				reportRemoteTargets=1;
 			};
 			id=83;
 			type="I_MRAP_03_F";
@@ -2140,6 +2181,7 @@ class Mission
 				skill=0.60000002;
 				init="[""v_car"",this] call f_fnc_assignGear";
 				name="VehAAF_CAR4";
+				reportRemoteTargets=1;
 			};
 			id=84;
 			type="I_MRAP_03_F";
@@ -2987,6 +3029,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=117;
 			type="B_Heli_Light_01_dynamicLoadout_F";
@@ -3298,6 +3341,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=127;
 			type="B_Heli_Light_01_dynamicLoadout_F";
@@ -3609,6 +3653,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=137;
 			type="B_Heli_Light_01_dynamicLoadout_F";
@@ -3848,6 +3893,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 				pylons="PylonWeapon_2000Rnd_65x39_belt;PylonRack_12Rnd_missiles;";
 			};
 			id=144;
@@ -4153,6 +4199,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 				pylons="PylonWeapon_2000Rnd_65x39_belt;PylonRack_12Rnd_missiles;";
 			};
 			id=154;
@@ -4458,6 +4505,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=164;
 			type="I_Heli_light_03_dynamicLoadout_F";
@@ -4762,6 +4810,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=174;
 			type="I_Heli_light_03_dynamicLoadout_F";
@@ -5133,6 +5182,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
+				receiveRemoteTargets=1;
 			};
 			id=187;
 			type="B_Heli_Light_01_dynamicLoadout_F";
@@ -5162,6 +5212,7 @@ class Mission
 						name="UnitNATO_CO";
 						description="NATO Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=191;
 					type="B_officer_F";
@@ -5206,6 +5257,7 @@ class Mission
 						name="UnitNATO_CO_JTAC";
 						description="NATO JTAC";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=192;
 					type="B_officer_F";
@@ -5249,6 +5301,7 @@ class Mission
 						name="UnitNATO_CO_UAV";
 						description="NATO UAV Operator";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=193;
 					type="B_soldier_UAV_F";
@@ -5292,6 +5345,7 @@ class Mission
 						name="UnitNATO_CO_M";
 						description="NATO Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=194;
 					type="B_medic_F";
@@ -5373,6 +5427,7 @@ class Mission
 						name="UnitNATO_DC";
 						description="NATO Deputy Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=196;
 					type="B_officer_F";
@@ -5417,6 +5472,7 @@ class Mission
 						name="UnitNATO_DC_JTAC";
 						description="NATO JTAC";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=197;
 					type="B_officer_F";
@@ -5460,6 +5516,7 @@ class Mission
 						name="UnitNATO_DC_UAV";
 						description="NATO UAV Operator";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=198;
 					type="B_soldier_UAV_F";
@@ -5503,6 +5560,7 @@ class Mission
 						name="UnitNATO_DC_M";
 						description="NATO Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=199;
 					type="B_medic_F";
@@ -5584,6 +5642,7 @@ class Mission
 						name="UnitNATO_COV_C";
 						description="NATO Command Vehicle Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=201;
 					type="B_crew_F";
@@ -5605,6 +5664,7 @@ class Mission
 						name="UnitNATO_COV_G";
 						description="NATO Command Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=202;
 					type="B_crew_F";
@@ -5625,6 +5685,7 @@ class Mission
 						name="UnitNATO_COV_D";
 						description="NATO Command Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=203;
 					type="B_crew_F";
@@ -5678,6 +5739,7 @@ class Mission
 				};
 			};
 			id=200;
+			atlOffset=-0.17999983;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5726,6 +5788,7 @@ class Mission
 						name="UnitNATO_ASL_SL";
 						description="NATO Alpha Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=205;
 					type="B_Soldier_SL_F";
@@ -5746,6 +5809,7 @@ class Mission
 						name="UnitNATO_ASL_M";
 						description="NATO Alpha Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=206;
 					type="B_medic_F";
@@ -5804,6 +5868,7 @@ class Mission
 						name="UnitNATO_A1_FTL";
 						description="NATO Alpha 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=208;
 					type="B_Soldier_TL_F";
@@ -5825,6 +5890,7 @@ class Mission
 						name="UnitNATO_A1_AR1";
 						description="NATO Alpha 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=209;
 					type="B_soldier_AR_F";
@@ -5846,6 +5912,7 @@ class Mission
 						name="UnitNATO_A1_AR2";
 						description="NATO Alpha 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=210;
 					type="B_soldier_AR_F";
@@ -5867,6 +5934,7 @@ class Mission
 						name="UnitNATO_A1_AT";
 						description="NATO Alpha 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=211;
 					type="B_soldier_LAT_F";
@@ -5887,6 +5955,7 @@ class Mission
 						name="UnitNATO_A1_R1";
 						description="NATO Alpha 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=212;
 					type="B_Soldier_F";
@@ -5907,6 +5976,7 @@ class Mission
 						name="UnitNATO_A1_R2";
 						description="NATO Alpha 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=213;
 					type="B_Soldier_F";
@@ -5965,6 +6035,7 @@ class Mission
 						name="UnitNATO_A2_FTL";
 						description="NATO Alpha 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=215;
 					type="B_Soldier_TL_F";
@@ -5986,6 +6057,7 @@ class Mission
 						name="UnitNATO_A2_AR1";
 						description="NATO Alpha 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=216;
 					type="B_soldier_AR_F";
@@ -6007,6 +6079,7 @@ class Mission
 						name="UnitNATO_A2_AR2";
 						description="NATO Alpha 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=217;
 					type="B_soldier_AR_F";
@@ -6028,6 +6101,7 @@ class Mission
 						name="UnitNATO_A2_AT";
 						description="NATO Alpha 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=218;
 					type="B_soldier_LAT_F";
@@ -6048,6 +6122,7 @@ class Mission
 						name="UnitNATO_A2_R1";
 						description="NATO Alpha 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=219;
 					type="B_Soldier_F";
@@ -6068,6 +6143,7 @@ class Mission
 						name="UnitNATO_A2_R2";
 						description="NATO Alpha 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=220;
 					type="B_Soldier_F";
@@ -6126,6 +6202,7 @@ class Mission
 						name="UnitNATO_AV_C";
 						description="NATO Alpha Vehicle Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=222;
 					type="B_crew_F";
@@ -6147,6 +6224,7 @@ class Mission
 						name="UnitNATO_AV_G";
 						description="NATO Alpha Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=223;
 					type="B_crew_F";
@@ -6167,6 +6245,7 @@ class Mission
 						name="UnitNATO_AV_D";
 						description="NATO Alpha Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=224;
 					type="B_crew_F";
@@ -6220,6 +6299,7 @@ class Mission
 				};
 			};
 			id=221;
+			atlOffset=-0.17999983;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6268,6 +6348,7 @@ class Mission
 						name="UnitNATO_BSL_SL";
 						description="NATO Bravo Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=226;
 					type="B_Soldier_SL_F";
@@ -6288,6 +6369,7 @@ class Mission
 						name="UnitNATO_BSL_M";
 						description="NATO Bravo Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=227;
 					type="B_medic_F";
@@ -6346,6 +6428,7 @@ class Mission
 						name="UnitNATO_B1_FTL";
 						description="NATO Bravo 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=229;
 					type="B_Soldier_TL_F";
@@ -6367,6 +6450,7 @@ class Mission
 						name="UnitNATO_B1_AR1";
 						description="NATO Bravo 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=230;
 					type="B_soldier_AR_F";
@@ -6388,6 +6472,7 @@ class Mission
 						name="UnitNATO_B1_AR2";
 						description="NATO Bravo 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=231;
 					type="B_soldier_AR_F";
@@ -6409,6 +6494,7 @@ class Mission
 						name="UnitNATO_B1_AT";
 						description="NATO Bravo 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=232;
 					type="B_soldier_LAT_F";
@@ -6429,6 +6515,7 @@ class Mission
 						name="UnitNATO_B1_R1";
 						description="NATO Bravo 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=233;
 					type="B_Soldier_F";
@@ -6449,6 +6536,7 @@ class Mission
 						name="UnitNATO_B1_R2";
 						description="NATO Bravo 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=234;
 					type="B_Soldier_F";
@@ -6507,6 +6595,7 @@ class Mission
 						name="UnitNATO_B2_FTL";
 						description="NATO Bravo 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=236;
 					type="B_Soldier_TL_F";
@@ -6528,6 +6617,7 @@ class Mission
 						name="UnitNATO_B2_AR1";
 						description="NATO Bravo 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=237;
 					type="B_soldier_AR_F";
@@ -6549,6 +6639,7 @@ class Mission
 						name="UnitNATO_B2_AR2";
 						description="NATO Bravo 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=238;
 					type="B_soldier_AR_F";
@@ -6570,6 +6661,7 @@ class Mission
 						name="UnitNATO_B2_AT";
 						description="NATO Bravo 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=239;
 					type="B_soldier_LAT_F";
@@ -6590,6 +6682,7 @@ class Mission
 						name="UnitNATO_B2_R1";
 						description="NATO Bravo 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=240;
 					type="B_Soldier_F";
@@ -6610,6 +6703,7 @@ class Mission
 						name="UnitNATO_B2_R2";
 						description="NATO Bravo 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=241;
 					type="B_Soldier_F";
@@ -6668,6 +6762,7 @@ class Mission
 						name="UnitNATO_BV_C";
 						description="NATO Bravo Vehicle Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=243;
 					type="B_crew_F";
@@ -6689,6 +6784,7 @@ class Mission
 						name="UnitNATO_BV_G";
 						description="NATO Bravo Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=244;
 					type="B_crew_F";
@@ -6709,6 +6805,7 @@ class Mission
 						name="UnitNATO_BV_D";
 						description="NATO Bravo Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=245;
 					type="B_crew_F";
@@ -6762,6 +6859,7 @@ class Mission
 				};
 			};
 			id=242;
+			atlOffset=-0.17999983;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6810,6 +6908,7 @@ class Mission
 						name="UnitNATO_CSL_SL";
 						description="NATO Charlie Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=247;
 					type="B_Soldier_SL_F";
@@ -6853,6 +6952,7 @@ class Mission
 						name="UnitNATO_CSL_M";
 						description="NATO Charlie Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=248;
 					type="B_medic_F";
@@ -6911,6 +7011,7 @@ class Mission
 						name="UnitNATO_C1_FTL";
 						description="NATO Charlie 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=250;
 					type="B_Soldier_TL_F";
@@ -6932,6 +7033,7 @@ class Mission
 						name="UnitNATO_C1_AR1";
 						description="NATO Charlie 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=251;
 					type="B_soldier_AR_F";
@@ -6953,6 +7055,7 @@ class Mission
 						name="UnitNATO_C1_AR2";
 						description="NATO Charlie 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=252;
 					type="B_soldier_AR_F";
@@ -6974,6 +7077,7 @@ class Mission
 						name="UnitNATO_C1_AT";
 						description="NATO Charlie 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=253;
 					type="B_soldier_LAT_F";
@@ -6994,6 +7098,7 @@ class Mission
 						name="UnitNATO_C1_R1";
 						description="NATO Charlie 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=254;
 					type="B_Soldier_F";
@@ -7014,6 +7119,7 @@ class Mission
 						name="UnitNATO_C1_R2";
 						description="NATO Charlie 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=255;
 					type="B_Soldier_F";
@@ -7072,6 +7178,7 @@ class Mission
 						name="UnitNATO_C2_FTL";
 						description="NATO Charlie 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=257;
 					type="B_Soldier_TL_F";
@@ -7093,6 +7200,7 @@ class Mission
 						name="UnitNATO_C2_AR1";
 						description="NATO Charlie 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=258;
 					type="B_soldier_AR_F";
@@ -7114,6 +7222,7 @@ class Mission
 						name="UnitNATO_C2_AR2";
 						description="NATO Charlie 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=259;
 					type="B_soldier_AR_F";
@@ -7135,6 +7244,7 @@ class Mission
 						name="UnitNATO_C2_AT";
 						description="NATO Charlie 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=260;
 					type="B_soldier_LAT_F";
@@ -7155,6 +7265,7 @@ class Mission
 						name="UnitNATO_C2_R1";
 						description="NATO Charlie 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=261;
 					type="B_Soldier_F";
@@ -7175,6 +7286,7 @@ class Mission
 						name="UnitNATO_C2_R2";
 						description="NATO Charlie 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=262;
 					type="B_Soldier_F";
@@ -7233,6 +7345,7 @@ class Mission
 						name="UnitNATO_CV_C";
 						description="NATO Charlie Vehicle Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=264;
 					type="B_crew_F";
@@ -7254,6 +7367,7 @@ class Mission
 						name="UnitNATO_CV_G";
 						description="NATO Charlie Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=265;
 					type="B_crew_F";
@@ -7274,6 +7388,7 @@ class Mission
 						name="UnitNATO_CV_D";
 						description="NATO Charlie Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=266;
 					type="B_crew_F";
@@ -7327,6 +7442,7 @@ class Mission
 				};
 			};
 			id=263;
+			atlOffset=-0.17999983;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -7375,6 +7491,7 @@ class Mission
 						name="UnitNATO_MMG1_TL";
 						description="NATO Medium MG Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=268;
 					type="B_Soldier_TL_F";
@@ -7395,6 +7512,7 @@ class Mission
 						name="UnitNATO_MMG1_G";
 						description="NATO Medium MG Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=269;
 					type="B_soldier_AR_F";
@@ -7416,6 +7534,7 @@ class Mission
 						name="UnitNATO_MMG1_AG";
 						description="NATO Medium MG Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1209;
 					type="B_soldier_AAR_F";
@@ -7474,6 +7593,7 @@ class Mission
 						name="UnitNATO_MMG2_TL";
 						description="NATO Medium MG Team 2 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=271;
 					type="B_Soldier_TL_F";
@@ -7494,6 +7614,7 @@ class Mission
 						name="UnitNATO_MMG2_G";
 						description="NATO Medium MG Team 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=272;
 					type="B_soldier_AR_F";
@@ -7515,6 +7636,7 @@ class Mission
 						name="UnitNATO_MMG2_AG";
 						description="NATO Medium MG Team 2 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1210;
 					type="B_soldier_AAR_F";
@@ -7573,6 +7695,7 @@ class Mission
 						name="UnitNATO_MAT1_TL";
 						description="NATO Medium AT Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=274;
 					type="B_Soldier_TL_F";
@@ -7593,6 +7716,7 @@ class Mission
 						name="UnitNATO_MAT1_G";
 						description="NATO Medium AT Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=275;
 					type="B_soldier_AT_F";
@@ -7615,6 +7739,7 @@ class Mission
 						name="UnitNATO_MAT1_AG";
 						description="NATO Medium AT Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1211;
 					type="B_soldier_AAT_F";
@@ -7673,6 +7798,7 @@ class Mission
 						name="UnitNATO_MAT2_TL";
 						description="NATO Medium AT Team 2 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=277;
 					type="B_Soldier_TL_F";
@@ -7694,6 +7820,7 @@ class Mission
 						name="UnitNATO_MAT2_G";
 						description="NATO Medium AT Team 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=278;
 					type="B_soldier_AT_F";
@@ -7715,6 +7842,7 @@ class Mission
 						name="UnitNATO_MAT2_AG";
 						description="NATO Medium AT Team 2 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1212;
 					type="B_soldier_AAT_F";
@@ -7773,6 +7901,7 @@ class Mission
 						name="UnitNATO_HMG1_TL";
 						description="NATO Heavy MG Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=280;
 					type="B_Soldier_TL_F";
@@ -7793,6 +7922,7 @@ class Mission
 						name="UnitNATO_HMG1_G";
 						description="NATO Heavy MG Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=281;
 					type="B_support_MG_F";
@@ -7851,6 +7981,7 @@ class Mission
 						name="UnitNATO_HAT1_TL";
 						description="NATO Heavy AT Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=283;
 					type="B_Soldier_TL_F";
@@ -7872,6 +8003,7 @@ class Mission
 						name="UnitNATO_HAT1_G";
 						description="NATO Heavy AT Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=284;
 					type="B_soldier_AT_F";
@@ -7893,6 +8025,7 @@ class Mission
 						name="UnitNATO_HAT1_AG";
 						description="NATO Heavy AT Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1213;
 					type="B_soldier_AAT_F";
@@ -7951,6 +8084,7 @@ class Mission
 						name="UnitNATO_MTR1_TL";
 						description="NATO Mortar Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=286;
 					type="B_support_AMort_F";
@@ -7972,6 +8106,7 @@ class Mission
 						name="UnitNATO_MTR1_G";
 						description="NATO Mortar Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=287;
 					type="B_support_Mort_F";
@@ -8032,10 +8167,11 @@ class Mission
 						name="UnitNATO_MSAM1_TL";
 						description="NATO Medium SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=289;
 					type="B_soldier_AAA_F";
-					atlOffset=0.71470928;
+					atlOffset=0.71500015;
 				};
 				class Item1
 				{
@@ -8053,6 +8189,7 @@ class Mission
 						name="UnitNATO_MSAM1_G";
 						description="NATO Medium SAM Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=290;
 					type="B_soldier_AA_F";
@@ -8074,6 +8211,7 @@ class Mission
 						name="UnitNATO_MSAM1_AG";
 						description="NATO Medium SAM Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1160;
 					type="B_soldier_AAA_F";
@@ -8085,7 +8223,7 @@ class Mission
 				name="GrpNATO_MSAM1";
 			};
 			id=288;
-			atlOffset=0.71470928;
+			atlOffset=0.71500015;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8134,6 +8272,7 @@ class Mission
 						name="UnitNATO_HSAM1_TL";
 						description="NATO Heavy SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=292;
 					type="B_soldier_AAA_F";
@@ -8155,6 +8294,7 @@ class Mission
 						name="UnitNATO_HSAM1_G";
 						description="NATO Heavy SAM Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=293;
 					type="B_soldier_AA_F";
@@ -8215,6 +8355,7 @@ class Mission
 						name="UnitNATO_ST1_SP";
 						description="NATO Sniper Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=295;
 					type="B_spotter_F";
@@ -8236,6 +8377,7 @@ class Mission
 						name="UnitNATO_ST1_SN";
 						description="NATO Sniper Team 1 Sniper";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=296;
 					type="B_sniper_F";
@@ -8296,6 +8438,7 @@ class Mission
 						name="UnitNATO_ENG1_FTL";
 						description="NATO Engineer Team 1 Leader (Demo)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=298;
 					type="B_engineer_F";
@@ -8317,6 +8460,7 @@ class Mission
 						name="UnitNATO_ENG1_A1";
 						description="NATO Engineer Team 1 Assistant (Demo)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=299;
 					type="B_engineer_F";
@@ -8337,6 +8481,7 @@ class Mission
 						name="UnitNATO_ENG1_A2";
 						description="NATO Engineer Team 1 Assistant (Mines)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=300;
 					type="B_engineer_F";
@@ -8358,6 +8503,7 @@ class Mission
 						name="UnitNATO_ENG1_A3";
 						description="NATO Engineer Team 1 Assistant (Mines)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=301;
 					type="B_engineer_F";
@@ -8418,6 +8564,7 @@ class Mission
 						name="UnitNATO_DT1_TL";
 						description="NATO Diver Team 1 Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=303;
 					type="B_diver_TL_F";
@@ -8439,6 +8586,7 @@ class Mission
 						name="UnitNATO_DT1_D1";
 						description="NATO Diver Team 1 Diver";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=304;
 					type="B_diver_F";
@@ -8460,6 +8608,7 @@ class Mission
 						name="UnitNATO_DT1_D2";
 						description="NATO Diver Team 1 Diver";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=305;
 					type="B_diver_F";
@@ -8481,6 +8630,7 @@ class Mission
 						name="UnitNATO_DT1_D3";
 						description="NATO Diver Team 1 Diver";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=306;
 					type="B_diver_F";
@@ -8539,6 +8689,7 @@ class Mission
 						name="UnitNATO_IFV1_C";
 						description="NATO IFV 1 Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=308;
 					type="B_crew_F";
@@ -8560,6 +8711,7 @@ class Mission
 						name="UnitNATO_IFV1_G";
 						description="NATO IFV 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=309;
 					type="B_crew_F";
@@ -8580,6 +8732,7 @@ class Mission
 						name="UnitNATO_IFV1_D";
 						description="NATO IFV 1 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=310;
 					type="B_crew_F";
@@ -8633,6 +8786,7 @@ class Mission
 				};
 			};
 			id=307;
+			atlOffset=-0.076682091;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8681,6 +8835,7 @@ class Mission
 						name="UnitNATO_IFV2_C";
 						description="NATO IFV 2 Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=312;
 					type="B_crew_F";
@@ -8702,6 +8857,7 @@ class Mission
 						name="UnitNATO_IFV2_G";
 						description="NATO IFV 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=313;
 					type="B_crew_F";
@@ -8722,6 +8878,7 @@ class Mission
 						name="UnitNATO_IFV2_D";
 						description="NATO IFV 2 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=314;
 					type="B_crew_F";
@@ -8775,6 +8932,7 @@ class Mission
 				};
 			};
 			id=311;
+			atlOffset=-0.076682091;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8823,6 +8981,7 @@ class Mission
 						name="UnitNATO_TNK1_C";
 						description="NATO Tank 1 Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=316;
 					type="B_crew_F";
@@ -8844,6 +9003,7 @@ class Mission
 						name="UnitNATO_TNK1_G";
 						description="NATO Tank 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=317;
 					type="B_crew_F";
@@ -8864,6 +9024,7 @@ class Mission
 						name="UnitNATO_TNK1_D";
 						description="NATO Tank 1 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=318;
 					type="B_crew_F";
@@ -8917,6 +9078,7 @@ class Mission
 				};
 			};
 			id=315;
+			atlOffset=-0.18917751;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8965,6 +9127,7 @@ class Mission
 						name="UnitNATO_TH1_P";
 						description="NATO Transport Helo 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=320;
 					type="B_Helipilot_F";
@@ -8986,6 +9149,7 @@ class Mission
 						name="UnitNATO_TH1_CP";
 						description="NATO Transport Helo 1 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=321;
 					type="B_Helipilot_F";
@@ -9007,6 +9171,7 @@ class Mission
 						name="UnitNATO_TH1_G1";
 						description="NATO Transport Helo 1 Crew Chief";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=322;
 					type="B_helicrew_F";
@@ -9027,6 +9192,7 @@ class Mission
 						name="UnitNATO_TH1_G2";
 						description="NATO Transport Helo 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=323;
 					type="B_helicrew_F";
@@ -9139,6 +9305,7 @@ class Mission
 						name="UnitNATO_TH2_P";
 						description="NATO Transport Helo 2 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=325;
 					type="B_Helipilot_F";
@@ -9160,6 +9327,7 @@ class Mission
 						name="UnitNATO_TH2_CP";
 						description="NATO Transport Helo 2 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=326;
 					type="B_Helipilot_F";
@@ -9181,6 +9349,7 @@ class Mission
 						name="UnitNATO_TH2_G1";
 						description="NATO Transport Helo 2 Crew Chief";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=327;
 					type="B_helicrew_F";
@@ -9201,6 +9370,7 @@ class Mission
 						name="UnitNATO_TH2_G2";
 						description="NATO Transport Helo 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=328;
 					type="B_helicrew_F";
@@ -9313,6 +9483,7 @@ class Mission
 						name="UnitNATO_TH3_P";
 						description="NATO Transport Helo 3 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=330;
 					type="B_Helipilot_F";
@@ -9334,6 +9505,7 @@ class Mission
 						name="UnitNATO_TH3_CP";
 						description="NATO Transport Helo 3 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=331;
 					type="B_Helipilot_F";
@@ -9355,6 +9527,7 @@ class Mission
 						name="UnitNATO_TH3_G1";
 						description="NATO Transport Helo 3 Crew Chief";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=332;
 					type="B_helicrew_F";
@@ -9375,6 +9548,7 @@ class Mission
 						name="UnitNATO_TH3_G2";
 						description="NATO Transport Helo 3 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=333;
 					type="B_helicrew_F";
@@ -9488,6 +9662,7 @@ class Mission
 						name="UnitNATO_TH4_P";
 						description="NATO Transport Helo 4 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=335;
 					type="B_Helipilot_F";
@@ -9509,6 +9684,7 @@ class Mission
 						name="UnitNATO_TH4_CP";
 						description="NATO Transport Helo 4 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=336;
 					type="B_Helipilot_F";
@@ -9530,6 +9706,7 @@ class Mission
 						name="UnitNATO_TH4_G1";
 						description="NATO Transport Helo 4 Crew Chief";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=337;
 					type="B_helicrew_F";
@@ -9550,6 +9727,7 @@ class Mission
 						name="UnitNATO_TH4_G2";
 						description="NATO Transport Helo 4 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=338;
 					type="B_helicrew_F";
@@ -9663,6 +9841,7 @@ class Mission
 						name="UnitNATO_TH5_P";
 						description="NATO Transport Helo 5 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=340;
 					type="B_Helipilot_F";
@@ -9684,6 +9863,7 @@ class Mission
 						name="UnitNATO_TH5_CP";
 						description="NATO Transport Helo 5 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=341;
 					type="B_Helipilot_F";
@@ -9705,6 +9885,7 @@ class Mission
 						name="UnitNATO_TH5_G1";
 						description="NATO Transport Helo 5 Crew Chief";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=342;
 					type="B_helicrew_F";
@@ -9725,6 +9906,7 @@ class Mission
 						name="UnitNATO_TH5_G2";
 						description="NATO Transport Helo 5 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=343;
 					type="B_helicrew_F";
@@ -9838,6 +10020,7 @@ class Mission
 						name="UnitNATO_TH6_P";
 						description="NATO Transport Helo 6 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=345;
 					type="B_Helipilot_F";
@@ -9859,6 +10042,7 @@ class Mission
 						name="UnitNATO_TH6_CP";
 						description="NATO Transport Helo 6 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=346;
 					type="B_Helipilot_F";
@@ -9880,6 +10064,7 @@ class Mission
 						name="UnitNATO_TH6_G1";
 						description="NATO Transport Helo 6 Crew Chief";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=347;
 					type="B_helicrew_F";
@@ -9900,6 +10085,7 @@ class Mission
 						name="UnitNATO_TH6_G2";
 						description="NATO Transport Helo 6 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=348;
 					type="B_helicrew_F";
@@ -10013,6 +10199,7 @@ class Mission
 						name="UnitNATO_TH7_P";
 						description="NATO Transport Helo 7 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=350;
 					type="B_Helipilot_F";
@@ -10034,6 +10221,7 @@ class Mission
 						name="UnitNATO_TH7_CP";
 						description="NATO Transport Helo 7 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=351;
 					type="B_Helipilot_F";
@@ -10055,6 +10243,7 @@ class Mission
 						name="UnitNATO_TH7_G1";
 						description="NATO Transport Helo 7 Crew Chief";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=352;
 					type="B_helicrew_F";
@@ -10075,6 +10264,7 @@ class Mission
 						name="UnitNATO_TH7_G2";
 						description="NATO Transport Helo 7 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=353;
 					type="B_helicrew_F";
@@ -10188,6 +10378,7 @@ class Mission
 						name="UnitNATO_TH8_P";
 						description="NATO Transport Helo 8 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=355;
 					type="B_Helipilot_F";
@@ -10209,6 +10400,7 @@ class Mission
 						name="UnitNATO_TH8_CP";
 						description="NATO Transport Helo 8 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=356;
 					type="B_Helipilot_F";
@@ -10230,6 +10422,7 @@ class Mission
 						name="UnitNATO_TH8_G1";
 						description="NATO Transport Helo 8 Crew Chief";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=357;
 					type="B_helicrew_F";
@@ -10250,6 +10443,7 @@ class Mission
 						name="UnitNATO_TH8_G2";
 						description="NATO Transport Helo 8 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=358;
 					type="B_helicrew_F";
@@ -10363,6 +10557,7 @@ class Mission
 						name="UnitNATO_AH1_P";
 						description="NATO Attack Helo 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=360;
 					type="B_Helipilot_F";
@@ -10384,6 +10579,7 @@ class Mission
 						name="UnitNATO_AH1_CP";
 						description="NATO Attack Helo 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=361;
 					type="B_Helipilot_F";
@@ -10476,6 +10672,7 @@ class Mission
 						name="UnitCSAT_CO";
 						description="CSAT Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=368;
 					type="O_officer_F";
@@ -10520,6 +10717,7 @@ class Mission
 						name="UnitCSAT_CO_JTAC";
 						description="CSAT JTAC";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=369;
 					type="O_officer_F";
@@ -10563,6 +10761,7 @@ class Mission
 						name="UnitCSAT_CO_UAV";
 						description="CSAT UAV Operator";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=370;
 					type="O_soldier_UAV_F";
@@ -10606,6 +10805,7 @@ class Mission
 						name="UnitCSAT_CO_M";
 						description="CSAT Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=371;
 					type="O_medic_F";
@@ -10688,6 +10888,7 @@ class Mission
 						name="UnitCSAT_DC";
 						description="CSAT Deputy Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=373;
 					type="O_officer_F";
@@ -10710,6 +10911,7 @@ class Mission
 						name="UnitCSAT_DC_JTAC";
 						description="CSAT JTAC";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=374;
 					type="O_officer_F";
@@ -10730,6 +10932,7 @@ class Mission
 						name="UnitCSAT_DC_UAV";
 						description="CSAT UAV Operator";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=375;
 					type="O_soldier_UAV_F";
@@ -10773,6 +10976,7 @@ class Mission
 						name="UnitCSAT_DC_M";
 						description="CSAT Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=376;
 					type="O_medic_F";
@@ -10831,6 +11035,7 @@ class Mission
 						name="UnitCSAT_COV_G";
 						description="CSAT Command Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=379;
 					type="O_crew_F";
@@ -10851,6 +11056,7 @@ class Mission
 						name="UnitCSAT_COV_D";
 						description="CSAT Command Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=380;
 					type="O_crew_F";
@@ -10942,6 +11148,7 @@ class Mission
 						name="UnitCSAT_ASL_SL";
 						description="CSAT Alpha Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=382;
 					type="O_Soldier_SL_F";
@@ -10986,6 +11193,7 @@ class Mission
 						name="UnitCSAT_ASL_M";
 						description="CSAT Alpha Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=383;
 					type="O_medic_F";
@@ -11068,6 +11276,7 @@ class Mission
 						name="UnitCSAT_A1_FTL";
 						description="CSAT Alpha 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=385;
 					type="O_Soldier_TL_F";
@@ -11113,6 +11322,7 @@ class Mission
 						name="UnitCSAT_A1_AR1";
 						description="CSAT Alpha 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=386;
 					type="O_Soldier_AR_F";
@@ -11158,6 +11368,7 @@ class Mission
 						name="UnitCSAT_A1_AR2";
 						description="CSAT Alpha 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=387;
 					type="O_Soldier_AR_F";
@@ -11203,6 +11414,7 @@ class Mission
 						name="UnitCSAT_A1_AT";
 						description="CSAT Alpha 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=388;
 					type="O_Soldier_LAT_F";
@@ -11247,6 +11459,7 @@ class Mission
 						name="UnitCSAT_A1_R1";
 						description="CSAT Alpha 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=389;
 					type="O_Soldier_F";
@@ -11291,6 +11504,7 @@ class Mission
 						name="UnitCSAT_A1_R2";
 						description="CSAT Alpha 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=390;
 					type="O_Soldier_F";
@@ -11373,6 +11587,7 @@ class Mission
 						name="UnitCSAT_A2_FTL";
 						description="CSAT Alpha 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=392;
 					type="O_Soldier_TL_F";
@@ -11418,6 +11633,7 @@ class Mission
 						name="UnitCSAT_A2_AR1";
 						description="CSAT Alpha 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=393;
 					type="O_Soldier_AR_F";
@@ -11463,6 +11679,7 @@ class Mission
 						name="UnitCSAT_A2_AR2";
 						description="CSAT Alpha 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=394;
 					type="O_Soldier_AR_F";
@@ -11508,6 +11725,7 @@ class Mission
 						name="UnitCSAT_A2_AT";
 						description="CSAT Alpha 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=395;
 					type="O_Soldier_LAT_F";
@@ -11552,6 +11770,7 @@ class Mission
 						name="UnitCSAT_A2_R1";
 						description="CSAT Alpha 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=396;
 					type="O_Soldier_F";
@@ -11596,6 +11815,7 @@ class Mission
 						name="UnitCSAT_A2_R2";
 						description="CSAT Alpha 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=397;
 					type="O_Soldier_F";
@@ -11677,6 +11897,7 @@ class Mission
 						name="UnitCSAT_AV_G";
 						description="CSAT Alpha Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=400;
 					type="O_crew_F";
@@ -11697,6 +11918,7 @@ class Mission
 						name="UnitCSAT_AV_D";
 						description="CSAT Alpha Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=401;
 					type="O_crew_F";
@@ -11788,6 +12010,7 @@ class Mission
 						name="UnitCSAT_BSL_SL";
 						description="CSAT Bravo Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=403;
 					type="O_Soldier_SL_F";
@@ -11832,6 +12055,7 @@ class Mission
 						name="UnitCSAT_BSL_M";
 						description="CSAT Bravo Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=404;
 					type="O_medic_F";
@@ -11914,6 +12138,7 @@ class Mission
 						name="UnitCSAT_B1_FTL";
 						description="CSAT Bravo 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=406;
 					type="O_Soldier_TL_F";
@@ -11959,6 +12184,7 @@ class Mission
 						name="UnitCSAT_B1_AR1";
 						description="CSAT Bravo 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=407;
 					type="O_Soldier_AR_F";
@@ -12004,6 +12230,7 @@ class Mission
 						name="UnitCSAT_B1_AR2";
 						description="CSAT Bravo 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=408;
 					type="O_Soldier_AR_F";
@@ -12049,6 +12276,7 @@ class Mission
 						name="UnitCSAT_B1_AT";
 						description="CSAT Bravo 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=409;
 					type="O_Soldier_LAT_F";
@@ -12093,6 +12321,7 @@ class Mission
 						name="UnitCSAT_B1_R1";
 						description="CSAT Bravo 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=410;
 					type="O_Soldier_F";
@@ -12137,6 +12366,7 @@ class Mission
 						name="UnitCSAT_B1_R2";
 						description="CSAT Bravo 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=411;
 					type="O_Soldier_F";
@@ -12219,6 +12449,7 @@ class Mission
 						name="UnitCSAT_B2_FTL";
 						description="CSAT Bravo 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=413;
 					type="O_Soldier_TL_F";
@@ -12264,6 +12495,7 @@ class Mission
 						name="UnitCSAT_B2_AR1";
 						description="CSAT Bravo 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=414;
 					type="O_Soldier_AR_F";
@@ -12309,6 +12541,7 @@ class Mission
 						name="UnitCSAT_B2_AR2";
 						description="CSAT Bravo 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=415;
 					type="O_Soldier_AR_F";
@@ -12354,6 +12587,7 @@ class Mission
 						name="UnitCSAT_B2_AT";
 						description="CSAT Bravo 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=416;
 					type="O_Soldier_LAT_F";
@@ -12398,6 +12632,7 @@ class Mission
 						name="UnitCSAT_B2_R1";
 						description="CSAT Bravo 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=417;
 					type="O_Soldier_F";
@@ -12442,6 +12677,7 @@ class Mission
 						name="UnitCSAT_B2_R2";
 						description="CSAT Bravo 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=418;
 					type="O_Soldier_F";
@@ -12523,6 +12759,7 @@ class Mission
 						name="UnitCSAT_BV_G";
 						description="CSAT Bravo Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=421;
 					type="O_crew_F";
@@ -12566,6 +12803,7 @@ class Mission
 						name="UnitCSAT_BV_D";
 						description="CSAT Bravo Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=422;
 					type="O_crew_F";
@@ -12657,6 +12895,7 @@ class Mission
 						name="UnitCSAT_CSL_SL";
 						description="CSAT Charlie Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=424;
 					type="O_Soldier_SL_F";
@@ -12701,6 +12940,7 @@ class Mission
 						name="UnitCSAT_CSL_M";
 						description="CSAT Charlie Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=425;
 					type="O_medic_F";
@@ -12783,6 +13023,7 @@ class Mission
 						name="UnitCSAT_C1_FTL";
 						description="CSAT Charlie 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=427;
 					type="O_Soldier_TL_F";
@@ -12828,6 +13069,7 @@ class Mission
 						name="UnitCSAT_C1_AR1";
 						description="CSAT Charlie 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=428;
 					type="O_Soldier_AR_F";
@@ -12873,6 +13115,7 @@ class Mission
 						name="UnitCSAT_C1_AR2";
 						description="CSAT Charlie 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=429;
 					type="O_Soldier_AR_F";
@@ -12918,6 +13161,7 @@ class Mission
 						name="UnitCSAT_C1_AT";
 						description="CSAT Charlie 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=430;
 					type="O_Soldier_LAT_F";
@@ -12962,6 +13206,7 @@ class Mission
 						name="UnitCSAT_C1_R1";
 						description="CSAT Charlie 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=431;
 					type="O_Soldier_F";
@@ -13006,6 +13251,7 @@ class Mission
 						name="UnitCSAT_C1_R2";
 						description="CSAT Charlie 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=432;
 					type="O_Soldier_F";
@@ -13088,6 +13334,7 @@ class Mission
 						name="UnitCSAT_C2_FTL";
 						description="CSAT Charlie 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=434;
 					type="O_Soldier_TL_F";
@@ -13133,6 +13380,7 @@ class Mission
 						name="UnitCSAT_C2_AR1";
 						description="CSAT Charlie 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=435;
 					type="O_Soldier_AR_F";
@@ -13178,6 +13426,7 @@ class Mission
 						name="UnitCSAT_C2_AR2";
 						description="CSAT Charlie 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=436;
 					type="O_Soldier_AR_F";
@@ -13223,6 +13472,7 @@ class Mission
 						name="UnitCSAT_C2_AT";
 						description="CSAT Charlie 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=437;
 					type="O_Soldier_LAT_F";
@@ -13267,6 +13517,7 @@ class Mission
 						name="UnitCSAT_C2_R1";
 						description="CSAT Charlie 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=438;
 					type="O_Soldier_F";
@@ -13311,6 +13562,7 @@ class Mission
 						name="UnitCSAT_C2_R2";
 						description="CSAT Charlie 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=439;
 					type="O_Soldier_F";
@@ -13392,6 +13644,7 @@ class Mission
 						name="UnitCSAT_CV_G";
 						description="CSAT Charlie Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=442;
 					type="O_crew_F";
@@ -13412,6 +13665,7 @@ class Mission
 						name="UnitCSAT_CV_D";
 						description="CSAT Charlie Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=443;
 					type="O_crew_F";
@@ -13503,6 +13757,7 @@ class Mission
 						name="UnitCSAT_MMG1_TL";
 						description="CSAT Medium MG Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=445;
 					type="O_Soldier_TL_F";
@@ -13547,6 +13802,7 @@ class Mission
 						name="UnitCSAT_MMG1_G";
 						description="CSAT Medium MG Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=446;
 					type="O_Soldier_AR_F";
@@ -13592,6 +13848,7 @@ class Mission
 						name="UnitCSAT_MMG1_AG";
 						description="CSAT Medium MG Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1229;
 					type="O_Soldier_AAR_F";
@@ -13651,6 +13908,7 @@ class Mission
 						name="UnitCSAT_MMG2_TL";
 						description="CSAT Medium MG Team 2 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=448;
 					type="O_Soldier_TL_F";
@@ -13695,6 +13953,7 @@ class Mission
 						name="UnitCSAT_MMG2_G";
 						description="CSAT Medium MG Team 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=449;
 					type="O_Soldier_AR_F";
@@ -13740,6 +13999,7 @@ class Mission
 						name="UnitCSAT_MMG2_AG";
 						description="CSAT Medium MG Team 2 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1230;
 					type="O_Soldier_AAR_F";
@@ -13798,6 +14058,7 @@ class Mission
 						name="UnitCSAT_MAT1_TL";
 						description="CSAT Medium AT Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=451;
 					type="O_Soldier_TL_F";
@@ -13841,6 +14102,7 @@ class Mission
 						name="UnitCSAT_MAT1_G";
 						description="CSAT Medium AT Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=452;
 					type="O_Soldier_AT_F";
@@ -13885,6 +14147,7 @@ class Mission
 						name="UnitCSAT_MAT1_AG";
 						description="CSAT Medium AT Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1231;
 					type="O_Soldier_AAT_F";
@@ -13943,6 +14206,7 @@ class Mission
 						name="UnitCSAT_MAT2_TL";
 						description="CSAT Medium AT Team 2 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=454;
 					type="O_Soldier_TL_F";
@@ -13986,6 +14250,7 @@ class Mission
 						name="UnitCSAT_MAT2_G";
 						description="CSAT Medium AT Team 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=455;
 					type="O_Soldier_AT_F";
@@ -14030,6 +14295,7 @@ class Mission
 						name="UnitCSAT_MAT2_AG";
 						description="CSAT Medium AT Team 2 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1232;
 					type="O_Soldier_AAT_F";
@@ -14088,6 +14354,7 @@ class Mission
 						name="UnitCSAT_HMG1_TL";
 						description="CSAT Heavy MG Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=457;
 					type="O_Soldier_TL_F";
@@ -14131,6 +14398,7 @@ class Mission
 						name="UnitCSAT_HMG1_G";
 						description="CSAT Heavy MG Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=458;
 					type="O_Soldier_AR_F";
@@ -14212,6 +14480,7 @@ class Mission
 						name="UnitCSAT_HAT1_TL";
 						description="CSAT Heavy AT Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=460;
 					type="O_Soldier_TL_F";
@@ -14255,6 +14524,7 @@ class Mission
 						name="UnitCSAT_HAT1_G";
 						description="CSAT Heavy AT Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=461;
 					type="O_Soldier_AT_F";
@@ -14299,6 +14569,7 @@ class Mission
 						name="UnitCSAT_HAT1_AG";
 						description="CSAT Heavy AT Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1233;
 					type="O_Soldier_AAT_F";
@@ -14357,6 +14628,7 @@ class Mission
 						name="UnitCSAT_MTR1_TL";
 						description="CSAT Mortar Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=463;
 					type="O_support_AMort_F";
@@ -14400,6 +14672,7 @@ class Mission
 						name="UnitCSAT_MTR1_G";
 						description="CSAT Mortar Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=464;
 					type="O_support_Mort_F";
@@ -14481,6 +14754,7 @@ class Mission
 						name="UnitCSAT_MSAM1_TL";
 						description="CSAT Medium SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=466;
 					type="O_Soldier_AAA_F";
@@ -14524,6 +14798,7 @@ class Mission
 						name="UnitCSAT_MSAM1_G";
 						description="CSAT Medium SAM Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=467;
 					type="O_Soldier_AA_F";
@@ -14568,6 +14843,7 @@ class Mission
 						name="UnitCSAT_MSAM1_AG";
 						description="CSAT Medium SAM Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1208;
 					type="O_Soldier_AAA_F";
@@ -14626,6 +14902,7 @@ class Mission
 						name="UnitCSAT_HSAM1_TL";
 						description="CSAT Heavy SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=469;
 					type="O_Soldier_AAA_F";
@@ -14669,6 +14946,7 @@ class Mission
 						name="UnitCSAT_HSAM1_G";
 						description="CSAT Heavy SAM Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=470;
 					type="O_Soldier_AA_F";
@@ -14750,6 +15028,7 @@ class Mission
 						name="UnitCSAT_ST1_SP";
 						description="CSAT Sniper Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=472;
 					type="O_spotter_F";
@@ -14793,6 +15072,7 @@ class Mission
 						name="UnitCSAT_ST1_SN";
 						description="CSAT Sniper Team 1 Sniper";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=473;
 					type="O_sniper_F";
@@ -14874,6 +15154,7 @@ class Mission
 						name="UnitCSAT_ENG1_FTL";
 						description="CSAT Engineer Team 1 Leader (Demo)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=475;
 					type="O_engineer_F";
@@ -14917,6 +15198,7 @@ class Mission
 						name="UnitCSAT_ENG1_A1";
 						description="CSAT Engineer Team 1 Assistant (Demo)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=476;
 					type="O_engineer_F";
@@ -14960,6 +15242,7 @@ class Mission
 						name="UnitCSAT_ENG1_A2";
 						description="CSAT Engineer Team 1 Assistant (Mines)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=477;
 					type="O_engineer_F";
@@ -15003,6 +15286,7 @@ class Mission
 						name="UnitCSAT_ENG1_A3";
 						description="CSAT Engineer Team 1 Assistant (Mines)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=478;
 					type="O_engineer_F";
@@ -15084,6 +15368,7 @@ class Mission
 						name="UnitCSAT_DT1_TL";
 						description="CSAT Diver Team 1 Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=480;
 					type="O_diver_TL_F";
@@ -15128,6 +15413,7 @@ class Mission
 						name="UnitCSAT_DT1_D1";
 						description="CSAT Diver Team 1 Diver";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=481;
 					type="O_diver_F";
@@ -15172,6 +15458,7 @@ class Mission
 						name="UnitCSAT_DT1_D2";
 						description="CSAT Diver Team 1 Diver";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=482;
 					type="O_diver_F";
@@ -15216,6 +15503,7 @@ class Mission
 						name="UnitCSAT_DT1_D3";
 						description="CSAT Diver Team 1 Diver";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=483;
 					type="O_diver_F";
@@ -15297,6 +15585,7 @@ class Mission
 						name="UnitCSAT_IFV1_C";
 						description="CSAT IFV 1 Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=485;
 					type="O_crew_F";
@@ -15341,6 +15630,7 @@ class Mission
 						name="UnitCSAT_IFV1_G";
 						description="CSAT IFV 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=486;
 					type="O_crew_F";
@@ -15361,6 +15651,7 @@ class Mission
 						name="UnitCSAT_IFV1_D";
 						description="CSAT IFV 1 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=487;
 					type="O_crew_F";
@@ -15414,6 +15705,7 @@ class Mission
 				};
 			};
 			id=484;
+			atlOffset=-0.18001461;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15462,6 +15754,7 @@ class Mission
 						name="UnitCSAT_IFV2_C";
 						description="CSAT IFV 2 Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=489;
 					type="O_crew_F";
@@ -15483,6 +15776,7 @@ class Mission
 						name="UnitCSAT_IFV2_G";
 						description="CSAT IFV 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=490;
 					type="O_crew_F";
@@ -15503,6 +15797,7 @@ class Mission
 						name="UnitCSAT_IFV2_D";
 						description="CSAT IFV 2 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=491;
 					type="O_crew_F";
@@ -15556,6 +15851,7 @@ class Mission
 				};
 			};
 			id=488;
+			atlOffset=-0.18001461;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15604,6 +15900,7 @@ class Mission
 						name="UnitCSAT_TNK1_C";
 						description="CSAT Tank 1 Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=493;
 					type="O_crew_F";
@@ -15625,6 +15922,7 @@ class Mission
 						name="UnitCSAT_TNK1_G";
 						description="CSAT Tank 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=494;
 					type="O_crew_F";
@@ -15645,6 +15943,7 @@ class Mission
 						name="UnitCSAT_TNK1_D";
 						description="CSAT Tank 1 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=495;
 					type="O_crew_F";
@@ -15698,6 +15997,7 @@ class Mission
 				};
 			};
 			id=492;
+			atlOffset=-0.18066597;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15746,6 +16046,7 @@ class Mission
 						name="UnitCSAT_TH1_P";
 						description="CSAT Transport Helo 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=497;
 					type="O_helipilot_F";
@@ -15767,6 +16068,7 @@ class Mission
 						name="UnitCSAT_TH1_CP";
 						description="CSAT Transport Helo 1 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=498;
 					type="O_helipilot_F";
@@ -15788,6 +16090,7 @@ class Mission
 						name="UnitCSAT_TH1_LM";
 						description="CSAT Transport Helo 1 Loadmaster";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=499;
 					type="O_helicrew_F";
@@ -15912,6 +16215,7 @@ class Mission
 						name="UnitCSAT_TH2_P";
 						description="CSAT Transport Helo 2 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=501;
 					type="O_helipilot_F";
@@ -15933,6 +16237,7 @@ class Mission
 						name="UnitCSAT_TH2_CP";
 						description="CSAT Transport Helo 2 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=502;
 					type="O_helipilot_F";
@@ -15954,6 +16259,7 @@ class Mission
 						name="UnitCSAT_TH2_LM";
 						description="CSAT Transport Helo 2 Loadmaster";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=503;
 					type="O_helicrew_F";
@@ -16078,6 +16384,7 @@ class Mission
 						name="UnitCSAT_TH3_P";
 						description="CSAT Transport Helo 3 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=505;
 					type="O_helipilot_F";
@@ -16099,6 +16406,7 @@ class Mission
 						name="UnitCSAT_TH3_CP";
 						description="CSAT Transport Helo 3 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=506;
 					type="O_helipilot_F";
@@ -16189,6 +16497,7 @@ class Mission
 						name="UnitCSAT_TH4_P";
 						description="CSAT Transport Helo 4 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=508;
 					type="O_helipilot_F";
@@ -16210,6 +16519,7 @@ class Mission
 						name="UnitCSAT_TH4_CP";
 						description="CSAT Transport Helo 4 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=509;
 					type="O_helipilot_F";
@@ -16300,6 +16610,7 @@ class Mission
 						name="UnitCSAT_TH5_P";
 						description="CSAT Transport Helo 5 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=511;
 					type="O_helipilot_F";
@@ -16321,6 +16632,7 @@ class Mission
 						name="UnitCSAT_TH5_CP";
 						description="CSAT Transport Helo 5 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=512;
 					type="O_helipilot_F";
@@ -16411,6 +16723,7 @@ class Mission
 						name="UnitCSAT_TH6_P";
 						description="CSAT Transport Helo 6 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=514;
 					type="O_helipilot_F";
@@ -16432,6 +16745,7 @@ class Mission
 						name="UnitCSAT_TH6_CP";
 						description="CSAT Transport Helo 6 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=515;
 					type="O_helipilot_F";
@@ -16522,6 +16836,7 @@ class Mission
 						name="UnitCSAT_TH7_P";
 						description="CSAT Transport Helo 7 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=517;
 					type="O_helipilot_F";
@@ -16543,6 +16858,7 @@ class Mission
 						name="UnitCSAT_TH7_CP";
 						description="CSAT Transport Helo 7 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=518;
 					type="O_helipilot_F";
@@ -16633,6 +16949,7 @@ class Mission
 						name="UnitCSAT_TH8_P";
 						description="CSAT Transport Helo 8 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=520;
 					type="O_helipilot_F";
@@ -16654,6 +16971,7 @@ class Mission
 						name="UnitCSAT_TH8_CP";
 						description="CSAT Transport Helo 8 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=521;
 					type="O_helipilot_F";
@@ -16744,6 +17062,7 @@ class Mission
 						name="UnitCSAT_AH1_P";
 						description="CSAT Attack Helo 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=523;
 					type="O_helipilot_F";
@@ -16788,6 +17107,7 @@ class Mission
 						name="UnitCSAT_AH1_CP";
 						description="CSAT Attack Helo 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=524;
 					type="O_helipilot_F";
@@ -16878,6 +17198,7 @@ class Mission
 						name="UnitAAF_CO";
 						description="AAF Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=531;
 					type="I_officer_F";
@@ -16899,6 +17220,7 @@ class Mission
 						name="UnitAAF_CO_JTAC";
 						description="AAF Forward Observer";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=532;
 					type="I_officer_F";
@@ -16919,6 +17241,7 @@ class Mission
 						name="UnitAAF_CO_UAV";
 						description="AAF UAV Operator";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=533;
 					type="I_soldier_UAV_F";
@@ -16939,6 +17262,7 @@ class Mission
 						name="UnitAAF_CO_M";
 						description="AAF Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=534;
 					type="I_medic_F";
@@ -16997,6 +17321,7 @@ class Mission
 						name="UnitAAF_DC";
 						description="AAF Deputy Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=536;
 					type="I_officer_F";
@@ -17018,6 +17343,7 @@ class Mission
 						name="UnitAAF_DC_JTAC";
 						description="AAF Forward Observer";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=537;
 					type="I_officer_F";
@@ -17038,6 +17364,7 @@ class Mission
 						name="UnitAAF_DC_UAV";
 						description="AAF UAV Operator";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=538;
 					type="I_soldier_UAV_F";
@@ -17058,6 +17385,7 @@ class Mission
 						name="UnitAAF_DC_M";
 						description="AAF Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=539;
 					type="I_medic_F";
@@ -17117,6 +17445,7 @@ class Mission
 						name="UnitAAF_COV_C";
 						description="AAF Command Vehicle Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=541;
 					type="I_crew_F";
@@ -17138,6 +17467,7 @@ class Mission
 						name="UnitAAF_COV_G";
 						description="AAF Command Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=542;
 					type="I_crew_F";
@@ -17158,6 +17488,7 @@ class Mission
 						name="UnitAAF_COV_D";
 						description="AAF Command Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=543;
 					type="I_crew_F";
@@ -17259,6 +17590,7 @@ class Mission
 						name="UnitAAF_ASL_SL";
 						description="AAF Alpha Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=545;
 					type="I_Soldier_SL_F";
@@ -17279,6 +17611,7 @@ class Mission
 						name="UnitAAF_ASL_M";
 						description="AAF Alpha Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=546;
 					type="I_medic_F";
@@ -17337,6 +17670,7 @@ class Mission
 						name="UnitAAF_A1_FTL";
 						description="AAF Alpha 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=548;
 					type="I_Soldier_TL_F";
@@ -17358,6 +17692,7 @@ class Mission
 						name="UnitAAF_A1_AR1";
 						description="AAF Alpha 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=549;
 					type="I_Soldier_AR_F";
@@ -17379,6 +17714,7 @@ class Mission
 						name="UnitAAF_A1_AR2";
 						description="AAF Alpha 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=550;
 					type="I_Soldier_AR_F";
@@ -17400,6 +17736,7 @@ class Mission
 						name="UnitAAF_A1_AT";
 						description="AAF Alpha 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=551;
 					type="I_Soldier_LAT_F";
@@ -17420,6 +17757,7 @@ class Mission
 						name="UnitAAF_A1_R1";
 						description="AAF Alpha 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=552;
 					type="I_soldier_F";
@@ -17440,6 +17778,7 @@ class Mission
 						name="UnitAAF_A1_R2";
 						description="AAF Alpha 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=553;
 					type="I_soldier_F";
@@ -17498,6 +17837,7 @@ class Mission
 						name="UnitAAF_A2_FTL";
 						description="AAF Alpha 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=555;
 					type="I_Soldier_TL_F";
@@ -17519,6 +17859,7 @@ class Mission
 						name="UnitAAF_A2_AR1";
 						description="AAF Alpha 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=556;
 					type="I_Soldier_AR_F";
@@ -17540,6 +17881,7 @@ class Mission
 						name="UnitAAF_A2_AR2";
 						description="AAF Alpha 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=557;
 					type="I_Soldier_AR_F";
@@ -17561,6 +17903,7 @@ class Mission
 						name="UnitAAF_A2_AT";
 						description="AAF Alpha 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=558;
 					type="I_Soldier_LAT_F";
@@ -17581,6 +17924,7 @@ class Mission
 						name="UnitAAF_A2_R1";
 						description="AAF Alpha 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=559;
 					type="I_soldier_F";
@@ -17601,6 +17945,7 @@ class Mission
 						name="UnitAAF_A2_R2";
 						description="AAF Alpha 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=560;
 					type="I_soldier_F";
@@ -17659,6 +18004,7 @@ class Mission
 						name="UnitAAF_AV_C";
 						description="AAF Alpha Vehicle Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=562;
 					type="I_crew_F";
@@ -17680,6 +18026,7 @@ class Mission
 						name="UnitAAF_AV_G";
 						description="AAF Alpha Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=563;
 					type="I_crew_F";
@@ -17700,6 +18047,7 @@ class Mission
 						name="UnitAAF_AV_D";
 						description="AAF Alpha Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=564;
 					type="I_crew_F";
@@ -17801,6 +18149,7 @@ class Mission
 						name="UnitAAF_BSL_SL";
 						description="AAF Bravo Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=566;
 					type="I_Soldier_SL_F";
@@ -17821,6 +18170,7 @@ class Mission
 						name="UnitAAF_BSL_M";
 						description="AAF Bravo Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=567;
 					type="I_medic_F";
@@ -17879,6 +18229,7 @@ class Mission
 						name="UnitAAF_B1_FTL";
 						description="AAF Bravo 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=569;
 					type="I_Soldier_TL_F";
@@ -17900,6 +18251,7 @@ class Mission
 						name="UnitAAF_B1_AR1";
 						description="AAF Bravo 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=570;
 					type="I_Soldier_AR_F";
@@ -17921,6 +18273,7 @@ class Mission
 						name="UnitAAF_B1_AR2";
 						description="AAF Bravo 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=571;
 					type="I_Soldier_AR_F";
@@ -17942,6 +18295,7 @@ class Mission
 						name="UnitAAF_B1_AT";
 						description="AAF Bravo 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=572;
 					type="I_Soldier_LAT_F";
@@ -17962,6 +18316,7 @@ class Mission
 						name="UnitAAF_B1_R1";
 						description="AAF Bravo 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=573;
 					type="I_soldier_F";
@@ -17982,6 +18337,7 @@ class Mission
 						name="UnitAAF_B1_R2";
 						description="AAF Bravo 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=574;
 					type="I_soldier_F";
@@ -18040,6 +18396,7 @@ class Mission
 						name="UnitAAF_B2_FTL";
 						description="AAF Bravo 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=576;
 					type="I_Soldier_TL_F";
@@ -18061,6 +18418,7 @@ class Mission
 						name="UnitAAF_B2_AR1";
 						description="AAF Bravo 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=577;
 					type="I_Soldier_AR_F";
@@ -18082,6 +18440,7 @@ class Mission
 						name="UnitAAF_B2_AR2";
 						description="AAF Bravo 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=578;
 					type="I_Soldier_AR_F";
@@ -18103,6 +18462,7 @@ class Mission
 						name="UnitAAF_B2_AT";
 						description="AAF Bravo 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=579;
 					type="I_Soldier_LAT_F";
@@ -18123,6 +18483,7 @@ class Mission
 						name="UnitAAF_B2_R1";
 						description="AAF Bravo 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=580;
 					type="I_soldier_F";
@@ -18143,6 +18504,7 @@ class Mission
 						name="UnitAAF_B2_R2";
 						description="AAF Bravo 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=581;
 					type="I_soldier_F";
@@ -18201,6 +18563,7 @@ class Mission
 						name="UnitAAF_BV_C";
 						description="AAF Bravo Vehicle Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=583;
 					type="I_crew_F";
@@ -18222,6 +18585,7 @@ class Mission
 						name="UnitAAF_BV_G";
 						description="AAF Bravo Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=584;
 					type="I_crew_F";
@@ -18242,6 +18606,7 @@ class Mission
 						name="UnitAAF_BV_D";
 						description="AAF Bravo Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=585;
 					type="I_crew_F";
@@ -18343,6 +18708,7 @@ class Mission
 						name="UnitAAF_CSL_SL";
 						description="AAF Charlie Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=587;
 					type="I_Soldier_SL_F";
@@ -18363,6 +18729,7 @@ class Mission
 						name="UnitAAF_CSL_M";
 						description="AAF Charlie Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=588;
 					type="I_medic_F";
@@ -18421,6 +18788,7 @@ class Mission
 						name="UnitAAF_C1_FTL";
 						description="AAF Charlie 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=590;
 					type="I_Soldier_TL_F";
@@ -18442,6 +18810,7 @@ class Mission
 						name="UnitAAF_C1_AR1";
 						description="AAF Charlie 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=591;
 					type="I_Soldier_AR_F";
@@ -18463,6 +18832,7 @@ class Mission
 						name="UnitAAF_C1_AR2";
 						description="AAF Charlie 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=592;
 					type="I_Soldier_AR_F";
@@ -18484,6 +18854,7 @@ class Mission
 						name="UnitAAF_C1_AT";
 						description="AAF Charlie 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=593;
 					type="I_Soldier_LAT_F";
@@ -18504,6 +18875,7 @@ class Mission
 						name="UnitAAF_C1_R1";
 						description="AAF Charlie 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=594;
 					type="I_soldier_F";
@@ -18524,6 +18896,7 @@ class Mission
 						name="UnitAAF_C1_R2";
 						description="AAF Charlie 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=595;
 					type="I_soldier_F";
@@ -18582,6 +18955,7 @@ class Mission
 						name="UnitAAF_C2_FTL";
 						description="AAF Charlie 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=597;
 					type="I_Soldier_TL_F";
@@ -18603,6 +18977,7 @@ class Mission
 						name="UnitAAF_C2_AR1";
 						description="AAF Charlie 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=598;
 					type="I_Soldier_AR_F";
@@ -18624,6 +18999,7 @@ class Mission
 						name="UnitAAF_C2_AR2";
 						description="AAF Charlie 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=599;
 					type="I_Soldier_AR_F";
@@ -18645,6 +19021,7 @@ class Mission
 						name="UnitAAF_C2_AT";
 						description="AAF Charlie 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=600;
 					type="I_Soldier_LAT_F";
@@ -18665,6 +19042,7 @@ class Mission
 						name="UnitAAF_C2_R1";
 						description="AAF Charlie 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=601;
 					type="I_soldier_F";
@@ -18685,6 +19063,7 @@ class Mission
 						name="UnitAAF_C2_R2";
 						description="AAF Charlie 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=602;
 					type="I_soldier_F";
@@ -18743,6 +19122,7 @@ class Mission
 						name="UnitAAF_CV_C";
 						description="AAF Charlie Vehicle Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=604;
 					type="I_crew_F";
@@ -18764,6 +19144,7 @@ class Mission
 						name="UnitAAF_CV_G";
 						description="AAF Charlie Vehicle Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=605;
 					type="I_crew_F";
@@ -18784,6 +19165,7 @@ class Mission
 						name="UnitAAF_CV_D";
 						description="AAF Charlie Vehicle Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=606;
 					type="I_crew_F";
@@ -18885,6 +19267,7 @@ class Mission
 						name="UnitAAF_MMG1_TL";
 						description="AAF Medium MG Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=608;
 					type="I_Soldier_TL_F";
@@ -18905,6 +19288,7 @@ class Mission
 						name="UnitAAF_MMG1_G";
 						description="AAF Medium MG Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=609;
 					type="I_Soldier_AR_F";
@@ -18926,6 +19310,7 @@ class Mission
 						name="UnitAAF_MMG1_AG";
 						description="AAF Medium MG Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1224;
 					type="I_Soldier_AAR_F";
@@ -18984,6 +19369,7 @@ class Mission
 						name="UnitAAF_MMG2_TL";
 						description="AAF Medium MG Team 2 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=611;
 					type="I_Soldier_TL_F";
@@ -19004,6 +19390,7 @@ class Mission
 						name="UnitAAF_MMG2_G";
 						description="AAF Medium MG Team 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=612;
 					type="I_Soldier_AR_F";
@@ -19025,6 +19412,7 @@ class Mission
 						name="UnitAAF_MMG2_AG";
 						description="AAF Medium MG Team 2 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1225;
 					type="I_Soldier_AAR_F";
@@ -19084,6 +19472,7 @@ class Mission
 						name="UnitAAF_MAT1_TL";
 						description="AAF Medium AT Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=614;
 					type="I_Soldier_TL_F";
@@ -19104,6 +19493,7 @@ class Mission
 						name="UnitAAF_MAT1_G";
 						description="AAF Medium AT Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=615;
 					type="I_Soldier_AT_F";
@@ -19126,6 +19516,7 @@ class Mission
 						name="UnitAAF_MAT1_AG";
 						description="AAF Medium AT Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1226;
 					type="I_Soldier_AAT_F";
@@ -19184,6 +19575,7 @@ class Mission
 						name="UnitAAF_MAT2_TL";
 						description="AAF Medium AT Team 2 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=617;
 					type="I_Soldier_TL_F";
@@ -19204,6 +19596,7 @@ class Mission
 						name="UnitAAF_MAT2_G";
 						description="AAF Medium AT Team 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=618;
 					type="I_Soldier_AT_F";
@@ -19225,6 +19618,7 @@ class Mission
 						name="UnitAAF_MAT2_AG";
 						description="AAF Medium AT Team 2 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1227;
 					type="I_Soldier_AAT_F";
@@ -19283,6 +19677,7 @@ class Mission
 						name="UnitAAF_HMG1_TL";
 						description="AAF Heavy MG Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=620;
 					type="I_Soldier_TL_F";
@@ -19303,6 +19698,7 @@ class Mission
 						name="UnitAAF_HMG1_G";
 						description="AAF Heavy MG Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=621;
 					type="I_support_MG_F";
@@ -19361,6 +19757,7 @@ class Mission
 						name="UnitAAF_HAT1_TL";
 						description="AAF Heavy AT Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=623;
 					type="I_Soldier_TL_F";
@@ -19381,6 +19778,7 @@ class Mission
 						name="UnitAAF_HAT1_G";
 						description="AAF Heavy AT Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=624;
 					type="I_Soldier_AT_F";
@@ -19402,6 +19800,7 @@ class Mission
 						name="UnitAAF_HAT1_AG";
 						description="AAF Heavy AT Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1228;
 					type="I_Soldier_AAT_F";
@@ -19460,6 +19859,7 @@ class Mission
 						name="UnitAAF_MTR1_TL";
 						description="AAF Mortar Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=626;
 					type="I_support_AMort_F";
@@ -19480,6 +19880,7 @@ class Mission
 						name="UnitAAF_MTR1_G";
 						description="AAF Mortar Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=627;
 					type="I_support_Mort_F";
@@ -19538,6 +19939,7 @@ class Mission
 						name="UnitAAF_MSAM1_TL";
 						description="AAF Medium SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=629;
 					type="I_Soldier_AAA_F";
@@ -19558,6 +19960,7 @@ class Mission
 						name="UnitAAF_MSAM1_G";
 						description="AAF Medium SAM Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=630;
 					type="I_Soldier_AA_F";
@@ -19579,6 +19982,7 @@ class Mission
 						name="UnitAAF_MSAM1_AG";
 						description="AAF Medium SAM Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1196;
 					type="I_Soldier_AAA_F";
@@ -19637,6 +20041,7 @@ class Mission
 						name="UnitAAF_HSAM1_TL";
 						description="AAF Heavy SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=632;
 					type="I_Soldier_AAA_F";
@@ -19657,6 +20062,7 @@ class Mission
 						name="UnitAAF_HSAM1_G";
 						description="AAF Heavy SAM Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=633;
 					type="I_Soldier_AA_F";
@@ -19715,6 +20121,7 @@ class Mission
 						name="UnitAAF_ST1_SP";
 						description="AAF Sniper Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=635;
 					type="I_Spotter_F";
@@ -19735,6 +20142,7 @@ class Mission
 						name="UnitAAF_ST1_SN";
 						description="AAF Sniper Team 1 Sniper";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=636;
 					type="I_Sniper_F";
@@ -19792,6 +20200,7 @@ class Mission
 						name="UnitAAF_ENG1_FTL";
 						description="AAF Engineer Team 1 Leader (Demo)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=638;
 					type="I_engineer_F";
@@ -19812,6 +20221,7 @@ class Mission
 						name="UnitAAF_ENG1_A1";
 						description="AAF Engineer Team 1 Assistant (Demo)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=639;
 					type="I_engineer_F";
@@ -19832,6 +20242,7 @@ class Mission
 						name="UnitAAF_ENG1_A2";
 						description="AAF Engineer Team 1 Assistant (Mines)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=640;
 					type="I_engineer_F";
@@ -19852,6 +20263,7 @@ class Mission
 						name="UnitAAF_ENG1_A3";
 						description="AAF Engineer Team 1 Assistant (Mines)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=641;
 					type="I_engineer_F";
@@ -19910,6 +20322,7 @@ class Mission
 						name="UnitAAF_DT1_TL";
 						description="AAF Diver Team 1 Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=643;
 					type="I_diver_F";
@@ -19931,6 +20344,7 @@ class Mission
 						name="UnitAAF_DT1_D1";
 						description="AAF Diver Team 1 Diver";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=644;
 					type="I_diver_F";
@@ -19952,6 +20366,7 @@ class Mission
 						name="UnitAAF_DT1_D2";
 						description="AAF Diver Team 1 Diver";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=645;
 					type="I_diver_F";
@@ -19973,6 +20388,7 @@ class Mission
 						name="UnitAAF_DT1_D3";
 						description="AAF Diver Team 1 Diver";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=646;
 					type="I_diver_F";
@@ -20031,6 +20447,7 @@ class Mission
 						name="UnitAAF_IFV1_C";
 						description="AAF IFV 1 Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=648;
 					type="I_crew_F";
@@ -20053,6 +20470,7 @@ class Mission
 						name="UnitAAF_IFV1_G";
 						description="AAF IFV 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=649;
 					type="I_crew_F";
@@ -20074,6 +20492,7 @@ class Mission
 						name="UnitAAF_IFV1_D";
 						description="AAF IFV 1 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=650;
 					type="I_crew_F";
@@ -20128,7 +20547,7 @@ class Mission
 				};
 			};
 			id=647;
-			atlOffset=0.19695234;
+			atlOffset=0.17517948;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20177,6 +20596,7 @@ class Mission
 						name="UnitAAF_IFV2_C";
 						description="AAF IFV 2 Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=652;
 					type="I_crew_F";
@@ -20198,6 +20618,7 @@ class Mission
 						name="UnitAAF_IFV2_G";
 						description="AAF IFV 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=653;
 					type="I_crew_F";
@@ -20218,6 +20639,7 @@ class Mission
 						name="UnitAAF_IFV2_D";
 						description="AAF IFV 2 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=654;
 					type="I_crew_F";
@@ -20271,6 +20693,7 @@ class Mission
 				};
 			};
 			id=651;
+			atlOffset=-0.021772861;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20319,6 +20742,7 @@ class Mission
 						name="UnitAAF_TNK1_C";
 						description="AAF Tank 1 Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=656;
 					type="I_crew_F";
@@ -20340,6 +20764,7 @@ class Mission
 						name="UnitAAF_TNK1_G";
 						description="AAF Tank 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=657;
 					type="I_crew_F";
@@ -20360,6 +20785,7 @@ class Mission
 						name="UnitAAF_TNK1_D";
 						description="AAF Tank 1 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=658;
 					type="I_crew_F";
@@ -20413,6 +20839,7 @@ class Mission
 				};
 			};
 			id=655;
+			atlOffset=-0.18000031;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20461,6 +20888,7 @@ class Mission
 						name="UnitAAF_TH1_P";
 						description="AAF Transport Helo 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=660;
 					type="I_helipilot_F";
@@ -20482,6 +20910,7 @@ class Mission
 						name="UnitAAF_TH1_CP";
 						description="AAF Transport Helo 1 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=661;
 					type="I_helipilot_F";
@@ -20524,7 +20953,7 @@ class Mission
 				};
 			};
 			id=659;
-			atlOffset=-4.7683716e-007;
+			atlOffset=-0.024078369;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20573,6 +21002,7 @@ class Mission
 						name="UnitAAF_TH2_P";
 						description="AAF Transport Helo 2 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=663;
 					type="I_helipilot_F";
@@ -20594,6 +21024,7 @@ class Mission
 						name="UnitAAF_TH2_CP";
 						description="AAF Transport Helo 2 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=664;
 					type="I_helipilot_F";
@@ -20636,7 +21067,7 @@ class Mission
 				};
 			};
 			id=662;
-			atlOffset=-4.7683716e-007;
+			atlOffset=-0.024078369;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20685,6 +21116,7 @@ class Mission
 						name="UnitAAF_TH3_P";
 						description="AAF Transport Helo 3 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=666;
 					type="I_helipilot_F";
@@ -20706,6 +21138,7 @@ class Mission
 						name="UnitAAF_TH3_CP";
 						description="AAF Transport Helo 3 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=667;
 					type="I_helipilot_F";
@@ -20748,7 +21181,7 @@ class Mission
 				};
 			};
 			id=665;
-			atlOffset=-4.7683716e-007;
+			atlOffset=-0.024078369;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20797,6 +21230,7 @@ class Mission
 						name="UnitAAF_TH4_P";
 						description="AAF Transport Helo 4 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=669;
 					type="I_helipilot_F";
@@ -20818,6 +21252,7 @@ class Mission
 						name="UnitAAF_TH4_CP";
 						description="AAF Transport Helo 4 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=670;
 					type="I_helipilot_F";
@@ -20860,7 +21295,7 @@ class Mission
 				};
 			};
 			id=668;
-			atlOffset=-4.7683716e-007;
+			atlOffset=-0.024078369;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20909,6 +21344,7 @@ class Mission
 						name="UnitAAF_AH1_P";
 						description="AAF Attack Helo 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=672;
 					type="I_helipilot_F";
@@ -20930,6 +21366,7 @@ class Mission
 						name="UnitAAF_AH1_CP";
 						description="AAF Attack Helo 1 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=673;
 					type="I_helipilot_F";
@@ -21020,6 +21457,7 @@ class Mission
 						name="UnitFIA_CO";
 						description="CTRG Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=680;
 					type="B_G_officer_F";
@@ -21041,6 +21479,7 @@ class Mission
 						name="UnitFIA_CO_JTAC";
 						description="CTRG JTAC";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=681;
 					type="B_G_officer_F";
@@ -21061,6 +21500,7 @@ class Mission
 						name="UnitFIA_CO_UAV";
 						description="FIA UAV Operator";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=682;
 					type="B_G_Soldier_F";
@@ -21081,6 +21521,7 @@ class Mission
 						name="UnitFIA_CO_M";
 						description="FIA Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=683;
 					type="B_G_medic_F";
@@ -21139,6 +21580,7 @@ class Mission
 						name="UnitFIA_DC";
 						description="FIA Deputy Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=685;
 					type="B_G_officer_F";
@@ -21184,6 +21626,7 @@ class Mission
 						name="UnitFIA_DC_JTAC";
 						description="FIA Forward Observer";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=686;
 					type="B_G_officer_F";
@@ -21228,6 +21671,7 @@ class Mission
 						name="UnitFIA_DC_UAV";
 						description="FIA UAV Operator";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=687;
 					type="B_G_Soldier_F";
@@ -21272,6 +21716,7 @@ class Mission
 						name="UnitFIA_DC_M";
 						description="FIA Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=688;
 					type="B_G_medic_F";
@@ -21355,6 +21800,7 @@ class Mission
 						name="UnitFIA_ASL_SL";
 						description="CTRG Alpha Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=690;
 					type="B_G_Soldier_SL_F";
@@ -21398,6 +21844,7 @@ class Mission
 						name="UnitFIA_ASL_M";
 						description="FIA Alpha Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=691;
 					type="B_G_medic_F";
@@ -21479,6 +21926,7 @@ class Mission
 						name="UnitFIA_A1_FTL";
 						description="FIA Alpha 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=693;
 					type="B_G_Soldier_TL_F";
@@ -21523,6 +21971,7 @@ class Mission
 						name="UnitFIA_A1_AR1";
 						description="FIA Alpha 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=694;
 					type="B_G_Soldier_AR_F";
@@ -21568,6 +22017,7 @@ class Mission
 						name="UnitFIA_A1_AR2";
 						description="FIA Alpha 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=695;
 					type="B_G_Soldier_AR_F";
@@ -21612,6 +22062,7 @@ class Mission
 						name="UnitFIA_A1_AT";
 						description="FIA Alpha 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=696;
 					type="B_G_Soldier_LAT_F";
@@ -21656,6 +22107,7 @@ class Mission
 						name="UnitFIA_A1_R1";
 						description="FIA Alpha 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=697;
 					type="B_G_Soldier_F";
@@ -21699,6 +22151,7 @@ class Mission
 						name="UnitFIA_A1_R2";
 						description="FIA Alpha 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=698;
 					type="B_G_Soldier_F";
@@ -21780,6 +22233,7 @@ class Mission
 						name="UnitFIA_A2_FTL";
 						description="FIA Alpha 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=700;
 					type="B_G_Soldier_TL_F";
@@ -21824,6 +22278,7 @@ class Mission
 						name="UnitFIA_A2_AR1";
 						description="FIA Alpha 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=701;
 					type="B_G_Soldier_AR_F";
@@ -21868,6 +22323,7 @@ class Mission
 						name="UnitFIA_A2_AR2";
 						description="FIA Alpha 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=702;
 					type="B_G_Soldier_AR_F";
@@ -21912,6 +22368,7 @@ class Mission
 						name="UnitFIA_A2_AT";
 						description="FIA Alpha 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=703;
 					type="B_G_Soldier_LAT_F";
@@ -21955,6 +22412,7 @@ class Mission
 						name="UnitFIA_A2_R1";
 						description="FIA Alpha 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=704;
 					type="B_G_Soldier_F";
@@ -21998,6 +22456,7 @@ class Mission
 						name="UnitFIA_A2_R2";
 						description="FIA Alpha 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=705;
 					type="B_G_Soldier_F";
@@ -22079,6 +22538,7 @@ class Mission
 						name="UnitFIA_BSL_SL";
 						description="CTRG Bravo Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=707;
 					type="B_G_Soldier_SL_F";
@@ -22122,6 +22582,7 @@ class Mission
 						name="UnitFIA_BSL_M";
 						description="FIA Bravo Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=708;
 					type="B_G_medic_F";
@@ -22203,6 +22664,7 @@ class Mission
 						name="UnitFIA_B1_FTL";
 						description="FIA Bravo 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=710;
 					type="B_G_Soldier_TL_F";
@@ -22224,6 +22686,7 @@ class Mission
 						name="UnitFIA_B1_AR1";
 						description="FIA Bravo 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=711;
 					type="B_G_Soldier_AR_F";
@@ -22268,6 +22731,7 @@ class Mission
 						name="UnitFIA_B1_AR2";
 						description="FIA Bravo 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=712;
 					type="B_G_Soldier_AR_F";
@@ -22289,6 +22753,7 @@ class Mission
 						name="UnitFIA_B1_AT";
 						description="FIA Bravo 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=713;
 					type="B_G_Soldier_LAT_F";
@@ -22309,6 +22774,7 @@ class Mission
 						name="UnitFIA_B1_R1";
 						description="FIA Bravo 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=714;
 					type="B_G_Soldier_F";
@@ -22329,6 +22795,7 @@ class Mission
 						name="UnitFIA_B1_R2";
 						description="FIA Bravo 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=715;
 					type="B_G_Soldier_F";
@@ -22387,6 +22854,7 @@ class Mission
 						name="UnitFIA_B2_FTL";
 						description="FIA Bravo 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=717;
 					type="B_G_Soldier_TL_F";
@@ -22408,6 +22876,7 @@ class Mission
 						name="UnitFIA_B2_AR1";
 						description="FIA Bravo 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=718;
 					type="B_G_Soldier_AR_F";
@@ -22429,6 +22898,7 @@ class Mission
 						name="UnitFIA_B2_AR2";
 						description="FIA Bravo 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=719;
 					type="B_G_Soldier_AR_F";
@@ -22450,6 +22920,7 @@ class Mission
 						name="UnitFIA_B2_AT";
 						description="FIA Bravo 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=720;
 					type="B_G_Soldier_LAT_F";
@@ -22470,6 +22941,7 @@ class Mission
 						name="UnitFIA_B2_R1";
 						description="FIA Bravo 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=721;
 					type="B_G_Soldier_F";
@@ -22490,6 +22962,7 @@ class Mission
 						name="UnitFIA_B2_R2";
 						description="FIA Bravo 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=722;
 					type="B_G_Soldier_F";
@@ -22548,6 +23021,7 @@ class Mission
 						name="UnitFIA_CSL_SL";
 						description="FIA Charlie Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=724;
 					type="B_G_Soldier_SL_F";
@@ -22568,6 +23042,7 @@ class Mission
 						name="UnitFIA_CSL_M";
 						description="FIA Charlie Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=725;
 					type="B_G_medic_F";
@@ -22628,6 +23103,7 @@ class Mission
 						name="UnitFIA_C1_FTL";
 						description="FIA Charlie 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=727;
 					type="B_G_Soldier_TL_F";
@@ -22649,6 +23125,7 @@ class Mission
 						name="UnitFIA_C1_AR1";
 						description="FIA Charlie 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=728;
 					type="B_G_Soldier_AR_F";
@@ -22670,6 +23147,7 @@ class Mission
 						name="UnitFIA_C1_AR2";
 						description="FIA Charlie 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=729;
 					type="B_G_Soldier_AR_F";
@@ -22691,6 +23169,7 @@ class Mission
 						name="UnitFIA_C1_AT";
 						description="FIA Charlie 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=730;
 					type="B_G_Soldier_LAT_F";
@@ -22711,6 +23190,7 @@ class Mission
 						name="UnitFIA_C1_R1";
 						description="FIA Charlie 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=731;
 					type="B_G_Soldier_F";
@@ -22731,6 +23211,7 @@ class Mission
 						name="UnitFIA_C1_R2";
 						description="FIA Charlie 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=732;
 					type="B_G_Soldier_F";
@@ -22789,6 +23270,7 @@ class Mission
 						name="UnitFIA_C2_FTL";
 						description="FIA Charlie 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=734;
 					type="B_G_Soldier_TL_F";
@@ -22810,6 +23292,7 @@ class Mission
 						name="UnitFIA_C2_AR1";
 						description="FIA Charlie 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=735;
 					type="B_G_Soldier_AR_F";
@@ -22831,6 +23314,7 @@ class Mission
 						name="UnitFIA_C2_AR2";
 						description="FIA Charlie 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=736;
 					type="B_G_Soldier_AR_F";
@@ -22852,6 +23336,7 @@ class Mission
 						name="UnitFIA_C2_AT";
 						description="FIA Charlie 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=737;
 					type="B_G_Soldier_LAT_F";
@@ -22872,6 +23357,7 @@ class Mission
 						name="UnitFIA_C2_R1";
 						description="FIA Charlie 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=738;
 					type="B_G_Soldier_F";
@@ -22892,6 +23378,7 @@ class Mission
 						name="UnitFIA_C2_R2";
 						description="FIA Charlie 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=739;
 					type="B_G_Soldier_F";
@@ -22950,10 +23437,11 @@ class Mission
 						name="UnitFIA_MMG1_TL";
 						description="FIA Medium MG Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=741;
 					type="B_G_Soldier_TL_F";
-					atlOffset=0.1516819;
+					atlOffset=0.15199995;
 				};
 				class Item1
 				{
@@ -22971,6 +23459,7 @@ class Mission
 						name="UnitFIA_MMG1_G";
 						description="FIA Medium MG Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=742;
 					type="B_G_Soldier_AR_F";
@@ -22993,6 +23482,7 @@ class Mission
 						name="UnitFIA_MMG1_AG";
 						description="FIA Medium MG Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1214;
 					type="B_G_Soldier_lite_F";
@@ -23004,7 +23494,7 @@ class Mission
 				name="GrpFIA_MMG1";
 			};
 			id=740;
-			atlOffset=0.1516819;
+			atlOffset=0.15199995;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23053,6 +23543,7 @@ class Mission
 						name="UnitFIA_MMG2_TL";
 						description="FIA Medium MG Team 2 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=744;
 					type="B_G_Soldier_TL_F";
@@ -23073,6 +23564,7 @@ class Mission
 						name="UnitFIA_MMG2_G";
 						description="FIA Medium MG Team 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=745;
 					type="B_G_Soldier_AR_F";
@@ -23094,6 +23586,7 @@ class Mission
 						name="UnitFIA_MMG2_AG";
 						description="FIA Medium MG Team 2 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1215;
 					type="B_G_Soldier_lite_F";
@@ -23152,6 +23645,7 @@ class Mission
 						name="UnitFIA_MAT1_TL";
 						description="FIA Medium AT Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=747;
 					type="B_G_Soldier_TL_F";
@@ -23172,6 +23666,7 @@ class Mission
 						name="UnitFIA_MAT1_G";
 						description="FIA Medium AT Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=748;
 					type="B_G_Soldier_LAT_F";
@@ -23193,6 +23688,7 @@ class Mission
 						name="UnitFIA_MAT1_AG";
 						description="FIA Medium AT Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1216;
 					type="B_G_Soldier_LAT_F";
@@ -23251,6 +23747,7 @@ class Mission
 						name="UnitFIA_MAT2_TL";
 						description="FIA Medium AT Team 2 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=750;
 					type="B_G_Soldier_TL_F";
@@ -23272,6 +23769,7 @@ class Mission
 						name="UnitFIA_MAT2_G";
 						description="FIA Medium AT Team 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=751;
 					type="B_G_Soldier_LAT_F";
@@ -23293,6 +23791,7 @@ class Mission
 						name="UnitFIA_MAT2_AG";
 						description="FIA Medium AT Team 2 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1217;
 					type="B_G_Soldier_LAT_F";
@@ -23351,6 +23850,7 @@ class Mission
 						name="UnitFIA_HMG1_TL";
 						description="FIA Heavy MG Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=753;
 					type="B_G_Soldier_TL_F";
@@ -23371,6 +23871,7 @@ class Mission
 						name="UnitFIA_HMG1_G";
 						description="FIA Heavy MG Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=754;
 					type="B_G_Soldier_AR_F";
@@ -23429,6 +23930,7 @@ class Mission
 						name="UnitFIA_HAT1_TL";
 						description="FIA Heavy AT Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=756;
 					type="B_G_Soldier_TL_F";
@@ -23450,6 +23952,7 @@ class Mission
 						name="UnitFIA_HAT1_G";
 						description="FIA Heavy AT Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=757;
 					type="B_G_Soldier_LAT_F";
@@ -23472,6 +23975,7 @@ class Mission
 						name="UnitFIA_HAT1_AG";
 						description="FIA Heavy AT Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1218;
 					type="B_G_Soldier_LAT_F";
@@ -23530,6 +24034,7 @@ class Mission
 						name="UnitFIA_MTR1_TL";
 						description="FIA Mortar Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=759;
 					type="B_G_Soldier_F";
@@ -23550,6 +24055,7 @@ class Mission
 						name="UnitFIA_MTR1_G";
 						description="FIA Mortar Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=760;
 					type="B_G_Soldier_A_F";
@@ -23609,6 +24115,7 @@ class Mission
 						name="UnitFIA_MSAM1_TL";
 						description="FIA Medium SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=762;
 					type="B_G_Soldier_LAT_F";
@@ -23629,6 +24136,7 @@ class Mission
 						name="UnitFIA_MSAM1_G";
 						description="FIA Medium SAM Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=763;
 					type="B_G_Soldier_LAT_F";
@@ -23651,6 +24159,7 @@ class Mission
 						name="UnitFIA_MSAM1_AG";
 						description="FIA Medium SAM Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1172;
 					type="B_G_Soldier_LAT_F";
@@ -23709,6 +24218,7 @@ class Mission
 						name="UnitFIA_HSAM1_TL";
 						description="FIA Heavy SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=765;
 					type="B_G_Soldier_LAT_F";
@@ -23730,6 +24240,7 @@ class Mission
 						name="UnitFIA_HSAM1_G";
 						description="FIA Heavy SAM Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=766;
 					type="B_G_Soldier_LAT_F";
@@ -23788,6 +24299,7 @@ class Mission
 						name="UnitFIA_ST1_SP";
 						description="FIA Sniper Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=768;
 					type="B_G_Soldier_M_F";
@@ -23809,6 +24321,7 @@ class Mission
 						name="UnitFIA_ST1_G";
 						description="FIA Sniper Team 1 Sniper";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=769;
 					type="B_G_Soldier_M_F";
@@ -23867,6 +24380,7 @@ class Mission
 						name="UnitFIA_ENG1_FTL";
 						description="FIA Engineer Team 1 Leader (Demo)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=771;
 					type="B_G_engineer_F";
@@ -23887,6 +24401,7 @@ class Mission
 						name="UnitFIA_ENG1_A1";
 						description="FIA Engineer Team 1 Assistant (Demo)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=772;
 					type="B_G_engineer_F";
@@ -23907,6 +24422,7 @@ class Mission
 						name="UnitFIA_ENG1_A2";
 						description="FIA Engineer Team 1 Assistant (Mines)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=773;
 					type="B_G_engineer_F";
@@ -23927,6 +24443,7 @@ class Mission
 						name="UnitFIA_ENG1_A3";
 						description="FIA Engineer Team 1 Assistant (Mines)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=774;
 					type="B_G_engineer_F";
@@ -23985,6 +24502,7 @@ class Mission
 						name="UnitFIA_TH1_P";
 						description="FIA Transport Helo 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=776;
 					type="B_G_engineer_F";
@@ -24006,6 +24524,7 @@ class Mission
 						name="UnitFIA_TH1_CP";
 						description="FIA Transport Helo 1 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=777;
 					type="B_G_engineer_F";
@@ -24095,6 +24614,7 @@ class Mission
 						name="UnitFIA_IFV1_D";
 						description="FIA Technical 1 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1032;
 					type="B_G_Soldier_F";
@@ -24139,6 +24659,7 @@ class Mission
 						name="UnitFIA_IFV1_G";
 						description="FIA Technical 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1033;
 					type="B_G_Soldier_F";
@@ -24252,6 +24773,7 @@ class Mission
 						name="UnitFIA_IFV2_G";
 						description="FIA Technical 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1030;
 					type="B_G_Soldier_F";
@@ -24295,6 +24817,7 @@ class Mission
 						name="UnitFIA_IFV2_D";
 						description="FIA Technical 2 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1031;
 					type="B_G_Soldier_F";
@@ -24406,6 +24929,7 @@ class Mission
 						init="this addAction [""Start Camera"",""[] call bis_fnc_camera;"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
 						description="BBC Reporter";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=790;
 					type="C_journalist_F";
@@ -24463,6 +24987,7 @@ class Mission
 						init="this addAction [""Start Camera"",""[] call bis_fnc_camera;"",[],2,false,true,"""",""driver _target == _this""]; this allowDamage false;";
 						description="CNN Reporter";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=792;
 					type="C_journalist_F";
@@ -25373,6 +25898,7 @@ class Mission
 						name="UnitSyn_CO";
 						description="Syndikat Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=827;
 					type="I_C_Soldier_Para_2_F";
@@ -25416,6 +25942,7 @@ class Mission
 						name="UnitSyn_CO_JTAC";
 						description="Syndikat JTAC";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=824;
 					type="I_C_Soldier_Para_1_F";
@@ -25458,6 +25985,7 @@ class Mission
 						name="UnitSyn_CO_UAV";
 						description="Syndikat UAV Operator";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=825;
 					type="I_C_Soldier_Para_1_F";
@@ -25500,6 +26028,7 @@ class Mission
 						name="UnitSyn_CO_M";
 						description="Syndikat Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=826;
 					type="I_C_Soldier_Para_3_F";
@@ -25580,6 +26109,7 @@ class Mission
 						name="UnitSyn_DC";
 						description="Syndikat Deputy Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=842;
 					type="I_C_Soldier_Para_2_F";
@@ -25623,6 +26153,7 @@ class Mission
 						name="UnitSyn_DC_JTAC";
 						description="Syndikat JTAC";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=839;
 					type="I_C_Soldier_Para_1_F";
@@ -25665,6 +26196,7 @@ class Mission
 						name="UnitSyn_DC_UAV";
 						description="Syndikat UAV Operator";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=840;
 					type="I_C_Soldier_Para_1_F";
@@ -25707,6 +26239,7 @@ class Mission
 						name="UnitSyn_DC_M";
 						description="Syndikat Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=841;
 					type="I_C_Soldier_Para_3_F";
@@ -25787,6 +26320,7 @@ class Mission
 						name="UnitSyn_ASL_SL";
 						description="Syndikat Alpha Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=855;
 					type="I_C_Soldier_Para_2_F";
@@ -25829,6 +26363,7 @@ class Mission
 						name="UnitSyn_ASL_M";
 						description="Syndikat Alpha Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=854;
 					type="I_C_Soldier_Para_3_F";
@@ -25909,6 +26444,7 @@ class Mission
 						name="UnitSyn_A1_FTL";
 						description="Syndikat Alpha 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=862;
 					type="I_C_Soldier_Para_2_F";
@@ -25952,6 +26488,7 @@ class Mission
 						name="UnitSyn_A1_AR1";
 						description="Syndikat Alpha 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=857;
 					type="I_C_Soldier_Para_4_F";
@@ -25995,6 +26532,7 @@ class Mission
 						name="UnitSyn_A1_AR2";
 						description="Syndikat Alpha 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=858;
 					type="I_C_Soldier_Para_4_F";
@@ -26038,6 +26576,7 @@ class Mission
 						name="UnitSyn_A1_AT";
 						description="Syndikat Alpha 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=859;
 					type="I_C_Soldier_Para_5_F";
@@ -26080,6 +26619,7 @@ class Mission
 						name="UnitSyn_A1_R1";
 						description="Syndikat Alpha 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=860;
 					type="I_C_Soldier_Para_1_F";
@@ -26122,6 +26662,7 @@ class Mission
 						name="UnitSyn_A1_R2";
 						description="Syndikat Alpha 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=861;
 					type="I_C_Soldier_Para_1_F";
@@ -26202,6 +26743,7 @@ class Mission
 						name="UnitSyn_A2_FTL";
 						description="Syndikat Alpha 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=869;
 					type="I_C_Soldier_Para_2_F";
@@ -26245,6 +26787,7 @@ class Mission
 						name="UnitSyn_A2_AR1";
 						description="Syndikat Alpha 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=864;
 					type="I_C_Soldier_Para_4_F";
@@ -26288,6 +26831,7 @@ class Mission
 						name="UnitSyn_A2_AR2";
 						description="Syndikat Alpha 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=865;
 					type="I_C_Soldier_Para_4_F";
@@ -26331,6 +26875,7 @@ class Mission
 						name="UnitSyn_A2_AT";
 						description="Syndikat Alpha 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=866;
 					type="I_C_Soldier_Para_5_F";
@@ -26373,6 +26918,7 @@ class Mission
 						name="UnitSyn_A2_R1";
 						description="Syndikat Alpha 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=867;
 					type="I_C_Soldier_Para_1_F";
@@ -26415,6 +26961,7 @@ class Mission
 						name="UnitSyn_A2_R2";
 						description="Syndikat Alpha 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=868;
 					type="I_C_Soldier_Para_1_F";
@@ -26495,6 +27042,7 @@ class Mission
 						name="UnitSyn_BSL_SL";
 						description="Syndikat Bravo Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=872;
 					type="I_C_Soldier_Para_2_F";
@@ -26537,6 +27085,7 @@ class Mission
 						name="UnitSyn_BSL_M";
 						description="Syndikat Bravo Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=871;
 					type="I_C_Soldier_Para_3_F";
@@ -26617,6 +27166,7 @@ class Mission
 						name="UnitSyn_B1_FTL";
 						description="Syndikat Bravo 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=879;
 					type="I_C_Soldier_Para_2_F";
@@ -26660,6 +27210,7 @@ class Mission
 						name="UnitSyn_B1_AR1";
 						description="Syndikat Bravo 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=874;
 					type="I_C_Soldier_Para_4_F";
@@ -26703,6 +27254,7 @@ class Mission
 						name="UnitSyn_B1_AR2";
 						description="Syndikat Bravo 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=875;
 					type="I_C_Soldier_Para_4_F";
@@ -26746,6 +27298,7 @@ class Mission
 						name="UnitSyn_B1_AT";
 						description="Syndikat Bravo 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=876;
 					type="I_C_Soldier_Para_5_F";
@@ -26788,6 +27341,7 @@ class Mission
 						name="UnitSyn_B1_R1";
 						description="Syndikat Bravo 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=877;
 					type="I_C_Soldier_Para_1_F";
@@ -26830,6 +27384,7 @@ class Mission
 						name="UnitSyn_B1_R2";
 						description="Syndikat Bravo 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=878;
 					type="I_C_Soldier_Para_1_F";
@@ -26910,6 +27465,7 @@ class Mission
 						name="UnitSyn_B2_FTL";
 						description="Syndikat Bravo 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=886;
 					type="I_C_Soldier_Para_2_F";
@@ -26953,6 +27509,7 @@ class Mission
 						name="UnitSyn_B2_AR1";
 						description="Syndikat Bravo 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=881;
 					type="I_C_Soldier_Para_4_F";
@@ -26996,6 +27553,7 @@ class Mission
 						name="UnitSyn_B2_AR2";
 						description="Syndikat Bravo 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=882;
 					type="I_C_Soldier_Para_4_F";
@@ -27039,6 +27597,7 @@ class Mission
 						name="UnitSyn_B2_AT";
 						description="Syndikat Bravo 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=883;
 					type="I_C_Soldier_Para_5_F";
@@ -27081,6 +27640,7 @@ class Mission
 						name="UnitSyn_B2_R1";
 						description="Syndikat Bravo 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=884;
 					type="I_C_Soldier_Para_1_F";
@@ -27123,6 +27683,7 @@ class Mission
 						name="UnitSyn_B2_R2";
 						description="Syndikat Bravo 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=885;
 					type="I_C_Soldier_Para_1_F";
@@ -27203,6 +27764,7 @@ class Mission
 						name="UnitSyn_CSL_SL";
 						description="Syndikat Charlie Squad Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=889;
 					type="I_C_Soldier_Para_2_F";
@@ -27245,6 +27807,7 @@ class Mission
 						name="UnitSyn_CSL_M";
 						description="Syndikat Charlie Medic";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=888;
 					type="I_C_Soldier_Para_3_F";
@@ -27325,6 +27888,7 @@ class Mission
 						name="UnitSyn_C1_FTL";
 						description="Syndikat Charlie 1 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=896;
 					type="I_C_Soldier_Para_2_F";
@@ -27368,6 +27932,7 @@ class Mission
 						name="UnitSyn_C1_AR1";
 						description="Syndikat Charlie 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=891;
 					type="I_C_Soldier_Para_4_F";
@@ -27411,6 +27976,7 @@ class Mission
 						name="UnitSyn_C1_AR2";
 						description="Syndikat Charlie 1 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=892;
 					type="I_C_Soldier_Para_4_F";
@@ -27454,6 +28020,7 @@ class Mission
 						name="UnitSyn_C1_AT";
 						description="Syndikat Charlie 1 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=893;
 					type="I_C_Soldier_Para_5_F";
@@ -27496,6 +28063,7 @@ class Mission
 						name="UnitSyn_C1_R1";
 						description="Syndikat Charlie 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=894;
 					type="I_C_Soldier_Para_1_F";
@@ -27538,6 +28106,7 @@ class Mission
 						name="UnitSyn_C1_R2";
 						description="Syndikat Charlie 1 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=895;
 					type="I_C_Soldier_Para_1_F";
@@ -27618,6 +28187,7 @@ class Mission
 						name="UnitSyn_C2_FTL";
 						description="Syndikat Charlie 2 Fire Team Leader";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=903;
 					type="I_C_Soldier_Para_2_F";
@@ -27661,6 +28231,7 @@ class Mission
 						name="UnitSyn_C2_AR1";
 						description="Syndikat Charlie 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=898;
 					type="I_C_Soldier_Para_4_F";
@@ -27704,6 +28275,7 @@ class Mission
 						name="UnitSyn_C2_AR2";
 						description="Syndikat Charlie 2 Automatic Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=899;
 					type="I_C_Soldier_Para_4_F";
@@ -27747,6 +28319,7 @@ class Mission
 						name="UnitSyn_C2_AT";
 						description="Syndikat Charlie 2 Assaultman (AT)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=900;
 					type="I_C_Soldier_Para_5_F";
@@ -27766,6 +28339,7 @@ class Mission
 						name="UnitSyn_C2_R1";
 						description="Syndikat Charlie 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=901;
 					type="I_C_Soldier_Para_1_F";
@@ -27785,6 +28359,7 @@ class Mission
 						name="UnitSyn_C2_R2";
 						description="Syndikat Charlie 2 Rifleman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=902;
 					type="I_C_Soldier_Para_1_F";
@@ -27842,6 +28417,7 @@ class Mission
 						name="UnitSyn_MMG1_TL";
 						description="Syndikat Medium MG Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=905;
 					type="I_C_Soldier_Para_2_F";
@@ -27884,6 +28460,7 @@ class Mission
 						name="UnitSyn_MMG1_G";
 						description="Syndikat Medium MG Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=906;
 					type="I_C_Soldier_Para_4_F";
@@ -27927,6 +28504,7 @@ class Mission
 						name="UnitSyn_MMG1_AG";
 						description="Syndikat Medium MG Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1219;
 					type="I_C_Soldier_Para_4_F";
@@ -27984,6 +28562,7 @@ class Mission
 						name="UnitSyn_MMG2_TL";
 						description="Syndikat Medium MG Team 2 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=908;
 					type="I_C_Soldier_Para_2_F";
@@ -28026,6 +28605,7 @@ class Mission
 						name="UnitSyn_MMG2_G";
 						description="Syndikat Medium MG Team 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=909;
 					type="I_C_Soldier_Para_4_F";
@@ -28069,6 +28649,7 @@ class Mission
 						name="UnitSyn_MMG2_AG";
 						description="Syndikat Medium MG Team 2 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1220;
 					type="I_C_Soldier_Para_4_F";
@@ -28126,6 +28707,7 @@ class Mission
 						name="UnitSyn_MAT1_TL";
 						description="Syndikat Medium AT Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=911;
 					type="I_C_Soldier_Para_2_F";
@@ -28168,6 +28750,7 @@ class Mission
 						name="UnitSyn_MAT1_G";
 						description="Syndikat Medium AT Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=912;
 					type="I_C_Soldier_Para_5_F";
@@ -28211,6 +28794,7 @@ class Mission
 						name="UnitSyn_MAT1_AG";
 						description="Syndikat Medium AT Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1221;
 					type="I_C_Soldier_Para_5_F";
@@ -28268,6 +28852,7 @@ class Mission
 						name="UnitSyn_MAT2_TL";
 						description="Syndikat Medium AT Team 2 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=914;
 					type="I_C_Soldier_Para_2_F";
@@ -28310,6 +28895,7 @@ class Mission
 						name="UnitSyn_MAT2_G";
 						description="Syndikat Medium AT Team 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=915;
 					type="I_C_Soldier_Para_5_F";
@@ -28353,6 +28939,7 @@ class Mission
 						name="UnitSyn_MAT2_AG";
 						description="Syndikat Medium AT Team 2 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1222;
 					type="I_C_Soldier_Para_5_F";
@@ -28410,6 +28997,7 @@ class Mission
 						name="UnitSyn_HMG1_TL";
 						description="Syndikat Heavy MG Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=917;
 					type="I_C_Soldier_Para_2_F";
@@ -28452,6 +29040,7 @@ class Mission
 						name="UnitSyn_HMG1_G";
 						description="Syndikat Heavy MG Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=918;
 					type="I_C_Soldier_Para_4_F";
@@ -28532,6 +29121,7 @@ class Mission
 						name="UnitSyn_HAT1_TL";
 						description="Syndikat Heavy AT Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=920;
 					type="I_C_Soldier_Para_2_F";
@@ -28574,6 +29164,7 @@ class Mission
 						name="UnitSyn_HAT1_G";
 						description="Syndikat Heavy AT Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=921;
 					type="I_C_Soldier_Para_5_F";
@@ -28617,6 +29208,7 @@ class Mission
 						name="UnitSyn_HAT1_AG";
 						description="Syndikat Heavy AT Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1223;
 					type="I_C_Soldier_Para_5_F";
@@ -28674,6 +29266,7 @@ class Mission
 						name="UnitSyn_MTR1_TL";
 						description="Syndikat Mortar Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=923;
 					type="I_C_Soldier_Para_1_F";
@@ -28716,6 +29309,7 @@ class Mission
 						name="UnitSyn_MTR1_G";
 						description="Syndikat Mortar Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=924;
 					type="I_C_Soldier_Para_1_F";
@@ -28796,6 +29390,7 @@ class Mission
 						name="UnitSyn_MSAM1_TL";
 						description="Syndikat Medium SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=926;
 					type="I_C_Soldier_Para_5_F";
@@ -28838,6 +29433,7 @@ class Mission
 						name="UnitSyn_MSAM1_G";
 						description="Syndikat Medium SAM Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=927;
 					type="I_C_Soldier_Para_5_F";
@@ -28881,6 +29477,7 @@ class Mission
 						name="UnitSyn_MSAM1_AG";
 						description="Syndikat Medium SAM Team 1 Assistant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1184;
 					type="I_C_Soldier_Para_5_F";
@@ -28938,6 +29535,7 @@ class Mission
 						name="UnitSyn_HSAM1_TL";
 						description="Syndikat Heavy SAM Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=929;
 					type="I_C_Soldier_Para_5_F";
@@ -28980,6 +29578,7 @@ class Mission
 						name="UnitSyn_HSAM1_G";
 						description="Syndikat Heavy SAM Team 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=930;
 					type="I_C_Soldier_Para_5_F";
@@ -29060,6 +29659,7 @@ class Mission
 						name="UnitSyn_ST1_SP";
 						description="Syndikat Sniper Team 1 Spotter (Leader)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=932;
 					type="I_C_Soldier_Para_1_F";
@@ -29102,6 +29702,7 @@ class Mission
 						name="UnitSyn_ST1_G";
 						description="Syndikat Sniper Team 1 Sniper";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=933;
 					type="I_C_Soldier_Para_1_F";
@@ -29182,6 +29783,7 @@ class Mission
 						name="UnitSyn_ENG1_FTL";
 						description="Syndikat Engineer Team 1 Leader (Demo)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=935;
 					type="I_C_Soldier_Para_8_F";
@@ -29224,6 +29826,7 @@ class Mission
 						name="UnitSyn_ENG1_A1";
 						description="Syndikat Engineer Team 1 Assistant (Demo)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=936;
 					type="I_C_Soldier_Para_8_F";
@@ -29266,6 +29869,7 @@ class Mission
 						name="UnitSyn_ENG1_A2";
 						description="Syndikat Engineer Team 1 Assistant (Mines)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=937;
 					type="I_C_Soldier_Para_8_F";
@@ -29308,6 +29912,7 @@ class Mission
 						name="UnitSyn_ENG1_A3";
 						description="Syndikat Engineer Team 1 Assistant (Mines)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=938;
 					type="I_C_Soldier_Para_8_F";
@@ -29388,6 +29993,7 @@ class Mission
 						name="UnitSyn_TH1_P";
 						description="Syndikat Transport Helo 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=940;
 					type="I_C_Helipilot_F";
@@ -29431,6 +30037,7 @@ class Mission
 						name="UnitSyn_TH1_CP";
 						description="Syndikat Transport Helo 1 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=941;
 					type="I_C_Helipilot_F";
@@ -29496,6 +30103,7 @@ class Mission
 				};
 			};
 			id=939;
+			atlOffset=0.33195591;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -29543,6 +30151,7 @@ class Mission
 						name="UnitSyn_IFV1_G";
 						description="Syndikat Technical 1 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=944;
 					type="I_C_Soldier_Para_1_F";
@@ -29585,6 +30194,7 @@ class Mission
 						name="UnitSyn_IFV1_D";
 						description="Syndikat Technical 1 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=945;
 					type="I_C_Soldier_Para_1_F";
@@ -29716,6 +30326,7 @@ class Mission
 						name="UnitSyn_IFV2_G";
 						description="Syndikat Technical 2 Gunner";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=948;
 					type="I_C_Soldier_Para_1_F";
@@ -29758,6 +30369,7 @@ class Mission
 						name="UnitSyn_IFV2_D";
 						description="Syndikat Technical 2 Driver (Repair)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=949;
 					type="I_C_Soldier_Para_1_F";
@@ -30466,6 +31078,7 @@ class Mission
 			{
 				skill=0.60000002;
 				textures="Green";
+				receiveRemoteTargets=1;
 			};
 			id=968;
 			type="I_Heli_light_03_dynamicLoadout_F";
@@ -30940,6 +31553,7 @@ class Mission
 			{
 				skill=0.60000002;
 				textures="Green";
+				receiveRemoteTargets=1;
 			};
 			id=978;
 			type="I_Heli_light_03_dynamicLoadout_F";
@@ -31141,17 +31755,19 @@ class Mission
 				position[]={1559.641,6.8630314,1225.556};
 			};
 			side="Independent";
-			flags=6;
+			flags=2;
 			class Attributes
 			{
 				skill=0.60000002;
 				init="[""v_helo_l"",this,""syndikat""] call f_fnc_assignGear";
 				name="VehSyn_TH1";
 				textures="Green";
+				receiveRemoteTargets=1;
 				pylons=";;";
 			};
 			id=1027;
 			type="I_Heli_light_03_dynamicLoadout_F";
+			atlOffset=0.33195591;
 		};
 		class Item349
 		{
@@ -31176,6 +31792,7 @@ class Mission
 						name="UnitGEN_CO";
 						description="Gendarmerie Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1038;
 					type="B_GEN_Commander_F";
@@ -31277,6 +31894,7 @@ class Mission
 						name="UnitGEN_DC";
 						description="Gendarmerie Deputy Commander";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1040;
 					type="B_GEN_Commander_F";
@@ -31378,6 +31996,7 @@ class Mission
 						name="UnitGEN_A_Sgt";
 						description="Gendarmerie Alpha Sergeant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1067;
 					type="B_GEN_Soldier_F";
@@ -31421,6 +32040,7 @@ class Mission
 						name="UnitGEN_A_G1";
 						description="Gendarmerie Alpha Gendarme";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1235;
 					type="B_GEN_Soldier_F";
@@ -31464,6 +32084,7 @@ class Mission
 						name="UnitGEN_A_G2";
 						description="Gendarmerie Alpha Gendarme";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1237;
 					type="B_GEN_Soldier_F";
@@ -31506,6 +32127,7 @@ class Mission
 						name="UnitGEN_A_G3";
 						description="Gendarmerie Alpha Gendarme";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1238;
 					type="B_GEN_Soldier_F";
@@ -31639,6 +32261,7 @@ class Mission
 						name="UnitGEN_B_Sgt";
 						description="Gendarmerie Bravo Sergeant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1070;
 					type="B_GEN_Soldier_F";
@@ -31682,6 +32305,7 @@ class Mission
 						name="UnitGEN_B_G1";
 						description="Gendarmerie Bravo Gendarme";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1071;
 					type="B_GEN_Soldier_F";
@@ -31725,6 +32349,7 @@ class Mission
 						name="UnitGEN_B_G2";
 						description="Gendarmerie Bravo Gendarme";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1072;
 					type="B_GEN_Soldier_F";
@@ -31767,6 +32392,7 @@ class Mission
 						name="UnitGEN_B_G3";
 						description="Gendarmerie Bravo Gendarme";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1073;
 					type="B_GEN_Soldier_F";
@@ -31901,6 +32527,7 @@ class Mission
 						name="UnitGEN_C_Sgt";
 						description="Gendarmerie Charlie Sergeant";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1074;
 					type="B_GEN_Soldier_F";
@@ -31944,6 +32571,7 @@ class Mission
 						name="UnitGEN_C_G1";
 						description="Gendarmerie Charlie Gendarme";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1075;
 					type="B_GEN_Soldier_F";
@@ -31987,6 +32615,7 @@ class Mission
 						name="UnitGEN_C_G2";
 						description="Gendarmerie Charlie Gendarme";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1076;
 					type="B_GEN_Soldier_F";
@@ -32029,6 +32658,7 @@ class Mission
 						name="UnitGEN_C_G3";
 						description="Gendarmerie Charlie Gendarme";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1077;
 					type="B_GEN_Soldier_F";
@@ -32163,6 +32793,7 @@ class Mission
 						name="UnitGEN_J_Sgt";
 						description="Gendarmerie Juliet Sergeant (Night Force)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1078;
 					type="B_GEN_Soldier_F";
@@ -32206,6 +32837,7 @@ class Mission
 						name="UnitGEN_J_G1";
 						description="Gendarmerie Juliet Gendarme (Night Force)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1079;
 					type="B_GEN_Soldier_F";
@@ -32249,6 +32881,7 @@ class Mission
 						name="UnitGEN_J_G2";
 						description="Gendarmerie Juliet Gendarme (Night Force)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1080;
 					type="B_GEN_Soldier_F";
@@ -32291,6 +32924,7 @@ class Mission
 						name="UnitGEN_J_G3";
 						description="Gendarmerie Juliet Gendarme (Night Force)";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1081;
 					type="B_GEN_Soldier_F";
@@ -32425,6 +33059,7 @@ class Mission
 						name="UnitGEN_MK_MK";
 						description="Gendarmerie Marksman";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1082;
 					type="B_GEN_Soldier_F";
@@ -32505,6 +33140,7 @@ class Mission
 						name="UnitGEN_TH1_P";
 						description="Gendarmerie Transport Helo 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1084;
 					type="B_GEN_Commander_F";
@@ -32548,6 +33184,7 @@ class Mission
 						name="UnitGEN_TH1_CP";
 						description="Gendarmerie Transport Helo 1 Co-Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1086;
 					type="B_GEN_Commander_F";
@@ -33561,6 +34198,7 @@ class Mission
 			{
 				init="[""v_jet"",this] call f_fnc_assignGear;";
 				name="VehNATO_CAS1";
+				receiveRemoteTargets=1;
 			};
 			id=1134;
 			type="B_Plane_CAS_01_dynamicLoadout_F";
@@ -33590,6 +34228,7 @@ class Mission
 						name="UnitNATO_CAS1_P";
 						description="NATO CAS 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1136;
 					type="B_Fighter_Pilot_F";
@@ -33679,6 +34318,7 @@ class Mission
 			{
 				init="[""v_jet"",this] call f_fnc_assignGear;";
 				name="VehAAF_CAS1";
+				receiveRemoteTargets=1;
 			};
 			id=1139;
 			type="I_Plane_Fighter_03_dynamicLoadout_F";
@@ -33696,7 +34336,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1380.6572,5.0014391,679.09668};
-						angles[]={-0,1.7658945,0};
+						angles[]={0,1.7658945,0};
 					};
 					side="Independent";
 					flags=6;
@@ -33708,6 +34348,7 @@ class Mission
 						name="UnitAAF_CAS1_P";
 						description="AAF CAS 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1143;
 					type="I_Fighter_Pilot_F";
@@ -33808,6 +34449,7 @@ class Mission
 						name="UnitCSAT_CAS1_P";
 						description="CSAT CAS 1 Pilot";
 						isPlayable=1;
+						reportRemoteTargets=1;
 					};
 					id=1145;
 					type="O_Fighter_Pilot_F";
@@ -33897,6 +34539,7 @@ class Mission
 			{
 				init="[""v_jet"",this] call f_fnc_assignGear;";
 				name="VehCSAT_CAS1";
+				receiveRemoteTargets=1;
 			};
 			id=1146;
 			type="O_Plane_CAS_02_dynamicLoadout_F";
