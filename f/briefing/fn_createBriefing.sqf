@@ -23,7 +23,7 @@ private _fnc_debug = {
 // ====================================================================================
 
 // DETECT PLAYER FACTION (use faction from group leader)
-private _unitfaction =toLower (faction (leader group player));
+private _unitfaction = toLower ([leader group player] call f_fnc_virtualFaction);
 
 // DEBUG
 if (f_param_debugMode == 1) then

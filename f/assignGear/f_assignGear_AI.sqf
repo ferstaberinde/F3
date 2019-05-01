@@ -74,7 +74,7 @@ private _unitClasses = [
 	["_Bandit_6_"		,	"gren"	],
 	["_Bandit_7_"		,	"car"	],
 	["_Bandit_8_"		,	"engm"	],
-	
+
 	["_soldier_"	,	"r"		]
 	// No comma after the last array!
 
@@ -94,7 +94,7 @@ _units = _units select {!(_x in playableUnits) && (_x isKindOf "Man")};
 {
 	sleep 0.1;
 	private _unit = _x;
-	private _faction = toLower (faction _unit);
+	private _faction = toLower ([_unit] call f_fnc_virtualFaction);
 
 	// If the unit's faction is allowed, proceed
 	if !(_faction in _excludeFactions) then {

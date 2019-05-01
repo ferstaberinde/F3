@@ -4,7 +4,7 @@
 
 private _badge = "";
 params ["_unit", "_typeOfUnit","_insignia_styles"];
-private _faction = toLower (faction _unit);
+private _faction = toLower ([_unit] call f_fnc_virtualFaction);
 
 // Note all badges must be defined in description.ext or be included your modpack.
 // See: https://community.bistudio.com/wiki/Arma_3_Unit_Insignia
