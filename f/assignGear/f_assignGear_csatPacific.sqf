@@ -191,8 +191,8 @@ _baghsamag = "O_HMG_01_support_F";			// used by Heavy SAM assistant gunner
 
 // Automatic Rifleman
 _AR = "arifle_CTARS_ghex_F";
-_ARmag = "100Rnd_580x42_Mag_F";
-_ARmag_tr = "100Rnd_580x42_Mag_Tracer_F";
+_ARmag = "100Rnd_580x42_ghex_Mag_F";
+_ARmag_tr = "100Rnd_580x42_ghex_Mag_Tracer_F";
 
 // Medium MG
 _MMG = "MMG_01_tan_F";
