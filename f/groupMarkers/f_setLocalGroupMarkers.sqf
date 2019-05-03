@@ -62,6 +62,11 @@ if (_unitfaction in ["ind_c_f"]) then {
 	_groups = f_var_groupData_indfor_syn;
 };
 
+// Markers seen by players in 3IFB (virtual) slots.
+if (_unitfaction in ["3ifb"]) then {
+	_groups = f_var_groupData_indfor_3ifb;
+};
+
 // ====================================================================================
 
 {

@@ -96,6 +96,12 @@ if (_unitfaction in ["civ_f", "civ_idap_f"]) exitwith {
 	[_unitfaction] call _fnc_debug;
 };
 
+// VIRTUAL FACTION > 3IFB
+if (_unitfaction in ["3ifb"]) exitwith {
+	#include "f_briefing_3ifb.sqf"
+	[_unitfaction] call _fnc_debug;
+};
+
 // ZEUS
 if (_unitfaction == "" && ! (typeOf player isEqualTo "VirtualSpectator_F")) exitwith {
 	#include "f_briefing_zeus.sqf"

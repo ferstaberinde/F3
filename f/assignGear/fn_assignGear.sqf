@@ -167,12 +167,12 @@ if (_faction in ["ind_c_f","syndikat"]) then {
 
 // ====================================================================================
 
+// VIRTUAL FACTIONS
+
 // GEAR: 3IFB
-// The following block of code executes only if the unit is manually assigned the 3IFB 'faction'; it
-// automatically includes a file which contains the appropriate equipment data.
-// Note the this faction doesn't exist in the game and so is a 'pseudo-faction'; in particular other faction
-// sensitive components, such as briefings, are not aware of this 'pseudo-faction' and will use the
-// underlying game faction of the unit
+// The following block of code executes only if the unit is assigned to the 3IFB virtual faction
+// with f_fnc_setVirtualFaction; it automatically includes a file which contains the appropriate
+// equipment data.
 if (_faction in ["3ifb"]) then {
 	#include "f_assignGear_3IFB.sqf"
 };
@@ -184,7 +184,7 @@ if (_faction in ["3ifb"]) then {
 // This block needs only to be run on an infantry unit
 if (_isMan) then {
 
-	// Add extra FAKs, 
+	// Add extra FAKs,
 	// because the assignGear files were made when the sws was still existing.
 	private _numExtraFAK = 2;
 	for "_i" from 1 to _numExtraFAK do {
