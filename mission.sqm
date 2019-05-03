@@ -280,7 +280,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="fa3-5-2";
+		briefingName="fa3-5-3";
 		resistanceWest=0;
 		timeOfChanges=28800;
 		startWeather=0.50001526;
