@@ -4,7 +4,7 @@
 
 private _badge = "";
 params ["_unit", "_typeOfUnit","_insignia_styles"];
-private _faction = toLower (faction _unit);
+private _faction = toLower ([_unit] call f_fnc_virtualFaction);
 
 // Note all badges must be defined in description.ext or be included your modpack.
 // See: https://community.bistudio.com/wiki/Arma_3_Unit_Insignia
@@ -284,6 +284,24 @@ switch (_faction) do
 			["GrpSyndikat_C3","NATO_C3_Badge"],
 			["GrpSyndikat_CO","NATO_CO_Badge"],
 			["GrpSyndikat_DC","NATO_DC_Badge"]
+		];
+	};
+	case "3ifb" :{
+		_groupBadges = [
+			["Grp3IFB_ASL","NATO_ASL_Badge"],
+			["Grp3IFB_A1","NATO_A1_Badge"],
+			["Grp3IFB_A2","NATO_A2_Badge"],
+			["Grp3IFB_A3","NATO_A3_Badge"],
+			["Grp3IFB_BSL","NATO_BSL_Badge"],
+			["Grp3IFB_B1","NATO_B1_Badge"],
+			["Grp3IFB_B2","NATO_B2_Badge"],
+			["Grp3IFB_B3","NATO_B3_Badge"],
+			["Grp3IFB_CSL","NATO_CSL_Badge"],
+			["Grp3IFB_C1","NATO_C1_Badge"],
+			["Grp3IFB_C2","NATO_C2_Badge"],
+			["Grp3IFB_C3","NATO_C3_Badge"],
+			["Grp3IFB_CO","NATO_CO_Badge"],
+			["Grp3IFB_DC","NATO_DC_Badge"]
 		];
 	};
 };

@@ -73,7 +73,8 @@ if(_grpstemp isEqualType sideUnknown) then // if the variable is any of the side
 	if(count _faction > 0) then
 	{
 		{
-			if !(faction (leader _x) in _faction) then
+			private _leaderFaction = [leader _x] call f_fnc_virtualFaction;
+			if !(_leaderFaction in _faction) then
 			{
 				_grps = _grps - [_x];
 			};

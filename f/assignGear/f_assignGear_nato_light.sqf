@@ -98,8 +98,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
-		_unit addmagazines [_glsmokewhite, 5];
-		_unit addmagazines [_glsmokered, 3];
+		_unit addmagazines [_glsmokewhite, 4];
+		_unit addmagazines [_glsmokered, 2];
+		_unit addmagazines [_glsmokegreen, 2];
 		_unit addmagazines [_pistolmag, 4];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
 		_unit addWeapon "Rangefinder";
@@ -117,7 +118,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
-		_unit addmagazines [_glsmokered, 8];
+		_unit addmagazines [_glsmokewhite, 3];
+		_unit addmagazines [_glsmokered, 3];
+		_unit addmagazines [_glsmokegreen, 2];
 		_unit addmagazines [_pistolmag, 4];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
         _unit addmagazines ["Laserbatteries", 1];
@@ -198,7 +201,7 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_carbinemag, 2];
+		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 	};
 // Heavy MG Team Leader Loadout:
@@ -224,7 +227,7 @@ switch (_typeofUnit) do
 		_unit addweapon _MAT;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_carbinemag, 2];
+		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_MATmag1, 2];
 	};
@@ -265,7 +268,7 @@ switch (_typeofUnit) do
 		_unit addweapon _HAT;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_carbinemag, 2];
+		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_HATmag1, 1];
 	};
@@ -330,7 +333,7 @@ switch (_typeofUnit) do
 		_unit addweapon _SAM;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_carbinemag, 2];
+		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 	};
 // Medium SAM Assistant Loadout:
@@ -368,13 +371,13 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_carbinemag, 2];
+		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 	};
 // Heavy SAM Team Leader Loadout:
 	case "hsamag":
 	{
-		_unit addBackpack _baghmgag;
+		_unit addBackpack _baghsamag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -531,7 +534,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 3];
+		_unit addmagazines [_grenade, 2];
 	};
 // Carbineer Loadout:
 	case "car":
@@ -542,7 +545,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
-		_unit addmagazines [_grenade, 3];
+		_unit addmagazines [_grenade, 2];
 	};
 // Submachinegunner Loadout:
 	case "smg":
@@ -552,7 +555,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_smgmag, 6];
-		_unit addmagazines [_grenade, 3];
+		_unit addmagazines [_grenade, 2];
 	};
 // Grenadier Loadout:
 	case "gren":

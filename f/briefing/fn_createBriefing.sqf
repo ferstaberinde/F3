@@ -23,7 +23,7 @@ private _fnc_debug = {
 // ====================================================================================
 
 // DETECT PLAYER FACTION (use faction from group leader)
-private _unitfaction =toLower (faction (leader group player));
+private _unitfaction = toLower ([leader group player] call f_fnc_virtualFaction);
 
 // DEBUG
 if (f_param_debugMode == 1) then
@@ -93,6 +93,12 @@ if (_unitfaction in ["blu_ctrg_f"]) exitwith {
 // CIVILIAN and IDAP
 if (_unitfaction in ["civ_f", "civ_idap_f"]) exitwith {
 	#include "f_briefing_civ.sqf"
+	[_unitfaction] call _fnc_debug;
+};
+
+// VIRTUAL FACTION > 3IFB
+if (_unitfaction in ["3ifb"]) exitwith {
+	#include "f_briefing_3ifb.sqf"
 	[_unitfaction] call _fnc_debug;
 };
 

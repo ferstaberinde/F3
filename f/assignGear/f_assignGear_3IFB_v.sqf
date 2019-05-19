@@ -1,4 +1,4 @@
-// Vehicle & Box LOADOUTS - CTRG
+// Vehicle & Box LOADOUTS - 3IFB
 
 // CARGO: CAR - room for 10 weapons and 50 cargo items
 	case "v_car":

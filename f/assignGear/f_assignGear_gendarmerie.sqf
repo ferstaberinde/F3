@@ -49,7 +49,7 @@ _attachments = []; 		// The default attachment set for most units, overwritten i
 // ATTACHMENTS - HANDGUN
 _hg_silencer1 = "muzzle_snds_L";				// PM 9MM does not accept a suppressor
 
-_hg_scope1 = "optic_mrd";		// MRD
+_hg_scope1 = "optic_MRD";			// MRD
 
 // Default setup
 _hg_attachments= []; // The default attachment set for handguns, overwritten in the individual unitType

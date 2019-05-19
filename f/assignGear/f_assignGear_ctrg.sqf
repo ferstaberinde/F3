@@ -127,8 +127,7 @@ _diverMag3 = "20Rnd_556x45_UW_mag";
 _glrifle = "arifle_SPAR_01_GL_blk_F";
 _glriflemag = "30Rnd_556x45_Stanag_red";
 _glriflemag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
-_glmag = "1Rnd_HE_Grenade_shell";		// Ideal for Adversarial - Do not use with 3 Round version
-//_glmag = "3Rnd_HE_Grenade_shell";		// Ideal for Co-op - Do not use with 1 Round version
+_glmag = "1Rnd_HE_Grenade_shell";
 
 // Smoke for FTLs, Squad Leaders, etc
 _glsmokewhite = "1Rnd_Smoke_Grenade_shell";
@@ -184,6 +183,7 @@ _baghatag = "B_HMG_01_support_F";			// used by Heavy AT assistant gunner
 _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
 _baghsamg = "B_AA_01_weapon_F";			// used by Heavy SAM gunner
+_baghsamag = "B_HMG_01_support_F";			// used by Heavy SAM assistant gunner **
 
 // ====================================================================================
 
@@ -202,10 +202,12 @@ _MMGmag_tr = "130Rnd_338_Mag";
 // Marksman rifle
 _DMrifle = "arifle_SPAR_03_blk_F";
 _DMriflemag = "20Rnd_762x51_Mag";
+_DMriflemag_tr = "20Rnd_762x51_Mag";
 
 // MAR-10
 //_DMrifle = "srifle_DMR_02_F";
 //_DMriflemag = "10Rnd_338_Mag";
+//_DMriflemag_tr = "10Rnd_338_Mag";
 
 // Rifleman AT
 _RAT = "launch_NLAW_F";

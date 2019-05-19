@@ -68,7 +68,7 @@
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
 // ATTACHMENTS - PRIMARY
-_attach1 = "acc_pointer_IR";	// IR Laser
+_attach1 = "";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
 _silencer1 = "mmuzzle_snds_B";	// 7.62 suppressor
@@ -94,7 +94,7 @@ _attachments = [_scope1]; // The default attachment set for most units, overwrit
 // ATTACHMENTS - HANDGUN
 _hg_silencer1 = "";					// No suppressor for Zubr
 
-_hg_scope1 = "optic_mrd";			// MRD
+_hg_scope1 = "optic_MRD";			// MRD
 
 // Default setup
 _hg_attachments= []; // The default attachment set for handguns, overwritten in the individual unitType
@@ -104,12 +104,12 @@ _hg_attachments= []; // The default attachment set for handguns, overwritten in 
 // WEAPON SELECTION
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
-_rifle = "arifle_AK12_F"; // Slight randomization, biased towards TRG
-_riflemag = "30Rnd_762x39_Mag_F";
-_riflemag_tr = "30Rnd_762x39_Mag_Tracer_F";
+_rifle = "arifle_AK12_F";
+_riflemag = "30Rnd_762x39_AK12_Mag_F";
+_riflemag_tr = "30Rnd_762x39_AK12_Mag_Tracer_F";
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
-_carbine = "arifle_AKS_F"; // Slight randomization, biased towards TRG
+_carbine = "arifle_AKS_F";
 _carbinemag = "30Rnd_545x39_Mag_F";
 _carbinemag_tr = "30Rnd_545x39_Mag_Tracer_F";
 
@@ -124,9 +124,9 @@ _diverMag2 = "30Rnd_556x45_Stanag_Tracer_Yellow";
 _diverMag3 = "20Rnd_556x45_UW_mag";
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle = "arifle_AK12_GL_F"; // Slight randomization, biased towards TRG
-_glriflemag = "30Rnd_762x39_Mag_F";
-_glriflemag_tr = "30Rnd_762x39_Mag_Tracer_F";
+_glrifle = "arifle_AK12_GL_F";
+_glriflemag = "30Rnd_762x39_AK12_Mag_F";
+_glriflemag_tr = "30Rnd_762x39_AK12_Mag_Tracer_F";
 _glmag = "1Rnd_HE_Grenade_shell";
 
 // Smoke for FTLs, Squad Leaders, etc
@@ -182,6 +182,7 @@ _baghatg = "B_AssaultPack_rgr";				// Used by Heavy AT Gunner
 _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
 _baghsamg = "B_AA_01_weapon_F";				// used by Heavy SAM gunner
+_baghsamag = "B_HMG_01_support_F";			// used by Heavy SAM assistant gunner **
 
 // ====================================================================================
 
@@ -200,6 +201,7 @@ _MMGmag_tr = "150Rnd_762x54_Box_Tracer";
 // Marksman rifle
 _DMrifle = "srifle_DMR_03_F";
 _DMriflemag = "20Rnd_762x51_Mag";
+_DMriflemag_tr = "20Rnd_762x51_Mag";
 
 // Rifleman AT
 _RAT = "launch_RPG32_ghex_F";

@@ -15,7 +15,7 @@ if (!isDedicated && (isNull player)) then
 // The following code detects what faction the player's slot belongs to, and stores
 // it in the private variable _unitfaction
 params [
-	["_unitfaction", toLower (faction (leader group player)), [""]]
+	["_unitfaction", toLower ([leader group player] call f_fnc_virtualFaction), [""]]
 ];
 
 // ====================================================================================
@@ -60,6 +60,11 @@ if (_unitfaction in ["ind_g_f"]) then {
 // Markers seen by players in SYNDIKAT slots.
 if (_unitfaction in ["ind_c_f"]) then {
 	_groups = f_var_groupData_indfor_syn;
+};
+
+// Markers seen by players in 3IFB (virtual) slots.
+if (_unitfaction in ["3ifb"]) then {
+	_groups = f_var_groupData_indfor_3ifb;
 };
 
 // ====================================================================================

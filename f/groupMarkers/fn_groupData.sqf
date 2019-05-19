@@ -133,7 +133,7 @@ f_var_groupData_blufor_fia = [
 	["GrpFIA_IFV1",    _ifv, "TECH1",  "ColorRed",     "FIA TECH1 -"],
 	["GrpFIA_IFV2",    _ifv, "TECH2",  "ColorRed",     "FIA TECH2 -"],
 	["GrpFIA_TNK1",    _tnk, "TNK1",   "ColorRed",     "FIA TNK1 -"],
-	
+
 	["GrpFIA_CAS1",    _pla, "CAS1",   "ColorOrange",  "FIA CAS1 -"],
 
 	["GrpFIA_TH1",     _hel, "TH1",    "ColorRed",     "FIA TH1 -"],
@@ -268,7 +268,7 @@ f_var_groupData_opfor_fia = [
 	["GrpOFIA_IFV1",   _ifv, "TECH1",  "ColorRed",     "FIA O TECH1 -"],
 	["GrpOFIA_IFV2",   _ifv, "TECH2",  "ColorRed",     "FIA O TECH2 -"],
 	["GrpOFIA_TNK1",   _tnk, "TNK1",   "ColorRed",     "FIA O TNK1 -"],
-	
+
 	["GrpOFIA_CAS1",   _pla, "CAS1",   "ColorOrange",  "FIA O CAS1 -"],
 
 	["GrpOFIA_TH1",    _hel, "TH1",    "ColorRed",     "FIA O TH1 -"],
@@ -470,6 +470,68 @@ f_var_groupData_indfor_syn = [
 	["UnitSyn_BSL_M",  _med, "BM",     "ColorBlack",   ""],
 	["UnitSyn_CSL_M",  _med, "CM",     "ColorBlack",   ""]
 ];
+
+f_var_groupData_indfor_3ifb = [
+	["Grp3IFB_CO",     _hq,  "CO",     "ColorYellow",  "3IFB CO -"],
+	["Grp3IFB_DC",     _hq,  "DC",     "ColorYellow",  "3IFB DC -"],
+	["Grp3IFB_COV",    _ifv, "COV",    "ColorYellow",  "3IFB COV -"],
+
+	["Grp3IFB_ASL",    _hq,  "ASL",    "ColorRed",     "3IFB ASL -"],
+	["Grp3IFB_A1",     _ft,  "A1",     "ColorRed",     "3IFB A1 -"],
+	["Grp3IFB_A2",     _ft,  "A2",     "ColorRed",     "3IFB A2 -"],
+	["Grp3IFB_AV",     _ifv, "AV",     "ColorRed",     "3IFB AV -"],
+
+	["Grp3IFB_BSL",    _hq,  "BSL",    "ColorBlue",    "3IFB BSL -"],
+	["Grp3IFB_B1",     _ft,  "B1",     "ColorBlue",    "3IFB B1 -"],
+	["Grp3IFB_B2",     _ft,  "B2",     "ColorBlue",    "3IFB B2 -"],
+	["Grp3IFB_BV",     _ifv, "BV",     "ColorBlue",    "3IFB BV -"],
+
+	["Grp3IFB_CSL",    _hq,  "CSL",    "ColorGreen",   "3IFB CSL -"],
+	["Grp3IFB_C1",     _ft,  "C1",     "ColorGreen",   "3IFB C1 -"],
+	["Grp3IFB_C2",     _ft,  "C2",     "ColorGreen",   "3IFB C2 -"],
+	["Grp3IFB_CV",     _ifv, "CV",     "ColorGreen",   "3IFB CV -"],
+
+	["Grp3IFB_JSL",    _hq,  "JSL",    "ColorPink",    "3IFB JSL -"],
+	["Grp3IFB_J1",     _ft,  "J1",     "ColorPink",    "3IFB J1 -"],
+	["Grp3IFB_J2",     _ft,  "J2",     "ColorPink",    "3IFB J2 -"],
+	["Grp3IFB_JV",     _ifv, "JV",     "ColorPink",    "3IFB JV -"],
+
+	["Grp3IFB_MMG1",   _sup, "MMG1",   "ColorOrange",  "3IFB MMG1 -"],
+	["Grp3IFB_MMG2",   _sup, "MMG2",   "ColorOrange",  "3IFB MMG2 -"],
+	["Grp3IFB_HMG1",   _sup, "HMG1",   "ColorOrange",  "3IFB HMG1 -"],
+	["Grp3IFB_MAT1",   _lau, "MAT1",   "ColorOrange",  "3IFB MAT1 -"],
+	["Grp3IFB_MAT2",   _lau, "MAT2",   "ColorOrange",  "3IFB MAT2 -"],
+	["Grp3IFB_HAT1",   _lau, "HAT1",   "ColorOrange",  "3IFB HAT1 -"],
+	["Grp3IFB_MTR1",   _mor, "MTR1",   "ColorOrange",  "3IFB MTR1 -"],
+	["Grp3IFB_MSAM1",  _lau, "MSAM1",  "ColorOrange",  "3IFB MSAM1 -"],
+	["Grp3IFB_HSAM1",  _lau, "HSAM1",  "ColorOrange",  "3IFB HSAM1 -"],
+	["Grp3IFB_ST1",    _rec, "ST1",    "ColorOrange",  "3IFB ST1 -"],
+	["Grp3IFB_DT1",    _rec, "DT1",    "ColorOrange",  "3IFB DT1 -"],
+	["Grp3IFB_ENG1",   _eng, "ENG1",   "ColorOrange",  "3IFB ENG1 -"],
+
+	["Grp3IFB_IFV1",   _ifv, "TECH1",  "ColorRed",     "3IFB TECH1 -"],
+	["Grp3IFB_IFV2",   _ifv, "TECH2",  "ColorRed",     "3IFB TECH2 -"],
+	["Grp3IFB_TNK1",   _tnk, "TNK1",   "ColorRed",     "3IFB TNK1 -"],
+
+	["Grp3IFB_CAS1",   _pla, "CAS1",   "ColorOrange",  "3IFB CAS1 -"],
+
+	["Grp3IFB_TH1",    _hel, "TH1",    "ColorRed",     "3IFB TH1 -"],
+	["Grp3IFB_TH2",    _hel, "TH2",    "ColorRed",     "3IFB TH2 -"],
+	["Grp3IFB_TH3",    _hel, "TH3",    "ColorBlue",    "3IFB TH3 -"],
+	["Grp3IFB_TH4",    _hel, "TH4",    "ColorBlue",    "3IFB TH4 -"],
+	["Grp3IFB_TH5",    _hel, "TH5",    "ColorGreen",   "3IFB TH5 -"],
+	["Grp3IFB_TH6",    _hel, "TH6",    "ColorGreen",   "3IFB TH6 -"],
+	["Grp3IFB_TH7",    _hel, "TH7",    "ColorOrange",  "3IFB TH7 -"],
+	["Grp3IFB_TH8",    _hel, "TH8",    "ColorOrange",  "3IFB TH8 -"],
+
+	["Grp3IFB_AH1",    _hel, "AH1",    "ColorRed",     "3IFB AH1 -"],
+
+	["Unit3IFB_CO_M",  _med, "COM",    "ColorBlack",   ""],
+	["Unit3IFB_DC_M",  _med, "DCM",    "ColorBlack",   ""],
+	["Unit3IFB_ASL_M", _med, "AM",     "ColorBlack",   ""],
+	["Unit3IFB_BSL_M", _med, "BM",     "ColorBlack",   ""],
+	["Unit3IFB_CSL_M", _med, "CM",     "ColorBlack",   ""]
+];
 // ====================================================================================
 
 // Adding all of the group data to a single array
@@ -482,5 +544,6 @@ f_var_groupData_all append f_var_groupData_opfor_fia;
 f_var_groupData_all append f_var_groupData_indfor_aaf;
 f_var_groupData_all append f_var_groupData_indfor_fia;
 f_var_groupData_all append f_var_groupData_indfor_syn;
+f_var_groupData_all append f_var_groupData_indfor_3ifb;
 
 // ====================================================================================
