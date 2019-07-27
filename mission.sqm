@@ -24969,6 +24969,7 @@ class Mission
 			};
 			class Attributes
 			{
+			name="GrpCIV_R1";
 			};
 			id=789;
 			atlOffset=0.15991211;
@@ -25026,6 +25027,7 @@ class Mission
 			};
 			class Attributes
 			{
+			name="GrpCIV_R2";
 			};
 			id=791;
 		};

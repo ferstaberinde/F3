@@ -23,7 +23,7 @@ params [
 private _groups = [];
 
 // Markers seen by players in NATO, NATO (Pacific) & CTRG slots.
-if (_unitfaction in ["blu_f","blu_t_f","blu_ctrg_f"]) then {
+if (_unitfaction in ["blu_f","blu_t_f","blu_ctrg_f","blu_w_f"]) then {
 	_groups = f_var_groupData_blufor_nato;
 };
 
@@ -47,9 +47,19 @@ if (_unitfaction in ["opf_g_f"]) then {
 	_groups = f_var_groupData_opfor_fia;
 };
 
+// Markers seen by players in Spetsnaz slots.
+if (_unitfaction in ["opf_r_f"]) then {
+	_groups = f_var_groupData_opfor_spetsnaz;
+};
+
 // Markers seen by players in AAF slots.
 if (_unitfaction in ["ind_f"]) then {
 	_groups = f_var_groupData_indfor_aaf;
+};
+
+// Markers seen by players in LDF slots.
+if (_unitfaction in ["ind_e_f"]) then {
+	_groups = f_var_groupData_indfor_ldf;
 };
 
 // Markers seen by players in INDEPENDENT-FIA slots.
@@ -65,6 +75,16 @@ if (_unitfaction in ["ind_c_f"]) then {
 // Markers seen by players in 3IFB (virtual) slots.
 if (_unitfaction in ["3ifb"]) then {
 	_groups = f_var_groupData_indfor_3ifb;
+};
+
+// Markers seen by players in NPR (Looters) slots.
+if (_unitfaction in ["ind_l_f"]) then {
+	_groups = f_var_groupData_indfor_npr;
+};
+
+// Markers seen by players in Civilian slots.
+if (_unitfaction in ["civ_f","civ_idap_f"]) then {
+	_groups = f_var_groupData_civ;
 };
 
 // ====================================================================================

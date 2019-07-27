@@ -289,6 +289,68 @@ f_var_groupData_opfor_fia = [
 	["UnitOFIA_CSL_M", _med, "CM",     "ColorBlack",   ""]
 ];
 
+f_var_groupData_opfor_spetsnaz = [
+	["GrpSpetsnaz_CO",     _hq,  "CO",     "ColorYellow",  "Spetsnaz CO -"],
+	["GrpSpetsnaz_DC",     _hq,  "DC",     "ColorYellow",  "Spetsnaz DC -"],
+	["GrpSpetsnaz_COV",    _ifv, "COV",    "ColorYellow",  "Spetsnaz COV -"],
+
+	["GrpSpetsnaz_ASL",    _hq,  "ASL",    "ColorRed",     "Spetsnaz ASL -"],
+	["GrpSpetsnaz_A1",     _ft,  "A1",     "ColorRed",     "Spetsnaz A1 -"],
+	["GrpSpetsnaz_A2",     _ft,  "A2",     "ColorRed",     "Spetsnaz A2 -"],
+	["GrpSpetsnaz_AV",     _ifv, "AV",     "ColorRed",     "Spetsnaz AV -"],
+
+	["GrpSpetsnaz_BSL",    _hq,  "BSL",    "ColorBlue",    "Spetsnaz BSL -"],
+	["GrpSpetsnaz_B1",     _ft,  "B1",     "ColorBlue",    "Spetsnaz B1 -"],
+	["GrpSpetsnaz_B2",     _ft,  "B2",     "ColorBlue",    "Spetsnaz B2 -"],
+	["GrpSpetsnaz_BV",     _ifv, "BV",     "ColorBlue",    "Spetsnaz BV -"],
+
+	["GrpSpetsnaz_CSL",    _hq,  "CSL",    "ColorGreen",   "Spetsnaz CSL -"],
+	["GrpSpetsnaz_C1",     _ft,  "C1",     "ColorGreen",   "Spetsnaz C1 -"],
+	["GrpSpetsnaz_C2",     _ft,  "C2",     "ColorGreen",   "Spetsnaz C2 -"],
+	["GrpSpetsnaz_CV",     _ifv, "CV",     "ColorGreen",   "Spetsnaz CV -"],
+
+	["GrpSpetsnaz_JSL",    _hq,  "JSL",    "ColorPink",    "Spetsnaz JSL -"],
+	["GrpSpetsnaz_J1",     _ft,  "J1",     "ColorPink",    "Spetsnaz J1 -"],
+	["GrpSpetsnaz_J2",     _ft,  "J2",     "ColorPink",    "Spetsnaz J2 -"],
+	["GrpSpetsnaz_JV",     _ifv, "JV",     "ColorPink",    "Spetsnaz JV -"],
+
+	["GrpSpetsnaz_MMG1",   _sup, "MMG1",   "ColorOrange",  "Spetsnaz MMG1 -"],
+	["GrpSpetsnaz_MMG2",   _sup, "MMG2",   "ColorOrange",  "Spetsnaz MMG2 -"],
+	["GrpSpetsnaz_HMG1",   _sup, "HMG1",   "ColorOrange",  "Spetsnaz HMG1 -"],
+	["GrpSpetsnaz_MAT1",   _lau, "MAT1",   "ColorOrange",  "Spetsnaz MAT1 -"],
+	["GrpSpetsnaz_MAT2",   _lau, "MAT2",   "ColorOrange",  "Spetsnaz MAT2 -"],
+	["GrpSpetsnaz_HAT1",   _lau, "HAT1",   "ColorOrange",  "Spetsnaz HAT1 -"],
+	["GrpSpetsnaz_MTR1",   _mor, "MTR1",   "ColorOrange",  "Spetsnaz MTR1 -"],
+	["GrpSpetsnaz_MSAM1",  _lau, "MSAM1",  "ColorOrange",  "Spetsnaz MSAM1 -"],
+	["GrpSpetsnaz_HSAM1",  _lau, "HSAM1",  "ColorOrange",  "Spetsnaz HSAM1 -"],
+	["GrpSpetsnaz_ST1",    _rec, "ST1",    "ColorOrange",  "Spetsnaz ST1 -"],
+	["GrpSpetsnaz_DT1",    _rec, "DT1",    "ColorOrange",  "Spetsnaz DT1 -"],
+	["GrpSpetsnaz_ENG1",   _eng, "ENG1",   "ColorOrange",  "Spetsnaz ENG1 -"],
+
+	["GrpSpetsnaz_IFV1",   _ifv, "IFV1",   "ColorOrange",  "Spetsnaz IFV1 -"],
+	["GrpSpetsnaz_IFV2",   _ifv, "IFV2",   "ColorOrange",  "Spetsnaz IFV2 -"],
+	["GrpSpetsnaz_TNK1",   _tnk, "TNK1",   "ColorRed",     "Spetsnaz TNK1 -"],
+
+	["GrpSpetsnaz_CAS1",   _pla, "CAS1",   "ColorOrange",  "Spetsnaz CAS1 -"],
+
+	["GrpSpetsnaz_TH1",    _hel, "TH1",    "ColorRed",     "Spetsnaz TH1 -"],
+	["GrpSpetsnaz_TH2",    _hel, "TH2",    "ColorRed",     "Spetsnaz TH2 -"],
+	["GrpSpetsnaz_TH3",    _hel, "TH3",    "ColorBlue",    "Spetsnaz TH3 -"],
+	["GrpSpetsnaz_TH4",    _hel, "TH4",    "ColorBlue",    "Spetsnaz TH4 -"],
+	["GrpSpetsnaz_TH5",    _hel, "TH5",    "ColorGreen",   "Spetsnaz TH5 -"],
+	["GrpSpetsnaz_TH6",    _hel, "TH6",    "ColorGreen",   "Spetsnaz TH6 -"],
+	["GrpSpetsnaz_TH7",    _hel, "TH7",    "ColorOrange",  "Spetsnaz TH7 -"],
+	["GrpSpetsnaz_TH8",    _hel, "TH8",    "ColorOrange",  "Spetsnaz TH8 -"],
+
+	["GrpSpetsnaz_AH1",    _hel, "AH1",    "ColorRed",     "Spetsnaz AH1 -"],
+
+	["UnitSpetsnaz_CO_M",  _med, "COM",    "ColorBlack",   ""],
+	["UnitSpetsnaz_DC_M",  _med, "DCM",    "ColorBlack",   ""],
+	["UnitSpetsnaz_ASL_M", _med, "AM",     "ColorBlack",   ""],
+	["UnitSpetsnaz_BSL_M", _med, "BM",     "ColorBlack",   ""],
+	["UnitSpetsnaz_CSL_M", _med, "CM",     "ColorBlack",   ""]
+];
+
 f_var_groupData_indfor_aaf = [
 	["GrpAAF_CO",      _hq,  "CO",     "ColorYellow",  "AAF CO -"],
 	["GrpAAF_DC",      _hq,  "DC",     "ColorYellow",  "AAF DC -"],
@@ -532,6 +594,135 @@ f_var_groupData_indfor_3ifb = [
 	["Unit3IFB_BSL_M", _med, "BM",     "ColorBlack",   ""],
 	["Unit3IFB_CSL_M", _med, "CM",     "ColorBlack",   ""]
 ];
+
+f_var_groupData_indfor_LDF = [
+	["GrpLDF_CO",     _hq,  "CO",     "ColorYellow",  "LDF CO -"],
+	["GrpLDF_DC",     _hq,  "DC",     "ColorYellow",  "LDF DC -"],
+	["GrpLDF_COV",    _ifv, "COV",    "ColorYellow",  "LDF COV -"],
+
+	["GrpLDF_ASL",    _hq,  "ASL",    "ColorRed",     "LDF ASL -"],
+	["GrpLDF_A1",     _ft,  "A1",     "ColorRed",     "LDF A1 -"],
+	["GrpLDF_A2",     _ft,  "A2",     "ColorRed",     "LDF A2 -"],
+	["GrpLDF_AV",     _ifv, "AV",     "ColorRed",     "LDF AV -"],
+
+	["GrpLDF_BSL",    _hq,  "BSL",    "ColorBlue",    "LDF BSL -"],
+	["GrpLDF_B1",     _ft,  "B1",     "ColorBlue",    "LDF B1 -"],
+	["GrpLDF_B2",     _ft,  "B2",     "ColorBlue",    "LDF B2 -"],
+	["GrpLDF_BV",     _ifv, "BV",     "ColorBlue",    "LDF BV -"],
+
+	["GrpLDF_CSL",    _hq,  "CSL",    "ColorGreen",   "LDF CSL -"],
+	["GrpLDF_C1",     _ft,  "C1",     "ColorGreen",   "LDF C1 -"],
+	["GrpLDF_C2",     _ft,  "C2",     "ColorGreen",   "LDF C2 -"],
+	["GrpLDF_CV",     _ifv, "CV",     "ColorGreen",   "LDF CV -"],
+
+	["GrpLDF_JSL",    _hq,  "JSL",    "ColorPink",    "LDF JSL -"],
+	["GrpLDF_J1",     _ft,  "J1",     "ColorPink",    "LDF J1 -"],
+	["GrpLDF_J2",     _ft,  "J2",     "ColorPink",    "LDF J2 -"],
+	["GrpLDF_JV",     _ifv, "JV",     "ColorPink",    "LDF JV -"],
+
+	["GrpLDF_MMG1",   _sup, "MMG1",   "ColorOrange",  "LDF MMG1 -"],
+	["GrpLDF_MMG2",   _sup, "MMG2",   "ColorOrange",  "LDF MMG2 -"],
+	["GrpLDF_HMG1",   _sup, "HMG1",   "ColorOrange",  "LDF HMG1 -"],
+	["GrpLDF_MAT1",   _lau, "MAT1",   "ColorOrange",  "LDF MAT1 -"],
+	["GrpLDF_MAT2",   _lau, "MAT2",   "ColorOrange",  "LDF MAT2 -"],
+	["GrpLDF_HAT1",   _lau, "HAT1",   "ColorOrange",  "LDF HAT1 -"],
+	["GrpLDF_MTR1",   _mor, "MTR1",   "ColorOrange",  "LDF MTR1 -"],
+	["GrpLDF_MSAM1",  _lau, "MSAM1",  "ColorOrange",  "LDF MSAM1 -"],
+	["GrpLDF_HSAM1",  _lau, "HSAM1",  "ColorOrange",  "LDF HSAM1 -"],
+	["GrpLDF_ST1",    _rec, "ST1",    "ColorOrange",  "LDF ST1 -"],
+	["GrpLDF_DT1",    _rec, "DT1",    "ColorOrange",  "LDF DT1 -"],
+	["GrpLDF_ENG1",   _eng, "ENG1",   "ColorOrange",  "LDF ENG1 -"],
+
+	["GrpLDF_IFV1",   _ifv, "IFV1",   "ColorOrange",  "LDF IFV1 -"],
+	["GrpLDF_IFV2",   _ifv, "IFV2",   "ColorOrange",  "LDF IFV2 -"],
+	["GrpLDF_TNK1",   _tnk, "TNK1",   "ColorRed",     "LDF TNK1 -"],
+
+	["GrpLDF_CAS1",   _pla, "CAS1",   "ColorOrange",  "LDF CAS1 -"],
+
+	["GrpLDF_TH1",    _hel, "TH1",    "ColorRed",     "LDF TH1 -"],
+	["GrpLDF_TH2",    _hel, "TH2",    "ColorRed",     "LDF TH2 -"],
+	["GrpLDF_TH3",    _hel, "TH3",    "ColorBlue",    "LDF TH3 -"],
+	["GrpLDF_TH4",    _hel, "TH4",    "ColorBlue",    "LDF TH4 -"],
+	["GrpLDF_TH5",    _hel, "TH5",    "ColorGreen",   "LDF TH5 -"],
+	["GrpLDF_TH6",    _hel, "TH6",    "ColorGreen",   "LDF TH6 -"],
+	["GrpLDF_TH7",    _hel, "TH7",    "ColorOrange",  "LDF TH7 -"],
+	["GrpLDF_TH8",    _hel, "TH8",    "ColorOrange",  "LDF TH8 -"],
+
+	["GrpLDF_AH1",    _hel, "AH1",    "ColorRed",     "LDF AH1 -"],
+
+	["UnitLDF_CO_M",  _med, "COM",    "ColorBlack",   ""],
+	["UnitLDF_DC_M",  _med, "DCM",    "ColorBlack",   ""],
+	["UnitLDF_ASL_M", _med, "AM",     "ColorBlack",   ""],
+	["UnitLDF_BSL_M", _med, "BM",     "ColorBlack",   ""],
+	["UnitLDF_CSL_M", _med, "CM",     "ColorBlack",   ""]
+];
+
+f_var_groupData_indfor_npr = [
+	["GrpNPR_CO",     _hq,  "CO",     "ColorYellow",  "NPR CO -"],
+	["GrpNPR_DC",     _hq,  "DC",     "ColorYellow",  "NPR DC -"],
+	["GrpNPR_COV",    _ifv, "COV",    "ColorYellow",  "NPR COV -"],
+
+	["GrpNPR_ASL",    _hq,  "ASL",    "ColorRed",     "NPR ASL -"],
+	["GrpNPR_A1",     _ft,  "A1",     "ColorRed",     "NPR A1 -"],
+	["GrpNPR_A2",     _ft,  "A2",     "ColorRed",     "NPR A2 -"],
+	["GrpNPR_AV",     _ifv, "AV",     "ColorRed",     "NPR AV -"],
+
+	["GrpNPR_BSL",    _hq,  "BSL",    "ColorBlue",    "NPR BSL -"],
+	["GrpNPR_B1",     _ft,  "B1",     "ColorBlue",    "NPR B1 -"],
+	["GrpNPR_B2",     _ft,  "B2",     "ColorBlue",    "NPR B2 -"],
+	["GrpNPR_BV",     _ifv, "BV",     "ColorBlue",    "NPR BV -"],
+
+	["GrpNPR_CSL",    _hq,  "CSL",    "ColorGreen",   "NPR CSL -"],
+	["GrpNPR_C1",     _ft,  "C1",     "ColorGreen",   "NPR C1 -"],
+	["GrpNPR_C2",     _ft,  "C2",     "ColorGreen",   "NPR C2 -"],
+	["GrpNPR_CV",     _ifv, "CV",     "ColorGreen",   "NPR CV -"],
+
+	["GrpNPR_JSL",    _hq,  "JSL",    "ColorPink",    "NPR JSL -"],
+	["GrpNPR_J1",     _ft,  "J1",     "ColorPink",    "NPR J1 -"],
+	["GrpNPR_J2",     _ft,  "J2",     "ColorPink",    "NPR J2 -"],
+	["GrpNPR_JV",     _ifv, "JV",     "ColorPink",    "NPR JV -"],
+
+	["GrpNPR_MMG1",   _sup, "MMG1",   "ColorOrange",  "NPR MMG1 -"],
+	["GrpNPR_MMG2",   _sup, "MMG2",   "ColorOrange",  "NPR MMG2 -"],
+	["GrpNPR_HMG1",   _sup, "HMG1",   "ColorOrange",  "NPR HMG1 -"],
+	["GrpNPR_MAT1",   _lau, "MAT1",   "ColorOrange",  "NPR MAT1 -"],
+	["GrpNPR_MAT2",   _lau, "MAT2",   "ColorOrange",  "NPR MAT2 -"],
+	["GrpNPR_HAT1",   _lau, "HAT1",   "ColorOrange",  "NPR HAT1 -"],
+	["GrpNPR_MTR1",   _mor, "MTR1",   "ColorOrange",  "NPR MTR1 -"],
+	["GrpNPR_MSAM1",  _lau, "MSAM1",  "ColorOrange",  "NPR MSAM1 -"],
+	["GrpNPR_HSAM1",  _lau, "HSAM1",  "ColorOrange",  "NPR HSAM1 -"],
+	["GrpNPR_ST1",    _rec, "ST1",    "ColorOrange",  "NPR ST1 -"],
+	["GrpNPR_DT1",    _rec, "DT1",    "ColorOrange",  "NPR DT1 -"],
+	["GrpNPR_ENG1",   _eng, "ENG1",   "ColorOrange",  "NPR ENG1 -"],
+
+	["GrpNPR_IFV1",   _ifv, "IFV1",   "ColorOrange",  "NPR IFV1 -"],
+	["GrpNPR_IFV2",   _ifv, "IFV2",   "ColorOrange",  "NPR IFV2 -"],
+	["GrpNPR_TNK1",   _tnk, "TNK1",   "ColorRed",     "NPR TNK1 -"],
+
+	["GrpNPR_CAS1",   _pla, "CAS1",   "ColorOrange",  "NPR CAS1 -"],
+
+	["GrpNPR_TH1",    _hel, "TH1",    "ColorRed",     "NPR TH1 -"],
+	["GrpNPR_TH2",    _hel, "TH2",    "ColorRed",     "NPR TH2 -"],
+	["GrpNPR_TH3",    _hel, "TH3",    "ColorBlue",    "NPR TH3 -"],
+	["GrpNPR_TH4",    _hel, "TH4",    "ColorBlue",    "NPR TH4 -"],
+	["GrpNPR_TH5",    _hel, "TH5",    "ColorGreen",   "NPR TH5 -"],
+	["GrpNPR_TH6",    _hel, "TH6",    "ColorGreen",   "NPR TH6 -"],
+	["GrpNPR_TH7",    _hel, "TH7",    "ColorOrange",  "NPR TH7 -"],
+	["GrpNPR_TH8",    _hel, "TH8",    "ColorOrange",  "NPR TH8 -"],
+
+	["GrpNPR_AH1",    _hel, "AH1",    "ColorRed",     "NPR AH1 -"],
+
+	["UnitNPR_CO_M",  _med, "COM",    "ColorBlack",   ""],
+	["UnitNPR_DC_M",  _med, "DCM",    "ColorBlack",   ""],
+	["UnitNPR_ASL_M", _med, "AM",     "ColorBlack",   ""],
+	["UnitNPR_BSL_M", _med, "BM",     "ColorBlack",   ""],
+	["UnitNPR_CSL_M", _med, "CM",     "ColorBlack",   ""]
+];
+
+f_var_groupData_civ = [
+	["GrpCIV_R1",      _hq,  "R1",     "ColorPink",  "Reporter 1"],
+	["GrpCIV_R2",      _hq,  "R2",     "ColorPink",  "Reporter 2"]
+];
 // ====================================================================================
 
 // Adding all of the group data to a single array
@@ -541,9 +732,13 @@ f_var_groupData_all append f_var_groupData_blufor_fia;
 f_var_groupData_all append f_var_groupData_blufor_gen;
 f_var_groupData_all append f_var_groupData_opfor_csat;
 f_var_groupData_all append f_var_groupData_opfor_fia;
+f_var_groupData_all append f_var_groupData_opfor_spetsnaz;
 f_var_groupData_all append f_var_groupData_indfor_aaf;
 f_var_groupData_all append f_var_groupData_indfor_fia;
 f_var_groupData_all append f_var_groupData_indfor_syn;
 f_var_groupData_all append f_var_groupData_indfor_3ifb;
+f_var_groupData_all append f_var_groupData_indfor_ldf;
+f_var_groupData_all append f_var_groupData_indfor_npr;
+f_var_groupData_all append f_var_groupData_civ;
 
 // ====================================================================================
