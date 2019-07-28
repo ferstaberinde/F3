@@ -82,6 +82,7 @@ if (f_param_debugMode == 1) then
 if (_faction in ["blu_f","nato"]) then {
 	#include "f_assignGear_nato.sqf"
 	// #include "f_assignGear_natoPacific.sqf" // Use NATO Pacific loadouts on NATO non-Pacific units (e.g. Folk ARPS Platoons)
+	// #include "f_assignGear_natoWoodland.sqf" // Use NATO Woodland loadouts on NATO non-Woodland units (e.g. Folk ARPS Platoons)
 };
 
 // ====================================================================================
@@ -92,6 +93,16 @@ if (_faction in ["blu_f","nato"]) then {
 
 if (_faction in ["blu_t_f","natopacific"]) then {
 	#include "f_assignGear_natoPacific.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: BLUFOR > NATO (Woodland)
+// The following block of code executes only if the unit belongs to the NATO (Woodland) faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["blu_w_f","natowoodland"]) then {
+	#include "f_assignGear_natoWoodland.sqf"
 };
 
 // ====================================================================================
@@ -127,7 +138,17 @@ if (_faction in ["opf_t_f","csatpacific"]) then {
 
 // ====================================================================================
 
-// GEAR: INDEPEDENT > AAF
+// GEAR: OPFOR > Spetsnaz
+// The following block of code executes only if the unit belongs to the Spetsnaz faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["opf_r_f","spetsnaz"]) then {
+	#include "f_assignGear_spetsnaz.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: INDEPENDENT > AAF
 // The following block of code executes only if the unit belongs to the AAF faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
@@ -157,12 +178,32 @@ if (_faction in ["blu_ctrg_f","ctrg"]) then {
 
 // ====================================================================================
 
-// GEAR: INDEPEDENT > SYNDIKAT
+// GEAR: INDEPENDENT > SYNDIKAT
 // The following block of code executes only if the unit is manually assigned the Syndikat faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["ind_c_f","syndikat"]) then {
 	#include "f_assignGear_syndikat.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: INDEPENDENT > LDF
+// The following block of code executes only if the unit belongs to the LDF faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["ind_e_f","ldf"]) then {
+	#include "f_assignGear_ldf.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: INDEPENDENT > NPR
+// The following block of code executes only if the unit belongs to the NPR faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["ind_l_f","npr"]) then {
+	#include "f_assignGear_npr.sqf"
 };
 
 // ====================================================================================

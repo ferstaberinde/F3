@@ -191,6 +191,7 @@ _bagmtrg = "O_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "O_Mortar_01_support_F";		// used by Mortar assistant gunner
 _baghsamg = "O_AA_01_weapon_F";				// used by Heavy SAM gunner
 _baghsamag = "O_HMG_01_support_F";			// used by Heavy SAM assistant gunner
+_bagRadio = "B_RadioBag_01_ghex_F";	
 
 // ====================================================================================
 

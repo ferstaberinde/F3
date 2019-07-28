@@ -190,15 +190,16 @@ _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
 _baghsamg = "B_AA_01_weapon_F";				// used by Heavy SAM gunner
 _baghsamag = "B_HMG_01_support_F";			// used by Heavy SAM assistant gunner **
+_bagRadio = selectRandom ["B_RadioBag_01_eaf_F","B_RadioBag_01_black_F","B_RadioBag_01_digi_F","B_RadioBag_01_black_F"];			// cosmetic, used by COs, DCs, and anybody who might possibly use CC in session.
 
 // ====================================================================================
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = "LMG_03_F";
-_ARmag = "200Rnd_556x45_Box_F";
-_ARmag_tr = "200Rnd_556x45_Box_Tracer_F";
+_AR = "arifle_RPK12_F";
+_ARmag = "75Rnd_762x39_Mag_F";
+_ARmag_tr = "75Rnd_762x39_Mag_Tracer_F";
 
 // Medium MG
 _MMG = "LMG_Zafir_F";
@@ -211,7 +212,7 @@ _DMriflemag = "20Rnd_762x51_Mag";
 _DMriflemag_tr = "20Rnd_762x51_Mag";
 
 // Rifleman AT
-_RAT = "launch_RPG32_ghex_F";
+_RAT = "launch_RPG32_green_F";
 _RATmag1 = "RPG32_F";
 _RATmag2 = "RPG32_HE_F";
 
@@ -259,7 +260,9 @@ _jet = ["jp"];
 
 _baseUniform = ["U_BG_Guerrilla_6_1","U_BG_Guerilla2_2","U_BG_Guerilla2_1","U_BG_Guerilla2_3","U_BG_Guerilla1_1","U_BG_Guerilla1_2_F","U_BG_Leader",
 				"U_I_C_Soldier_Bandit_3_F","U_I_C_Soldier_Para_2_F","U_I_C_Soldier_Para_3_F","U_I_C_Soldier_Para_4_F","U_I_C_Soldier_Para_1_F",
-				"U_I_G_Story_Protagonist_F","U_I_G_resistanceLeader_F","U_C_WorkerCoveralls"
+				"U_I_G_Story_Protagonist_F","U_I_G_resistanceLeader_F","U_C_WorkerCoveralls",
+				"U_C_Uniform_Farmer_01_F","U_I_L_Uniform_01_camo_F","U_I_L_Uniform_01_deserter_F","U_I_L_Uniform_01_tshirt_black_F","U_I_L_Uniform_01_tshirt_olive_F","U_I_L_Uniform_01_tshirt_skull_F",
+				"U_O_R_Gorka_01_black_F"
 ];
 _baseHelmet = ["H_Beret_Colonel"];
 _baseGlasses = [];
@@ -268,8 +271,8 @@ _baseGlasses = [];
 //
 //_lightRig = ["V_TacVest_Camo","V_I_G_resistanceLeader_F","V_TacVest_oli","V_TacVest_khk"];
 // ^^ Alternate Light Rigs ^^
-_lightRig = ["V_PlateCarrier1_blk","V_PlateCarrier1_rgr_noflag_F","V_PlateCarrierIA1_dgtl"];
-_standardRig = ["V_PlateCarrier1_blk","V_PlateCarrier1_rgr_noflag_F","V_PlateCarrierIA1_dgtl"];
+_lightRig = ["V_PlateCarrier1_blk","V_PlateCarrier1_rgr_noflag_F","V_PlateCarrierIA1_dgtl","V_CarrierRigKBT_01_light_Olive_F","V_CarrierRigKBT_01_light_EAF_F"];
+_standardRig = ["V_PlateCarrier1_blk","V_PlateCarrier1_rgr_noflag_F","V_PlateCarrierIA1_dgtl","V_CarrierRigKBT_01_light_Olive_F","V_CarrierRigKBT_01_light_EAF_F"];
 
 // Diver
 _diverUniform =  ["U_B_Wetsuit"];

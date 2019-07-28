@@ -1,4 +1,4 @@
-// F3 - Folk ARPS Assign Gear Script - AAF
+// F3 - Folk ARPS Assign Gear Script - LDF
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -74,11 +74,11 @@ _attach2 = "acc_flashlight";	// Flashlight
 _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
-_scope1 = "optic_ACO_grn";		// ACO
-_scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
+_scope1 = "optic_ACO";		// ACO
+_scope2 = "optic_ico_01_f";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
-_bipod1 = "bipod_03_F_oli";		// Default bipod
+_bipod1 = "bipod_01_F_blk";		// Default bipod
 _bipod2 = "bipod_03_F_blk";		// Black bipod
 
 // Default setup
@@ -94,7 +94,7 @@ _attachments = [_scope1]; // The default attachment set for most units, overwrit
 // ATTACHMENTS - HANDGUN
 _hg_silencer1 = "muzzle_snds_acp";	// .45 suppressor
 
-_hg_scope1 = "optic_MRD";			// MRD
+_hg_scope1 = "optic_MRD_black";			// MRD
 
 // Default setup
 _hg_attachments= []; // The default attachment set for handguns, overwritten in the individual unitType
@@ -108,32 +108,33 @@ _lau_attachments = []; // The default attachment set for launchers, overwritten 
 
 // ====================================================================================
 
+
 // WEAPON SELECTION
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
-_rifle = "arifle_Mk20_F";
-_riflemag = "30Rnd_556x45_Stanag";
-_riflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_rifle = "arifle_MSBS65_F";
+_riflemag = "30Rnd_65x39_caseless_msbs_mag";
+_riflemag_tr = "30Rnd_65x39_caseless_msbs_mag_Tracer";
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
-_carbine = "arifle_Mk20C_F";
-_carbinemag = "30Rnd_556x45_Stanag";
-_carbinemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_carbine = "arifle_MSBS65_F";
+_carbinemag = "30Rnd_65x39_caseless_msbs_mag";
+_carbinemag_tr = "30Rnd_65x39_caseless_msbs_mag_Tracer";
 
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
-_smg = "hgun_PDW2000_F";
-_smgmag = "30Rnd_9x21_Mag";
+_smg = "SMG_03C_black";
+_smgmag = "50Rnd_570x28_SMG_03";
 
 // Diver
 _diverWep = "arifle_SDAR_F";
-_diverMag1 = "30Rnd_556x45_Stanag";
-_diverMag2 = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_diverMag1 = "30Rnd_556x45_Stanag_red";
+_diverMag2 = "30Rnd_556x45_Stanag_Tracer_Red";
 _diverMag3 = "20Rnd_556x45_UW_mag";
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle = "arifle_Mk20_GL_F";
-_glriflemag = "30Rnd_556x45_Stanag";
-_glriflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_glrifle = "arifle_MSBS65_GL_F";
+_glriflemag = "30Rnd_65x39_caseless_msbs_mag";
+_glriflemag_tr = "30Rnd_65x39_caseless_msbs_mag_Tracer";
 _glmag = "1Rnd_HE_Grenade_shell";
 
 // Smoke for FTLs, Squad Leaders, etc
@@ -148,8 +149,8 @@ _glflareyellow = "UGL_FlareYellow_F";
 _glflaregreen = "UGL_FlareGreen_F";
 
 // Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
-_pistol = "hgun_ACPC2_F";
-_pistolmag = "9Rnd_45ACP_Mag";
+_pistol = "hgun_Pistol_heavy_01_green_F";
+_pistolmag = "11Rnd_45ACP_Mag";
 
 // Grenades
 _grenade = "HandGrenade";
@@ -170,7 +171,7 @@ _nvg = "NVGoggles_INDEP";
 _laserdesignator = "Laserdesignator_03";
 
 // UAV Terminal
-_uavterminal = "I_UavTerminal";
+_uavterminal = "I_E_UavTerminal";
 
 // Chemlights
 _chemgreen =  "Chemlight_green";
@@ -179,51 +180,51 @@ _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
 // Backpacks
-_bag = "B_AssaultPack_dgtl";			// The standard bag for most classes
-_bagLarge = "B_Kitbag_rgr";				// Larger bag for some special purpose classes
+_bag = "B_AssaultPack_eaf_F";			// The standard bag for most classes
+_bagLarge = "B_Carryall_eaf_F";				// Larger bag for some special purpose classes
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
-_baguav = "I_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "I_HMG_01_weapon_F";				// used by Heavy MG gunner
-_baghmgag = "I_HMG_01_support_F";			// used by Heavy MG assistant gunner
-_baghatg = "I_AT_01_weapon_F";				// used by Heavy AT gunner
-_baghatag = "I_HMG_01_support_F";			// used by Heavy AT assistant gunner
-_bagmtrg = "I_Mortar_01_weapon_F";			// used by Mortar gunner
-_bagmtrag = "I_Mortar_01_support_F";		// used by Mortar assistant gunner
-_baghsamg = "I_AA_01_weapon_F";				// used by Heavy SAM gunner
-_baghsamag = "I_HMG_01_support_F";			// used by Heavy SAM assistant gunner
-_bagRadio = "B_RadioBag_01_digi_F";	
+_baguav = "I_E_UAV_01_backpack_F";			// used by UAV operator
+_baghmgg = "I_E_HMG_01_weapon_F";				// used by Heavy MG gunner
+_baghmgag = "I_E_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghatg = "I_E_AT_01_weapon_F";				// used by Heavy AT gunner
+_baghatag = "I_E_HMG_01_support_F";			// used by Heavy AT assistant gunner
+_bagmtrg = "I_E_Mortar_01_weapon_F";			// used by Mortar gunner
+_bagmtrag = "I_E_Mortar_01_support_F";		// used by Mortar assistant gunner
+_baghsamg = "I_E_AA_01_weapon_F";				// used by Heavy SAM gunner
+_baghsamag = "I_E_HMG_01_support_F";			// used by Heavy SAM assistant gunner
+_bagRadio = "B_RadioBag_01_eaf_F";			// cosmetic, used by COs, DCs, and anybody who might possibly use CC in session.
 
 // ====================================================================================
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = "LMG_Mk200_F";
+_AR = "LMG_Mk200_black_F";
 _ARmag = "200Rnd_65x39_cased_Box";
 _ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
 
 // Medium MG
-_MMG = "LMG_Zafir_F";
-_MMGmag = "150Rnd_762x54_Box";
-_MMGmag_tr = "150Rnd_762x54_Box_Tracer";
+_MMG = "MMG_02_black_F";
+_MMGmag = "130Rnd_338_Mag";
+_MMGmag_tr = "130Rnd_338_Mag";
 
 // Marksman rifle
-_DMrifle = "srifle_EBR_F";
-_DMriflemag = "20Rnd_762x51_Mag";
-_DMriflemag_tr = "20Rnd_762x51_Mag";
+_DMrifle = "arifle_MSBS65_Mark_F";
+_DMriflemag = "30Rnd_65x39_caseless_msbs_mag";
+_DMriflemag_tr = "30Rnd_65x39_caseless_msbs_mag_Tracer";
 
 // Rifleman AT
-_RAT = "launch_MRAWS_olive_rail_F";
+_RAT = "launch_MRAWS_green_rail_F";
 _RATmag1 = "MRAWS_HEAT55_F";
 _RATmag2 = "MRAWS_HE_F";
 
 // Medium AT
-_MAT = "launch_MRAWS_olive_rail_F";
+_MAT = "launch_MRAWS_green_rail_F";
 _MATmag1 = "MRAWS_HEAT_F";
 _MATmag2 = "MRAWS_HE_F";
 
 // Surface Air
-_SAM = "launch_I_Titan_F";
+_SAM = "launch_I_Titan_eaf_F";
 _SAMmag = "Titan_AA";
 
 // Heavy AT
@@ -259,35 +260,35 @@ _jet = ["jp"];
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
 
-_baseUniform = ["U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt"];
-_baseHelmet = ["H_HelmetIA"];
+_baseUniform = ["U_I_E_Uniform_01_F","U_I_E_Uniform_01_shortsleeve_F","U_I_E_Uniform_01_tanktop_F"];
+_baseHelmet = ["H_HelmetHBK_headset_F","H_HelmetHBK_F","H_HelmetHBK_ear_F","H_HelmetHBK_headset_F"]; //50% chance of the best looking helmet.
 _baseGlasses = [];
 
 // Vests
-_lightRig = ["V_PlateCarrierIA2_dgtl"];
-_standardRig = ["V_PlateCarrierIA2_dgtl"];
+_lightRig = ["V_CarrierRigKBT_01_light_EAF_F"];
+_standardRig = ["V_CarrierRigKBT_01_light_EAF_F"];
 
 // Diver
-_diverUniform =  ["U_I_Wetsuit"];
+_diverUniform =  ["U_B_Wetsuit"];
 _diverHelmet = [];
 _diverRig = ["V_RebreatherIA"];
 _diverGlasses = ["G_Diving"];
 
 // Pilot
-_pilotUniform = ["U_I_HeliPilotCoveralls"];
-_pilotHelmet = ["H_PilotHelmetHeli_I"];
+_pilotUniform = ["U_I_E_Uniform_01_coveralls_F"];
+_pilotHelmet = ["H_PilotHelmetHeli_I_E"];
 _pilotRig = ["V_TacVest_oli"];
 _pilotGlasses = [];
 
 // Jet Pilot
-_jetUniform = ["U_I_pilotCoveralls"];
+_jetUniform = ["U_I_E_Uniform_01_coveralls_F"];
 _jetHelmet = ["H_PilotHelmetFighter_I"];
 _jetRig = [];
 _jetGlasses = [];
 
 // Crewman
-_crewUniform = ["U_I_CombatUniform"];
-_crewHelmet = ["H_HelmetCrew_I"];
+_crewUniform = ["U_I_E_Uniform_01_F"];
+_crewHelmet = ["H_Tank_eaf_F"];
 _crewRig = ["V_TacVest_oli"];
 _crewGlasses = [];
 
@@ -347,12 +348,12 @@ _loadout = f_param_loadouts;
 
 // Light Loadout
 if (_loadout == 0) then {
-	#include "f_assignGear_aaf_light.sqf"
+	#include "f_assignGear_ldf_light.sqf"
 };
 
 // Standard Loadout
 if (_loadout == 1) then {
-	#include "f_assignGear_aaf_standard.sqf"
+	#include "f_assignGear_ldf_standard.sqf"
 };
 
 // ====================================================================================

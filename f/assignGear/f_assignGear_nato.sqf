@@ -192,6 +192,7 @@ _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
 _baghsamg = "B_AA_01_weapon_F";			// used by Heavy SAM gunner
 _baghsamag = "B_HMG_01_support_F";			// used by Heavy SAM assistant gunner **
+_bagRadio = "B_RadioBag_01_mtp_F";	
 
 // ====================================================================================
 
@@ -219,7 +220,7 @@ _DMriflemag_tr = "30Rnd_65x39_caseless_mag_Tracer";
 
 // Rifleman AT
 _RAT = "launch_MRAWS_sand_F";
-_RATmag1 = "MRAWS_HEAT_F";
+_RATmag1 = "MRAWS_HEAT55_F";
 _RATmag2 = "MRAWS_HE_F";
 
 // Medium AT
