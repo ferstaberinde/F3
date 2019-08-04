@@ -165,6 +165,68 @@ f_var_groupData_blufor_gen = [
 	["GrpGEN_TH1",     _hel, "TH1",    "ColorOrange",  "Gendarmerie TH1 -"]
 ];
 
+f_var_groupData_blufor_ctrg = [
+	["GrpCTRG_CO",     _hq,  "CO",     "ColorYellow",  "CTRG CO -"],
+	["GrpCTRG_DC",     _hq,  "DC",     "ColorYellow",  "CTRG DC -"],
+	["GrpCTRG_COV",    _ifv, "COV",    "ColorYellow",  "CTRG COV -"],
+
+	["GrpCTRG_ASL",    _hq,  "ASL",    "ColorRed",     "CTRG ASL -"],
+	["GrpCTRG_A1",     _ft,  "A1",     "ColorRed",     "CTRG A1 -"],
+	["GrpCTRG_A2",     _ft,  "A2",     "ColorRed",     "CTRG A2 -"],
+	["GrpCTRG_AV",     _ifv, "AV",     "ColorRed",     "CTRG AV -"],
+
+	["GrpCTRG_BSL",    _hq,  "BSL",    "ColorBlue",    "CTRG BSL -"],
+	["GrpCTRG_B1",     _ft,  "B1",     "ColorBlue",    "CTRG B1 -"],
+	["GrpCTRG_B2",     _ft,  "B2",     "ColorBlue",    "CTRG B2 -"],
+	["GrpCTRG_BV",     _ifv, "BV",     "ColorBlue",    "CTRG BV -"],
+
+	["GrpCTRG_CSL",    _hq,  "CSL",    "ColorGreen",   "CTRG CSL -"],
+	["GrpCTRG_C1",     _ft,  "C1",     "ColorGreen",   "CTRG C1 -"],
+	["GrpCTRG_C2",     _ft,  "C2",     "ColorGreen",   "CTRG C2 -"],
+	["GrpCTRG_CV",     _ifv, "CV",     "ColorGreen",   "CTRG CV -"],
+
+	["GrpCTRG_JSL",    _hq,  "JSL",    "ColorPink",    "CTRG JSL -"],
+	["GrpCTRG_J1",     _ft,  "J1",     "ColorPink",    "CTRG J1 -"],
+	["GrpCTRG_J2",     _ft,  "J2",     "ColorPink",    "CTRG J2 -"],
+	["GrpCTRG_JV",     _ifv, "JV",     "ColorPink",    "CTRG JV -"],
+
+	["GrpCTRG_MMG1",   _sup, "MMG1",   "ColorOrange",  "CTRG MMG1 -"],
+	["GrpCTRG_MMG2",   _sup, "MMG2",   "ColorOrange",  "CTRG MMG2 -"],
+	["GrpCTRG_HMG1",   _sup, "HMG1",   "ColorOrange",  "CTRG HMG1 -"],
+	["GrpCTRG_MAT1",   _lau, "MAT1",   "ColorOrange",  "CTRG MAT1 -"],
+	["GrpCTRG_MAT2",   _lau, "MAT2",   "ColorOrange",  "CTRG MAT2 -"],
+	["GrpCTRG_HAT1",   _lau, "HAT1",   "ColorOrange",  "CTRG HAT1 -"],
+	["GrpCTRG_MTR1",   _mor, "MTR1",   "ColorOrange",  "CTRG MTR1 -"],
+	["GrpCTRG_MSAM1",  _lau, "MSAM1",  "ColorOrange",  "CTRG MSAM1 -"],
+	["GrpCTRG_HSAM1",  _lau, "HSAM1",  "ColorOrange",  "CTRG HSAM1 -"],
+	["GrpCTRG_ST1",    _rec, "ST1",    "ColorOrange",  "CTRG ST1 -"],
+	["GrpCTRG_DT1",    _rec, "DT1",    "ColorOrange",  "CTRG DT1 -"],
+	["GrpCTRG_ENG1",   _eng, "ENG1",   "ColorOrange",  "CTRG ENG1 -"],
+
+	["GrpCTRG_IFV1",   _ifv, "IFV1",   "ColorOrange",  "CTRG IFV1 -"],
+	["GrpCTRG_IFV2",   _ifv, "IFV2",   "ColorOrange",  "CTRG IFV2 -"],
+	["GrpCTRG_TNK1",   _tnk, "TNK1",   "ColorRed",     "CTRG TNK1 -"],
+
+	["GrpCTRG_CAS1",   _pla, "CAS1",   "ColorOrange",  "CTRG CAS1 -"],
+
+	["GrpCTRG_TH1",    _hel, "TH1",    "ColorRed",     "CTRG TH1 -"],
+	["GrpCTRG_TH2",    _hel, "TH2",    "ColorRed",     "CTRG TH2 -"],
+	["GrpCTRG_TH3",    _hel, "TH3",    "ColorBlue",    "CTRG TH3 -"],
+	["GrpCTRG_TH4",    _hel, "TH4",    "ColorBlue",    "CTRG TH4 -"],
+	["GrpCTRG_TH5",    _hel, "TH5",    "ColorGreen",   "CTRG TH5 -"],
+	["GrpCTRG_TH6",    _hel, "TH6",    "ColorGreen",   "CTRG TH6 -"],
+	["GrpCTRG_TH7",    _hel, "TH7",    "ColorOrange",  "CTRG TH7 -"],
+	["GrpCTRG_TH8",    _hel, "TH8",    "ColorOrange",  "CTRG TH8 -"],
+
+	["GrpCTRG_AH1",    _hel, "AH1",    "ColorRed",     "CTRG AH1 -"],
+
+	["UnitCTRG_CO_M",  _med, "COM",    "ColorBlack",   ""],
+	["UnitCTRG_DC_M",  _med, "DCM",    "ColorBlack",   ""],
+	["UnitCTRG_ASL_M", _med, "AM",     "ColorBlack",   ""],
+	["UnitCTRG_BSL_M", _med, "BM",     "ColorBlack",   ""],
+	["UnitCTRG_CSL_M", _med, "CM",     "ColorBlack",   ""]
+];
+
 f_var_groupData_opfor_csat = [
 	["GrpCSAT_CO",     _hq,  "CO",     "ColorYellow",  "CSAT CO -"],
 	["GrpCSAT_DC",     _hq,  "DC",     "ColorYellow",  "CSAT DC -"],
@@ -657,7 +719,7 @@ f_var_groupData_indfor_LDF = [
 	["UnitLDF_CSL_M", _med, "CM",     "ColorBlack",   ""]
 ];
 
-f_var_groupData_indfor_npr = [
+f_var_groupData_opfor_npr = [
 	["GrpNPR_CO",     _hq,  "CO",     "ColorYellow",  "NPR CO -"],
 	["GrpNPR_DC",     _hq,  "DC",     "ColorYellow",  "NPR DC -"],
 	["GrpNPR_COV",    _ifv, "COV",    "ColorYellow",  "NPR COV -"],
@@ -730,15 +792,16 @@ f_var_groupData_all = [];
 f_var_groupData_all append f_var_groupData_blufor_nato;
 f_var_groupData_all append f_var_groupData_blufor_fia;
 f_var_groupData_all append f_var_groupData_blufor_gen;
+f_var_groupData_all append f_var_groupData_blufor_ctrg;
 f_var_groupData_all append f_var_groupData_opfor_csat;
 f_var_groupData_all append f_var_groupData_opfor_fia;
 f_var_groupData_all append f_var_groupData_opfor_spetsnaz;
+f_var_groupData_all append f_var_groupData_opfor_npr;
 f_var_groupData_all append f_var_groupData_indfor_aaf;
 f_var_groupData_all append f_var_groupData_indfor_fia;
 f_var_groupData_all append f_var_groupData_indfor_syn;
 f_var_groupData_all append f_var_groupData_indfor_3ifb;
 f_var_groupData_all append f_var_groupData_indfor_ldf;
-f_var_groupData_all append f_var_groupData_indfor_npr;
 f_var_groupData_all append f_var_groupData_civ;
 
 // ====================================================================================
