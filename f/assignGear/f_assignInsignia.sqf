@@ -102,7 +102,7 @@ switch (true) do
 			];
 		};
 	};
-	case (_faction in ["blu_t_f","blu_w_f","natoPacific","natoWoodland"]): {
+	case (_faction in ["blu_t_f","blu_w_f","natopacific","natowoodland"]): {
 		_groupBadges = [
 			["GrpNATO_ASL","NATO_Pacific_ASL_Badge"],
 			["GrpNATO_A1","NATO_Pacific_A1_Badge"],
