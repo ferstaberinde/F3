@@ -49,7 +49,7 @@ private _roleBadge = switch (_typeofUnit) do
 			case (_faction in ["opf_t_f","csatpacific"]) : {"CSAT_Pacific_Medic_Badge"};
 			case (_faction in ["ind_f","ind_e_f","aaf","ldf"]) : {"AAF_Medic_Badge"};
 			case (_faction in ["opf_r_f","spetsnaz"]) : {"CSAT_Pacific_Medic_Badge"};
-			case (_faction in ["blu_ctrg_f","ctrg"]) : {_NATO_Medic_Badge"};
+			case (_faction in ["blu_ctrg_f","ctrg"]) : {_NATO_Medic_Badge};
 			default {"NATO_Medic_Badge"};
 		};
 	};
