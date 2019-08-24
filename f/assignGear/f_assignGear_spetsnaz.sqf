@@ -71,9 +71,8 @@
 _attach1 = "acc_pointer_IR";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
-_silencer1 = "muzzle_snds_M";	// 5.56 suppressor
-_silencer2 = "muzzle_snds_H";	// 6.5 suppressor
-_silencer2 = "muzzle_snds_B";	// 7.62 suppressor
+_silencer1 = "muzzle_snds_B";	// 7.62 suppressor
+_silencer2 = "muzzle_snds_B_khk_F";	// 7.62 green suppressor
 
 _scope1 = "optic_Holosight_blk_F";		// Holo alts: "optic_Holosight_lush_F"; "optic_Holosight_arid_F";
 _scope2 = "optic_ARCO_AK_Blk_F";		// ARCO Scope alts: "optic_ARCO_AK_lush_F";  "optic_ARCO_AK_arid_F";
@@ -81,7 +80,7 @@ _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
 _bipod1 = "bipod_02_F_blk";		// Default bipod
 _bipod2 = "bipod_02_F_lush";	// Lush bipod
-_bipod2 = "bipod_02_F_arid";	// Arid bipod
+// _bipod2 = "bipod_02_F_arid";	 // Arid bipod
 
 // Default setup
 _attachments = [_scope1]; // The default attachment set for most units, overwritten in the individual unitType

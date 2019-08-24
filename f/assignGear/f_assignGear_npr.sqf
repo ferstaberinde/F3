@@ -71,8 +71,8 @@
 _attach1 = "";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
-_silencer1 = "muzzle_snds_M";	// 5.56 suppressor
-_silencer2 = "muzzle_snds_H";	// 6.5 suppressor
+_silencer1 = "muzzle_snds_B";	// 7.62 suppressor
+_silencer2 = "muzzle_snds_M";	// 5.56 suppressor
 
 _scope1 = "optic_ACO";			// ACO
 _scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
@@ -188,8 +188,8 @@ _nvg = "NVGoggles_OPFOR";
 _laserdesignator = "Laserdesignator_03";
 
 // UAV Terminal
-_uavterminal = "B_UavTerminal";	  // BLUFOR - FIA
-//_uavterminal = "O_UavTerminal"; // OPFOR - FIA
+//_uavterminal = "B_UavTerminal";	  // BLUFOR - FIA
+  _uavterminal = "O_UavTerminal"; // OPFOR - FIA
 //_uavterminal = "I_UavTerminal"; // INDP - FIA
 
 // Chemlights
@@ -202,7 +202,7 @@ _chemblue = "Chemlight_blue";
 _bag = "B_FieldPack_green_F";
 _bagLarge = "B_Carryall_oli";
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
-_baguav = "I_UAV_01_backpack_F";			// used by UAV operator
+_baguav = "O_UAV_01_backpack_F";			// used by UAV operator
 _baghmgg = "I_HMG_01_weapon_F";			// used by Heavy MG gunner
 _baghmgag = "I_HMG_01_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "I_AssaultPack_cbr";			// used by Heavy AT gunner
@@ -242,14 +242,14 @@ _DMriflemag = "10Rnd_Mk14_762x51_Mag";
 _DMriflemag_tr = "10Rnd_Mk14_762x51_Mag";
 
 // Rifleman AT
-_RAT = "launch_MRAWS_olive_rail_F";
-_RATmag1 = "MRAWS_HEAT_F";
-_RATmag2 = "MRAWS_HE_F";
+_RAT = "launch_RPG32_green_F";
+_RATmag1 = "RPG32_F";
+_RATmag2 = "RPG32_HE_F";
 
 // Medium AT
-_MAT = "launch_MRAWS_olive_rail_F";
-_MATmag1 = "MRAWS_HEAT_F";
-_MATmag2 = "MRAWS_HE_F";
+_MAT = "launch_RPG32_green_F";
+_MATmag1 = "RPG32_F";
+_MATmag2 = "RPG32_HE_F";
 
 // Surface Air
 _SAM = "launch_Titan_F";
@@ -288,11 +288,11 @@ _jet = ["jp"];
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
 
-_baseUniform = ["U_O_R_Gorka_01_camo_F","U_O_R_Gorka_01_black_F","U_I_L_Uniform_01_camo_F","U_I_L_Uniform_01_deserter_F","U_BG_Guerilla2_3","U_BG_Guerilla3_1","U_BG_Guerilla3_2","U_BG_Guerrilla_6_1","U_C_E_LooterJacket_01_F","U_I_L_Uniform_01_tshirt_black_F","U_I_L_Uniform_01_tshirt_olive_F","U_I_L_Uniform_01_tshirt_skull_F"];
-_baseHelmet = ["H_Shemag_olive","H_Bandanna_khk","H_Cap_oli","H_Cap_blk","H_Watchcap_blk","H_Watchcap_camo","H_Bandanna_camo"];
-_baseGlasses = ["G_Bandanna_blk","G_Bandanna_oli"];
-//_baseHelmet = [""];
-//_baseGlasses = ["G_Balaclava_oli","G_Balaclava_oli","G_Balaclava_blk"];
+_baseUniform = ["U_O_R_Gorka_01_camo_F","U_O_R_Gorka_01_black_F","U_I_L_Uniform_01_camo_F","U_I_L_Uniform_01_deserter_F","U_BG_Guerilla2_3","U_BG_Guerilla3_1","U_BG_Guerilla3_2","U_BG_Guerrilla_6_1","U_C_E_LooterJacket_01_F"];
+//_baseHelmet = ["H_Shemag_olive","H_Bandanna_khk","H_Cap_oli","H_Cap_blk","H_Watchcap_blk","H_Watchcap_camo","H_Bandanna_camo"];
+//_baseGlasses = ["G_Bandanna_blk","G_Bandanna_oli"];
+_baseHelmet = [""];
+_baseGlasses = ["G_Balaclava_oli","G_Balaclava_blk"];
 
 // Vests
 _lightRig = ["V_TacVest_camo","V_I_G_resistanceLeader_F","V_TacVest_oli"];
