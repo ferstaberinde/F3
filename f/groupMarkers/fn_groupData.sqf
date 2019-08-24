@@ -571,8 +571,8 @@ f_var_groupData_indfor_syn = [
 	["GrpSyn_DT1",     _rec, "DT1",    "ColorOrange",  "Syndikat DT1 -"],
 	["GrpSyn_ENG1",    _eng, "ENG1",   "ColorOrange",  "Syndikat ENG1 -"],
 
-	["GrpSyn_IFV1",    _ifv, "TECH1",  "ColorRed",     "Syndikat IFV1 -"],
-	["GrpSyn_IFV2",    _ifv, "TECH2",  "ColorRed",     "Syndikat IFV2 -"],
+	["GrpSyn_IFV1",    _ifv, "TECH1",  "ColorRed",     "Syndikat TECH1 -"],
+	["GrpSyn_IFV2",    _ifv, "TECH2",  "ColorRed",     "Syndikat TECH2 -"],
 	["GrpSyn_TNK1",    _tnk, "TNK1",   "ColorRed",     "Syndikat TNK1 -"],
 
 	["GrpSyn_CAS1",    _pla, "CAS1",   "ColorOrange",  "Syndikat CAS1 -"],
