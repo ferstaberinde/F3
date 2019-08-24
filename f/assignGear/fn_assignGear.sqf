@@ -33,9 +33,7 @@ _insignia_style_NATO = "Altis"; // Options: "Altis" | "Tanoa"
 _insignia_style_CSAT = "Altis"; // Options: "Altis" | "Tanoa" | "Urban"
 
 _insignia_styles = [_insignia_style_NATO,_insignia_style_CSAT];
-[_unit,_typeofUnit,_insignia_styles] spawn {
-	#include "f_assignInsignia.sqf"
-};
+[_unit,_typeofUnit,_insignia_styles] spawn f_fnc_assignInsignia;
 
 // ====================================================================================
 
