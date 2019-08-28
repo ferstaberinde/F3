@@ -17,11 +17,15 @@ private _hiddenGroups = [];
 private _icon_arrow = "<img image='\A3\ui_f\data\gui\rscCommon\rscTree\hiddenTexture_ca.paa' height='16'/>";
 
 // Add groups to ORBAT if side matches, group isn't already listed, and group has players
-private _groups = allGroups select {(side _x == side group player) && ({_x in playableUnits} count units _x) > 0};
+private _playableUnits = if (isMultiplayer) then {playableUnits} else {switchableUnits};
+private _groups = allGroups select {(side _x == side group player) && ({_x in _playableUnits} count units _x) > 0};
 //Only allow unique groups:
 _groups = _groups arrayIntersect _groups;
 // Remove groups we don't want to show
 _groups = _groups - _hiddenGroups;
+
+//Get all units from these groups, so that we can take their specialist marker from _groupData
+private _units = []; {_units append units _x} forEach _groups;
 
 // Use the groupData,
 // change the variable name (the first field) to the variable itself,
@@ -29,12 +33,32 @@ _groups = _groups - _hiddenGroups;
 private _groupData = f_var_groupData_all apply {
 	[
 		missionNamespace getVariable [_x select 0,grpNull], 
-		_x select 1, 
-		_x select 3
+		getText (configfile >> "CfgMarkers" >> (_x select 1) >> "icon"),
+		getArray (configfile >> "CfgMarkerColors" >> (_x select 3) >> "color") call BIS_fnc_colorRGBAtoHTML
 	]
-} select { ! isNull (_x select 0) && {(_x select 0) in _groups}};
+} select { ! isNull (_x select 0) && {(_x select 0) in (_groups + _units)}};
 
-// Loop through the group, print out group ID, leader name and medics if present
+//Helper function to get marker from _groupData
+private _fnc_getMarker = {
+	params [
+		["_unitOrGroup", objNull, [grpNull, objNull]],
+		["_groupFallback", false, [false]] //fall back to group if the unit doesn't have a marker
+	];
+	private _unitData = _groupData select {_x select 0 isEqualTo _unitOrGroup};
+	private _icon = if (count _unitData > 0) then {
+		_unitData select 0 params ["", "_mIcon", "_mColor"];
+		format [" <img color='%1' image='%2' height='20'/> ", _mColor, _mIcon]
+	} else {
+		if (_groupFallback && _unitOrGroup isEqualType objNull) then {
+			[group _unitOrGroup] call _fnc_getMarker
+		} else {
+			""
+		}
+	};
+	_icon
+};
+
+// Loop through the group, print out group ID, leader name and special units if present
 {
 	// Highlight the player's group with a different color (based on the player's side)
 	private _color = "#FFFFFF";
@@ -47,36 +71,30 @@ private _groupData = f_var_groupData_all apply {
  		};
 	};
 
-	//group marker icon:
-	private _thisGroup = _x;
-	private _dataForThisGroup = _groupData select {_x select 0 == _thisGroup};
-	if (count _dataForThisGroup > 0) then {
-		_dataForThisGroup select 0 params ["", "_mIcon", "_mColor"];
-		_mIcon = getText (configfile >> "CfgMarkers" >> _mIcon >> "icon");
-		_mColor = getArray (configfile >> "CfgMarkerColors" >> _mColor >> "color") call BIS_fnc_colorRGBAtoHTML;
-		_orbatText = _orbatText + format ["<img color='%1' image='%2' height='20'/> ", _mColor, _mIcon];
-	};
-
-	_orbatText = _orbatText + format ["<font color='%3'>%1 %2</font>", _x, name leader _x,_color] + "<br />";
+	private _icon = [_x] call _fnc_getMarker;
+	_orbatText = _orbatText + format ["%1<font color='%4'>%2 %3</font>", _icon, _x, name leader _x,_color] + "<br />";
 
 	{
+		private _unit = _x;
+		private _icon = [_unit] call _fnc_getMarker;
 		//Note: FAC is a specialised JTAC. so additional differentiation is needed
-		_orbatText = _orbatText + (switch [_x getVariable ["f_var_assignGear",""], (roleDescription _x) find "FAC" != -1] do {
-			case ["m",    false]: { format["%1 %2 [M]<br />",    _icon_arrow, name _x] };
-			case ["jtac", false]: { format["%1 %2 [JTAC]<br />", _icon_arrow, name _x] };
-			case ["jtac", true ]: { format["%1 %2 [FAC]<br />",  _icon_arrow, name _x] };
+		private _type = switch [_unit getVariable ["f_var_assignGear",""], (roleDescription _unit) find "FAC" != -1] do {
+			case ["m",    false]: { "[M]"    };
+			case ["jtac", false]: { "[JTAC]" };
+			case ["jtac", true ]: { "[FAC]"  };
 			default { "" };
-		});
+		};
+		if (count _type > 0 || {count _icon > 0}) then {
+			_orbatText = _orbatText + format["%1%2 %3 %4<br />", _icon_arrow, _icon, name _unit, _type];
+		};
 	} forEach (units _x - [leader _x]);
 } forEach _groups;
 
 // Get all player vehicles
 private _veharray = [];
 {
-	{
-		_veharray pushBackUnique (vehicle _x);
-	} forEach (units _x select {vehicle _x != _x});
-} forEach _groups;
+	_veharray pushBackUnique (vehicle _x);
+} forEach (_units select {vehicle _x != _x});
 
 if (count _veharray > 0) then {
 
@@ -111,22 +129,22 @@ if (count _veharray > 0) then {
 					default {" [C]"};
 				};
 
-				_orbatText = _orbatText + format["%1 %2", _icon_arrow, name _x] + _crewrole + "<br/>";
+				private _icon = [_x, true] call _fnc_getMarker;
+				_orbatText = _orbatText + format["%1%2 %3", _icon_arrow, _icon, name _x] + _crewrole + "<br/>";
 			};
 		} forEach crew _x;
 
+		// Print groups in cargo
 		private _groupList = [];
 		{
-			if (!(group _x in _groupList) && {(assignedVehicleRole _x select 0) == "CARGO"} count (units group _x) > 0) then {
-				_groupList pushBack (group _x);
+			if ({(assignedVehicleRole _x select 0) == "CARGO"} count (units group _x) > 0) then {
+				_groupList pushBackUnique (group _x);
 			};
 		} forEach crew _x;
-
-		if (count _groupList > 0) then {
-			{
-				_orbatText =_orbatText + format["%1 %2", _icon_arrow, _x] + " [CARGO] <br />";
-			} forEach _groupList;
-		};
+		{
+			private _icon = [_x] call _fnc_getMarker;
+			_orbatText =_orbatText + format["%1%2 %3", _icon_arrow, _icon, _x] + " [CARGO] <br />";
+		} forEach _groupList;
 
 	} forEach _veharray;
 
