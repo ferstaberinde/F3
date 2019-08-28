@@ -16,23 +16,21 @@ private _faction = toLower ([_unit] call f_fnc_virtualFaction);
 
 // The following block of code determines which NATO and CSAT insignia variants will be used:
 
-_insignia_style_NATO = _insignia_styles select 0;
-_insignia_style_CSAT = _insignia_styles select 1;
+_insignia_styles params [
+	["_insignia_style_NATO", "Altis", [""]],
+	["_insignia_style_CSAT", "Altis", [""]]
+];
 
-_NATO_Medic_Badge = "NATO_Medic_Badge";
-_CSAT_Medic_Badge = "CSAT_Medic_Badge";
-
-if (_insignia_style_NATO == "Tanoa") then {_NATO_Medic_Badge = "NATO_Pacific_Medic_Badge"};
-
-switch (_insignia_style_CSAT) do
-	{
-	case "Tanoa" : {_CSAT_Medic_Badge = "CSAT_Pacific_Medic_Badge";};
-	case "Altis" : {_CSAT_Medic_Badge = "CSAT_Medic_Badge";};
-	case "Urban" : {_CSAT_Medic_Badge = "CSAT_Urban_Medic_Badge";};
-	};
-
-// Treat CTRG like BLUFOR
-if (_faction == "blu_ctrg_f") then {_faction = "blu_f"};
+private _NATO_Medic_Badge = switch (_insignia_style_NATO) do {
+	case "Tanoa" : {"NATO_Pacific_Medic_Badge"};
+	default        {"NATO_Medic_Badge"};
+};
+private _CSAT_Medic_Badge = switch (_insignia_style_CSAT) do {
+	case "Tanoa" : {"CSAT_Pacific_Medic_Badge"};
+	case "Altis" : {"CSAT_Medic_Badge"};
+	case "Urban" : {"CSAT_Urban_Medic_Badge"};
+	default        {"CSAT_Medic_Badge"};
+};
 
 // ===================================================================================
 
@@ -44,11 +42,15 @@ private _roleBadge = switch (_typeofUnit) do
 // INSIGNIA: MEDIC
 	case "m":
 	{
-		switch (_faction) do
+		switch (true) do
 		{
-			case "blu_f" : {_NATO_Medic_Badge};
-			case "opf_f" : {_CSAT_Medic_Badge};
-			case "ind_f" : {"AAF_Medic_Badge"};
+			case (_faction in ["blu_f","nato"]) : {_NATO_Medic_Badge};
+			case (_faction in ["blu_t_f","blu_w_f","natopacific","natowoodland"]) : {"NATO_Pacific_Medic_Badge"};
+			case (_faction in ["opf_f","csat"]) : {_CSAT_Medic_Badge};
+			case (_faction in ["opf_t_f","csatpacific"]) : {"CSAT_Pacific_Medic_Badge"};
+			case (_faction in ["ind_f","ind_e_f","aaf","ldf"]) : {"AAF_Medic_Badge"};
+			case (_faction in ["opf_r_f","spetsnaz"]) : {"CSAT_Pacific_Medic_Badge"};
+			case (_faction in ["blu_ctrg_f","ctrg"]) : {_NATO_Medic_Badge};
 			default {"NATO_Medic_Badge"};
 		};
 	};
@@ -62,9 +64,9 @@ private _roleBadge = switch (_typeofUnit) do
 
 private _groupBadges = [];
 
-switch (_faction) do
+switch (true) do
 {
-	case "blu_f" : {
+	case (_faction in ["blu_f","nato"]) : {
 		if (_insignia_style_NATO == "Tanoa") then {
 			_groupBadges = [
 				["GrpNATO_ASL","NATO_Pacific_ASL_Badge"],
@@ -101,7 +103,7 @@ switch (_faction) do
 			];
 		};
 	};
-	case "blu_t_f": {
+	case (_faction in ["blu_t_f","blu_w_f","natopacific","natowoodland"]): {
 		_groupBadges = [
 			["GrpNATO_ASL","NATO_Pacific_ASL_Badge"],
 			["GrpNATO_A1","NATO_Pacific_A1_Badge"],
@@ -119,7 +121,8 @@ switch (_faction) do
 			["GrpNATO_DC","NATO_Pacific_DC_Badge"]
 		];
 	};
-	case "opf_f": {
+	
+	case (_faction in ["opf_f","csat"]): {
 		switch (_insignia_style_CSAT) do
 		{
 			case "Tanoa" : {
@@ -178,7 +181,7 @@ switch (_faction) do
 			};
 		};
 	};
-	case "opf_t_f": {
+	case (_faction in ["opf_t_f","csatPacific"]): {
 		_groupBadges = [
 			["GrpCSAT_ASL","CSAT_Pacific_ASL_Badge"],
 			["GrpCSAT_A1","CSAT_Pacific_A1_Badge"],
@@ -196,7 +199,25 @@ switch (_faction) do
 			["GrpCSAT_DC","CSAT_Pacific_DC_Badge"]
 		];
 	};
-	case "ind_f": {
+	case (_faction in ["opf_r_f","spetsnaz"]): {
+		_groupBadges = [
+			["GrpSpetsnaz_ASL","CSAT_Pacific_ASL_Badge"],
+			["GrpSpetsnaz_A1","CSAT_Pacific_A1_Badge"],
+			["GrpSpetsnaz_A2","CSAT_Pacific_A2_Badge"],
+			["GrpSpetsnaz_A3","CSAT_Pacific_A3_Badge"],
+			["GrpSpetsnaz_BSL","CSAT_Pacific_BSL_Badge"],
+			["GrpSpetsnaz_B1","CSAT_Pacific_B1_Badge"],
+			["GrpSpetsnaz_B2","CSAT_Pacific_B2_Badge"],
+			["GrpSpetsnaz_B3","CSAT_Pacific_B3_Badge"],
+			["GrpSpetsnaz_CSL","CSAT_Pacific_CSL_Badge"],
+			["GrpSpetsnaz_C1","CSAT_Pacific_C1_Badge"],
+			["GrpSpetsnaz_C2","CSAT_Pacific_C2_Badge"],
+			["GrpSpetsnaz_C3","CSAT_Pacific_C3_Badge"],
+			["GrpSpetsnaz_CO","CSAT_Pacific_CO_Badge"],
+			["GrpSpetsnaz_DC","CSAT_Pacific_DC_Badge"]
+		];
+	};
+	case (_faction in ["ind_f","aaf"]): {
 		_groupBadges = [
 			["GrpAAF_ASL","AAF_ASL_Badge"],
 			["GrpAAF_A1","AAF_A1_Badge"],
@@ -214,7 +235,43 @@ switch (_faction) do
 			["GrpAAF_DC","AAF_DC_Badge"]
 		];
 	};
-	case "blu_g_f" : {
+	case (_faction in ["ind_e_f","ldf"]): {
+		_groupBadges = [
+			["GrpLDF_ASL","AAF_ASL_Badge"],
+			["GrpLDF_A1","AAF_A1_Badge"],
+			["GrpLDF_A2","AAF_A2_Badge"],
+			["GrpLDF_A3","AAF_A3_Badge"],
+			["GrpLDF_BSL","AAF_BSL_Badge"],
+			["GrpLDF_B1","AAF_B1_Badge"],
+			["GrpLDF_B2","AAF_B2_Badge"],
+			["GrpLDF_B3","AAF_B3_Badge"],
+			["GrpLDF_CSL","AAF_CSL_Badge"],
+			["GrpLDF_C1","AAF_C1_Badge"],
+			["GrpLDF_C2","AAF_C2_Badge"],
+			["GrpLDF_C3","AAF_C3_Badge"],
+			["GrpLDF_CO","AAF_CO_Badge"],
+			["GrpLDF_DC","AAF_DC_Badge"]
+		];
+	};
+	case (_faction in ["blu_ctrg_f","ctrg"]): {
+		_groupBadges = [
+			["GrpCTRG_ASL","NATO_ASL_Badge"],
+			["GrpCTRG_A1","NATO_A1_Badge"],
+			["GrpCTRG_A2","NATO_A2_Badge"],
+			["GrpCTRG_A3","NATO_A3_Badge"],
+			["GrpCTRG_BSL","NATO_BSL_Badge"],
+			["GrpCTRG_B1","NATO_B1_Badge"],
+			["GrpCTRG_B2","NATO_B2_Badge"],
+			["GrpCTRG_B3","NATO_B3_Badge"],
+			["GrpCTRG_CSL","NATO_CSL_Badge"],
+			["GrpCTRG_C1","NATO_C1_Badge"],
+			["GrpCTRG_C2","NATO_C2_Badge"],
+			["GrpCTRG_C3","NATO_C3_Badge"],
+			["GrpCTRG_CO","NATO_CO_Badge"],
+			["GrpCTRG_DC","NATO_DC_Badge"]
+		];
+	};
+	case (_faction in ["blu_g_f","opf_g_f","ind_g_f","fia"]) : {
 		_groupBadges = [
 			["GrpFIA_ASL","NATO_ASL_Badge"],
 			["GrpFIA_A1","NATO_A1_Badge"],
@@ -229,11 +286,8 @@ switch (_faction) do
 			["GrpFIA_C2","NATO_C2_Badge"],
 			["GrpFIA_C3","NATO_C3_Badge"],
 			["GrpFIA_CO","NATO_CO_Badge"],
-			["GrpFIA_DC","NATO_DC_Badge"]
-		];
-	};
-	case "opf_g_f" :{
-		_groupBadges = [
+			["GrpFIA_DC","NATO_DC_Badge"],
+			
 			["GrpOFIA_ASL","NATO_ASL_Badge"],
 			["GrpOFIA_A1","NATO_A1_Badge"],
 			["GrpOFIA_A2","NATO_A2_Badge"],
@@ -247,11 +301,8 @@ switch (_faction) do
 			["GrpOFIA_C2","NATO_C2_Badge"],
 			["GrpOFIA_C3","NATO_C3_Badge"],
 			["GrpOFIA_CO","NATO_CO_Badge"],
-			["GrpOFIA_DC","NATO_DC_Badge"]
-		];
-	};
-	case "ind_g_f" :{
-		_groupBadges = [
+			["GrpOFIA_DC","NATO_DC_Badge"],
+			
 			["GrpIFIA_ASL","NATO_ASL_Badge"],
 			["GrpIFIA_A1","NATO_A1_Badge"],
 			["GrpIFIA_A2","NATO_A2_Badge"],
@@ -268,7 +319,7 @@ switch (_faction) do
 			["GrpIFIA_DC","NATO_DC_Badge"]
 		];
 	};
-	case "ind_c_f" :{
+	case (_faction in ["ind_c_f","syndikat"]) :{
 		_groupBadges = [
 			["GrpSyndikat_ASL","NATO_ASL_Badge"],
 			["GrpSyndikat_A1","NATO_A1_Badge"],
@@ -286,7 +337,25 @@ switch (_faction) do
 			["GrpSyndikat_DC","NATO_DC_Badge"]
 		];
 	};
-	case "3ifb" :{
+	case (_faction in ["ind_l_f","npr"]) :{
+		_groupBadges = [
+			["GrpNPR_ASL","NATO_ASL_Badge"],
+			["GrpNPR_A1","NATO_A1_Badge"],
+			["GrpNPR_A2","NATO_A2_Badge"],
+			["GrpNPR_A3","NATO_A3_Badge"],
+			["GrpNPR_BSL","NATO_BSL_Badge"],
+			["GrpNPR_B1","NATO_B1_Badge"],
+			["GrpNPR_B2","NATO_B2_Badge"],
+			["GrpNPR_B3","NATO_B3_Badge"],
+			["GrpNPR_CSL","NATO_CSL_Badge"],
+			["GrpNPR_C1","NATO_C1_Badge"],
+			["GrpNPR_C2","NATO_C2_Badge"],
+			["GrpNPR_C3","NATO_C3_Badge"],
+			["GrpNPR_CO","NATO_CO_Badge"],
+			["GrpNPR_DC","NATO_DC_Badge"]
+		];
+	};
+	case (_faction in ["3ifb"]) :{
 		_groupBadges = [
 			["Grp3IFB_ASL","NATO_ASL_Badge"],
 			["Grp3IFB_A1","NATO_A1_Badge"],

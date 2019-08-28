@@ -1,7 +1,7 @@
 if (_attachments isEqualType []) then {
 	removeAllPrimaryWeaponItems _unit;
 	{
-		// loop trough the attachments and add them to the weapon
+		// loop through the attachments and add them to the weapon
 		_unit addPrimaryWeaponItem _x;
 	} foreach _attachments;
 };
@@ -10,7 +10,18 @@ if (_attachments isEqualType []) then {
 if (_hg_attachments isEqualType []) then {
 	removeAllHandgunItems _unit;
 	{
-		// loop trough the attachments and add them to the weapon
+		// loop through the attachments and add them to the weapon
 		_unit addHandgunItem _x;
 	} foreach _hg_attachments;
+};
+
+// Handle launcher attachments
+if (_lau_attachments isEqualType []) then {
+	{
+		_unit removeSecondaryWeaponItem _x;
+	} forEach secondaryWeaponItems _unit;
+	{
+		// loop through the attachments and add them to the weapon
+		_unit addSecondaryWeaponItem _x;
+	} foreach _lau_attachments;
 };

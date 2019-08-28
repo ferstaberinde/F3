@@ -1,4 +1,4 @@
-// F3 - Folk ARPS Assign Gear Script - 3IFB - Light Loadout
+// F3 - Folk ARPS Assign Gear Script - NATO - Standard Loadout
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -19,8 +19,8 @@ switch (_typeofUnit) do
 		_attachments pushback (_bipod1); // Adds the bipod
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_ARmag, 1];
-		_unit addmagazines [_ARmag_tr, 1];
+		_unit addmagazines [_ARmag, 3];
+		_unit addmagazines [_ARmag_tr, 2];
 		_unit addmagazines [_grenade, 1];
 	};
 // Rifleman (AT) Loadout:
@@ -37,10 +37,12 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_RATmag1, 1];
+		_unit addmagazines [_RATmag2, 1];
 	};
 // Assistant Autorifleman Loadout:
 	case "aar":
 	{
+		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -48,7 +50,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
-		_unit addmagazines [_ARmag, 1];
+		_unit addmagazines [_ARmag, 2];
+		_unit addmagazines [_RATmag1, 1];
 	};
 // Fire Team Leader Loadout:
 	case "ftl":
@@ -233,6 +236,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_MATmag1, 2];
+		_unit addmagazines [_MATmag2, 1];
 	};
 // Medium AT Assistant Loadout:
 	case "matag":
@@ -246,6 +250,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_MATmag1, 2];
+		_unit addmagazines [_MATmag2, 1];
 	};
 // Medium AT Team Leader Loadout:
 	case "matl":
@@ -259,6 +264,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_MATmag1, 2];
+		_unit addmagazines [_MATmag2, 1];
 		_unit addWeapon "Rangefinder";
 	};
 // Heavy AT Gunner Loadout:
@@ -400,7 +406,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_SNrifleMag, 4];
+		_unit addmagazines [_SNrifleMag, 6];
 		_unit addmagazines [_pistolmag, 5];
 	};
 // Spotter Loadout:
@@ -415,7 +421,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade, 2];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
 		_unit addWeapon "Rangefinder";
-		_unit addmagazines [_SNrifleMag, 2];
+		_unit addmagazines [_SNrifleMag, 3];
 	};
 // Vehicle Commander Loadout:
 	case "vc":
@@ -574,7 +580,7 @@ switch (_typeofUnit) do
 	};
 
 // Include the loadouts for vehicles and crates:
-#include "f_assignGear_3IFB_v.sqf";
+#include "f_assignGear_nato_v.sqf";
 
 // Include the default case for error handling
 #include "f_assignGear_default.sqf";

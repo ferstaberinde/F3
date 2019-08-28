@@ -1,4 +1,4 @@
-// F3 - Folk ARPS Assign Gear Script - 3IFB - Light Loadout
+// F3 - Folk ARPS Assign Gear Script - NPR - Light Loadout
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -400,7 +400,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_SNrifleMag, 4];
+		_unit addmagazines [_SNrifleMag, 6];
 		_unit addmagazines [_pistolmag, 5];
 	};
 // Spotter Loadout:
@@ -415,7 +415,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade, 2];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
 		_unit addWeapon "Rangefinder";
-		_unit addmagazines [_SNrifleMag, 2];
+		_unit addmagazines [_SNrifleMag, 3];
 	};
 // Vehicle Commander Loadout:
 	case "vc":
@@ -574,7 +574,7 @@ switch (_typeofUnit) do
 	};
 
 // Include the loadouts for vehicles and crates:
-#include "f_assignGear_3IFB_v.sqf";
+#include "f_assignGear_npr_v.sqf";
 
 // Include the default case for error handling
 #include "f_assignGear_default.sqf";

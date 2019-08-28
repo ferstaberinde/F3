@@ -33,9 +33,7 @@ _insignia_style_NATO = "Altis"; // Options: "Altis" | "Tanoa"
 _insignia_style_CSAT = "Altis"; // Options: "Altis" | "Tanoa" | "Urban"
 
 _insignia_styles = [_insignia_style_NATO,_insignia_style_CSAT];
-[_unit,_typeofUnit,_insignia_styles] spawn {
-	#include "f_assignInsignia.sqf"
-};
+[_unit,_typeofUnit,_insignia_styles] spawn f_fnc_assignInsignia;
 
 // ====================================================================================
 
@@ -56,7 +54,7 @@ _unit setVariable ["f_var_assignGear",_typeofUnit,true];
 // DECLARE VARIABLES AND FUNCTIONS 2
 // Used by the faction-specific scripts
 
-private ["_attach1","_attach2","_silencer1","_silencer2","_scope1","_scope2","_scope3","_bipod1","_bipod2","_attachments","_silencer","_hg_silencer1","_hg_scope1","_hg_attachments","_rifle","_riflemag","_riflemag_tr","_carbine","_carbinemag","_carbinemag_tr","_smg","_smgmag","_smgmag_tr","_diverWep","_diverMag1","_diverMag2","_glrifle","_glriflemag","_glriflemag_tr","_glmag","_glsmokewhite","_glsmokegreen","_glsmokered","_glflarewhite","_glflarered","_glflareyellow","_glflaregreen","_pistol","_pistolmag","_grenade","_Mgrenade","_smokegrenade","_smokegrenadegreen","_smokegrenadeblue","_smokegrenadepurple","_firstaid","_medkit","_nvg","_uavterminal","_chemgreen","_chemred","_chemyellow","_chemblue","_bag","_bagLarge","_bagmediumdiver","_baguav","_baghmgg","_baghmgag","_baghatg","_baghatag","_bagmtrg","_bagmtrag","_baghsamg","_baghsamag","_AR","_ARmag","_ARmag_tr","_MMG","_MMGmag","_MMGmag_tr","_Tracer","_DMrifle","_DMriflemag","_RAT","_RATmag1","_RATmag2","_MAT","_MATmag1","_MATmag2","_SAM","_SAMmag","_HAT","_HATmag1","_HATmag2","_SNrifle","_SNrifleMag","_ATmine","_satchel","_APmine1","_APmine2","_diver","_pilot","_crew","_ghillie","_specOp","_baseUniform","_baseHelmet","_baseGlasses","_lightRig","_mediumRig","_heavyRig","_diverUniform","_diverHelmet","_diverRig","_diverGlasses","_pilotUniform","_pilotHelmet","_pilotRig","_pilotGlasses","_crewUniform","_crewHelmet","_crewRig","_crewGlasses","_ghillieUniform","_ghillieHelmet","_ghillieRig","_ghillieGlasses","_sfuniform","_sfhelmet","_sfRig","_sfGlasses","_backpack","_typeofBackPack","_loadout","_COrifle","_mgrenade","_DC","_SLrifle","_JTACrifle","_ftlrifle","_grenrifle","_typeofunit","_jet","_jetUniform","_jetHelmet","_jetRig","_jetGlasses"];
+private ["_lau_attach1","_lau_attachments","_attach1","_attach2","_silencer1","_silencer2","_scope1","_scope2","_scope3","_bipod1","_bipod2","_attachments","_silencer","_hg_silencer1","_hg_scope1","_hg_attachments","_rifle","_riflemag","_riflemag_tr","_carbine","_carbinemag","_carbinemag_tr","_shotgun","_shotgunmag1","_shotgunmag2","_smg","_smgmag","_smgmag_tr","_diverWep","_diverMag1","_diverMag2","_glrifle","_glriflemag","_glriflemag_tr","_glmag","_glsmokewhite","_glsmokegreen","_glsmokered","_glflarewhite","_glflarered","_glflareyellow","_glflaregreen","_pistol","_pistolmag","_grenade","_Mgrenade","_smokegrenade","_smokegrenadegreen","_smokegrenadeblue","_smokegrenadepurple","_firstaid","_medkit","_nvg","_uavterminal","_chemgreen","_chemred","_chemyellow","_chemblue","_bag","_bagLarge","_bagmediumdiver","_baguav","_baghmgg","_baghmgag","_baghatg","_baghatag","_bagmtrg","_bagmtrag","_baghsamg","_baghsamag","_bagRadio","_AR","_ARmag","_ARmag_tr","_MMG","_MMGmag","_MMGmag_tr","_Tracer","_DMrifle","_DMriflemag","_RAT","_RATmag1","_RATmag2","_MAT","_MATmag1","_MATmag2","_SAM","_SAMmag","_HAT","_HATmag1","_HATmag2","_SNrifle","_SNrifleMag","_ATmine","_satchel","_APmine1","_APmine2","_diver","_pilot","_crew","_ghillie","_specOp","_baseUniform","_baseHelmet","_baseGlasses","_lightRig","_mediumRig","_heavyRig","_diverUniform","_diverHelmet","_diverRig","_diverGlasses","_pilotUniform","_pilotHelmet","_pilotRig","_pilotGlasses","_crewUniform","_crewHelmet","_crewRig","_crewGlasses","_ghillieUniform","_ghillieHelmet","_ghillieRig","_ghillieGlasses","_sfuniform","_sfhelmet","_sfRig","_sfGlasses","_backpack","_typeofBackPack","_loadout","_COrifle","_mgrenade","_DC","_SLrifle","_JTACrifle","_ftlrifle","_grenrifle","_typeofunit","_jet","_jetUniform","_jetHelmet","_jetRig","_jetGlasses"];
 
 // ====================================================================================
 
@@ -82,6 +80,7 @@ if (f_param_debugMode == 1) then
 if (_faction in ["blu_f","nato"]) then {
 	#include "f_assignGear_nato.sqf"
 	// #include "f_assignGear_natoPacific.sqf" // Use NATO Pacific loadouts on NATO non-Pacific units (e.g. Folk ARPS Platoons)
+	// #include "f_assignGear_natoWoodland.sqf" // Use NATO Woodland loadouts on NATO non-Woodland units (e.g. Folk ARPS Platoons)
 };
 
 // ====================================================================================
@@ -92,6 +91,16 @@ if (_faction in ["blu_f","nato"]) then {
 
 if (_faction in ["blu_t_f","natopacific"]) then {
 	#include "f_assignGear_natoPacific.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: BLUFOR > NATO (Woodland)
+// The following block of code executes only if the unit belongs to the NATO (Woodland) faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["blu_w_f","natowoodland"]) then {
+	#include "f_assignGear_natoWoodland.sqf"
 };
 
 // ====================================================================================
@@ -127,7 +136,17 @@ if (_faction in ["opf_t_f","csatpacific"]) then {
 
 // ====================================================================================
 
-// GEAR: INDEPEDENT > AAF
+// GEAR: OPFOR > Spetsnaz
+// The following block of code executes only if the unit belongs to the Spetsnaz faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["opf_r_f","spetsnaz"]) then {
+	#include "f_assignGear_spetsnaz.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: INDEPENDENT > AAF
 // The following block of code executes only if the unit belongs to the AAF faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
@@ -157,12 +176,32 @@ if (_faction in ["blu_ctrg_f","ctrg"]) then {
 
 // ====================================================================================
 
-// GEAR: INDEPEDENT > SYNDIKAT
+// GEAR: INDEPENDENT > SYNDIKAT
 // The following block of code executes only if the unit is manually assigned the Syndikat faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["ind_c_f","syndikat"]) then {
 	#include "f_assignGear_syndikat.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: INDEPENDENT > LDF
+// The following block of code executes only if the unit belongs to the LDF faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["ind_e_f","ldf"]) then {
+	#include "f_assignGear_ldf.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: INDEPENDENT > NPR
+// The following block of code executes only if the unit belongs to the NPR faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["ind_l_f","npr"]) then {
+	#include "f_assignGear_npr.sqf"
 };
 
 // ====================================================================================

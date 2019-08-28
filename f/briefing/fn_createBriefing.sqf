@@ -49,13 +49,13 @@ if (serverCommandAvailable "#kick" || !isMultiplayer) then {
 // The following code blocks include faction-specific briefing files.
 
 // BLUFOR > NATO
-if (_unitfaction in ["blu_f","blu_t_f"]) exitwith {
+if (_unitfaction in ["blu_f","blu_t_f","blu_w_f","nato","natowoodland","natopacific"]) exitwith {
 	#include "f_briefing_nato.sqf"
 	[_unitfaction] call _fnc_debug;
 };
 
 // FIA
-if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f"]) exitwith {
+if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f","fia"]) exitwith {
 	#include "f_briefing_fia.sqf"
 	[_unitfaction] call _fnc_debug;
 };
@@ -67,25 +67,44 @@ if (_unitfaction in ["blu_gen_f"]) exitwith {
 };
 
 // OPFOR > CSAT
-if (_unitfaction in ["opf_f","opf_t_f"]) exitwith {
+if (_unitfaction in ["opf_f","opf_t_f","csat","csatpacific"]) exitwith {
 	#include "f_briefing_csat.sqf"
 	[_unitfaction] call _fnc_debug;
 };
 
+// OPFOR > Spetsnaz
+if (_unitfaction in ["opf_r_f","spetsnaz"]) exitwith {
+	#include "f_briefing_spetsnaz.sqf"
+	[_unitfaction] call _fnc_debug;
+};
+
 // INDEPENDENT > AAF
-if (_unitfaction in ["ind_f"]) exitwith {
+if (_unitfaction in ["ind_f","aaf"]) exitwith {
 	#include "f_briefing_aaf.sqf"
 	[_unitfaction] call _fnc_debug;
 };
 
+// INDEPENDENT > LDF
+if (_unitfaction in ["ind_e_f","ldf"]) exitwith {
+	#include "f_briefing_ldf.sqf"
+	[_unitfaction] call _fnc_debug;
+};
+
 // INDEPENDENT > SYNDIKAT
-if (_unitfaction in ["ind_c_f"]) exitwith {
+if (_unitfaction in ["ind_c_f","syndikat"]) exitwith {
 	#include "f_briefing_syndikat.sqf"
 	[_unitfaction] call _fnc_debug;
 };
 
+// INDEPENDENT > NPR (Looters)
+if (_unitfaction in ["ind_l_f","npr"]) exitwith {
+	#include "f_briefing_npr.sqf"
+	[_unitfaction] call _fnc_debug;
+};
+
+
 // BLUFOR > CTRG
-if (_unitfaction in ["blu_ctrg_f"]) exitwith {
+if (_unitfaction in ["blu_ctrg_f","ctrg"]) exitwith {
 	#include "f_briefing_ctrg.sqf"
 	[_unitfaction] call _fnc_debug;
 };
