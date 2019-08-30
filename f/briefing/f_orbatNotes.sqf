@@ -34,7 +34,7 @@ private _groupData = f_var_groupData_all apply {
 	[
 		missionNamespace getVariable [_x select 0,grpNull], 
 		getText (configfile >> "CfgMarkers" >> (_x select 1) >> "icon"),
-		getArray (configfile >> "CfgMarkerColors" >> (_x select 3) >> "color") call BIS_fnc_colorRGBAtoHTML
+		((configfile >> "CfgMarkerColors" >> (_x select 3) >> "color") call BIS_fnc_colorConfigToRGBA) call BIS_fnc_colorRGBAtoHTML
 	]
 } select { ! isNull (_x select 0) && {(_x select 0) in (_groups + _units)}};
 
