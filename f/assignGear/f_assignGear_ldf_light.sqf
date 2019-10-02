@@ -1,5 +1,5 @@
 // F3 - Folk ARPS Assign Gear Script - LDF - Light Loadout
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE UNIT TYPE LOADOUTS
