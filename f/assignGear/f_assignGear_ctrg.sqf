@@ -232,11 +232,11 @@ _MATmag1 = "NLAW_F";
 _MATmag2 = "NLAW_F";
 
 // Surface Air
-_SAM = "launch_B_Titan_short_tna_F";
+_SAM = "launch_B_Titan_tna_F";
 _SAMmag = "Titan_AA";
 
 // Heavy AT
-_HAT = "launch_B_Titan_tna_F";
+_HAT = "launch_B_Titan_short_tna_F";
 _HATmag1 = "Titan_AT";
 _HATmag2 = "Titan_AP";
 
