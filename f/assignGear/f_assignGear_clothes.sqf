@@ -34,6 +34,7 @@ if (_typeOfUnit in _pilot) then {
 	_uniform = _pilotUniform;
 	_rig     = _pilotRig;
 	_glasses = _pilotGlasses;
+	_nvg     = _nvgPilot;
 };
 
 // Jet Pilot

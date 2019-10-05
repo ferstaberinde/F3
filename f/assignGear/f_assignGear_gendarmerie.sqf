@@ -93,6 +93,10 @@ _smokegrenadepurple = "SmokeShellPurple";
 _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
+// Night Vision Goggles
+//_nvg = "NVGoggles";
+//_nvgPilot = "Integrated_NVG_F";
+
 // Chemlights
 _chemgreen =  "Chemlight_green";
 _chemred = "Chemlight_red";
