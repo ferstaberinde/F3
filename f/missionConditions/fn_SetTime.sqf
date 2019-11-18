@@ -16,7 +16,7 @@ private ["_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
 params [
-	["_timeOfDay", 0, [0]]
+	["_timeOfDay", 8, [0]]
 ];
 
 // Exit when using mission settings
@@ -50,15 +50,13 @@ _addTime = {
 		["_time1", [], [[]], 2],
 		["_time2", [], [[]], 2]
 	];
-	_result = _time1 vectorAdd _time2;
-	while { _result select 1 > 60 } do { // convert extra minutes into hours
-		_result = _result vectorAdd [1,-60];
-	};
-	// make sure hour is in range [0,23]
-	_result set [0,(_result select 0) % 24];
-	if (_result select 0 < 0) then {
-		_result = _result vectorAdd [24,0];
-	};
+	_result = [_time1#0 + _time2#0,_time1#1 + _time2#1];
+
+	_extraHours = floor (_result#1 / 60);
+	_result = [(_result#0 + _extraHours) % 24,_result#1 - 60*_extraHours];
+	
+	if (_result#0 < 0) then { _result = [_result#0 + 24,_result#1] };
+
 	_result
 };
 
@@ -172,3 +170,6 @@ _date = [_year,_month,_day,_hour,_minute];
 [_date,true,_transition] call BIS_fnc_setDate;
 
 // ====================================================================================
+
+// RETURN DATE
+_date

@@ -193,3 +193,6 @@ if (_setFog) then {
 forceWeatherChange;
 
 // ====================================================================================
+
+// RETURN WEATHER PARAMS
+[_MissionOvercast,_MissionRain,_MissionLightnings,_MissionWaves,_MissionWindStr,[_MissionFogStrength,_MissionFogDecay,_MissionFogBase]]
