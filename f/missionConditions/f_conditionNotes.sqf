@@ -9,10 +9,10 @@ waitUntil { !isNil {f_var_conditions_params} };
 
 f_var_conditions_params params ["_date","_overcast","_rain","_lightnings","_waves","_wind","_fogParams"];
 
-_diaryText = "";
+private _diaryText = "";
 
 // Start time & date
-_diaryText = _diaryText + format ["<font size='18'><font color='#aaaaaa'>Mission start time:</font> %1:%2</font><br/>",
+private _diaryText = _diaryText + format ["<font size='18'><font color='#aaaaaa'>Mission start time:</font> %1:%2</font><br/>",
 	(if (_date#3 >=10) then {""} else {"0"}) + str (_date#3),
 	(if (_date#4 >=10) then {""} else {"0"}) + str (_date#4)];
 
@@ -23,12 +23,12 @@ _diaryText = _diaryText + format ["<font size='18' color='#aaaaaa'>Mission date:
 
 
 // Weather
-_overCastText = "Overcast";
+private _overCastText = "Overcast";
 if (_overcast < .8) then {_overCastText = "Mostly Cloudy"};
 if (_overcast < .5) then {_overCastText = "Partly Cloudy"};
 if (_overcast < .13) then {_overCastText = "Clear"};
 
-_rainText = "Heavy Rain";
+private _rainText = "Heavy Rain";
 if (_rain < .65) then { _rainText = "Rain" };
 if (_rain < .3) then { _rainText = "Light Rain" };
 if (_rain < .01 || _overcast < .5) then { _rainText = "No Precipitation" }; // rain doesn't do anything below .5 overcast
@@ -37,14 +37,14 @@ _diaryText = _diaryText + format ["<font size='18' color='#aaaaaa'>Weather</font
 
 
 // Wind and fog
-_windText = "High Winds";
+private _windText = "High Winds";
 if (_wind < .5) then {_windText = "Windy"; };
 if (_wind < .3) then {_windText = "Light Winds"; };
-_windDirText = ["N","NE","E","SE","S","SW","W","NW"] select floor abs (((windDir+22.5) % 360)/45);
+private _windDirText = ["N","NE","E","SE","S","SW","W","NW"] select floor abs (((windDir+22.5) % 360)/45);
 
 _diaryText = _diaryText + format ["<font size='16'>%1 (%2kt %3)</font><br/>",_windText,_wind*13.6 toFixed 1,_windDirText];
 
-_fogText = "No Visibility";
+private _fogText = "No Visibility";
 if (_fogParams#0 < .8) then {_fogText = "Heavy Fog"};
 if (_fogParams#0 < .5) then {_fogText = "Foggy"};
 if (_fogParams#0 < .2) then {_fogText = "Misty"};
@@ -57,14 +57,14 @@ _diaryText = _diaryText + format ["<font size='16'>%1</font><br/>",_fogText];
 
 
 // Astronomical info
-_moonPhase = moonPhase _date;
-_moonText = "Full";
+private _moonPhase = moonPhase _date;
+private _moonText = "Full";
 if (_moonPhase < .875) then { _moonText = "Gibbous"; };
 if (_moonPhase < .625) then { _moonText = "Quarter"; };
 if (_moonPhase < .375) then { _moonText = "Crescent"; };
 if (_moonPhase < .125) then { _moonText = "New"; };
 
-_sunriseSunset = _date call BIS_fnc_sunriseSunsetTime apply {
+private _sunriseSunset = _date call BIS_fnc_sunriseSunsetTime apply {
 	if (! (_x in [0,-1]) ) then { // probably unnecessary polar handling
 		[_x,"HH:MM"] call BIS_fnc_timeToString;
 	};

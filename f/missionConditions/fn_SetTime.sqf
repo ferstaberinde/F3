@@ -8,7 +8,7 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time","_result","_date"];
+private ["_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time","_date"];
 
 // ====================================================================================
 
@@ -50,11 +50,11 @@ _addTime = {
 		["_time1", [], [[]], 2],
 		["_time2", [], [[]], 2]
 	];
-	_result = [_time1#0 + _time2#0,_time1#1 + _time2#1];
+	private _result = [_time1#0 + _time2#0,_time1#1 + _time2#1];
 
-	_extraHours = floor (_result#1 / 60);
+	private _extraHours = floor (_result#1 / 60);
 	_result = [(_result#0 + _extraHours) % 24,_result#1 - 60*_extraHours];
-	
+
 	if (_result#0 < 0) then { _result = [_result#0 + 24,_result#1] };
 
 	_result
