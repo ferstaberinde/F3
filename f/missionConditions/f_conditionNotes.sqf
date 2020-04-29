@@ -5,7 +5,7 @@
 if (!hasInterface) exitWith {}; //Exit if not a player.
 
 // Wait until server publishes the mission conditions
-waitUntil { !isNil {f_var_conditions_params} };
+waitUntil { !isNil "f_var_conditions_params" };
 
 f_var_conditions_params params ["_date","_overcast","_rain","_lightnings","_waves","_wind","_fogParams"];
 
