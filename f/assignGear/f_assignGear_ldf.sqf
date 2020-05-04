@@ -200,8 +200,8 @@ _bagRadio = "B_RadioBag_01_eaf_F";			// cosmetic, used by COs, DCs, and anybody 
 
 // Automatic Rifleman
 _AR = "LMG_Mk200_black_F";
-_ARmag = "200Rnd_65x39_cased_Box";
-_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
+_ARmag = "200Rnd_65x39_cased_Box_Red";
+_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer_Red";
 
 // Medium MG
 _MMG = "MMG_02_black_F";
