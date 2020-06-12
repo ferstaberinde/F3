@@ -19,8 +19,8 @@ switch (_typeofUnit) do
 		_attachments pushback (_bipod1); // Adds the bipod
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_ARmag, 1];
-		_unit addmagazines [_ARmag_tr, 1];
+		_unit addmagazines [_ARmag, 3];
+		_unit addmagazines [_ARmag_tr, 2];
 		_unit addmagazines [_grenade, 1];
 	};
 // Rifleman (AT) Loadout:
@@ -48,7 +48,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
-		_unit addmagazines [_ARmag, 1];
+		_unit addmagazines [_ARmag, 2];
 	};
 // Fire Team Leader Loadout:
 	case "ftl":
