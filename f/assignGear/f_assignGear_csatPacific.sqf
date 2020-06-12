@@ -166,6 +166,9 @@ _medkit = "Medikit";
 // Night Vision Goggles
 _nvg = "O_NVGoggles_ghex_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_02_ghex_F";
 

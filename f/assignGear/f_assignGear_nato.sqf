@@ -167,6 +167,9 @@ _medkit = "Medikit";
 // Night Vision Goggles
 _nvg = "NVGoggles";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator";
 
