@@ -169,6 +169,7 @@ _medkit = "Medikit";
 
 // Night Vision Goggles
 _nvg = "O_NVGoggles_grn_F";
+_nvgPilot = "Integrated_NVG_F";
 
 // Laserdesignator
 _laserdesignator = "Laserdesignator_02";
