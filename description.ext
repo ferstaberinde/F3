@@ -132,7 +132,7 @@ class Params
 // ============================================================================================
 
 // F3 - Debug Mode
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // WARNING: DO NOT DISABLE THIS COMPONENT
 
     class f_param_debugMode
@@ -146,7 +146,7 @@ class Params
 // ============================================================================================
 
 // F3 - Folk Assign Gear Script
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
     class f_param_loadouts
     {
@@ -158,10 +158,8 @@ class Params
 
 // ============================================================================================
 
-// ============================================================================================
-
 // F3 - Mission Timer/Safe Start
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
     class f_param_mission_timer
     {
@@ -174,7 +172,7 @@ class Params
 // ============================================================================================
 
 // F3 - Mission Conditions Selector
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
 	class f_param_weather
 	{
@@ -213,7 +211,7 @@ class Params
 // ============================================================================================
 
 // F3 - AI Skill Selector
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
 	class f_param_AISkill_BLUFOR
 	{
@@ -242,7 +240,7 @@ class Params
 // ============================================================================================
 
 // F3 - Caching
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
 //	class f_param_caching
 //	{
@@ -261,7 +259,7 @@ class Params
 // ============================================================================================
 
 // F3 - Briefing Template
-// Credits: BIS - Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
 class CfgDebriefing
 {
