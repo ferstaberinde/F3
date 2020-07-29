@@ -72,7 +72,7 @@ private _fnc_getMarker = {
 	};
 
 	private _icon = [_x] call _fnc_getMarker;
-	_orbatText = _orbatText + format ["%1<font color='%4'>%2 %3</font>", _icon, _x, name leader _x,_color] + "<br />";
+	_orbatText = _orbatText + format ["%1<font color='%4'>%2 %3</font>", _icon, groupId _x, name leader _x,_color] + "<br />";
 
 	{
 		private _unit = _x;
