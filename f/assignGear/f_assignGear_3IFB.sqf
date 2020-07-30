@@ -165,6 +165,7 @@ _medkit = "Medikit";
 
 // Night Vision Goggles
 _nvg = "NVGoggles_OPFOR";
+_nvgPilot = "Integrated_NVG_F";
 
 // Binoculars
 _binoculars = "Rangefinder";
