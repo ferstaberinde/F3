@@ -1,5 +1,5 @@
 // F3 - Loadout Notes
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 if (!hasInterface || (side player == sideLogic)) exitWith {}; //Exit if not a player.
@@ -69,7 +69,7 @@ private _fnc_nameShort = {
 
 // Local function to format the text for magazine counts
 private _fnc_magArrText = {
-	params ["_magArr"];
+	params [["_magArr", [], [[]]]];
 	if (count _magArr > 0) exitWith {
 		format ["[%1]", _magArr joinString "+"]
 	};
@@ -77,7 +77,16 @@ private _fnc_magArrText = {
 };
 
 private _fnc_loadoutDataToText = {
-	params ["_full","_wepItems", "_mags", "_items", "_items_assigned", "_bp", "_bpLoad", "_weps"];
+	params [
+		["_full", true, [true]],
+		["_wepItems", [], [[]]],
+		["_mags", [], [[]]],
+		["_items", [], [[]]],
+		["_items_assigned", [], [[]]],
+		["_bp", "", [""]],
+		["_bpLoad", 0, [0]],
+		["_weps", [], [[]]]
+	];
 
 	private _arrow = "<img image='\A3\ui_f\data\gui\rscCommon\rscTree\hiddenTexture_ca.paa' height='24'/>";
 	private _classesBlacklist = ["HandGrenade", "1Rnd_HE_Grenade_shell", "FirstAidKit"];
@@ -90,7 +99,12 @@ private _fnc_loadoutDataToText = {
 	if (count _weps > 0) then {
 		_textLong = _textLong + "<font size='18'>WEAPONS [#MAGAZINES]:</font>";
 		{
-			_x params ["_weapon", "_magArr", "_ugls", "_attachments"];
+			_x params [
+				["_weapon", "", [""]],
+				["_magArr", [], [[]]],
+				["_ugls", [], [[]]],
+				["_attachments", [], [[]]]
+			];
 
 			// Weapon name and picture
 			_textLong = _textLong + "<br/>" + ([_weapon] call _fnc_name);
@@ -142,13 +156,19 @@ private _fnc_loadoutDataToText = {
 		_textLong = _textLong + "<br/><font size='18'>OTHER [#]:</font>";
 
 		{
-			_x params ["_className","_num"];
+			_x params [
+				["_className", "", [""]],
+				["_num", 0, [0]]
+			];
 			_textLong = _textLong + "<br/>" + ([_className, "CfgMagazines"] call _fnc_name) + format[" [%1]", _num];
 			_textShrt = _textShrt + ([_className, "CfgMagazines"] call _fnc_nameShort) + format[" [%1]", _num];
 		} forEach _mags;
 
 		{
-			_x params ["_className","_num"];
+			_x params [
+				["_className", "", [""]],
+				["_num", 0, [0]]
+			];
 			_textLong = _textLong + "<br/>" + ([_className, "CfgWeapons"] call _fnc_name) + format[" [%1]",_num];
 			_textShrt = _textShrt + ([_className, "CfgWeapons"] call _fnc_nameShort) + format[" [%1]", _num];
 		} forEach _items;

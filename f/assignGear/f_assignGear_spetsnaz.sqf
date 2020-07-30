@@ -1,5 +1,5 @@
 // F3 - Folk ARPS Assign Gear Script - Spetsnaz
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE EQUIPMENT TABLES
@@ -169,6 +169,7 @@ _medkit = "Medikit";
 
 // Night Vision Goggles
 _nvg = "O_NVGoggles_grn_F";
+_nvgPilot = "Integrated_NVG_F";
 
 // Binoculars
 _binoculars = "Rangefinder";

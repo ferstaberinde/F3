@@ -1,5 +1,5 @@
 // F3 - Folk ARPS Assign Gear Script - GENDARMERIE
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE EQUIPMENT TABLES
@@ -96,6 +96,10 @@ _binoculars = "Rangefinder";
 _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
+// Night Vision Goggles
+//_nvg = "NVGoggles";
+//_nvgPilot = "Integrated_NVG_F";
+
 // Chemlights
 _chemgreen =  "Chemlight_green";
 _chemred = "Chemlight_red";
@@ -185,7 +189,7 @@ if (_isMan) then {
 // ====================================================================================
 
 // F3 - Folk ARPS Assign Gear Script - AAF - Light Loadout
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE UNIT TYPE LOADOUTS

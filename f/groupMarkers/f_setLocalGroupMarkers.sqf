@@ -1,5 +1,5 @@
 // F3 - Folk Group Markers
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // MAKE SURE THE PLAYER INITIALIZES PROPERLY

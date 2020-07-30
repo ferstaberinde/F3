@@ -1,5 +1,5 @@
 // F3 - ORBAT Notes
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 if (!hasInterface || (side player == sideLogic)) exitWith {}; //Exit if not a player.
@@ -72,7 +72,7 @@ private _fnc_getMarker = {
 	};
 
 	private _icon = [_x] call _fnc_getMarker;
-	_orbatText = _orbatText + format ["%1<font color='%4'>%2 %3</font>", _icon, _x, name leader _x,_color] + "<br />";
+	_orbatText = _orbatText + format ["%1<font color='%4'>%2 %3</font>", _icon, groupId _x, name leader _x,_color] + "<br />";
 
 	{
 		private _unit = _x;

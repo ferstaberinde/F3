@@ -1,5 +1,5 @@
 // F3 - Safe Start
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 //	This script inits the Mission Timer and the Safe Start, has the server setup the publicVariable
 //      while the client waits, sets units invincibility and displays hints, then disables it.

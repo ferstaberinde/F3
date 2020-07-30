@@ -1,5 +1,5 @@
 // F3 - F3 Folk ARPS Assign Gear
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // Prevent BIS Randomisation System
@@ -34,6 +34,7 @@ if (_typeOfUnit in _pilot) then {
 	_uniform = _pilotUniform;
 	_rig     = _pilotRig;
 	_glasses = _pilotGlasses;
+	_nvg     = _nvgPilot;
 };
 
 // Jet Pilot

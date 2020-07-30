@@ -1,5 +1,5 @@
 // 	F3 - Convert teamcolors to markercolor.
-// 	Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 //  Description: Converts group team colors to Marker colors
 //  Parameters
 //		0: String (MAIN,RED,GREEN,BLUE,YELLOW)
