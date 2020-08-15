@@ -124,6 +124,7 @@ _DMriflemag = "20Rnd_762x51_Mag";
 
 _pilot = ["pp","pcc","pc"];
 _specOp = ["nf"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -147,6 +148,12 @@ _sfuniform = ["U_B_GEN_Commander_F"];
 _sfhelmet = ["H_Helmet_Skate"];
 _sfRig = ["V_PlateCarrier1_blk"];
 _sfGlasses = ["G_Balaclava_blk"];
+
+// VIP/Officer
+_vipUniform = ["U_B_GEN_Commander_F"];
+_vipHelmet = ["H_Beret_gen_F"];
+_vipRig = ["V_TacVest_gen_F"];
+_vipGlasses = [];
 
 // ====================================================================================
 

@@ -255,6 +255,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -310,6 +311,12 @@ _sfuniform = _baseUniform;
 _sfhelmet = _baseHelmet;
 _sfRig = _standardRig;
 _sfGlasses = [];
+
+// VIP/Officer
+_vipUniform = ["U_O_R_Gorka_01_black_F"];
+_vipHelmet = _baseHelmet;
+_vipRig = _standardRig;
+_vipGlasses = [];
 
 // ====================================================================================
 
