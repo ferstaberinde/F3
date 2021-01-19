@@ -149,6 +149,8 @@ class Params
 // Credits and documentation: https://github.com/folkarps/F3/wiki
 
 // To add an alternate loadout parameter, you must uncomment this block, uncomment the relevant block in a faction assignGear file, and add a new assignGear loadout file named according to that block.
+// You should also enable the rig selection block in assignGear_clothes.sqf
+
 //    class f_param_loadouts
  //   {
  //           title = "$STR_f_param_loadouts";

@@ -358,17 +358,18 @@ if (_isMan) then {
 
 // SELECT LOADOUT
 // Pick the appropriate loadout depending on the parameter
+// To use an alternate loadout parameter, you must uncomment this block, uncomment the relevant block in description.ext, and add an assignGear loadout file as named below.
 
-_loadout = f_param_loadouts;
+// _loadout = f_param_loadouts;
 
 // Light Loadout
-if (_loadout == 0) then {
-	#include "f_assignGear_csatPacific_light.sqf"
-};
+// if (_loadout == 0) then {
+//	#include "f_assignGear_csatPacific_light.sqf"
+// };
 
 // Standard Loadout
-if (_loadout == 1) then {
+// if (_loadout == 1) then {
 	#include "f_assignGear_csatPacific_standard.sqf"
-};
+// };
 
 // ====================================================================================
