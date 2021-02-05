@@ -1,6 +1,7 @@
-/*ws_fnc_createGarrison
+/* ws_fnc_createGarrison
 By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
 Usage Guide: http://www.folkarps.com/forum/viewtopic.php?f=48&t=1224
+With small improvements from the Folk ARPS F3 maintenance team
 
 FEATURE
 Populates the buildings in the given area with the given number of units
@@ -26,7 +27,7 @@ PARAMETERS:
 6. Array of classes to spawn                                                           | OPTIONAL - array w. strings  - default are classes defined below
 6. ALTERNATIVE: Faction to spawn                                                       | OPTIONAL - string - faction name
 7. Only garrison empty buildings                                                       | OPTIONAL - bool - true, if only empty buildings should be garrisoned. This is useful for overlappnig garrison radii.
-8. assignGear AI faction to useful													   | OPTIONAL - string - faction name listed in assignGear.sqf. If this is defined, assignGear AI will be run on the spawned units automatically using this faction.
+8. assignGear AI faction to use													   | OPTIONAL - string - faction name listed in assignGear.sqf. If this is defined, assignGear AI will be run on the spawned units automatically using this faction.
 
 EXAMPLE
 ["mkrOutpost",50,resistance] call ws_fnc_createGarrison;
@@ -63,7 +64,7 @@ params [
 	["_assignGearFaction", "none", [""]]
 ];
 
-//Process radius paramter
+// Process radius paramter
 if (_radius isEqualType 0) then {
 	_radius = [0, _radius];
 };
@@ -132,13 +133,13 @@ if (_classes isEqualType "") then {
 	};
 };
 
-//prepare and check buildings:
+// Prepare and check buildings:
 
-//check if _area is a list of buildings, if not: find buildings
+// Check if _area is a list of buildings, if not: find buildings
 _buildings = [];
 if ( typename _area == "ARRAY" && {count _area > 0} && {typename (_area select 0) == "OBJECT"} && {_area select 0 isKindOf "House"} ) then {
 	_buildings = _area;
-	//Set BPos if not already set:
+	// Set BPos if not already set:
 	{ [_x] call ws_fnc_getBPos } forEach _buildings;
 } else {
 	// Collect buildings and assign building positions
@@ -151,11 +152,11 @@ if ( typename _area == "ARRAY" && {count _area > 0} && {typename (_area select 0
 };
 
 if (_onlyEmptyBuildings) then {
-	//only use buildings that haven't been garrisoned yet! (this is useful when having overlapping garrison areas)
+	// Only use buildings that haven't been garrisoned yet! (this is useful when having overlapping garrison areas)
 	_buildings = _buildings select { (_x getVariable ["ws_bunits",0]) == 0 };
 };
 
-//remove buildings without building positions
+// Remove buildings without building positions
 _buildings = _buildings select { count (_x getVariable ["ws_bPos", []]) > 0};
 
 if (count _buildings == 0) exitWith {
@@ -164,7 +165,7 @@ if (count _buildings == 0) exitWith {
 	};
 	[]
 };
-//Note: At this point we have at least one building with at least one building position
+// Note: At this point we have at least one building with at least one building position
 
 // If no amount of units is set, calculate default
 if (_int == 0) then {
@@ -214,7 +215,7 @@ for "_x" from 1 to _int do {
 	_u setPosATL _bp;
 	[_u] joinsilent _grp; //otherwise the side might be wrong
 	dostop _u;
-	//_u disableAI "PATH";
+	// _u disableAI "PATH";
 
 	_u spawn ws_fnc_setInsidePos; // SetInsidePos is fairly expensive, thus spawned
 
