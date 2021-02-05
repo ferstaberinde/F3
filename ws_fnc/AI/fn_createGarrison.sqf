@@ -238,5 +238,10 @@ _grp enableAttack false;
 // Set the group's attack mode and stance
 [_grp,"AWARE","YELLOW"] call ws_fnc_setAIMode;
 
+// Add the spawned units as editable units to any extant Zeus
+{
+    _x addCuratorEditableObjects [units _grp, true];
+} foreach allCurators;
+
 // Return created unis
 (units _grp)
