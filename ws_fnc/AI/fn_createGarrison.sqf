@@ -11,7 +11,7 @@ Minimal:
 Full:
 [center,radius,side,number,number,array,bool] call ws_fnc_createGarrison
 or
-[center,radius,side,number,number,string,bool] call ws_fnc_createGarrison
+[center,radius,side,number,number,string,bool,string] call ws_fnc_createGarrison
 
 NOTE
 Make sure to call this only on the server or headless client. The function itself does not check where it is run.
@@ -26,6 +26,7 @@ PARAMETERS:
 6. Array of classes to spawn                                                           | OPTIONAL - array w. strings  - default are classes defined below
 6. ALTERNATIVE: Faction to spawn                                                       | OPTIONAL - string - faction name
 7. Only garrison empty buildings                                                       | OPTIONAL - bool - true, if only empty buildings should be garrisoned. This is useful for overlappnig garrison radii.
+8. assignGear AI faction to useful													   | OPTIONAL - string - faction name listed in assignGear.sqf. If this is defined, assignGear AI will be run on the spawned units automatically using this faction.
 
 EXAMPLE
 ["mkrOutpost",50,resistance] call ws_fnc_createGarrison;
@@ -37,10 +38,11 @@ The classes of the units will be taken from the default array (by default light 
 Place 50 NATO soldiers in buildings in a 150m radius around the Object (unit) named UnitNATO_General. 
 All of them will be either AT or Grenadier. Only fill the buildings to 70% percent.
 
-["mkrOutpost",50,opfor,0,0.8,"gendarmerie"] call ws_fnc_createGarrison;
+["mkrOutpost",50,opfor,0,0.8,"gendarmerie","3ifb"] call ws_fnc_createGarrison;
 This will create units in buildings 50m around the marker named "mkrOutpost". 
 The number of units will the the number of buildings in the radius divided by 4.
 The classes of the units will be Gendarmerie and their side opfor.
+AssignGear AI will be run on the spawned units, giving them the loadouts defined for the "3ifb" faction in assignGear.sqf.
 
 RETURNS
 array of created units
@@ -57,7 +59,8 @@ params [
 	["_int", 0, [0]],
 	["_thrsh", 0.8, [0]],
 	["_classes", [], ["", []]],
-	["_onlyEmptyBuildings", false, [false]]
+	["_onlyEmptyBuildings", false, [false]],
+	["_assignGearFaction", "none", [""]]
 ];
 
 //Process radius paramter
@@ -211,9 +214,15 @@ for "_x" from 1 to _int do {
 	// Set new variables
 	_u setVariable ["ws_bpos",_bp,true];
 	_b setVariable ["ws_bUnits",_bu + 1,true];
-	_b setVariable ["ws_bPosLeft",_bpl,true];
+	_b setVariable ["ws_bPosLeft",_bpl,true]; 
 
 	if (_debug) then {_mkr = createMarker [format ["%1-bpos",_u],getPos _u];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorGreen";};
+};
+
+// If assignGear AI parameter is enabled, set the faction on the spawned units then pass them to assignGear AI.
+if (_assignGearFaction != "none") then {
+	[units _grp,_assignGearFaction] call f_fnc_setVirtualFaction;
+	[units _grp] execVM "f\assignGear\f_assignGear_AI.sqf";
 };
 
 // Prevent the group leader to issue attack orders to the members, improving their attack from buildings
