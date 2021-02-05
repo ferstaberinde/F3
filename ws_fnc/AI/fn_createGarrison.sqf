@@ -86,44 +86,45 @@ if (count _classes == 0) then {
 };
 
 // To change which units are spawned for which faction, replace the array or add additional units to it
+// Default arrays (except Gendarmerie): 3x Rifleman, 1x LAT, 1x AR, 1x TL, 1x medic. Units are randomly selected from the array so this represents probabilities, not a fixed group spawn.
 if (_classes isEqualType "") then {
 	_classes = toLower _classes;
 	_classes = switch (true) do {
 		case (_classes in ["blu_f","nato"]): { // NATO
-			["B_Soldier_lite_F","B_Soldier_F"]
+			["B_Soldier_lite_F","B_Soldier_F","B_Soldier_LAT2_F","B_Soldier_AR_F","B_Soldier_TL_F","B_Soldier_F","B_medic_F"]
 		};
 		case (_classes in ["blu_t_f","natopacific"]): { // NATO Pacific
-			["B_T_Soldier_F"]
+			["B_T_Soldier_F","B_T_Soldier_F","B_T_Soldier_LAT2_F","B_T_Soldier_AR_F","B_T_Soldier_TL_F","B_T_Soldier_F","B_T_Medic_F"]
 		};
 		case (_classes in ["blu_ctrg_f","ctrg"]): { // CTRG
-			["B_CTRG_Soldier_tna_F"]
+			["B_CTRG_Soldier_tna_F","B_CTRG_Soldier_tna_F","B_CTRG_Soldier_LAT2_tna_F","B_CTRG_Soldier_AR_tna_F","B_CTRG_Soldier_TL_tna_F","B_CTRG_Soldier_tna_F","B_CTRG_Medic_tna_F"]
 		};
 		case (_classes in ["blu_gen_f","gendarmerie"]): { // Gendarmerie
 			["B_GEN_Soldier_F"]
 		};
 		case (_classes in ["opf_f","csat"]): { // CSAT
-			["O_Soldier_lite_F","O_Soldier_F"]
+			["O_Soldier_lite_F","O_Soldier_F","O_Soldier_LAT_F","O_Soldier_AR_F","O_Soldier_TL_F","O_Soldier_F","O_medic_F"]
 		};
 		case (_classes in ["opf_t_f","csatpacific"]): { // CSAT Pacific
-			["O_T_Soldier_F"]
+			["O_T_Soldier_F","O_T_Soldier_F","O_T_Soldier_LAT_F","O_T_Soldier_AR_F","O_T_Soldier_TL_F","O_T_Soldier_F","O_T_Medic_F"]
 		};
 		case (_classes in ["opf_r_f","spetsnaz"]):	{ // Spetsnaz
-			["O_R_JTAC_F"]
+			["O_R_JTAC_F","O_R_Soldier_LAT_F","O_R_Soldier_AR_F","O_R_Soldier_TL_F","O_R_JTAC_F","O_R_JTAC_F","O_R_medic_F"]
 		};
 		case (_classes in ["ind_f","aaf"]): { // AAF
-			["I_Soldier_lite_F","I_Soldier_F"]
+			["I_Soldier_lite_F","I_Soldier_F","I_Soldier_LAT_F","I_Soldier_AR_F","I_Soldier_TL_F","I_Soldier_F","I_medic_F"]
 		};
 		case (_classes in ["ind_e_f","ldf"]): {	// LDF
-			["I_E_Soldier_lite_F","I_E_Soldier_F"]
+			["I_E_Soldier_lite_F","I_E_Soldier_F","I_E_Soldier_LAT_F","I_E_Soldier_AR_F","I_E_Soldier_TL_F","I_E_Soldier_F","I_E_Medic_F"]
 		};
 		case (_classes in ["blu_g_f","opf_g_f","ind_g_f","fia"]): {  // FIA
-			["B_G_Soldier_lite_F","B_G_Soldier_F"]
+			["B_G_Soldier_lite_F","B_G_Soldier_F","B_G_Soldier_LAT_F","B_G_Soldier_AR_F","B_G_Soldier_TL_F","B_G_Soldier_F","B_G_medic_F"]
 		};
 		case (_classes in ["ind_c_f","syndikatparamilitary"]): { // Syndikat Paramilitary
-			["I_C_Soldier_Para_1_F","I_C_Soldier_Para_2_F","I_C_Soldier_Para_7_F"]
+			["I_C_Soldier_Para_1_F","I_C_Soldier_Para_2_F","I_C_Soldier_Para_7_F","I_C_Soldier_Para_5_F","I_C_Soldier_Para_4_F","I_C_Soldier_Para_3_F","I_C_Soldier_Para_6_F"]
 		};
 		case (_classes in ["syndikatbandit"]): { // Syndikat Bandit
-			["I_C_Soldier_Bandit_4_F","I_C_Soldier_Bandit_7_F","I_C_Soldier_Bandit_5_F"]
+			["I_C_Soldier_Bandit_4_F","I_C_Soldier_Bandit_7_F","I_C_Soldier_Bandit_5_F","I_C_Soldier_Bandit_2_F","I_C_Soldier_Bandit_3_F","I_C_Soldier_Bandit_6_F","I_C_Soldier_Bandit_1_F"]
 		};
 		case (_classes in ["civ_f","civ_idap_f","civilian"]): { // Civilian, IDAP
 			[""]
