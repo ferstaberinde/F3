@@ -107,8 +107,14 @@ if (_classes isEqualType "") then {
 		case (_classes in ["opf_t_f","csatpacific"]): { // CSAT Pacific
 			["O_T_Soldier_F"]
 		};
+		case (_classes in ["opf_r_f","spetsnaz"]):	{ // Spetsnaz
+			["O_R_JTAC_F"]
+		};
 		case (_classes in ["ind_f","aaf"]): { // AAF
 			["I_Soldier_lite_F","I_Soldier_F"]
+		};
+		case (_classes in ["ind_e_f","ldf"]): {	// LDF
+			["I_E_Soldier_lite_F","I_E_Soldier_F"]
 		};
 		case (_classes in ["blu_g_f","opf_g_f","ind_g_f","fia"]): {  // FIA
 			["B_G_Soldier_lite_F","B_G_Soldier_F"]
