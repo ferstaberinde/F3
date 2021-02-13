@@ -71,7 +71,7 @@
 _attach1 = "";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
-_silencer1 = "mmuzzle_snds_B";	// 7.62 suppressor
+_silencer1 = "muzzle_snds_B";	// 7.62 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
 _scope1 = "optic_ACO";			// ACO
