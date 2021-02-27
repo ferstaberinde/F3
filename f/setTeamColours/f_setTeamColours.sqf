@@ -22,7 +22,7 @@ private _leaders = ["_FTL"];
 // Set suffixes for each color
 private _colors = [
 	["MAIN",   [] ],
-	["RED",    ["_AT","_R1","_R2"] ],
+	["RED",    ["_AT","_R1","_R2","_CLS"] ],
 	["BLUE",   ["_AR1","_AR2","_FTL"] ],
 	["YELLOW", [] ],
 	["GREEN",  [] ]
