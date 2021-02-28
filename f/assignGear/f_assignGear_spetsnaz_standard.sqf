@@ -158,9 +158,10 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		for "_i" from 1 to 5 do {
+		for "_i" from 1 to 6 do {
 			_unit addItem _firstaid;
 		};
+		_unit addmagazines [_grenade, 2];
 	};
 // Designated Marksman Loadout:
 	case "dm":
