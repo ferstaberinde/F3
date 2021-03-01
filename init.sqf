@@ -103,7 +103,7 @@ f_script_briefing = [] spawn f_fnc_createBriefing;
 // Credits and documentation: https://github.com/folkarps/F3/wiki
 // Uncomment the line below to enable the Combat Life Saver heal handler. Does nothing unless you have player units using the "cls" assignGear role.
 
-// [] execVM "f\medical\f_CLSEH.sqf";
+// [] execVM "f\medical\f_clsEH.sqf";
 
 // ====================================================================================
 
