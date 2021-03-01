@@ -3,6 +3,9 @@
 // Enable this component in init.sqf
 // For credits and more information see https://github.com/folkarps/F3/wiki
 
+// Make sure the player is initialised
+waitUntil {sleep 0.1; !isNull player};
+
 // Make sure the player can be broadcast properly
 _unit = player;
 
