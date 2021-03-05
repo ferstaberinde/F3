@@ -34,10 +34,10 @@ _unit = player;
 
 				// If it timed out, exit with nothing but a debug message
 				if (time > _timeout) exitWith {
-						if (f_param_debugMode == 1) then
-							{
-								player sideChat format ["DEBUG (f_clsEH.sqf): Heal on %1 timed out without completing",(name _injured)];
-							};
+					if (f_param_debugMode == 1) then
+						{
+							player sideChat format ["DEBUG (f_clsEH.sqf): Heal on %1 timed out without completing",(name _injured)];
+						};
 				};
 				
 				// If the heal was successful, make it a full heal
