@@ -40,11 +40,12 @@ The classes of the units will be taken from the default array (by default light 
 Place 50 NATO soldiers in buildings in a 150m radius around the Object (unit) named UnitNATO_General. 
 All of them will be either AT or Grenadier. Only fill the buildings to 70% percent.
 
-["mkrOutpost",50,opfor,0,0.8,"gendarmerie","3ifb"] call ws_fnc_createGarrison;
+["mkrOutpost",50,opfor,0,0.8,"gendarmerie","3ifb",false] call ws_fnc_createGarrison;
 This will create units in buildings 50m around the marker named "mkrOutpost". 
 The number of units will the the number of buildings in the radius divided by 4.
 The classes of the units will be Gendarmerie and their side opfor.
 AssignGear AI will be run on the spawned units, giving them the loadouts defined for the "3ifb" faction in assignGear.sqf.
+The created units will not be added to Zeus.
 
 RETURNS
 array of created units
