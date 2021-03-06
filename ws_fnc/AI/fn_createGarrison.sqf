@@ -232,7 +232,7 @@ for "_x" from 1 to _int do {
 
 // If assignGear AI parameter is enabled, set the faction on the spawned units then pass them to assignGear AI.
 if (_assignGearFaction != "") then {
-	[units _grp,_assignGearFaction] call f_fnc_setVirtualFaction;
+	[[units _grp,_assignGearFaction],f_fnc_setVirtualFaction] remoteExec ["call",2];
 	[[units _grp],"f\assignGear\f_assignGear_AI.sqf"] remoteExec ["execVM",2];
 };
 
