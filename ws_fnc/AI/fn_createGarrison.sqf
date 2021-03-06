@@ -27,7 +27,8 @@ PARAMETERS:
 6. Array of classes to spawn                                                           | OPTIONAL - array w. strings  - default are classes defined below
 6. ALTERNATIVE: Faction to spawn                                                       | OPTIONAL - string - faction name
 7. Only garrison empty buildings                                                       | OPTIONAL - bool - true, if only empty buildings should be garrisoned. This is useful for overlappnig garrison radii.
-8. assignGear AI faction to use													   | OPTIONAL - string - faction name listed in assignGear.sqf. If this is defined, assignGear AI will be run on the spawned units automatically using this faction.
+8. assignGear AI faction to use                                                        | OPTIONAL - string - faction name listed in assignGear.sqf. If this is defined, assignGear AI will be run on the spawned units automatically using this faction.
+9. Add spawned units to Zeus, or not                                                   | OPTIONAL - bool - choose whether to automatically add spawned units to all existing Zeus. Defaults on.
 
 EXAMPLE
 ["mkrOutpost",50,resistance] call ws_fnc_createGarrison;
@@ -61,7 +62,8 @@ params [
 	["_thrsh", 0.8, [0]],
 	["_classes", [], ["", []]],
 	["_onlyEmptyBuildings", false, [false]],
-	["_assignGearFaction", "", [""]]
+	["_assignGearFaction", "", [""]],
+	["_addToZeus", true, [true]]
 ];
 
 // Process radius paramter
@@ -239,10 +241,12 @@ _grp enableAttack false;
 // Set the group's attack mode and stance
 [_grp,"AWARE","YELLOW"] call ws_fnc_setAIMode;
 
-// Add the spawned units as editable units to any extant Zeus
-{
-    _x addCuratorEditableObjects [units _grp, true];
-} foreach allCurators;
+// Add the spawned units as editable units to any extant Zeus if that param is enabled
+if (_addToZeus) then {
+	{
+		_x addCuratorEditableObjects [units _grp, true];
+	} foreach allCurators;
+};
 
 // Return created unis
 (units _grp)
