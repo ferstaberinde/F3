@@ -10,9 +10,9 @@ USAGE
 Minimal:
 [center,radius,side] call ws_fnc_createGarrison
 Full:
-[center,radius,side,number,number,array,bool] call ws_fnc_createGarrison
+[center,radius,side,number,number,array,bool,string,bool] call ws_fnc_createGarrison
 or
-[center,radius,side,number,number,string,bool,string] call ws_fnc_createGarrison
+[center,radius,side,number,number,string,bool,string,bool] call ws_fnc_createGarrison
 
 NOTE
 Make sure to call this only on the server or headless client. The function itself does not check where it is run.
@@ -27,7 +27,7 @@ PARAMETERS:
 6. Array of classes to spawn                                                           | OPTIONAL - array w. strings  - default are classes defined below
 6. ALTERNATIVE: Faction to spawn                                                       | OPTIONAL - string - faction name
 7. Only garrison empty buildings                                                       | OPTIONAL - bool - true, if only empty buildings should be garrisoned. This is useful for overlappnig garrison radii.
-8. assignGear AI faction to use                                                        | OPTIONAL - string - faction name listed in assignGear.sqf. If this is defined, assignGear AI will be run on the spawned units automatically using this faction.
+8. assignGear AI faction to use                                                        | OPTIONAL - string - faction name listed in assignGear.sqf. If this is defined, assignGear AI will be run on the spawned units automatically using this faction. Leave as empty string ("") to skip.
 9. Add spawned units to Zeus, or not                                                   | OPTIONAL - bool - choose whether to automatically add spawned units to all existing Zeus. Defaults on.
 
 EXAMPLE
@@ -224,7 +224,7 @@ for "_x" from 1 to _int do {
 	// Set new variables
 	_u setVariable ["ws_bpos",_bp,true];
 	_b setVariable ["ws_bUnits",_bu + 1,true];
-	_b setVariable ["ws_bPosLeft",_bpl,true]; 
+	_b setVariable ["ws_bPosLeft",_bpl,true];
 
 	if (_debug) then {_mkr = createMarker [format ["%1-bpos",_u],getPos _u];_mkr setMarkerSize [0.5,0.5];_mkr setMarkerType "mil_dot";_mkr setMarkerColor "ColorGreen";};
 };
@@ -232,7 +232,7 @@ for "_x" from 1 to _int do {
 // If assignGear AI parameter is enabled, set the faction on the spawned units then pass them to assignGear AI.
 if (_assignGearFaction != "") then {
 	[units _grp,_assignGearFaction] call f_fnc_setVirtualFaction;
-	[units _grp] execVM "f\assignGear\f_assignGear_AI.sqf";
+	[[units _grp],"f\assignGear\f_assignGear_AI.sqf"] remoteExec ["execVM",2];
 };
 
 // Prevent the group leader to issue attack orders to the members, improving their attack from buildings
