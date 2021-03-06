@@ -61,7 +61,7 @@ params [
 	["_thrsh", 0.8, [0]],
 	["_classes", [], ["", []]],
 	["_onlyEmptyBuildings", false, [false]],
-	["_assignGearFaction", "none", [""]]
+	["_assignGearFaction", "", [""]]
 ];
 
 // Process radius paramter
@@ -228,7 +228,7 @@ for "_x" from 1 to _int do {
 };
 
 // If assignGear AI parameter is enabled, set the faction on the spawned units then pass them to assignGear AI.
-if (_assignGearFaction != "none") then {
+if (_assignGearFaction != "") then {
 	[units _grp,_assignGearFaction] call f_fnc_setVirtualFaction;
 	[units _grp] execVM "f\assignGear\f_assignGear_AI.sqf";
 };
