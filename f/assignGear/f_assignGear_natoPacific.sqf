@@ -265,6 +265,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -311,6 +312,12 @@ _sfuniform = ["U_B_SpecopsUniform_sgg"];
 _sfhelmet = ["H_HelmetSpecB","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecB_blk"];
 _sfRig = ["V_PlateCarrierSpec_rgr"];
 _sfGlasses = [];
+
+// VIP/Officer
+_vipUniform = ["U_B_T_Soldier_AR_F"];
+_vipHelmet = ["H_Beret_02"];
+_vipRig = ["V_TacVest_oli"];
+_vipGlasses = [];
 
 // ====================================================================================
 

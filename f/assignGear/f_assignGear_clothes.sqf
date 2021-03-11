@@ -78,6 +78,14 @@ if (_typeOfUnit in _specOp) then {
 	_glasses = _sfGlasses;
 };
 
+// VIP/Officer
+if (_typeOfUnit in _vip) then {
+	_helmet  = _vipHelmet;
+	_uniform = _vipUniform;
+	_rig     = _vipRig;
+	_glasses = _vipGlasses;
+};
+
 // Add clothing items to unit
 if(count _uniform > 0) then
 {
