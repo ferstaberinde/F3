@@ -77,11 +77,11 @@ _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
 _scope1 = "optic_ACO";		// ACO
-_scope2 = "optic_ico_01_f";			// MRCO Scope - 1x - 6x
+_scope2 = "optic_ico_01_f";			// Promet ISR scope
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
 _bipod1 = "bipod_01_F_blk";		// Default bipod
-_bipod2 = "bipod_03_F_blk";		// Black bipod
+_bipod2 = "bipod_01_F_khk";		// Green bipod
 
 // Default setup
 _attachments = [_scope1]; // The default attachment set for most units, overwritten in the individual unitType

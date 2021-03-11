@@ -81,7 +81,7 @@ _scope2 = "optic_Hamr_khk_F";		// RCO Scope
 _scope3 = "optic_LRPS_tna_F";		// LRPS
 
 _bipod1 = "bipod_01_F_khk";		// Default bipod
-_bipod2 = "bipod_02_F_blk";		// Black bipod
+_bipod2 = "bipod_01_F_blk";		// Black bipod
 
 // Default setup
 _attachments = [_scope1]; // The default attachment set for most units, overwritten in the individual unitType

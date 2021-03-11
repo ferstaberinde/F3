@@ -65,7 +65,6 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
 		_unit addmagazines [_glsmokewhite, 3];
-		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
 		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenadegreen, 2];
 	};
