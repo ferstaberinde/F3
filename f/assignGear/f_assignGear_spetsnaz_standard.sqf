@@ -147,6 +147,22 @@ switch (_typeofUnit) do
 		_unit addItem _medkit;
 		_unit addItem _firstaid;
 	};
+// Combat Life Saver Loadout:
+	case "cls":
+	{
+		_unit setUnitTrait ["f3_cls",true,true]; // Used in F3 CLS Event Handler
+		_unit addBackpack _bag;
+		_unit addmagazines [_riflemag, 1];
+		_unit addweapon _rifle;
+		_unit addItem _firstaid;
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
+		_unit addmagazines [_riflemag_tr, 2];
+		for "_i" from 1 to 6 do {
+			_unit addItem _firstaid;
+		};
+		_unit addmagazines [_grenade, 2];
+	};
 // Designated Marksman Loadout:
 	case "dm":
 	{
