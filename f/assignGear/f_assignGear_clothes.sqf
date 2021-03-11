@@ -19,12 +19,15 @@ _uniform = _baseUniform;
 _helmet  = _baseHelmet;
 _glasses = _baseGlasses;
 
+_rig = _standardRig
+
+// Uncomment this block if you are adding an alternate loadout. See relevant block in description.ext for more info.
 // Select the default rig
-_rig = switch (f_param_loadouts) do {
-	case 0:{_lightRig};
-	case 1:{_standardRig};
-	default{_standardRig};
-};
+// _rig = switch (f_param_loadouts) do {
+//		case 0:{_lightRig};
+//		case 1:{_standardRig};
+//		default{_standardRig};
+// };
 
 // Flip through unit to assign specialized uniforms
 
