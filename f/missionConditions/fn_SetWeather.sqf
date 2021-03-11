@@ -122,7 +122,7 @@ switch (_weather) do
 		_MissionWindGusts = 0.2;
 		_MissionWaves = 0.5;
 		_MissionFogStrength = 0.03;
-		_MissionFogDecay = 0;
+		_MissionFogDecay = 0.002;
 		_MissionFogBase = 0;
 	};
 // Light Rain
@@ -135,8 +135,8 @@ switch (_weather) do
 		_MissionWindStr = 0.25;
 		_MissionWindGusts = 0.25;
 		_MissionWaves = 0.5;
-		_MissionFogStrength = 0.07;
-		_MissionFogDecay = 0;
+		_MissionFogStrength = 0.04;
+		_MissionFogDecay = 0.002;
 		_MissionFogBase = 0;
 	};
 // Heavy Rain
@@ -149,8 +149,8 @@ switch (_weather) do
 		_MissionWindStr = 0.4;
 		_MissionWindGusts = 0.4;
 		_MissionWaves = 0.8;
-		_MissionFogStrength = 0.15;
-		_MissionFogDecay = 0;
+		_MissionFogStrength = 0.04;
+		_MissionFogDecay = 0.002;
 		_MissionFogBase = 0;
 	};
 // Storm
@@ -163,8 +163,8 @@ switch (_weather) do
 		_MissionWindStr = 0.75;
 		_MissionWindGusts = 1;
 		_MissionWaves = 1;
-		_MissionFogStrength = 0.3;
-		_MissionFogDecay = 0;
+		_MissionFogStrength = 0.05;
+		_MissionFogDecay = 0.002;
 		_MissionFogBase = 0;
 	};
 };
@@ -193,3 +193,6 @@ if (_setFog) then {
 forceWeatherChange;
 
 // ====================================================================================
+
+// RETURN WEATHER PARAMS
+[_MissionOvercast,_MissionRain,_MissionLightnings,_MissionWaves,_MissionWindStr,[_MissionFogStrength,_MissionFogDecay,_MissionFogBase]]

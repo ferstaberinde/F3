@@ -89,6 +89,9 @@ _smokegrenadegreen = "SmokeShellGreen";
 _smokegrenadeblue = "SmokeShellBlue";
 _smokegrenadepurple = "SmokeShellPurple";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // misc medical items.
 _firstaid = "FirstAidKit";
 _medkit = "Medikit";
@@ -124,6 +127,7 @@ _DMriflemag = "20Rnd_762x51_Mag";
 
 _pilot = ["pp","pcc","pc"];
 _specOp = ["nf"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -147,6 +151,12 @@ _sfuniform = ["U_B_GEN_Commander_F"];
 _sfhelmet = ["H_Helmet_Skate"];
 _sfRig = ["V_PlateCarrier1_blk"];
 _sfGlasses = ["G_Balaclava_blk"];
+
+// VIP/Officer
+_vipUniform = ["U_B_GEN_Commander_F"];
+_vipHelmet = ["H_Beret_gen_F"];
+_vipRig = ["V_TacVest_gen_F"];
+_vipGlasses = [];
 
 // ====================================================================================
 
@@ -206,7 +216,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 		_unit addItem _firstaid;
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_chemgreen,1];
 		_unit addmagazines [_chemred,1];
@@ -220,7 +230,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 		_unit addItem _firstaid;
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_chemgreen,1];
 		_unit addmagazines [_chemred,1];
@@ -234,7 +244,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 		_unit addItem _firstaid;
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_chemgreen,1];
 		_unit addmagazines [_chemred,1];
@@ -310,7 +320,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 7];
 		_attachments pushback (_silencer1); // Adds silencer
 		_hg_attachments pushback (_hg_silencer1); // Adds pistol silencer
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_smokegrenade, 2];
 		_unit addmagazines [_chemgreen,1];
