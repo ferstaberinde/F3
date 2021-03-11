@@ -63,3 +63,6 @@ _transition setWindForce _gusts;
 _transition setWaves _waves;
 
 // ====================================================================================
+
+// RETURN WIND PARAMS
+_strength
