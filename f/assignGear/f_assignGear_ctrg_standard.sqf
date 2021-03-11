@@ -430,6 +430,29 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smgmag, 4];
 		_unit addweapon _binoculars;
 	};
+// Light Vehicle Crew Loadout:
+	case "lvc":
+	{
+		_unit addmagazines [_carbinemag, 1];
+		_unit addweapon _carbine;
+		_unit addItem _firstaid;
+		_unit addmagazines [_smokegrenadeblue, 3];
+		_unit addmagazines [_carbinemag, 4];
+		_unit addweapon _binoculars;
+	};
+// Light Vehicle Driver Loadout:
+	case "lvd":
+	{
+		_unit setUnitTrait ["engineer",true]; // Can repair
+		_unit addBackpack _bag;
+		_unit addmagazines [_carbinemag, 1];
+		_unit addweapon _carbine;
+		_unit addItem _firstaid;
+		_unit addmagazines [_smokegrenadeblue, 3];
+		_unit addmagazines [_carbinemag, 4];
+		_unit addItem "ToolKit";
+		_unit addweapon _binoculars;
+	};
 // Vehicle Gunner Loadout:
 	case "vg":
 	{
