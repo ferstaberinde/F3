@@ -167,6 +167,9 @@ _medkit = "Medikit";
 _nvg = "O_NVGoggles_ghex_F";
 _nvgPilot = "Integrated_NVG_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_02_ghex_F";
 
@@ -281,8 +284,14 @@ _baseGlasses = [];
 //_baseHelmet = ["H_HelmetO_oucamo"];
 
 // Vests
-_lightRig = ["V_HarnessO_ghex_F"];
-_standardRig = ["V_HarnessO_ghex_F"];
+_lightRig = ["V_TacVest_oli"];
+_standardRig = ["V_TacVest_oli"];
+// Consider changing to "V_HarnessO_ghex_F" if using this with assignGear AI.
+
+// Urban Vests
+// _lightRig = ["V_TacVest_blk"];
+// _standardRig = ["V_TacVest_blk"];
+// Consider changing to "V_HarnessO_gry" if using this with assignGear AI.
 
 // Diver
 _diverUniform =  ["U_O_Wetsuit"];

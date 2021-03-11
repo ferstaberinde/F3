@@ -204,8 +204,6 @@ class Params
 		values[] = {0,1,2,3,4,5,6,7,8};
 		texts[] = {$STR_f_param_timeOfDay_Option0,$STR_f_param_timeOfDay_Option1,$STR_f_param_timeOfDay_Option2,$STR_f_param_timeOfDay_Option3,$STR_f_param_timeOfDay_Option4,$STR_f_param_timeOfDay_Option5,$STR_f_param_timeOfDay_Option6,$STR_f_param_timeOfDay_Option7,$STR_f_param_timeOfDay_Option8};
 		default = 8;
-		function = "f_fnc_setTime"; // This function is called to apply the values
- 		isGlobal = 0; // Execute this only on the server
 	};
 
 // ============================================================================================
@@ -218,7 +216,7 @@ class Params
 		title = "$STR_f_param_AISkill_BLUFOR";
 		values[] = {0,1,2,3};
 		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-		default = 1;
+		default = 2;
 	};
 
 	class f_param_AISkill_OPFOR
@@ -226,7 +224,7 @@ class Params
 		title = "$STR_f_param_AISkill_OPFOR";
 		values[] = {0,1,2,3};
 		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-		default = 1;
+		default = 2;
 	};
 
 	class f_param_AISkill_INDP
@@ -234,7 +232,7 @@ class Params
 		title = "$STR_f_param_AISkill_INDP";
 		values[] = {0,1,2,3};
 		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-		default = 1;
+		default = 2;
 	};
 
 // ============================================================================================

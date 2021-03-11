@@ -22171,7 +22171,7 @@ class Mission
 						position[]={2381.1589,5.0014391,1301.369};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -22193,7 +22193,7 @@ class Mission
 						position[]={2381.1589,5.0014391,1301.369};
 					};
 					side="East";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -23033,7 +23033,7 @@ class Mission
 						position[]={2423.8579,5.0014391,1301.144};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -23055,7 +23055,7 @@ class Mission
 						position[]={2423.8579,5.0014391,1301.144};
 					};
 					side="East";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -23933,7 +23933,7 @@ class Mission
 						position[]={2475.9971,5.0014391,1300.3561};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -23978,7 +23978,7 @@ class Mission
 						position[]={2475.9971,5.0014391,1300.3561};
 					};
 					side="East";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -24856,7 +24856,7 @@ class Mission
 						position[]={2529.116,5.0014391,1300.166};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -24878,7 +24878,7 @@ class Mission
 						position[]={2529.116,5.0014391,1300.166};
 					};
 					side="East";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;

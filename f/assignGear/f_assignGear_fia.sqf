@@ -167,6 +167,9 @@ _medkit = "Medikit";
 _nvg = "NVGoggles";
 _nvgPilot = "Integrated_NVG_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_03";
 
@@ -186,8 +189,8 @@ _bag = "B_AssaultPack_cbr";
 _bagLarge = "B_Kitbag_cbr";
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "B_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "B_HMG_01_weapon_F";			// used by Heavy MG gunner
-_baghmgag = "B_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_G_HMG_02_weapon_F";			// used by Heavy MG gunner
+_baghmgag = "I_G_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "B_AssaultPack_cbr";			// used by Heavy AT gunner
 _baghatag = "B_Kitbag_cbr";			// used by Heavy AT assistant gunner **
 _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
