@@ -168,6 +168,9 @@ _medkit = "Medikit";
 _nvg = "NVGoggles_INDEP";
 _nvgPilot = "Integrated_NVG_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_03";
 
@@ -185,8 +188,8 @@ _bag = "B_AssaultPack_eaf_F";			// The standard bag for most classes
 _bagLarge = "B_Carryall_eaf_F";				// Larger bag for some special purpose classes
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "I_E_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "I_E_HMG_01_weapon_F";				// used by Heavy MG gunner
-_baghmgag = "I_E_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_E_HMG_02_weapon_F";				// used by Heavy MG gunner
+_baghmgag = "I_E_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "I_E_AT_01_weapon_F";				// used by Heavy AT gunner
 _baghatag = "I_E_HMG_01_support_F";			// used by Heavy AT assistant gunner
 _bagmtrg = "I_E_Mortar_01_weapon_F";			// used by Mortar gunner
@@ -294,7 +297,7 @@ _crewRig = ["V_TacVest_oli"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_I_GhillieSuit"];	//DLC alternatives: ["U_I_FullGhillie_lsh","U_I_FullGhillie_ard","U_I_FullGhillie_sard"];
+_ghillieUniform = ["U_B_T_Sniper_F"];	//DLC alternatives: ["U_I_FullGhillie_lsh","U_I_FullGhillie_ard","U_I_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];

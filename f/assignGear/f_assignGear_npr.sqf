@@ -185,6 +185,9 @@ _medkit = "Medikit";
 _nvg = "NVGoggles_OPFOR";
 _nvgPilot = "Integrated_NVG_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_03";
 
@@ -204,8 +207,8 @@ _bag = "B_FieldPack_green_F";
 _bagLarge = "B_Carryall_oli";
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "O_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "I_HMG_01_weapon_F";			// used by Heavy MG gunner
-_baghmgag = "I_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_G_HMG_02_weapon_F";			// used by Heavy MG gunner
+_baghmgag = "I_G_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "I_AssaultPack_cbr";			// used by Heavy AT gunner
 _baghatag = "I_Kitbag_cbr";			// used by Heavy AT assistant gunner **
 _bagmtrg = "I_Mortar_01_weapon_F";			// used by Mortar gunner
@@ -324,7 +327,7 @@ _crewRig = ["V_BandollierB_cbr"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_B_GhillieSuit"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
+_ghillieUniform = ["U_O_R_Gorka_01_camo_F"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];

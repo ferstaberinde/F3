@@ -167,6 +167,9 @@ _medkit = "Medikit";
 _nvg = "O_NVGoggles_ghex_F";
 _nvgPilot = "Integrated_NVG_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_02_ghex_F";
 

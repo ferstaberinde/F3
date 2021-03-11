@@ -164,8 +164,11 @@ _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
 // Night Vision Goggles
-//_nvg = "NVGoggles_OPFOR";
-//_nvgPilot = "Integrated_NVG_F";
+_nvg = "NVGoggles_OPFOR";
+_nvgPilot = "Integrated_NVG_F";
+
+// Binoculars
+_binoculars = "Rangefinder";
 
 // Laserdesignator
 _laserdesignator = "Laserdesignator_03";
@@ -184,8 +187,8 @@ _bag = "B_FieldPack_khk";			// carries 160, weighs 20
 _baglarge =  "B_Carryall_khk"; 				// carries 320, weighs 60
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "I_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "B_HMG_01_weapon_F";				// used by Heavy MG gunner
-_baghmgag = "B_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_G_HMG_02_weapon_F";				// used by Heavy MG gunner
+_baghmgag = "I_G_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "B_AssaultPack_rgr";				// Used by Heavy AT Gunner
 _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
@@ -300,7 +303,7 @@ _crewRig = ["V_Chestrig_blk"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_B_GhillieSuit"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
+_ghillieUniform = ["U_B_T_Sniper_F"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
@@ -336,7 +339,7 @@ if (_isMan) then {
 	// ADD UNIVERSAL ITEMS
 	// Add items universal to all units of this faction
 
-	_unit linkItem _nvg;			// Add and equip the faction's nvg
+	//	_unit linkItem _nvg;			// Add and equip the faction's nvg
 	_unit addItem _firstaid;		// Add a single first aid kit (FAK)
 	_unit linkItem "ItemMap";		// Add and equip the map
 	_unit linkItem "ItemCompass";	// Add and equip a compass
