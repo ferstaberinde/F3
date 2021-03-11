@@ -757,8 +757,8 @@ f_var_groupData_opfor_npr = [
 	["GrpNPR_DT1",    _rec, "DT1",    "ColorOrange",  "NPR DT1 -"],
 	["GrpNPR_ENG1",   _eng, "ENG1",   "ColorOrange",  "NPR ENG1 -"],
 
-	["GrpNPR_IFV1",   _ifv, "IFV1",   "ColorOrange",  "NPR IFV1 -"],
-	["GrpNPR_IFV2",   _ifv, "IFV2",   "ColorOrange",  "NPR IFV2 -"],
+	["GrpNPR_IFV1",   _ifv, "TECH1",   "ColorOrange",  "NPR TECH1 -"],
+	["GrpNPR_IFV2",   _ifv, "TECH2",   "ColorOrange",  "NPR TECH2 -"],
 	["GrpNPR_TNK1",   _tnk, "TNK1",   "ColorRed",     "NPR TNK1 -"],
 
 	["GrpNPR_CAS1",   _pla, "CAS1",   "ColorOrange",  "NPR CAS1 -"],
