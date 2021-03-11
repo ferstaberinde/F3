@@ -9,6 +9,7 @@
 //		co			- commander
 //		dc 			- deputy commander / squad leader
 //		m 			- medic
+//		cls			- combat life saver
 //		ftl			- fire team leader
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
@@ -34,6 +35,8 @@
 //		hsamag		- heavy SAM assistant gunner (deployable)
 //		sn			- sniper
 //		sp			- spotter (for sniper)
+//		lvc			- light vehicle crew
+//		lvd			- light vehicle driver (repair)
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
@@ -167,6 +170,9 @@ _medkit = "Medikit";
 _nvg = "NVGoggles_INDEP";
 _nvgPilot = "Integrated_NVG_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_01_khk_F";
 
@@ -184,8 +190,8 @@ _bag = "B_AssaultPack_rgr";			// carries 160, weighs 20
 _bagLarge =  "B_Carryall_cbr"; 				// carries 320, weighs 60
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "I_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "B_HMG_01_weapon_F";				// used by Heavy MG gunner
-_baghmgag = "B_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_C_HMG_02_weapon_F";				// used by Heavy MG gunner
+_baghmgag = "I_C_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "B_AssaultPack_rgr";				// Used by Heavy AT Gunner
 _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
@@ -254,6 +260,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -291,7 +298,7 @@ _crewRig = ["V_Chestrig_blk"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_B_GhillieSuit"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
+_ghillieUniform = ["U_B_T_Sniper_F"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"]; CSAT option: ["U_O_T_Sniper_F"];, ["U_O_T_FullGhillie_tna_F"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
@@ -301,6 +308,12 @@ _sfuniform = _baseUniform;
 _sfhelmet = _baseHelmet;
 _sfRig = _standardRig;
 _sfGlasses = [];
+
+// VIP/Officer
+_vipUniform = ["U_I_C_Soldier_Camo_F"];
+_vipHelmet = [];
+_vipRig = ["V_TacVestIR_blk"];
+_vipGlasses = ["G_Aviator"];
 
 // ====================================================================================
 

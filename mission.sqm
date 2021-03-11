@@ -10400,7 +10400,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[this,""npr""] call f_fnc_setVirtualFaction; [""vd"",this] call f_fnc_assignGear;";
+						init="[this,""npr""] call f_fnc_setVirtualFaction; [""lvd"",this] call f_fnc_assignGear;";
 						name="UnitNPR_IFV1_D";
 						description="NPR Technical 1 Driver (Repair)";
 						isPlayable=1;
@@ -10445,7 +10445,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[this,""npr""] call f_fnc_setVirtualFaction; [""vg"",this] call f_fnc_assignGear;";
+						init="[this,""npr""] call f_fnc_setVirtualFaction; [""lvc"",this] call f_fnc_assignGear;";
 						name="UnitNPR_IFV1_G";
 						description="NPR Technical 1 Gunner";
 						isPlayable=1;
@@ -10578,7 +10578,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[this,""npr""] call f_fnc_setVirtualFaction; [""vg"",this] call f_fnc_assignGear;";
+						init="[this,""npr""] call f_fnc_setVirtualFaction; [""lvc"",this] call f_fnc_assignGear;";
 						name="UnitNPR_IFV2_G";
 						description="NPR Technical 2 Gunner";
 						isPlayable=1;
@@ -10622,7 +10622,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[this,""npr""] call f_fnc_setVirtualFaction; [""vd"",this] call f_fnc_assignGear;";
+						init="[this,""npr""] call f_fnc_setVirtualFaction; [""lvd"",this] call f_fnc_assignGear;";
 						name="UnitNPR_IFV2_D";
 						description="NPR Technical 2 Driver (Repair)";
 						isPlayable=1;
@@ -22171,7 +22171,7 @@ class Mission
 						position[]={2381.1589,5.0014391,1301.369};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -22193,7 +22193,7 @@ class Mission
 						position[]={2381.1589,5.0014391,1301.369};
 					};
 					side="East";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -23033,7 +23033,7 @@ class Mission
 						position[]={2423.8579,5.0014391,1301.144};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -23055,7 +23055,7 @@ class Mission
 						position[]={2423.8579,5.0014391,1301.144};
 					};
 					side="East";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -23933,7 +23933,7 @@ class Mission
 						position[]={2475.9971,5.0014391,1300.3561};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -23978,7 +23978,7 @@ class Mission
 						position[]={2475.9971,5.0014391,1300.3561};
 					};
 					side="East";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -24856,7 +24856,7 @@ class Mission
 						position[]={2529.116,5.0014391,1300.166};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -24878,7 +24878,7 @@ class Mission
 						position[]={2529.116,5.0014391,1300.166};
 					};
 					side="East";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -36056,7 +36056,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""vd"",this] call f_fnc_assignGear;";
+						init="[""lvd"",this] call f_fnc_assignGear;";
 						name="UnitFIA_IFV1_D";
 						description="FIA Technical 1 Driver (Repair)";
 						isPlayable=1;
@@ -36101,7 +36101,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""vg"",this] call f_fnc_assignGear;";
+						init="[""lvc"",this] call f_fnc_assignGear;";
 						name="UnitFIA_IFV1_G";
 						description="FIA Technical 1 Gunner";
 						isPlayable=1;
@@ -36215,7 +36215,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[""vg"",this] call f_fnc_assignGear;";
+						init="[""lvc"",this] call f_fnc_assignGear;";
 						name="UnitFIA_IFV2_G";
 						description="FIA Technical 2 Gunner";
 						isPlayable=1;
@@ -36259,7 +36259,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""vd"",this] call f_fnc_assignGear;";
+						init="[""lvd"",this] call f_fnc_assignGear;";
 						name="UnitFIA_IFV2_D";
 						description="FIA Technical 2 Driver (Repair)";
 						isPlayable=1;
@@ -41687,7 +41687,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="[""vg"",this] call f_fnc_assignGear;";
+						init="[""lvc"",this] call f_fnc_assignGear;";
 						name="UnitSyn_IFV1_G";
 						description="Syndikat Technical 1 Gunner";
 						isPlayable=1;
@@ -41730,7 +41730,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="[""vd"",this] call f_fnc_assignGear;";
+						init="[""lvd"",this] call f_fnc_assignGear;";
 						name="UnitSyn_IFV1_D";
 						description="Syndikat Technical 1 Driver (Repair)";
 						isPlayable=1;
@@ -41862,7 +41862,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						init="[""vg"",this] call f_fnc_assignGear;";
+						init="[""lvc"",this] call f_fnc_assignGear;";
 						name="UnitSyn_IFV2_G";
 						description="Syndikat Technical 2 Gunner";
 						isPlayable=1;
@@ -41905,7 +41905,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="[""vd"",this] call f_fnc_assignGear;";
+						init="[""lvd"",this] call f_fnc_assignGear;";
 						name="UnitSyn_IFV2_D";
 						description="Syndikat Technical 2 Driver (Repair)";
 						isPlayable=1;
@@ -50095,7 +50095,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""vd"",this] call f_fnc_assignGear;";
+						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""lvd"",this] call f_fnc_assignGear;";
 						name="Unit3IFB_IFV1_D";
 						description="3IFB Technical 1 Driver (Repair)";
 						isPlayable=1;
@@ -50140,7 +50140,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""vg"",this] call f_fnc_assignGear;";
+						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""lvc"",this] call f_fnc_assignGear;";
 						name="Unit3IFB_IFV1_G";
 						description="3IFB Technical 1 Gunner";
 						isPlayable=1;
@@ -50254,7 +50254,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CORPORAL";
-						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""vg"",this] call f_fnc_assignGear;";
+						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""lvc"",this] call f_fnc_assignGear;";
 						name="Unit3IFB_IFV2_G";
 						description="3IFB Technical 2 Gunner";
 						isPlayable=1;
@@ -50298,7 +50298,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""vd"",this] call f_fnc_assignGear;";
+						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""lvd"",this] call f_fnc_assignGear;";
 						name="Unit3IFB_IFV2_D";
 						description="3IFB Technical 2 Driver (Repair)";
 						isPlayable=1;

@@ -9,6 +9,7 @@
 //		co			- commander
 //		dc 			- deputy commander / squad leader
 //		m 			- medic
+//		cls			- combat life saver
 //		ftl			- fire team leader
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
@@ -34,6 +35,8 @@
 //		hsamag		- heavy SAM assistant gunner (deployable)
 //		sn			- sniper
 //		sp			- spotter (for sniper)
+//		lvc			- light vehicle crew
+//		lvd			- light vehicle driver (repair)
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
@@ -79,7 +82,7 @@ _scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
 _bipod1 = "bipod_02_F_blk";		// Default bipod
-_bipod2 = "bipod_02_F_blk";		// Black bipod
+_bipod2 = "bipod_02_F_lush";	// Green bipod
 
 // Default setup
 _attachments = []; // The default attachment set for most units, overwritten in the individual unitType
@@ -185,6 +188,9 @@ _medkit = "Medikit";
 _nvg = "NVGoggles_OPFOR";
 _nvgPilot = "Integrated_NVG_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_03";
 
@@ -204,8 +210,8 @@ _bag = "B_FieldPack_green_F";
 _bagLarge = "B_Carryall_oli";
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "O_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "I_HMG_01_weapon_F";			// used by Heavy MG gunner
-_baghmgag = "I_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_G_HMG_02_weapon_F";			// used by Heavy MG gunner
+_baghmgag = "I_G_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "I_AssaultPack_cbr";			// used by Heavy AT gunner
 _baghatag = "I_Kitbag_cbr";			// used by Heavy AT assistant gunner **
 _bagmtrg = "I_Mortar_01_weapon_F";			// used by Mortar gunner
@@ -285,6 +291,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -324,7 +331,7 @@ _crewRig = ["V_BandollierB_cbr"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_B_GhillieSuit"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
+_ghillieUniform = ["U_O_R_Gorka_01_camo_F"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
@@ -334,6 +341,12 @@ _sfuniform = ["U_B_CTRG_1","U_B_CTRG_2","U_B_CTRG_3"];
 _sfhelmet = _baseHelmet;
 _sfRig = ["V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG"];
 _sfGlasses = [];
+
+// VIP/Officer
+_vipUniform = ["U_O_R_Gorka_01_black_F"];
+_vipHelmet = ["H_Beret_blk"];
+_vipRig = ["V_TacVest_blk"];
+_vipGlasses = ["G_Balaclava_blk"];
 
 // ====================================================================================
 

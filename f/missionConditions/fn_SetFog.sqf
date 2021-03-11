@@ -12,7 +12,7 @@ private ["_strength","_decay","_base"];
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
 params [
-	["_fog", 0, [0]],
+	["_fog", 4, [0]],
 	["_transition", 0, [0]]
 ];
 
@@ -64,3 +64,6 @@ switch (_fog) do
 _transition setFog [_strength,_decay,_base];
 
 // ====================================================================================
+
+// RETURN FOG PARAMS
+[_strength,_decay,_base]

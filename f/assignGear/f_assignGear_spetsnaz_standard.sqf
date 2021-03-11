@@ -67,7 +67,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glmag, 5];
 		_unit addmagazines [_glsmokewhite, 3];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenadegreen, 2];
 	};
 // Squad Leader / DC Loadout:
@@ -88,7 +88,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glsmokered, 3];
 		_unit addmagazines [_pistolmag, 2];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenadepurple, 3];
 	};
 // Platoon CO Loadout:
@@ -109,7 +109,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glsmokegreen, 2];
 		_unit addmagazines [_pistolmag, 4];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenadepurple, 3];
 	};
 // JTAC Loadout:
@@ -146,6 +146,22 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addItem _medkit;
 		_unit addItem _firstaid;
+	};
+// Combat Life Saver Loadout:
+	case "cls":
+	{
+		_unit setUnitTrait ["f3_cls",true,true]; // Used in F3 CLS Event Handler
+		_unit addBackpack _bag;
+		_unit addmagazines [_riflemag, 1];
+		_unit addweapon _rifle;
+		_unit addItem _firstaid;
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
+		_unit addmagazines [_riflemag_tr, 2];
+		for "_i" from 1 to 6 do {
+			_unit addItem _firstaid;
+		};
+		_unit addmagazines [_grenade, 2];
 	};
 // Designated Marksman Loadout:
 	case "dm":
@@ -198,7 +214,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_MMGmag, 2];
 		_unit addmagazines [_MMGmag_tr, 1];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Heavy MG Gunner Loadout:
 	case "hmgg":
@@ -222,7 +238,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Medium AT Gunner Loadout:
 	case "matg":
@@ -266,7 +282,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_MATmag1, 2];
 		_unit addmagazines [_MATmag2, 1];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Heavy AT Gunner Loadout:
 	case "hatg":
@@ -307,7 +323,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_HATmag1, 2];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Mortar Gunner Loadout:
 	case "mtrg":
@@ -331,7 +347,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Medium SAM Gunner Loadout:
 	case "msamg":
@@ -371,7 +387,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_SAMmag, 2];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Heavy SAM Gunner Loadout:
 	case "hsamg":
@@ -395,7 +411,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 	};
 // Sniper Loadout:
 	case "sn":
@@ -421,8 +437,31 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_SNrifleMag, 3];
+	};
+// Light Vehicle Crew Loadout:
+	case "lvc":
+	{
+		_unit addmagazines [_carbinemag, 1];
+		_unit addweapon _carbine;
+		_unit addItem _firstaid;
+		_unit addmagazines [_smokegrenadeblue, 3];
+		_unit addmagazines [_carbinemag, 4];
+		_unit addweapon _binoculars;
+	};
+// Light Vehicle Driver Loadout:
+	case "lvd":
+	{
+		_unit setUnitTrait ["engineer",true]; // Can repair
+		_unit addBackpack _bag;
+		_unit addmagazines [_carbinemag, 1];
+		_unit addweapon _carbine;
+		_unit addItem _firstaid;
+		_unit addmagazines [_smokegrenadeblue, 3];
+		_unit addmagazines [_carbinemag, 4];
+		_unit addItem "ToolKit";
+		_unit addweapon _binoculars;
 	};
 // Vehicle Commander Loadout:
 	case "vc":
@@ -432,7 +471,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenadeblue, 3];
 		_unit addmagazines [_smgmag, 4];
-		_unit addweapon "Rangefinder";
+		_unit addweapon _binoculars;
 	};
 // Vehicle Gunner Loadout:
 	case "vg":

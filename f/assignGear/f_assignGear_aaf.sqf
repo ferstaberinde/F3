@@ -9,6 +9,7 @@
 //		co			- commander
 //		dc 			- deputy commander / squad leader
 //		m 			- medic
+//		cls			- combat life saver
 //		ftl			- fire team leader
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
@@ -34,6 +35,8 @@
 //		hsamag		- heavy SAM assistant gunner (deployable)
 //		sn			- sniper
 //		sp			- spotter (for sniper)
+//		lvc			- light vehicle crew
+//		lvd			- light vehicle driver (repair)
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
@@ -167,6 +170,9 @@ _medkit = "Medikit";
 _nvg = "NVGoggles_INDEP";
 _nvgPilot = "Integrated_NVG_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_03";
 
@@ -184,8 +190,8 @@ _bag = "B_AssaultPack_dgtl";			// The standard bag for most classes
 _bagLarge = "B_Kitbag_rgr";				// Larger bag for some special purpose classes
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "I_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "I_HMG_01_weapon_F";				// used by Heavy MG gunner
-_baghmgag = "I_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_HMG_02_weapon_F";				// used by Heavy MG gunner
+_baghmgag = "I_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "I_AT_01_weapon_F";				// used by Heavy AT gunner
 _baghatag = "I_HMG_01_support_F";			// used by Heavy AT assistant gunner
 _bagmtrg = "I_Mortar_01_weapon_F";			// used by Mortar gunner
@@ -256,6 +262,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -303,6 +310,12 @@ _sfuniform = _baseUniform;
 _sfhelmet = _baseHelmet;
 _sfRig = _standardRig;
 _sfGlasses = [];
+
+// VIP/Officer
+_vipUniform = ["U_I_officerUniform"];
+_vipHelmet = ["H_MilCap_dgtl"];
+_vipRig = ["V_TacVest_oli"];
+_vipGlasses = [];
 
 // ====================================================================================
 

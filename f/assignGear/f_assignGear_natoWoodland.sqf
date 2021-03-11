@@ -9,6 +9,7 @@
 //		co			- commander
 //		dc 			- deputy commander / squad leader
 //		m 			- medic
+//		cls			- combat life saver
 //		ftl			- fire team leader
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
@@ -34,6 +35,8 @@
 //		hsamag		- heavy SAM assistant gunner (deployable)
 //		sn			- sniper
 //		sp			- spotter (for sniper)
+//		lvc			- light vehicle crew
+//		lvd			- light vehicle driver (repair)
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
@@ -166,6 +169,9 @@ _medkit = "Medikit";
 _nvg = "NVGoggles_INDEP";
 _nvgPilot = "Integrated_NVG_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_01_khk_F";
 
@@ -260,6 +266,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -306,6 +313,12 @@ _sfuniform = ["U_B_CombatUniform_vest_mcam_wdl_f"];
 _sfhelmet = ["H_HelmetSpecB_wdl"];
 _sfRig = ["V_PlateCarrierSpec_wdl"];
 _sfGlasses = [];
+
+// VIP/Officer
+_vipUniform = ["U_B_CombatUniform_tshirt_mcam_wdl_f"];
+_vipHelmet = ["H_Beret_02"];
+_vipRig = ["V_TacVest_oli"];
+_vipGlasses = [];
 
 // ====================================================================================
 

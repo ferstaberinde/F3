@@ -9,6 +9,7 @@
 //		co			- commander
 //		dc 			- deputy commander / squad leader
 //		m 			- medic
+//		cls			- combat life saver
 //		ftl			- fire team leader
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
@@ -34,6 +35,8 @@
 //		hsamag		- heavy SAM assistant gunner (deployable)
 //		sn			- sniper
 //		sp			- spotter (for sniper)
+//		lvc			- light vehicle crew
+//		lvd			- light vehicle driver (repair)
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
@@ -167,6 +170,9 @@ _medkit = "Medikit";
 _nvg = "O_NVGoggles_ghex_F";
 _nvgPilot = "Integrated_NVG_F";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // Laserdesignator
 _laserdesignator = "Laserdesignator_02_ghex_F";
 
@@ -266,6 +272,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -280,8 +287,14 @@ _baseGlasses = [];
 //_baseHelmet = ["H_HelmetO_oucamo"];
 
 // Vests
-_lightRig = ["V_HarnessO_ghex_F"];
-_standardRig = ["V_HarnessO_ghex_F"];
+_lightRig = ["V_TacVest_oli"];
+_standardRig = ["V_TacVest_oli"];
+// Consider changing to "V_HarnessO_ghex_F" if using this with assignGear AI.
+
+// Urban Vests
+// _lightRig = ["V_TacVest_blk"];
+// _standardRig = ["V_TacVest_blk"];
+// Consider changing to "V_HarnessO_gry" if using this with assignGear AI.
 
 // Diver
 _diverUniform =  ["U_O_Wetsuit"];
@@ -318,6 +331,12 @@ _sfuniform = ["U_O_T_Soldier_F"];		//Viper: ["U_O_V_Soldier_Viper_F"];
 _sfhelmet = ["H_HelmetSpecO_ghex_F"];	//Viper: ["H_HelmetO_ViperSP_ghex_F"]; IMPORTANT: Will be overriden if nvg is added afterwards
 _sfRig = _standardRig;
 _sfGlasses = [];
+
+// VIP/Officer
+_vipUniform = ["U_O_T_officer_F"];
+_vipHelmet = ["H_Beret_CSAT_01_F"];
+_vipRig = ["V_TacVest_oli"];
+_vipGlasses = [];
 
 // ====================================================================================
 
