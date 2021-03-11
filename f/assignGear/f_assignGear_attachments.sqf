@@ -17,9 +17,7 @@ if (_hg_attachments isEqualType []) then {
 
 // Handle launcher attachments
 if (_lau_attachments isEqualType []) then {
-	{
-		_unit removeSecondaryWeaponItem _x;
-	} forEach secondaryWeaponItems _unit;
+	removeAllSecondaryWeaponItems _unit;
 	{
 		// loop through the attachments and add them to the weapon
 		_unit addSecondaryWeaponItem _x;
