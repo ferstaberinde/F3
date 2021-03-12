@@ -19,7 +19,7 @@ _uniform = _baseUniform;
 _helmet  = _baseHelmet;
 _glasses = _baseGlasses;
 
-_rig = _standardRig
+_rig = _standardRig;
 
 // Uncomment this block if you are adding an alternate loadout. See relevant block in description.ext for more info.
 // Select the default rig
