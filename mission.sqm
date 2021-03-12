@@ -6230,7 +6230,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				fuel=0.29590145;
 				init="[""v_helo_h"",this] call f_fnc_assignGear";
 				name="VehLDF_TH4";
 			};
@@ -11723,7 +11722,6 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				fuel=0.29590145;
 				init="[""v_helo_h"",this] call f_fnc_assignGear";
 				name="VehAAF_TH4";
 			};
