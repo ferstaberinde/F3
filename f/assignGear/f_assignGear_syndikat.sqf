@@ -365,7 +365,7 @@ if (_isMan) then {
 
 // Standard Loadout
 // if (_loadout == 1) then {
- 	#include "f_assignGear_syndikat_standard.sqf"
+ 	#include "f_assignGear_syndikat_standard.sqf";
 // };
 
 // ====================================================================================

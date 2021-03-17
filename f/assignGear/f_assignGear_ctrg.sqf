@@ -375,7 +375,7 @@ if (_isMan) then {
 
 // Standard Loadout
 // if (_loadout == 1) then {
-	#include "f_assignGear_ctrg_standard.sqf"
+	#include "f_assignGear_ctrg_standard.sqf";
 // };
 
 // ====================================================================================

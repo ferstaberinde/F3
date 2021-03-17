@@ -368,7 +368,7 @@ if (_isMan) then {
 
 // Standard Loadout
 // if (_loadout == 1) then {
-	#include "f_assignGear_ldf_standard.sqf"
+	#include "f_assignGear_ldf_standard.sqf";
 // };
 
 // ====================================================================================
