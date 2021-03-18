@@ -235,7 +235,7 @@ if (_assignGearFaction != "") then {
 	{
 		[[_x,_assignGearFaction],f_fnc_setVirtualFaction] remoteExec ["call",2];
 	} forEach (units _grp);
-	[[units _grp],"f\assignGear\f_assignGear_AI.sqf"] remoteExec ["execVM",2];
+	[(units _grp),"f\assignGear\f_assignGear_AI.sqf"] remoteExec ["execVM",2];
 };
 
 // Prevent the group leader to issue attack orders to the members, improving their attack from buildings
