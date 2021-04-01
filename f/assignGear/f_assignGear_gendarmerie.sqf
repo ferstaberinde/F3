@@ -98,7 +98,7 @@ _medkit = "Medikit";
 
 // Night Vision Goggles
 //_nvg = "NVGoggles";
-//_nvgPilot = "Integrated_NVG_F";
+//_nvgPilot = "NVGoggles";  // Integrated_NVG_F for fullscreen NV
 
 // Chemlights
 _chemgreen =  "Chemlight_green";
