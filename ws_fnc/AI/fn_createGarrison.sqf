@@ -247,7 +247,7 @@ _grp enableAttack false;
 // Add the spawned units as editable units to any extant Zeus if that param is enabled
 if (_addToZeus) then {
 	{
-		[_x,[(units _grp),true] remoteExec ["addCuratorEditableObjects",2];
+		[_x,[(units _grp),true]] remoteExec ["addCuratorEditableObjects",2];
 	} foreach allCurators;
 };
 
