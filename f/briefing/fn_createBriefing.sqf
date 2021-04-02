@@ -41,121 +41,121 @@ if (f_param_debugMode == 1) then
 // ====================================================================================
 
 // BRIEFING: ADMIN
-if (serverCommandAvailable "#kick" || !isMultiplayer) then {
-	#if __has_include("f_briefing_admin.sqf")
+#if __has_include("f_briefing_admin.sqf")
+	if (serverCommandAvailable "#kick" || !isMultiplayer) then {
 		#include "f_briefing_admin.sqf"
 		["host"] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // ====================================================================================
 // BRIEFING: FACTION SPECIFIC
 // The following code blocks include faction-specific briefing files.
 
 // BLUFOR > NATO
-if (_unitfaction in ["blu_f","blu_t_f","blu_w_f","nato","natowoodland","natopacific"]) exitwith {
-	#if __has_include("f_briefing_nato.sqf")
+#if __has_include("f_briefing_nato.sqf")
+	if (_unitfaction in ["blu_f","blu_t_f","blu_w_f","nato","natowoodland","natopacific"]) exitwith {
 		#include "f_briefing_nato.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // FIA
-if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f","fia"]) exitwith {
-	#if __has_include("f_briefing_fia.sqf")
+#if __has_include("f_briefing_fia.sqf")
+	if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f","fia"]) exitwith {
 		#include "f_briefing_fia.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // BLUFOR > GENDARMERIE
-if (_unitfaction in ["blu_gen_f"]) exitwith {
-	#if __has_include("f_briefing_gendarmerie.sqf")
+#if __has_include("f_briefing_gendarmerie.sqf")
+	if (_unitfaction in ["blu_gen_f"]) exitwith {
 		#include "f_briefing_gendarmerie.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // OPFOR > CSAT
-if (_unitfaction in ["opf_f","opf_t_f","csat","csatpacific"]) exitwith {
-	#if __has_include("f_briefing_csat.sqf")
+#if __has_include("f_briefing_csat.sqf")
+	if (_unitfaction in ["opf_f","opf_t_f","csat","csatpacific"]) exitwith {
 		#include "f_briefing_csat.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // OPFOR > Spetsnaz
-if (_unitfaction in ["opf_r_f","spetsnaz"]) exitwith {
-	#if __has_include("f_briefing_spetsnaz.sqf")
+#if __has_include("f_briefing_spetsnaz.sqf")
+	if (_unitfaction in ["opf_r_f","spetsnaz"]) exitwith {
 		#include "f_briefing_spetsnaz.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // INDEPENDENT > AAF
-if (_unitfaction in ["ind_f","aaf"]) exitwith {
-	#if __has_include("f_briefing_aaf.sqf")
+#if __has_include("f_briefing_aaf.sqf")
+	if (_unitfaction in ["ind_f","aaf"]) exitwith {
 		#include "f_briefing_aaf.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // INDEPENDENT > LDF
-if (_unitfaction in ["ind_e_f","ldf"]) exitwith {
-	#if __has_include("f_briefing_ldf.sqf")
+#if __has_include("f_briefing_ldf.sqf")
+	if (_unitfaction in ["ind_e_f","ldf"]) exitwith {
 		#include "f_briefing_ldf.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // INDEPENDENT > SYNDIKAT
-if (_unitfaction in ["ind_c_f","syndikat"]) exitwith {
-	#if __has_include("f_briefing_syndikat.sqf")
+#if __has_include("f_briefing_syndikat.sqf")
+	if (_unitfaction in ["ind_c_f","syndikat"]) exitwith {
 		#include "f_briefing_syndikat.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // INDEPENDENT > NPR (Looters)
-if (_unitfaction in ["ind_l_f","npr"]) exitwith {
-	#if __has_include("f_briefing_npr.sqf")
+#if __has_include("f_briefing_npr.sqf")
+	if (_unitfaction in ["ind_l_f","npr"]) exitwith {
 		#include "f_briefing_npr.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 
 // BLUFOR > CTRG
-if (_unitfaction in ["blu_ctrg_f","ctrg"]) exitwith {
-	#if __has_include("f_briefing_ctrg.sqf")
+#if __has_include("f_briefing_ctrg.sqf")
+	if (_unitfaction in ["blu_ctrg_f","ctrg"]) exitwith {
 		#include "f_briefing_ctrg.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // CIVILIAN and IDAP
-if (_unitfaction in ["civ_f", "civ_idap_f"]) exitwith {
-	#if __has_include("f_briefing_civ.sqf")
+#if __has_include("f_briefing_civ.sqf")
+	if (_unitfaction in ["civ_f", "civ_idap_f"]) exitwith {
 		#include "f_briefing_civ.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // VIRTUAL FACTION > 3IFB
-if (_unitfaction in ["3ifb"]) exitwith {
-	#if __has_include("f_briefing_3ifb.sqf")
+#if __has_include("f_briefing_3ifb.sqf")
+	if (_unitfaction in ["3ifb"]) exitwith {
 		#include "f_briefing_3ifb.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // ZEUS
-if (_unitfaction == "" && ! (typeOf player isEqualTo "VirtualSpectator_F")) exitwith {
-	#if __has_include("f_briefing_zeus.sqf")
+#if __has_include("f_briefing_zeus.sqf")
+	if (_unitfaction == "" && ! (typeOf player isEqualTo "VirtualSpectator_F")) exitwith {
 		#include "f_briefing_zeus.sqf"
 		[_unitfaction] call _fnc_debug;
-	#endif
-};
+	};
+#endif
 
 // Virtual Spectator
 if (typeOf player isEqualTo "VirtualSpectator_F") exitwith {
