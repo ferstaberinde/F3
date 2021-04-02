@@ -153,7 +153,7 @@ if (f_param_debugMode == 1) then
 #if __has_include("f_briefing_zeus.sqf")
 	if (_unitfaction == "" && ! (typeOf player isEqualTo "VirtualSpectator_F")) exitwith {
 		#include "f_briefing_zeus.sqf"
-		[_unitfaction] call _fnc_debug;
+		["zeus"] call _fnc_debug;
 	};
 #endif
 
