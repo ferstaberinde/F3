@@ -78,9 +78,19 @@ if (f_param_debugMode == 1) then
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["blu_f","nato"]) then {
-	#include "f_assignGear_nato.sqf"
-	// #include "f_assignGear_natoPacific.sqf" // Use NATO Pacific loadouts on NATO non-Pacific units (e.g. Folk ARPS Platoons)
-	// #include "f_assignGear_natoWoodland.sqf" // Use NATO Woodland loadouts on NATO non-Woodland units (e.g. Folk ARPS Platoons)
+	#if __has_include("f_assignGear_nato.sqf")
+		#include "f_assignGear_nato.sqf"
+	#endif
+
+	// Use NATO Pacific loadouts on NATO non-Pacific units (e.g. Folk ARPS Platoons)
+	// #if __has_include("f_assignGear_natoPacific.sqf")
+		// #include "f_assignGear_natoPacific.sqf"
+	// #endif
+
+	// Use NATO Woodland loadouts on NATO non-Woodland units (e.g. Folk ARPS Platoons)
+	// #if __has_include("f_assignGear_natoWoodland.sqf")
+		// #include "f_assignGear_natoWoodland.sqf"
+	// #endif
 };
 
 // ====================================================================================
@@ -90,7 +100,9 @@ if (_faction in ["blu_f","nato"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["blu_t_f","natopacific"]) then {
-	#include "f_assignGear_natoPacific.sqf"
+	#if __has_include("f_assignGear_natoPacific.sqf")
+		#include "f_assignGear_natoPacific.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -100,7 +112,9 @@ if (_faction in ["blu_t_f","natopacific"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["blu_w_f","natowoodland"]) then {
-	#include "f_assignGear_natoWoodland.sqf"
+	#if __has_include("f_assignGear_natoWoodland.sqf")
+		#include "f_assignGear_natoWoodland.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -110,7 +124,9 @@ if (_faction in ["blu_w_f","natowoodland"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["blu_gen_f"]) then {
-	#include "f_assignGear_gendarmerie.sqf"
+	#if __has_include("f_assignGear_gendarmerie.sqf")
+		#include "f_assignGear_gendarmerie.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -120,8 +136,14 @@ if (_faction in ["blu_gen_f"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["opf_f","csat"]) then {
-	#include "f_assignGear_csat.sqf"
-	// #include "f_assignGear_csatPacific.sqf" // Use CSAT Pacific loadouts on CSAT non-Pacific units (e.g. Folk ARPS Platoons)
+	#if __has_include("f_assignGear_csat.sqf")
+		#include "f_assignGear_csat.sqf"
+	#endif
+
+	// Use CSAT Pacific loadouts on CSAT non-Pacific units (e.g. Folk ARPS Platoons)
+	// #if __has_include("f_assignGear_csatPacific.sqf")
+		// #include "f_assignGear_csatPacific.sqf"
+	// #endif
 };
 
 // ====================================================================================
@@ -131,7 +153,9 @@ if (_faction in ["opf_f","csat"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["opf_t_f","csatpacific"]) then {
-	#include "f_assignGear_csatPacific.sqf"
+	#if __has_include("f_assignGear_csatPacific.sqf")
+		#include "f_assignGear_csatPacific.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -141,7 +165,9 @@ if (_faction in ["opf_t_f","csatpacific"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["opf_r_f","spetsnaz"]) then {
-	#include "f_assignGear_spetsnaz.sqf"
+	#if __has_include("f_assignGear_spetsnaz.sqf")
+		#include "f_assignGear_spetsnaz.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -151,7 +177,9 @@ if (_faction in ["opf_r_f","spetsnaz"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["ind_f","aaf"]) then {
-	#include "f_assignGear_aaf.sqf"
+	#if __has_include("f_assignGear_aaf.sqf")
+		#include "f_assignGear_aaf.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -161,7 +189,9 @@ if (_faction in ["ind_f","aaf"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["blu_g_f","opf_g_f","ind_g_f","fia"]) then {
-	#include "f_assignGear_fia.sqf"
+	#if __has_include("f_assignGear_fia.sqf")
+		#include "f_assignGear_fia.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -171,7 +201,9 @@ if (_faction in ["blu_g_f","opf_g_f","ind_g_f","fia"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["blu_ctrg_f","ctrg"]) then {
-	#include "f_assignGear_ctrg.sqf"
+	#if __has_include("f_assignGear_ctrg.sqf")
+		#include "f_assignGear_ctrg.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -181,7 +213,9 @@ if (_faction in ["blu_ctrg_f","ctrg"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["ind_c_f","syndikat"]) then {
-	#include "f_assignGear_syndikat.sqf"
+	#if __has_include("f_assignGear_syndikat.sqf")
+		#include "f_assignGear_syndikat.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -191,7 +225,9 @@ if (_faction in ["ind_c_f","syndikat"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["ind_e_f","ldf"]) then {
-	#include "f_assignGear_ldf.sqf"
+	#if __has_include("f_assignGear_ldf.sqf")
+		#include "f_assignGear_ldf.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -201,7 +237,9 @@ if (_faction in ["ind_e_f","ldf"]) then {
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["ind_l_f","npr"]) then {
-	#include "f_assignGear_npr.sqf"
+	#if __has_include("f_assignGear_npr.sqf")
+		#include "f_assignGear_npr.sqf"
+	#endif
 };
 
 // ====================================================================================
@@ -213,7 +251,9 @@ if (_faction in ["ind_l_f","npr"]) then {
 // with f_fnc_setVirtualFaction; it automatically includes a file which contains the appropriate
 // equipment data.
 if (_faction in ["3ifb"]) then {
-	#include "f_assignGear_3IFB.sqf"
+	#if __has_include("f_assignGear_3IFB.sqf")
+		#include "f_assignGear_3IFB.sqf"
+	#endif
 };
 
 // ====================================================================================
