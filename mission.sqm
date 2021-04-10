@@ -1,4 +1,4 @@
-version=53;
+version=54;
 class EditorData
 {
 	moveGridStep=1;
@@ -8,17 +8,18 @@ class EditorData
 	toggles=517;
 	class ItemIDProvider
 	{
-		nextID=3706;
+		nextID=3726;
 	};
 	class Camera
 	{
-		pos[]={2521.6931,34.724888,919.46991};
-		dir[]={-0.76816863,-0.33065769,0.54826856};
-		up[]={-0.26914039,0.94374913,0.19209684};
-		aside[]={0.58094877,1.6466947e-007,0.81395072};
+		pos[]={1429.4276,30,1650.8149};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
+sourceName="FA3-5-5_release_template";
 addons[]=
 {
 	"A3_Soft_F_Enoch_Truck_02",
@@ -81,7 +82,7 @@ class AddonsMetaData
 		class Item0
 		{
 			className="A3_Soft_F_Enoch";
-			name="Arma 3 Enoch - Unarmored Land Vehicles";
+			name="Arma 3 Contact Platform - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -95,7 +96,7 @@ class AddonsMetaData
 		class Item2
 		{
 			className="A3_Characters_F_Enoch";
-			name="Arma 3 Enoch - Characters and Clothing";
+			name="Arma 3 Contact Platform - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -10395,17 +10396,18 @@ class Mission
 						position[]={2438.377,5.0014391,877.57196};
 					};
 					side="East";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[this,""npr""] call f_fnc_setVirtualFaction; [""lvd"",this] call f_fnc_assignGear;";
-						name="UnitNPR_IFV1_D";
-						description="NPR Technical 1 Driver (Repair)";
+						rank="CORPORAL";
+						init="[this,""npr""] call f_fnc_setVirtualFaction; [""lvc"",this] call f_fnc_assignGear;";
+						name="UnitNPR_IFV1_G";
+						description="NPR Technical 1 Gunner";
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=2512;
+					id=2513;
 					type="O_G_Soldier_F";
 					class CustomAttributes
 					{
@@ -10436,22 +10438,22 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2438.377,5.0014391,877.57196};
+						position[]={2438.377,4.932281,877.57068};
 					};
 					side="East";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
-						init="[this,""npr""] call f_fnc_setVirtualFaction; [""lvc"",this] call f_fnc_assignGear;";
-						name="UnitNPR_IFV1_G";
-						description="NPR Technical 1 Gunner";
+						init="[this,""npr""] call f_fnc_setVirtualFaction; [""lvd"",this] call f_fnc_assignGear;";
+						name="UnitNPR_IFV1_D";
+						description="NPR Technical 1 Driver (Repair)";
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=2513;
+					id=3711;
 					type="O_G_Soldier_F";
+					atlOffset=-0.069158077;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10493,16 +10495,6 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=2512;
-						item1=2514;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=2513;
 						item1=2514;
 						class CustomData
@@ -10511,9 +10503,20 @@ class Mission
 							turretPath[]={0};
 						};
 					};
+					class Item1
+					{
+						linkID=1;
+						item0=3711;
+						item1=2514;
+						class CustomData
+						{
+							role=1;
+						};
+					};
 				};
 			};
 			id=2511;
+			atlOffset=-0.069158077;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10556,6 +10559,7 @@ class Mission
 			};
 			id=2514;
 			type="O_G_Offroad_01_armed_F";
+			atlOffset=-0.069158077;
 		};
 		class Item107
 		{
@@ -10614,7 +10618,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2473.1011,5.0014391,877.48901};
+						position[]={2473.1011,4.932281,877.48773};
 					};
 					side="East";
 					flags=4;
@@ -10627,8 +10631,9 @@ class Mission
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=2517;
+					id=3713;
 					type="O_G_Soldier_F";
+					atlOffset=-0.069158077;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10681,7 +10686,7 @@ class Mission
 					class Item1
 					{
 						linkID=1;
-						item0=2517;
+						item0=3713;
 						item1=2518;
 						class CustomData
 						{
@@ -10691,6 +10696,7 @@ class Mission
 				};
 			};
 			id=2515;
+			atlOffset=-0.069158077;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10733,6 +10739,7 @@ class Mission
 			};
 			id=2518;
 			type="O_G_Offroad_01_armed_F";
+			atlOffset=-0.069158077;
 		};
 		class Item109
 		{
@@ -11875,7 +11882,7 @@ class Mission
 				position[]={2381.1589,7.5568428,1301.319};
 			};
 			side="East";
-			flags=4;
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -11894,7 +11901,7 @@ class Mission
 				position[]={2423.8579,7.5568428,1301.094};
 			};
 			side="East";
-			flags=4;
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -11913,7 +11920,7 @@ class Mission
 				position[]={2475.9971,7.5568428,1300.306};
 			};
 			side="East";
-			flags=4;
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -11932,7 +11939,7 @@ class Mission
 				position[]={2529.116,7.5568428,1300.116};
 			};
 			side="East";
-			flags=4;
+			flags=6;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -13282,6 +13289,7 @@ class Mission
 			};
 			id=2636;
 			type="B_G_Offroad_01_armed_F";
+			atlOffset=-0.069158077;
 		};
 		class Item219
 		{
@@ -13301,6 +13309,7 @@ class Mission
 			};
 			id=2637;
 			type="B_G_Offroad_01_armed_F";
+			atlOffset=-0.069158077;
 		};
 		class Item220
 		{
@@ -17086,7 +17095,7 @@ class Mission
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=2731;
+					id=3723;
 					type="B_Soldier_F";
 				};
 				class Item5
@@ -17107,7 +17116,7 @@ class Mission
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=2732;
+					id=3725;
 					type="B_Soldier_F";
 				};
 			};
@@ -36050,17 +36059,18 @@ class Mission
 						position[]={441.642,5.0014391,878.33398};
 					};
 					side="West";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[""lvd"",this] call f_fnc_assignGear;";
-						name="UnitFIA_IFV1_D";
-						description="FIA Technical 1 Driver (Repair)";
+						rank="CORPORAL";
+						init="[""lvc"",this] call f_fnc_assignGear;";
+						name="UnitFIA_IFV1_G";
+						description="FIA Technical 1 Gunner";
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=3303;
+					id=3304;
 					type="B_G_Soldier_F";
 					class CustomAttributes
 					{
@@ -36091,22 +36101,22 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={441.642,5.0014391,878.33398};
+						position[]={441.642,4.932281,878.3327};
 					};
 					side="West";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
-						init="[""lvc"",this] call f_fnc_assignGear;";
-						name="UnitFIA_IFV1_G";
-						description="FIA Technical 1 Gunner";
+						init="[""lvd"",this] call f_fnc_assignGear;";
+						name="UnitFIA_IFV1_D";
+						description="FIA Technical 1 Driver (Repair)";
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=3304;
+					id=3707;
 					type="B_G_Soldier_F";
+					atlOffset=-0.069158077;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36148,16 +36158,6 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=3303;
-						item1=2636;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=3304;
 						item1=2636;
 						class CustomData
@@ -36166,9 +36166,20 @@ class Mission
 							turretPath[]={0};
 						};
 					};
+					class Item1
+					{
+						linkID=1;
+						item0=3707;
+						item1=2636;
+						class CustomData
+						{
+							role=1;
+						};
+					};
 				};
 			};
 			id=3302;
+			atlOffset=-0.069158077;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -36250,7 +36261,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={476.36499,5.0014391,878.25098};
+						position[]={476.36499,4.932281,878.24969};
 					};
 					side="West";
 					flags=4;
@@ -36263,8 +36274,9 @@ class Mission
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=3307;
+					id=3709;
 					type="B_G_Soldier_F";
+					atlOffset=-0.069158077;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36317,7 +36329,7 @@ class Mission
 					class Item1
 					{
 						linkID=1;
-						item0=3307;
+						item0=3709;
 						item1=2637;
 						class CustomData
 						{
@@ -36327,6 +36339,7 @@ class Mission
 				};
 			};
 			id=3305;
+			atlOffset=-0.069158077;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -41722,7 +41735,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1384.7111,5.0014391,872.323};
+						position[]={1384.7111,4.932281,872.32172};
 					};
 					side="Independent";
 					flags=4;
@@ -41734,8 +41747,9 @@ class Mission
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=3439;
+					id=3719;
 					type="I_C_Soldier_Para_1_F";
+					atlOffset=-0.069158077;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -41788,7 +41802,7 @@ class Mission
 					class Item1
 					{
 						linkID=1;
-						item0=3439;
+						item0=3719;
 						item1=3440;
 						class CustomData
 						{
@@ -41798,6 +41812,7 @@ class Mission
 				};
 			};
 			id=3437;
+			atlOffset=-0.069158077;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -41840,6 +41855,7 @@ class Mission
 			};
 			id=3440;
 			type="B_G_Offroad_01_armed_F";
+			atlOffset=-0.069158077;
 		};
 		class Item452
 		{
@@ -41897,7 +41913,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1425.525,5.0014391,875.41602};
+						position[]={1425.525,4.932281,875.41473};
 					};
 					side="Independent";
 					flags=4;
@@ -41909,8 +41925,9 @@ class Mission
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=3443;
+					id=3721;
 					type="I_C_Soldier_Para_1_F";
+					atlOffset=-0.069158077;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -41963,7 +41980,7 @@ class Mission
 					class Item1
 					{
 						linkID=1;
-						item0=3443;
+						item0=3721;
 						item1=3444;
 						class CustomData
 						{
@@ -41973,6 +41990,7 @@ class Mission
 				};
 			};
 			id=3441;
+			atlOffset=-0.069158077;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -42015,6 +42033,7 @@ class Mission
 			};
 			id=3444;
 			type="B_G_Offroad_01_armed_F";
+			atlOffset=-0.069158077;
 		};
 		class Item454
 		{
@@ -50089,17 +50108,18 @@ class Mission
 						position[]={1391.3781,5.0014391,1676.572};
 					};
 					side="Independent";
-					flags=4;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""lvd"",this] call f_fnc_assignGear;";
-						name="Unit3IFB_IFV1_D";
-						description="3IFB Technical 1 Driver (Repair)";
+						rank="CORPORAL";
+						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""lvc"",this] call f_fnc_assignGear;";
+						name="Unit3IFB_IFV1_G";
+						description="3IFB Technical 1 Gunner";
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=3678;
+					id=3679;
 					type="I_G_Soldier_F";
 					class CustomAttributes
 					{
@@ -50130,22 +50150,22 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1391.3781,5.0014391,1676.572};
+						position[]={1391.3781,4.932281,1676.5707};
 					};
 					side="Independent";
-					flags=6;
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
-						rank="CORPORAL";
-						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""lvc"",this] call f_fnc_assignGear;";
-						name="Unit3IFB_IFV1_G";
-						description="3IFB Technical 1 Gunner";
+						init="[this,""3ifb""] call f_fnc_setVirtualFaction; [""lvd"",this] call f_fnc_assignGear;";
+						name="Unit3IFB_IFV1_D";
+						description="3IFB Technical 1 Driver (Repair)";
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=3679;
+					id=3715;
 					type="I_G_Soldier_F";
+					atlOffset=-0.069158077;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -50187,16 +50207,6 @@ class Mission
 					class Item0
 					{
 						linkID=0;
-						item0=3678;
-						item1=3704;
-						class CustomData
-						{
-							role=1;
-						};
-					};
-					class Item1
-					{
-						linkID=1;
 						item0=3679;
 						item1=3704;
 						class CustomData
@@ -50205,9 +50215,20 @@ class Mission
 							turretPath[]={0};
 						};
 					};
+					class Item1
+					{
+						linkID=1;
+						item0=3715;
+						item1=3704;
+						class CustomData
+						{
+							role=1;
+						};
+					};
 				};
 			};
 			id=3677;
+			atlOffset=-0.069158077;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -50289,7 +50310,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1426.101,5.0014391,1676.489};
+						position[]={1426.101,4.932281,1676.4877};
 					};
 					side="Independent";
 					flags=4;
@@ -50302,8 +50323,9 @@ class Mission
 						isPlayable=1;
 						reportRemoteTargets=1;
 					};
-					id=3682;
+					id=3717;
 					type="I_G_Soldier_F";
+					atlOffset=-0.069158077;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -50356,7 +50378,7 @@ class Mission
 					class Item1
 					{
 						linkID=1;
-						item0=3682;
+						item0=3717;
 						item1=3705;
 						class CustomData
 						{
@@ -50366,6 +50388,7 @@ class Mission
 				};
 			};
 			id=3680;
+			atlOffset=-0.069158077;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -50971,6 +50994,7 @@ class Mission
 			};
 			id=3704;
 			type="I_G_Offroad_01_armed_F";
+			atlOffset=-0.069158077;
 		};
 		class Item592
 		{
@@ -50990,6 +51014,7 @@ class Mission
 			};
 			id=3705;
 			type="I_G_Offroad_01_armed_F";
+			atlOffset=-0.069158077;
 		};
 	};
 	class Connections
