@@ -104,7 +104,7 @@ if (_unitfaction in ["civ_f","civ_idap_f"]) then {
 			_x spawn f_fnc_localGroupMarker;
 		} else {
 			_x spawn f_fnc_localSpecialistMarker;
-		}
+		};
 	};
 } forEach _groups;
 
