@@ -316,7 +316,7 @@ _jetGlasses = [];
 
 // Crewman
 _crewUniform = ["U_O_T_Soldier_F"];
-_crewHelmet = ["H_HelmetCrew_O"];
+_crewHelmet = ["H_HelmetCrew_O_ghex_F"];
 _crewRig = ["V_HarnessO_ghex_F"];
 _crewGlasses = [];
 
