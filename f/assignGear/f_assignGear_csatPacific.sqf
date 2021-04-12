@@ -168,7 +168,7 @@ _medkit = "Medikit";
 
 // Night Vision Goggles
 _nvg = "O_NVGoggles_ghex_F";
-_nvgPilot = "Integrated_NVG_F";
+_nvgPilot = "O_NVGoggles_ghex_F"; // Integrated_NVG_F for fullscreen NV
 
 // Binoculars
 _binoculars = "Rangefinder";
@@ -316,7 +316,7 @@ _jetGlasses = [];
 
 // Crewman
 _crewUniform = ["U_O_T_Soldier_F"];
-_crewHelmet = ["H_HelmetCrew_O"];
+_crewHelmet = ["H_HelmetCrew_O_ghex_F"];
 _crewRig = ["V_HarnessO_ghex_F"];
 _crewGlasses = [];
 
@@ -388,7 +388,7 @@ if (_isMan) then {
 
 // Standard Loadout
 // if (_loadout == 1) then {
-	#include "f_assignGear_csatPacific_standard.sqf"
+	#include "f_assignGear_csatPacific_standard.sqf";
 // };
 
 // ====================================================================================

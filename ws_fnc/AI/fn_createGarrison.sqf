@@ -232,8 +232,10 @@ for "_x" from 1 to _int do {
 
 // If assignGear AI parameter is enabled, set the faction on the spawned units then pass them to assignGear AI.
 if (_assignGearFaction != "") then {
-	[[units _grp,_assignGearFaction],f_fnc_setVirtualFaction] remoteExec ["call",2];
-	[[units _grp],"f\assignGear\f_assignGear_AI.sqf"] remoteExec ["execVM",2];
+	{
+		[[_x,_assignGearFaction],f_fnc_setVirtualFaction] remoteExec ["call",2];
+	} forEach (units _grp);
+	[(units _grp),"f\assignGear\f_assignGear_AI.sqf"] remoteExec ["execVM",2];
 };
 
 // Prevent the group leader to issue attack orders to the members, improving their attack from buildings
@@ -245,7 +247,7 @@ _grp enableAttack false;
 // Add the spawned units as editable units to any extant Zeus if that param is enabled
 if (_addToZeus) then {
 	{
-		_x addCuratorEditableObjects [units _grp, true];
+		[_x,[(units _grp),true]] remoteExec ["addCuratorEditableObjects",2];
 	} foreach allCurators;
 };
 

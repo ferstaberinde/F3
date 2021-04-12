@@ -168,7 +168,7 @@ _medkit = "Medikit";
 
 // Night Vision Goggles
 _nvg = "NVGoggles_OPFOR";
-_nvgPilot = "Integrated_NVG_F";
+_nvgPilot = "NVGoggles_OPFOR"; // Integrated_NVG_F for fullscreen NV
 
 // Binoculars
 _binoculars = "Rangefinder";
@@ -374,7 +374,7 @@ if (_isMan) then {
 
 // Standard Loadout
 // if (_loadout == 1) then {
-	#include "f_assignGear_3IFB_standard.sqf"
+	#include "f_assignGear_3IFB_standard.sqf";
 // };
 
 // ====================================================================================

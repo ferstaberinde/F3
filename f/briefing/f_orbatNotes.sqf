@@ -143,7 +143,7 @@ if (count _veharray > 0) then {
 		} forEach crew _x;
 		{
 			private _icon = [_x] call _fnc_getMarker;
-			_orbatText =_orbatText + format["%1%2 %3", _icon_arrow, _icon, _x] + " [CARGO] <br />";
+			_orbatText =_orbatText + format["%1%2 %3", _icon_arrow, _icon, groupId _x] + " [CARGO] <br />";
 		} forEach _groupList;
 
 	} forEach _veharray;
