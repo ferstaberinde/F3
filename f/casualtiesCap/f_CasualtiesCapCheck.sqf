@@ -51,9 +51,19 @@ if(_grpstemp isEqualType sideUnknown) then // if the variable is any of the side
 {
 
 	{
-		if (side _x == _grpstemp) then
+		if(_onlyPlayers) then
 		{
-			_grps pushBack _x; // Add group to array
+			if((side _x == _grpstemp) && (leader _x in playableUnits)) then
+			{
+				_grps pushBack _x; // Add group to array
+			};
+		}
+		else
+		{
+			if (side _x == _grpstemp) then
+			{
+				_grps pushBack _x; // Add group to array
+			};
 		};
 
 	} forEach allGroups;
@@ -96,12 +106,24 @@ if (count _grps == 0) exitWith {
 
 // ====================================================================================
 
+// CREATE STARTING VALUES
+// A count is made of units in the groups listed in _grps.
+
+_started = 0;
+{_started = _started + (count (units _x))} forEach _grps;
+
+// DEBUG
+if (f_param_debugMode == 1) then
+{
+	player sideChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): _started = %1",_started];
+};
+
+// ====================================================================================
+
 // CHECK IF CASUALTIES CAP HAS BEEN REACHED OR EXCEEDED
 // Every 6 seconds the server will check to see if the number of casualties sustained
 // within the group(s) has reached the percentage specificed in the variable _pc. If
 // the cap has been reached, the loop will exit to trigger the ending.
-
-_started = 0;
 
 while {true} do
 {
@@ -111,23 +133,8 @@ while {true} do
 	{
 		_grp = _x;
 		_alive = {alive _x} count (units _grp);
-		
-		// Only count units if leader is a player or if we want to include AI
-		if( !_onlyPlayers || (leader _grp in playableUnits) ) then {
-			_remaining = _remaining + _alive;
-		};
-
+		_remaining = _remaining + _alive;
 	} forEach _grps;
-
-
-	if(_started == 0) then {
-		_started = _remaining;
-		// DEBUG
-		if (f_param_debugMode == 1) then
-		{
-			player sideChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): _started = %1",_started];
-		};
-	}
 
 // DEBUG
 	if (f_param_debugMode == 1) then
