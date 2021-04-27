@@ -1,5 +1,5 @@
 // F3 - Assign Gear Script - AI
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // SERVER CHECK
@@ -74,6 +74,21 @@ private _unitClasses = [
 	["_Bandit_6_"		,	"gren"	],
 	["_Bandit_7_"		,	"car"	],
 	["_Bandit_8_"		,	"engm"	],
+	
+	// GM units
+	
+	["_squadleader_",	"ftl"	],
+	["_antitank_assistant_","aar"		],
+	["_machinegunner_assistant_","aar"	],
+	["_machinegunner_",	"ar"	],
+	["_rifleman_"	,	"r"		],
+	["_antitank_"	,	"rat"	],
+	["_demolition_"	,	"eng"	],
+	["_marksman_"	,	"dm"	],
+	["_antiair_"	,	"msam"	],
+	["_grenadier_"	,	"gren"	],
+	["_paratrooper_",	"car"	],
+	
 
 	["_soldier_"	,	"r"		]
 	// No comma after the last array!

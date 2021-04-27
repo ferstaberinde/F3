@@ -1,5 +1,5 @@
 // F3 - F3 Folk ARPS Assign Gear
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // Prevent BIS Randomisation System
@@ -19,12 +19,15 @@ _uniform = _baseUniform;
 _helmet  = _baseHelmet;
 _glasses = _baseGlasses;
 
+_rig = _standardRig;
+
+// Uncomment this block if you are adding an alternate loadout. See relevant block in description.ext for more info.
 // Select the default rig
-_rig = switch (f_param_loadouts) do {
-	case 0:{_lightRig};
-	case 1:{_standardRig};
-	default{_standardRig};
-};
+// _rig = switch (f_param_loadouts) do {
+//		case 0:{_lightRig};
+//		case 1:{_standardRig};
+//		default{_standardRig};
+// };
 
 // Flip through unit to assign specialized uniforms
 
@@ -34,6 +37,7 @@ if (_typeOfUnit in _pilot) then {
 	_uniform = _pilotUniform;
 	_rig     = _pilotRig;
 	_glasses = _pilotGlasses;
+	_nvg     = _nvgPilot;
 };
 
 // Jet Pilot
@@ -75,6 +79,14 @@ if (_typeOfUnit in _specOp) then {
 	_uniform = _sfUniform;
 	_rig     = _sfRig;
 	_glasses = _sfGlasses;
+};
+
+// VIP/Officer
+if (_typeOfUnit in _vip) then {
+	_helmet  = _vipHelmet;
+	_uniform = _vipUniform;
+	_rig     = _vipRig;
+	_glasses = _vipGlasses;
 };
 
 // Add clothing items to unit

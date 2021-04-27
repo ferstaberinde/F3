@@ -1,5 +1,5 @@
 // F3 - Folk ARPS Assign Gear Script - CSAT (PACIFIC)
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE EQUIPMENT TABLES
@@ -9,6 +9,7 @@
 //		co			- commander
 //		dc 			- deputy commander / squad leader
 //		m 			- medic
+//		cls			- combat life saver
 //		ftl			- fire team leader
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
@@ -34,6 +35,8 @@
 //		hsamag		- heavy SAM assistant gunner (deployable)
 //		sn			- sniper
 //		sp			- spotter (for sniper)
+//		lvc			- light vehicle crew
+//		lvd			- light vehicle driver (repair)
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
@@ -165,6 +168,10 @@ _medkit = "Medikit";
 
 // Night Vision Goggles
 _nvg = "O_NVGoggles_ghex_F";
+_nvgPilot = "O_NVGoggles_ghex_F"; // Integrated_NVG_F for fullscreen NV
+
+// Binoculars
+_binoculars = "Rangefinder";
 
 // Laserdesignator
 _laserdesignator = "Laserdesignator_02_ghex_F";
@@ -265,6 +272,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -279,8 +287,14 @@ _baseGlasses = [];
 //_baseHelmet = ["H_HelmetO_oucamo"];
 
 // Vests
-_lightRig = ["V_HarnessO_ghex_F"];
-_standardRig = ["V_HarnessO_ghex_F"];
+_lightRig = ["V_TacVest_oli"];
+_standardRig = ["V_TacVest_oli"];
+// Consider changing to "V_HarnessO_ghex_F" if using this with assignGear AI.
+
+// Urban Vests
+// _lightRig = ["V_TacVest_blk"];
+// _standardRig = ["V_TacVest_blk"];
+// Consider changing to "V_HarnessO_gry" if using this with assignGear AI.
 
 // Diver
 _diverUniform =  ["U_O_Wetsuit"];
@@ -302,7 +316,7 @@ _jetGlasses = [];
 
 // Crewman
 _crewUniform = ["U_O_T_Soldier_F"];
-_crewHelmet = ["H_HelmetCrew_O"];
+_crewHelmet = ["H_HelmetCrew_O_ghex_F"];
 _crewRig = ["V_HarnessO_ghex_F"];
 _crewGlasses = [];
 
@@ -317,6 +331,12 @@ _sfuniform = ["U_O_T_Soldier_F"];		//Viper: ["U_O_V_Soldier_Viper_F"];
 _sfhelmet = ["H_HelmetSpecO_ghex_F"];	//Viper: ["H_HelmetO_ViperSP_ghex_F"]; IMPORTANT: Will be overriden if nvg is added afterwards
 _sfRig = _standardRig;
 _sfGlasses = [];
+
+// VIP/Officer
+_vipUniform = ["U_O_T_officer_F"];
+_vipHelmet = ["H_Beret_CSAT_01_F"];
+_vipRig = ["V_TacVest_oli"];
+_vipGlasses = [];
 
 // ====================================================================================
 
@@ -357,17 +377,18 @@ if (_isMan) then {
 
 // SELECT LOADOUT
 // Pick the appropriate loadout depending on the parameter
+// To use an alternate loadout parameter, you must uncomment this block, uncomment the relevant block in description.ext, and add an assignGear loadout file as named below.
 
-_loadout = f_param_loadouts;
+// _loadout = f_param_loadouts;
 
 // Light Loadout
-if (_loadout == 0) then {
-	#include "f_assignGear_csatPacific_light.sqf"
-};
+// if (_loadout == 0) then {
+//	#include "f_assignGear_csatPacific_light.sqf"
+// };
 
 // Standard Loadout
-if (_loadout == 1) then {
-	#include "f_assignGear_csatPacific_standard.sqf"
-};
+// if (_loadout == 1) then {
+	#include "f_assignGear_csatPacific_standard.sqf";
+// };
 
 // ====================================================================================

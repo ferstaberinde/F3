@@ -1,5 +1,5 @@
 // F3 - Folk ARPS Assign Gear Script - 3IFB
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE EQUIPMENT TABLES
@@ -9,6 +9,7 @@
 //		co			- commander
 //		dc 			- deputy commander / squad leader
 //		m 			- medic
+//		cls			- combat life saver
 //		ftl			- fire team leader
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
@@ -34,6 +35,8 @@
 //		hsamag		- heavy SAM assistant gunner (deployable)
 //		sn			- sniper
 //		sp			- spotter (for sniper)
+//		lvc			- light vehicle crew
+//		lvd			- light vehicle driver (repair)
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
@@ -68,10 +71,10 @@
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
 // ATTACHMENTS - PRIMARY
-_attach1 = "";	// IR Laser
+_attach1 = "acc_pointer_IR";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
-_silencer1 = "mmuzzle_snds_B";	// 7.62 suppressor
+_silencer1 = "muzzle_snds_B";	// 7.62 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
 _scope1 = "optic_ACO";			// ACO
@@ -164,7 +167,11 @@ _firstaid = "FirstAidKit";
 _medkit = "Medikit";
 
 // Night Vision Goggles
-//_nvg = "NVGoggles_OPFOR";
+_nvg = "NVGoggles_OPFOR";
+_nvgPilot = "NVGoggles_OPFOR"; // Integrated_NVG_F for fullscreen NV
+
+// Binoculars
+_binoculars = "Rangefinder";
 
 // Laserdesignator
 _laserdesignator = "Laserdesignator_03";
@@ -183,8 +190,8 @@ _bag = "B_FieldPack_khk";			// carries 160, weighs 20
 _baglarge =  "B_Carryall_khk"; 				// carries 320, weighs 60
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "I_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "B_HMG_01_weapon_F";				// used by Heavy MG gunner
-_baghmgag = "B_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_G_HMG_02_weapon_F";				// used by Heavy MG gunner
+_baghmgag = "I_G_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "B_AssaultPack_rgr";				// Used by Heavy AT Gunner
 _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "B_Mortar_01_support_F";		// used by Mortar assistant gunner
@@ -254,6 +261,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -299,7 +307,7 @@ _crewRig = ["V_Chestrig_blk"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_B_GhillieSuit"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
+_ghillieUniform = ["U_B_T_Sniper_F"];	//DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
@@ -309,6 +317,12 @@ _sfuniform = _baseUniform;
 _sfhelmet = _baseHelmet;
 _sfRig = _standardRig;
 _sfGlasses = [];
+
+// VIP/Officer
+_vipUniform = ["U_O_R_Gorka_01_black_F"];
+_vipHelmet = _baseHelmet;
+_vipRig = _standardRig;
+_vipGlasses = [];
 
 // ====================================================================================
 
@@ -335,7 +349,7 @@ if (_isMan) then {
 	// ADD UNIVERSAL ITEMS
 	// Add items universal to all units of this faction
 
-	_unit linkItem _nvg;			// Add and equip the faction's nvg
+	//	_unit linkItem _nvg;			// Add and equip the faction's nvg
 	_unit addItem _firstaid;		// Add a single first aid kit (FAK)
 	_unit linkItem "ItemMap";		// Add and equip the map
 	_unit linkItem "ItemCompass";	// Add and equip a compass
@@ -349,17 +363,18 @@ if (_isMan) then {
 
 // SELECT LOADOUT
 // Pick the appropriate loadout depending on the parameter
+// To use an alternate loadout parameter, you must uncomment this block, uncomment the relevant block in description.ext, and add an assignGear loadout file as named below.
 
-_loadout = f_param_loadouts;
+// _loadout = f_param_loadouts;
 
 // Light Loadout
-if (_loadout == 0) then {
-	#include "f_assignGear_3IFB_light.sqf"
-};
+// if (_loadout == 0) then {
+//	#include "f_assignGear_3IFB_light.sqf"
+// };
 
 // Standard Loadout
-if (_loadout == 1) then {
-	#include "f_assignGear_3IFB_standard.sqf"
-};
+// if (_loadout == 1) then {
+	#include "f_assignGear_3IFB_standard.sqf";
+// };
 
 // ====================================================================================

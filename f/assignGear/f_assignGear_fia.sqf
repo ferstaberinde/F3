@@ -1,5 +1,5 @@
 // F3 - Folk ARPS Assign Gear Script - FIA
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE EQUIPMENT TABLES
@@ -9,6 +9,7 @@
 //		co			- commander
 //		dc 			- deputy commander / squad leader
 //		m 			- medic
+//		cls			- combat life saver
 //		ftl			- fire team leader
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
@@ -34,6 +35,8 @@
 //		hsamag		- heavy SAM assistant gunner (deployable)
 //		sn			- sniper
 //		sp			- spotter (for sniper)
+//		lvc			- light vehicle crew
+//		lvd			- light vehicle driver (repair)
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
@@ -165,6 +168,10 @@ _medkit = "Medikit";
 
 // Night Vision Goggles
 _nvg = "NVGoggles";
+_nvgPilot = "NVGoggles"; // Integrated_NVG_F for fullscreen NV
+
+// Binoculars
+_binoculars = "Rangefinder";
 
 // Laserdesignator
 _laserdesignator = "Laserdesignator_03";
@@ -185,8 +192,8 @@ _bag = "B_AssaultPack_cbr";
 _bagLarge = "B_Kitbag_cbr";
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "B_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "B_HMG_01_weapon_F";			// used by Heavy MG gunner
-_baghmgag = "B_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_G_HMG_02_weapon_F";			// used by Heavy MG gunner
+_baghmgag = "I_G_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "B_AssaultPack_cbr";			// used by Heavy AT gunner
 _baghatag = "B_Kitbag_cbr";			// used by Heavy AT assistant gunner **
 _bagmtrg = "B_Mortar_01_weapon_F";			// used by Mortar gunner
@@ -261,6 +268,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -309,6 +317,12 @@ _sfhelmet = _baseHelmet;
 _sfRig = ["V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG"];
 _sfGlasses = [];
 
+// VIP/Officer
+_vipUniform = ["U_I_G_resistanceLeader_F"];
+_vipHelmet = [];
+_vipRig = ["V_I_G_resistanceLeader_F"];
+_vipGlasses = [];
+
 // ====================================================================================
 
 // This block needs only to be run on an infantry unit
@@ -348,17 +362,18 @@ if (_isMan) then {
 
 // SELECT LOADOUT
 // Pick the appropriate loadout depending on the parameter
+// To use an alternate loadout parameter, you must uncomment this block, uncomment the relevant block in description.ext, and add an assignGear loadout file as named below.
 
-_loadout = f_param_loadouts;
+// _loadout = f_param_loadouts;
 
 // Light Loadout
-if (_loadout == 0) then {
-	#include "f_assignGear_fia_light.sqf"
-};
+// if (_loadout == 0) then {
+// 	#include "f_assignGear_fia_light.sqf"
+// };
 
 // Standard Loadout
-if (_loadout == 1) then {
-	#include "f_assignGear_fia_standard.sqf"
-};
+// if (_loadout == 1) then {
+	#include "f_assignGear_fia_standard.sqf";
+// };
 
 // ====================================================================================

@@ -1,5 +1,5 @@
 // F3 - ORBAT Notes
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 if (!hasInterface || (side player == sideLogic)) exitWith {}; //Exit if not a player.
@@ -34,7 +34,7 @@ private _groupData = f_var_groupData_all apply {
 	[
 		missionNamespace getVariable [_x select 0,grpNull], 
 		getText (configfile >> "CfgMarkers" >> (_x select 1) >> "icon"),
-		getArray (configfile >> "CfgMarkerColors" >> (_x select 3) >> "color") call BIS_fnc_colorRGBAtoHTML
+		((configfile >> "CfgMarkerColors" >> (_x select 3) >> "color") call BIS_fnc_colorConfigToRGBA) call BIS_fnc_colorRGBAtoHTML
 	]
 } select { ! isNull (_x select 0) && {(_x select 0) in (_groups + _units)}};
 
@@ -72,7 +72,7 @@ private _fnc_getMarker = {
 	};
 
 	private _icon = [_x] call _fnc_getMarker;
-	_orbatText = _orbatText + format ["%1<font color='%4'>%2 %3</font>", _icon, _x, name leader _x,_color] + "<br />";
+	_orbatText = _orbatText + format ["%1<font color='%4'>%2 %3</font>", _icon, groupId _x, name leader _x,_color] + "<br />";
 
 	{
 		private _unit = _x;
@@ -143,7 +143,7 @@ if (count _veharray > 0) then {
 		} forEach crew _x;
 		{
 			private _icon = [_x] call _fnc_getMarker;
-			_orbatText =_orbatText + format["%1%2 %3", _icon_arrow, _icon, _x] + " [CARGO] <br />";
+			_orbatText =_orbatText + format["%1%2 %3", _icon_arrow, _icon, groupId _x] + " [CARGO] <br />";
 		} forEach _groupList;
 
 	} forEach _veharray;

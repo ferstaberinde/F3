@@ -1,5 +1,5 @@
 // F3 - SetWind
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
@@ -63,3 +63,6 @@ _transition setWindForce _gusts;
 _transition setWaves _waves;
 
 // ====================================================================================
+
+// RETURN WIND PARAMS
+_strength

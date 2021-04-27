@@ -1,5 +1,5 @@
 // F3 - Buddy Team Colours
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 if (!hasInterface) exitWith {};
@@ -22,7 +22,7 @@ private _leaders = ["_FTL"];
 // Set suffixes for each color
 private _colors = [
 	["MAIN",   [] ],
-	["RED",    ["_AT","_R1","_R2"] ],
+	["RED",    ["_AT","_R1","_R2","_CLS"] ],
 	["BLUE",   ["_AR1","_AR2","_FTL"] ],
 	["YELLOW", [] ],
 	["GREEN",  [] ]

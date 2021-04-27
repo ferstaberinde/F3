@@ -1,5 +1,5 @@
 // F3 - AI Skill Selector
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // WAIT FOR THE MISSION TO BEGIN
@@ -50,10 +50,10 @@ private _skillLevels = [
 //       then this means that this particular skill will always be 1
 //       for all possible skillLevels that were set via parameter.
 f_var_skillSet = [
-	0.55, // aimingAccuracy
-	0.6,  // aimingShake
-	0.6,  // aimingSpeed
-	0.7,  // spotDistance
+	0.45, // aimingAccuracy
+	0.5,  // aimingShake
+	0.5,  // aimingSpeed
+	0.65,  // spotDistance
 	0.7,  // spotTime
 	1.2,  // courage
 	2,    // reloadSpeed

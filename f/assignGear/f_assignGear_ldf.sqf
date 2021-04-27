@@ -1,5 +1,5 @@
 // F3 - Folk ARPS Assign Gear Script - LDF
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE EQUIPMENT TABLES
@@ -9,6 +9,7 @@
 //		co			- commander
 //		dc 			- deputy commander / squad leader
 //		m 			- medic
+//		cls			- combat life saver
 //		ftl			- fire team leader
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
@@ -34,6 +35,8 @@
 //		hsamag		- heavy SAM assistant gunner (deployable)
 //		sn			- sniper
 //		sp			- spotter (for sniper)
+//		lvc			- light vehicle crew
+//		lvd			- light vehicle driver (repair)
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
@@ -75,11 +78,11 @@ _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
 _scope1 = "optic_ACO";		// ACO
-_scope2 = "optic_ico_01_f";			// MRCO Scope - 1x - 6x
+_scope2 = "optic_ico_01_f";			// Promet ISR scope
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
 _bipod1 = "bipod_01_F_blk";		// Default bipod
-_bipod2 = "bipod_03_F_blk";		// Black bipod
+_bipod2 = "bipod_01_F_khk";		// Green bipod
 
 // Default setup
 _attachments = [_scope1]; // The default attachment set for most units, overwritten in the individual unitType
@@ -166,6 +169,10 @@ _medkit = "Medikit";
 
 // Night Vision Goggles
 _nvg = "NVGoggles_INDEP";
+_nvgPilot = "NVGoggles_INDEP"; // Integrated_NVG_F for fullscreen NV
+
+// Binoculars
+_binoculars = "Rangefinder";
 
 // Laserdesignator
 _laserdesignator = "Laserdesignator_03";
@@ -184,8 +191,8 @@ _bag = "B_AssaultPack_eaf_F";			// The standard bag for most classes
 _bagLarge = "B_Carryall_eaf_F";				// Larger bag for some special purpose classes
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "I_E_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "I_E_HMG_01_weapon_F";				// used by Heavy MG gunner
-_baghmgag = "I_E_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_E_HMG_02_weapon_F";				// used by Heavy MG gunner
+_baghmgag = "I_E_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "I_E_AT_01_weapon_F";				// used by Heavy AT gunner
 _baghatag = "I_E_HMG_01_support_F";			// used by Heavy AT assistant gunner
 _bagmtrg = "I_E_Mortar_01_weapon_F";			// used by Mortar gunner
@@ -200,8 +207,8 @@ _bagRadio = "B_RadioBag_01_eaf_F";			// cosmetic, used by COs, DCs, and anybody 
 
 // Automatic Rifleman
 _AR = "LMG_Mk200_black_F";
-_ARmag = "200Rnd_65x39_cased_Box";
-_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
+_ARmag = "200Rnd_65x39_cased_Box_Red";
+_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer_Red";
 
 // Medium MG
 _MMG = "MMG_02_black_F";
@@ -256,6 +263,7 @@ _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
 _jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -293,7 +301,7 @@ _crewRig = ["V_TacVest_oli"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_I_GhillieSuit"];	//DLC alternatives: ["U_I_FullGhillie_lsh","U_I_FullGhillie_ard","U_I_FullGhillie_sard"];
+_ghillieUniform = ["U_B_T_Sniper_F"];	//DLC alternatives: ["U_I_FullGhillie_lsh","U_I_FullGhillie_ard","U_I_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
@@ -303,6 +311,12 @@ _sfuniform = _baseUniform;
 _sfhelmet = _baseHelmet;
 _sfRig = _standardRig;
 _sfGlasses = [];
+
+// VIP/Officer
+_vipUniform = ["U_I_E_Uniform_01_officer_F"];
+_vipHelmet = ["H_Beret_EAF_01_F"];
+_vipRig = ["V_TacVest_oli"];
+_vipGlasses = [];
 
 // ====================================================================================
 
@@ -343,17 +357,18 @@ if (_isMan) then {
 
 // SELECT LOADOUT
 // Pick the appropriate loadout depending on the parameter
+// To use an alternate loadout parameter, you must uncomment this block, uncomment the relevant block in description.ext, and add an assignGear loadout file as named below.
 
-_loadout = f_param_loadouts;
+// _loadout = f_param_loadouts;
 
 // Light Loadout
-if (_loadout == 0) then {
-	#include "f_assignGear_ldf_light.sqf"
-};
+// if (_loadout == 0) then {
+//	#include "f_assignGear_ldf_light.sqf"
+// };
 
 // Standard Loadout
-if (_loadout == 1) then {
-	#include "f_assignGear_ldf_standard.sqf"
-};
+// if (_loadout == 1) then {
+	#include "f_assignGear_ldf_standard.sqf";
+// };
 
 // ====================================================================================

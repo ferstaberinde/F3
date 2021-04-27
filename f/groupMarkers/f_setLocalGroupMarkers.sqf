@@ -1,5 +1,5 @@
 // F3 - Folk Group Markers
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // MAKE SURE THE PLAYER INITIALIZES PROPERLY
@@ -95,12 +95,15 @@ if (_unitfaction in ["civ_f","civ_idap_f"]) then {
 // ====================================================================================
 
 {
-	_x params ["_group", "_icon", "_markerText", "_color", "_id"];
+	_x params ["_grpName", "_icon", "_markerText", "_color", "_id"];
 	if (_icon != "") then {
-		if (_group find "Unit" >= 0) then {
-			_x spawn f_fnc_localSpecialistMarker;
-		} else {
+		// Note: if a group is defined in the mission file, it exists even when
+		//       no players are in this group yet.
+		private _grpOrUnit = missionNamespace getVariable [_grpName,objNull];
+		if (_grpOrUnit isEqualType grpNull) then {
 			_x spawn f_fnc_localGroupMarker;
+		} else {
+			_x spawn f_fnc_localSpecialistMarker;
 		};
 	};
 } forEach _groups;
