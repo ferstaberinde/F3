@@ -47,8 +47,10 @@ switch (typeName _mode) do {
 	case "STRING": {_addons = [_mode]};
 	case "BOOL": {
 		if (_mode) then {
+			// If the mode is passed as true, set up the curator module as if its Addons drop-down in the editor was set to "All addons (including unofficial)"
 			_curator setVariable ["Addons",3,true];
 		} else {
+			// If the mode is passed as false, set up the curator module as if its Addons drop-down in the editor was set to "No addons"
 			_curator setVariable ["Addons",0,true];
 		};
 	};
