@@ -125,8 +125,12 @@ _DMriflemag = "20Rnd_762x51_Mag";
 // Define classes. This defines which gear class gets which uniform
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
+_diver = [];
 _pilot = ["pp","pcc","pc"];
+_crew = [];
+_ghillie = [];
 _specOp = ["nf"];
+_jet = [];
 _vip = [];
 
 // Basic clothing
