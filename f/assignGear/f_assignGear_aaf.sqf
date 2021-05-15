@@ -205,9 +205,9 @@ _bagRadio = "B_RadioBag_01_digi_F";
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = "LMG_Mk200_F";
-_ARmag = "200Rnd_65x39_cased_Box";
-_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
+_AR = "LMG_03_F";
+_ARmag = "200Rnd_556x45_Box_F";
+_ARmag_tr = "200Rnd_556x45_Box_Tracer_F";
 
 // Medium MG
 _MMG = "LMG_Zafir_F";

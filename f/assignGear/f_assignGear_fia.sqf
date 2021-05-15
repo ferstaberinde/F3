@@ -206,9 +206,9 @@ _baghsamag = "B_HMG_01_support_F";			// used by Heavy SAM assistant gunner **
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = "LMG_Mk200_F";
-_ARmag = "200Rnd_65x39_cased_Box";
-_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
+_AR = "LMG_03_F";
+_ARmag = "200Rnd_556x45_Box_Red_F";
+_ARmag_tr = "200Rnd_556x45_Box_Tracer_Red_F";
 
 // Medium MG
 _MMG = "LMG_Zafir_F";
