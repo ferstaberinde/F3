@@ -41,25 +41,17 @@ if (isNull _curator || typeOf _curator != "ModuleCurator_F") exitWith {
 
 // Decide which addons to add based on passed mode
 _addons = [""];
-_curator setVariable ["Addons",0,true];
 
 switch (typeName _mode) do {
 	case "ARRAY": {_addons = _mode};
 	case "STRING": {_addons = [_mode]};
 	case "BOOL": {
 		if (_mode) then {
+			// If the mode is passed as true, set up the curator module as if its Addons drop-down in the editor was set to "All addons (including unofficial)"
 			_curator setVariable ["Addons",3,true];
-			// If true was passed, add all available addons to curator list
-			_cfgPatches = configfile >> "cfgpatches";
-			for "_i" from 0 to (count _cfgPatches - 1) do {
-				_class = _cfgPatches select _i;
-				if (isclass _class) then {_addons pushBack (configname _class);};
-			};
-			_addons call bis_fnc_activateaddons;
-			removeallcuratoraddons _curator;
 		} else {
+			// If the mode is passed as false, set up the curator module as if its Addons drop-down in the editor was set to "No addons"
 			_curator setVariable ["Addons",0,true];
-			removeallcuratoraddons _curator;
 		};
 	};
 };
