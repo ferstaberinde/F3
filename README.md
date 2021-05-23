@@ -13,5 +13,5 @@
  * Numerous feature updates and improvements. See https://github.com/folkarps/F3 for update history.
 
 ## Versions ##
-* F3 3-5-5
+* F3 3-5-6
 * ws_fnc 05/07/2015 (with FA improvements)

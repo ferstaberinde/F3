@@ -19,7 +19,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="FA3-5-5_release_template";
+sourceName="FA3-5-6_release_template";
 addons[]=
 {
 	"A3_Soft_F_Enoch_Truck_02",
@@ -330,7 +330,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="fa3-5-5";
+		briefingName="fa3-5-6";
 		resistanceWest=0;
 		timeOfChanges=28800;
 		startWeather=0.50001526;
