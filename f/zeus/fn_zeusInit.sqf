@@ -70,10 +70,10 @@ if (_unitIsCurator) then {
 };
 
 //Add desired addons
-[_curator,_addons] spawn f_fnc_zeusAddAddons;
+[_curator,_addons] call f_fnc_zeusAddAddons;
 
 //Add desired objects
-[_curator,_objects] spawn f_fnc_zeusAddObjects;
+[_curator,_objects] call f_fnc_zeusAddObjects;
 
 // Reduce costs for all actions
 _curator setCuratorWaypointCost 0;
