@@ -243,7 +243,7 @@ _HATmag1 = "Vorona_HEAT";
 _HATmag2 = "Vorona_HE";
 
 // Sniper
-_SNrifle = "srifle_GM6_camo_F";
+_SNrifle = "srifle_GM6_F";
 _SNrifleMag = "5Rnd_127x108_Mag";
 
 // Engineer items
