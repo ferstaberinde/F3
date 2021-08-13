@@ -521,6 +521,8 @@ switch (_typeofUnit) do
 // Engineer (Demo) Loadout:
 	case "eng":
 	{
+		_unit setUnitTrait ["engineer",true]; // Can repair
+		_unit setUnitTrait ["explosiveSpecialist",true]; // Can defuse explosives
 		_unit addBackpack _bagLarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
@@ -536,6 +538,8 @@ switch (_typeofUnit) do
 // Engineer (Mines) Loadout:
 	case "engm":
 	{
+		_unit setUnitTrait ["engineer",true]; // Can repair
+		_unit setUnitTrait ["explosiveSpecialist",true]; // Can defuse explosives
 		_unit addBackpack _bagLarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
