@@ -314,7 +314,7 @@ _crewRig = ["V_Chestrig_rgr"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_O_GhillieSuit"]; //DLC alternatives: ["U_O_FullGhillie_lsh","U_O_FullGhillie_ard","U_O_FullGhillie_sard"];
+_ghillieUniform = ["U_O_T_Sniper_F"]; //DLC alternatives: ["U_O_FullGhillie_lsh","U_O_FullGhillie_ard","U_O_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];
