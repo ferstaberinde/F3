@@ -25,6 +25,7 @@ f_longRangeRadioList = [
 	"B_RadioBag_01_wdl_F",
 	"US85_bpPRC77",
 	"CSLA_bpWpR129",
+	"CSLA_bpWpRF10",
 	"gm_gc_backpack_r105m_brn",
 	"gm_ge_backpack_sem35_oli"
 ];
