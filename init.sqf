@@ -223,9 +223,8 @@ f_var_viewDistance_crewOnly = true;
 
 // F3 - Radio Channels
 // Credits and documentation: https://github.com/folkarps/F3/wiki
-// First argument: true to split channels by radio backpack type. Else one channel for all.
-// Second argument: true to disable Group channel for anyone without a Radio item. Else no effect.
+// True to split channels by radio backpack type. Else one channel for all.
 
-// [false,false] execVM "f\radio\f_radioChannels.sqf";
+// [false] execVM "f\radio\f_radioChannels.sqf";
 
 // ====================================================================================

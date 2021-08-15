@@ -4,14 +4,13 @@
 /* ========================
 This module is activated in init.sqf.
 Example:
-[true,false] execVM "f\radio\f_radioChannels.sqf";
+[true] execVM "f\radio\f_radioChannels.sqf";
 
 Arguments:
 0. Long-range split mode (boolean). If true, each radio backpack type has a separate channel. If false, all backpacks use one channel. Default false.
-1. Require a radio item to use Group channel (boolean). If true, people without a Radio inventory item cannot use Group channel. Default false.
 =========================== */
 
-params [["_splitMode",false,false],["_groupRadios",false,false]];
+params [["_splitMode",false,false]];
 
 // Define a list of radio backpacks to recognise
 f_longRangeRadioList = [  
@@ -119,12 +118,5 @@ if (_splitMode) then {
 			(f_channelID + 5) enableChannel true;
 		};   
 	}];
-
-};
-
-// Determine if we are disabling Group channel for people without radios
-if (_groupRadios) then {
-
-// TODO insert code here
 
 };
