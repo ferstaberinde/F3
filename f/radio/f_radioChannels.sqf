@@ -22,7 +22,7 @@ f_longRangeRadioList = [
 	"B_RadioBag_01_tropic_F",  
 	"B_RadioBag_01_oucamo_F",  
 	"B_RadioBag_01_mtp_F",  
-	"B_RadioBag_01_wdl_F",
+	"B_RadioBag_01_wdl_F"
 ];
 
 // There is a maximum of 10 channels at any time. Swap in these radios for GM and CSLA missions:
