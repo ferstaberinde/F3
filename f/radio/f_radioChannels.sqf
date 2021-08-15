@@ -23,12 +23,16 @@ f_longRangeRadioList = [
 	"B_RadioBag_01_oucamo_F",  
 	"B_RadioBag_01_mtp_F",  
 	"B_RadioBag_01_wdl_F",
+];
+
+// There is a maximum of 10 channels at any time. Swap in these radios for GM and CSLA missions:
+/*
 	"US85_bpPRC77",
 	"CSLA_bpWpR129",
 	"CSLA_bpWpRF10",
 	"gm_gc_backpack_r105m_brn",
 	"gm_ge_backpack_sem35_oli"
-];
+*/
 
 // Determine whether we are splitting by backpack type or using one channel for all
 if (_splitMode) then {
