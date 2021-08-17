@@ -10,7 +10,7 @@ Arguments:
 0. Long-range split mode (boolean). If true, each radio backpack type has a separate channel. If false, all backpacks use one channel. Default false.
 =========================== */
 
-params [["_splitMode",false,false]];
+params [["_splitMode",false]];
 
 // Define a list of radio backpacks to recognise
 f_longRangeRadioList = [  
