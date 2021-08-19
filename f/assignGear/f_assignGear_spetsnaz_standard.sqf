@@ -73,6 +73,7 @@ switch (_typeofUnit) do
 // Squad Leader / DC Loadout:
 	case "dc":
 	{
+		_unit addBackpack _bagRadio;
 		_unit addVest _radioRig;
 		_unit addmagazines [_glriflemag, 1];
 		_unit addmagazines [_glmag, 1];
@@ -94,6 +95,7 @@ switch (_typeofUnit) do
 // Platoon CO Loadout:
 	case "co":
 	{
+		_unit addBackpack _bagRadio;
 		_unit addVest _radioRig;
 		_unit addmagazines [_glriflemag, 1];
 		_unit addmagazines [_glsmokewhite, 1];
@@ -115,6 +117,7 @@ switch (_typeofUnit) do
 // JTAC Loadout:
 	case "jtac":
 	{
+		_unit addBackpack _bagRadio;
 		_unit addVest _radioRig;
 		_unit addmagazines [_glriflemag, 1];
 		_unit addmagazines [_glsmokered, 1];
