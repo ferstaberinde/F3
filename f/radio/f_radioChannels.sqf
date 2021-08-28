@@ -12,6 +12,9 @@ Arguments:
 
 params [["_splitMode",false]];
 
+// Disable the Command channel to avoid cheating
+2 enableChannel false;
+
 // Define a list of radio backpacks to recognise
 f_var_longRangeRadioList = [  
 	"B_RadioBag_01_black_F",  
