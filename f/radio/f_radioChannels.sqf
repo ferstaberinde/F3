@@ -51,44 +51,21 @@ if (_splitMode) then {
 			f_var_radioChannelList append [_ChannelID];
 		};
 		publicVariable "f_var_radioChannelList";
+		
+		// Add a loop that checks for players without handlers every 30 seconds
+		f_script_radioChannelUpdate = [_splitMode] spawn {
+			params ["_splitMode"];
+			while {true} do {
+				sleep 30;
+				[_splitMode] call f_fnc_radioUpdateLoop;
+			};
+		};
 	};  
 	
-	// Clients wait for the server to finish with that
-	waitUntil {!(isNil "f_var_radioChannelList")};
-
-	// Add player to the correct channels if they have a backpack
-	for[{_i=0}, {_i < (count f_var_longRangeRadioList)}, {_i = _i+1}] do {
-		if (backpack player == (f_var_longRangeRadioList select _i)) then {
-			(f_var_radioChannelList select _i) radioChannelAdd [player];
-			((f_var_radioChannelList select _i) + 5) enableChannel true;
-		};
+	// Run clientside stuff
+	if (hasInterface) then {
+		[_splitMode] call f_fnc_radioAddHandlers;
 	};
-
-	// Remove player from channels if they drop a backpack
-	player addEventHandler ["put", { 
-		params ["_unit"];
-		for[{_i=0}, {_i < (count f_var_longRangeRadioList)}, {_i = _i+1}] do {
-			if (backpack _unit == (f_var_longRangeRadioList select _i)) then {
-				(f_var_radioChannelList select _i) radioChannelAdd [_unit];
-				((f_var_radioChannelList select _i) + 5) enableChannel true;
-			} else {
-				(f_var_radioChannelList select _i) radioChannelRemove [_unit];
-			};
-		};
-	}]; 
-	
-	// Add player to channels if they take a backpack 
-	player addEventHandler ["take", {  
-		params ["_unit"];  
-		for[{_i=0}, {_i < (count f_var_longRangeRadioList)}, {_i = _i+1}] do {
-			if (backpack _unit == (f_var_longRangeRadioList select _i)) then {
-				(f_var_radioChannelList select _i) radioChannelAdd [_unit];
-				((f_var_radioChannelList select _i) + 5) enableChannel true;
-			} else {
-				(f_var_radioChannelList select _i) radioChannelRemove [_unit];
-			};
-		};   
-	}];
 
 } else {
 
@@ -97,34 +74,22 @@ if (_splitMode) then {
 		  
 		f_var_channelID = (radioChannelCreate [[0.96, 0.34, 0.13, 0.8], "Long Range", "%UNIT_NAME", []]);
 		if (f_var_channelID == 0) exitWith {diag_log format ["Custom channel '%1' creation failed!", _channelName]};   
-		publicVariable "f_var_channelID"; 
+		publicVariable "f_var_channelID";
+		
+		// Add a loop that checks for players without handlers every 30 seconds
+		f_script_radioChannelUpdate = [_splitMode] spawn {
+			params ["_splitMode"];
+			while {true} do {
+				sleep 30;
+				[_splitMode] call f_fnc_radioUpdateLoop;
+			};
+		};
 	};  
 
-	waitUntil {!(isNil "f_var_channelID")};
-
-	if((backpack player) in f_var_longRangeRadioList) then {
-		f_var_channelID radioChannelAdd [player];
-		(f_var_channelID + 5) enableChannel true;
+	// Run clientside stuff
+	if (hasInterface) then {
+		[_splitMode] call f_fnc_radioAddHandlers;
 	};
 
-	player addEventHandler ["put", { 
-		params ["_unit"];    
-		if(!((backpack player) in f_var_longRangeRadioList)) then { 
-			f_var_channelID radioChannelRemove [_unit];
-		} else {
-			f_var_channelID radioChannelAdd [_unit];
-			(f_var_channelID + 5) enableChannel true;
-		}; 
-	}]; 
-	 
-	player addEventHandler ["take", {  
-		params ["_unit"];  
-		if(!((backpack player) in f_var_longRangeRadioList)) then {  
-			f_var_channelID radioChannelRemove [_unit];
-		} else {
-			f_var_channelID radioChannelAdd [_unit];
-			(f_var_channelID + 5) enableChannel true;
-		};   
-	}];
-
 };
+

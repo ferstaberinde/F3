@@ -129,4 +129,10 @@ class F // Defines the "owner"
 		file = "f\dynamicViewDistance";
 		class ehSetViewDistance {};
 	};
+	class radio
+	{
+		file = "f\radio";
+		class radioAddHandlers {};
+		class radioUpdateLoop
+	};
 };
