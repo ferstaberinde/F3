@@ -133,6 +133,6 @@ class F // Defines the "owner"
 	{
 		file = "f\radio";
 		class radioAddHandlers {};
-		class radioUpdateLoop
+		class radioUpdateLoop {};
 	};
 };
