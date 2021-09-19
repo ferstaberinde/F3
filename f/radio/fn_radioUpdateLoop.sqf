@@ -12,5 +12,5 @@ _unitsWithoutHandlers = (playableUnits select {(_x getVariable ["f_var_radioHand
 
 // Tell their client to add their handlers
 {
-	[_splitMode] remoteExec ["f_fnc_radioHandlersAdd",_x];
+	[_splitMode] remoteExec ["f_fnc_radioAddHandlers",_x];
 } forEach _unitsWithoutHandlers;
