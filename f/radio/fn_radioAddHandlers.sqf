@@ -2,82 +2,42 @@
 // Credits and documentation: https://github.com/folkarps/F3/wiki
 
 /* ========================
-This function adds local event handlers to the player which grant radio channels when picking up a backpack.
+This function adds local event handlers to the player which grant radio channels when picking up a backpack or entering a vehicle. It also makes an initial check to see what they've got to begin with.
 It's activated by f\radio\f_radioChannels.sqf.
 =========================== */
 
 params ["_splitMode"];
 
-if (_splitMode) then {
+// Add player to the correct channels if they have a backpack
+[_splitMode] call f_fnc_radioCheckChannels;
 
-	// Clients wait for the server to finish with setup
-	waitUntil {!(isNil "f_var_radioChannelList")};
+// Now bail if they've already been handled
+if (player getVariable ["f_var_radioHandlersAdded",false]) exitWith {};
 
-	// Add player to the correct channels if they have a backpack
-	for[{_i=0}, {_i < (count f_var_longRangeRadioList)}, {_i = _i+1}] do {
-		if (backpack player == (f_var_longRangeRadioList select _i)) then {
-			(f_var_radioChannelList select _i) radioChannelAdd [player];
-			((f_var_radioChannelList select _i) + 5) enableChannel true;
-		};
-	};
+// Update channels if they drop a backpack
+player addEventHandler ["put", { 
+	[_splitMode] call f_fnc_radioCheckChannels;
+}]; 
 
-	// Remove player from channels if they drop a backpack
-	player addEventHandler ["put", { 
-		params ["_unit"];
-		for[{_i=0}, {_i < (count f_var_longRangeRadioList)}, {_i = _i+1}] do {
-			if (backpack _unit == (f_var_longRangeRadioList select _i)) then {
-				(f_var_radioChannelList select _i) radioChannelAdd [_unit];
-				((f_var_radioChannelList select _i) + 5) enableChannel true;
-			} else {
-				(f_var_radioChannelList select _i) radioChannelRemove [_unit];
-			};
-		};
-	}]; 
-	
-	// Add player to channels if they take a backpack 
-	player addEventHandler ["take", {  
-		params ["_unit"];  
-		for[{_i=0}, {_i < (count f_var_longRangeRadioList)}, {_i = _i+1}] do {
-			if (backpack _unit == (f_var_longRangeRadioList select _i)) then {
-				(f_var_radioChannelList select _i) radioChannelAdd [_unit];
-				((f_var_radioChannelList select _i) + 5) enableChannel true;
-			} else {
-				(f_var_radioChannelList select _i) radioChannelRemove [_unit];
-			};
-		};   
-	}];
+// Update channels if they take a backpack 
+player addEventHandler ["take", {  
+	[_splitMode] call f_fnc_radioCheckChannels;  
+}];
 
-} else {
+// Update channels if they get in a vehicle
+player addEventHandler ["getInMan", {  
+	[_splitMode] call f_fnc_radioCheckChannels;  
+}];
 
-	// If using unified mode, only set up one channel
-	waitUntil {!(isNil "f_var_channelID")};
+// Update channels if they get out of a vehicle
+player addEventHandler ["getOutMan", {  
+	[_splitMode] call f_fnc_radioCheckChannels;  
+}];
 
-	if((backpack player) in f_var_longRangeRadioList) then {
-		f_var_channelID radioChannelAdd [player];
-		(f_var_channelID + 5) enableChannel true;
-	};
-
-	player addEventHandler ["put", { 
-		params ["_unit"];    
-		if(!((backpack player) in f_var_longRangeRadioList)) then { 
-			f_var_channelID radioChannelRemove [_unit];
-		} else {
-			f_var_channelID radioChannelAdd [_unit];
-			(f_var_channelID + 5) enableChannel true;
-		}; 
-	}]; 
-	 
-	player addEventHandler ["take", {  
-		params ["_unit"];  
-		if(!((backpack player) in f_var_longRangeRadioList)) then {  
-			f_var_channelID radioChannelRemove [_unit];
-		} else {
-			f_var_channelID radioChannelAdd [_unit];
-			(f_var_channelID + 5) enableChannel true;
-		};   
-	}];
-
-};
+// Update channels if they switch seats in a vehicle
+player addEventHandler ["seatSwitchedMan", {  
+	[_splitMode] call f_fnc_radioCheckChannels;  
+}];
 
 // Just to be sure...
 2 enableChannel false;
