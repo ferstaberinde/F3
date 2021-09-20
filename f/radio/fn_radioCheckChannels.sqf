@@ -17,7 +17,6 @@ private _channelChecked = 0;
 private _channelBackpacks = [];
 private _channelsToAddListen = [];
 private _channelsToAddTalk = [];
-private _isVehicle = false;
 
 for "_i" from 1 to 10 do {
 
@@ -40,7 +39,6 @@ for "_i" from 1 to 10 do {
 	// Same for vehicle classes.
 	if ((typeOf vehicle player) in _channelVehicles) then {
 		_channelsToAddListen pushBackUnique _channelChecked;
-		_isVehicle = true;
 		if (player == driver vehicle player) then {
 			_channelsToAddTalk pushBackUnique _channelChecked;
 		};
