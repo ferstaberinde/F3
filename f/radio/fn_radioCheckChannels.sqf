@@ -44,23 +44,17 @@ for "_i" from 1 to 10 do {
 };
 
 // Detect any channels activated by setting a variable on the player or their vehicle
-_radioChannelsPlayerSpecific = (player getVariable ["f_var_radioChannelsObjectSpecific",[]]);
-if ((count _radioChannelsPlayerSpecific) > 0) then {
-	{
-		_channelsToAddListen pushBackUnique _x;
-		_channelsToAddTalk pushBackUnique _x;
-	} forEach _radioChannelsPlayerSpecific;
-};
+{
+	_channelsToAddListen pushBackUnique _x;
+	_channelsToAddTalk pushBackUnique _x;
+} forEach (player getVariable ["f_var_radioChannelsObjectSpecific",[]]);
 
-_radioChannelsVehicleSpecific = (vehicle player getVariable ["f_var_radioChannelsObjectSpecific",[]])
-if ((count _radioChannelsPlayerSpecific) > 0) then {
-	{
-		_channelsToAddListen pushBackUnique _x;
-		if (player == driver vehicle player) then {
-			_channelsToAddTalk pushBackUnique _x;
-		};
-	} forEach _radioChannelsVehicleSpecific;
-};
+{
+	_channelsToAddListen pushBackUnique _x;
+	if (player == driver vehicle player) then {
+		_channelsToAddTalk pushBackUnique _x;
+	};
+} forEach (vehicle player getVariable ["f_var_radioChannelsObjectSpecific",[]]);
 
 // If running in unified mode, just compress all numbers down to the one channel if there are any channels to be added.
 if (!_splitMode) then {
