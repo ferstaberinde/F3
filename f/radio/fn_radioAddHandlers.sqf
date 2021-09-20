@@ -44,4 +44,4 @@ player addEventHandler ["seatSwitchedMan", {
 2 enableChannel false;
 
 // Set a variable on the player to prove they've got handlers
-player setVariable ["f_var_radioHandlersAdded",true,true];
+player setVariable ["f_var_radioHandlersAdded",true];
