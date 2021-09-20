@@ -13,34 +13,32 @@ _splitMode = f_var_radioSplitMode;
 // Initialise variables
 private _radioChannelsPlayerSpecific = [];
 private _radioChannelsVehicleSpecific = [];
-private _channelChecked = 0;
 private _channelBackpacks = [];
 private _channelsToAddListen = [];
 private _channelsToAddTalk = [];
 
 for "_i" from 1 to 10 do {
 
-	_channelChecked = _i;
 	// Check against the list of backpacks. If they have a backpack, add the currently checked channel number to the list of channels to add send & receive permissions for.
 	_channelBackpacks = (f_var_radioChannelsBackpacks get _i);
 	if ((backpack player) in _channelBackpacks) then {
-		_channelsToAddListen pushBackUnique _channelChecked;
-		_channelsToAddTalk pushBackUnique _channelChecked;
+		_channelsToAddListen pushBackUnique _i;
+		_channelsToAddTalk pushBackUnique _i;
 	};
 	
 	// Check for vehicles. Don't add send permissions unless they're the driver.
 	_channelVehicles = (f_var_radioChannelsVehicles get _i);
 	if ((vehicle player) in _channelVehicles) then {
-		_channelsToAddListen pushBackUnique _channelChecked;
+		_channelsToAddListen pushBackUnique _i;
 		if (player == driver vehicle player) then {
-			_channelsToAddTalk pushBackUnique _channelChecked;
+			_channelsToAddTalk pushBackUnique _i;
 		};
 	};
 	// Same for vehicle classes.
 	if ((typeOf vehicle player) in _channelVehicles) then {
-		_channelsToAddListen pushBackUnique _channelChecked;
+		_channelsToAddListen pushBackUnique _i;
 		if (player == driver vehicle player) then {
-			_channelsToAddTalk pushBackUnique _channelChecked;
+			_channelsToAddTalk pushBackUnique _i;
 		};
 	};
 };
