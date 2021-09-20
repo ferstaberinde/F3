@@ -35,30 +35,10 @@ if (isServer) then {
 	// This will be used later
 	f_var_radioChannelUnified = [];
 	
-	// Define custom names for radio channels if desired.
-	_channelNameList = [
-		"LR Channel 1",
-		"LR Channel 2",
-		"LR Channel 3",
-		"LR Channel 4",
-		"LR Channel 5",
-		"LR Channel 6",
-		"LR Channel 7",
-		"LR Channel 8",
-		"LR Channel 9",
-		"LR Channel 10"
-	];
-	
-	// Set up channels to use
-	for "_i" from 0 to 9 do {
-		_ChannelName = format ["%1",(_channelNameList select _i)];
-		_ChannelID = (radioChannelCreate [[0.96, 0.34, 0.13, 0.8], _ChannelName, "%UNIT_NAME", []]);
-		if (_ChannelID == 0) exitWith {diag_log format ["channel creation failed", _x]};
-	};
-
 	/* 
 	Set up radio channel candidate lists (MISSIONMAKER INPUT REQUIRED)
-	Each channel is defined here by an array of items which can grant channel access.
+	Each channel is defined here by a channel name and an array of items which can grant channel access.
+	NAME (STRING) is the title visible to players in the UI.
 	BACKPACKS (classname, STRING) give the player talk and receive access when worn.
 	VEHICLES (classname or variable name, STRING) give the player receive access when they are inside, and talk access when they are the driver.
 	There is a maximum of 10 channels at any time. Swap in these radios for GM and CSLA missions:
@@ -69,37 +49,34 @@ if (isServer) then {
 			"gm_gc_backpack_r105m_brn"
 			"gm_ge_backpack_sem35_oli"
 	*/
-	f_var_radioChannelsObjects = createHashmap;
-	// Objects for channel 1
-	f_var_radioChannelsObjects set [1, ["B_RadioBag_01_black_F"]];
-	// Objects for channel 2
-	f_var_radioChannelsObjects set [2, ["B_RadioBag_01_digi_F"]];
-	// Objects for channel 3
-	f_var_radioChannelsObjects set [3, ["B_RadioBag_01_eaf_F"]];
-	// Objects for channel 4
-	f_var_radioChannelsObjects set [4, ["B_RadioBag_01_ghex_F"]];
-	// Objects for channel 5
-	f_var_radioChannelsObjects set [5, ["B_RadioBag_01_hex_F"]];
-	// Objects for channel 6
-	f_var_radioChannelsObjects set [6, ["B_RadioBag_01_tropic_F"]];
-	// Objects for channel 7
-	f_var_radioChannelsObjects set [7, ["B_RadioBag_01_mtp_F"]];
-	// Objects for channel 8
-	f_var_radioChannelsObjects set [8, ["B_RadioBag_01_wdl_F"]];
-	// Objects for channel 9
-	f_var_radioChannelsObjects set [9, ["B_RadioBag_01_oucamo_F"]];
-	// Objects for channel 10
-	f_var_radioChannelsObjects set [10, []];
+	f_var_radioChannels = createHashmap;
+	f_var_radioChannels set [1, ["LR Channel 1", ["B_RadioBag_01_black_F"]]];
+	f_var_radioChannels set [2, ["LR Channel 2", ["B_RadioBag_01_digi_F"]]];
+	f_var_radioChannels set [3, ["LR Channel 3", ["B_RadioBag_01_eaf_F"]]];
+	f_var_radioChannels set [4, ["LR Channel 4", ["B_RadioBag_01_ghex_F"]]];
+	f_var_radioChannels set [5, ["LR Channel 5", ["B_RadioBag_01_hex_F"]]];
+	f_var_radioChannels set [6, ["LR Channel 6", ["B_RadioBag_01_tropic_F"]]];
+	f_var_radioChannels set [7, ["LR Channel 7", ["B_RadioBag_01_mtp_F"]]];
+	f_var_radioChannels set [8, ["LR Channel 8", ["B_RadioBag_01_wdl_F"]]];
+	f_var_radioChannels set [9, ["LR Channel 9", ["B_RadioBag_01_oucamo_F"]]];
+	f_var_radioChannels set [10, ["LR Channel 10",[]]];
 	
 	// You can also tag a specific unit or vehicle for access to specific channels by setting a variable on them:
 	// _unit setVariable ["f_var_radioChannelsObjectSpecific",[1,2,3],true];
 
 	// Flatten all these arrays into one single list for potential later use
-	f_var_radioChannelsUnified append (flatten (values f_var_radioChannelsObjects));
-
+	f_var_radioChannelsUnified append (flatten (values f_var_radioChannels apply {_x select 1}));
+	f_var_radioChannelsUnified = f_var_radioChannelsUnified arrayIntersect f_var_radioChannelsUnified;
+	
+	// Set up channels to use
+	for "_i" from 0 to 9 do {
+		_ChannelName = format ["%1",((_channelNameList get _i) select 0)];
+		_ChannelID = (radioChannelCreate [[0.96, 0.34, 0.13, 0.8], _ChannelName, "%UNIT_NAME", []]);
+		if (_ChannelID == 0) exitWith {diag_log format ["channel creation failed", _x]};
+	};
 
 	// Broadcast variables for client use
-	publicVariable "f_var_radioChannelsObjects";
+	publicVariable "f_var_radioChannels";
 	publicVariable "f_var_radioChannelsUnified";
 	
 	// Add server EH for JIP

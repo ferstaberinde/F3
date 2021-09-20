@@ -20,7 +20,7 @@ private _channelsToAddTalk = [];
 for "_i" from 1 to 10 do {
 
 	// Check against the list of objects. If they have a backpack, add the currently checked channel number to the list of channels to add send & receive permissions for.
-	_channelObjects = (f_var_radioChannelsObjects get _i);
+	_channelObjects = ((f_var_radioChannels get _i) select 1);
 	if ((backpack player) in _channelObjects) then {
 		_channelsToAddListen pushBackUnique _i;
 		_channelsToAddTalk pushBackUnique _i;
