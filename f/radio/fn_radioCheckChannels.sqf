@@ -5,10 +5,10 @@
 This function checks what channels a player should have access to. It's called by event handlers set up by fn_radioAddHandlers.sqf.
 =========================== */
 
-params ["_splitMode"];
-
 // Clients wait for the server to finish with setup
 waitUntil {!(isNil "f_var_radioChannelsUnified")};
+
+_splitMode = f_var_radioSplitMode;
 
 _channelsToAddListen = [];
 _channelsToAddTalk = [];

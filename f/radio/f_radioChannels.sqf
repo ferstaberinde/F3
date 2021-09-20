@@ -28,6 +28,10 @@ params [["_splitMode",false]];
 
 if (isServer) then {
 
+	// Make the split mode something we can reference later
+	f_var_radioSplitMode = _splitMode;
+	publicVariable "f_var_radioSplitMode";
+
 	// This will be used later
 	f_var_radioChannelUnified = [];
 	
@@ -119,6 +123,6 @@ if (isServer) then {
 
 // Run clientside stuff
 if (hasInterface) then {
-	[_splitMode] call f_fnc_radioAddHandlers;
+	[] call f_fnc_radioAddHandlers;
 };
 
