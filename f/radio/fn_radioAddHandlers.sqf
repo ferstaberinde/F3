@@ -7,8 +7,6 @@ It's activated by f\radio\f_radioChannels.sqf.
 =========================== */
 waitUntil {!(isNil "f_var_radioChannelsUnified")};
 
-_splitMode = f_var_radioSplitMode;
-
 // Add player to the correct channels if they have a backpack
 [] call f_fnc_radioCheckChannels;
 
