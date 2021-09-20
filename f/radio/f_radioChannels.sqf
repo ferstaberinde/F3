@@ -83,7 +83,7 @@ if (isServer) then {
 	for "_i" from 0 to (_channelCount - 1) do {
 		_ChannelName = format ["%1",((_channelNameList get _i) select 0)];
 		_ChannelID = (radioChannelCreate [[0.96, 0.34, 0.13, 0.8], _ChannelName, "%UNIT_NAME", []]);
-		if (_ChannelID != _i + 1) exitWith {diag_log format ["channel creation failed", _x]};
+		if (_ChannelID != _i + 1) exitWith {diag_log format ["F3 Radio: Channel %1 creation failed - unacceptable change to channel list in f\radio\f_radioChannels.sqf", _channelName]};
 	};
 
 	// Broadcast variables for client use
