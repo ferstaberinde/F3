@@ -10,9 +10,14 @@ waitUntil {!(isNil "f_var_radioChannelsUnified")};
 
 _splitMode = f_var_radioSplitMode;
 
-_channelsToAddListen = [];
-_channelsToAddTalk = [];
-_isVehicle = false;
+// Initialise variables
+private _radioChannelsPlayerSpecific = [];
+private _radioChannelsVehicleSpecific = [];
+private _channelChecked = 0;
+private _channelBackpacks = [];
+private _channelsToAddListen = [];
+private _channelsToAddTalk = [];
+private _isVehicle = false;
 
 for "_i" from 1 to 10 do {
 
