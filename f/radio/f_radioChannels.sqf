@@ -35,9 +35,23 @@ if (isServer) then {
 	// This will be used later
 	f_var_radioChannelUnified = [];
 	
+	// Define custom names for radio channels if desired.
+	_channelNameList = [
+		"LR Channel 1",
+		"LR Channel 2",
+		"LR Channel 3",
+		"LR Channel 4",
+		"LR Channel 5",
+		"LR Channel 6",
+		"LR Channel 7",
+		"LR Channel 8",
+		"LR Channel 9",
+		"LR Channel 10"
+	];
+	
 	// Set up channels to use
-	for "_i" from 1 to 10 do {
-		_ChannelName = format ["LR CH%1", (_i + 1)];
+	for "_i" from 0 to 9 do {
+		_ChannelName = format ["%1",(_channelNameList select _i)];
 		_ChannelID = (radioChannelCreate [[0.96, 0.34, 0.13, 0.8], _ChannelName, "%UNIT_NAME", []]);
 		if (_ChannelID == 0) exitWith {diag_log format ["channel creation failed", _x]};
 	};
