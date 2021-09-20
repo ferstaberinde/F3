@@ -8,11 +8,12 @@ Example:
 
 Arguments:
 0. Long-range split mode (boolean). If true, each radio backpack type has a separate channel. If false, all backpacks use one channel. Default false.
+1. Number of channels to create (number, optional). If this is set, the number of channels to be created will be limited to this number. If channels are not split, this will be automatically set to 1.
 
 This module requires some missionmaker configuration. If you want to enable vehicle radio access, you need to specify vehicle classes or variable names below.
 =========================== */
 
-params [["_splitMode",false]];
+params [["_splitMode",false],["_channelCount",10]];
 
 // Disable the Command channel to avoid cheating
 2 enableChannel false;
@@ -31,6 +32,10 @@ if (isServer) then {
 	// Make the split mode something we can reference later
 	f_var_radioSplitMode = _splitMode;
 	publicVariable "f_var_radioSplitMode";
+	
+	// Make the channel count something we can reference later
+	f_var_radioChannelCount = _channelCount;
+	publicVariable "f_var_radioChannelCount";
 
 	// This will be used later
 	f_var_radioChannelUnified = [];
@@ -38,6 +43,7 @@ if (isServer) then {
 	/* 
 	Set up radio channel candidate lists (MISSIONMAKER INPUT REQUIRED)
 	Each channel is defined here by a channel name and an array of items which can grant channel access.
+	Channels will be created IN ORDER OF THIS ARRAY. Keep this in mind if limiting the number of possible channels. All radio access items listed here will be used if channels are not split.
 	NAME (STRING) is the title visible to players in the UI.
 	BACKPACKS (classname, STRING) give the player talk and receive access when worn.
 	VEHICLES (classname or variable name, STRING) give the player receive access when they are inside, and talk access when they are the driver.
@@ -68,8 +74,13 @@ if (isServer) then {
 	f_var_radioChannelsUnified append (flatten (values f_var_radioChannels apply {_x select 1}));
 	f_var_radioChannelsUnified = f_var_radioChannelsUnified arrayIntersect f_var_radioChannelsUnified;
 	
+	// If channels are not to be split, only create one.
+	if (!_splitMode) then {
+		_channelCount = 1;
+	};
+	
 	// Set up channels to use
-	for "_i" from 0 to 9 do {
+	for "_i" from 0 to (_channelCount - 1) do {
 		_ChannelName = format ["%1",((_channelNameList get _i) select 0)];
 		_ChannelID = (radioChannelCreate [[0.96, 0.34, 0.13, 0.8], _ChannelName, "%UNIT_NAME", []]);
 		if (_ChannelID == 0) exitWith {diag_log format ["channel creation failed", _x]};

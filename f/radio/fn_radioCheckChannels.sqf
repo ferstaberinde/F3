@@ -17,7 +17,7 @@ private _channelObjects = [];
 private _channelsToAddListen = [];
 private _channelsToAddTalk = [];
 
-for "_i" from 1 to 10 do {
+for "_i" from 1 to f_var_radioChannelCount do {
 
 	// Check against the list of objects. If they have a backpack, add the currently checked channel number to the list of channels to add send & receive permissions for.
 	_channelObjects = ((f_var_radioChannels get _i) select 1);
@@ -67,7 +67,7 @@ if (!_splitMode) then {
 };
 	
 // Remove channels player shouldn't have access to
-for "_i" from 1 to 10 do {
+for "_i" from 1 to f_var_radioChannelCount do {
 	if !(_i in _channelsToAddListen) then {
 		_i radioChannelRemove [player];
 };
