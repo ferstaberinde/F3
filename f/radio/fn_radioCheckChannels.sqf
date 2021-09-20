@@ -49,7 +49,7 @@ if ((count _radioChannelsPlayerSpecific) > 0) then {
 	{
 		_channelsToAddListen pushBackUnique _x;
 		_channelsToAddTalk pushBackUnique _x;
-	} forEach _radioChannelsObjectSpecific;
+	} forEach _radioChannelsPlayerSpecific;
 };
 
 _radioChannelsVehicleSpecific = (vehicle player getVariable ["f_var_radioChannelsObjectSpecific",[]])
@@ -59,7 +59,7 @@ if ((count _radioChannelsPlayerSpecific) > 0) then {
 		if (player == driver vehicle player) then {
 			_channelsToAddTalk pushBackUnique _x;
 		};
-	} forEach _radioChannelsObjectSpecific;
+	} forEach _radioChannelsVehicleSpecific;
 };
 
 // If running in unified mode, just compress all numbers down to the one channel if there are any channels to be added.
