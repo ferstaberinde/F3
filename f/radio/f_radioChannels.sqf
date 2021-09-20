@@ -74,7 +74,7 @@ if (isServer) then {
 	// Backpacks for channel 10
 	f_var_radioChannelsBackpacks set [10, []];
 
-	// VEHICLES: Can be a variable name of a specific vehicle (VARIABLE), or a classname of a vehicle type (STRING)
+	// VEHICLES: Can be a variable name of a specific vehicle (STRING), or a classname of a vehicle type (STRING)
 	f_var_radioChannelsVehicles = createHashmap;
 	// Vehicles for channel 1
 	f_var_radioChannelsVehicles set [1, []];
