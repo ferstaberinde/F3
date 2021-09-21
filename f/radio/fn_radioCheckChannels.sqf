@@ -78,3 +78,9 @@ for "_i" from 1 to f_var_radioChannelCount do {
 // Add player to the correct channels if they are eligible
 {_x radioChannelAdd [player]} forEach _channelsToAddListen;
 {(_x + 5) enableChannel true} forEach _channelsToAddTalk;
+
+// DEBUG
+if (f_param_debugMode == 1) then
+{
+	systemChat format ["DEBUG (fn_radioCheckChannels.sqf): added listen channels %1, talk channels %2",_channelsToAddListen,_channelsToAddTalk];
+};

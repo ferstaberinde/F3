@@ -43,3 +43,9 @@ player addEventHandler ["seatSwitchedMan", {
 
 // Set a variable on the player to prove they've got handlers
 player setVariable ["f_var_radioHandlersAdded",true];
+
+// DEBUG
+if (f_param_debugMode == 1) then
+{
+	systemChat "DEBUG (fn_radioAddHandlers.sqf): added radio event handlers %1";
+};
