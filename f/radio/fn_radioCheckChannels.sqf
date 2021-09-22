@@ -70,8 +70,14 @@ if (!_splitMode) then {
 	
 // Remove channels player shouldn't have access to
 for "_i" from 1 to f_var_radioChannelCount do {
+
+	if !(_i in _channelsToAddTalk) then {
+		(_i + 5) enableChannel false;
+	};
 	if !(_i in _channelsToAddListen) then {
 		_i radioChannelRemove [player];
+	};
+	
 };
 
 // Disable the Command channel to avoid cheating
