@@ -85,7 +85,7 @@ if (isServer) then {
 	
 	// Set up channels to use
 	for "_i" from 0 to (_channelCount - 1) do {
-		_channelName = format ["%1",((_channelNameList get _i) select 0)];
+		_channelName = format ["%1",((f_var_radioChannels get _i) select 0)];
 		_channelID = (radioChannelCreate [[0.96, 0.34, 0.13, 0.8], _channelName, "%UNIT_NAME", []]);
 		if (_channelID != _i + 1) exitWith {diag_log format ["F3 Radio: Channel %1 creation failed - unacceptable change to channel list in f\radio\f_radioChannels.sqf or too many channels", _channelName]};
 	};
