@@ -43,10 +43,13 @@ if (isServer) then {
 	/* 
 	Set up radio channel candidate lists (MISSIONMAKER INPUT REQUIRED)
 	Each channel is defined here by a channel name and an array of items which can grant channel access.
-	Channels will be created IN ORDER OF THIS ARRAY. Keep this in mind if limiting the number of possible channels. All radio access items listed here will be used if channels are not split.
+	Channels will be created IN ORDER OF THIS LIST. Keep this in mind if limiting the number of possible channels. All radio access items listed here will be used if channels are not split.
+	Do not remove channels from this list. If you need to free up custom channels, use the limiting parameter in init.sqf.
+	
 	NAME (STRING) is the title visible to players in the UI.
 	INVENTORY (classname, STRING) items, such as backpacks or equipment, give the player talk and receive access when carried. Only player inventory is checked, NOT vehicles.
 	VEHICLES (classname or variable name, STRING) give the player receive access when they are inside, and talk access when they are the driver.
+
 	There is a maximum of 10 channels at any time. Swap in these radios for GM and CSLA missions:
 	
 			"US85_bpPRC77"
@@ -57,14 +60,14 @@ if (isServer) then {
 	*/
 	f_var_radioChannels = createHashmap;
 	f_var_radioChannels set [1, ["LR Channel 1", ["B_RadioBag_01_black_F"]]];
-	f_var_radioChannels set [2, ["LR Channel 2", ["B_RadioBag_01_digi_F"]]];
-	f_var_radioChannels set [3, ["LR Channel 3", ["B_RadioBag_01_eaf_F"]]];
-	f_var_radioChannels set [4, ["LR Channel 4", ["B_RadioBag_01_ghex_F"]]];
-	f_var_radioChannels set [5, ["LR Channel 5", ["B_RadioBag_01_hex_F"]]];
-	f_var_radioChannels set [6, ["LR Channel 6", ["B_RadioBag_01_tropic_F"]]];
-	f_var_radioChannels set [7, ["LR Channel 7", ["B_RadioBag_01_mtp_F"]]];
-	f_var_radioChannels set [8, ["LR Channel 8", ["B_RadioBag_01_wdl_F"]]];
-	f_var_radioChannels set [9, ["LR Channel 9", ["B_RadioBag_01_oucamo_F"]]];
+	f_var_radioChannels set [2, ["LR Channel 2", ["B_RadioBag_01_digi_F","vehAAF_COV"]]];
+	f_var_radioChannels set [3, ["LR Channel 3", ["B_RadioBag_01_eaf_F","vehLDF_COV"]]];
+	f_var_radioChannels set [4, ["LR Channel 4", ["B_RadioBag_01_ghex_F","vehCSAT_COV"]]];
+	f_var_radioChannels set [5, ["LR Channel 5", ["B_RadioBag_01_hex_F","vehCSAT_COV"]]];
+	f_var_radioChannels set [6, ["LR Channel 6", ["B_RadioBag_01_oucamo_F","vehCSAT_COV"]]];
+	f_var_radioChannels set [7, ["LR Channel 7", ["B_RadioBag_01_mtp_F","vehNATO_COV"]]];
+	f_var_radioChannels set [8, ["LR Channel 8", ["B_RadioBag_01_wdl_F","vehNATO_COV"]]];
+	f_var_radioChannels set [9, ["LR Channel 9", ["B_RadioBag_01_tropic_F","vehNATO_COV"]]];
 	f_var_radioChannels set [10, ["LR Channel 10",[]]];
 	
 	// You can also tag a specific unit or vehicle for access to specific channels by setting a variable on them:
