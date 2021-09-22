@@ -45,7 +45,7 @@ if (isServer) then {
 	Each channel is defined here by a channel name and an array of items which can grant channel access.
 	Channels will be created IN ORDER OF THIS ARRAY. Keep this in mind if limiting the number of possible channels. All radio access items listed here will be used if channels are not split.
 	NAME (STRING) is the title visible to players in the UI.
-	BACKPACKS (classname, STRING) give the player talk and receive access when worn.
+	INVENTORY (classname, STRING) items, such as backpacks or equipment, give the player talk and receive access when carried. Only player inventory is checked, NOT vehicles.
 	VEHICLES (classname or variable name, STRING) give the player receive access when they are inside, and talk access when they are the driver.
 	There is a maximum of 10 channels at any time. Swap in these radios for GM and CSLA missions:
 	

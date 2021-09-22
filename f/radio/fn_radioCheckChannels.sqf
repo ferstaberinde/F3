@@ -19,12 +19,14 @@ private _channelsToAddTalk = [];
 
 for "_i" from 1 to f_var_radioChannelCount do {
 
-	// Check against the list of objects. If they have a backpack, add the currently checked channel number to the list of channels to add send & receive permissions for.
+	// Check against the list of objects. If they have a backpack or other inventory item, add the currently checked channel number to the list of channels to add send & receive permissions for.
 	_channelObjects = ((f_var_radioChannels get _i) select 1);
-	if ((backpack player) in _channelObjects) then {
-		_channelsToAddListen pushBackUnique _i;
-		_channelsToAddTalk pushBackUnique _i;
-	};
+	{
+		if ([player,_x] call BIS_fnc_hasItem) then {
+			_channelsToAddListen pushBackUnique _i;
+			_channelsToAddTalk pushBackUnique _i;
+		};
+	} forEach _channelObjects;
 	
 	// Check for vehicles. Don't add send permissions unless they're the driver.
 	if ((str vehicle player) in _channelObjects) then {
