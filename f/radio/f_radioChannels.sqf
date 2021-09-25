@@ -99,7 +99,11 @@ if (isServer) then {
 	{
 		params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
 		if (_jip) then {
-			[] remoteExec ["f_fnc_radioAddHandlers",_owner];
+			[] spawn {
+				// Wait a little longer to make sure the player is initialised
+				sleep 1;
+				[] remoteExec ["f_fnc_radioAddHandlers",_owner];
+			};
 		};
 	}];
 
