@@ -27,11 +27,15 @@ player addEventHandler ["take", {
 
 // Update channels if they get in a vehicle
 player addEventHandler ["getInMan", {  
+	params ["_unit", "_role", "_vehicle", "_turret"];
+	waitUntil {vehicle player == _vehicle};
 	[] call f_fnc_radioCheckChannels;  
 }];
 
 // Update channels if they get out of a vehicle
 player addEventHandler ["getOutMan", {  
+	params ["_unit", "_role", "_vehicle", "_turret"];
+	waitUntil {vehicle player != _vehicle};
 	[] call f_fnc_radioCheckChannels;  
 }];
 
