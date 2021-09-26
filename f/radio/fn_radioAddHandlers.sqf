@@ -5,7 +5,9 @@
 This function adds local event handlers to the player which grant radio channels when picking up a backpack or entering a vehicle. It also makes an initial check to see what they've got to begin with.
 It's activated by f\radio\f_radioChannels.sqf.
 =========================== */
-waitUntil {!(isNil "f_var_radioChannelsUnified")};
+
+// Wait for player to be properly initialised
+waitUntil {!isNull player && {player == player}};
 
 // Add player to the correct channels if they have a backpack
 [] call f_fnc_radioCheckChannels;
