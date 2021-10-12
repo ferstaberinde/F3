@@ -29,14 +29,14 @@ for "_i" from 1 to f_var_radioChannelCount do {
 	} forEach _channelObjects;
 	
 	// Check for vehicles. Don't add send permissions unless they're the driver.
-	if ((str vehicle player) in _channelObjects) then {
+	if ((toLower str vehicle player) in _channelObjects) then {
 		_channelsToAddListen pushBackUnique _i;
 		if (player == driver vehicle player) then {
 			_channelsToAddTalk pushBackUnique _i;
 		};
 	};
 	// Same for vehicle classes.
-	if ((typeOf vehicle player) in _channelObjects) then {
+	if ((toLower typeOf vehicle player) in _channelObjects) then {
 		_channelsToAddListen pushBackUnique _i;
 		if (player == driver vehicle player) then {
 			_channelsToAddTalk pushBackUnique _i;
