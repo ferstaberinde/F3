@@ -18,15 +18,6 @@ params [["_splitMode",false],["_channelCount",10]];
 // Disable the Command channel to avoid cheating
 2 enableChannel false;
 
-// There is a maximum of 10 channels at any time. Swap in these radios for GM and CSLA missions:
-/*
-	"US85_bpPRC77",
-	"CSLA_bpWpR129",
-	"CSLA_bpWpRF10",
-	"gm_gc_backpack_r105m_brn",
-	"gm_ge_backpack_sem35_oli"
-*/
-
 if (isServer) then {
 
 	// Make the split mode something we can reference later
@@ -53,7 +44,7 @@ if (isServer) then {
 	VEHICLES (classname or variable name) give the player receive access when they are inside, and talk access when they are the driver.
 	The channel eligibility array is not case-sensitive.
 
-	There is a maximum of 10 channels at any time. Swap in these radios for GM and CSLA missions:
+	There is a maximum of 10 channels at any time. Add in these radios for GM and CSLA missions:
 	
 			"US85_bpPRC77"
 			"CSLA_bpWpR129"
