@@ -7,7 +7,7 @@ It's activated by f\radio\f_radioChannels.sqf.
 =========================== */
 
 // Wait for player to be properly initialised
-waitUntil {!isNull player && {player == player}};
+waitUntil {(!isNull player && {player == player}) && !(isNil "f_var_radioChannelsUnified")};
 
 // Add player to the correct channels if they have a backpack
 [player] call f_fnc_radioCheckChannels;
