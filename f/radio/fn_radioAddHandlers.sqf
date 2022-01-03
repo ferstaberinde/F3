@@ -10,36 +10,39 @@ It's activated by f\radio\f_radioChannels.sqf.
 waitUntil {!isNull player && {player == player}};
 
 // Add player to the correct channels if they have a backpack
-[] call f_fnc_radioCheckChannels;
+[player] call f_fnc_radioCheckChannels;
 
 // Now bail if they've already been handled
 if (player getVariable ["f_var_radioHandlersAdded",false]) exitWith {};
 
 // Update channels if they drop a backpack
 player addEventHandler ["put", { 
-	[] call f_fnc_radioCheckChannels;
+	params ["_unit", "_container", "_item"];
+	[_unit] call f_fnc_radioCheckChannels;
 }]; 
 
 // Update channels if they take a backpack 
 player addEventHandler ["take", {  
-	[] call f_fnc_radioCheckChannels;  
+	params ["_unit", "_container", "_item"];
+	[_unit] call f_fnc_radioCheckChannels;  
 }];
 
 // Update channels if they get in a vehicle
 player addEventHandler ["getInMan", {  
 	params ["_unit", "_role", "_vehicle", "_turret"];
-	[] call f_fnc_radioCheckChannels;  
+	[_unit] call f_fnc_radioCheckChannels;  
 }];
 
 // Update channels if they get out of a vehicle
 player addEventHandler ["getOutMan", {  
 	params ["_unit", "_role", "_vehicle", "_turret"];
-	[] call f_fnc_radioCheckChannels;  
+	[_unit] call f_fnc_radioCheckChannels;  
 }];
 
 // Update channels if they switch seats in a vehicle
 player addEventHandler ["seatSwitchedMan", {  
-	[] call f_fnc_radioCheckChannels;  
+	params ["_unit1", "_unit2", "_vehicle"];
+	[_unit1] call f_fnc_radioCheckChannels;  
 }];
 
 // Just to be sure...
