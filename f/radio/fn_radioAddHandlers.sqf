@@ -27,6 +27,18 @@ player addEventHandler ["take", {
 	[_unit] call f_fnc_radioCheckChannels;  
 }];
 
+// Update channels if they open their inventory
+player addEventHandler ["inventoryOpened", {  
+	params ["_unit", "_container"];
+	[_unit] call f_fnc_radioCheckChannels;  
+}];
+
+// Update channels if they close their inventory
+player addEventHandler ["inventoryClosed", {  
+	params ["_unit", "_container"];
+	[_unit] call f_fnc_radioCheckChannels;  
+}];
+
 // Update channels if they get in a vehicle
 player addEventHandler ["getInMan", {  
 	params ["_unit", "_role", "_vehicle", "_turret"];
