@@ -165,6 +165,14 @@ f_var_viewDistance_crewOnly = true;
 
 // ====================================================================================
 
+// F3 - Commander's Override and FCS failure
+// Credits and documentation: https://github.com/folkarps/F3/wiki
+
+// [vehicleName] call f_fnc_fcsInit;
+// { _x call f_fnc_fcsInit; } forEach [vehicle1,vehicle2,vehicle3];
+
+// ====================================================================================
+
 // F3 - MapClick Teleport
 // Credits and documentation: https://github.com/folkarps/F3/wiki
 

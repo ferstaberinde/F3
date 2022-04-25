@@ -129,4 +129,13 @@ class F // Defines the "owner"
 		file = "f\dynamicViewDistance";
 		class ehSetViewDistance {};
 	};
+	class fcs
+	{
+		file = "f\fcs";
+		class fcsInit{};
+		class fcsCommanderOverride{};
+		class fcsFailure{};
+		class fcsPersistentEffects{};
+		class fcsOverrideLocalWarning{};
+	};
 };
