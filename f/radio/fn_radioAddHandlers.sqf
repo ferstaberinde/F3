@@ -19,42 +19,56 @@ if (player getVariable ["f_var_radioHandlersAdded",false]) exitWith {};
 player addEventHandler ["put", { 
 	params ["_unit", "_container", "_item"];
 	[_unit] call f_fnc_radioCheckChannels;
+	sleep 1;
+	[_unit] call f_fnc_radioCheckChannels;
 }]; 
 
 // Update channels if they take a backpack 
 player addEventHandler ["take", {  
 	params ["_unit", "_container", "_item"];
 	[_unit] call f_fnc_radioCheckChannels;  
+	sleep 1;
+	[_unit] call f_fnc_radioCheckChannels;
 }];
 
 // Update channels if they open their inventory
 player addEventHandler ["inventoryOpened", {  
 	params ["_unit", "_container"];
-	[_unit] call f_fnc_radioCheckChannels;  
+	[_unit] call f_fnc_radioCheckChannels; 
+	sleep 1;
+	[_unit] call f_fnc_radioCheckChannels;
 }];
 
 // Update channels if they close their inventory
 player addEventHandler ["inventoryClosed", {  
 	params ["_unit", "_container"];
-	[_unit] call f_fnc_radioCheckChannels;  
+	[_unit] call f_fnc_radioCheckChannels;
+	sleep 1;
+	[_unit] call f_fnc_radioCheckChannels;
 }];
 
 // Update channels if they get in a vehicle
 player addEventHandler ["getInMan", {  
 	params ["_unit", "_role", "_vehicle", "_turret"];
-	[_unit] call f_fnc_radioCheckChannels;  
+	[_unit] call f_fnc_radioCheckChannels; 
+	sleep 1;
+	[_unit] call f_fnc_radioCheckChannels;
 }];
 
 // Update channels if they get out of a vehicle
 player addEventHandler ["getOutMan", {  
 	params ["_unit", "_role", "_vehicle", "_turret"];
-	[_unit] call f_fnc_radioCheckChannels;  
+	[_unit] call f_fnc_radioCheckChannels; 
+	sleep 1;
+	[_unit] call f_fnc_radioCheckChannels;
 }];
 
 // Update channels if they switch seats in a vehicle
 player addEventHandler ["seatSwitchedMan", {  
 	params ["_unit1", "_unit2", "_vehicle"];
-	[_unit1] call f_fnc_radioCheckChannels;  
+	[_unit1] call f_fnc_radioCheckChannels; 
+	sleep 1;
+	[_unit] call f_fnc_radioCheckChannels;
 }];
 
 // Just to be sure...
@@ -68,3 +82,6 @@ if (f_param_debugMode == 1) then
 {
 	systemChat "DEBUG (fn_radioAddHandlers.sqf): added radio event handlers %1";
 };
+
+sleep 1;
+[player] call f_fnc_radioCheckChannels;
