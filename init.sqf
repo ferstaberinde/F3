@@ -226,7 +226,7 @@ f_var_viewDistance_crewOnly = true;
 // True to split channels by radio backpack type. Else one channel for all.
 // Optional second parameter (number): limit the channel count to this number. This frees up space for any other custom channels. Defaults to 10 (max) if not set, or 1 (minimum) if channels not split.
 
-// [false] execVM "f\radio\f_radioChannels.sqf";
+[false] execVM "f\radio\f_radioChannels.sqf";
 
 // If you are creating other custom channels, you must wait for F3 Radio Channels to finish to avoid conflicts:
 //  waitUntil {(!isNil f_var_radioChannelsUnified)}
