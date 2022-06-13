@@ -55,14 +55,14 @@ if (isServer) then {
 	
 	f_var_radioChannels = createHashmap;
 	f_var_radioChannels set [1, ["LR Channel 1",[1, 0.3, 0.1, 1], (["B_RadioBag_01_black_F"] apply {toLower _x})]];
-	f_var_radioChannels set [2, ["LR Channel 2",[0.06,0.9,0,1], (["B_RadioBag_01_digi_F","vehAAF_COV"] apply {toLower _x})]];
-	f_var_radioChannels set [3, ["LR Channel 3",[0.06,0.9,0,1], (["B_RadioBag_01_eaf_F","vehLDF_COV"] apply {toLower _x})]];
-	f_var_radioChannels set [4, ["LR Channel 4",[0.9,0,0,1], (["B_RadioBag_01_ghex_F","vehCSAT_COV"] apply {toLower _x})]];
-	f_var_radioChannels set [5, ["LR Channel 5",[0.9,0,0,1], (["B_RadioBag_01_hex_F","vehCSAT_COV"] apply {toLower _x})]];
-	f_var_radioChannels set [6, ["LR Channel 6",[0.9,0,0,1], (["B_RadioBag_01_oucamo_F","vehCSAT_COV"] apply {toLower _x})]];
-	f_var_radioChannels set [7, ["LR Channel 7",[0.1,0.5,1,1], (["B_RadioBag_01_mtp_F","vehNATO_COV"] apply {toLower _x})]];
-	f_var_radioChannels set [8, ["LR Channel 8",[0.1,0.5,1,1], (["B_RadioBag_01_wdl_F","vehNATO_COV"] apply {toLower _x})]];
-	f_var_radioChannels set [9, ["LR Channel 9",[0.1,0.5,1,1], (["B_RadioBag_01_tropic_F","vehNATO_COV"] apply {toLower _x})]];
+	f_var_radioChannels set [2, ["LR Channel 2",[0.06,0.9,0,1], (["B_RadioBag_01_digi_F","vehAAF_COV","vehAAF_IFV1","vehAAF_IFV2","vehAAF_AV","vehAAF_BV","vehAAF_CV","vehAAF_TNK1","vehAAF_TH1","vehAAF_TH2","vehAAF_TH3","vehAAF_TH4","vehAAF_TH5","vehAAF_TH6","vehAAF_TH7","vehAAF_TH8","vehAAF_AH1","vehAAF_CAS1"] apply {toLower _x})]];
+	f_var_radioChannels set [3, ["LR Channel 3",[0.06,0.9,0,1], (["B_RadioBag_01_eaf_F","vehLDF_COV","vehLDF_IFV1","vehLDF_IFV2","vehLDF_AV","vehLDF_BV","vehLDF_CV","vehLDF_TNK1","vehLDF_TH1","vehLDF_TH2","vehLDF_TH3","vehLDF_TH4","vehLDF_TH5","vehLDF_TH6","vehLDF_TH7","vehLDF_TH8","vehLDF_AH1","vehLDF_CAS1"] apply {toLower _x})]];
+	f_var_radioChannels set [4, ["LR Channel 4",[0.9,0,0,1], (["B_RadioBag_01_ghex_F","vehCSAT_COV","vehCSAT_IFV1","vehCSAT_IFV2","vehCSAT_AV","vehCSAT_BV","vehCSAT_CV","vehCSAT_TNK1","vehCSAT_TH1","vehCSAT_TH2","vehCSAT_TH3","vehCSAT_TH4","vehCSAT_TH5","vehCSAT_TH6","vehCSAT_TH7","vehCSAT_TH8","vehCSAT_AH1","vehCSAT_CAS1"] apply {toLower _x})]];
+	f_var_radioChannels set [5, ["LR Channel 5",[0.9,0,0,1], (["B_RadioBag_01_hex_F","vehCSAT_COV","vehCSAT_IFV1","vehCSAT_IFV2","vehCSAT_AV","vehCSAT_BV","vehCSAT_CV","vehCSAT_TNK1","vehCSAT_TH1","vehCSAT_TH2","vehCSAT_TH3","vehCSAT_TH4","vehCSAT_TH5","vehCSAT_TH6","vehCSAT_TH7","vehCSAT_TH8","vehCSAT_AH1","vehCSAT_CAS1"] apply {toLower _x})]];
+	f_var_radioChannels set [6, ["LR Channel 6",[0.9,0,0,1], (["B_RadioBag_01_oucamo_F","vehCSAT_COV","vehCSAT_IFV1","vehCSAT_IFV2","vehCSAT_AV","vehCSAT_BV","vehCSAT_CV","vehCSAT_TNK1","vehCSAT_TH1","vehCSAT_TH2","vehCSAT_TH3","vehCSAT_TH4","vehCSAT_TH5","vehCSAT_TH6","vehCSAT_TH7","vehCSAT_TH8","vehCSAT_AH1","vehCSAT_CAS1"] apply {toLower _x})]];
+	f_var_radioChannels set [7, ["LR Channel 7",[0.1,0.5,1,1], (["B_RadioBag_01_mtp_F","vehNATO_COV","vehNATO_IFV1","vehNATO_IFV2","vehNATO_AV","vehNATO_BV","vehNATO_CV","vehNATO_TNK1","vehNATO_TH1","vehNATO_TH2","vehNATO_TH3","vehNATO_TH4","vehNATO_TH5","vehNATO_TH6","vehNATO_TH7","vehNATO_TH8","vehNATO_AH1","vehNATO_CAS1"] apply {toLower _x})]];
+	f_var_radioChannels set [8, ["LR Channel 8",[0.1,0.5,1,1], (["B_RadioBag_01_wdl_F","vehNATO_COV","vehNATO_IFV1","vehNATO_IFV2","vehNATO_AV","vehNATO_BV","vehNATO_CV","vehNATO_TNK1","vehNATO_TH1","vehNATO_TH2","vehNATO_TH3","vehNATO_TH4","vehNATO_TH5","vehNATO_TH6","vehNATO_TH7","vehNATO_TH8","vehNATO_AH1","vehNATO_CAS1"] apply {toLower _x})]];
+	f_var_radioChannels set [9, ["LR Channel 9",[0.1,0.5,1,1], (["B_RadioBag_01_tropic_F","vehNATO_COV","vehNATO_IFV1","vehNATO_IFV2","vehNATO_AV","vehNATO_BV","vehNATO_CV","vehNATO_TNK1","vehNATO_TH1","vehNATO_TH2","vehNATO_TH3","vehNATO_TH4","vehNATO_TH5","vehNATO_TH6","vehNATO_TH7","vehNATO_TH8","vehNATO_AH1","vehNATO_CAS1"] apply {toLower _x})]];
 	f_var_radioChannels set [10, ["LR Channel 10",[0.9,0.2,0.9,1],([] apply {toLower _x})]];
 	
 	// You can also tag a specific unit or vehicle for access to specific channels by setting a variable on them:
