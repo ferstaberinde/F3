@@ -107,10 +107,8 @@ if (count _grps == 0) exitWith {
 // ====================================================================================
 
 // CREATE STARTING VALUES
-// A count is made of units in the groups listed in _grps.
-
-_started = 0;
-{_started = _started + (count (units _x))} forEach _grps;
+// A initial count is made of units in the groups listed in _grps.
+_started = count (_grps apply {units _x});
 
 // DEBUG
 if (f_param_debugMode == 1) then
@@ -129,12 +127,8 @@ while {true} do
 {
 	_remaining = 0;
 
-	// Calculate how many units in the groups are still alive
-	{
-		_grp = _x;
-		_alive = {alive _x} count (units _grp);
-		_remaining = _remaining + _alive;
-	} forEach _grps;
+    // Calculate how many units in the groups are still alive
+	_remaining = {alive _x} count (_grps apply {units _x});
 
     // DEBUG
 	if (f_param_debugMode == 1) then
