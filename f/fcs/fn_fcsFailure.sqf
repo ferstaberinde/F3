@@ -9,6 +9,10 @@ params ["_target","_projectile","_isDirect"];
 	private _projectileClass = "";
 	private _warheadType = "";
 	private _randomNumber = 0;
+	
+	if (_target getVariable ["fcs_failure",false]) exitWith { 
+		// diag_log "FCS: target already has an FCS failure" 
+	};
 
 	// Determine whether the projectile is an anti-tank weapon
 	_projectileClass = typeOf _projectile;
@@ -27,9 +31,6 @@ params ["_target","_projectile","_isDirect"];
 	_randomNumber = floor (random 20);
 	if !(_randomNumber == 10) exitWith { 
 		// diag_log "FCS: projectile not randomly selected" 
-	};
-	if (_target getVariable ["fcs_failure",false]) exitWith { 
-		// diag_log "FCS: target already has an FCS failure" 
 	};
 
 	// Hit turns off the stabiliser and sets an appropriate variable on the vehicle
