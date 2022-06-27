@@ -24,8 +24,8 @@
 
 */
 
-// Doesn't need to run on DS
-if (isDedicated) exitWith {};
+// Doesn't need to run on DS or HC
+if !(hasInterface) exitWith {};
 
 params ["_vehicle"];
 
