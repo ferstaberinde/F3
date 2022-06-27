@@ -136,6 +136,6 @@ class F // Defines the "owner"
 		class fcsCommanderOverride{};
 		class fcsFailure{};
 		class fcsPersistentEffects{};
-		class fcsOverrideLocalWarning{};
+		class fcsLocalWarning{};
 	};
 };

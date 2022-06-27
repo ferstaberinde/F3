@@ -31,19 +31,7 @@ while {(_target getVariable ["fcs_failure",false]) && (alive _target)} do {
 		} forEach (_target weaponsTurret [0]);
 		
 		// Show a visual warning to the gunner - remoteExec'd to be local and only displayed when they are in the optics
-		[[],{
-		
-			_FCSWarningDisplay = findDisplay 46 ctrlCreate ["RscStructuredText", 4404];
-			if (cameraView == "GUNNER") then {
-				_FCSWarningDisplay ctrlSetPosition [0.5, 0.7,0.5,0.5];
-				_FCSWarningDisplay ctrlSetStructuredText parseText "<t shadow='0' size='1.1'>FCS FAILURE</t>";
-				_FCSWarningDisplay ctrlSetTextColor [1,0.1,0.1,1];
-				_FCSWarningDisplay ctrlSetFont "PuristaBold";
-				_FCSWarningDisplay ctrlCommit 0;
-				sleep 0.5;
-			};
-			ctrlDelete _FCSWarningDisplay;
-		}] remoteExec ["spawn",_currentGunner,false];
+		["FCS FAILURE",0.5] remoteExec ["f_fnc_fcsLocalWarning",_currentGunner,false];
 		
 	};
 	
