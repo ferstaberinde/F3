@@ -86,11 +86,11 @@ else
 	sleep 1;
 	{
 		_Tgrp = call compile format ["%1",_x];
-		if(!isnil "_Tgrp") then
+		if(!isNil "_Tgrp") then
 		{
 			_grps pushBack _Tgrp;
 		};
-	} foreach _grpstemp;
+	} forEach _grpstemp;
 };
 
 // ====================================================================================
@@ -101,7 +101,7 @@ else
 sleep 10;
 
 if (count _grps == 0) exitWith {
-	player GlobalChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): No groups found, _grpstemp = %1, _grps = %2",_grpstemp,_grps];
+	player globalChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): No groups found, _grpstemp = %1, _grps = %2",_grpstemp,_grps];
 };
 
 // ====================================================================================
@@ -136,7 +136,7 @@ while {true} do
 		_remaining = _remaining + _alive;
 	} forEach _grps;
 
-// DEBUG
+    // DEBUG
 	if (f_param_debugMode == 1) then
 	{
 		player sideChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): _remaining = %1",_remaining];
@@ -160,4 +160,4 @@ if (_end isEqualType {}) exitWith {
 	_end remoteExec ["bis_fnc_spawn", 0];
 };
 
-player GlobalChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];
+player globalChat format ["DEBUG (f\casualtiesCap\f_CasualtiesCapCheck.sqf): Ending didn't fire, should either be code or scalar. _end = %1, typeName _end: %2",_end,typeName _end];
