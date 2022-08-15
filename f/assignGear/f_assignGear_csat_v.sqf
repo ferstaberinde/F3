@@ -97,7 +97,6 @@
 	    _unit addMagazineCargoGlobal [_smokegrenadegreen,2];
 	    _unit addMagazineCargoGlobal [_chemgreen,4];
 	    _unit addItemCargoGlobal [_firstaid,2];
-	    _unit addBackpackCargoGlobal ["B_Parachute",2];
 	    _unit addItemCargoGlobal ["Toolkit",1];
 	};
 
@@ -123,7 +122,6 @@
 		_unit addMagazineCargoGlobal [_chemgreen,4];
 		_unit addBackpackCargoGlobal [_bag,2];
 		_unit addItemCargoGlobal [_firstaid,4];
-		_unit addBackpackCargoGlobal ["B_Parachute",2];
 		_unit addItemCargoGlobal ["Toolkit",1];
 	};
 
@@ -150,7 +148,6 @@
 		_unit addMagazineCargoGlobal [_chemgreen,4];
 		_unit addBackpackCargoGlobal [_bag,4];
 		_unit addItemCargoGlobal [_firstaid,6];
-		_unit addBackpackCargoGlobal ["B_Parachute",4];
 		_unit addItemCargoGlobal ["Toolkit",1];
 	};
 
