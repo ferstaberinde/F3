@@ -121,3 +121,4 @@ _vehicle addAction [
     "",
     "(driver _target == _this) && {!brakesDisabled _target}"
 ];
+_vehicle setVariable ["fcs_hasDriverAction",true];
