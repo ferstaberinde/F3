@@ -167,8 +167,10 @@ f_var_viewDistance_crewOnly = true;
 
 // F3 - Commander's Override and FCS failure
 // Credits and documentation: https://github.com/folkarps/F3/wiki
+// Pass false as a second parameter to only add the brake override action and not the rest of the FCS, for vehicles that don't plausibly have hunter-killer systems or advanced FCS but benefit from better brake control
 
 // [vehicleName] call f_fnc_fcsInit;
+// [vehicleName,false] call f_fnc_fcsInit;
 // { _x call f_fnc_fcsInit; } forEach [vehicle1,vehicle2,vehicle3];
 
 // ====================================================================================
