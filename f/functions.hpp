@@ -137,5 +137,6 @@ class F // Defines the "owner"
 		class fcsFailure{};
 		class fcsPersistentEffects{};
 		class fcsLocalWarning{};
+		class fcsBriefing{};
 	};
 };

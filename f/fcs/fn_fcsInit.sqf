@@ -33,6 +33,11 @@ if !(_vehicle isKindOf "LandVehicle") exitWith { diag_log "FCS: tried to run on 
 	
 if (_vehicle getVariable ["fcs_hasEH",false]) exitWith { diag_log "FCS: tried to run on something that already has FCS set up"};
 
+// If the FCS briefing tab hasn't been added already, add it.
+if (isNil "fcs_briefingDone") then {
+	[] call f_fnc_fcsBriefing;
+};
+
 // Only do this part in the default mode. If in the alternate mode, skip this and only add the driver action.
 if (_mode) then {
 	// Commander's override action
