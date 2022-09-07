@@ -132,6 +132,7 @@ class F // Defines the "owner"
 	class radio
 	{
 		file = "f\radio";
+		class radioChannels{};
 		class radioAddHandlers {};
 		class radioCheckChannels {};
 	};

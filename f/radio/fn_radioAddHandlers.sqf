@@ -3,7 +3,7 @@
 
 /* ========================
 This function adds local event handlers to the player which grant radio channels when picking up a backpack or entering a vehicle. It also makes an initial check to see what they've got to begin with.
-It's activated by f\radio\f_radioChannels.sqf.
+It's activated by f\radio\fn_radioChannels.sqf.
 =========================== */
 
 // Wait for player to be properly initialised
