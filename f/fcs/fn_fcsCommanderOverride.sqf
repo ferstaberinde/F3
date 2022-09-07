@@ -17,8 +17,8 @@ if (isNull cursorObject) then {
 	// Display a HUD indicator for the gunner
 	["TC OVERRIDE",2] remoteExec ["f_fnc_fcsLocalWarning",gunner _vehicle];
 	// Handle cooldown on override
-	_vehicle setVariable ["fcsCommanderOverride_cooldown",true,true];
+	_vehicle setVariable ["f3_fcsCommanderOverride_cooldown",true,true];
 	sleep 4;
 	[_vehicle,[objNull,_vehicle unitTurret (gunner _vehicle),true]] remoteExec ["lockCameraTo",gunner _vehicle];
-	_vehicle setVariable ["fcsCommanderOverride_cooldown",false,true];
+	_vehicle setVariable ["f3_fcsCommanderOverride_cooldown",false,true];
 };

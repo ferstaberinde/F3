@@ -39,7 +39,7 @@ params ["_target","_projectile","_isDirect"];
 	// Turns off night vision though
 	[_target,[false,[0]]] remoteExec ["enableDirectionStabilization",0,_target];
 	_target disableNVGEquipment true;
-	_target setVariable ["fcs_failure",true,true];
+	_target setVariable ["f3_fcs_failure",true,true];
 	
 	// Spawn ongoing stuff that affects the vehicle until repaired
 	[_target] spawn f_fnc_fcsPersistentEffects;

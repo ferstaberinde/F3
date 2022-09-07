@@ -31,4 +31,4 @@ The FCS can be repaired by a player with engineering training (for example, an F
 "]];
 
 // Set a variable so this won't be generated again by subsequent inits
-fcs_briefingDone = true;
+f3_fcs_briefingDone = true;

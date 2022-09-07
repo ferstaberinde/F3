@@ -31,10 +31,10 @@ params ["_vehicle",["_mode",true]];
 
 if !(_vehicle isKindOf "LandVehicle") exitWith { diag_log "FCS: tried to run on something that isn't a vehicle" };
 	
-if (_vehicle getVariable ["fcs_hasEH",false]) exitWith { diag_log "FCS: tried to run on something that already has FCS set up"};
+if (_vehicle getVariable ["f3_fcs_hasEH",false]) exitWith { diag_log "FCS: tried to run on something that already has FCS set up"};
 
 // If the FCS briefing tab hasn't been added already, add it.
-if (isNil "fcs_briefingDone") then {
+if (isNil "f3_fcs_briefingDone") then {
 	[] call f_fnc_fcsBriefing;
 };
 
@@ -53,7 +53,7 @@ if (_mode) then {
 		false,	
 		true,	
 		"",	
-		"(_this == commander _target) && {!(isNull gunner _target) && !(_target getVariable [""fcsCommanderOverride_cooldown"",false]) && !(_target getVariable [""fcs_failure"",false])}", 
+		"(_this == commander _target) && {!(isNull gunner _target) && !(_target getVariable [""f3_fcsCommanderOverride_cooldown"",false]) && !(_target getVariable [""f3_fcs_failure"",false])}", 
 		0,		
 		false,	
 		"",	
@@ -77,13 +77,13 @@ if (_mode) then {
 		"Reset Fire Control System", // Title
 		"\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\repair_ca.paa", // Idle icon
 		"\a3\ui_f_oldman\data\IGUI\Cfg\holdactions\repair_ca.paa", // Progress icon
-		"(_target getVariable [""fcs_failure"",false]) && (gunner _target == _this) && (_this getUnitTrait ""engineer"")", // Condition to show
-		"(_target getVariable [""fcs_failure"",false]) && (gunner _target == _this) && (_this getUnitTrait ""engineer"")", // Condition to progress
+		"(_target getVariable [""f3_fcs_failure"",false]) && (gunner _target == _this) && (_this getUnitTrait ""engineer"")", // Condition to show
+		"(_target getVariable [""f3_fcs_failure"",false]) && (gunner _target == _this) && (_this getUnitTrait ""engineer"")", // Condition to progress
 		{}, // Code on start
 		{}, // Code on tick
 		{ 
 			params ["_target", "_caller", "_actionId", "_arguments"];
-			_target setVariable ["fcs_failure",false,true];
+			_target setVariable ["f3_fcs_failure",false,true];
 			[_target,[false,[0]]] remoteExec ["enableDirectionStabilization",0,_target];
 			_target disableNVGEquipment false;
 		}, // Code on completed
@@ -106,11 +106,11 @@ if (_mode) then {
 		false, // Show window
 		true, // Hide on use
 		"gunElevAuto", // Shortcut
-		"(_this == gunner _target) && {_target getVariable [""fcs_failure"",false]}" // Condition
+		"(_this == gunner _target) && {_target getVariable [""f3_fcs_failure"",false]}" // Condition
 	];
 };
 
-if (_vehicle getVariable ["fcs_hasDriverAction",false]) exitWith { diag_log "FCS: tried to add driver action on something that already has it"};
+if (_vehicle getVariable ["f3_fcs_hasDriverAction",false]) exitWith { diag_log "FCS: tried to add driver action on something that already has it"};
 
 // Not FCS but I'm putting it in here
 _vehicle addAction [
@@ -126,4 +126,4 @@ _vehicle addAction [
     "",
     "(driver _target == _this) && {!brakesDisabled _target}"
 ];
-_vehicle setVariable ["fcs_hasDriverAction",true];
+_vehicle setVariable ["f3_fcs_hasDriverAction",true];
