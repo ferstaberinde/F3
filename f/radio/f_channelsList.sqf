@@ -177,7 +177,8 @@ _channelList7 = [
 // Channel 8 (default: NATO Woodland)
 _channelName8 = "LR Channel 8";
 _channelColour8 = [0.1,0.5,1,1];
-_channelList8 = "B_RadioBag_01_wdl_F",
+_channelList8 = [
+	"B_RadioBag_01_wdl_F",
 	"vehNATO_COV",
 	"vehNATO_IFV1",
 	"vehNATO_IFV2",
