@@ -17,7 +17,7 @@ Note: this briefing tab will appear even if the vehicles in this mission are onl
 <br/>
 The enhanced FCS allows the commander to automatically point the main gun at a target of their choosing. When the commander selects the Commander's Override from the action menu, the main gun will automatically traverse and elevate until it is pointing at the centre of the targeted object.
 <br/>
-The commander must be aiming directly at an object to activate the override. Open ground or sky won't work. There must also be a gunner present for the override to work.
+The commander must be aiming directly at an object to activate the override. Open ground or sky won't work. There must also be a gunner present for the override to work. The override will engage for a maximum of 4 seconds before releasing control.
 <br/><br/>
 <font size='18'>DRIVER'S OVERRIDE</font>
 <br/>
