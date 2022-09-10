@@ -10,7 +10,7 @@ params ["_target","_projectile","_isDirect"];
 	private _warheadType = "";
 	private _randomNumber = 0;
 	
-	if (_target getVariable ["fcs_failure",false]) exitWith { 
+	if (_target getVariable ["f3_fcs_failure",false]) exitWith { 
 		// diag_log "FCS: target already has an FCS failure" 
 	};
 
