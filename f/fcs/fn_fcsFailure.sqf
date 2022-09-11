@@ -33,12 +33,9 @@ params ["_target","_projectile","_isDirect"];
 		// diag_log "FCS: projectile not randomly selected" 
 	};
 
-	// Hit turns off the stabiliser and sets an appropriate variable on the vehicle
-	// EXCEPT IT DOESN'T TURN OFF THE STABILISER BECAUSE THAT'S NOT WHAT THE COMMAND DOES
-	// GOD DAMN IT BI
-	// Turns off night vision though
-	[_target,[false,[0]]] remoteExec ["enableDirectionStabilization",0,_target];
+	// Hit turns off the NV and TI and sets an appropriate variable on the vehicle. Hopefully later it will also turn off stabilisation (BI blocked)
 	_target disableNVGEquipment true;
+	_target disableTIEquipment true;
 	_target setVariable ["f_var_fcs_failure",true,true];
 	
 	// Spawn ongoing stuff that affects the vehicle until repaired

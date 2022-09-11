@@ -79,9 +79,13 @@ _vehicle setVariable ["fcs_hasEH",true];
 	{}, // Code on tick
 	{ 
 		params ["_target", "_caller", "_actionId", "_arguments"];
+		// Clear failure states
 		_target setVariable ["f_var_fcs_failure",false,true];
-		[_target,[false,[0]]] remoteExec ["enableDirectionStabilization",0,_target];
 		_target disableNVGEquipment false;
+		// Re-enable TI unless F3 says we shouldn't
+		if !(_target getVariable ["f_var_TIDisabled",false]) then {
+			_target disableTIEquipment false;
+		};
 	}, // Code on completed
 	{}, // Code on interrupt
 	[], // Arguments to pass
