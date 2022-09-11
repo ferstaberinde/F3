@@ -139,4 +139,9 @@ class F // Defines the "owner"
 		class fcsLocalWarning{};
 		class fcsBriefing{};
 	};
+	class brakeOverride
+	{
+		file = "f\brakeOverride";
+		class brakeOverride{};
+	};
 };

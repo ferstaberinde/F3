@@ -10,18 +10,12 @@ if (!hasInterface) exitWith {}; // Exit if not a player.
 _fcs = player createDiaryRecord ["diary", ["F3 Enhanced FCS","
 <br/>
 Some vehicles in this mission are fitted with enhanced fire control systems. This adds some extra functionality relating to gunnery and targeting.
-<br/>
-Note: this briefing tab will appear even if the vehicles in this mission are only equipped with the Driver's Override function.
 <br/><br/>
 <font size='18'>COMMANDER'S OVERRIDE</font>
 <br/>
 The enhanced FCS allows the commander to automatically point the main gun at a target of their choosing. When the commander selects the Commander's Override from the action menu, the main gun will automatically traverse and elevate until it is pointing at the centre of the targeted object.
 <br/>
 The commander must be aiming directly at an object to activate the override. Open ground or sky won't work. There must also be a gunner present for the override to work. The override will engage for a maximum of 4 seconds before releasing control.
-<br/><br/>
-<font size='18'>DRIVER'S OVERRIDE</font>
-<br/>
-The driver can select the Brake Override from the action menu to disable the vehicle's automatic brakes. This allows the vehicle to roll at low speeds or on hills without automatically stopping. The auto-brakes can be re-engaged by manually braking.
 <br/><br/>
 <font size='18'>FCS DAMAGE</font>
 <br/>
