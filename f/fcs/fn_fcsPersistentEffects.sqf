@@ -7,7 +7,7 @@
 params ["_target"];
 
 // It's all a big loop
-while {(_target getVariable ["f3_fcs_failure",false]) && (alive _target)} do {
+while {(_target getVariable ["f_var_fcs_failure",false]) && (alive _target)} do {
 
 	// Check whether there is a gunner
 	if !(isNull (gunner _target)) then {

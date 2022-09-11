@@ -10,7 +10,7 @@ params ["_target","_projectile","_isDirect"];
 	private _warheadType = "";
 	private _randomNumber = 0;
 	
-	if (_target getVariable ["f3_fcs_failure",false]) exitWith { 
+	if (_target getVariable ["f_var_fcs_failure",false]) exitWith { 
 		// diag_log "FCS: target already has an FCS failure" 
 	};
 
@@ -39,7 +39,7 @@ params ["_target","_projectile","_isDirect"];
 	// Turns off night vision though
 	[_target,[false,[0]]] remoteExec ["enableDirectionStabilization",0,_target];
 	_target disableNVGEquipment true;
-	_target setVariable ["f3_fcs_failure",true,true];
+	_target setVariable ["f_var_fcs_failure",true,true];
 	
 	// Spawn ongoing stuff that affects the vehicle until repaired
 	[_target] spawn f_fnc_fcsPersistentEffects;
