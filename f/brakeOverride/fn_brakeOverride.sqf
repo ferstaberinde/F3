@@ -12,7 +12,7 @@ player addAction [
     "Disable automatic brakes (brake to re-engage)",
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
-        [_target,true] remoteExec ["disableBrakes",_target];
+        [vehicle _target,true] remoteExec ["disableBrakes",vehicle _target];
     },
     "",
     10,
