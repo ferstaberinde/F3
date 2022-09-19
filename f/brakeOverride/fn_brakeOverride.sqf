@@ -19,7 +19,7 @@ player addAction [
     false,
     true,
     "",
-    "(driver _this == _this) && {(!brakesDisabled vehicle _this) && ((vehicle _this) isKindOf 'LandVehicle') && !((vehicle _this) isKindOf 'StaticWeapon')}"
+    "(driver (vehicle _this) == _this) && {(!brakesDisabled vehicle _this) && ((vehicle _this) isKindOf 'LandVehicle') && !((vehicle _this) isKindOf 'StaticWeapon')}"
 ];
 
 // Add the variable to prove it's already done
