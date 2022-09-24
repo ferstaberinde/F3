@@ -25,7 +25,7 @@
 // Doesn't need to run on DS or HC
 if !(hasInterface) exitWith {};
 
-params ["_vehicle",["_mode",true]];
+params ["_vehicle"];
 
 if !(_vehicle isKindOf "LandVehicle") exitWith { diag_log "FCS: tried to run on something that isn't a vehicle" };
 	
