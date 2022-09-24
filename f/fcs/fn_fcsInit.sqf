@@ -64,7 +64,7 @@ _vehicle addEventHandler ["HitPart",{
 		[_target,_projectile,_isDirect] call f_fnc_fcsFailure;
 	}];
 	
-_vehicle setVariable ["fcs_hasEH",true];
+_vehicle setVariable ["f_var_fcs_hasEH",true];
 
 // Hold action to repair FCS failure
 // Players with repair trait in the gunner's seat of a vehicle with failed stabiliser can repair it
