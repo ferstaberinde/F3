@@ -9,9 +9,8 @@
   * Automatic Body Removal
   * Safe Start default set to 1 minute
   * Set AI Skill for all factions - Missionmakers can remove the cases they do not need
-  * Pre-configured endings 1 -3 with generic titles and texts
  * Numerous feature updates and improvements. See https://github.com/folkarps/F3 for update history.
 
 ## Versions ##
-* F3 3-5-6
+* F3 3-5-7
 * ws_fnc 05/07/2015 (with FA improvements)
