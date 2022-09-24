@@ -14,6 +14,9 @@ INVENTORY (classname) items, such as backpacks or equipment, give the player tal
 VEHICLES (classname or variable name) give the player receive access when they are inside, and talk access when they are the driver.
 The channel eligibility array is not case-sensitive.
 
+You can also tag a specific unit or vehicle for access to specific channels by setting a variable on them:
+_unit setVariable ["f_var_radioChannelsObjectSpecific",[1,2,3],true];
+
 There is a maximum of 10 channels at any time. Add in these radios for GM and CSLA missions:
 
 		"US85_bpPRC77"
