@@ -14,6 +14,12 @@ if (isServer) then {
 		f_var_conditions_params = [date] + _weatherParams;
 	};
 
+	// COLD BREATH
+	// Cold breath particle spawner for if it's snowing, or in low ambient temperatures
+	if (f_param_weather == 9 || f_param_weather == 10 || (ambientTemperature select 0) < 8) then {
+		remoteExec ["f_fnc_coldBreath",0,true];
+	};
+
 	// Fix for date sometimes returning wrong minute
 	f_var_conditions_params#0 set [3,floor (dayTime + (.5/60))];
 	f_var_conditions_params#0 set [4,floor ((dayTime%1)*60+.5)];

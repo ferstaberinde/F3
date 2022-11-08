@@ -25,14 +25,10 @@ if ( _timeOfDay == 8 ) exitWith {};
 
 // ====================================================================================
 
-// SET DEFAULT VALUES
-// The default values that together form the in-game date are set.
+// GET DEFAULT VALUES
+// Grab the mission's current date and time.
 
-_year = 2030;
-_month = 6;
-_day = 16;
-_hour = 0;
-_minute = 0;
+date params ["_year", "_month", "_day", "_hour", "_minute"];
 
 // ====================================================================================
 

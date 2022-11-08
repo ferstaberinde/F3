@@ -123,26 +123,14 @@
         <Spanish> Tormenta </Spanish>
         <French> Averse </French>
       </Key>
-      <Key ID="STR_f_param_weather_Option11">
-        <English> Use mission setting </English>
-      </Key>
       <Key ID="STR_f_param_weather_Option9">
-        <English> Light Fog </English>
-        <Czech> Slabá mlha </Czech>
-        <German> Leichter Nebel </German>
-        <Polish> Lekka Mgla </Polish>
-        <Russian> Туман </Russian>
-        <Spanish> Bruma </Spanish>
-        <French> Brume </French>
+        <English> Light Snow</English>
       </Key>
       <Key ID="STR_f_param_weather_Option10">
-        <English> Heavy Fog </English>
-        <Czech> Hustá mlha </Czech>
-        <German> Dichter Nebel </German>
-        <Polish> Ciezka Mgla </Polish>
-        <Russian> Густой туман </Russian>
-        <Spanish> Niebla </Spanish>
-        <French> Brouillard </French>
+        <English> Heavy Snow</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option11">
+        <English> Use mission setting </English>
       </Key>
       <Key ID="STR_f_param_fog">
         <English> Override Fog </English>
@@ -152,9 +140,21 @@
       </Key>
       <Key ID="STR_f_param_fog_Option1">
         <English> Light Fog </English>
+        <Czech> Slabá mlha </Czech>
+        <German> Leichter Nebel </German>
+        <Polish> Lekka Mgla </Polish>
+        <Russian> Туман </Russian>
+        <Spanish> Bruma </Spanish>
+        <French> Brume </French>
       </Key>
       <Key ID="STR_f_param_fog_Option2">
         <English> Heavy Fog </English>
+        <Czech> Hustá mlha </Czech>
+        <German> Dichter Nebel </German>
+        <Polish> Ciezka Mgla </Polish>
+        <Russian> Густой туман </Russian>
+        <Spanish> Niebla </Spanish>
+        <French> Brouillard </French>
       </Key>
       <Key ID="STR_f_param_fog_Option4">
         <English> Use mission setting </English>
