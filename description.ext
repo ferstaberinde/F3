@@ -209,6 +209,14 @@ class Params
 		default = 8;
 	};
 
+	class f_param_timeOfYear
+	{
+		title = "$STR_f_param_timeOfYear";
+		values[] = {0,1,2,3,4};
+		texts[] = {$STR_f_param_timeOfYear_Option0,$STR_f_param_timeOfYear_Option1,$STR_f_param_timeOfYear_Option2,$STR_f_param_timeOfYear_Option3,$STR_f_param_timeOfYear_Option4};
+		default = 4;
+	};
+
 // ============================================================================================
 
 // F3 - AI Skill Selector

@@ -2,8 +2,6 @@
 // Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
-if !(hasInterface) exitWith {};
-
 {
    _x spawn {
      while {alive _this} do {

@@ -17,7 +17,7 @@
       </Key>
       <Key ID="STR_f_param_timeOfDay">
         <English> Time of Day </English>
-	<French> Heure de la journée </French>
+	      <French> Heure de la journée </French>
       </Key>
       <Key ID="STR_f_param_timeOfDay_Option0">
         <English> Dawn </English>
@@ -84,6 +84,24 @@
         <French> Nuit </French>
       </Key>
       <Key ID="STR_f_param_timeOfDay_Option8">
+        <English> Use mission setting </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear">
+        <English> Time of Year </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear_Option0">
+        <English> Spring </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear_Option1">
+        <English> Summer </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear_Option2">
+        <English> Autumn </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear_Option3">
+        <English> Winter </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear_Option4">
         <English> Use mission setting </English>
       </Key>
       <Key ID="STR_f_param_weather">
