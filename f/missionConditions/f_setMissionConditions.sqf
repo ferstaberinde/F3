@@ -57,6 +57,6 @@ if (hasInterface) then {
 	// COLD BREATH
 	// Cold breath particle spawner for if it's snowing, or in low ambient temperatures
 	if (rainParams select 15 || (ambientTemperature select 0) < 6) then {
-		[] execVM "f\missionConditions\f_coldBreath.sqf";
+		[] spawn f_fnc_coldBreath;
 	};
 };
