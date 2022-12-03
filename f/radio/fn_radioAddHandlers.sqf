@@ -59,6 +59,10 @@ player addEventHandler ["seatSwitchedMan", {
 
 // Just to be sure...
 2 enableChannel false;
+// Force enable direct chat, mostly in case they're a reslot - F3 Spectator turns off direct chat
+if (typeOf player != "VirtualSpectator_F") then {
+	5 enableChannel true;
+};
 
 // Set a variable on the player to prove they've got handlers
 player setVariable ["f_var_radioHandlersAdded",true];
