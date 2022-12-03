@@ -228,6 +228,8 @@ f_var_viewDistance_crewOnly = true;
 // You can also tag a specific unit or vehicle for access to specific channels by setting a variable on them:
 // _unit setVariable ["f_var_radioChannelsObjectSpecific",[1,2,3],true];
 
+// This component is enabled by default and it's recommended to leave it enabled. The default configuration provides an in-game CC-like function and prevents issues with reslotted players and the Direct channel.
+
 [false] spawn f_fnc_radioChannels;
 
 // If you are creating other custom channels, you must wait for F3 Radio Channels to finish to avoid conflicts:
