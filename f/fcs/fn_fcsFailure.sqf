@@ -20,7 +20,7 @@ params ["_target","_projectile","_isDirect"];
 		//diag_log "FCS: hit by something other than a weapon" 
 	};
 	_warheadType = (configProperties [configFile >> "CfgAmmo" >> _projectileClass >> "warheadName"]) select 0;
-	if !(_warheadType in ["AP","HEAT"]) exitWith { 
+	if !(_warheadType in ["AP","HEAT","TandemHEAT"]) exitWith { 
 		// diag_log "FCS: projectile not HEAT or AP" 
 	};
 	if !(_isDirect) exitWith { 
