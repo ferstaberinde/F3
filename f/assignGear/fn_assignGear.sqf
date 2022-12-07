@@ -295,7 +295,7 @@ if (isNil "_carbine") then { //_carbine should exist unless no faction has been 
 	player globalchat format ["DEBUG (assignGear.sqf): Faction %1 is not defined.",_faction];
 } else {
  	if (f_param_debugMode == 1) then	{
-		player sideChat format ["DEBUG (assignGear.sqf): Gear for %1: %1 slot selected.",_unit,_faction,_typeofUnit];
+		player sideChat format ["DEBUG (assignGear.sqf): Gear for %1: faction %2, role %3",_unit,_faction,_typeofUnit];
 	};
 };
 
