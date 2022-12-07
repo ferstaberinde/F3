@@ -360,7 +360,6 @@ switch (_typeofUnit) do
 	    _unit addMagazineCargoGlobal [_chemred,4];
 	    _unit addMagazineCargoGlobal [_chemyellow,4];
 		_unit addItemCargoGlobal [_firstaid,4];
-	    _unit addBackpackCargoGlobal ["B_Parachute",2];
 		_unit addItemCargoGlobal ["Toolkit",1];
 		_unit addItemCargoGlobal [_firstaid,4];
 		_unit addItemCargoGlobal [_medkit,1];
