@@ -39,6 +39,7 @@ class F // Defines the "owner"
 		class SetFog{};
 		class SetWeather{};
 		class SetWind{};
+		class ColdBreath{};
 	};
 	class cache
 	{

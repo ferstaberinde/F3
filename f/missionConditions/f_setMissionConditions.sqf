@@ -28,7 +28,7 @@ if (isServer) then {
 		f_var_conditions_params set [5,_windParams];
 	};
 
-	private _dateParams = [f_param_timeOfDay] call f_fnc_setTime;
+	private _dateParams = [f_param_timeOfDay,f_param_timeOfYear] call f_fnc_setTime;
 	if (!isNil "_dateParams") then {
 		f_var_conditions_params set [0,_dateParams];
 	};
@@ -41,6 +41,22 @@ if (isServer) then {
 
 // ====================================================================================
 
-// GENERATE CONDITION NOTES
-// Adds a briefing entry that summarizes the mission conditions
-[] execVM "f\missionConditions\f_conditionNotes.sqf";
+
+// RUN CONDITIONS BRIEFING AND COLD BREATH ON CLIENTS ONLY
+if (hasInterface) then {
+	// Wait until server publishes the mission conditions
+	waitUntil {!isNil "f_var_conditions_params"};
+
+	// GENERATE CONDITION NOTES
+	// Adds a briefing entry that summarizes the mission conditions
+	[] execVM "f\missionConditions\f_conditionNotes.sqf";
+
+	// Wait until the mission has started - ambient temperature takes a tick to update
+	sleep 0.1;
+
+	// COLD BREATH
+	// Cold breath particle spawner for if it's snowing, or in low ambient temperatures
+	if (rainParams select 15 || (ambientTemperature select 0) < 6) then {
+		[] spawn f_fnc_coldBreath;
+	};
+};
