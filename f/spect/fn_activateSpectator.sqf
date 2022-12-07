@@ -17,3 +17,6 @@ _cameraUnit enableSimulation false;
 selectPlayer _cameraUnit;
 
 ["Initialize", [player, [], true, true, true, false, true, true, true, true]] call BIS_fnc_EGSpectator;
+
+// Disable direct chat to prevent ghosts interacting with the living
+5 enableChannel false;
