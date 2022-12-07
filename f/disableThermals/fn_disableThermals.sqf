@@ -33,6 +33,7 @@ if (isServer) then {
 			// This is an allowed vehicle, ignore it
 		} else {
 			_vehicleToCheck disableTIEquipment true;
+			_vehicleToCheck setVariable ["f_var_TIDisabled",true,true];
 		}
 	} foreach vehicles;
 };
@@ -49,6 +50,7 @@ if (hasinterface && isNil "f_eh_disableThermals") then {
 
 		if ({_assembled isKindOf _x} count f_var_disableThermals_allowedTypes == 0) then {
 			_assembled disableTIEquipment true;
+			_vehicleToCheck setVariable ["f_var_TIDisabled",true,true];
 		}
 	}];
 };
