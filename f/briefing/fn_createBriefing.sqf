@@ -54,7 +54,7 @@ if (f_param_debugMode == 1) then
 
 // BLUFOR > NATO
 #if __has_include("f_briefing_nato.sqf")
-	if (_unitfaction in ["blu_f","blu_t_f","blu_w_f","nato","natowoodland","natopacific"]) exitwith {
+	if (_unitfaction in (["blu_f","blu_t_f","blu_w_f","nato","natowoodland","natopacific"] apply {toLower _x})) exitwith {
 		#include "f_briefing_nato.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -62,7 +62,7 @@ if (f_param_debugMode == 1) then
 
 // FIA
 #if __has_include("f_briefing_fia.sqf")
-	if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f","fia"]) exitwith {
+	if (_unitfaction in (["blu_g_f","ind_g_f","opf_g_f","fia"] apply {toLower _x})) exitwith {
 		#include "f_briefing_fia.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -70,7 +70,7 @@ if (f_param_debugMode == 1) then
 
 // BLUFOR > GENDARMERIE
 #if __has_include("f_briefing_gendarmerie.sqf")
-	if (_unitfaction in ["blu_gen_f"]) exitwith {
+	if (_unitfaction in (["blu_gen_f"] apply {toLower _x})) exitwith {
 		#include "f_briefing_gendarmerie.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -78,7 +78,7 @@ if (f_param_debugMode == 1) then
 
 // OPFOR > CSAT
 #if __has_include("f_briefing_csat.sqf")
-	if (_unitfaction in ["opf_f","opf_t_f","csat","csatpacific"]) exitwith {
+	if (_unitfaction in (["opf_f","opf_t_f","csat","csatpacific"] apply {toLower _x})) exitwith {
 		#include "f_briefing_csat.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -86,7 +86,7 @@ if (f_param_debugMode == 1) then
 
 // OPFOR > Spetsnaz
 #if __has_include("f_briefing_spetsnaz.sqf")
-	if (_unitfaction in ["opf_r_f","spetsnaz"]) exitwith {
+	if (_unitfaction in (["opf_r_f","spetsnaz"] apply {toLower _x})) exitwith {
 		#include "f_briefing_spetsnaz.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -94,7 +94,7 @@ if (f_param_debugMode == 1) then
 
 // INDEPENDENT > AAF
 #if __has_include("f_briefing_aaf.sqf")
-	if (_unitfaction in ["ind_f","aaf"]) exitwith {
+	if (_unitfaction in (["ind_f","aaf"] apply {toLower _x})) exitwith {
 		#include "f_briefing_aaf.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -102,7 +102,7 @@ if (f_param_debugMode == 1) then
 
 // INDEPENDENT > LDF
 #if __has_include("f_briefing_ldf.sqf")
-	if (_unitfaction in ["ind_e_f","ldf"]) exitwith {
+	if (_unitfaction in (["ind_e_f","ldf"] apply {toLower _x})) exitwith {
 		#include "f_briefing_ldf.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -110,7 +110,7 @@ if (f_param_debugMode == 1) then
 
 // INDEPENDENT > SYNDIKAT
 #if __has_include("f_briefing_syndikat.sqf")
-	if (_unitfaction in ["ind_c_f","syndikat"]) exitwith {
+	if (_unitfaction in (["ind_c_f","syndikat"] apply {toLower _x})) exitwith {
 		#include "f_briefing_syndikat.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -118,7 +118,7 @@ if (f_param_debugMode == 1) then
 
 // INDEPENDENT > NPR (Looters)
 #if __has_include("f_briefing_npr.sqf")
-	if (_unitfaction in ["ind_l_f","npr"]) exitwith {
+	if (_unitfaction in (["ind_l_f","npr"] apply {toLower _x})) exitwith {
 		#include "f_briefing_npr.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -127,7 +127,7 @@ if (f_param_debugMode == 1) then
 
 // BLUFOR > CTRG
 #if __has_include("f_briefing_ctrg.sqf")
-	if (_unitfaction in ["blu_ctrg_f","ctrg"]) exitwith {
+	if (_unitfaction in (["blu_ctrg_f","ctrg"] apply {toLower _x})) exitwith {
 		#include "f_briefing_ctrg.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -135,7 +135,7 @@ if (f_param_debugMode == 1) then
 
 // CIVILIAN and IDAP
 #if __has_include("f_briefing_civ.sqf")
-	if (_unitfaction in ["civ_f", "civ_idap_f"]) exitwith {
+	if (_unitfaction in (["civ_f", "civ_idap_f"] apply {toLower _x})) exitwith {
 		#include "f_briefing_civ.sqf"
 		[_unitfaction] call _fnc_debug;
 	};
@@ -143,7 +143,7 @@ if (f_param_debugMode == 1) then
 
 // VIRTUAL FACTION > 3IFB
 #if __has_include("f_briefing_3ifb.sqf")
-	if (_unitfaction in ["3ifb"]) exitwith {
+	if (_unitfaction in (["3ifb"] apply {toLower _x})) exitwith {
 		#include "f_briefing_3ifb.sqf"
 		[_unitfaction] call _fnc_debug;
 	};

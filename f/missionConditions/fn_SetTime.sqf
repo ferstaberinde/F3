@@ -8,7 +8,7 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time","_date"];
+private ["_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time","_date","_utmZone","_hemisphere"];
 
 // ====================================================================================
 
@@ -16,23 +16,76 @@ private ["_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
 params [
-	["_timeOfDay", 8, [0]]
+	["_timeOfDay", 8, [0]],
+	["_timeOfYear", 4, [0]]
 ];
 
 // Exit when using mission settings
-if ( _timeOfDay == 8 ) exitWith {};
+if (_timeOfDay == 8 && _timeOfYear == 4) exitWith {};
 
 
 // ====================================================================================
 
-// SET DEFAULT VALUES
-// The default values that together form the in-game date are set.
+// GET DEFAULT VALUES
+// Grab the mission's current date and time.
 
-_year = 2030;
-_month = 6;
-_day = 16;
-_hour = 0;
-_minute = 0;
+date params ["_year", "_month", "_day", "_hour", "_minute"];
+
+// ====================================================================================
+
+// GET HEMISPHERE SO WE CAN SET THE CORRECT MONTH FOR EACH SEASON
+_utmZone = ((getarray (configfile >> "cfgworlds" >> worldname >> "mapArea")) call bis_fnc_posDegToUTM) select 2;
+// If UTM is negative, we're in the southern hemisphere
+_hemisphere = (_utmZone < 0);
+
+// SELECT MISSION TIME OF YEAR
+// Using the value of _timeOfYear, we define new values for _month and _day. Values set based on in-game solstices/exquinoxes
+
+switch (_timeOfYear) do
+{
+// Spring
+	case 0:
+	{
+    if (_hemisphere) then {
+			_day = 21;
+			_month = 9;
+    } else {
+			_day = 23;
+			_month = 3;
+    };
+	};
+// Summer
+	case 1:
+	{
+		_day = 21;
+		if (_hemisphere) then {
+			_month = 12;
+		} else {
+			_month = 6;
+		};
+	};
+// Autumn
+	case 2:
+	{
+		if (_hemisphere) then {
+			_day = 23;
+			_month = 3;
+		} else {
+			_day = 21;
+			_month = 9;
+		};
+	};
+// Winter
+	case 3:
+	{
+		_day = 21;
+		if (_hemisphere) then {
+			_month = 6;
+		} else {
+			_month = 12;
+		};
+	};
+};
 
 // ====================================================================================
 

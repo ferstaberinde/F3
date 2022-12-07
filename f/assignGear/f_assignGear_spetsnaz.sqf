@@ -202,6 +202,7 @@ _bagmtrg = "I_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "I_Mortar_01_support_F";		// used by Mortar assistant gunner
 _baghsamg = "I_AA_01_weapon_F";				// used by Heavy SAM gunner
 _baghsamag = "I_HMG_01_support_F";			// used by Heavy SAM assistant gunner
+_bagRadio = "B_RadioBag_01_black_F";	// cosmetic, used by COs, DCs, and anybody who might possibly use CC in session.
 
 // ====================================================================================
 
@@ -243,7 +244,7 @@ _HATmag1 = "Vorona_HEAT";
 _HATmag2 = "Vorona_HE";
 
 // Sniper
-_SNrifle = "srifle_GM6_camo_F";
+_SNrifle = "srifle_GM6_F";
 _SNrifleMag = "5Rnd_127x108_Mag";
 
 // Engineer items
@@ -314,7 +315,7 @@ _crewRig = ["V_Chestrig_rgr"];
 _crewGlasses = [];
 
 // Ghillie
-_ghillieUniform = ["U_O_GhillieSuit"]; //DLC alternatives: ["U_O_FullGhillie_lsh","U_O_FullGhillie_ard","U_O_FullGhillie_sard"];
+_ghillieUniform = ["U_O_T_Sniper_F"]; //DLC alternatives: ["U_O_FullGhillie_lsh","U_O_FullGhillie_ard","U_O_FullGhillie_sard"];
 _ghillieHelmet = [];
 _ghillieRig = ["V_Chestrig_rgr"];
 _ghillieGlasses = [];

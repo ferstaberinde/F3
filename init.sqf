@@ -233,3 +233,20 @@ f_var_viewDistance_crewOnly = true;
 // [[UnitName1, "UnitClass1"]] spawn f_fnc_disableThermals;
 
 // ====================================================================================
+
+// F3 - Radio Channels
+// Credits and documentation: https://github.com/folkarps/F3/wiki
+// True to split channels by radio backpack type. Else one channel for all.
+// Optional second parameter (number): limit the channel count to this number. This frees up space for any other custom channels. Defaults to 10 (max) if not set, or 1 (minimum) if channels not split.
+// You can also tag a specific unit or vehicle for access to specific channels by setting a variable on them:
+// _unit setVariable ["f_var_radioChannelsObjectSpecific",[1,2,3],true];
+
+// This component is enabled by default and it's recommended to leave it enabled. The default configuration provides an in-game CC-like function and prevents issues with reslotted players and the Direct channel.
+
+[false] spawn f_fnc_radioChannels;
+
+// If you are creating other custom channels, you must wait for F3 Radio Channels to finish to avoid conflicts:
+//  waitUntil {(!isNil f_var_radioChannelsUnified)}
+
+// ====================================================================================
+

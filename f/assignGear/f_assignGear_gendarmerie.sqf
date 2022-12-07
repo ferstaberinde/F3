@@ -338,7 +338,7 @@ switch (_typeofUnit) do
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_smg, 2];
+		_unit addWeaponWithAttachmentsCargoGlobal [[_smg,"","","",[_smgmag,500],[],""],2];
 		_unit addMagazineCargoGlobal [_smgmag, 12];
 	    _unit addMagazineCargoGlobal [_chemgreen,4];
 	    _unit addMagazineCargoGlobal [_chemred,4];
@@ -354,7 +354,7 @@ switch (_typeofUnit) do
 	    clearMagazineCargoGlobal _unit;
 	    clearItemCargoGlobal _unit;
 	    clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_smg, 2];
+		_unit addWeaponWithAttachmentsCargoGlobal [[_smg,"","","",[_smgmag,500],[],""],2];
 	    _unit addMagazineCargoGlobal [_smgmag, 12];
 	    _unit addMagazineCargoGlobal [_chemgreen,4];
 	    _unit addMagazineCargoGlobal [_chemred,4];

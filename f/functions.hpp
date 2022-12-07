@@ -39,6 +39,7 @@ class F // Defines the "owner"
 		class SetFog{};
 		class SetWeather{};
 		class SetWind{};
+		class ColdBreath{};
 	};
 	class cache
 	{
@@ -143,5 +144,11 @@ class F // Defines the "owner"
 	{
 		file = "f\brakeOverride";
 		class brakeOverride{};
+	class radio
+	{
+		file = "f\radio";
+		class radioChannels{};
+		class radioAddHandlers {};
+		class radioCheckChannels {};
 	};
 };
