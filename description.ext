@@ -129,8 +129,8 @@ class CfgSounds
 {
 	sounds[] = {};
 	#if __has_include("f\skulls\f_skullsSounds.hpp")
-        #include "f\skulls\f_skullsSounds.hpp"
-    #endif
+		#include "f\skulls\f_skullsSounds.hpp"
+	#endif
 	// You can add custom sound classes after this line
 };
 
