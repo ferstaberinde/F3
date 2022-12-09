@@ -123,6 +123,19 @@ class cfgNotifications
 
 // ============================================================================================
 
+// F3 - Custom sounds configuration
+
+class CfgSounds
+{
+	sounds[] = {};
+	#if __has_include("f\skulls\f_skullsSounds.hpp")
+        #include "f\skulls\f_skullsSounds.hpp"
+    #endif
+	// You can add custom sound classes after this line
+};
+
+// ============================================================================================
+
 // F3 - Start of Params code blocks.
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
@@ -246,6 +259,19 @@ class Params
 		default = 2;
 	};
 
+// ============================================================================================
+
+// F3 - Special Effects Parameters
+// Credits and documentation: https://github.com/folkarps/F3/wiki
+
+	class f_param_gruntBirthdayParty
+	{
+		title = "Grunt Birthday Party";
+		values[] = {0,1,2};
+		texts[] = {"Off","Player deaths only","All"};
+		default = 0;
+	};
+	
 // ============================================================================================
 
 // F3 - Caching
