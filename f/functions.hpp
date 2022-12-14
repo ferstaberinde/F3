@@ -151,4 +151,10 @@ class F // Defines the "owner"
 		class radioAddHandlers {};
 		class radioCheckChannels {};
 	};
+	class skulls
+	{
+		file = "f\skulls";
+		class skullsInit{};
+		class gruntBirthdayParty{};
+	};
 };
