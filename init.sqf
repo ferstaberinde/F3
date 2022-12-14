@@ -180,6 +180,13 @@ f_var_viewDistance_crewOnly = true;
 
 // ====================================================================================
 
+// F3 - Skulls
+// Credits and documentation: https://github.com/folkarps/F3/wiki
+
+[] spawn f_fnc_skullsInit;
+
+// ====================================================================================
+
 // F3 - MapClick Teleport
 // Credits and documentation: https://github.com/folkarps/F3/wiki
 
