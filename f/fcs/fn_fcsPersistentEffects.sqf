@@ -21,12 +21,7 @@ while {(_target getVariable ["f_var_fcs_failure",false]) && (alive _target)} do 
 				if !(_x == "this") then {
 					_targetMuzzle = _x;
 				};
-				_zeroCheck = _currentGunner setWeaponZeroing [_targetWeapon,_targetMuzzle,1];
-				if !(_zeroCheck) then { 
-					diag_log format ["FCS: Weapon zeroing failure for %1",_targetWeapon]
-				} else { 
-					// diag_log format ["Zeroing set for %1",_targetWeapon]
-				};
+				[_currentGunner,[_targetWeapon,_targetMuzzle,1]] remoteExec ["setWeaponZeroing",_currentGunner];
 			} forEach _targetWeaponMuzzles;
 		} forEach (_target weaponsTurret [0]);
 		
