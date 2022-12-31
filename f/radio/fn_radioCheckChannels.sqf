@@ -6,6 +6,9 @@ This function checks what channels a player should have access to. It's called b
 =========================== */
 params ["_unit"];
 
+// Skip if the unit is an AI, so formerly-player AI units can't break the radio channels of players they're local to.
+if !(isPlayer _unit) exitWith {};
+
 _splitMode = f_var_radioSplitMode;
 
 // Initialise variables
