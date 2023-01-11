@@ -35,6 +35,7 @@ private _unitClasses = [
 	["_aar_"		,	"aar"	],
 	["_a_"			,	"aar"	],
 	["_lat_"		,	"rat"	],
+	["_lat2_"		,	"rat"	],
 	["_medic_"		,	"m"		],
 	["_gl_"			,	"gren"	],
 	["_exp_"		,	"eng"	],
