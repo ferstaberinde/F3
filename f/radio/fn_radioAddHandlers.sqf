@@ -57,6 +57,39 @@ player addEventHandler ["seatSwitchedMan", {
 	[_unit1] spawn f_fnc_radioCheckChannels; 
 }];
 
+// Players can manually toggle the radio of the vehicle they're in (for themselves only). This is persistent and per-vehicle. The unit's own channels (from items and variables) aren't affected.
+player addAction [
+	"Turn off vehicle radio",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+		private _radioOn = (vehicle _caller) getVariable ["f_var_radioIsOn",true];
+		(vehicle _caller) setVariable ["f_var_radioIsOn",!_radioOn];
+		[_caller] spawn f_fnc_radioCheckChannels;
+	},
+	nil,
+	0,
+	false,
+	true,
+	"",
+	"vehicle _this != _this && {vehicle _this getVariable ['f_var_radioIsOn',true]}"
+];
+
+player addAction [
+	"Turn on vehicle radio",
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+		private _radioOn = (vehicle _caller) getVariable ["f_var_radioIsOn",true];
+		(vehicle _caller) setVariable ["f_var_radioIsOn",!_radioOn];
+		[_caller] spawn f_fnc_radioCheckChannels;
+	},
+	nil,
+	0,
+	false,
+	true,
+	"",
+	"vehicle _this != _this && {!(vehicle _this getVariable ['f_var_radioIsOn',true])}"
+];
+
 // Just to be sure...
 2 enableChannel false;
 // Force enable direct chat, mostly in case they're a reslot - F3 Spectator turns off direct chat
