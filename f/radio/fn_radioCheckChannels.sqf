@@ -41,14 +41,14 @@ for "_i" from 1 to 2 do {
 			// Check for vehicles. Don't add send permissions unless they're the driver.
 			if ((toLower str vehicle _unit) in _channelObjects) then {
 				_channelsToAddListen pushBackUnique _i;
-				if ((_unit == driver vehicle _unit) or (_unit == commander vehicle _unit)) then {
+				if (_unit in [driver vehicle _unit,commander vehicle _unit,gunner vehicle _unit]) then {
 					_channelsToAddTalk pushBackUnique _i;
 				};
 			};
 			// Same for vehicle classes.
 			if ((toLower typeOf vehicle _unit) in _channelObjects) then {
 				_channelsToAddListen pushBackUnique _i;
-				if ((_unit == driver vehicle _unit) or (_unit == commander vehicle _unit)) then {
+				if (_unit in [driver vehicle _unit,commander vehicle _unit,gunner vehicle _unit]) then {
 					_channelsToAddTalk pushBackUnique _i;
 				};
 			};
@@ -65,7 +65,7 @@ for "_i" from 1 to 2 do {
 	if _vicRadioOn then {	
 		{
 			_channelsToAddListen pushBackUnique _x;
-			if ((_unit == driver vehicle _unit) or (_unit == commander vehicle _unit)) then {
+			if (_unit in [driver vehicle _unit,commander vehicle _unit,gunner vehicle _unit]) then {
 				_channelsToAddTalk pushBackUnique _x;
 			};
 		} forEach (vehicle _unit getVariable ["f_var_radioChannelsObjectSpecific",[]]);
