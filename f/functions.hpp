@@ -144,6 +144,7 @@ class F // Defines the "owner"
 	{
 		file = "f\brakeOverride";
 		class brakeOverride{};
+	};
 	class radio
 	{
 		file = "f\radio";

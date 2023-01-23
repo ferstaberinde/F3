@@ -24,3 +24,14 @@ player addAction [
 
 // Add the variable to prove it's already done
 player setVariable ["f_var_hasDriverAction",true];
+
+// Add an event handler to the server that can catch JIP/reslots
+if isServer then {
+	addMissionEventHandler ["PlayerConnected",
+	{
+		params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
+		if (_jip) then {
+			[] remoteExec ["f_fnc_brakeOverride",_owner];
+		};
+	}];
+};

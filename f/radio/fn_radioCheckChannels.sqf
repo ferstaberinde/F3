@@ -6,6 +6,9 @@ This function checks what channels a player should have access to. It's called b
 =========================== */
 params ["_unit"];
 
+// Skip if the unit is an AI, so formerly-player AI units can't break the radio channels of players they're local to.
+if !(isPlayer _unit) exitWith {};
+
 _splitMode = f_var_radioSplitMode;
 
 // Initialise variables
@@ -18,6 +21,9 @@ private _channelsToAddTalk = [];
 // Do all this twice to make sure it happens
 for "_i" from 1 to 2 do {
 
+	// Check whether the user has turned off the radio in this vehicle.
+	private _vicRadioOn = vehicle _unit getVariable ["f_var_radioIsOn",true];
+	
 	// Iterate through the whole list of channels
 	for "_i" from 1 to f_var_radioChannelCount do {
 
@@ -30,18 +36,21 @@ for "_i" from 1 to 2 do {
 			};
 		} forEach _channelObjects;
 		
-		// Check for vehicles. Don't add send permissions unless they're the driver.
-		if ((toLower str vehicle _unit) in _channelObjects) then {
-			_channelsToAddListen pushBackUnique _i;
-			if ((_unit == driver vehicle _unit) or (_unit == commander vehicle _unit)) then {
-				_channelsToAddTalk pushBackUnique _i;
+		// If the vehicle radio is turned off, don't check for vehicle-provided channels.
+		if _vicRadioOn then {
+			// Check for vehicles. Don't add send permissions unless they're the driver.
+			if ((toLower str vehicle _unit) in _channelObjects) then {
+				_channelsToAddListen pushBackUnique _i;
+				if (_unit in [driver vehicle _unit,commander vehicle _unit,gunner vehicle _unit]) then {
+					_channelsToAddTalk pushBackUnique _i;
+				};
 			};
-		};
-		// Same for vehicle classes.
-		if ((toLower typeOf vehicle _unit) in _channelObjects) then {
-			_channelsToAddListen pushBackUnique _i;
-			if ((_unit == driver vehicle _unit) or (_unit == commander vehicle _unit)) then {
-				_channelsToAddTalk pushBackUnique _i;
+			// Same for vehicle classes.
+			if ((toLower typeOf vehicle _unit) in _channelObjects) then {
+				_channelsToAddListen pushBackUnique _i;
+				if (_unit in [driver vehicle _unit,commander vehicle _unit,gunner vehicle _unit]) then {
+					_channelsToAddTalk pushBackUnique _i;
+				};
 			};
 		};
 	};
@@ -52,12 +61,15 @@ for "_i" from 1 to 2 do {
 		_channelsToAddTalk pushBackUnique _x;
 	} forEach (_unit getVariable ["f_var_radioChannelsObjectSpecific",[]]);
 
-	{
-		_channelsToAddListen pushBackUnique _x;
-		if ((_unit == driver vehicle _unit) or (_unit == commander vehicle _unit)) then {
-			_channelsToAddTalk pushBackUnique _x;
-		};
-	} forEach (vehicle _unit getVariable ["f_var_radioChannelsObjectSpecific",[]]);
+	// If the vehicle radio is turned off, don't check for vehicle-provided channels.
+	if _vicRadioOn then {	
+		{
+			_channelsToAddListen pushBackUnique _x;
+			if (_unit in [driver vehicle _unit,commander vehicle _unit,gunner vehicle _unit]) then {
+				_channelsToAddTalk pushBackUnique _x;
+			};
+		} forEach (vehicle _unit getVariable ["f_var_radioChannelsObjectSpecific",[]]);
+	};
 
 	// If running in unified mode, just compress all numbers down to the one channel if there are any channels to be added.
 	if (!_splitMode) then {
