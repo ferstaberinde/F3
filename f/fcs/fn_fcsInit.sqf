@@ -85,9 +85,7 @@ _vehicle setVariable ["f_var_fcs_hasEH",true];
 		private _equipInfo = _target getVariable ["f_var_fcs_equipInfo",[false,false]];
 		_target disableNVGEquipment (_equipInfo#0);
 		// Re-enable TI unless F3 says we shouldn't
-		if (!(_target getVariable ["f_var_TIDisabled",false]) && !(_equipInfo#1)) then {
-			_target disableTIEquipment false;
-		};
+	    _target disableTIEquipment ((_equipInfo#1) || (_target getVariable ["f_var_TIDisabled",false]));
 	}, // Code on completed
 	{}, // Code on interrupt
 	[], // Arguments to pass
