@@ -36,6 +36,7 @@ params ["_target","_projectile","_isDirect"];
 	// Hit turns off the NV and TI and sets an appropriate variable on the vehicle. Hopefully later it will also turn off stabilisation (BI blocked)
 	_target disableNVGEquipment true;
 	_target disableTIEquipment true;
+	_target setVariable ["f_var_fcs_equipInfo",(equipmentDisabled _target),true];
 	_target setVariable ["f_var_fcs_failure",true,true];
 	
 	// Spawn ongoing stuff that affects the vehicle until repaired
