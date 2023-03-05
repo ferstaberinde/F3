@@ -83,9 +83,7 @@ _vehicle setVariable ["f_var_fcs_hasEH",true];
 		_target setVariable ["f_var_fcs_failure",false,true];
 		// Retrieve saved info on the previous TI/NV equipment state
 		private _equipInfo = _target getVariable ["f_var_fcs_equipInfo",[false,false]];
-		if !(_equipInfo#0) then {
-			_target disableNVGEquipment false;
-		};
+		_target disableNVGEquipment (_equipInfo#0);
 		// Re-enable TI unless F3 says we shouldn't
 		if (!(_target getVariable ["f_var_TIDisabled",false]) && !(_equipInfo#1)) then {
 			_target disableTIEquipment false;
