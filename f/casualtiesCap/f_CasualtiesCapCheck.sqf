@@ -98,7 +98,7 @@ if (count _grps == 0) exitWith {
 
 // CREATE STARTING VALUES
 // A initial count is made of units in the groups listed in _grps.
-_started = count (_grps apply {units _x});
+_started = count (flatten (_grps apply {units _x}));
 
 // DEBUG
 if (f_param_debugMode == 1) then
@@ -122,7 +122,7 @@ while {true} do
     };
 
     // Calculate how many units in the groups are still alive
-    _remaining = {alive _x} count (_grps apply {units _x});
+    _remaining = {alive _x} count (flatten (_grps apply {units _x}));
 
     // DEBUG
     if (f_param_debugMode == 1) then
