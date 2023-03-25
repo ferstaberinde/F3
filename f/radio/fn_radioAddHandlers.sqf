@@ -103,7 +103,7 @@ player setVariable ["f_var_radioHandlersAdded",true];
 // DEBUG
 if (f_param_debugMode == 1) then
 {
-	systemChat "DEBUG (fn_radioAddHandlers.sqf): added radio event handlers %1";
+	systemChat "DEBUG (fn_radioAddHandlers.sqf): added radio event handlers to local player";
 };
 
 sleep 1;
