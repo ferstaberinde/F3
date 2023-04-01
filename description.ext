@@ -1,4 +1,4 @@
-fa3_version[] = {3,5,6}; // WARNING: DO NOT CHANGE THIS LINE
+fa3_version[] = {3,5,7}; // WARNING: DO NOT CHANGE THIS LINE
 
 // ============================================================================================
 // F3 - Loading Screen
@@ -12,16 +12,16 @@ onLoadName = "*** Insert Mission Name Here. ***";
 
 //Corpses
 corpseManagerMode = 1; //0 = None, 1 = All, 2 = None_But_Respawned, 3 = All_But_Respawned
-corpseLimit = 30; // Corpse limit before which ( <= ) corpseRemovalMaxTime applies and after which ( > ) corpseRemovalMinTime applies. 
-corpseRemovalMinTime = 180; // Remove all bodies that have been dead longer than corpseRemovalMinTime when corpseLimit is breached. 
-corpseRemovalMaxTime = 600; // Maximum time a corpse can remain on the ground (if total number of corpses is equal or under corpseLimit). 
-minPlayerDistance = 500; // The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector. 
+corpseLimit = 30; // Corpse limit before which ( <= ) corpseRemovalMaxTime applies and after which ( > ) corpseRemovalMinTime applies.
+corpseRemovalMinTime = 180; // Remove all bodies that have been dead longer than corpseRemovalMinTime when corpseLimit is breached.
+corpseRemovalMaxTime = 600; // Maximum time a corpse can remain on the ground (if total number of corpses is equal or under corpseLimit).
+minPlayerDistance = 500; // The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector.
 
 //Wrecks
 //wreckManagerMode = 1; //0 = None, 1 = All, 2 = None_But_Respawned, 3 = All_But_Respawned
-//wreckLimit = 20; //Vehicle wreck limit before which ( <= ) wreckRemovalMaxTime applies and after which ( > ) wreckRemovalMinTime applies. 
-//wreckRemovalMinTime = 180; // Remove all wrecks that have existed longer than wreckRemovalMinTime when wreckLimit is breached. 
-//wreckRemovalMaxTime = 3600; // Maximum time a wreck can remain on the ground (if total number of wrecks is equal or under wreckLimit). 
+//wreckLimit = 20; //Vehicle wreck limit before which ( <= ) wreckRemovalMaxTime applies and after which ( > ) wreckRemovalMinTime applies.
+//wreckRemovalMinTime = 180; // Remove all wrecks that have existed longer than wreckRemovalMinTime when wreckLimit is breached.
+//wreckRemovalMaxTime = 3600; // Maximum time a wreck can remain on the ground (if total number of wrecks is equal or under wreckLimit).
 
 // ============================================================================================
 
@@ -123,6 +123,19 @@ class cfgNotifications
 
 // ============================================================================================
 
+// F3 - Custom sounds configuration
+
+class CfgSounds
+{
+	sounds[] = {};
+	#if __has_include("f\skulls\f_skullsSounds.hpp")
+		#include "f\skulls\f_skullsSounds.hpp"
+	#endif
+	// You can add custom sound classes after this line
+};
+
+// ============================================================================================
+
 // F3 - Start of Params code blocks.
 // WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
 
@@ -180,9 +193,9 @@ class Params
 	class f_param_weather
 	{
 		title = "$STR_f_param_weather";
-		values[] = {0,1,2,3,4,5,6,7,8,9};
-		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option11};
-		default = 9;
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11};
+		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option9,$STR_f_param_weather_Option10,$STR_f_param_weather_Option11};
+		default = 11;
 	};
 
 	class f_param_fog
@@ -207,6 +220,14 @@ class Params
 		values[] = {0,1,2,3,4,5,6,7,8};
 		texts[] = {$STR_f_param_timeOfDay_Option0,$STR_f_param_timeOfDay_Option1,$STR_f_param_timeOfDay_Option2,$STR_f_param_timeOfDay_Option3,$STR_f_param_timeOfDay_Option4,$STR_f_param_timeOfDay_Option5,$STR_f_param_timeOfDay_Option6,$STR_f_param_timeOfDay_Option7,$STR_f_param_timeOfDay_Option8};
 		default = 8;
+	};
+
+	class f_param_timeOfYear
+	{
+		title = "$STR_f_param_timeOfYear";
+		values[] = {0,1,2,3,4};
+		texts[] = {$STR_f_param_timeOfYear_Option0,$STR_f_param_timeOfYear_Option1,$STR_f_param_timeOfYear_Option2,$STR_f_param_timeOfYear_Option3,$STR_f_param_timeOfYear_Option4};
+		default = 4;
 	};
 
 // ============================================================================================
@@ -238,6 +259,19 @@ class Params
 		default = 2;
 	};
 
+// ============================================================================================
+
+// F3 - Special Effects Parameters
+// Credits and documentation: https://github.com/folkarps/F3/wiki
+
+	class f_param_gruntBirthdayParty
+	{
+		title = "Grunt Birthday Party";
+		values[] = {0,1,2};
+		texts[] = {"Off","Player deaths only","All"};
+		default = 0;
+	};
+	
 // ============================================================================================
 
 // F3 - Caching

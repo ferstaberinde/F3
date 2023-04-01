@@ -23,72 +23,72 @@ params [
 private _groups = [];
 
 // Markers seen by players in NATO, NATO (Pacific) & NATO (Woodland) slots.
-if (_unitfaction in ["blu_f","blu_t_f","blu_w_f","nato","natowoodland","natopacific"]) then {
+if (_unitfaction in (["blu_f","blu_t_f","blu_w_f","nato","natowoodland","natopacific"] apply {toLower _x})) then {
 	_groups = f_var_groupData_blufor_nato;
 };
 
 // Markers seen by players in FIA slots. Move "fia" to OPFOR FIA or INDFOR FIA if using them.
-if (_unitfaction in ["blu_g_f","fia"]) then {
+if (_unitfaction in (["blu_g_f","fia"] apply {toLower _x})) then {
 	_groups = f_var_groupData_blufor_fia;
 };
 
 // Markers seen by players in Gendarmerie slots.
-if (_unitfaction in ["blu_gen_f"]) then {
+if (_unitfaction in (["blu_gen_f"] apply {toLower _x})) then {
 	_groups = f_var_groupData_blufor_gen;
 };
 
 // Markers seen by players in CTRG slots.
-if (_unitfaction in ["blu_ctrg_f","ctrg"]) then {
+if (_unitfaction in (["blu_ctrg_f","ctrg"] apply {toLower _x})) then {
 	_groups = f_var_groupData_blufor_ctrg;
 };
 
 // Markers seen by players in CSAT & CSAT (Pacific) slots.
-if (_unitfaction in ["opf_f","opf_t_f","csat","csatpacific"]) then {
+if (_unitfaction in (["opf_f","opf_t_f","csat","csatpacific"] apply {toLower _x})) then {
 	_groups = f_var_groupData_opfor_csat;
 };
 
 // Markers seen by players in OPFOR-FIA slots. Add "fia" if using "fia" with Virtual Faction, and remove it from BLUFOR FIA.
-if (_unitfaction in ["opf_g_f"]) then {
+if (_unitfaction in (["opf_g_f"] apply {toLower _x})) then {
 	_groups = f_var_groupData_opfor_fia;
 };
 
 // Markers seen by players in Spetsnaz slots.
-if (_unitfaction in ["opf_r_f","spetsnaz"]) then {
+if (_unitfaction in (["opf_r_f","spetsnaz"] apply {toLower _x})) then {
 	_groups = f_var_groupData_opfor_spetsnaz;
 };
 
 // Markers seen by players in NPR (Looters) slots.
-if (_unitfaction in ["ind_l_f","npr"]) then {
+if (_unitfaction in (["ind_l_f","npr"] apply {toLower _x})) then {
 	_groups = f_var_groupData_opfor_npr;
 };
 
 // Markers seen by players in AAF slots.
-if (_unitfaction in ["ind_f","aaf"]) then {
+if (_unitfaction in (["ind_f","aaf"] apply {toLower _x})) then {
 	_groups = f_var_groupData_indfor_aaf;
 };
 
 // Markers seen by players in LDF slots.
-if (_unitfaction in ["ind_e_f","ldf"]) then {
+if (_unitfaction in (["ind_e_f","ldf"] apply {toLower _x})) then {
 	_groups = f_var_groupData_indfor_ldf;
 };
 
 // Markers seen by players in INDEPENDENT-FIA slots. Add "fia" if using "fia" with Virtual Faction, and remove it from BLUFOR FIA.
-if (_unitfaction in ["ind_g_f"]) then {
+if (_unitfaction in (["ind_g_f"] apply {toLower _x})) then {
 	_groups = f_var_groupData_indfor_fia;
 };
 
 // Markers seen by players in SYNDIKAT slots.
-if (_unitfaction in ["ind_c_f","syndikat"]) then {
+if (_unitfaction in (["ind_c_f","syndikat"] apply {toLower _x})) then {
 	_groups = f_var_groupData_indfor_syn;
 };
 
 // Markers seen by players in 3IFB (virtual) slots.
-if (_unitfaction in ["3ifb"]) then {
+if (_unitfaction in (["3ifb"] apply {toLower _x})) then {
 	_groups = f_var_groupData_indfor_3ifb;
 };
 
 // Markers seen by players in Civilian slots.
-if (_unitfaction in ["civ_f","civ_idap_f"]) then {
+if (_unitfaction in (["civ_f","civ_idap_f"] apply {toLower _x})) then {
 	_groups = f_var_groupData_civ;
 };
 

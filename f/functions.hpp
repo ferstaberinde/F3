@@ -39,6 +39,7 @@ class F // Defines the "owner"
 		class SetFog{};
 		class SetWeather{};
 		class SetWind{};
+		class ColdBreath{};
 	};
 	class cache
 	{
@@ -128,5 +129,33 @@ class F // Defines the "owner"
 	{
 		file = "f\dynamicViewDistance";
 		class ehSetViewDistance {};
+	};
+	class fcs
+	{
+		file = "f\fcs";
+		class fcsInit{};
+		class fcsCommanderOverride{};
+		class fcsFailure{};
+		class fcsPersistentEffects{};
+		class fcsLocalWarning{};
+		class fcsBriefing{};
+	};
+	class brakeOverride
+	{
+		file = "f\brakeOverride";
+		class brakeOverride{};
+	};
+	class radio
+	{
+		file = "f\radio";
+		class radioChannels{};
+		class radioAddHandlers {};
+		class radioCheckChannels {};
+	};
+	class skulls
+	{
+		file = "f\skulls";
+		class skullsInit{};
+		class gruntBirthdayParty{};
 	};
 };

@@ -7,7 +7,7 @@
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_carbine, 2];
+		_unit addWeaponWithAttachmentsCargoGlobal [[_carbine,"","","",[_carbinemag,500],[],""],2];
 		_unit addMagazineCargoGlobal [_riflemag, 8];
 		_unit addMagazineCargoGlobal [_glriflemag, 8];
 		_unit addMagazineCargoGlobal [_carbinemag, 10];
@@ -28,7 +28,7 @@
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_carbine, 4];
+		_unit addWeaponWithAttachmentsCargoGlobal [[_carbine,"","","",[_carbinemag,500],[],""],4];
 		_unit addMagazineCargoGlobal [_riflemag, 20];
 		_unit addMagazineCargoGlobal [_glriflemag, 20];
 		_unit addMagazineCargoGlobal [_carbinemag, 20];
@@ -51,7 +51,7 @@
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_carbine, 2];
+		_unit addWeaponWithAttachmentsCargoGlobal [[_carbine,"","","",[_carbinemag,500],[],""],2];
 		_unit addMagazineCargoGlobal [_riflemag, 10];
 		_unit addMagazineCargoGlobal [_glriflemag, 10];
 		_unit addMagazineCargoGlobal [_carbinemag, 12];
@@ -97,7 +97,6 @@
 	    _unit addMagazineCargoGlobal [_smokegrenadegreen,2];
 	    _unit addMagazineCargoGlobal [_chemgreen,4];
 	    _unit addItemCargoGlobal [_firstaid,2];
-	    _unit addBackpackCargoGlobal ["B_Parachute",2];
 	    _unit addItemCargoGlobal ["Toolkit",1];
 	};
 
@@ -108,13 +107,12 @@
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-	    _unit addWeaponCargoGlobal [_carbine,2];
-		_unit addWeaponCargoGlobal [_rat,1];
+	    _unit addWeaponWithAttachmentsCargoGlobal [[_carbine,"","","",[_carbinemag,500],[],""],2];
+		_unit addWeaponWithAttachmentsCargoGlobal [[_rat,"","","",[_RATmag1,500],[],""],1];
 		_unit addMagazineCargoGlobal [_riflemag,10];
 		_unit addMagazineCargoGlobal [_glriflemag,10];
 		_unit addMagazineCargoGlobal [_carbinemag,10];
 		_unit addMagazineCargoGlobal [_armag,6];
-		_unit addMagazineCargoGlobal [_RATmag1,1];
 		_unit addMagazineCargoGlobal [_grenade,4];
 		_unit addmagazineCargoGlobal [_mgrenade,4];
 		_unit addMagazineCargoGlobal [_smokegrenade,8];
@@ -123,7 +121,6 @@
 		_unit addMagazineCargoGlobal [_chemgreen,4];
 		_unit addBackpackCargoGlobal [_bag,2];
 		_unit addItemCargoGlobal [_firstaid,4];
-		_unit addBackpackCargoGlobal ["B_Parachute",2];
 		_unit addItemCargoGlobal ["Toolkit",1];
 	};
 
@@ -134,13 +131,13 @@
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_carbine,8];
-		_unit addWeaponCargoGlobal [_rat,2];
+		_unit addWeaponWithAttachmentsCargoGlobal [[_carbine,"","","",[_carbinemag,500],[],""],8];
+		_unit addWeaponWithAttachmentsCargoGlobal [[_rat,"","","",[_RATmag1,500],[],""],2];
 		_unit addMagazineCargoGlobal [_riflemag,20];
 		_unit addMagazineCargoGlobal [_glriflemag,20];
 		_unit addMagazineCargoGlobal [_carbinemag,20];
 		_unit addMagazineCargoGlobal [_armag,12];
-		_unit addMagazineCargoGlobal [_RATmag1,6];
+		_unit addMagazineCargoGlobal [_RATmag1,4];
 		_unit addMagazineCargoGlobal [_grenade,12];
 		_unit addmagazineCargoGlobal [_mgrenade,12];
 		_unit addMagazineCargoGlobal [_smokegrenade,12];
@@ -150,7 +147,6 @@
 		_unit addMagazineCargoGlobal [_chemgreen,4];
 		_unit addBackpackCargoGlobal [_bag,4];
 		_unit addItemCargoGlobal [_firstaid,6];
-		_unit addBackpackCargoGlobal ["B_Parachute",4];
 		_unit addItemCargoGlobal ["Toolkit",1];
 	};
 

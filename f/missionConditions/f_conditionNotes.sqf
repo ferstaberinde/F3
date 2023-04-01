@@ -1,11 +1,6 @@
 // F3 - Mission Condition briefing notes
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
-
-if (!hasInterface) exitWith {}; //Exit if not a player.
-
-// Wait until server publishes the mission conditions
-waitUntil { !isNil "f_var_conditions_params" };
 
 f_var_conditions_params params ["_date","_overcast","_rain","_lightnings","_waves","_wind","_fogParams"];
 
@@ -32,6 +27,7 @@ private _rainText = "Heavy Rain";
 if (_rain < .65) then { _rainText = "Rain" };
 if (_rain < .3) then { _rainText = "Light Rain" };
 if (_rain < .01 || _overcast < .5) then { _rainText = "No Precipitation" }; // rain doesn't do anything below .5 overcast
+if (rainParams select 15 && {_rain > 0 && _overcast >= .5}) then {_rainText = "Snow"};
 
 _diaryText = _diaryText + format ["<font size='18' color='#aaaaaa'>Weather</font><br/><font size='16'>%1 | %2</font><br/>",_overCastText,_rainText];
 
