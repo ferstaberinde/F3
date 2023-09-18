@@ -105,7 +105,7 @@ if(count _rig > 0) then
 	_unit addVest (selectRandom _rig);
 };
 
-if(count _glasses > 0) then
+if(count _glasses > 0 && {!(goggles _unit in _glasses)}) then 
 {
 	removeGoggles _unit;
 	_unit addGoggles (selectRandom _glasses);
