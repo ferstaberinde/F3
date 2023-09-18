@@ -1,5 +1,5 @@
 // F3 - Add group join option to action menu
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // This script can be called either without parameters, or with a single boolean parameter.
@@ -18,13 +18,13 @@ if (!isDedicated && (isNull player)) then
 
 // ====================================================================================
 
-private ["_nearUnit", "_nearGroup", "_actionDistance", "_allowDifferentSide"];
+private ["_nearUnit", "_nearGroup", "_actionDistance", "_actionString", "_unit", "_grp"];
 
 // How many meters player needs to be from another group's leader for the join action to be shown
 _actionDistance = 2.5;
 
 // Check if script caller wants to enable joining of groups on different sides, default to false
-_allowDifferentSide = [_this,0,false] call bis_fnc_param;
+params [["_allowDifferentSide", false, [false]]];
 
 // Main loop to detect whether the action should be displayed
 while {true} do {
@@ -40,25 +40,30 @@ while {true} do {
 		// Using curly braces makes the if statement cheaper to evaluate
 		if (group player != _nearGroup && alive _nearUnit && {(_allowDifferentSide || side player == side _nearGroup)}) then {
 
-				_actionString = format["Join %1 (%2)", name _nearUnit,_nearGroup];
+			_actionString = format["Join %1 (%2)", name _nearUnit,_nearGroup];
 
-				f_groupJoinAction = player addAction [_actionString, {
+			f_groupJoinAction = player addAction [_actionString, {
+				params [
+					["_target", objNull, [objNull]],
+					["_caller", objNull, [objNull]],
+					["_ID", -1, [0]],
+					["_grp", grpNull, [grpNull]]
+				];
 
 				_unit = player;
-				_grp = (_this select 3);
 
 				// Player joins new group
 				[player] joinSilent _grp;
 
 				//Display notifications about new group member to the whole group
-				["JIP",[format ["You have joined %1 (%2).",name leader _grp,_grp]]] call BIS_fnc_showNotification;
+				["GroupJoin",[format ["You have joined %1 (%2).",name leader _grp,_grp]]] call BIS_fnc_showNotification;
 
 				{
-					if (isPlayer _x) then {[["JIP",[format ["%1 has joined your group.",name _unit]]],"BIS_fnc_showNotification",_x] call BIS_fnc_MP};
+					if (isPlayer _x) then {["GroupJoin",[format ["%1 has joined your group.",name _unit]]] remoteExec ["BIS_fnc_showNotification", _x]};
 				} forEach (units _grp - [_unit]); // Done using a forEach loop to avoid message spam should the group leader be controlling AI
 
 				// Make sure the group leader is synchronized properly accross the network
-				[[_grp, leader _grp], "selectLeader", leader _grp, false] call BIS_fnc_mp;
+				[_grp, leader _grp] remoteExec ["selectLeader", leader _grp];
 
 				// Remove and reset the action after executing it
 				player removeAction f_groupJoinAction;

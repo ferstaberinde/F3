@@ -1,8 +1,8 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <!-- This document was created with Syntext Serna Free. -->
-<Project ID="Arma3">
-  <Package ID="Missions">
-    <Container ID="">
+<Project name="Arma3">
+  <Package name="Missions">
+    <Container name="">
       <Key ID="STR_f_param_debugMode">
         <English> Debug Mode </English>
         <Czech> Debug mód </Czech>
@@ -17,7 +17,7 @@
       </Key>
       <Key ID="STR_f_param_timeOfDay">
         <English> Time of Day </English>
-	<French> Heure de la journée </French>
+	      <French> Heure de la journée </French>
       </Key>
       <Key ID="STR_f_param_timeOfDay_Option0">
         <English> Dawn </English>
@@ -84,11 +84,29 @@
         <French> Nuit </French>
       </Key>
       <Key ID="STR_f_param_timeOfDay_Option8">
-        <English> Use mission settings </English>
+        <English> Use mission setting </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear">
+        <English> Time of Year </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear_Option0">
+        <English> Spring </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear_Option1">
+        <English> Summer </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear_Option2">
+        <English> Autumn </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear_Option3">
+        <English> Winter </English>
+      </Key>
+      <Key ID="STR_f_param_timeOfYear_Option4">
+        <English> Use mission setting </English>
       </Key>
       <Key ID="STR_f_param_weather">
         <English> Weather </English>
-        <French> Météo </English>
+        <French> Météo </French>
       </Key>
       <Key ID="STR_f_param_weather_Option0">
         <English> Clear</English>
@@ -123,10 +141,22 @@
         <Spanish> Tormenta </Spanish>
         <French> Averse </French>
       </Key>
+      <Key ID="STR_f_param_weather_Option9">
+        <English> Light Snow</English>
+      </Key>
+      <Key ID="STR_f_param_weather_Option10">
+        <English> Heavy Snow</English>
+      </Key>
       <Key ID="STR_f_param_weather_Option11">
         <English> Use mission setting </English>
       </Key>
-      <Key ID="STR_f_param_weather_Option9">
+      <Key ID="STR_f_param_fog">
+        <English> Override Fog </English>
+      </Key>
+      <Key ID="STR_f_param_fog_Option0">
+        <English> No Fog </English>
+      </Key>
+      <Key ID="STR_f_param_fog_Option1">
         <English> Light Fog </English>
         <Czech> Slabá mlha </Czech>
         <German> Leichter Nebel </German>
@@ -135,7 +165,7 @@
         <Spanish> Bruma </Spanish>
         <French> Brume </French>
       </Key>
-      <Key ID="STR_f_param_weather_Option10">
+      <Key ID="STR_f_param_fog_Option2">
         <English> Heavy Fog </English>
         <Czech> Hustá mlha </Czech>
         <German> Dichter Nebel </German>
@@ -143,6 +173,24 @@
         <Russian> Густой туман </Russian>
         <Spanish> Niebla </Spanish>
         <French> Brouillard </French>
+      </Key>
+      <Key ID="STR_f_param_fog_Option4">
+        <English> Use mission setting </English>
+      </Key>
+      <Key ID="STR_f_param_wind">
+        <English> Override Wind </English>
+      </Key>
+      <Key ID="STR_f_param_wind_Option0">
+        <English> No Wind </English>
+      </Key>
+      <Key ID="STR_f_param_wind_Option1">
+        <English> Light Wind </English>
+      </Key>
+      <Key ID="STR_f_param_wind_Option2">
+        <English> Heavy Wind </English>
+      </Key>
+      <Key ID="STR_f_param_wind_Option4">
+        <English> Use mission setting </English>
       </Key>
       <Key ID="STR_f_param_AISkill_BLUFOR">
         <English> AI Skill (BLUFOR) </English>
@@ -233,9 +281,6 @@
       </Key>
       <Key ID="STR_f_mapClickHALODone">
         <English> You have been moved to the selected location. </English>
-      </Key>
-      <Key ID="STR_f_JIP_reinforcementOptionsAction">
-        <English> Select Reinforcement Options</English>
       </Key>
       <Key ID="STR_f_param_mission_timer">
         <English> Safe Start (mins) </English>

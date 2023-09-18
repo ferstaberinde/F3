@@ -1,0 +1,41 @@
+/* ws_fnc_NearestRoadPos
+By Wolfenswan [FA]: wolfenswanarps@gmail.com | folkarps.com
+
+USAGE
+[pos] call ws_fnc_NearestRoadPos
+[pos,distance,increment] call ws_fnc_NearestRoadPos
+
+FEATURE
+Return nearest road in distance x (default 10), If no road is found increase by increment x (default 50)
+If no roads in radius increment*20 are found the original position is returned and an error put out.
+
+RETURNS
+positional array
+*/
+
+private ["_i","_roads","_done"];
+
+params [
+	["_pos", objNull, ["", objNull, grpNull, locationNull, []]],
+	["_distance", 10, [0]],
+	["_increment", 50, [0]]
+];
+
+_pos = _pos call ws_fnc_getEPos;
+
+_i = 0;
+_done = false;
+
+while {!_done && _i <= 20} do {
+	_roads = _pos nearroads _distance;
+	if (count _roads > 0) then {
+		_pos = getPosATL (selectRandom _roads);
+		_done = true;
+	} else {
+		_distance = _distance + _increment;
+		_i = _i + 1;
+		if (_i == 20) exitWith {["ws_fnc_NearestRoadPos ERROR: No roads found in radius of",(_increment*20),""] call ws_fnc_DebugText};
+	};
+};
+
+[_pos select 0,_pos select 1,0]

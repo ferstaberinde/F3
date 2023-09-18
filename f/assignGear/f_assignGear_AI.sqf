@@ -1,5 +1,5 @@
 // F3 - Assign Gear Script - AI
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // SERVER CHECK
@@ -9,27 +9,23 @@ if !(isServer) exitWith {};
 
 // ====================================================================================
 
-// DECLARE PRIVATE VARIABLES
-
-private ["_units","_unit","_faction","_known","_excludeFactions","_unitClasses"];
-
-// ====================================================================================
-
 // SETUP CUSTOM VARIABLES
 
 // The default gear type picked when no corresponding entry is found in the _unitClasses array
 // Set _defaultclass to "" to let these units keep their default gear
-_defaultclass = "";
+// Be careful not to apply armed loadouts to units that should not be armed (e.g. civilians)
+private _defaultclass = "";
 
 // The factions that should be ignored
-_excludeFactions = ["civ_f","blu_gen_f"];
+private _excludeFactions = ["civ_f","blu_gen_f"];
 // Other factions:
 //["blu_f","blu_t_f","opf_f","opf_t_f","ind_f","ind_c_f","blu_g_f","opf_g_f","ind_g_f"
 
 
 // The unit classes and their corresponding F3 Assign Gear Component type
-_unitClasses = [
+private _unitClasses = [
 
+	["_unarmed_"	,	""		],
 	["_officer_"	,	"co"	],
 	["_colonel_"	,	"co"	],
 	["_sl_"			,	"dc"	],
@@ -39,6 +35,7 @@ _unitClasses = [
 	["_aar_"		,	"aar"	],
 	["_a_"			,	"aar"	],
 	["_lat_"		,	"rat"	],
+	["_lat2_"		,	"rat"	],
 	["_medic_"		,	"m"		],
 	["_gl_"			,	"gren"	],
 	["_exp_"		,	"eng"	],
@@ -77,8 +74,24 @@ _unitClasses = [
 	["_Bandit_5_"		,	"r"		],
 	["_Bandit_6_"		,	"gren"	],
 	["_Bandit_7_"		,	"car"	],
-	["_Bandit_8_"		,	"engm"	]
+	["_Bandit_8_"		,	"engm"	],
+	
+	// GM units
+	
+	["_squadleader_",	"ftl"	],
+	["_antitank_assistant_","aar"		],
+	["_machinegunner_assistant_","aar"	],
+	["_machinegunner_",	"ar"	],
+	["_rifleman_"	,	"r"		],
+	["_antitank_"	,	"rat"	],
+	["_demolition_"	,	"eng"	],
+	["_marksman_"	,	"dm"	],
+	["_antiair_"	,	"msam"	],
+	["_grenadier_"	,	"gren"	],
+	["_paratrooper_",	"car"	],
+	
 
+	["_soldier_"	,	"r"		]
 	// No comma after the last array!
 
 ];
@@ -86,40 +99,38 @@ _unitClasses = [
 // ====================================================================================
 
 // Interpret parameters
-_units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVars};f_var_men},{_this}];
+private _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVars};f_var_men},{_this}];
+
+//Only process units that have not been touched by the F3 Assign Gear Component
+_units = _units select { ! (_x getvariable ["f_var_assignGear_done", false]) };
+//Only process non-playerableUnits
+_units = _units select {!(_x in playableUnits) && (_x isKindOf "Man")};
 
 // LOOP THROUGH AI UNITS AND ASSIGN GEAR
 {
 	sleep 0.1;
-	_unit = _x;
+	private _unit = _x;
+	private _faction = toLower ([_unit] call f_fnc_virtualFaction);
 
-	// Check if the unit was already touched by the F3 Assign Gear Component
-	if (!(_unit getvariable ["f_var_assignGear_done", false]) && {!(_unit in playableUnits) && (_unit isKindOf "Man")}) then {
+	// If the unit's faction is allowed, proceed
+	if !(_faction in _excludeFactions) then {
 
-			_faction = toLower (faction _unit);
+		// If the unit's classname corresponds to a class in the assignment array, use that gear class
+		private _classIndex = _unitClasses findIf {toLower (typeOf _unit) find toLower (_x select 0) != -1};
 
-			// If the unit's faction is allowed, proceed
-			if !(_faction in _excludeFactions) then {
-				_known = false;
-				{
-					_known = [toLower (_x select 0),toLower (typeOf _unit)] call BIS_fnc_inString;
+		//Set the class to the _defaultclass or the one found in the _unitClasses array.
+		private _class = _defaultclass;
+		if (_classIndex != -1) then {
+			_class = _unitClasses select _classIndex select 1;
+		};
 
-					// If the unit's classname corresponds to a class in the assignment array, set it's gear accordingly
-					if (_known) exitWith {
-						[[_x select 1, _unit], "f_fnc_assignGear", _unit,false,true] call BIS_fnc_MP;
-					};
-				} forEach _unitClasses;
+		// Set the gear according to the class
+		if (_class != "") then {
+			[_class, _unit] remoteExecCall ["f_fnc_assignGear", _unit];
+		};
 
-				// If the class is not in the _unitClasses array
-				if (!_known) then {
-					if (_defaultclass != "") then {
-						[[_defaultclass, _unit], "f_fnc_assignGear", _unit,false,true] call BIS_fnc_MP;
-					};
-				};
-
-			} else {
-				// If the faction is not allowed, set the assignGear variable to true to ignore the unit from now on
-				_x setvariable ["f_var_assignGear_done", true,true];
-			};
+	} else {
+		// If the faction is not allowed, set the assignGear variable to true to ignore the unit from now on
+		_x setvariable ["f_var_assignGear_done", true,true];
 	};
 } foreach _units;

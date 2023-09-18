@@ -1,5 +1,5 @@
 // F3 - SetTime
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // RUN ONLY ON THE SERVER
@@ -8,29 +8,84 @@ if !(isServer) exitWith {};
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_timeOfDay","_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time"];
+private ["_year","_month","_day","_hour","_minute","_transition","_sunsetSunrise","_sunriseSunsetExists","_sunrise","_sunset","_addTime","_time","_date","_utmZone","_hemisphere"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
-_timeOfDay = _this select 0;
+params [
+	["_timeOfDay", 8, [0]],
+	["_timeOfYear", 4, [0]]
+];
 
 // Exit when using mission settings
-if ( _timeOfDay == 8 ) exitWith {};
+if (_timeOfDay == 8 && _timeOfYear == 4) exitWith {};
 
 
 // ====================================================================================
 
-// SET DEFAULT VALUES
-// The default values that together form the in-game date are set.
+// GET DEFAULT VALUES
+// Grab the mission's current date and time.
 
-_year = 2030;
-_month = 6;
-_day = 16;
-_hour = 0;
-_minute = 0;
+date params ["_year", "_month", "_day", "_hour", "_minute"];
+
+// ====================================================================================
+
+// GET HEMISPHERE SO WE CAN SET THE CORRECT MONTH FOR EACH SEASON
+_utmZone = ((getarray (configfile >> "cfgworlds" >> worldname >> "mapArea")) call bis_fnc_posDegToUTM) select 2;
+// If UTM is negative, we're in the southern hemisphere
+_hemisphere = (_utmZone < 0);
+
+// SELECT MISSION TIME OF YEAR
+// Using the value of _timeOfYear, we define new values for _month and _day. Values set based on in-game solstices/exquinoxes
+
+switch (_timeOfYear) do
+{
+// Spring
+	case 0:
+	{
+    if (_hemisphere) then {
+			_day = 21;
+			_month = 9;
+    } else {
+			_day = 23;
+			_month = 3;
+    };
+	};
+// Summer
+	case 1:
+	{
+		_day = 21;
+		if (_hemisphere) then {
+			_month = 12;
+		} else {
+			_month = 6;
+		};
+	};
+// Autumn
+	case 2:
+	{
+		if (_hemisphere) then {
+			_day = 23;
+			_month = 3;
+		} else {
+			_day = 21;
+			_month = 9;
+		};
+	};
+// Winter
+	case 3:
+	{
+		_day = 21;
+		if (_hemisphere) then {
+			_month = 6;
+		} else {
+			_month = 12;
+		};
+	};
+};
 
 // ====================================================================================
 
@@ -44,18 +99,18 @@ _sunset = [floor (_sunsetSunrise select 1), floor (((_sunsetSunrise select 1) % 
 
 // function for correcting adding hours and minutes to hours and minutes
 _addTime = {
-    params ["_time1","_time2"];
-    _result = [_time1,_time2] call BIS_fnc_vectorAdd;
-    while { _result select 1 > 60 } do { // convert extra minutes into hours
-        _result set [1,(_result select 1) - 60];
-        _result set [0,(_result select 0) + 1];
-    };
-    // make sure hour is in range [0,23]
-    _result set [0,(_result select 0) % 24];
-    if (_result select 0 < 0) then {
-        _result set [0,(_result select 0) + 24];
-    };
-    _result
+	params [
+		["_time1", [], [[]], 2],
+		["_time2", [], [[]], 2]
+	];
+	private _result = [_time1#0 + _time2#0,_time1#1 + _time2#1];
+
+	private _extraHours = floor (_result#1 / 60);
+	_result = [(_result#0 + _extraHours) % 24,_result#1 - 60*_extraHours];
+
+	if (_result#0 < 0) then { _result = [_result#0 + 24,_result#1] };
+
+	_result
 };
 
 // ====================================================================================
@@ -168,3 +223,6 @@ _date = [_year,_month,_day,_hour,_minute];
 [_date,true,_transition] call BIS_fnc_setDate;
 
 // ====================================================================================
+
+// RETURN DATE
+_date

@@ -1,5 +1,5 @@
 // F3 - Folk Unit Markers for Specialists
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DECLARE PRIVATE VARIABLES
@@ -11,7 +11,12 @@ private ["_mkr"];
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-params["_untName",["_mkrType","b_hq"],"_mkrText",["_mkrColor","ColorBlack"]];
+params [
+	["_untName", "", [""]],
+	["_mkrType", "b_hq", [""]],
+	["_mkrText", "", [""]],
+	["_mkrColor","ColorBlack", [""]]
+];
 
 private _mkrName = format ["mkr_%1",_untName];
 private _unt = missionNamespace getVariable [_untName, objNull];
@@ -64,7 +69,7 @@ while {alive _unt} do
 // If respawn is enabled we need to reset the marker should the unit die
 
 // Sleep for the set respawn delay plus a small grace period
-sleep (getNumber (missionconfigfile >> "RespawnDelay")) + 3;
+sleep ((getNumber (missionconfigfile >> "RespawnDelay")) + 3);
 
 // Re-compile the unit variable using the initially passed string
 waitUntil { sleep 0.1; _unt = missionNamespace getVariable [_untName,objNull]; !(isNull _unt) };
@@ -73,4 +78,3 @@ waitUntil { sleep 0.1; _unt = missionNamespace getVariable [_untName,objNull]; !
 if (alive _unt) exitWith {
 	[_untName, _mkrType, _mkrText, _mkrColor] spawn f_fnc_localSpecialistMarker;
 };
-

@@ -1,5 +1,5 @@
 // F3 - Buddy Team Colours
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 if (!hasInterface) exitWith {};
@@ -20,11 +20,13 @@ if (!isDedicated && (isNull player)) then
 private _leaders = ["_FTL"];
 
 // Set suffixes for each color
-private _white = [];
-private _red = ["_AT","_R1","_R2"];
-private _blue = ["_AR1","_AR2","_FTL"];
-private _yellow = [];
-private _green = [];
+private _colors = [
+	["MAIN",   [] ],
+	["RED",    ["_AT","_R1","_R2","_CLS"] ],
+	["BLUE",   ["_AR1","_AR2","_FTL"] ],
+	["YELLOW", [] ],
+	["GREEN",  [] ]
+];
 
 // ====================================================================================
 
@@ -32,7 +34,6 @@ private _green = [];
 
 sleep 10;
 
-private _unit = player;
 private _isFireteam = false;
 
 // ====================================================================================
@@ -41,44 +42,28 @@ private _isFireteam = false;
 // If the group isn't a full fireteam, leave teams as default.
 
 {
-	if ([_x, format["%1",(leader (group _unit))]] call BIS_fnc_inString) exitWith {_isFireteam = true;}
+	if ((format["%1",(leader (group player))] find _x) != -1) exitWith {_isFireteam = true;}
 } forEach _leaders;
 
 if(!_isFireteam) exitWith {};
 
+// Only run this for the group leader:
+if((((units group player) select {isPlayer _x}) #0) != player) exitWith {};
+
+// ====================================================================================
+
 // SET TEAM COLOURS
 {
-	_unit = _x;
-	_unitStr = str _x;
+	private _unit = _x;
+	private _unitStr = str _unit;
 
 	{
-		if ((_unitStr find _x) != -1) then {
-			_unit assignTeam "RED";
-		};
-	} forEach _red;
+		_x params ["_color", "_suffixes"];
+		{
+			if ((_unitStr find _x) != -1) then {
+				_unit assignTeam _color;
+			};
+		} forEach _suffixes;
+	} forEach _colors;
 
-	{
-		if ((_unitStr find _x) != -1) then {
-			_unit assignTeam "blue";
-		};
-	} forEach _blue;
-
-	{
-		if ((_unitStr find _x) != -1) then {
-			_unit assignTeam "yellow";
-		};
-	} forEach _yellow;
-
-	{
-		if ((_unitStr find _x) != -1) then {
-			_unit assignTeam "green";
-		};
-	} forEach _green;
-
-	{
-		if ((_unitStr find _x) != -1) then {
-			_unit assignTeam "white";
-		};
-	} forEach _white;
-
-} forEach units (group _unit);
+} forEach units (group player);

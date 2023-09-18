@@ -1,10 +1,10 @@
 // F3 Zeus Support - Add Objects
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DECLARE VARIABLES
 
-private ["_curator","_mode","_objects","_getGlobalVars"];
+private ["_objects","_leaders"];
 
 // ====================================================================================
 
@@ -18,9 +18,11 @@ if !(isServer) exitWith {};
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-_curator = [_this,0,objNull] call bis_fnc_param;
-_mode = [_this,1,[],[true,west,objNull,[]]] call bis_fnc_param;
-_groupleaders = [_this,2,false] call bis_fnc_param;
+params [
+	["_curator", objNull],
+	["_mode", [], [true,west,objNull,[]]],
+	["_groupLeaders", false, [true]]
+];
 
 // ====================================================================================
 

@@ -1,5 +1,5 @@
 // F3 - Folk ARPS Assign Gear Script - AAF
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE EQUIPMENT TABLES
@@ -9,33 +9,39 @@
 //		co			- commander
 //		dc 			- deputy commander / squad leader
 //		m 			- medic
+//		cls			- combat life saver
 //		ftl			- fire team leader
 //		ar 			- automatic rifleman
 //		aar			- assistant automatic rifleman
 //		rat			- rifleman (AT)
 //		dm			- designated marksman
+//		mmgl		- medium mg team leader
 //		mmgg		- medium mg gunner
 //		mmgag		- medium mg assistant
+//		matl		- medium AT team leader
 //		matg		- medium AT gunner
 //		matag		- medium AT assistant
 //		hmgg		- heavy mg gunner (deployable)
 //		hmgag		- heavy mg assistant (deployable)
-//		hatg		- heavy AT gunner (deployable)
-//		hatag		- heavy AT assistant (deployable)
+//		hatl		- heavy AT team leader
+//		hatg		- heavy AT gunner
+//		hatag		- heavy AT assistant
 //		mtrg		- mortar gunner (deployable)
 //		mtrag		- mortar assistant (deployable)
+//		msaml		- medium SAM team leader
 //		msamg		- medium SAM gunner
 //		msamag		- medium SAM assistant gunner
 //		hsamg		- heavy SAM gunner (deployable)
 //		hsamag		- heavy SAM assistant gunner (deployable)
 //		sn			- sniper
 //		sp			- spotter (for sniper)
+//		lvc			- light vehicle crew
+//		lvd			- light vehicle driver (repair)
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
-//		pp			- air vehicle pilot / co-pilot (repair)
-//		pcc			- air vehicle co-pilot (repair) / crew chief (repair)
 //		pc			- air vehicle crew
+//		jp			- jet pilot
 //		eng			- engineer (demo)
 //		engm		- engineer (mines)
 //		uav			- UAV operator
@@ -49,6 +55,12 @@
 //		v_car		- car/4x4
 //		v_tr		- truck
 //		v_ifv		- ifv
+//		v_tank		- tank
+//		v_helo_l	- Rotary Transport Light
+//		v_helo_m	- Rotary Transport Medium
+//		v_helo_h	- Rotary Transport Heavy
+//		v_helo_a	- Rotary Attack
+//		v_jet		- Jet
 //
 //		crate_small	- small ammocrate
 //		crate_med	- medium ammocrate
@@ -92,6 +104,13 @@ _hg_attachments= []; // The default attachment set for handguns, overwritten in 
 
 // ====================================================================================
 
+// ATTACHMENTS - LAUNCHER
+_lau_attach1 = ""; // Empty by default, could be a scope in GM or a laser pointer for Titans
+
+_lau_attachments = []; // The default attachment set for launchers, overwritten in the individual unitType
+
+// ====================================================================================
+
 // WEAPON SELECTION
 
 // Standard Riflemen ( MMG Assistant Gunner, Assistant Automatic Rifleman, MAT Assistant Gunner, MTR Assistant Gunner, Rifleman)
@@ -107,7 +126,6 @@ _carbinemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
 // Standard Submachine Gun/Personal Defence Weapon (Aircraft Pilot, Submachinegunner)
 _smg = "hgun_PDW2000_F";
 _smgmag = "30Rnd_9x21_Mag";
-_smgmag_tr = "30Rnd_9x21_Mag";
 
 // Diver
 _diverWep = "arifle_SDAR_F";
@@ -123,7 +141,7 @@ _glmag = "1Rnd_HE_Grenade_shell";
 
 // Smoke for FTLs, Squad Leaders, etc
 _glsmokewhite = "1Rnd_Smoke_Grenade_shell";
-_glsmokegreen = "1Rnd_SmokeRed_Grenade_shell";
+_glsmokegreen = "1Rnd_SmokeGreen_Grenade_shell";
 _glsmokered = "1Rnd_SmokeRed_Grenade_shell";
 
 // Flares for FTLs, Squad Leaders, etc
@@ -150,6 +168,10 @@ _medkit = "Medikit";
 
 // Night Vision Goggles
 _nvg = "NVGoggles_INDEP";
+_nvgPilot = "NVGoggles_INDEP"; // Integrated_NVG_F for fullscreen NV
+
+// Binoculars
+_binoculars = "Rangefinder";
 
 // Laserdesignator
 _laserdesignator = "Laserdesignator_03";
@@ -163,31 +185,31 @@ _chemred = "Chemlight_red";
 _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
-// Standard Backpacks
+// Backpacks
 _bag = "B_AssaultPack_dgtl";			// The standard bag for most classes
 _bagLarge = "B_Kitbag_rgr";				// Larger bag for some special purpose classes
-
-// Special Backpacks
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "I_UAV_01_backpack_F";			// used by UAV operator
-_baghmgg = "I_HMG_01_weapon_F";				// used by Heavy MG gunner
-_baghmgag = "I_HMG_01_support_F";			// used by Heavy MG assistant gunner
+_baghmgg = "I_HMG_02_weapon_F";				// used by Heavy MG gunner
+_baghmgag = "I_HMG_02_support_F";			// used by Heavy MG assistant gunner
 _baghatg = "I_AT_01_weapon_F";				// used by Heavy AT gunner
 _baghatag = "I_HMG_01_support_F";			// used by Heavy AT assistant gunner
 _bagmtrg = "I_Mortar_01_weapon_F";			// used by Mortar gunner
 _bagmtrag = "I_Mortar_01_support_F";		// used by Mortar assistant gunner
 _baghsamg = "I_AA_01_weapon_F";				// used by Heavy SAM gunner
 _baghsamag = "I_HMG_01_support_F";			// used by Heavy SAM assistant gunner
+_bagRadio = "B_RadioBag_01_digi_F";			// cosmetic, used by COs, DCs, and anybody who might possibly use CC in session.
 
 // ====================================================================================
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = "LMG_Mk200_F";
-_ARmag = "200Rnd_65x39_cased_Box";
-_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
+_AR = "LMG_03_F";
+_ARmag = "200Rnd_556x45_Box_F";
+_ARmag_tr = "200Rnd_556x45_Box_Tracer_F";
 
+// Medium MG
 _MMG = "LMG_Zafir_F";
 _MMGmag = "150Rnd_762x54_Box";
 _MMGmag_tr = "150Rnd_762x54_Box_Tracer";
@@ -195,15 +217,17 @@ _MMGmag_tr = "150Rnd_762x54_Box_Tracer";
 // Marksman rifle
 _DMrifle = "srifle_EBR_F";
 _DMriflemag = "20Rnd_762x51_Mag";
+_DMriflemag_tr = "20Rnd_762x51_Mag";
 
 // Rifleman AT
-_RAT = "launch_NLAW_F";
-_RATmag = "NLAW_F";
+_RAT = "launch_MRAWS_olive_rail_F";
+_RATmag1 = "MRAWS_HEAT55_F";
+_RATmag2 = "MRAWS_HE_F";
 
 // Medium AT
-_MAT = "launch_NLAW_F";
-_MATmag1 = "NLAW_F";
-_MATmag2 = "NLAW_F";
+_MAT = "launch_MRAWS_olive_rail_F";
+_MATmag1 = "MRAWS_HEAT_F";
+_MATmag2 = "MRAWS_HE_F";
 
 // Surface Air
 _SAM = "launch_I_Titan_F";
@@ -229,14 +253,16 @@ _APmine2 = "APERSMine_Range_Mag";
 
 // CLOTHES AND UNIFORMS
 
-// Define special vest loadouts. This defines which gear class gets which vest
-// Normal infantry will be given either light or standard rigs, depending on the loadout parameter
+// Define classes. This defines which gear class gets which uniform
+// "medium" vests are used for all classes if they are not assigned a specific uniform
 
 _diver = ["div"];
 _pilot = ["pp","pcc","pc"];
 _crew = ["vc","vg","vd"];
 _ghillie = ["sn","sp"];
 _specOp = [];
+_jet = ["jp"];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -246,7 +272,7 @@ _baseHelmet = ["H_HelmetIA"];
 _baseGlasses = [];
 
 // Vests
-_lightRig = ["V_Chestrig_khk"];
+_lightRig = ["V_PlateCarrierIA2_dgtl"];
 _standardRig = ["V_PlateCarrierIA2_dgtl"];
 
 // Diver
@@ -260,6 +286,12 @@ _pilotUniform = ["U_I_HeliPilotCoveralls"];
 _pilotHelmet = ["H_PilotHelmetHeli_I"];
 _pilotRig = ["V_TacVest_oli"];
 _pilotGlasses = [];
+
+// Jet Pilot
+_jetUniform = ["U_I_pilotCoveralls"];
+_jetHelmet = ["H_PilotHelmetFighter_I"];
+_jetRig = [];
+_jetGlasses = [];
 
 // Crewman
 _crewUniform = ["U_I_CombatUniform"];
@@ -279,14 +311,11 @@ _sfhelmet = _baseHelmet;
 _sfRig = _standardRig;
 _sfGlasses = [];
 
-// ====================================================================================
-
-// INTERPRET PASSED VARIABLES
-// The following interprets what has been passed to this script element
-
-_typeofUnit = toLower (_this select 0);	// Tidy input for SWITCH/CASE statements, expecting something like : r = Rifleman, co = Commanding Officer, rat = Rifleman (AT)
-_unit = _this select 1;					// expecting name of unit; originally passed by using 'this' in unit init
-_isMan = _unit isKindOf "CAManBase";	// We check if we're dealing with a soldier or a vehicle
+// VIP/Officer
+_vipUniform = ["U_I_officerUniform"];
+_vipHelmet = ["H_MilCap_dgtl"];
+_vipRig = ["V_TacVest_oli"];
+_vipGlasses = [];
 
 // ====================================================================================
 
@@ -327,30 +356,18 @@ if (_isMan) then {
 
 // SELECT LOADOUT
 // Pick the appropriate loadout depending on the parameter
+// To use an alternate loadout parameter, you must uncomment this block, uncomment the relevant block in description.ext, and add an assignGear loadout file as named below.
 
-_loadout = f_param_loadouts;
+// _loadout = f_param_loadouts;
 
 // Light Loadout
-if (_loadout == 0) then {
-	#include "f_assignGear_aaf_light.sqf"
-};
+// if (_loadout == 0) then {
+// 	#include "f_assignGear_aaf_light.sqf"
+// };
 
 // Standard Loadout
-if (_loadout == 1) then {
-	#include "f_assignGear_aaf_standard.sqf"
-};
+// if (_loadout == 1) then {
+	#include "f_assignGear_aaf_standard.sqf";
+// };
 
 // ====================================================================================
-
-// If this isn't run on an infantry unit we can exit
-if !(_isMan) exitWith {};
-
-// ====================================================================================
-
-// Handle weapon attachments
-#include "f_assignGear_attachments.sqf";
-
-// ====================================================================================
-
-// ENSURE UNIT HAS CORRECT WEAPON SELECTED ON SPAWNING
-_unit selectweapon primaryweapon _unit;

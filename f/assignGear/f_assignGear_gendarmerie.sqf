@@ -1,5 +1,5 @@
 // F3 - Folk ARPS Assign Gear Script - GENDARMERIE
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE EQUIPMENT TABLES
@@ -49,10 +49,17 @@ _attachments = []; 		// The default attachment set for most units, overwritten i
 // ATTACHMENTS - HANDGUN
 _hg_silencer1 = "muzzle_snds_L";				// PM 9MM does not accept a suppressor
 
-_hg_scope1 = "optic_mrd";		// MRD
+_hg_scope1 = "optic_MRD";			// MRD
 
 // Default setup
 _hg_attachments= []; // The default attachment set for handguns, overwritten in the individual unitType
+
+// ====================================================================================
+
+// ATTACHMENTS - LAUNCHER
+_lau_attach1 = ""; // Empty by default, could be a scope in GM or a laser pointer for Titans
+
+_lau_attachments = []; // The default attachment set for launchers, overwritten in the individual unitType
 
 // ====================================================================================
 
@@ -82,9 +89,16 @@ _smokegrenadegreen = "SmokeShellGreen";
 _smokegrenadeblue = "SmokeShellBlue";
 _smokegrenadepurple = "SmokeShellPurple";
 
+// Binoculars
+_binoculars = "Rangefinder";
+
 // misc medical items.
 _firstaid = "FirstAidKit";
 _medkit = "Medikit";
+
+// Night Vision Goggles
+_nvg = "NVGoggles";
+_nvgPilot = "NVGoggles";  // Integrated_NVG_F for fullscreen NV
 
 // Chemlights
 _chemgreen =  "Chemlight_green";
@@ -94,7 +108,7 @@ _chemblue = "Chemlight_blue";
 
 // Backpacks
 _bag = "B_AssaultPack_blk";
-_baglarge = "B_Kitbag_blk";
+_bagLarge = "B_Kitbag_blk";
 
 // ====================================================================================
 
@@ -111,9 +125,13 @@ _DMriflemag = "20Rnd_762x51_Mag";
 // Define classes. This defines which gear class gets which uniform
 // "medium" vests are used for all classes if they are not assigned a specific uniform
 
-_light = [];
-_pilot = ["pp","pcc"];
+_diver = [];
+_pilot = ["pp","pcc","pc"];
+_crew = [];
+_ghillie = [];
 _specOp = ["nf"];
+_jet = [];
+_vip = [];
 
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
@@ -138,15 +156,11 @@ _sfhelmet = ["H_Helmet_Skate"];
 _sfRig = ["V_PlateCarrier1_blk"];
 _sfGlasses = ["G_Balaclava_blk"];
 
-
-// ====================================================================================
-
-// INTERPRET PASSED VARIABLES
-// The following interprets what has been passed to this script element
-
-_typeofUnit = toLower (_this select 0);	// Tidy input for SWITCH/CASE statements, expecting something like : r = Rifleman, co = Commanding Officer, rat = Rifleman (AT)
-_unit = _this select 1;					// expecting name of unit; originally passed by using 'this' in unit init
-_isMan = _unit isKindOf "CAManBase";	// We check if we're dealing with a soldier or a vehicle
+// VIP/Officer
+_vipUniform = ["U_B_GEN_Commander_F"];
+_vipHelmet = ["H_Beret_gen_F"];
+_vipRig = ["V_TacVest_gen_F"];
+_vipGlasses = [];
 
 // ====================================================================================
 
@@ -173,7 +187,7 @@ if (_isMan) then {
 	// ADD UNIVERSAL ITEMS
 	// Add items universal to all units of this faction
 
-	_unit linkItem _nvg;			// Add and equip the faction's nvg
+	// _unit linkItem _nvg;			// Add and equip the faction's nvg
 	_unit addItem _firstaid;		// Add a single first aid kit (FAK)
 	_unit linkItem "ItemMap";		// Add and equip the map
 	_unit linkItem "ItemCompass";	// Add and equip a compass
@@ -186,7 +200,7 @@ if (_isMan) then {
 // ====================================================================================
 
 // F3 - Folk ARPS Assign Gear Script - AAF - Light Loadout
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DEFINE UNIT TYPE LOADOUTS
@@ -206,7 +220,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 		_unit addItem _firstaid;
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_chemgreen,1];
 		_unit addmagazines [_chemred,1];
@@ -220,7 +234,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 		_unit addItem _firstaid;
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_chemgreen,1];
 		_unit addmagazines [_chemred,1];
@@ -234,7 +248,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 		_unit addItem _firstaid;
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_chemgreen,1];
 		_unit addmagazines [_chemred,1];
@@ -253,8 +267,10 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
 	};
-// Heli Pilot Loadout:
-	case "pp":
+// Helicopter Crew Loadout:
+	case "pp";
+	case "pcc";
+	case "pc":
 	{
 		_unit setUnitTrait ["medic",true]; // Can use medkit
 		_unit setUnitTrait ["engineer",true]; // Can repair
@@ -304,11 +320,11 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag, 1];
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
-		_unit addItem _firstaid ;
+		_unit addItem _firstaid;
 		_unit addmagazines [_riflemag, 7];
 		_attachments pushback (_silencer1); // Adds silencer
 		_hg_attachments pushback (_hg_silencer1); // Adds pistol silencer
-		_unit addWeapon "Rangefinder";
+		_unit addWeapon _binoculars;
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_smokegrenade, 2];
 		_unit addmagazines [_chemgreen,1];
@@ -322,7 +338,7 @@ switch (_typeofUnit) do
 		clearMagazineCargoGlobal _unit;
 		clearItemCargoGlobal _unit;
 		clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_smgm, 2];
+		_unit addWeaponWithAttachmentsCargoGlobal [[_smg,"","","",[_smgmag,500],[],""],2];
 		_unit addMagazineCargoGlobal [_smgmag, 12];
 	    _unit addMagazineCargoGlobal [_chemgreen,4];
 	    _unit addMagazineCargoGlobal [_chemred,4];
@@ -338,17 +354,20 @@ switch (_typeofUnit) do
 	    clearMagazineCargoGlobal _unit;
 	    clearItemCargoGlobal _unit;
 	    clearBackpackCargoGlobal _unit;
-		_unit addWeaponCargoGlobal [_smgm, 2];
+		_unit addWeaponWithAttachmentsCargoGlobal [[_smg,"","","",[_smgmag,500],[],""],2];
 	    _unit addMagazineCargoGlobal [_smgmag, 12];
 	    _unit addMagazineCargoGlobal [_chemgreen,4];
 	    _unit addMagazineCargoGlobal [_chemred,4];
 	    _unit addMagazineCargoGlobal [_chemyellow,4];
 		_unit addItemCargoGlobal [_firstaid,4];
-	    _unit addBackpackCargoGlobal ["B_Parachute",2];
 		_unit addItemCargoGlobal ["Toolkit",1];
 		_unit addItemCargoGlobal [_firstaid,4];
 		_unit addItemCargoGlobal [_medkit,1];
 	};
+
+
+	// Include the default case for error handling
+	#include "f_assignGear_default.sqf";
 
 // ====================================================================================
 
@@ -356,16 +375,3 @@ switch (_typeofUnit) do
 };
 
 // ====================================================================================
-
-// If this isn't run on an infantry unit we can exit
-if !(_isMan) exitWith {};
-
-// ====================================================================================
-
-// Handle weapon attachments
-#include "f_assignGear_attachments.sqf";
-
-// ====================================================================================
-
-// ENSURE UNIT HAS CORRECT WEAPON SELECTED ON SPAWNING
-_unit selectweapon primaryweapon _unit;

@@ -1,17 +1,18 @@
 // F3 - Fireteam Member Markers
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_unit","_mkrType","_mkrColor","_mkrName","_mkr","_mkrBorder","_pos"];
+private ["_mkrName","_mkr","_mkrBorder","_pos","_mkrborderName","_dir"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-_unit = _this select 0;
+params [["_unit", objNull, [objNull]]];
+
 _mkrName = Format ["mkr_%1",_unit];
 _mkrborderName = Format ["mkrB_%1",_unit];
 
@@ -37,7 +38,6 @@ _mkr setMarkerSizeLocal [0.45, 0.45];
 _mkr setMarkerDirLocal (direction _unit);
 
 
-
 // ====================================================================================
 
 // Run the loop that sets the marker position
@@ -54,7 +54,7 @@ while{alive _unit && (_unit in f_var_HandlerGroup)} do
 		_mkr setMarkerDirLocal _dir;
 		// makes a call to the function defined in f_setLocalFTMemberMarkers.sqf
 		// retreives the stored color from the unit.
-		_mkr setMarkerColorLocal (_unit getvariable ["assignedTeam","ColorWhite"]);
+		_mkr setMarkerColorLocal ([_unit] call f_fnc_GetUpdatedTeamValue);
 	} else {
 		f_var_HandlerGroup = f_var_HandlerGroup - [_unit];
 	};
@@ -67,4 +67,3 @@ while{alive _unit && (_unit in f_var_HandlerGroup)} do
 //He's dead Jim, let's clear up obsolete markers
 deleteMarkerLocal _mkrBorder;
 deleteMarkerLocal _mkr;
-

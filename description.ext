@@ -1,16 +1,53 @@
+fa3_version[] = {3,5,7}; // WARNING: DO NOT CHANGE THIS LINE
+
+// ============================================================================================
+// F3 - Loading Screen
+// Set Author, overview image/text, loading image/text from Eden Editor
+
+onLoadName = "*** Insert Mission Name Here. ***";
+
+// ============================================================================================
+
+// F3 - Body Removal Settings
+
+//Corpses
+corpseManagerMode = 1; //0 = None, 1 = All, 2 = None_But_Respawned, 3 = All_But_Respawned
+corpseLimit = 30; // Corpse limit before which ( <= ) corpseRemovalMaxTime applies and after which ( > ) corpseRemovalMinTime applies.
+corpseRemovalMinTime = 180; // Remove all bodies that have been dead longer than corpseRemovalMinTime when corpseLimit is breached.
+corpseRemovalMaxTime = 600; // Maximum time a corpse can remain on the ground (if total number of corpses is equal or under corpseLimit).
+minPlayerDistance = 500; // The minimum distance between corpse or wreck and nearest player before the corpse or wreck is allowed to be removed by the garbage collector.
+
+//Wrecks
+//wreckManagerMode = 1; //0 = None, 1 = All, 2 = None_But_Respawned, 3 = All_But_Respawned
+//wreckLimit = 20; //Vehicle wreck limit before which ( <= ) wreckRemovalMaxTime applies and after which ( > ) wreckRemovalMinTime applies.
+//wreckRemovalMinTime = 180; // Remove all wrecks that have existed longer than wreckRemovalMinTime when wreckLimit is breached.
+//wreckRemovalMaxTime = 3600; // Maximum time a wreck can remain on the ground (if total number of wrecks is equal or under wreckLimit).
+
 // ============================================================================================
 
 // F3 - Respawn Settings
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 respawn = 1;
 respawndelay = 3;
 respawnOnStart = 0;
-respawnTemplates[] = {"Seagull","f_spectator","f_JIP"};
+respawnTemplates[] = {"F_Spectator"};
 
 // ============================================================================================
 
-
+// F3 - Revive Settings
+/*
+https://community.bistudio.com/wiki/Arma_3_Revive
+https://community.bistudio.com/wiki/Description.ext#ReviveMode
+*/
+ReviveMode = 1;
+ReviveUnconsciousStateMode = 1;
+ReviveRequiredTrait = 0;
+ReviveRequiredItems = 2;
+ReviveRequiredItemsFakConsumed = 1;
+ReviveMedicSpeedMultiplier = 2;
+reviveDelay = 15;
+reviveForceRespawnDelay = 99999;
+reviveBleedOutDelay = 240;
 // F3 - Start of Notifications block.
 
 class cfgNotifications
@@ -74,14 +111,27 @@ class cfgNotifications
 		priority = 5;
 	};
 
-	// Notification for the F3 JIP Component
-	class JIP {
-		title= "REINFORCEMENTS";
+	// Notification for the F3 Group Join Component
+	class GroupJoin {
+		title= "JOIN";
 		description= "%1";
 		iconPicture = "\A3\ui_f\data\map\markers\military\flag_ca.paa";
 		duration = 3;
 		priority = 5;
 	};
+};
+
+// ============================================================================================
+
+// F3 - Custom sounds configuration
+
+class CfgSounds
+{
+	sounds[] = {};
+	#if __has_include("f\skulls\f_skullsSounds.hpp")
+		#include "f\skulls\f_skullsSounds.hpp"
+	#endif
+	// You can add custom sound classes after this line
 };
 
 // ============================================================================================
@@ -95,7 +145,7 @@ class Params
 // ============================================================================================
 
 // F3 - Debug Mode
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // WARNING: DO NOT DISABLE THIS COMPONENT
 
     class f_param_debugMode
@@ -109,81 +159,58 @@ class Params
 // ============================================================================================
 
 // F3 - Folk Assign Gear Script
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
-    class f_param_loadouts
-    {
-            title = "$STR_f_param_loadouts";
-            values[] = {0,1};
-            texts[] = {"Light","Standard"};
-            default = 1;
-    };
+// To add an alternate loadout parameter, you must uncomment this block, uncomment the relevant block in a faction assignGear file, and add a new assignGear loadout file named according to that block.
+// You should also enable the rig selection block in assignGear_clothes.sqf
 
-// ============================================================================================
-
-// F3 - Radio Systems Support
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-    class f_param_radios
-    {
-            title = "Radio System";
-            values[] = {0,2,3};
-            texts[] = {"Off","TFR","ACRE2"};
-            default = 0;
-    };
-
-// ============================================================================================
-
-// F3 - Medical Systems Support
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-    class f_param_medical
-    {
-            title = "Medical System";
-            values[] = {0,1,2};
-            texts[] = {"Arma 3 Default","F3 Simple Wounding System","Authentic Gameplay Mod"};
-            default = 0;
-    };
+//    class f_param_loadouts
+ //   {
+ //           title = "$STR_f_param_loadouts";
+//            values[] = {0,1};
+ //           texts[] = {"Light","Standard"};
+ //           default = 1;
+ //   };
 
 // ============================================================================================
 
 // F3 - Mission Timer/Safe Start
-// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
     class f_param_mission_timer
     {
             title = "$STR_f_param_mission_timer";
-            values[] = {0,1,2,3,4,5,6,7,8,9,10,15};
-            texts[] = {"$STR_f_param_mission_timer_off","1","2","3","4","5","6","7","8","9","10","15"};
-            default = 0;
+            values[] = {0,30,60,90,120,150,180,240,300,360,420,480,540,600,900};
+            texts[] = {"$STR_f_param_mission_timer_off","0.5","1","1.5","2","2.5","3","4","5","6","7","8","9","10","15"};
+            default = 60;
     };
 
 // ============================================================================================
 
 // F3 - Mission Conditions Selector
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
 	class f_param_weather
 	{
 		title = "$STR_f_param_weather";
-		values[] = {0,1,2,3,4,5,6,7,8,9};
-		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option11};
-		default = 0;
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11};
+		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option9,$STR_f_param_weather_Option10,$STR_f_param_weather_Option11};
+		default = 11;
 	};
 
 	class f_param_fog
 	{
-		title = "Override Fog";
+		title = "$STR_f_param_fog";
 		values[] = {0,1,2,4};
-		texts[] = {"No Fog","Light Fog","Heavy Fog","Use default"};
+		texts[] = {"$STR_f_param_fog_Option0","$STR_f_param_fog_Option1","$STR_f_param_fog_Option2","$STR_f_param_fog_Option4"};
 		default = 4;
 	};
 
 	class f_param_wind
 	{
-		title = "Override Wind";
+		title = "$STR_f_param_wind";
 		values[] = {0,1,2,4};
-		texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
+		texts[] = {"$STR_f_param_wind_Option0","$STR_f_param_wind_Option1","$STR_f_param_wind_Option2","$STR_f_param_wind_Option4"};
 		default = 4;
 	};
 
@@ -192,57 +219,70 @@ class Params
 		title = "$STR_f_param_timeOfDay";
 		values[] = {0,1,2,3,4,5,6,7,8};
 		texts[] = {$STR_f_param_timeOfDay_Option0,$STR_f_param_timeOfDay_Option1,$STR_f_param_timeOfDay_Option2,$STR_f_param_timeOfDay_Option3,$STR_f_param_timeOfDay_Option4,$STR_f_param_timeOfDay_Option5,$STR_f_param_timeOfDay_Option6,$STR_f_param_timeOfDay_Option7,$STR_f_param_timeOfDay_Option8};
+		default = 8;
+	};
+
+	class f_param_timeOfYear
+	{
+		title = "$STR_f_param_timeOfYear";
+		values[] = {0,1,2,3,4};
+		texts[] = {$STR_f_param_timeOfYear_Option0,$STR_f_param_timeOfYear_Option1,$STR_f_param_timeOfYear_Option2,$STR_f_param_timeOfYear_Option3,$STR_f_param_timeOfYear_Option4};
 		default = 4;
-		function = "f_fnc_setTime"; // This function is called to apply the values
- 		isGlobal = 0; // Execute this only on the server
 	};
 
 // ============================================================================================
 
 // F3 - AI Skill Selector
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
-/*
 	class f_param_AISkill_BLUFOR
 	{
 		title = "$STR_f_param_AISkill_BLUFOR";
 		values[] = {0,1,2,3};
 		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-		default = 1;
+		default = 2;
 	};
-*/
 
-/*
 	class f_param_AISkill_OPFOR
 	{
 		title = "$STR_f_param_AISkill_OPFOR";
 		values[] = {0,1,2,3};
 		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-		default = 1;
+		default = 2;
 	};
-*/
 
-/*
 	class f_param_AISkill_INDP
 	{
 		title = "$STR_f_param_AISkill_INDP";
 		values[] = {0,1,2,3};
 		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
-		default = 1;
+		default = 2;
 	};
-*/
 
 // ============================================================================================
 
-// F3 - Caching
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// F3 - Special Effects Parameters
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
-	class f_param_caching
+	class f_param_gruntBirthdayParty
 	{
-		title = "Cache AI outside distance (m)";
-		values[] = {0,600,800,1000,1500,2000};
+		title = "Grunt Birthday Party";
+		values[] = {0,1,2};
+		texts[] = {"Off","Player deaths only","All"};
 		default = 0;
 	};
+	
+// ============================================================================================
+
+// F3 - Caching
+// Credits and documentation: https://github.com/folkarps/F3/wiki
+
+//	class f_param_caching
+//	{
+//		title = "Cache AI outside distance (m)";
+//		values[] = {0,600,800,1000,1500,2000};
+//		default = 0;
+//	};
 
 // ============================================================================================
 
@@ -254,7 +294,7 @@ class Params
 // ============================================================================================
 
 // F3 - Briefing Template
-// Credits: BIS - Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 
 class CfgDebriefing
 {
@@ -320,41 +360,22 @@ class CfgDebriefing
 
 };
 
-// ============================================================================================
 
-// F3 - Respawn Templates
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-
-class CfgRespawnTemplates
-{
-	// F3 Spectator Script
-	class f_Spectator
-	{
-		onPlayerRespawn = "f_fnc_CamInit";
-	};
-  	//Overwrite Vanilla Seagull
-    class Seagull
-    {
-        onPlayerRespawn = "";
-    };
-	// F3 JIP Menu
-	class f_JIP
-	{
-		onPlayerRespawn = "f\JIP\f_JIP_playerRespawn.sqf";
-	};
-};
 
 // ============================================================================================
 
-// F3 - Menu components
+// F3 - Respawn templates
 // DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
 
-// Menu components for the JIP Menu
-#include "f\JIP\f_JIP_kitpicker.h"
-#include "f\JIP\f_JIP_grppicker.h"
 
-// Menu components for the Spectator Script
-#include "f\spect\config.hpp"
+// ============================================================================================
+class CfgRespawnTemplates
+{
+    class F_Spectator
+    {
+		onPlayerRespawn = "f\spect\fn_activateSpectator.sqf";
+    };
+};
 
 // ============================================================================================
 
@@ -363,7 +384,9 @@ class CfgRespawnTemplates
 
 class CfgFunctions
 {
-	#include "f\common\functions.hpp"
+	#include "f\functions.hpp"
+
+	#include "ws_fnc\config.hpp"
 };
 
 // ============================================================================================
@@ -372,4 +395,17 @@ class CfgFunctions
 
 class CfgUnitInsignia {
 	#include "f\assignGear\insignia\define.hpp"
+};
+class CfgRemoteExec
+{
+       // List of script functions allowed to be sent from client via remoteExec
+       class Functions
+       {
+               mode = 2;
+       };
+       // List of script commands allowed to be sent from client via remoteExec
+       class Commands
+       {
+            mode = 2;
+        };
 };

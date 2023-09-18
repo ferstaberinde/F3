@@ -1,22 +1,24 @@
 // F3 - SetFog
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_fog","_strength","_decay","_base"];
+private ["_strength","_decay","_base"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // We interpret the values parsed to the script. If the function was called from the parameters those values are used.
 
-_fog = _this select 0;
+params [
+	["_fog", 4, [0]],
+	["_transition", 0, [0]]
+];
 
 // Exit when using mission settings
 if ( _fog == 4 ) exitWith {};
 
-_transition = if (count _this > 1) then {_this select 1} else {0};
 
 _strength = 0;	// Value for fog at base level
 _decay = 0; 	// Decay of fog density with altitude. If set to 0 fog strength is consistent throughout.
@@ -63,4 +65,5 @@ _transition setFog [_strength,_decay,_base];
 
 // ====================================================================================
 
-
+// RETURN FOG PARAMS
+[_strength,_decay,_base]

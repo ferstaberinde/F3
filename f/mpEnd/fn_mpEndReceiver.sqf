@@ -1,13 +1,13 @@
 // F3 - Multiplayer Ending Controller
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_ending","_state"];
-
-_ending = _this select 0;
-_state = if (count _this > 1) then {_this select 1} else {true};
+params [
+	["_ending", 1, [0]],
+	["_state", true, [true]]
+];
 
 // ====================================================================================
 
@@ -101,6 +101,12 @@ switch (_ending) do
 	};
 };
 
+// ====================================================================================
+// Exit the End-Game spectator
+[] call f_fnc_terminateSpectator;
+
+// ====================================================================================
+
 // Using the integer we've got we use format to compile a string (e.g. "end1") and call the BIS function with it.
 _ending = format ["end%1",_ending];
 [_ending,_state] spawn BIS_fnc_endMission;
@@ -116,4 +122,3 @@ if (dialog) then
 };
 
 // ====================================================================================
-

@@ -1,9 +1,11 @@
 // F3 - Process ParamsArray
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 //Testing has shown that paramArrays only exists on the server during preInit
 //The publicVariable will synchronize the value to the clients.
+
+private ["_paramName", "_paramValue"];
 
 //PreInit
 if (isServer) then {

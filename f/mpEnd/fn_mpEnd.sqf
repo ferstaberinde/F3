@@ -1,5 +1,5 @@
 // F3 - Multiplayer Ending Controller
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
@@ -14,11 +14,13 @@ if (!isServer) exitWith {};
 
 // SET ENDING & BROADCAST
 // The desired ending # is taken from the arguments passed to this script.
-// Using BIS_fnc_MP the function mpEndReceiver is being spawned on all clients (and server),
-// with the passed ending # as parameter
+// Using remoteExec the function mpEndReceiver is being spawned on all clients (and server),
+// with the passed ending # as parameter.
+// Once an ending has been triggered, no other ending is possible.
 
-	[_this,"f_fnc_mpEndReceiver",true] spawn BIS_fnc_MP;
+if (isNil "f_var_EndingTriggered") then {
+	_this remoteExec ["f_fnc_mpEndReceiver", 0];
+};
+f_var_EndingTriggered = true;
 
 // ====================================================================================
-
-

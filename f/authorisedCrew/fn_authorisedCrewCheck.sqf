@@ -1,23 +1,27 @@
 // F3 - Authorised Crew Check
-// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// Credits and documentation: https://github.com/folkarps/F3/wiki
 // ====================================================================================
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_fromEH","_vehicle","_vehicleRole","_unitToCheck","_restrictedCrew","_warningMsg","_restrictcargo"];
+private ["_warningMsg","_restrictedTypes","_restrictedUnits"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using the arguments passed to the script, we first define some local variables.
 
-_fromEH = _this select 0;
-_restrictedList= _this select 1;
-_restrictcargo = if (count _this > 2) then {_this select 2} else {false};
+params [
+	["_fromEH", [], [[]]],
+	["_restrictedList", [], [[]]],
+	["_restrictcargo", false, [false]]
+];
 
-_vehicle = _fromEH select 0;
-_vehicleRole = _fromEH select 1;
-_unitToCheck = _fromEH select 2;
+_fromEH params [
+	["_vehicle", objNull, [objNull]],
+	["_vehicleRole", "", [""]],
+	["_unitToCheck", objNull, [objNull]]
+];
 
 _warningMsg = localize "STR_f_UnauthorisedCrew_Warning";
 
@@ -28,7 +32,6 @@ if (f_param_debugMode == 1) then
 	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _vehicle = %1",_vehicle];
 	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _vehicleRole = %1",_vehicleRole];
 	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _unitToCheck = %1",_unitToCheck];
-	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _restrictedCrew = %1",_restrictedCrew];
 	player sideChat format ["DEBUG (f\authorisedCrew\f_isAuthorisedCrew.sqf): _warningMsg = %1",_warningMsg];
 };
 
@@ -47,12 +50,8 @@ if (_vehicleRole == "CARGO" && !_restrictcargo) exitWith {};
 // INTERPRET RESTRICTED ARRAY
 // Loop through the array containing the allowed classes and units and split them into two
 
-_restrictedTypes = [];
-_restrictedUnits = [];
-{
-  if (typeName _x == typeName "") then {_restrictedTypes set [count _restrictedListTypes,_x]};
-  if (typeName _x == typeName objNull) then {_restrictedUnits set [count _restrictedListTypes,_x]};
-} forEach _restrictedList;
+_restrictedTypes = _restrictedList select {_x isEqualType ""};
+_restrictedUnits = _restrictedList select {_x isEqualType objNull};
 
 // ====================================================================================
 
